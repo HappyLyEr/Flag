@@ -1,0 +1,85 @@
+body
+{
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+p, table, td
+{
+	font-size: 10pt;
+}
+
+.gridStyle 
+{
+	border-color:#E7E7FF;
+	border-style:none;
+	border-width:1px;
+	background-color:White;
+	
+}
+
+.gridStyle_AlernatingItem
+{
+	background-color: #F7F7F7;
+}
+
+.gridStyle_ItemStyle
+{
+	color: #4A3C8C;
+	background-color : #E7E7FF;
+}
+
+.gridStyle_HeaderStyle
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	background-color: #4A3C8C;
+}
+
+.gridStyle_HeaderStyle A:link
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	background-color: #4A3C8C;
+	text-decoration: none;
+}
+
+.gridStyle_HeaderStyle A:visited
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	background-color: #4A3C8C;
+	text-decoration: none;
+}
+
+.gridStyle_HeaderStyle A:active
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	background-color: #4A3C8C;
+	text-decoration: none;
+}
+
+.gridStyle_HeaderStyle A:hover
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	background-color: #4A3C8C;
+	text-decoration: underline;
+}
+
+
+
+.gridStyle_FooterStyle
+{
+	color: #4A3C8C;
+	background-color: #B5C7DE;
+}
+
+.gridStyle_PagerStyle
+{
+	color: #4A3C8C;
+	background-color: #E7E7FF;
+}
+
+

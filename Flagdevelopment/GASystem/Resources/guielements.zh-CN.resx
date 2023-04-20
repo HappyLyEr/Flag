@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcknowledgedByMessage" xml:space="preserve">
+    <value>此待办事项已被用户{0}接受</value>
+  </data>
+  <data name="AcknowledgeWorkitem" xml:space="preserve">
+    <value>{0}已接受此待办事项</value>
+  </data>
+  <data name="actionNotesTemplate" xml:space="preserve">
+    <value>&lt;p&gt;&lt;div class=\"workitemsNotesHeader\" &gt;{0}: {1}&lt;/div&gt;&lt;br/&gt;&lt;div class=\"workitemsNotesHeader\" &gt;Workitem subject: {3}&lt;/div&gt;&lt;br/&gt;&lt;h3 class=\"workitemnotesdetails\"&gt;&lt;strong&gt;{2}&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>未完成</value>
+  </data>
+  <data name="ActivityDetails" xml:space="preserve">
+    <value>活动内容</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="AddedNotesNotificationBody" xml:space="preserve">
+    <value>编号为: &lt;strong&gt;{0}&lt;/strong&gt; &lt;br&gt;的工作流的内容为： &lt;strong&gt;{1}&lt;/strong&gt; &lt;p&gt;&lt;div class=\"workitemsNotesHeader\" &gt;&lt;strong&gt;{2}&lt;/strong&gt;: &lt;strong&gt;{3}&lt;/strong&gt;&lt;/div&gt;&lt;div class=\"workitemnotesdetails\"&gt;&lt;strong&gt;{4}&lt;/strong&gt;&lt;/div&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="AddedNotesNotificationSubject" xml:space="preserve">
+    <value>主题为{0}的备注已被添加至此待办事项</value>
+  </data>
+  <data name="AddParticipant" xml:space="preserve">
+    <value>添加参与人</value>
+  </data>
+  <data name="AddRemedialAction" xml:space="preserve">
+    <value>添加追踪任务</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="AllRecords" xml:space="preserve">
+    <value>所有 {0}</value>
+  </data>
+  <data name="AllRecordsWithinOwner" xml:space="preserve">
+    <value>所有属于 {1} {2}  的 {0}</value>
+  </data>
+  <data name="applyFilter" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="ApplySave" xml:space="preserve">
+    <value>保存筛选</value>
+  </data>
+  <data name="approve" xml:space="preserve">
+    <value>批准</value>
+  </data>
+  <data name="approved" xml:space="preserve">
+    <value>批准</value>
+  </data>
+  <data name="AwaitingAcknowledgedByMessage" xml:space="preserve">
+    <value>该待办事项还未被用户接受</value>
+  </data>
+  <data name="BarChart" xml:space="preserve">
+    <value>条形图</value>
+  </data>
+  <data name="Between" xml:space="preserve">
+    <value>介于</value>
+  </data>
+  <data name="ButtonNewIncident" xml:space="preserve">
+    <value>新的事件报告</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CancelEditText" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CancelSort" xml:space="preserve">
+    <value>取消分类</value>
+  </data>
+  <data name="CannotSavePersonnelCountOverlaps" xml:space="preserve">
+    <value>无法保存人员统计记录，因为它与其它记录在日期范围上存在重叠情况</value>
+  </data>
+  <data name="ClearLookupFilter" xml:space="preserve">
+    <value>筛选</value>
+  </data>
+  <data name="CompanyUser" xml:space="preserve">
+    <value>公司用户</value>
+  </data>
+  <data name="completed" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="ContextMemberInfo" xml:space="preserve">
+    <value>此用户{0}属于</value>
+  </data>
+  <data name="ContextMemberInfoPlur" xml:space="preserve">
+    <value>这些用户{0}属于</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="datafilterhelptext" xml:space="preserve">
+    <value>筛选条件</value>
+  </data>
+  <data name="DateEqualTo" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="DefaultSelection" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="delegatedByUser" xml:space="preserve">
+    <value>由用户{0}指派</value>
+  </data>
+  <data name="DelegatedToRoleByUser" xml:space="preserve">
+    <value>由用户{1}指派给岗位{0}</value>
+  </data>
+  <data name="delegatedtouserbyuser" xml:space="preserve">
+    <value>由用户{1}指派给用户{0}</value>
+  </data>
+  <data name="DelegateWorkitem" xml:space="preserve">
+    <value>重新指派待办事项</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DeleteFilter" xml:space="preserve">
+    <value>删除筛选</value>
+  </data>
+  <data name="DescriptionOfCriteria" xml:space="preserve">
+    <value>打分项</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>展示</value>
+  </data>
+  <data name="dissatisfied" xml:space="preserve">
+    <value>不满意</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="EditMultipleRecord" xml:space="preserve">
+    <value>编辑全部</value>
+  </data>
+  <data name="EditSelectedText" xml:space="preserve">
+    <value>编辑勾选的</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="exporttoexcel" xml:space="preserve">
+    <value>输出成Excel</value>
+  </data>
+  <data name="Fieldname" xml:space="preserve">
+    <value>字段名</value>
+  </data>
+  <data name="GAAction" xml:space="preserve">
+    <value>工作流</value>
+  </data>
+  <data name="GAActionPlur" xml:space="preserve">
+    <value>工作流</value>
+  </data>
+  <data name="GAActionWorkitemView" xml:space="preserve">
+    <value>待办事项</value>
+  </data>
+  <data name="GAActionWorkitemViewPlur" xml:space="preserve">
+    <value>待办事项</value>
+  </data>
+  <data name="GAAspectImpact" xml:space="preserve">
+    <value>环境因素和影响</value>
+  </data>
+  <data name="GAAspectImpactPlur" xml:space="preserve">
+    <value>环境因素和影响</value>
+  </data>
+  <data name="GAAspectImpactView" xml:space="preserve">
+    <value>环境因素和影响</value>
+  </data>
+  <data name="GAAspectImpactViewPlur" xml:space="preserve">
+    <value>环境因素和影响</value>
+  </data>
+  <data name="GAAudit" xml:space="preserve">
+    <value>审计、检查、回顾</value>
+  </data>
+  <data name="GAAuditPlur" xml:space="preserve">
+    <value>审计、检查、回顾</value>
+  </data>
+  <data name="GABusinessRisk" xml:space="preserve">
+    <value>公司风险登记表</value>
+  </data>
+  <data name="GABusinessRiskPlur" xml:space="preserve">
+    <value>公司风险登记表</value>
+  </data>
+  <data name="GACertificate" xml:space="preserve">
+    <value>证书</value>
+  </data>
+  <data name="GACertificatePlur" xml:space="preserve">
+    <value>证书</value>
+  </data>
+  <data name="GAClient" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="GAClientFeedbackView" xml:space="preserve">
+    <value>客户反馈</value>
+  </data>
+  <data name="GAClientFeedbackViewPlur" xml:space="preserve">
+    <value>客户反馈</value>
+  </data>
+  <data name="GAClientPlur" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="GAClientVisit" xml:space="preserve">
+    <value>客户访问记录</value>
+  </data>
+  <data name="GAClientVisitPlur" xml:space="preserve">
+    <value>客户访问记录</value>
+  </data>
+  <data name="GaCompany" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="GaCompanyPlur" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="GAContractApprove" xml:space="preserve">
+    <value>合同审批</value>
+  </data>
+  <data name="GAContractApprovePlur" xml:space="preserve">
+    <value>合同审批</value>
+  </data>
+  <data name="GAControl" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <data name="GAControlMeasureAdd" xml:space="preserve">
+    <value>附加的控制措施</value>
+  </data>
+  <data name="GAControlMeasureAddPlur" xml:space="preserve">
+    <value>附加的控制措施</value>
+  </data>
+  <data name="GAControlPlur" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <data name="GACost" xml:space="preserve">
+    <value>费用</value>
+  </data>
+  <data name="GACostPlur" xml:space="preserve">
+    <value>费用</value>
+  </data>
+  <data name="GACourse" xml:space="preserve">
+    <value>培训、演习</value>
+  </data>
+  <data name="GACoursePersonList" xml:space="preserve">
+    <value>参加人</value>
+  </data>
+  <data name="GACoursePersonListPlur" xml:space="preserve">
+    <value>参加人</value>
+  </data>
+  <data name="GACoursePersonListView" xml:space="preserve">
+    <value>参加人</value>
+  </data>
+  <data name="GACoursePersonListViewPlur" xml:space="preserve">
+    <value>参加人</value>
+  </data>
+  <data name="GACoursePlur" xml:space="preserve">
+    <value>培训、演习</value>
+  </data>
+  <data name="GACrew" xml:space="preserve">
+    <value>地震队</value>
+  </data>
+  <data name="GACrewInProject" xml:space="preserve">
+    <value>作业地震队</value>
+  </data>
+  <data name="GACrewInProjectPlur" xml:space="preserve">
+    <value>作业地震队</value>
+  </data>
+  <data name="GACrewPlur" xml:space="preserve">
+    <value>地震队</value>
+  </data>
+  <data name="GADamagedEquipment" xml:space="preserve">
+    <value>损坏的设备</value>
+  </data>
+  <data name="GADamagedEquipmentPlur" xml:space="preserve">
+    <value>损坏的设备</value>
+  </data>
+  <data name="GADayOperation" xml:space="preserve">
+    <value>日常高风险活动</value>
+  </data>
+  <data name="GADayOperationPlur" xml:space="preserve">
+    <value>日常高风险活动</value>
+  </data>
+  <data name="GADaysReport" xml:space="preserve">
+    <value>其它活动</value>
+  </data>
+  <data name="GADaysReportPlur" xml:space="preserve">
+    <value>其它活动</value>
+  </data>
+  <data name="GADepartment" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="GADepartmentPlur" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="GADocumentControl" xml:space="preserve">
+    <value>文件控制</value>
+  </data>
+  <data name="GADocumentControlPlur" xml:space="preserve">
+    <value>文件控制</value>
+  </data>
+  <data name="GADrugAndAlcoholTest" xml:space="preserve">
+    <value>药物酒精测试</value>
+  </data>
+  <data name="GADrugAndAlcoholTestPlur" xml:space="preserve">
+    <value>药物酒精测试</value>
+  </data>
+  <data name="GAEmployment" xml:space="preserve">
+    <value>人员指派</value>
+  </data>
+  <data name="GAEmploymentPlur" xml:space="preserve">
+    <value>人员指派</value>
+  </data>
+  <data name="GAExposedHoursGroupView" xml:space="preserve">
+    <value>人员统计</value>
+  </data>
+  <data name="GAExposedHoursGroupViewPlur" xml:space="preserve">
+    <value>人员统计</value>
+  </data>
+  <data name="GAFile" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="GAFileContent" xml:space="preserve">
+    <value>原因分析</value>
+  </data>
+  <data name="GAFileContentPlur" xml:space="preserve">
+    <value>原因分析</value>
+  </data>
+  <data name="GAFilePlur" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="GAFileView" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="GAFileViewPlur" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="GAFlag" xml:space="preserve">
+    <value>Flag</value>
+  </data>
+  <data name="GAGoalObjective" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="GAGoalObjectivePlur" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="GAGroups" xml:space="preserve">
+    <value>小组</value>
+  </data>
+  <data name="GAGroupsPlur" xml:space="preserve">
+    <value>小组</value>
+  </data>
+  <data name="GAHazardIdentification" xml:space="preserve">
+    <value>参与人</value>
+  </data>
+  <data name="GAHazardIdentificationPlur" xml:space="preserve">
+    <value>参与人</value>
+  </data>
+  <data name="GAHealthCertificateView" xml:space="preserve">
+    <value>技能证件</value>
+  </data>
+  <data name="GAHealthCertificateViewPlur" xml:space="preserve">
+    <value>技能</value>
+  </data>
+  <data name="GAHealthPassportVisaView" xml:space="preserve">
+    <value>健康证、护照、签证</value>
+  </data>
+  <data name="GAHealthPassportVisaViewPlur" xml:space="preserve">
+    <value>健康证、护照、签证</value>
+  </data>
+  <data name="GAIncidentReport" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="GAIncidentReportPlur" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="GAInfoToCommunity" xml:space="preserve">
+    <value>批准信息发送至群组</value>
+  </data>
+  <data name="GAInfoToCommunityPlur" xml:space="preserve">
+    <value>批准信息发送至群组</value>
+  </data>
+  <data name="GAInjuredParty" xml:space="preserve">
+    <value>涉及方</value>
+  </data>
+  <data name="GAInjuredPartyPlur" xml:space="preserve">
+    <value>涉及方</value>
+  </data>
+  <data name="GAInvestigationTeam" xml:space="preserve">
+    <value>事件调查小组成员</value>
+  </data>
+  <data name="GAInvestigationTeamPlur" xml:space="preserve">
+    <value>事件调查小组成员</value>
+  </data>
+  <data name="GAionGoalObjective" xml:space="preserve">
+    <value>公司目标</value>
+  </data>
+  <data name="GAionGoalObjectivePlur" xml:space="preserve">
+    <value>公司目标</value>
+  </data>
+  <data name="GAionPermitToWork" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="GAionPermitToWorkPlur" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="GAKPIIndicator" xml:space="preserve">
+    <value>项目目标</value>
+  </data>
+  <data name="GAKPIIndicatorPlur" xml:space="preserve">
+    <value>项目目标</value>
+  </data>
+  <data name="GALegalCompliance" xml:space="preserve">
+    <value>法律合规</value>
+  </data>
+  <data name="GALegalCompliancePlur" xml:space="preserve">
+    <value>法律合规</value>
+  </data>
+  <data name="GALessonLearnt" xml:space="preserve">
+    <value>经验分享</value>
+  </data>
+  <data name="GALessonLearntPlur" xml:space="preserve">
+    <value>经验分享</value>
+  </data>
+  <data name="GALocation" xml:space="preserve">
+    <value>工作场所</value>
+  </data>
+  <data name="GALocationCertificateView" xml:space="preserve">
+    <value>船舶证书</value>
+  </data>
+  <data name="GALocationCertificateViewPlur" xml:space="preserve">
+    <value>船舶证书</value>
+  </data>
+  <data name="GALocationInCrew" xml:space="preserve">
+    <value>地震队包含的工作场所</value>
+  </data>
+  <data name="GALocationInCrewPlur" xml:space="preserve">
+    <value>地震队包含的工作场所</value>
+  </data>
+  <data name="GALocationPlur" xml:space="preserve">
+    <value>工作场所</value>
+  </data>
+  <data name="GAManageChange" xml:space="preserve">
+    <value>变更管理</value>
+  </data>
+  <data name="GAManageChangePlur" xml:space="preserve">
+    <value>变更管理</value>
+  </data>
+  <data name="GAMeansOfContact" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="GAMeansOfContactPlur" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="GAMedicalTreatmentLog" xml:space="preserve">
+    <value>医疗记录</value>
+  </data>
+  <data name="GAMedicalTreatmentLogPlur" xml:space="preserve">
+    <value>医疗记录</value>
+  </data>
+  <data name="GAMeeting" xml:space="preserve">
+    <value>会议</value>
+  </data>
+  <data name="GAMeetingPersonList" xml:space="preserve">
+    <value>参加人</value>
+  </data>
+  <data name="GAMeetingPersonListPlur" xml:space="preserve">
+    <value>参加人</value>
+  </data>
+  <data name="GAMeetingPlur" xml:space="preserve">
+    <value>会议</value>
+  </data>
+  <data name="GAMeetingText" xml:space="preserve">
+    <value>细节</value>
+  </data>
+  <data name="GAMeetingTextPlur" xml:space="preserve">
+    <value>细节</value>
+  </data>
+  <data name="GAMMOReport" xml:space="preserve">
+    <value>海洋动物观察</value>
+  </data>
+  <data name="GAMMOReportPlur" xml:space="preserve">
+    <value>海洋动物观察</value>
+  </data>
+  <data name="GAMonitoringNote" xml:space="preserve">
+    <value>监控记录</value>
+  </data>
+  <data name="GAMonitoringNotePlur" xml:space="preserve">
+    <value>监控记录</value>
+  </data>
+  <data name="GANextOfKin" xml:space="preserve">
+    <value>亲属</value>
+  </data>
+  <data name="GANextOfKinPlur" xml:space="preserve">
+    <value>亲属</value>
+  </data>
+  <data name="GANonConformanceView" xml:space="preserve">
+    <value>不符合项</value>
+  </data>
+  <data name="GANonConformanceViewPlur" xml:space="preserve">
+    <value>不符合项</value>
+  </data>
+  <data name="GAOffshoreCertificateView" xml:space="preserve">
+    <value>海上人员证书</value>
+  </data>
+  <data name="GAOffshoreCertificateViewPlur" xml:space="preserve">
+    <value>海上人员证书</value>
+  </data>
+  <data name="GAOpportunity" xml:space="preserve">
+    <value>建议</value>
+  </data>
+  <data name="GAOpportunityDetail" xml:space="preserve">
+    <value>建议内容</value>
+  </data>
+  <data name="GAOpportunityDetailPlur" xml:space="preserve">
+    <value>建议内容</value>
+  </data>
+  <data name="GAOpportunityPlur" xml:space="preserve">
+    <value>建议</value>
+  </data>
+  <data name="GAPassportVisaView" xml:space="preserve">
+    <value>基础证件</value>
+  </data>
+  <data name="GAPassportVisaViewPlur" xml:space="preserve">
+    <value>基础证件</value>
+  </data>
+  <data name="GAPermitToWork" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="GAPermitToWorkPlur" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="GAPermitToWorkView" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="GAPermitToWorkViewPlur" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="GAPersonnel" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="GAPersonnelCertificateView" xml:space="preserve">
+    <value>人员证书日期</value>
+  </data>
+  <data name="GAPersonnelCertificateViewPlur" xml:space="preserve">
+    <value>人员证书日期</value>
+  </data>
+  <data name="GAPersonnelEmploymentView" xml:space="preserve">
+    <value>人员指派</value>
+  </data>
+  <data name="GAPersonnelEmploymentViewPlur" xml:space="preserve">
+    <value>人员指派</value>
+  </data>
+  <data name="GAPersonnelHRDocumentView" xml:space="preserve">
+    <value>项目特有证件</value>
+  </data>
+  <data name="GAPersonnelHRDocumentViewPlur" xml:space="preserve">
+    <value>项目特有</value>
+  </data>
+  <data name="GAPersonnelMedicalRecord" xml:space="preserve">
+    <value>医疗记录</value>
+  </data>
+  <data name="GAPersonnelMedicalRecordPlur" xml:space="preserve">
+    <value>医疗记录</value>
+  </data>
+  <data name="GAPersonnelPlur" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="GAPersonTrainingRecordView" xml:space="preserve">
+    <value>培训记录</value>
+  </data>
+  <data name="GAPersonTrainingRecordViewPlur" xml:space="preserve">
+    <value>培训记录</value>
+  </data>
+  <data name="GAProcedure" xml:space="preserve">
+    <value>程序</value>
+  </data>
+  <data name="GAProcedurePlur" xml:space="preserve">
+    <value>程序</value>
+  </data>
+  <data name="GAProcedureReference" xml:space="preserve">
+    <value>参考程序</value>
+  </data>
+  <data name="GAProcedureReferencePlur" xml:space="preserve">
+    <value>参考程序</value>
+  </data>
+  <data name="GAProductService" xml:space="preserve">
+    <value>产品/服务</value>
+  </data>
+  <data name="GAProductServicePlur" xml:space="preserve">
+    <value>产品/服务</value>
+  </data>
+  <data name="GAProject" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="GAProjectDocument" xml:space="preserve">
+    <value>项目文档</value>
+  </data>
+  <data name="GAProjectDocumentPlur" xml:space="preserve">
+    <value>项目文档</value>
+  </data>
+  <data name="GAProjectEmission" xml:space="preserve">
+    <value>综合性排放统计 (GHG)</value>
+  </data>
+  <data name="GAProjectEmissionPlur" xml:space="preserve">
+    <value>综合性排放统计 (GHG)</value>
+  </data>
+  <data name="GAProjectPlur" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="GAProjectRisk" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="GAProjectRiskPlur" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="GARegionalOfficeView" xml:space="preserve">
+    <value>地区分公司</value>
+  </data>
+  <data name="GARegionalOfficeViewPlur" xml:space="preserve">
+    <value>地区分公司</value>
+  </data>
+  <data name="GARemedialActionView" xml:space="preserve">
+    <value>追踪和整改任务</value>
+  </data>
+  <data name="GARemedialActionViewPlur" xml:space="preserve">
+    <value>追踪和整改任务</value>
+  </data>
+  <data name="GAReport" xml:space="preserve">
+    <value>会议纪要</value>
+  </data>
+  <data name="GAReportInstance" xml:space="preserve">
+    <value>报表管理</value>
+  </data>
+  <data name="GAReportInstancePlur" xml:space="preserve">
+    <value>报表管理</value>
+  </data>
+  <data name="GAReportPlur" xml:space="preserve">
+    <value>会议纪要</value>
+  </data>
+  <data name="GAReports" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="GAReportsPlur" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="GAResource" xml:space="preserve">
+    <value>资产</value>
+  </data>
+  <data name="GAResourcePlur" xml:space="preserve">
+    <value>资产</value>
+  </data>
+  <data name="GARisk" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="GARiskCompTitle" xml:space="preserve">
+    <value>胜任的岗位</value>
+  </data>
+  <data name="GARiskCompTitlePlur" xml:space="preserve">
+    <value>胜任的岗位</value>
+  </data>
+  <data name="GARiskControl" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="GARiskControlPlur" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="GARiskPlur" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="GARiskView" xml:space="preserve">
+    <value>危险源</value>
+  </data>
+  <data name="GARiskViewPlur" xml:space="preserve">
+    <value>危险源</value>
+  </data>
+  <data name="GARxtIssueView" xml:space="preserve">
+    <value>需求</value>
+  </data>
+  <data name="GARxtIssueViewPlur" xml:space="preserve">
+    <value>需求</value>
+  </data>
+  <data name="GArxtReport" xml:space="preserve">
+    <value>事件报告</value>
+  </data>
+  <data name="GArxtReportPlur" xml:space="preserve">
+    <value>事件报告</value>
+  </data>
+  <data name="GASafetyObservation" xml:space="preserve">
+    <value>安全观察卡</value>
+  </data>
+  <data name="GASafetyObservationPlur" xml:space="preserve">
+    <value>安全观察卡</value>
+  </data>
+  <data name="GASeafaferView" xml:space="preserve">
+    <value>海员证件</value>
+  </data>
+  <data name="GASeafarerViewPlur" xml:space="preserve">
+    <value>海员</value>
+  </data>
+  <data name="GAStakeHolder" xml:space="preserve">
+    <value>项目相关方</value>
+  </data>
+  <data name="GAStakeHolderPlur" xml:space="preserve">
+    <value>项目相关方</value>
+  </data>
+  <data name="GASubcontractorView" xml:space="preserve">
+    <value>供应商/分包商</value>
+  </data>
+  <data name="GASubcontractorViewPlur" xml:space="preserve">
+    <value>供应商/分包商</value>
+  </data>
+  <data name="GATask" xml:space="preserve">
+    <value>涉及到的工作</value>
+  </data>
+  <data name="GATaskPlur" xml:space="preserve">
+    <value>涉及到的工作</value>
+  </data>
+  <data name="GATeam" xml:space="preserve">
+    <value>目击者</value>
+  </data>
+  <data name="GATeamPlur" xml:space="preserve">
+    <value>目击者</value>
+  </data>
+  <data name="GATextItem" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="GATextItemPlur" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="GATrainingInstitutionView" xml:space="preserve">
+    <value>培训机构</value>
+  </data>
+  <data name="GATrainingInstitutionViewPlur" xml:space="preserve">
+    <value>培训机构</value>
+  </data>
+  <data name="GAUser" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="GAUserCommunity" xml:space="preserve">
+    <value>Flag Community</value>
+  </data>
+  <data name="GAUserCommunityPlur" xml:space="preserve">
+    <value>Flag Community</value>
+  </data>
+  <data name="GAUserPlur" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="GAVendor" xml:space="preserve">
+    <value>供方</value>
+  </data>
+  <data name="GAVendorAudit" xml:space="preserve">
+    <value>供方审计</value>
+  </data>
+  <data name="GAVendorAuditFinding" xml:space="preserve">
+    <value>供方审计发现项</value>
+  </data>
+  <data name="GAVendorAuditFindingPlur" xml:space="preserve">
+    <value>供方审计发现项</value>
+  </data>
+  <data name="GAVendorAuditPlur" xml:space="preserve">
+    <value>供方审计</value>
+  </data>
+  <data name="GAVendorContact" xml:space="preserve">
+    <value>供方联系人</value>
+  </data>
+  <data name="GAVendorContactPlur" xml:space="preserve">
+    <value>供方联系人</value>
+  </data>
+  <data name="GAVendorEvaluation" xml:space="preserve">
+    <value>评估记录</value>
+  </data>
+  <data name="GAVendorEvaluationPlur" xml:space="preserve">
+    <value>评估记录</value>
+  </data>
+  <data name="GAVendorPlur" xml:space="preserve">
+    <value>供方</value>
+  </data>
+  <data name="GAVendorRequest" xml:space="preserve">
+    <value>分包商供应商需求</value>
+  </data>
+  <data name="GAVendorRequestPlur" xml:space="preserve">
+    <value>分包商供应商需求</value>
+  </data>
+  <data name="GAWaste" xml:space="preserve">
+    <value>垃圾处理/大气排放(旧版)</value>
+  </data>
+  <data name="GAWasteOffshore" xml:space="preserve">
+    <value>垃圾处理/大气排放(非陆地)</value>
+  </data>
+  <data name="GAWasteOffshorePlur" xml:space="preserve">
+    <value>垃圾处理/大气排放(非陆地)</value>
+  </data>
+  <data name="GAWasteOnshore" xml:space="preserve">
+    <value>垃圾处理/大气排放(陆地)</value>
+  </data>
+  <data name="GAWasteOnshorePlur" xml:space="preserve">
+    <value>垃圾处理/大气排放(陆地)</value>
+  </data>
+  <data name="GAWastePlur" xml:space="preserve">
+    <value>垃圾处理/大气排放(旧版)</value>
+  </data>
+  <data name="GAWBOperationList" xml:space="preserve">
+    <value>小艇作业人员</value>
+  </data>
+  <data name="GAWBOperationListPlur" xml:space="preserve">
+    <value>小艇作业人员</value>
+  </data>
+  <data name="GAWorkflow" xml:space="preserve">
+    <value>工作流</value>
+  </data>
+  <data name="GAWorkflowPlur" xml:space="preserve">
+    <value>工作流</value>
+  </data>
+  <data name="GAWorkflowStarter" xml:space="preserve">
+    <value>工作流触发器</value>
+  </data>
+  <data name="GAWorkflowStarterPlur" xml:space="preserve">
+    <value>工作流触发器</value>
+  </data>
+  <data name="GAWorkitem" xml:space="preserve">
+    <value>待办事项</value>
+  </data>
+  <data name="GAWorkitemPathView" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="GAWorkitemPathViewPlur" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="GAWorkitemPlur" xml:space="preserve">
+    <value>待办事项</value>
+  </data>
+  <data name="GAWorkPlan" xml:space="preserve">
+    <value>项目工作计划</value>
+  </data>
+  <data name="GAWorkPlanPlur" xml:space="preserve">
+    <value>项目工作计划</value>
+  </data>
+  <data name="graph" xml:space="preserve">
+    <value>图表</value>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="GreaterThanEqual" xml:space="preserve">
+    <value>大于或者等于</value>
+  </data>
+  <data name="hasEditAssignmentToWorkitem" xml:space="preserve">
+    <value>您的岗位允许您处理此待办事项</value>
+  </data>
+  <data name="hasRoleAssignmentToWorkitem" xml:space="preserve">
+    <value>您可以关闭这个待办事项因为它已经被指派给您</value>
+  </data>
+  <data name="hasUserAssignmentToWorkitem" xml:space="preserve">
+    <value>你可以关闭这个任务因为它已经被指派给你</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>隐藏</value>
+  </data>
+  <data name="HideLabels" xml:space="preserve">
+    <value>隐藏标签</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="importFromExcel" xml:space="preserve">
+    <value>导入Excel</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="infoFilterMultipleElements" xml:space="preserve">
+    <value>当前：</value>
+  </data>
+  <data name="infoFilterNoElements" xml:space="preserve">
+    <value>显示所有记录</value>
+  </data>
+  <data name="infoFilterOneElement" xml:space="preserve">
+    <value>当前：</value>
+  </data>
+  <data name="isChecked" xml:space="preserve">
+    <value>被勾选</value>
+  </data>
+  <data name="isCurrent" xml:space="preserve">
+    <value>未过期</value>
+  </data>
+  <data name="isNotChecked" xml:space="preserve">
+    <value>没有勾选</value>
+  </data>
+  <data name="Job Title" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="LANGUAGE_RESOURCE_KEY" xml:space="preserve">
+    <value>GCN</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="LessThanEqual" xml:space="preserve">
+    <value>小于或者等于</value>
+  </data>
+  <data name="LineChart" xml:space="preserve">
+    <value>折线图</value>
+  </data>
+  <data name="ListAll" xml:space="preserve">
+    <value>列出所有 {0} </value>
+  </data>
+  <data name="ListAllIn" xml:space="preserve">
+    <value>列出 {1} 中所有的 {0}</value>
+  </data>
+  <data name="ListMyWorkitems" xml:space="preserve">
+    <value>列出我的待办事项</value>
+  </data>
+  <data name="LookupFilterOff" xml:space="preserve">
+    <value>显示所有记录</value>
+  </data>
+  <data name="LookupFilterOn" xml:space="preserve">
+    <value>只在 {1} 中显示 {0} 条记录</value>
+  </data>
+  <data name="MaxCharacters" xml:space="preserve">
+    <value>（允许最多字数：{0}）</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="NewRecord" xml:space="preserve">
+    <value>新建 {0}</value>
+  </data>
+  <data name="NewRecords" xml:space="preserve">
+    <value>新建 {0}</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>不</value>
+  </data>
+  <data name="NoActionInWorkitem" xml:space="preserve">
+    <value>此待办事项未关联任何有效记录</value>
+  </data>
+  <data name="NoRecords" xml:space="preserve">
+    <value>没有任何{0}登记</value>
+  </data>
+  <data name="NoRecordsFound" xml:space="preserve">
+    <value>没有找到{0}</value>
+  </data>
+  <data name="NoResponsibleSet" xml:space="preserve">
+    <value>未标明</value>
+  </data>
+  <data name="NotEqual" xml:space="preserve">
+    <value>不同于</value>
+  </data>
+  <data name="NotesByUser" xml:space="preserve">
+    <value>用户{0}的注释</value>
+  </data>
+  <data name="NotIncluding" xml:space="preserve">
+    <value>不包括</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>可以</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="Part1" xml:space="preserve">
+    <value>第一部分</value>
+  </data>
+  <data name="Part1Tip" xml:space="preserve">
+    <value>如果此部分任意一项为Yes，则请跳到第三部分，反之，请到第二部分</value>
+  </data>
+  <data name="Part2" xml:space="preserve">
+    <value>第二部分</value>
+  </data>
+  <data name="Part2Tip" xml:space="preserve">
+    <value>如果此部分任意一项为No，工作必须停止，反之，请到第三部分</value>
+  </data>
+  <data name="Part3" xml:space="preserve">
+    <value>第三部分</value>
+  </data>
+  <data name="Part3Tip" xml:space="preserve">
+    <value>如果此部分任意一项为No，工作必须停止，反之，允许开始工作</value>
+  </data>
+  <data name="ParticipantAddedBy" xml:space="preserve">
+    <value>参与人由用户{0}添加</value>
+  </data>
+  <data name="ParticipantRoleAddedBy" xml:space="preserve">
+    <value>参与人{0}由用户{1}添加</value>
+  </data>
+  <data name="ParticipantUserAddedByUser" xml:space="preserve">
+    <value>参与人{0}由用户{1}添加</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PieChart" xml:space="preserve">
+    <value>饼状图</value>
+  </data>
+  <data name="PleaseAddGroupOfPersons" xml:space="preserve">
+    <value>请创建一个小组</value>
+  </data>
+  <data name="PleaseSelectAnActionResponsible" xml:space="preserve">
+    <value>请选择一个人名或者岗位来指派此任务</value>
+  </data>
+  <data name="PrintReport" xml:space="preserve">
+    <value>查看报告</value>
+  </data>
+  <data name="proceed" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="ProceedPending" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Ranking" xml:space="preserve">
+    <value>分数</value>
+  </data>
+  <data name="RankingDescription" xml:space="preserve">
+    <value>分数说明：&lt;br /&gt;5=非常好；4=好；3=正常；4=一般；5=差（N/A为不适用）</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>读取</value>
+  </data>
+  <data name="reject" xml:space="preserve">
+    <value>拒绝</value>
+  </data>
+  <data name="RejectAcknowledgeWorkitem" xml:space="preserve">
+    <value>用户{0}拒绝了此待办事项</value>
+  </data>
+  <data name="rejected" xml:space="preserve">
+    <value>拒绝</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Remedial" xml:space="preserve">
+    <value>整改任务</value>
+  </data>
+  <data name="RemedialExpiredMessage" xml:space="preserve">
+    <value>此待办事项已逾期</value>
+  </data>
+  <data name="RemoveAddedParticipants" xml:space="preserve">
+    <value>移除参与人</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SeCondition" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="SecuritySettings" xml:space="preserve">
+    <value>权限设置</value>
+  </data>
+  <data name="SeEnabled" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="SeFieldName" xml:space="preserve">
+    <value>筛选项</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="SelectUserForActivityForward" xml:space="preserve">
+    <value>请选择一名用户来指派此任务</value>
+  </data>
+  <data name="SeOperator" xml:space="preserve">
+    <value>筛选方式</value>
+  </data>
+  <data name="setFilter" xml:space="preserve">
+    <value>条件筛选</value>
+  </data>
+  <data name="StackedBarChart" xml:space="preserve">
+    <value>堆积条形图</value>
+  </data>
+  <data name="StartDateLessThanEqualEndDate" xml:space="preserve">
+    <value>开始日期必须小于或者等于结束日期</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="UpdateSelectedText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="url" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="URLText" xml:space="preserve">
+    <value>链接</value>
+  </data>
+  <data name="UseAsHome" xml:space="preserve">
+    <value>设为主页</value>
+  </data>
+  <data name="ViewReport" xml:space="preserve">
+    <value>生成报告</value>
+  </data>
+  <data name="WarningPersonnelCountOverlaps" xml:space="preserve">
+    <value>警告！此条人员统计记录在日期上与下面的记录存在重叠情况</value>
+  </data>
+  <data name="WorkflowStart" xml:space="preserve">
+    <value>工作流引擎运转中</value>
+  </data>
+  <data name="WorkitemAcknowledge" xml:space="preserve">
+    <value>接受</value>
+  </data>
+  <data name="WorkitemAddedParticipantsRemoved" xml:space="preserve">
+    <value>参与人{0}已被{1}移除</value>
+  </data>
+  <data name="WorkitemAddNotes" xml:space="preserve">
+    <value>添加备注</value>
+  </data>
+  <data name="WorkItemAssignedToRole" xml:space="preserve">
+    <value>此待办事项已经指派给{0} 。</value>
+  </data>
+  <data name="WorkItemAssignedToUser" xml:space="preserve">
+    <value>此待办事项已指派给您</value>
+  </data>
+  <data name="WorkitemClosedWithResponse" xml:space="preserve">
+    <value>此待办事项已关闭，回复为：{0}</value>
+  </data>
+  <data name="WorkitemCloseWorkitem" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="WorkitemCompleted" xml:space="preserve">
+    <value>此待办事项已完成</value>
+  </data>
+  <data name="WorkitemRejectAcknowledge" xml:space="preserve">
+    <value>拒绝</value>
+  </data>
+  <data name="workitemRemoveAddedParticipants" xml:space="preserve">
+    <value>移除参与人</value>
+  </data>
+  <data name="WorkitemRemovedAddedParticipants" xml:space="preserve">
+    <value>参与人{0}已被{1}移除</value>
+  </data>
+  <data name="WorkitemsAssignedCoordinator" xml:space="preserve">
+    <value>协调人</value>
+  </data>
+  <data name="WorkitemsAssignedToRoles" xml:space="preserve">
+    <value>此待办事项已指派给您所处的岗位</value>
+  </data>
+  <data name="WorkitemsAssignedToYou" xml:space="preserve">
+    <value>此待办事项已指派给您</value>
+  </data>
+  <data name="workitemsNotesTemplate" xml:space="preserve">
+    <value>&lt;p&gt;&lt;div class=\"workitemsNotesHeader\" &gt;{0}: {1}&lt;/div&gt;&lt;h3 class=\"workitemnotesdetails\"&gt;&lt;strong&gt;{2}&lt;/strong&gt;&lt;/h3&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="WorkItemUnAssigned" xml:space="preserve">
+    <value>此待办事项已经指派给您，由于您处于协调人这个角色。此待办事项实际应指派给 {0}，但由于未找到目标岗位，所以由协调人承担此待办事项</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="YearMonthSpanView" xml:space="preserve">
+    <value>年：{0} 月：{1}</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>是的</value>
+  </data>
+</root>

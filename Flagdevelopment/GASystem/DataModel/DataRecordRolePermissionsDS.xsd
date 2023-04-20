@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DataRecordRoleAccessDS" targetNamespace="http://tempuri.org/DataRecordRoleAccessDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DataRecordRoleAccessDS.xsd"
+	xmlns:mstns="http://tempuri.org/DataRecordRoleAccessDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DataRecordRolePermissionsDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="DataRecordRolePermissions">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RoleName" type="xs:string" minOccurs="0" />
+							<xs:element name="RoleId" type="xs:string" minOccurs="0" />
+							<xs:element name="HasRead" type="xs:boolean" minOccurs="0" />
+							<xs:element name="HasUpdate" type="xs:boolean" minOccurs="0" />
+							<xs:element name="HasCreate" type="xs:boolean" minOccurs="0" />
+							<xs:element name="HasDelete" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DataRecordRoleAccessDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DataRecordRolePermissions" />
+			<xs:field xpath="mstns:RoleId" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

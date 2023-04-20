@@ -1,0 +1,5 @@
+F:\flagsvn\Flagdevelopment\FlagOpenWFE\FlagOpenWFE\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\flagsvn\Flagdevelopment\FlagOpenWFE\FlagOpenWFE\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\flagsvn\Flagdevelopment\FlagOpenWFE\FlagOpenWFE\ConsoleApp1\obj\Debug\ResolveAssemblyReference.cache
+F:\flagsvn\Flagdevelopment\FlagOpenWFE\FlagOpenWFE\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\flagsvn\Flagdevelopment\FlagOpenWFE\FlagOpenWFE\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MeetingToolboxViewDS" targetNamespace="http://tempuri.org/MeetingToolboxViewDS.xsd" xmlns:mstns="http://tempuri.org/MeetingToolboxViewDS.xsd" xmlns="http://tempuri.org/MeetingToolboxViewDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString23" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString23 (Settings)" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.ConnectionString23" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MeetingToolboxViewDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="MeetingToolboxViewDS" msprop:Generator_DataSetName="MeetingToolboxViewDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAMeetingToolboxView" msprop:Generator_UserTableName="GAMeetingToolboxView" msprop:Generator_RowDeletedName="GAMeetingToolboxViewRowDeleted" msprop:Generator_TableClassName="GAMeetingToolboxViewDataTable" msprop:Generator_RowChangedName="GAMeetingToolboxViewRowChanged" msprop:Generator_RowClassName="GAMeetingToolboxViewRow" msprop:Generator_RowChangingName="GAMeetingToolboxViewRowChanging" msprop:Generator_RowEvArgName="GAMeetingToolboxViewRowChangeEvent" msprop:Generator_RowEvHandlerName="GAMeetingToolboxViewRowChangeEventHandler" msprop:Generator_TablePropName="GAMeetingToolboxView" msprop:Generator_TableVarName="tableGAMeetingToolboxView" msprop:Generator_RowDeletingName="GAMeetingToolboxViewRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MeetingRowId" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="MeetingRowId" msprop:Generator_ColumnPropNameInRow="MeetingRowId" msprop:Generator_ColumnVarNameInTable="columnMeetingRowId" msprop:Generator_ColumnPropNameInTable="MeetingRowIdColumn" type="xs:int" />
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GAListDescription" msprop:Generator_UserColumnName="GAListDescription" msprop:Generator_ColumnPropNameInRow="GAListDescription" msprop:Generator_ColumnVarNameInTable="columnGAListDescription" msprop:Generator_ColumnPropNameInTable="GAListDescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sort1" msprop:Generator_UserColumnName="Sort1" msprop:Generator_ColumnPropNameInRow="Sort1" msprop:Generator_ColumnVarNameInTable="columnSort1" msprop:Generator_ColumnPropNameInTable="Sort1Column" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InfoToCommunityDS" targetNamespace="http://tempuri.org/InfoToCommunityDS.xsd" xmlns:mstns="http://tempuri.org/InfoToCommunityDS.xsd" xmlns="http://tempuri.org/InfoToCommunityDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString10" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString10 (Settings)" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.ConnectionString10" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InfoToCommunityDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="InfoToCommunityDS" msprop:Generator_DataSetName="InfoToCommunityDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAInfoToCommunity" msprop:Generator_UserTableName="GAInfoToCommunity" msprop:Generator_RowDeletedName="GAInfoToCommunityRowDeleted" msprop:Generator_TableClassName="GAInfoToCommunityDataTable" msprop:Generator_RowChangedName="GAInfoToCommunityRowChanged" msprop:Generator_RowClassName="GAInfoToCommunityRow" msprop:Generator_RowChangingName="GAInfoToCommunityRowChanging" msprop:Generator_RowEvArgName="GAInfoToCommunityRowChangeEvent" msprop:Generator_RowEvHandlerName="GAInfoToCommunityRowChangeEventHandler" msprop:Generator_TablePropName="GAInfoToCommunity" msprop:Generator_TableVarName="tableGAInfoToCommunity" msprop:Generator_RowDeletingName="GAInfoToCommunityRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InfoToCommunityRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="InfoToCommunityRowId" msprop:Generator_ColumnPropNameInRow="InfoToCommunityRowId" msprop:Generator_ColumnVarNameInTable="columnInfoToCommunityRowId" msprop:Generator_ColumnPropNameInTable="InfoToCommunityRowIdColumn" type="xs:int" />
+              <xs:element name="UserCommunityRowId" msprop:Generator_UserColumnName="UserCommunityRowId" msprop:Generator_ColumnPropNameInRow="UserCommunityRowId" msprop:Generator_ColumnVarNameInTable="columnUserCommunityRowId" msprop:Generator_ColumnPropNameInTable="UserCommunityRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree2" msprop:Generator_UserColumnName="nTextFree2" msprop:Generator_ColumnPropNameInRow="nTextFree2" msprop:Generator_ColumnVarNameInTable="columnnTextFree2" msprop:Generator_ColumnPropNameInTable="nTextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SwitchFree1" msprop:Generator_UserColumnName="SwitchFree1" msprop:Generator_ColumnPropNameInRow="SwitchFree1" msprop:Generator_ColumnVarNameInTable="columnSwitchFree1" msprop:Generator_ColumnPropNameInTable="SwitchFree1Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree2" msprop:Generator_UserColumnName="SwitchFree2" msprop:Generator_ColumnPropNameInRow="SwitchFree2" msprop:Generator_ColumnVarNameInTable="columnSwitchFree2" msprop:Generator_ColumnPropNameInTable="SwitchFree2Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IntFree1" msprop:Generator_UserColumnName="IntFree1" msprop:Generator_ColumnPropNameInRow="IntFree1" msprop:Generator_ColumnVarNameInTable="columnIntFree1" msprop:Generator_ColumnPropNameInTable="IntFree1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree2" msprop:Generator_UserColumnName="IntFree2" msprop:Generator_ColumnPropNameInRow="IntFree2" msprop:Generator_ColumnVarNameInTable="columnIntFree2" msprop:Generator_ColumnPropNameInTable="IntFree2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="InfoToCommunityReferenceId" msprop:Generator_UserColumnName="InfoToCommunityReferenceId" msprop:Generator_ColumnPropNameInRow="InfoToCommunityReferenceId" msprop:Generator_ColumnVarNameInTable="columnInfoToCommunityReferenceId" msprop:Generator_ColumnPropNameInTable="InfoToCommunityReferenceIdColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree2" msprop:Generator_UserColumnName="TextFree2" msprop:Generator_ColumnPropNameInRow="TextFree2" msprop:Generator_ColumnVarNameInTable="columnTextFree2" msprop:Generator_ColumnPropNameInTable="TextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateTimeFree1" msprop:Generator_UserColumnName="DateTimeFree1" msprop:Generator_ColumnPropNameInRow="DateTimeFree1" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree1" msprop:Generator_ColumnPropNameInTable="DateTimeFree1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree2" msprop:Generator_UserColumnName="DateTimeFree2" msprop:Generator_ColumnPropNameInRow="DateTimeFree2" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree2" msprop:Generator_ColumnPropNameInTable="DateTimeFree2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ViewTypeListsRowId" msprop:Generator_UserColumnName="ViewTypeListsRowId" msprop:Generator_ColumnPropNameInRow="ViewTypeListsRowId" msprop:Generator_ColumnVarNameInTable="columnViewTypeListsRowId" msprop:Generator_ColumnPropNameInTable="ViewTypeListsRowIdColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GAInfoToCommunity" />
+      <xs:field xpath="mstns:InfoToCommunityRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="SkeltaDS" targetNamespace="http://tempuri.org/SkeltaDS.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/SkeltaDS.xsd" xmlns:mstns="http://tempuri.org/SkeltaDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="SkeltaDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SWActivityList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ActivityName" type="xs:string" minOccurs="0" />
+							<xs:element name="TimeOutForActivity" type="xs:string" minOccurs="0" />
+							<xs:element name="TimeOutForActivityTaskId" type="xs:int" minOccurs="0" />
+							<xs:element name="TimeOutWarningForActivity" type="xs:string" minOccurs="0" />
+							<xs:element name="TimeOutWarningActivityTaskId" type="xs:int" minOccurs="0" />
+							<xs:element name="BusinessHrFlag" type="xs:string" minOccurs="0" />
+							<xs:element name="ExecutionId" type="xs:int" minOccurs="0" />
+							<xs:element name="ExecutionDetailsId" type="xs:int" minOccurs="0" />
+							<xs:element name="WorkFlowType" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="SubmittedBy" type="xs:int" minOccurs="0" />
+							<xs:element name="ActionRequired" type="xs:string" minOccurs="0" />
+							<xs:element name="ResponseBy" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Severity" type="xs:string" minOccurs="0" />
+							<xs:element name="AssignedOn" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="OnBehalfOfuser" type="xs:int" minOccurs="0" />
+							<xs:element name="VirtualUserId" type="xs:int" minOccurs="0" />
+							<xs:element name="Status" type="xs:string" minOccurs="0" />
+							<xs:element name="Subject" type="xs:int" minOccurs="0" />
+							<xs:element name="Notes" type="xs:int" minOccurs="0" />
+							<xs:element name="AppendResultsTodata" type="xs:string" minOccurs="0" />
+							<xs:element name="HideResponse" type="xs:string" minOccurs="0" />
+							<xs:element name="ForwardingAllowed" type="xs:string" minOccurs="0" />
+							<xs:element name="ShowCustomDocumentViewWindow" type="xs:string" minOccurs="0" />
+							<xs:element name="WaitForAllParticipants" type="xs:string" minOccurs="0" />
+							<xs:element name="LastUpdatedDateTime" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Data" type="xs:int" minOccurs="0" />
+							<xs:element name="Comments" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SWLong">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CharData" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SWExecute">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ProductionID" type="xs:int" minOccurs="0" />
+							<xs:element name="Application" type="xs:string" minOccurs="0" />
+							<xs:element name="Name" type="xs:string" minOccurs="0" />
+							<xs:element name="RequestedOn" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="VirtualUserID" type="xs:int" minOccurs="0" />
+							<xs:element name="InternalStatus" type="xs:string" minOccurs="0" />
+							<xs:element name="Status" type="xs:string" minOccurs="0" />
+							<xs:element name="GlobalObjects" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="Data" type="xs:int" minOccurs="0" />
+							<xs:element name="WorkflowData" type="xs:int" minOccurs="0" />
+							<xs:element name="LastUpdatedDateTime" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ExecutionEndedAt" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SWVirtualUser">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="UserIDString" type="xs:string" minOccurs="0" />
+							<xs:element name="UserID" type="xs:int" minOccurs="0" />
+							<xs:element name="ResourceHandler" type="xs:string" minOccurs="0" />
+							<xs:element name="LastUpdatedDateTime" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dsw_Activity">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ActivityID" type="xs:int" minOccurs="0" />
+							<xs:element name="Subject" type="xs:string" minOccurs="0" />
+							<xs:element name="ResponseBy" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Severity" type="xs:string" minOccurs="0" />
+							<xs:element name="AssignedOn" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="TimeOutForActivity" type="xs:string" minOccurs="0" />
+							<xs:element name="VirtualUserId" type="xs:int" minOccurs="0" />
+							<xs:element name="UserId" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="SkeltaDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:dsw_Activity" />
+			<xs:field xpath="mstns:ActivityID" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

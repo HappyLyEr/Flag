@@ -1,0 +1,374 @@
+using System;
+using System.Data;
+using System.Collections.Generic;
+
+namespace GASystem.DataModel
+{
+
+	public enum GADataClass {
+        //GAActivity                // Tor 20070813 : removed 
+		GAAction, 
+		GAActionTemplate,
+        GAActionWorkitemView,       // added by jof 22/8/2008, used for displaying workitems for a given class
+        GAAnalysis,                 // added by jof 14/01/2008, used for analysis services
+        GAAspectImpact,             // Tor 20151028 : REQUESTOR  Daniella Bordon
+        GAAspectImpactView,         // Tor 20160603 : REQUESTOR  Daniella Bordon isView=1 class - for reporting
+        GAAudit, 
+        GABusinessRisk,             // Tor 20160730 : Requestor Michael Dudley
+		GACertificate,
+        GACertificateExpirationView,            // Tor 20111013 : added view for reporting assigned expiring personnel certificates from project,crew,location, not in GASystem.DataModel
+        GAClass,
+        GAClassAndAttributeSelectionWithSort,   // Tor 20090529 : added view for personal filters, column selection and sort
+        GAClassAttributeSelection,              // Tor 20090529 : added view for personal filters, column selection and sort
+        GAClassFilter,                          // Tor 20090529 : added view Tor 20090529 : added view for personal filters, column selection and sort
+        GAClient,                               // Gao 20201224
+        GAClientVisit,                          // Gao 20220316
+        GACompany,
+		GAControl, 
+        GAControlMeasureAdd,                    // Tor 20180420 : added on request from Phil Bigg
+        GAControlMeasureCurrent,                // Tor 20180420 : added on request from Phil Bigg
+		GACost, 
+		GACourse, 
+		GACoursePersonList,
+        GACoursePersonListView,                 // Tor 20110824 : added view for GACoursePersonlist including attachment/file reference
+        GACreateRecordFromClass,                // Tor 20150622 : to create a new record from another record (different classes)
+        GACrew,
+        GACrewListView,	            // used for crewlist report to US Coast Guard
+        GACrewInProject, 
+        
+        GACrisis,
+        GACrisisCheckList,
+        GACrisisCheckListItem,
+        GACrisisIssue,
+        GACrisisMessageLog, 
+        GACrisisNewsBulletin,
+
+        GAClientFeedbackView,       // Tor 20120609 : added on request from Phil Bigg/Caroline Hall
+        GAClientFeedbackViewEvaluationForm, //Lmz 20200914 
+        GAClientFeedbackViewProject,        //Lmz 20200915
+		GADailyEmployeeCount, 
+		GADamagedEquipment,
+        GADaysReport,
+        GADayOperation,             // Tor 20190204: added on request from Gao Peng 
+		GADepartment, 
+		GADocument,
+        GADocumentControl,          // Tor 20140501 : added on request from Phil Bigg. class for handling document revisions
+        GADrugAndAlcoholTest,       // Tor 20140205 : added on request from Michael Caddick/Phil Bigg
+        GAEmployeeSiteLogView,      // view holding employee site login information
+        GAEmployment,
+        GAEmploymentHierarchyView,  // Tor 20071122 : added 
+        GAEmploymentPathView,       // jof 20090730 : added view for listing current useremployment with owner and path info
+        GAEquipmentDamageReport,
+        GAExposedTimeView,          // Tor 20071122 : added 
+        GAExposedHoursGroupView,    // Tor 20070915 : added 
+        GAFieldDefinitions, 
+		GAFile,
+        GAFileView,                 // Tor 20120228 : added for ApplyAdditionalAccessControl=1 classes (currently for GAPersonnel)
+        GAFileContent, 
+		GAFileFolder,
+        GAFlag,
+        GAFlagTask,
+        GAGoalObjective,            // Tor 20150923 : added on request from Phil Bigg
+        GAGroups,                   // 2020729 : added on Meeting and Training
+        GAionGoalObjective,         // Tor 20160728 : added on request from Phil Bigg
+        GAHazardIdentification,
+        GAHealthCertificateView,    // Tor 20110726 : added view for personell health certificates
+        GAHealthPassportVisaView,   // Tor 20160217 : added view on request from Julie Proctor/Phil Bigg for combined personell health certificates and passport visa (isView=1 class with sql select defined in GAClass
+        GAHelp,
+        GARecordHistoryLog,         // Tor 20150102 : added view to track changes in records
+        GAIncidentReport,
+        GAIncidentReportCountView,
+        GAIncidentReportDailyEmployeeCountView,
+        GAInfoToCommunity,          // Tor 20150707 : added view to support sending e-mail notifications for approved DocumentControl workflows
+        GAInjuredParty, 
+        GAInvestigationTeam,        // Tor 20180409 : added view on request from Phil Bigg
+        GAIssue,
+        GAKPIIndicator,             // Tor 20170303 : added view on request from Phil Bigg/Tim Granlie
+        GALastLoginDateTimeView,    // Tor 20080405 : added view for displaying last login date (based on date in aspnet_Users)
+        GALastLoginView,            // Tor 20080405 : added view for displaying last login for employments at a location  
+        GALegalCompliance,          // Gao 20210304 : added, used for tab Legal Compliance
+        GALessonLearnt, // Tor 20160728 : Added on request from Phil Bigg
+        GALicense, 
+		GALink, 
+		GAListCategory, 
+		GALists, 
+        GAListsSelected,            // JOF 20090417 : added , used for multipleselect
+		GALocation,
+        GALocationCertificateView,  // Tor 20120125 : added view for adding Location Certificate by shipowner representative (eg. master)
+        GALocationInCrew,
+		GAManageChange,
+		GAMeansOfContact,
+        GAMedicalTreatmentLog,      // Tor 20140412 : added view for Medical Treatment Log on request from Phil Bigg and Michael Caddick
+        GAMeeting,
+        GAMeetingToolboxView,       // Lmz 20200914 : toolboxmeeting
+		GAMeetingPersonList,
+        GAMeetingReport,            // Tor 20171110 : added on request from Emerson Verissimo - moved all GAMeeting and member records to GAMeetingReport
+        GAMeetingText,
+        GAMilestone,                // Tor 20081002 : added 
+        GAMMOReport,                // Tor 20190105 : on request from Gao Peng
+        GAMonitoringNote,           // Tor 20150925 : added on request from Phil Bigg - notes under GAGoalObjective 
+        GANextOfKin,
+        GAOffshoreCertificateView,  // Tor 20160523 : added on request from Julie Proctor/Phil Bigg
+        GANonConformanceView,       // Tor 20120224 : added on request from Phil Bigg
+        GAOpportunity,
+        GAOpportunityDetail,        // Tor 20170406 : added view to store GAOpportunity details during I&O Process on request from Phil Bigg / Daniella Bordon
+        GAOpportunityDetailsView,   // Tor 20170406 : added sql view to list combined GAOpportunity and GAOpportunityDetail during I&O Process on request from Phil Bigg / Daniella Bordon
+        GAPassportVisaView,         // Tor 20110726 : added view for personell passports and visas
+        GAPermitToWork,             // Tor 20140209 : added view for adding Permits to Work, replaces GAPermitToWorkView shich did not contain fields for embedded documents
+        GAPermitToWorkView,         // Tor 20120125 : added view for adding Permits to Work
+        GAionPermitToWork,         // Tor 20160728 : added on request from Phil Bigg
+        GAPersonnel,
+        GAPersonCertificateListView,// Tor 20110828 : added view for reporting assigned personnel's certificates, not in GASystem.DataModel
+        GAPersonnelCertificateView, // Tor 20120130 : added view for viewing Personnel Certificate dates from GAPersonnel by path employment (isView)
+        GAPersonnelCrewingListView, // Tor 20130118 : added view for subcontractor managementGAPersonnelRecordsView,                  // added by Tor 26/7/2011 views for personell records to be used in Personnel report - dataset defined in GAClass, not in GASystem.DataModel
+        GAPersonnelEmploymentView,  // Tor 20170303 : added sql view on request from Julie Proctor/Phil Bigg
+        GAPersonnelHRDocumentView,  // Tor 20131015 : added on request from Andreia Almeida and Phil Bigg
+        GAPersonnelMedicalRecord,   // Tor 20150205 : added on request from Michael Caddick and Phil Bigg
+        GAPersonnelTrainingMatrix,  // Tor 20140716 : Phil Bigg request: owned by GAPersonnel, training lookup in GATrainingMatrix. records persons training. Connects to dropdownlists 'er' (Job role) 
+        GAPersonTrainingRecordView, // Tor 20110726 : added view for personell training certificates - dataset defined in GAClass, not in GASystem.DataModel
+        GAProcedure, 
+		GAProcedureReference,
+        GAProcedureTemplate,        // added by jof 16/12/2008, used for storing smtp templates releated to procedures
+        //GAProductService,           // Tor 20150708 : Fabio Sarmento - lookuptable for user update instead of using GALists
+        GAProject, 
+        GAProjectDocument,          // Tor 20170415 : added on request from Tim Granli/Phil Bigg
+        GAProjectEmission,          // Gao 20220921
+        GAProjectRisk,              // Tor 20190318 : on request from Phil Bigg
+        GARemedialActionView,
+        GAPurchaseOrder,            // Tor 20080812 : added 
+        GAPurchaseOrderLine,        // Tor 20080812 : added added by Tor 080812
+        GARegionalOfficeView,       // GAO 20201224
+        GARepairIssueView,          // Tor 20071017 : added added by Tor 17/10/2007
+        GAReport,
+        GAReporter,                 // Tor 20070813 : removed, then  // Tor 20080708 : added 
+		GAReportInstance, 
+		GAReportInstanceFilter, 
+		GAReports, 
+        GARequiredTraining,         // Tor 20171211 : added on request from OceanGeo Emerson Verissimo Ricardo Silva
+        GARequiredTrainingView,     // Tor 20171226 : added on request from OceanGeo Emerson Verissimo Ricardo Silva, to list missing training by Job Title
+		GAResource, 
+		GAResourceSpecification,
+        GAResourceUsage,            // Tor 20080814 : added 
+        GARisk,
+        GARiskCompTitle,            // Tor 20171114 : added on request from Phil Bigg
+        GARiskView,                 // Tor 20160603 : REQUESTOR  Daniella Bordon isView=1 class - for reporting
+        GARiskAspectImpactView,     // Tor 20160110 : added on request from Phil Bigg, sql view stored in GAClass 
+		GARiskControl, 
+		GARootClass,
+        GARxtIssueView,             // Tor 20080903 : added 
+        GArxtReport, 
+		GASafetyObservation,
+        // GASafetyStatistics,      // Tor 20070813 : removed 
+        GASeafarerView,             // Gao 20201123 : added
+        GAServiceDeskView,          // Tor 20080812 : added 
+        GAStakeHolder,              // Tor 20171027 : added on request from Phil Bigg
+        GAStoreAttribute, 
+		GAStoreObject,
+        GASubcontractorView,        // Tor 20121119 : added view for subcontractor management
+        // GASuggestion,            // Tor 20070813 : removed 
+        GASupplier,                 // Tor 20150418 : added view on request from Phil Bigg/Fabio Sarmento
+        GATask, 
+		GATaskTemplate, 
+		GATeam, 
+        GATemplate,
+		GATextItem, 
+		GATimeAndAttendance,
+        //GATrainingCertificateView,   // Tor 20110726 : added view for personell training certificates
+        GATitleToTrain,             // Tor 20171211 : added on request from OceanGeo Emerson Verissimo Ricardo Silva
+        GATrainingInstitutionView,	// Tor 20110825 : added view for GATrainingInstitutionView
+        GATrainingMatrix,           // Tor 20140716 : Phil Bigg request: training requirements by job role. Connects to dropdownlists 'er' (Job role) and 'tc' (type of course)
+        GATravelRiskAssessment,     // Tor 20170810 : Michael Dudley request.
+        GAUser,
+        GAUserCommunity,            // Tor 20150707 : added view with copy of flagdnn.Roles. Data uploaded with sql script
+        GAUsers,
+        GAVendor,                   // Gao 20210913 : added by Gao Peng
+        GAVendorAudit,              // Gao 20210916 : added by Gao Peng
+        GAVendorAuditFinding,       // Gao 20210916 : added by Gao Peng
+        GAVendorContact,            // Gao 20210913 : added by Gao Peng
+        GAVendorEvaluation,         // Gao 20210916 : added by Gao Peng
+        //GAVendorRequest,            // Tor 20130306 : added on request from Caroline Hall
+        GAWaste,                    // Tor 20190202 : added on request from Gao Peng
+        GAWasteOnshore,             //  Gao 20220401
+        GAWasteOffshore,            //  Gao 20220407
+        GAWorkflow,
+        GAWorkflowStarter,          // Tor 20140501 : added to handle automatic workflow starts and e-mail notification
+        GAWorkitem, 
+        GAWorkitemPathView,
+        GAWorkPlan,                 // Gao 20220818 : added
+        GAToolProcess,               //JOF 20141018 : HAVS
+        GAHandArmVibrationLog,       //JOF 20141018 : HAVS
+        GAWBOperationList,          // Gao 20220823
+        NullClass
+    }
+
+
+    // Tor 20060309 : removed by tor 9.3.06 - added class GArxtReport public enum GADataClass {GAActivity, GAAction, GAActionTemplate, GAAudit, GACertificate, GAClass, GACompany, GAControl, GACost, GACourse, GACoursePersonList, GACrew, GACrewInProject, GADailyEmployeeCount, GADamagedEquipment, GADaysReport, GADepartment, GADocument, GAEmployment, GAEquipmentDamageReport, GAFieldDefinitions, GAFile, GAFileContent, GAFileFolder, GAHazardIdentification, GAHelp, GAIncidentReport, GAIncidentReportDailyEmployeeCountView, GAInjuredParty, GALicense, GALink, GAListCategory, GALists, GALocation, GALocationInCrew, GAMeansOfContact, GAMeeting, GAMeetingPersonList, GAMeetingText, GANextOfKin, GAOpportunity, GAPersonnel, GAProcedure, GAProcedureReference, GAProject, GAReport, GAReporter, GAReportInstance, GAReportInstanceFilter, GAReports, GAResource, GAResourceSpecification, GARisk, GARiskControl, GARootClass, GASafetyObservation, GASafetyStatistics, GAStoreAttribute, GAStoreObject, GATask, GATaskTemplate, GATeam, GATextItem, GATimeAndAttendance, GASuggestion, GAUser, GAUsers, GAWorkflow, GAWorkitem, NullClass}
+	//public enum GADataClass {GAActivity, GAAction, GAAudit, GACertificate, GACompany, GACost, GACourse, GACoursePersonList, GADailyEmployeeCount, GADamagedEquipment, GADepartment, GADocument, GAEmployment, GAEquipmentDamageReport, GAFieldDefinitions, GAFile, GAFileFolder, GAHazardIdentification, GAHelp, GAIncidentReport, GAInjuredParty, GALink, GALocation, GAMeansOfContact, GAMeeting, GAMeetingPersonList, GAMeetingText, GANextOfKin, GAPersonnel, GAProcedure, GAProject, GAReport, GAReporter, GAReportInstance, GAReportInstanceFilter, GAReports, GAResource, GAResourceSpecification, GARootClass, GASafetyObservation, GASafetyStatistics, GAStoreAttribute, GAStoreObject, GATask, GATaskTemplate, GATeam, GATextItem, GATimeAndAttendance, GAUsers, GAWorkflow, GAUser, GALists, GAClass, GAWorkitem, GAListCategory, GAFileContent, NullClass}
+			// dataclasses not included :
+				//GAActionTemplate, 
+				//
+				//
+				//GAProjectPartyChief,
+				//GASuperClass, GASuperClassLinks,
+				//GAUserContext,
+
+
+	//enum of controls in gadatadefinition
+	public enum GADataControl {
+	
+		Checkbox,
+		Date,
+		DateTime,
+		DropdownList,
+        // Tor 20171215 added DROPDOWNLISTMULTIPLE
+        //DropdownListMultiple,
+		FileContent,
+		FileLookupField,
+		FileMimeType,
+		FileURL,
+		GADataClass,
+		HazardMatrix,
+		LookupField,
+		LookupFieldMultiple,
+        LookupFieldGroups,
+		Numeric,
+		PersonnelPicker,
+		ReportURL,
+		TextArea,
+		Textbox,
+		URL,
+		WorkflowStarted,
+		YearMonthSpan
+	}
+
+	[Serializable]
+    public class GADataRecord : IEquatable<GADataRecord>
+	{
+
+		public GADataRecord(int RowId, GADataClass DataClass)
+		{
+			
+			_dataClass = DataClass;
+			_rowId = RowId;
+			
+		}
+
+		private GADataClass _dataClass;
+		private int _rowId;
+
+
+		public static GADataClass ParseGADataClass(String DataClassString)
+		{
+            // Tor 20171115 added to avoid error
+            GADataClass dataclassEnum;
+            if (DataClassString == null)
+                dataclassEnum = (GADataClass)Enum.Parse(typeof(GADataClass), "GALocation", true);
+            else
+            //GADataClass dataClassEnum = (GADataClass) Enum.Parse(typeof(GADataClass), DataClassString,true);
+                dataclassEnum = (GADataClass)Enum.Parse(typeof(GADataClass), DataClassString, true);
+            return dataclassEnum;
+		}
+		
+		/// <summary>
+		/// parse a string of format {dataclass}-{rowid} into a gadatarecord
+		/// </summary>
+		/// <param name="DataRecord"></param>
+		/// <returns></returns>
+		public static GADataRecord ParseGADataRecord(string DataRecord) 
+		{
+			int indexOfSlash = DataRecord.IndexOf("-");
+			
+			GADataRecord dataRecord = null;
+			if (indexOfSlash != -1) 
+			{
+				string dataClass;
+				string rowid;
+				dataClass = DataRecord.Substring(0, indexOfSlash);
+				rowid = DataRecord.Substring(indexOfSlash + 1);
+				dataRecord = new GADataRecord(int.Parse(rowid), ParseGADataClass(dataClass));
+			}
+			return dataRecord;
+		}
+
+		public static GADataRecord GetGADataRecordFromFirstRow(DataSet GADataSet, GADataClass DataSetDataClass)
+		{
+			if (GADataSet == null || GADataSet.Tables[0] == null || GADataSet.Tables[0].Rows.Count == 0)
+				return null;
+			GADataRecord returnedRecord = null;
+			try
+			{
+				string rowIdColumnName = DataSetDataClass.ToString().Substring(2) + "RowId";
+				int rowId = (int)GADataSet.Tables[0].Rows[0][rowIdColumnName];
+				returnedRecord = new GADataRecord(rowId, DataSetDataClass);
+			}
+			catch (Exception ex)
+			{
+                // Tor 20170328 return null (first row has been deleted or does not exist)
+                return null;
+                //SuperClassLinksDS hasOwnerClass = GASystem.DataAccess.SuperClassDb.GetSuperClassLinksByMember(DataSetDataClass);
+                //if (hasOwnerClass == null || hasOwnerClass.Tables[0].Rows.Count==0) return null;
+
+				throw new GAExceptions.GAException("GetGADataRecordFromFirstRow: Was not able to get DataRecord of type " + DataSetDataClass + " from first row in DataSet");
+            }
+
+			return returnedRecord;
+		}
+		public GADataClass DataClass
+		{
+			get 
+			{
+				return _dataClass;
+			}
+			set
+			{
+				_dataClass = value;
+			}
+		}
+
+		public int RowId
+		{
+			get 
+			{
+				return _rowId;
+			}
+			set
+			{
+				_rowId = value;
+			}
+		}
+
+ 
+        #region IEquatable<GADataRecord> Members
+
+        public bool Equals(GADataRecord other)
+        {
+            return other.DataClass == this.DataClass && this.RowId == other.RowId;
+        }
+
+        #endregion
+    }
+
+	public class GADataRecordDate : GADataRecord 
+	{
+		private System.DateTime _startDate = new DateTime(1800,1,1); //startdate accepted by sql server;
+		private System.DateTime _endDate = new DateTime(3000,1,1); //end date accepted by sql server;
+
+		public GADataRecordDate(int RowId, GADataClass DataClass) : base(RowId, DataClass) {}
+		
+
+		public System.DateTime StartDate 
+		{
+			get {return _startDate;}
+			set {_startDate = value;}
+		}
+
+		public System.DateTime EndDate 
+		{
+			get {return _endDate;}
+			set {_endDate = value;}
+		}
+	}
+
+
+
+}

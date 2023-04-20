@@ -1,0 +1,1204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadDock.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.RadDockableObjectDesigner">
+            <summary>
+            Summary description for RadDockableObjectDesigner.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingManagerDesigner">
+            <summary>
+            Designer for RadDockingManager control.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingZoneDesigner">
+            <summary>Provides design-time support in a visual designer for
+            the <see cref="T:Telerik.WebControls.RadDockingZone"></see> control.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadDock.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadDockUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadDockUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadDockUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.StringArrayConverter">
+            <summary>
+            Summary description for StringArrayConverter.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadDockUtils.IncludeScriptsBuilder">
+            <summary>
+            Create include script tag for every .js file form a given start directory and below
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingModeFlags">
+            <summary>
+            Specifies docking mode flags for the dockable object.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingModeFlags.Disabled">
+            <summary>
+            Docking is disabled.
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingModeFlags.AlwaysDock">
+            <summary>
+            The object cannot float - have to be always docked.
+            </summary>
+            <value>1</value> 
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingModeFlags.NeverDock">
+            <summary>
+            The object cannot be docked - have to be always floating.
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingModeFlags.Dockable">
+            <summary>
+            The object can be docked or can float.
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectGripFlags">
+            <summary>
+            Specifies the available grips for the dockable object.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.None">
+            <summary>
+            No grip is available.
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.TitleBar">
+            <summary>
+            Title bar is available.
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.Top">
+            <summary>
+            The top grip is available.
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.Bottom">
+            <summary>
+            The bottom grip is available.
+            </summary>
+            <value>4</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.Left">
+            <summary>
+            The left grip is available.
+            </summary>
+            <value>8</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.Right">
+            <summary>
+            The right grip is available.
+            </summary>
+            <value>16</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.All">
+            <summary>
+            All grips are available.
+            </summary>
+            <value>31</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectGripFlags.Auto">
+            <summary>
+            Tha grips depend on the docking state and the type of the zone where the objects is docked (if docked).
+            </summary>
+            <value>32</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectBehaviorFlags">
+            <summary>
+            Specifies the behaviors of the dockable object.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectBehaviorFlags.None">
+            <summary>
+            No behavior is specified.
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectBehaviorFlags.Resize">
+            <summary>
+            The object can be resized.
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectBehaviorFlags.Collapse">
+            <summary>
+            The object can be collapsed.
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectBehaviorFlags.Close">
+            <summary>
+            The object can be closed.
+            </summary>
+            <value>4</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectBehaviorFlags.Pin">
+            <summary>
+            The objct can be pinned.
+            </summary>
+            <value>8</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockableObjectBehaviorFlags.Resizable">
+            <summary>
+            Collapse behavior and resizable.
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObject">
+            <summary>
+            Represents an object that can be dragged and docked/undocked.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockControl">
+            <summary>
+            RadDockControl is the base class for both RadDockingZone and RadDockableObject controls.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockControl class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.#ctor(System.Web.UI.HtmlTextWriterTag)">
+            <summary>
+            Initializes a new instance of the RadDockControl class using the specified HTML tag.
+            </summary>
+            <param name="tag">One of the System.Web.UI.HtmlTextWriterTag values.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the RadDockControl class using the specified HTML tag.
+            </summary>
+            <param name="tag">An HTML tag.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.LoadFromString(System.String)">
+            <summary>
+            Loads the state of the RadDockControl from the specified string.
+            </summary>
+            <param name="state">A string that contains the state of this RadDockControl.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.SaveToString">
+            <summary>
+            Saves the state of this RadDockControl in a string.
+            </summary>
+            <returns>A string that contains the state of this RadDockControl.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.OnInit(System.EventArgs)">
+            <summary>
+            Raises the Init event.
+            </summary>
+            <param name="e">An EventArgs object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.Register">
+            <summary>
+            Finds the current instance of RadDockingManager and registers to it 
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockControl.RenderStateField(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders HTML of the hidden input field where the current state of this control will be stored on the client browser.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockControl.HiddenInputID">
+            <summary>
+            Gets a string that is the ID of the hidden input field used to save the current state of this dock control.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockControl.HiddenInputName">
+            <summary>
+            Gets a string that is the Name of the hidden input field used to save the current state of this dock control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockableObject class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.CanDockTo(Telerik.WebControls.RadDockingZone)">
+            <summary>
+            Retreives a value indicating whether this RadDockableObject can be docked to the specified RadDockingZone;
+            </summary>
+            <param name="dockingZone">A RadDockingZone to check whether this RadDockableObject can be docked to.</param>
+            <returns>true if this RadDockableObject can be docked to the specified RadDockingZone.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.FindControl(System.String)">
+            <summary>
+            Searches the current naming container for a server control with the specified id parameter.
+            </summary>
+            <param name="id">The identifier for the control to be found.</param>
+            <returns>The specified control, or a null reference (Nothing in Visual Basic) if the specified control does not exist.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.LoadFromString(System.String)">
+            <summary>
+            Loads the state of the RadDockControl from the specified string.
+            </summary>
+            <param name="state">A string that contains the state of this RadDockControl.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.SaveToString">
+            <summary>
+            Saves the state of this RadDockControl in a string.
+            </summary>
+            <returns>A string that contains the state of this RadDockControl.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.OnCommand(Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Raises the Command event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.DataBind">
+            <summary>
+            Binds a data source to the invoked server control and all its child controls.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.OnInit(System.EventArgs)">
+            <summary>
+            Raises the Init event.
+            </summary>
+            <param name="e">An EventArgs object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the PreRender event.
+            </summary>
+            <param name="e">An EventArgs object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Sends server control content to a provided HtmlTextWriter object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The HtmlTextWriter object that receives the server control content.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.CreateChildControls">
+            <summary>
+            Notifies server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.RebuildControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.SetGripState(System.Web.UI.WebControls.WebControl,Telerik.WebControls.RadDockableObjectGripFlags)">
+            <summary>
+            Sets style.display attribute ot a given grip control according to its gripType
+            and current object docking state (docked/floating)
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.ToJsString">
+            <summary>
+            Returns string that is a javascript array with this control's properties
+            </summary>
+            <returns>javascript array string</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.StringArrayToJsString(System.String[],System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="arr"></param>
+            <param name="separator"></param>
+            <param name="quote"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObject.CommandListToJsArray">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.ContentTemplate">
+            <summary>
+            Gets or sets the System.Web.UI.ITemplate that defines how items in the RadDockableObject are displayed.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Behavior">
+            <summary>
+            Gets or sets a value indicating the behavior of this object - if can be resized, has expand/collapse commands, closed command, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Expanded">
+            <summary>
+            Gets or sets a value indicating whether the content of this dockable object is visible or it is collapsed to the title bar only.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Pinned">
+            <summary>
+            Gets or sets a value indicating whether this dockable object is pinned.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Closed">
+            <summary>
+            Gets or sets a value indicating whether this dockable object is closed.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.ShowTitleBarWhenDisabled">
+            <summary>
+            Gets or sets a value indicating whether to show the title bar of this dockable object when it is disabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.DockingMode">
+            <summary>
+            Gets or sets the docking mode of this object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.AllowedDockingZoneTypes">
+            <summary>
+            Gets or sets the available types of docking zones that this object can be docked to.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.AllowedDockingZones">
+            <summary>
+            Gets or sets an array of docking zone ids that this object can dock to.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.ParentDockingZone">
+            <summary>
+            Gets the docking zone that this object is docked to; If object is floating ParentDockingZone returns null.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.FloatingObjectEnabledGrips">
+            <summary>
+            Gets or sets the enabled grips when this object is floating.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.DockedObjectEnabledGrips">
+            <summary>
+            Gets or sets the enabled grips when this object is docked.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.HorizontalGripStyle">
+            <summary>
+            Gets or sets the style of the horizontal (left and right) grips.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.VerticalGripStyle">
+            <summary>
+            Gets or sets the style of the vertical (top and bottom) grips.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Text">
+            <summary>
+            Gets or sets the text associated with this control.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.TitleBarStyle">
+            <summary>
+            Gets the style of the title bar.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientDockStateChange">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side DockStateChanged event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientDock">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side OnDock event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientUnDock">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side OnUnDock event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientDragEnd">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side OnDragEnd event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientDrop">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side OnDrop event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientDrag">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side OnDrag event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.OnClientDragStart">
+            <summary>
+            Gets or sets the name of the Javascript function handler for the client-side OnDrag event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.IsDocked">
+            <summary>
+            Gets a value indicating whether the object is being docked.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.IsFloating">
+            <summary>
+            Gets a value indicating whether the object is floating.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Commands">
+            <summary>
+            Gets the list of commands.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Container">
+            <summary>
+            Gets the control where the content template is instantiated in.
+            </summary>
+        </member>
+        <member name="E:Telerik.WebControls.RadDockableObject.Command">
+            <summary>
+            Occurs when a Command button on the title bar is clicked.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.Controls">
+            <summary>
+            Gets a ControlCollection object that represents the child controls for a specified server control in the UI hierarchy.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObject.IsDockingEnabled">
+            <summary>
+            Gets a value indicating wheter the docking is enabled that is
+            RadDockableObject.DockingMode is set to different than 
+            RadDockingModeFlags.Disabled value;
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectCommand">
+            <summary>
+            Specifies a command that can be executed from a RadDockableObject.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommand.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommand class.
+            </summary>
+            <param name="name">The name of the command.</param>
+            <param name="toolTip">The tooltip text of the command.</param>
+            <param name="image">The image that is displayed on a command.</param>
+            <param name="enabled">Specifies whether the command is enabled.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommand.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommand class.
+            </summary>
+            <param name="name">The name of the command.</param>
+            <param name="toolTip">The tooltip text of the command.</param>
+            <param name="enabled">Specifies whether the command is enabled.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommand.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommand class.
+            </summary>
+            <param name="name">The name of the command.</param>
+            <param name="enabled">Specifies whether the command is enabled.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommand.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommand class.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommand.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommand class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.Name">
+            <summary>
+            Gets or sets the name of the command.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.ToolTip">
+            <summary>
+            Gets or sets the tooltip text of the command.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.Image">
+            <summary>
+            Gets or sets the name of the image of the command. The image file must be placed under RadControls\Dock\Skins\[CurrentSkin]\Img folder. If not set RadDockableObject uses [CommandName].gif instead where [CommandName] is the name of the command.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the command is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.Visible">
+            <summary>
+            Gets or sets a value indicating whether the command is visible. Commands that are not visible are not available on the client.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.OnClientCommand">
+            <summary>
+            Gets or sets a string that is the name of a client-side JavaScript function that executes when the command is clicked.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.AutoPostBack">
+            <summary>
+            Gets or sets a value indicating whether an automatic postback to the server will occur whenever the user executes a command.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.Parent">
+            <summary>
+            Gets or sets a reference to the RadDockableObject that this command belongs to.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommand.ViewState">
+            <summary>
+            Gets a dictionary of state information that allows you to save and restore the view state of a command across multiple requests for the same page.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectCommandEventArgs">
+            <summary>
+            Provides data for any events that occur when a user executes a RadDockableObjectCommand.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandEventArgs.#ctor(Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommandEventArgs class.
+            </summary>
+            <param name="command">The command that caused the event.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommandEventArgs.Command">
+            <summary>
+            Gets the command that caused the event.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectCommandList">
+            <summary>
+            Represents a collection of RadDockableObjectCommands.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockableObjectCommandList class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.GetByName(System.String)">
+            <summary>
+            Gets the RadDockableObjectCommand with the specified name.
+            </summary>
+            <param name="commandName">The name of the command to get.</param>
+            <returns>RadDockableObjectCommand with the specified name or null when no such command.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.Add(Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Adds an RadDockableObjectCommand to the end of the RadDockableObjectCommandList.
+            </summary>
+            <param name="item">The RadDockableObjectCommand to add. The item cannot be a null reference.</param>
+            <returns>The RadDockableObjectCommandList index at which the item has been added.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.Insert(System.Int32,Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Inserst a RadDockableObjectCommand at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which item should be inserted.</param>
+            <param name="item">The RadDockableObjectCommand to insert. The item cannot be a null reference.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.RemoveAt(System.Int32)">
+            <summary>
+            Removes the RadDockableObjectCommand at the specified index of the RadDockableObjectCommandList.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.Remove(Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Removes the first occurrence of a specific RadDockableObjectCommand from the RadDockableObjectCommandList.
+            </summary>
+            <param name="item">The RadDockableObjectCommand to remove from the RadDockableObjectCommandList. The item cannot be a null reference.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.Clear">
+            <summary>
+            Removes all elements from the RadDockableObjectCommandList.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.Contains(Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Determines whether a RadDockableObjectCommand is in the RadDockableObjectCommandList.
+            </summary>
+            <param name="item">The RadDockableObjectCommand to locate in the RadDockableObjectCommandList. The value cannot be a null reference.</param>
+            <returns>true if the item is found in the RadDockableObjectCommandList; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.Contains(System.String)">
+            <summary>
+            Determines whether a RadDockableObjectCommand with the specified name is in the RadDockableObjectCommandList.
+            </summary>
+            <param name="commandName">The name of the command to locate in the RadDockableObjectCommandList.</param>
+            <returns>true if the item is found in the RadDockableObjectCommandList; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.IndexOf(Telerik.WebControls.RadDockableObjectCommand)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a specified command in the RadDockableObjectCommandList.
+            </summary>
+            <param name="item">A RadDockableObjectCommand to locate in the RadDockableObjectCommandList. The item cannot be a null reference.</param>
+            <returns>The zero-based index of the first occurrence of item within the entire RadDockableObjectCommandList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.IndexOf(System.String)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a command with the specified name in the RadDockableObjectCommandList.
+            </summary>
+            <param name="commandName">The name of the command to locate in the RadDockableObjectCommandList.</param>
+            <returns>The zero-based index of the first occurrence of item within the entire RadDockableObjectCommandList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the entire RadDockableObjectCommandList to a compatible one-dimensional Array, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional Array that is the destination of the elements copied from RadDockableObjectCommandList. The Array must have zero-based indexing.</param>
+            <param name="index">The zero-based index in array at which copying begins. </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectCommandList.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the RadDockableObjectCommandList.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommandList.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index. In C#, this property is the indexer for the RadDockableObjectCommandList class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommandList.ViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommandList.Count">
+            <summary>
+            Gets the number of elements actually contained in the RadDockableObjectCommandList.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommandList.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the RadDockableObjectCommandList is synchronized (thread-safe).
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectCommandList.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access to the RadDockableObjectCommandList.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectGrip">
+            <summary>
+            Summary description for RadDockableObjectGrip.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectGripStyle">
+            <summary>
+            Represents the style of the grips of a RadDockableObject.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectGripStyle.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockableObjectGripStyle class using default values.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectGripStyle.#ctor(System.Web.UI.StateBag)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectGripStyle class with the specified state bag information.
+            </summary>
+            <param name="bag">A System.Web.UI.StateBag that represents the state bag in which to store style information.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectGripStyle.BackImageUrl">
+            <summary>
+            Gets or sets the URL of an image to display in the background of a table control.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectGripStyle.IsModified">
+            <summary>
+            Gets a value indicating whether this style is modified.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectList">
+            <summary>
+            Represents a collection of RadDockableObjects.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockableObjectList class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.#ctor(Telerik.WebControls.RadDockableObjectList)">
+            <summary>
+            Initializes a new instance of the RadDockableObjectList class that contains elements copied from the specified RadDockableObjectList and that has the same initial capacity as the number of elements copied.
+            </summary>
+            <param name="coll">The RadDockableObjectList whose elements are copied to the new list. </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.Add(Telerik.WebControls.RadDockableObject)">
+            <summary>
+            Adds an object to the end of the RadDockableObjectList.
+            </summary>
+            <param name="value">The RadDockableObject to be added to the end of the RadDockableObjectList.</param>
+            <returns>The index at which the value has been added.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.Remove(Telerik.WebControls.RadDockableObject)">
+            <summary>
+            Removes the first occurrence of a specific object from the RadDockableObjectList.
+            </summary>
+            <param name="value">The Object to remove from the RadDockableObjectList.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.Contains(Telerik.WebControls.RadDockableObject)">
+            <summary>
+            Determines whether an element is in the RadDockableObjectList.
+            </summary>
+            <param name="value">The RadDockableObject to locate in the RadDockableObjectList. The value can be a null reference (Nothing in Visual Basic).</param>
+            <returns>true if item is found in the RadDockableObjectList; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.IndexOf(Telerik.WebControls.RadDockableObject)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a value in the RadDockableObjectList or in a portion of it.
+            </summary>
+            <param name="value">The RadDockableObject to locate in the RadDockableObjectList. The value can be a null reference (Nothing in Visual Basic).</param>
+            <returns>The zero-based index of the first occurrence of value within the entire RadDockableObjectList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.IndexOf(System.String)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a value in the RadDockableObjectList or in a portion of it.
+            </summary>
+            <param name="id">The id of a RadDockableObject to locate in the RadDockableObjectList. The value can be a null reference (Nothing in Visual Basic).</param>
+            <returns>The zero-based index of the first occurrence of value within the entire RadDockableObjectList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockableObjectList.OnValidate(System.Object)">
+            <summary>
+            Performs additional custom processes when validating a value.
+            </summary>
+            <param name="value">The object to validate.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectList.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectList.Item(System.String)">
+            <summary>
+            Gets the RadDockableObject with the specified id.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockableObjectTitleBarStyle">
+            <summary>
+            Represents the style for a RadDockableObject title bar.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectTitleBarStyle.CellSpacing">
+            <summary>
+            Gets or sets the distance between table cells.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectTitleBarStyle.CellPadding">
+            <summary>
+            Gets or sets the amount of space between the contents of the cell and the cell's border.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectTitleBarStyle.BackImageUrl">
+            <summary>
+            Gets or sets the URL of an image to display in the background of a dockable object's title bar control.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockableObjectTitleBarStyle.IsModified">
+            <summary>
+            Gets a value indicating whether this style is modified.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingManager">
+            <summary>
+            RadDockingManager enables docking on the page where it is placed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingManager.GetCurrentRadDockingManager(System.Web.UI.Page)">
+            <summary>
+            Gets the instance of the RadDockingManager placed on the specified page
+            </summary>
+            <returns>RadDockingManager instance if any; otherwise null.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingManager.SaveState">
+            <summary>
+            Returns a string that contains the current state of the RadDockingZones and RadDockableObjects.
+            </summary>
+            <returns>A string that contains the current state of the RadDockingZones and RadDockableObjects.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingManager.LoadState(System.String)">
+            <summary>
+            Loads the state of the RadDockingZones and RadDockableObjects from a string, that is previously created from call to RadDockingManager.SaveState().
+            </summary>
+            <param name="state">A string that contains description of the RadDockingZones and RadDockableObjects state.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.DockEnabled">
+            <summary>
+            Gets or sets a value indicating whether the docking is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.DockingZones">
+            <summary>
+            Gets a list of all available RadDockingZones on the page
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.DockableObjects">
+            <summary>
+            Gets a list of all available RadDockableObjects on the page
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.ShowContentWhileDragging">
+            <summary>
+            Gets or sets a value indicating whether to show the contents of the RadDockableObject while dragging.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.ShowToolTipWhileDragging">
+            <summary>
+            Gets or sets a value indicating whether to show a tool tip with current top-left position or width/heigth of the RadDockableObject while dragging.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.Skin">
+            <summary>
+            Gets or sets the name of the skin used.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.SkinsPath">
+            <summary>
+            Gets or sets the relative path to the Skin folder.
+            </summary>
+            <remarks>The ~ at the begining of the SkinPath denotes the application root path.</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.EffectsEnabled">
+            <summary>
+            Gets or sets a value indicating whether to use animation effects for move, resize, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.EffectsUpdateRate">
+            <summary>
+            Gets or sets a value indicating the frequence of animated object updates per second (1-100).
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingManager.EffectsDuration">
+            <summary>
+            Gets or sets a value indicating duration of the animated effects.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingZoneTypeFlags">
+            <summary>
+            Specifies the different types of docking zones.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Vertical">
+            <summary>
+            Vertical zone.
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Horizontal">
+            <summary>
+            Horizontal zone.
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Top">
+            <summary>
+            Top (horizontal) zone.
+            </summary>
+            <value>18</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Bottom">
+            <summary>
+            Bottom (horizontal) zone.
+            </summary>
+            <value>34</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Left">
+            <summary>
+            Left (vertical) zone.
+            </summary>
+            <value>49</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Right">
+            <summary>
+            Right (vertical) zone.
+            </summary>
+            <value>65</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.All">
+            <summary>
+            All types of zones.
+            </summary>
+            <value>166</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneTypeFlags.Custom">
+            <summary>
+            Custom zones, specified by ID. Applicable only to dockable objects.
+            </summary>
+            <value>255</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingZoneFixedSizeFlags">
+            <summary>
+            Specifies whether a docking zone will resize according to the size of the docked objects inside it, or will retain its size and the docked object will accomodate their size to the zone's size.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneFixedSizeFlags.None">
+            <summary>
+            Width, height of the docking zone are not fixed and will resize according to the docked objects.
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneFixedSizeFlags.ByWidth">
+            <summary>
+            The docking zone has fixed width and the objects will resize to fit in the zone without resizing it.
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneFixedSizeFlags.ByHeight">
+            <summary>
+            The docking zone has fixed height and the objects will resize to fit in the zone without resizing it.
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadDockingZoneFixedSizeFlags.ByWidthHeight">
+            <summary>
+            Both width and height of the zone are fixed.
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingZone">
+            <summary>
+            Represents a container where dynamic objects (RadDockableObject) can be docked.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockingZone class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.LoadFromString(System.String)">
+            <summary>
+            Loads the state of the RadDockControl from the specified string.
+            </summary>
+            <param name="state">A string that contains the state of this RadDockControl.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.SaveToString">
+            <summary>
+            Saves the state of this RadDockControl in a string.
+            </summary>
+            <returns>A string that contains the state of this RadDockControl.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Adds HTML attributes and styles that need to be rendered to the specified System.Web.UI.HtmlTextWriter.
+            </summary>
+            <param name="writer">A System.Web.UI.HtmlTextWriter that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the PreRender event.
+            </summary>
+            <param name="e">An EventArgs object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Sends server control content to a provided HtmlTextWriter object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The HtmlTextWriter object that receives the server control content.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.RenderChildren(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Outputs the content of a server control's children to a provided HtmlTextWriter object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The HtmlTextWriter object that receives the rendered content.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZone.ToJsString">
+            <summary>
+            Returns string that is a javascript array with this control's properties
+            </summary>
+            <returns>javascript array string</returns>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.Type">
+            <summary>
+            Gets or sets a value indicating the type of this docking zone.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.FixedSizeMode">
+            <summary>
+            Gets or sets a value indicating whether the zone will resize according the size of the docked objects.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.FixedByWidth">
+            <summary>
+            Specifies whether a docking zone will resize according to the width of the docked objects inside it.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.DockEnabled">
+            <summary>
+            Gets or sets a value indicating whether the docking is ebabled for this zone.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.DockableObjects">
+            <summary>
+            Gets a list of all docked RadDockableObjects.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.HighlightedStyle">
+            <summary>
+            Gets the style of the highlighted zone.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.MinimumWidth">
+            <summary>
+            Gets or sets the minimal width of this RadDockingZone when it does not contain any docked objects.
+            Applicable to vertical zones only.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.WebControls.RadDockingZone.MinimumHeight" -->
+        <member name="P:Telerik.WebControls.RadDockingZone.IsHorizontal">
+            <summary>
+            Gets a value indicating whether this RadDockingZone is horizontal.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZone.IsVertical">
+            <summary>
+            Gets a value indicating whether this RadDockingZone is vertical.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingZoneHighlightedStyle">
+            <summary>
+            Represents the style of a highlighted RadDockingZone
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneHighlightedStyle.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockingZoneHighlightedStyle class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZoneHighlightedStyle.BackColor">
+            <summary>
+            Gets or sets the background color of a highlighted RadDockingZone.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZoneHighlightedStyle.BorderColor">
+            <summary>
+            Gets or sets the border color of a highlighted RadDockingZone.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZoneHighlightedStyle.BorderWidth">
+            <summary>
+            Gets or sets the border width of a highlighted RadDockingZone.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZoneHighlightedStyle.BorderStyle">
+            <summary>
+            Gets or sets the border style of a highlighted RadDockingZone.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDockingZoneList">
+            <summary>
+            Represents a collection of RadDockingZones.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.#ctor">
+            <summary>
+            Initializes a new instance of the RadDockingZoneList class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.#ctor(Telerik.WebControls.RadDockingZoneList)">
+            <summary>
+            Initializes a new instance of the RadDockingZoneList class that contains elements copied from the specified RadDockingZoneList and that has the same initial capacity as the number of elements copied.
+            </summary>
+            <param name="coll">The RadDockingZoneList whose elements are copied to the new list. </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.Add(Telerik.WebControls.RadDockingZone)">
+            <summary>
+            Adds an object to the end of the RadDockingZoneList.
+            </summary>
+            <param name="value">The RadDockingZone to be added to the end of the RadDockingZoneList.</param>
+            <returns>The index at which the value has been added.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.Remove(Telerik.WebControls.RadDockingZone)">
+            <summary>
+            Removes the first occurrence of a specific object from the RadDockingZoneList.
+            </summary>
+            <param name="value">The Object to remove from the RadDockingZoneList.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.Contains(Telerik.WebControls.RadDockingZone)">
+            <summary>
+            Determines whether an element is in the RadDockingZoneList.
+            </summary>
+            <param name="value">The RadDockingZone to locate in the RadDockingZoneList. The value can be a null reference (Nothing in Visual Basic).</param>
+            <returns>true if item is found in the RadDockingZoneList; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.IndexOf(Telerik.WebControls.RadDockingZone)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a value in the RadDockingZoneList or in a portion of it.
+            </summary>
+            <param name="value">The RadDockingZone to locate in the RadDockingZoneList. The value can be a null reference (Nothing in Visual Basic).</param>
+            <returns>The zero-based index of the first occurrence of value within the entire RadDockingZoneList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.IndexOf(System.String)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a value in the RadDockingZoneList or in a portion of it.
+            </summary>
+            <param name="id">The id of a RadDockingZone to locate in the RadDockingZoneList. The value can be a null reference (Nothing in Visual Basic).</param>
+            <returns>The zero-based index of the first occurrence of value within the entire RadDockingZoneList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadDockingZoneList.OnValidate(System.Object)">
+            <summary>
+            Performs additional custom processes when validating a value.
+            </summary>
+            <param name="value">The object to validate.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZoneList.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDockingZoneList.Item(System.String)">
+            <summary>
+            Gets the RadDockingZone with the specified id.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadTemplateContainer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadTemplateCreatedEventArgs">
+            <summary>
+            Provides data for any events that occur when a content template of the RadDockableObjects is created.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadTemplateCreatedEventArgs.#ctor(System.Web.UI.Control)">
+            <summary>
+            Initializes a new instance of the RadTemplateCreatedEventArgs class.
+            </summary>
+            <param name="container">The control that contains the controls from the template.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadTemplateCreatedEventArgs.Container">
+            <summary>
+            Gets the control that contains the controls from the template.
+            </summary>
+        </member>
+    </members>
+</doc>

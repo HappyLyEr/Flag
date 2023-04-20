@@ -1,0 +1,6 @@
+F:\flagsvn\FLAGweb\bin\GASystem.DataModel.dll.config
+F:\flagsvn\FLAGweb\bin\GASystem.DataModel.dll
+F:\flagsvn\FLAGweb\bin\GASystem.DataModel.pdb
+F:\flagsvn\Flagdevelopment\GASystemData\obj\Debug\ResolveAssemblyReference.cache
+F:\flagsvn\Flagdevelopment\GASystemData\obj\Debug\GASystem.DataModel.dll
+F:\flagsvn\Flagdevelopment\GASystemData\obj\Debug\GASystem.DataModel.pdb

@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="PrintReport" xml:space="preserve">
+    <value>View Report</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="NewRecord" xml:space="preserve">
+    <value>New {0}</value>
+  </data>
+  <data name="ButtonNewIncident" xml:space="preserve">
+    <value>New incident </value>
+  </data>
+  <data name="GAActionPlur" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="NoRecords" xml:space="preserve">
+    <value>No {0} are registered</value>
+  </data>
+  <data name="GAIncidentReportPlur" xml:space="preserve">
+    <value>Incidents</value>
+  </data>
+  <data name="GADailyEmployeeCountPlur" xml:space="preserve">
+    <value>Employee Counts</value>
+  </data>
+  <data name="GAHazardIdentificationPlur" xml:space="preserve">
+    <value>HIP</value>
+  </data>
+  <data name="GAVesselVisitPlur" xml:space="preserve">
+    <value>Vessel Visits</value>
+  </data>
+  <data name="GAAuditPlur" xml:space="preserve">
+    <value>Audits, Reviews</value>
+  </data>
+  <data name="GAMeetingPlur" xml:space="preserve">
+    <value>Meetings, Reports</value>
+  </data>
+  <data name="GACoursePlur" xml:space="preserve">
+    <value>Training, Drills, Courses</value>
+  </data>
+  <data name="GAAction" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="GAIncidentReport" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="GADailyEmployeeCount" xml:space="preserve">
+    <value>Employee Count</value>
+  </data>
+  <data name="GAHazardIdentification" xml:space="preserve">
+    <value>HIP</value>
+  </data>
+  <data name="GAVesselVisit" xml:space="preserve">
+    <value>Vessel Visit</value>
+  </data>
+  <data name="GAMeeting" xml:space="preserve">
+    <value>Meeting, Report</value>
+  </data>
+  <data name="GACourse" xml:space="preserve">
+    <value>Training, Drill, Course</value>
+  </data>
+  <data name="GAAudit" xml:space="preserve">
+    <value>Audit, Review</value>
+  </data>
+  <data name="GAProject" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="GAProjectPlur" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="ContextMemberInfo" xml:space="preserve">
+    <value>This {0} is a member of </value>
+  </data>
+  <data name="ListAllIn" xml:space="preserve">
+    <value>List all {0} in {1}</value>
+  </data>
+  <data name="ContextMemberInfoPlur" xml:space="preserve">
+    <value>These {0} are members of</value>
+  </data>
+  <data name="GAFile" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="GAFilePlur" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="GAPersonnel" xml:space="preserve">
+    <value>Personnel</value>
+  </data>
+  <data name="GAPersonnelPlur" xml:space="preserve">
+    <value>Personnel</value>
+  </data>
+  <data name="ListAll" xml:space="preserve">
+    <value>List all {0} </value>
+  </data>
+  <data name="GAProcedure" xml:space="preserve">
+    <value>Procedure</value>
+  </data>
+  <data name="GAProcedurePlur" xml:space="preserve">
+    <value>Procedures</value>
+  </data>
+  <data name="GAReportInstanceFilter" xml:space="preserve">
+    <value>Report Filter</value>
+  </data>
+  <data name="GAReportInstanceFilterPlur" xml:space="preserve">
+    <value>Report Filters</value>
+  </data>
+  <data name="GATextItem" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="GATextItemPlur" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="GAEmployment" xml:space="preserve">
+    <value>Assignment of Personnel</value>
+  </data>
+  <data name="GAEmploymentPlur" xml:space="preserve">
+    <value>Assignments of Personnel</value>
+  </data>
+  <data name="GALocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="GALocationPlur" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="Goto" xml:space="preserve">
+    <value>Goto</value>
+  </data>
+  <data name="GATaskTemplate" xml:space="preserve">
+    <value>Task Template</value>
+  </data>
+  <data name="GATaskTemplatePlur" xml:space="preserve">
+    <value>Task Templates</value>
+  </data>
+  <data name="GATimeAndAttendance" xml:space="preserve">
+    <value>Time and Attendance</value>
+  </data>
+  <data name="GATimeAndAttendancePlur" xml:space="preserve">
+    <value>Time and Attendances</value>
+  </data>
+  <data name="GaCompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="GaCompanyPlur" xml:space="preserve">
+    <value>Companies</value>
+  </data>
+  <data name="GADepartment" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="GADepartmentPlur" xml:space="preserve">
+    <value>Departments</value>
+  </data>
+  <data name="GAInjuredParty" xml:space="preserve">
+    <value>Injured Party</value>
+  </data>
+  <data name="GAInjuredPartyPlur" xml:space="preserve">
+    <value>Injured Parties</value>
+  </data>
+  <data name="GAMeansOfContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="GAMeansOfContactPlur" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="GAReports" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="GAReportsPlur" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="GAReportInstance" xml:space="preserve">
+    <value>Report Generation</value>
+  </data>
+  <data name="GAReportInstancePlur" xml:space="preserve">
+    <value>Report Generations</value>
+  </data>
+  <data name="GANextOfKinPlur" xml:space="preserve">
+    <value>Next of Kin</value>
+  </data>
+  <data name="GANextOfKin" xml:space="preserve">
+    <value>Next of Kin</value>
+  </data>
+  <data name="GACertificatePlur" xml:space="preserve">
+    <value>Certificates</value>
+  </data>
+  <data name="GACertificate" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="GADamagedEquipment" xml:space="preserve">
+    <value>Damaged Equipment</value>
+  </data>
+  <data name="GADamagedEquipmentPlur" xml:space="preserve">
+    <value>Damaged Equipment</value>
+  </data>
+  <data name="GAEquipmentDamageReport" xml:space="preserve">
+    <value>Equipment Damage Report</value>
+  </data>
+  <data name="GAEquipmentDamageReportPlur" xml:space="preserve">
+    <value>Equipment Damage Reports</value>
+  </data>
+  <data name="GACost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="GACostPlur" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="GADaysReportPlur" xml:space="preserve">
+    <value>Other Activities</value>
+  </data>
+  <data name="GAResourceSpecification" xml:space="preserve">
+    <value>Asset Specification</value>
+  </data>
+  <data name="GAResourceSpecificationPlur" xml:space="preserve">
+    <value>Asset Specifications</value>
+  </data>
+  <data name="GAResource" xml:space="preserve">
+    <value>Asset</value>
+  </data>
+  <data name="GAResourcePlur" xml:space="preserve">
+    <value>Assets</value>
+  </data>
+  <data name="GATeam" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="GATeamPlur" xml:space="preserve">
+    <value>Teams</value>
+  </data>
+  <data name="GAMeetingText" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="GAMeetingTextPlur" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="GATask" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="GATaskPlur" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="GAReport" xml:space="preserve">
+    <value>Minutes, Report Archive</value>
+  </data>
+  <data name="GAReportPlur" xml:space="preserve">
+    <value>Minutes, Reports Archives</value>
+  </data>
+  <data name="GAReporter" xml:space="preserve">
+    <value>Report Source</value>
+  </data>
+  <data name="GAReporterPlur" xml:space="preserve">
+    <value>Report Sources</value>
+  </data>
+  <data name="GAMeetingPersonList" xml:space="preserve">
+    <value>Involved Person</value>
+  </data>
+  <data name="GAMeetingPersonListPlur" xml:space="preserve">
+    <value>Involved Persons</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>Equals To</value>
+  </data>
+  <data name="NotEqual" xml:space="preserve">
+    <value>Different Than</value>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>Greater Than</value>
+  </data>
+  <data name="GreaterThanEqual" xml:space="preserve">
+    <value>Greater Than or Equal To</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>Less Than</value>
+  </data>
+  <data name="LessThanEqual" xml:space="preserve">
+    <value>Less Than or Equal To</value>
+  </data>
+  <data name="AllRecordsWithinOwner" xml:space="preserve">
+    <value>All {0} within {1} {2} </value>
+  </data>
+  <data name="ViewRecordsForDifferenContext" xml:space="preserve">
+    <value>View {0} for another context</value>
+  </data>
+  <data name="GASafetyObservation" xml:space="preserve">
+    <value>SOP</value>
+  </data>
+  <data name="GASafetyObservationPlur" xml:space="preserve">
+    <value>SOP</value>
+  </data>
+  <data name="GAUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="GAUserPlur" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="GALink" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="GALinkPlur" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="ForwardActivity" xml:space="preserve">
+    <value>Forward Activity</value>
+  </data>
+  <data name="CancelForward" xml:space="preserve">
+    <value>Cancel Forward</value>
+  </data>
+  <data name="ActivityDetails" xml:space="preserve">
+    <value>Activity Details</value>
+  </data>
+  <data name="SelectUserForActivityForward" xml:space="preserve">
+    <value>Please select the user you want to forward the activity to:</value>
+  </data>
+  <data name="GAFileFolder" xml:space="preserve">
+    <value>Folder Documents</value>
+  </data>
+  <data name="GAFileFolderPlur" xml:space="preserve">
+    <value>Folders Documents</value>
+  </data>
+  <data name="GAControl" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="GAControlPlur" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="GAHelp" xml:space="preserve">
+    <value>Help Text</value>
+  </data>
+  <data name="GAHelpPlur" xml:space="preserve">
+    <value>Help Texts</value>
+  </data>
+  <data name="GALists" xml:space="preserve">
+    <value>Code List</value>
+  </data>
+  <data name="GAListCategory" xml:space="preserve">
+    <value>Code List Category</value>
+  </data>
+  <data name="GAListsPlur" xml:space="preserve">
+    <value>Code Lists</value>
+  </data>
+  <data name="GAListCategoryPlur" xml:space="preserve">
+    <value>Code List Categories</value>
+  </data>
+  <data name="GACoursePersonList" xml:space="preserve">
+    <value>Training, Drill, Course Attendant</value>
+  </data>
+  <data name="GACoursePersonListPlur" xml:space="preserve">
+    <value>Training, Drill, Course Attendants</value>
+  </data>
+  <data name="NoActionInWorkitem" xml:space="preserve">
+    <value>This workitem does not have a reference to a action</value>
+  </data>
+  <data name="GAWorkitem" xml:space="preserve">
+    <value>Workitem</value>
+  </data>
+  <data name="GAWorkitemPlur" xml:space="preserve">
+    <value>Workitems</value>
+  </data>
+  <data name="GAWorkflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="GAWorkflowPlur" xml:space="preserve">
+    <value>Workflows</value>
+  </data>
+  <data name="WorkItemAssignedToUser" xml:space="preserve">
+    <value>This workitem has been assigned to you</value>
+  </data>
+  <data name="WorkItemAssignedToRole" xml:space="preserve">
+    <value>This workitem has been assigned to role {0}. Role members for this action are</value>
+  </data>
+  <data name="WorkItemUnAssigned" xml:space="preserve">
+    <value>This workitem has been assigned to you because you hold a co-ordinator role. Workitem is assigned to role {0}, but no user holds this role for this action</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Years </value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Months </value>
+  </data>
+  <data name="YearMonthSpanView" xml:space="preserve">
+    <value>Years: {0}   Months: {1}</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="CompanyUser" xml:space="preserve">
+    <value>Company User</value>
+  </data>
+  <data name="AllRecords" xml:space="preserve">
+    <value>All {0}</value>
+  </data>
+  <data name="url" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="GACrew" xml:space="preserve">
+    <value>Crew</value>
+  </data>
+  <data name="GACrewPlur" xml:space="preserve">
+    <value>Crews</value>
+  </data>
+  <data name="GALocationInCrew" xml:space="preserve">
+    <value>Location in Crew</value>
+  </data>
+  <data name="GALocationInCrewPlur" xml:space="preserve">
+    <value>Locations in Crew</value>
+  </data>
+  <data name="GACrewInProject" xml:space="preserve">
+    <value>Crew in Project</value>
+  </data>
+  <data name="GACrewInProjectPlur" xml:space="preserve">
+    <value>Crews in Project</value>
+  </data>
+  <data name="reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DelegateWorkitem" xml:space="preserve">
+    <value>Delegate workitem</value>
+  </data>
+  <data name="AddParticipant" xml:space="preserve">
+    <value>Add Participant</value>
+  </data>
+  <data name="WorkitemsAssignedToYou" xml:space="preserve">
+    <value>Workitems assigned to you</value>
+  </data>
+  <data name="WorkitemsAssignedToRoles" xml:space="preserve">
+    <value>Workitems assigned to roles you are a member of</value>
+  </data>
+  <data name="WorkitemsAssignedCoordinator" xml:space="preserve">
+    <value>Coordinator role</value>
+  </data>
+  <data name="GArxtReport" xml:space="preserve">
+    <value>Incident Report</value>
+  </data>
+  <data name="GArxtReportPlur" xml:space="preserve">
+    <value>Incident Reports</value>
+  </data>
+  <data name="GAManageChangePlur" xml:space="preserve">
+    <value>Changes</value>
+  </data>
+  <data name="GAManageChange" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="PleaseAddGroupOfPersons" xml:space="preserve">
+    <value>Please create a group of people</value>
+  </data>
+  <data name="SaveCascadingSecurity" xml:space="preserve">
+    <value>Apply settings to all child classes.</value>
+  </data>
+  <data name="ArcLinksAccessRolesHeading" xml:space="preserve">
+    <value>Accessroles for {0} under {1}</value>
+  </data>
+  <data name="ListMyWorkitems" xml:space="preserve">
+    <value>List my workitems</value>
+  </data>
+  <data name="NotIncluding" xml:space="preserve">
+    <value>not including</value>
+  </data>
+  <data name="isChecked" xml:space="preserve">
+    <value>Is Checked</value>
+  </data>
+  <data name="isNotChecked" xml:space="preserve">
+    <value>Is Not Checked</value>
+  </data>
+  <data name="applyFilter" xml:space="preserve">
+    <value>Apply Selection</value>
+  </data>
+  <data name="datafilterhelptext" xml:space="preserve">
+    <value>Selection criterias:</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="infoFilterNoElements" xml:space="preserve">
+    <value>Showing all elements in context</value>
+  </data>
+  <data name="infoFilterOneElement" xml:space="preserve">
+    <value>Where:</value>
+  </data>
+  <data name="infoFilterOneElementold" xml:space="preserve">
+    <value>The list is filtered using the following condition:</value>
+  </data>
+  <data name="infoFilterMultipleElements" xml:space="preserve">
+    <value>Where:</value>
+  </data>
+  <data name="setFilter" xml:space="preserve">
+    <value>Toggle Edit Selection</value>
+  </data>
+  <data name="exporttoexcel" xml:space="preserve">
+    <value>Export To Excel</value>
+  </data>
+  <data name="GAOpportunity" xml:space="preserve">
+    <value>Idea and Opportunity</value>
+  </data>
+  <data name="GAOpportunityPlur" xml:space="preserve">
+    <value>Ideas and Opportunities</value>
+  </data>
+  <data name="GARiskControl" xml:space="preserve">
+    <value>Risk and Hazard Control</value>
+  </data>
+  <data name="GARiskControlPlur" xml:space="preserve">
+    <value>Risk and Hazard Controls</value>
+  </data>
+  <data name="GARisk" xml:space="preserve">
+    <value>Risk, Hazard</value>
+  </data>
+  <data name="GARiskPlur" xml:space="preserve">
+    <value>Risks, Hazards</value>
+  </data>
+  <data name="GAProcedureReference" xml:space="preserve">
+    <value>Procedure Reference</value>
+  </data>
+  <data name="GAProcedureReferencePlur" xml:space="preserve">
+    <value>Procedure References</value>
+  </data>
+  <data name="GADaysReport" xml:space="preserve">
+    <value>Other Activity</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="UseAsHome" xml:space="preserve">
+    <value>Use as home</value>
+  </data>
+  <data name="isCurrent" xml:space="preserve">
+    <value>Is Current</value>
+  </data>
+  <data name="LookupFilterOn" xml:space="preserve">
+    <value>Showing: Only {0} records in {1}</value>
+  </data>
+  <data name="LookupFilterOff" xml:space="preserve">
+    <value>Showing all records.</value>
+  </data>
+  <data name="ClearLookupFilter" xml:space="preserve">
+    <value>Toggle Filter</value>
+  </data>
+  <data name="EditMultipleRecord" xml:space="preserve">
+    <value>Edit All</value>
+  </data>
+  <data name="NewRecordForOwner" xml:space="preserve">
+    <value>Create new {0} for {1}</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="NoResponsibleSet" xml:space="preserve">
+    <value>Not specified</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="PleaseSelectAnActionResponsible" xml:space="preserve">
+    <value>Please select a person or role to assign this action to</value>
+  </data>
+  <data name="MaxCharacters" xml:space="preserve">
+    <value>(Maximum characters: {0})</value>
+  </data>
+  <data name="LANGUAGE_RESOURCE_KEY" xml:space="preserve">
+    <value>GEN</value>
+  </data>
+  <data name="CancelEditText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EditSelectedText" xml:space="preserve">
+    <value>Edit Selected</value>
+  </data>
+  <data name="UpdateSelectedText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="NoRecordsFound" xml:space="preserve">
+    <value>No {0} found</value>
+  </data>
+  <data name="NewRecords" xml:space="preserve">
+    <value>New {0}(s)</value>
+  </data>
+  <data name="GARemedialActionView" xml:space="preserve">
+    <value>Follow Up &amp; Remedial Actions</value>
+  </data>
+  <data name="GARemedialActionViewPlur" xml:space="preserve">
+    <value>Follow Up &amp; Remedial Actions</value>
+  </data>
+  <data name="UpdateAndCreateNewSelectedText" xml:space="preserve">
+    <value>Update Count</value>
+  </data>
+  <data name="EditCountText" xml:space="preserve">
+    <value>Edit Count</value>
+  </data>
+  <data name="inPeriod" xml:space="preserve">
+    <value>Valid for Period</value>
+  </data>
+  <data name="StartDateLessThanEqualEndDate" xml:space="preserve">
+    <value>Start date must be less or equal to end date</value>
+  </data>
+  <data name="Between" xml:space="preserve">
+    <value>Between</value>
+  </data>
+  <data name="BarChart" xml:space="preserve">
+    <value>Bar Chart</value>
+  </data>
+  <data name="graph" xml:space="preserve">
+    <value>Graph</value>
+  </data>
+  <data name="HideLabels" xml:space="preserve">
+    <value>Hide Labels</value>
+  </data>
+  <data name="LineChart" xml:space="preserve">
+    <value>Line Chart</value>
+  </data>
+  <data name="PieChart" xml:space="preserve">
+    <value>Pie Chart</value>
+  </data>
+  <data name="ShowLabels" xml:space="preserve">
+    <value>Show Labels</value>
+  </data>
+  <data name="StackedBarChart" xml:space="preserve">
+    <value>Stacked Bar Chart</value>
+  </data>
+  <data name="DefaultSelection" xml:space="preserve">
+    <value>Default Selection</value>
+  </data>
+  <data name="RemedialExpiredMessage" xml:space="preserve">
+    <value>This item has passed its due date</value>
+  </data>
+  <data name="GAActionWorkitemView" xml:space="preserve">
+    <value>Workitem</value>
+  </data>
+  <data name="GAActionWorkitemViewPlur" xml:space="preserve">
+    <value>Workitems</value>
+  </data>
+  <data name="hasEditAssignmentToWorkitem" xml:space="preserve">
+    <value>In addition to the assignee, your role allows you to manage this workitem</value>
+  </data>
+  <data name="hasRoleAssignmentToWorkitem" xml:space="preserve">
+    <value>You may close this workitem because this workitem is assigned to a role you hold in the current context</value>
+  </data>
+  <data name="hasUserAssignmentToWorkitem" xml:space="preserve">
+    <value>You may close this workitem because it has been assigned to you</value>
+  </data>
+  <data name="AddRemedialAction" xml:space="preserve">
+    <value>Add Follow Up Action</value>
+  </data>
+  <data name="AcknowledgedByMessage" xml:space="preserve">
+    <value>This workitem has been acknowledged by user {0}</value>
+  </data>
+  <data name="AcknowledgeWorkitem" xml:space="preserve">
+    <value>{0} acknowledged this workitem</value>
+  </data>
+  <data name="AwaitingAcknowledgedByMessage" xml:space="preserve">
+    <value>This workitem has not been acknowledged by user</value>
+  </data>
+  <data name="RejectAcknowledgeWorkitem" xml:space="preserve">
+    <value>{0} rejected the acknowledgement of this workitem</value>
+  </data>
+  <data name="delegatedByUser" xml:space="preserve">
+    <value>Delegated  by {0}</value>
+  </data>
+  <data name="DelegatedToRoleByUser" xml:space="preserve">
+    <value>Delegated to role {0} by {1}</value>
+  </data>
+  <data name="delegatedtouserbyuser" xml:space="preserve">
+    <value>Delegated to {0} by {1}</value>
+  </data>
+  <data name="NotesByUser" xml:space="preserve">
+    <value>Notes by {0}</value>
+  </data>
+  <data name="ParticipantAddedBy" xml:space="preserve">
+    <value>Participant added by {0}</value>
+  </data>
+  <data name="ParticipantRoleAddedBy" xml:space="preserve">
+    <value>Participant {0} added by {1}</value>
+  </data>
+  <data name="ParticipantUserAddedByUser" xml:space="preserve">
+    <value>Participant {0} added by {1}</value>
+  </data>
+  <data name="WorkitemResultBy" xml:space="preserve">
+    <value>Workitem {0} by {1}</value>
+  </data>
+  <data name="SecuritySettings" xml:space="preserve">
+    <value>Security Settings</value>
+  </data>
+  <data name="WorkitemAcknowledge" xml:space="preserve">
+    <value>Acknowledge</value>
+  </data>
+  <data name="WorkitemAddNotes" xml:space="preserve">
+    <value>Add Notes</value>
+  </data>
+  <data name="WorkitemCloseWorkitem" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="WorkitemRejectAcknowledge" xml:space="preserve">
+    <value>Reject Acknowledge</value>
+  </data>
+  <data name="WorkitemClosedWithResponse" xml:space="preserve">
+    <value>This workitem has been closed with the response: {0}</value>
+  </data>
+  <data name="WorkitemCompleted" xml:space="preserve">
+    <value>This workitem has been completed</value>
+  </data>
+  <data name="approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="proceed" xml:space="preserve">
+    <value>Proceed</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="URLText" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="SeCondition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="DescriptionOfCriteria" xml:space="preserve">
+    <value>Description of criteria</value>
+  </data>
+  <data name="SeEnabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="SeFieldName" xml:space="preserve">
+    <value>Field Name</value>
+  </data>
+  <data name="SeOperator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="Ranking" xml:space="preserve">
+    <value>Ranking</value>
+  </data>
+  <data name="RankingDescription" xml:space="preserve">
+    <value>Ranking of performance to be indicated as follow:&lt;br/&gt;(5 = Excellent) (4 = Good) (3 =Average) (2 = Fair) (1 = Poor) (N/A=Not Applicable)</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Part1" xml:space="preserve">
+    <value>PART 1</value>
+  </data>
+  <data name="Part1Tip" xml:space="preserve">
+    <value>IF YES TO ANY OF THE ABOVE GO TO PART 2,   IF NO GO TO PART 3</value>
+  </data>
+  <data name="Part2" xml:space="preserve">
+    <value>PART 2</value>
+  </data>
+  <data name="Part2Tip" xml:space="preserve">
+    <value>IF ANY NO, THE OPERATION DOES NOT PROCEED . IF ALL YES, PROCEED TO STEP 3</value>
+  </data>
+  <data name="Part3" xml:space="preserve">
+    <value>PART 3</value>
+  </data>
+  <data name="Part3Tip" xml:space="preserve">
+    <value>IF ANY NO, THE OPERATION DOES NOT PROCEED . IF ALL YES, OK TO PERFORM TASK</value>
+  </data>
+  <data name="importFromExcel" xml:space="preserve">
+    <value>Import Excel</value>
+  </data>
+  <data name="ImportExcelSuccessfullyImported" xml:space="preserve">
+    <value>The file has been imported successfully</value>
+  </data>
+  <data name="ClearInputFile" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="dissatisfied" xml:space="preserve">
+    <value>Dissatisfy</value>
+  </data>
+  <data name="GAClient" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="GAClientPlur" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="GAHealthCertificateView" xml:space="preserve">
+    <value>Skill</value>
+  </data>
+  <data name="GAHealthCertificateViewPlur" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="GAPassportVisaView" xml:space="preserve">
+    <value>Basic Certificate</value>
+  </data>
+  <data name="GAPassportVisaViewPlur" xml:space="preserve">
+    <value>Basics</value>
+  </data>
+  <data name="GAPersonnelHRDocumentView" xml:space="preserve">
+    <value>Project Specific</value>
+  </data>
+  <data name="GAPersonnelHRDocumentViewPlur" xml:space="preserve">
+    <value>Project Specific</value>
+  </data>
+  <data name="GARegionalOfficeView" xml:space="preserve">
+    <value>Regional Office</value>
+  </data>
+  <data name="GARegionalOfficeViewPlur" xml:space="preserve">
+    <value>Regional Offices</value>
+  </data>
+  <data name="GASeafarerView" xml:space="preserve">
+    <value>Seafarer Certificate</value>
+  </data>
+  <data name="GASeafarerViewPlur" xml:space="preserve">
+    <value>Seafarer</value>
+  </data>
+  <data name="GALegalCompliance" xml:space="preserve">
+    <value>Legal &amp; Other Compliance</value>
+  </data>
+  <data name="GALegalCompliancePlur" xml:space="preserve">
+    <value>Legal &amp; Other Compliances</value>
+  </data>
+  <data name="GAContractApprove" xml:space="preserve">
+    <value>Contract Application</value>
+  </data>
+  <data name="GAContractApprovePlur" xml:space="preserve">
+    <value>Contract Application</value>
+  </data>
+  <data name="GAVendor" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="GAVendorPlur" xml:space="preserve">
+    <value>Vendors</value>
+  </data>
+  <data name="GAVendorContact" xml:space="preserve">
+    <value>Vendor Contact</value>
+  </data>
+  <data name="GAVendorContactPlur" xml:space="preserve">
+    <value>Vendor Contacts</value>
+  </data>
+  <data name="GAVendorAudit" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="GAVendorAuditFinding" xml:space="preserve">
+    <value>Audit Finding</value>
+  </data>
+  <data name="GAVendorAuditFindingPlur" xml:space="preserve">
+    <value>Audit Findings</value>
+  </data>
+  <data name="GAVendorAuditPlur" xml:space="preserve">
+    <value>Audits</value>
+  </data>
+  <data name="GAVendorEvaluation" xml:space="preserve">
+    <value>Evaluation</value>
+  </data>
+  <data name="GAVendorEvaluationPlur" xml:space="preserve">
+    <value>Evaluations</value>
+  </data>
+  <data name="GABusinessRisk" xml:space="preserve">
+    <value>Corporate Risk</value>
+  </data>
+  <data name="GABusinessRiskPlur" xml:space="preserve">
+    <value>Corporate Risks</value>
+  </data>
+  <data name="GAExposedHoursGroupView" xml:space="preserve">
+    <value>Personnel Count</value>
+  </data>
+  <data name="GAExposedHoursGroupViewPlur" xml:space="preserve">
+    <value>Personnel Counts</value>
+  </data>
+  <data name="GAGoalObjective" xml:space="preserve">
+    <value>Location Objective</value>
+  </data>
+  <data name="GAGoalObjectivePlur" xml:space="preserve">
+    <value>Location Objectives</value>
+  </data>
+  <data name="GAionGoalObjective" xml:space="preserve">
+    <value>Corporate Objective</value>
+  </data>
+  <data name="GAionGoalObjectivePlur" xml:space="preserve">
+    <value>Corporate Objectives</value>
+  </data>
+  <data name="GALessonLearnt" xml:space="preserve">
+    <value>Lessons Learnt</value>
+  </data>
+  <data name="GALessonLearntPlur" xml:space="preserve">
+    <value>Lessons Learnt</value>
+  </data>
+  <data name="GAionPermitToWork" xml:space="preserve">
+    <value>Permit to Work</value>
+  </data>
+  <data name="GAionPermitToWorkPlur" xml:space="preserve">
+    <value>Permits to Work</value>
+  </data>
+  <data name="GAClientVisit" xml:space="preserve">
+    <value>Client Visit</value>
+  </data>
+  <data name="GAClientVisitPlur" xml:space="preserve">
+    <value>Client Visits</value>
+  </data>
+  <data name="GAWasteOnshore" xml:space="preserve">
+    <value>Waste and GHG Emission (Onshore)</value>
+  </data>
+  <data name="GAWasteOnshorePlur" xml:space="preserve">
+    <value>Waste and GHG Emissions (Onshore)</value>
+  </data>
+  <data name="GAWaste" xml:space="preserve">
+    <value>Environmental Report (Offshore)</value>
+  </data>
+  <data name="GAWastePlur" xml:space="preserve">
+    <value>Environmental Reports (Offshore)</value>
+  </data>
+  <data name="GAWasteOffshore" xml:space="preserve">
+    <value>Waste and GHG Emission (Offshore)</value>
+  </data>
+  <data name="GAWasteOffshorePlur" xml:space="preserve">
+    <value>Waste and GHG Emissions (Offshore)</value>
+  </data>
+  <data name="GAWorkPlan" xml:space="preserve">
+    <value>Work Plan</value>
+  </data>
+  <data name="GAWorkPlanPlur" xml:space="preserve">
+    <value>Work Plan</value>
+  </data>
+  <data name="GAWBOperationList" xml:space="preserve">
+    <value>Workboat Operation Attendant</value>
+  </data>
+  <data name="GAWBOperationListPlur" xml:space="preserve">
+    <value>Workboat Operation Attendants</value>
+  </data>
+  <data name="GAProjectEmission" xml:space="preserve">
+    <value>Emission Report (GHG)</value>
+  </data>
+  <data name="GAProjectEmissionPlur" xml:space="preserve">
+    <value>Emission Reports (GHG)</value>
+  </data>
+</root>

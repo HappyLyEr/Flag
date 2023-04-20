@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MilestoneDS" targetNamespace="http://tempuri.org/MilestoneDS.xsd" xmlns:mstns="http://tempuri.org/MilestoneDS.xsd" xmlns="http://tempuri.org/MilestoneDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdataNittedalKommuneConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdataNittedalKommuneConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.flagdataNittedalKommuneConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GAMilestoneTableAdapter" GeneratorDataComponentClassName="GAMilestoneTableAdapter" Name="GAMilestone" UserDataComponentName="GAMilestoneTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flagdataNittedalKommuneConnectionString (Settings)" DbObjectName="flagdataNittedalKommune.dbo.GAMilestone" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [dbo].[GAMilestone] WHERE (([MilestoneRowId] = @Original_MilestoneRowId) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_StatusListRowId = 1 AND [StatusListRowId] IS NULL) OR ([StatusListRowId] = @Original_StatusListRowId)) AND ((@IsNull_MilestoneID = 1 AND [MilestoneID] IS NULL) OR ([MilestoneID] = @Original_MilestoneID)) AND ((@IsNull_PreceedingMilestoneIDRowId = 1 AND [PreceedingMilestoneIDRowId] IS NULL) OR ([PreceedingMilestoneIDRowId] = @Original_PreceedingMilestoneIDRowId)) AND ((@IsNull_PreceedingMilestoneID = 1 AND [PreceedingMilestoneID] IS NULL) OR ([PreceedingMilestoneID] = @Original_PreceedingMilestoneID)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_IsFinalMilestone = 1 AND [IsFinalMilestone] IS NULL) OR ([IsFinalMilestone] = @Original_IsFinalMilestone)) AND ((@IsNull_OwnerRoleListsRowId = 1 AND [OwnerRoleListsRowId] IS NULL) OR ([OwnerRoleListsRowId] = @Original_OwnerRoleListsRowId)) AND ((@IsNull_OwnerRole = 1 AND [OwnerRole] IS NULL) OR ([OwnerRole] = @Original_OwnerRole)) AND ((@IsNull_OwnerPersonRowId = 1 AND [OwnerPersonRowId] IS NULL) OR ([OwnerPersonRowId] = @Original_OwnerPersonRowId)) AND ((@IsNull_OwnerPerson = 1 AND [OwnerPerson] IS NULL) OR ([OwnerPerson] = @Original_OwnerPerson)) AND ((@IsNull_ResponsibleRoleListsRowId = 1 AND [ResponsibleRoleListsRowId] IS NULL) OR ([ResponsibleRoleListsRowId] = @Original_ResponsibleRoleListsRowId)) AND ((@IsNull_ResponsibleRole = 1 AND [ResponsibleRole] IS NULL) OR ([ResponsibleRole] = @Original_ResponsibleRole)) AND ((@IsNull_ResponsiblePersonRowId = 1 AND [ResponsiblePersonRowId] IS NULL) OR ([ResponsiblePersonRowId] = @Original_ResponsiblePersonRowId)) AND ((@IsNull_ResponsiblePerson = 1 AND [ResponsiblePerson] IS NULL) OR ([ResponsiblePerson] = @Original_ResponsiblePerson)) AND ((@IsNull_ValueChainListsRowId = 1 AND [ValueChainListsRowId] IS NULL) OR ([ValueChainListsRowId] = @Original_ValueChainListsRowId)) AND ((@IsNull_ValueChain = 1 AND [ValueChain] IS NULL) OR ([ValueChain] = @Original_ValueChain)) AND ((@IsNull_ApproverRoleListsRowId = 1 AND [ApproverRoleListsRowId] IS NULL) OR ([ApproverRoleListsRowId] = @Original_ApproverRoleListsRowId)) AND ((@IsNull_ApproverRole = 1 AND [ApproverRole] IS NULL) OR ([ApproverRole] = @Original_ApproverRole)) AND ((@IsNull_ApproverPersonRowId = 1 AND [ApproverPersonRowId] IS NULL) OR ([ApproverPersonRowId] = @Original_ApproverPersonRowId)) AND ((@IsNull_ApproverPerson = 1 AND [ApproverPerson] IS NULL) OR ([ApproverPerson] = @Original_ApproverPerson)) AND ((@IsNull_DateDueOriginal = 1 AND [DateDueOriginal] IS NULL) OR ([DateDueOriginal] = @Original_DateDueOriginal)) AND ((@IsNull_DateDueEstimated = 1 AND [DateDueEstimated] IS NULL) OR ([DateDueEstimated] = @Original_DateDueEstimated)) AND ((@IsNull_DateDueActual = 1 AND [DateDueActual] IS NULL) OR ([DateDueActual] = @Original_DateDueActual)) AND ((@IsNull_DateApproved = 1 AND [DateApproved] IS NULL) OR ([DateApproved] = @Original_DateApproved)) AND ((@IsNull_MilestoneCost = 1 AND [MilestoneCost] IS NULL) OR ([MilestoneCost] = @Original_MilestoneCost)) AND ((@IsNull_MilestoneBudget = 1 AND [MilestoneBudget] IS NULL) OR ([MilestoneBudget] = @Original_MilestoneBudget)) AND ((@IsNull_RiskLevel = 1 AND [RiskLevel] IS NULL) OR ([RiskLevel] = @Original_RiskLevel)) AND ((@IsNull_RiskLevelListsRowId = 1 AND [RiskLevelListsRowId] IS NULL) OR ([RiskLevelListsRowId] = @Original_RiskLevelListsRowId)) AND ((@IsNull_IsOnCriticalPath = 1 AND [IsOnCriticalPath] IS NULL) OR ([IsOnCriticalPath] = @Original_IsOnCriticalPath)) AND ((@IsNull_MilestoneDepartmentRowId = 1 AND [MilestoneDepartmentRowId] IS NULL) OR ([MilestoneDepartmentRowId] = @Original_MilestoneDepartmentRowId)) AND ((@IsNull_MilestoneDepartment = 1 AND [MilestoneDepartment] IS NULL) OR ([MilestoneDepartment] = @Original_MilestoneDepartment)) AND ((@IsNull_IsApproved = 1 AND [IsApproved] IS NULL) OR ([IsApproved] = @Original_IsApproved)) AND ((@IsNull_MilestoneReferenceId = 1 AND [MilestoneReferenceId] IS NULL) OR ([MilestoneReferenceId] = @Original_MilestoneReferenceId)) AND ((@IsNull_MasterRowId = 1 AND [MasterRowId] IS NULL) OR ([MasterRowId] = @Original_MasterRowId)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_DateChanged = 1 AND [DateChanged] IS NULL) OR ([DateChanged] = @Original_DateChanged)) AND ((@IsNull_ChangedBy = 1 AND [ChangedBy] IS NULL) OR ([ChangedBy] = @Original_ChangedBy)) AND ((@IsNull_DateDeleted = 1 AND [DateDeleted] IS NULL) OR ([DateDeleted] = @Original_DateDeleted)) AND ((@IsNull_DeletedBy = 1 AND [DeletedBy] IS NULL) OR ([DeletedBy] = @Original_DeletedBy)) AND ((@IsNull_SwitchFree1 = 1 AND [SwitchFree1] IS NULL) OR ([SwitchFree1] = @Original_SwitchFree1)) AND ((@IsNull_SwitchFree2 = 1 AND [SwitchFree2] IS NULL) OR ([SwitchFree2] = @Original_SwitchFree2)) AND ((@IsNull_SwitchFree3 = 1 AND [SwitchFree3] IS NULL) OR ([SwitchFree3] = @Original_SwitchFree3)) AND ((@IsNull_DateTimeFree1 = 1 AND [DateTimeFree1] IS NULL) OR ([DateTimeFree1] = @Original_DateTimeFree1)) AND ((@IsNull_DateTimeFree2 = 1 AND [DateTimeFree2] IS NULL) OR ([DateTimeFree2] = @Original_DateTimeFree2)) AND ((@IsNull_DateTimeFree3 = 1 AND [DateTimeFree3] IS NULL) OR ([DateTimeFree3] = @Original_DateTimeFree3)) AND ((@IsNull_TextFree1 = 1 AND [TextFree1] IS NULL) OR ([TextFree1] = @Original_TextFree1)) AND ((@IsNull_TextFree2 = 1 AND [TextFree2] IS NULL) OR ([TextFree2] = @Original_TextFree2)) AND ((@IsNull_TextFree3 = 1 AND [TextFree3] IS NULL) OR ([TextFree3] = @Original_TextFree3)) AND ((@IsNull_IntFree1 = 1 AND [IntFree1] IS NULL) OR ([IntFree1] = @Original_IntFree1)) AND ((@IsNull_IntFree2 = 1 AND [IntFree2] IS NULL) OR ([IntFree2] = @Original_IntFree2)) AND ((@IsNull_IntFree3 = 1 AND [IntFree3] IS NULL) OR ([IntFree3] = @Original_IntFree3)) AND ([rowguid] = @Original_rowguid))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StatusListRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusListRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_StatusListRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusListRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneID" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreceedingMilestoneIDRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneIDRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PreceedingMilestoneIDRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneIDRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreceedingMilestoneID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneID" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PreceedingMilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreceedingMilestoneID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsFinalMilestone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsFinalMilestone" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsFinalMilestone" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsFinalMilestone" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRoleListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnerRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRole" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OwnerRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerRole" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPersonRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnerPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPersonRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerPerson" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPerson" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OwnerPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerPerson" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsibleRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRoleListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ResponsibleRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsibleRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRole" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ResponsibleRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsibleRole" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsiblePersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePersonRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ResponsiblePersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePersonRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsiblePerson" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePerson" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ResponsiblePerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsiblePerson" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValueChainListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChainListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ValueChainListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChainListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValueChain" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChain" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ValueChain" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueChain" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRoleListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ApproverRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRole" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ApproverRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverRole" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPersonRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ApproverPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPersonRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverPerson" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPerson" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ApproverPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverPerson" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDueOriginal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDueOriginal" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDueOriginal" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueOriginal" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDueEstimated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDueEstimated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDueEstimated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueEstimated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDueActual" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDueActual" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDueActual" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueActual" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateApproved" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateApproved" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateApproved" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateApproved" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneCost" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneCost" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneBudget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneBudget" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneBudget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneBudget" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RiskLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevel" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RiskLevel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RiskLevel" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RiskLevelListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevelListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RiskLevelListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevelListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsOnCriticalPath" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsOnCriticalPath" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsOnCriticalPath" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOnCriticalPath" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneDepartmentRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartmentRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneDepartmentRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartmentRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneDepartment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartment" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MilestoneDepartment" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneDepartment" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsApproved" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneReferenceId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneReferenceId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MilestoneReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneReferenceId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateChanged" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDeleted" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [dbo].[GAMilestone] ([Status], [StatusListRowId], [MilestoneID], [PreceedingMilestoneIDRowId], [PreceedingMilestoneID], [Name], [Description], [Deliverables], [IsFinalMilestone], [Purpose], [OwnerRoleListsRowId], [OwnerRole], [OwnerPersonRowId], [OwnerPerson], [ResponsibleRoleListsRowId], [ResponsibleRole], [ResponsiblePersonRowId], [ResponsiblePerson], [ValueChainListsRowId], [ValueChain], [ApproverRoleListsRowId], [ApproverRole], [ApproverPersonRowId], [ApproverPerson], [DateDueOriginal], [DateDueEstimated], [DateDueActual], [DateApproved], [MilestoneCost], [MilestoneBudget], [RiskLevel], [RiskLevelListsRowId], [IsOnCriticalPath], [MilestoneDepartmentRowId], [MilestoneDepartment], [IsApproved], [Reminder], [MilestoneReferenceId], [MasterRowId], [DateCreated], [CreatedBy], [DateChanged], [ChangedBy], [DateDeleted], [DeletedBy], [SwitchFree1], [SwitchFree2], [SwitchFree3], [DateTimeFree1], [DateTimeFree2], [DateTimeFree3], [TextFree1], [TextFree2], [TextFree3], [IntFree1], [IntFree2], [IntFree3], [nTextFree1], [nTextFree2], [nTextFree3], [rowguid]) VALUES (@Status, @StatusListRowId, @MilestoneID, @PreceedingMilestoneIDRowId, @PreceedingMilestoneID, @Name, @Description, @Deliverables, @IsFinalMilestone, @Purpose, @OwnerRoleListsRowId, @OwnerRole, @OwnerPersonRowId, @OwnerPerson, @ResponsibleRoleListsRowId, @ResponsibleRole, @ResponsiblePersonRowId, @ResponsiblePerson, @ValueChainListsRowId, @ValueChain, @ApproverRoleListsRowId, @ApproverRole, @ApproverPersonRowId, @ApproverPerson, @DateDueOriginal, @DateDueEstimated, @DateDueActual, @DateApproved, @MilestoneCost, @MilestoneBudget, @RiskLevel, @RiskLevelListsRowId, @IsOnCriticalPath, @MilestoneDepartmentRowId, @MilestoneDepartment, @IsApproved, @Reminder, @MilestoneReferenceId, @MasterRowId, @DateCreated, @CreatedBy, @DateChanged, @ChangedBy, @DateDeleted, @DeletedBy, @SwitchFree1, @SwitchFree2, @SwitchFree3, @DateTimeFree1, @DateTimeFree2, @DateTimeFree3, @TextFree1, @TextFree2, @TextFree3, @IntFree1, @IntFree2, @IntFree3, @nTextFree1, @nTextFree2, @nTextFree3, @rowguid);
+SELECT MilestoneRowId, Status, StatusListRowId, MilestoneID, PreceedingMilestoneIDRowId, PreceedingMilestoneID, Name, Description, Deliverables, IsFinalMilestone, Purpose, OwnerRoleListsRowId, OwnerRole, OwnerPersonRowId, OwnerPerson, ResponsibleRoleListsRowId, ResponsibleRole, ResponsiblePersonRowId, ResponsiblePerson, ValueChainListsRowId, ValueChain, ApproverRoleListsRowId, ApproverRole, ApproverPersonRowId, ApproverPerson, DateDueOriginal, DateDueEstimated, DateDueActual, DateApproved, MilestoneCost, MilestoneBudget, RiskLevel, RiskLevelListsRowId, IsOnCriticalPath, MilestoneDepartmentRowId, MilestoneDepartment, IsApproved, Reminder, MilestoneReferenceId, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, nTextFree1, nTextFree2, nTextFree3, rowguid FROM GAMilestone WHERE (MilestoneRowId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@StatusListRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusListRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PreceedingMilestoneIDRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneIDRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PreceedingMilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreceedingMilestoneID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Deliverables" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Deliverables" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsFinalMilestone" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsFinalMilestone" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Purpose" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Purpose" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnerRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OwnerRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerRole" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnerPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPersonRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OwnerPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerPerson" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ResponsibleRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ResponsibleRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsibleRole" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ResponsiblePersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePersonRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ResponsiblePerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsiblePerson" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ValueChainListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChainListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ValueChain" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueChain" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ApproverRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ApproverRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverRole" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ApproverPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPersonRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ApproverPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverPerson" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDueOriginal" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueOriginal" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDueEstimated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueEstimated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDueActual" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueActual" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateApproved" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateApproved" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MilestoneCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneCost" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MilestoneBudget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneBudget" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RiskLevel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RiskLevel" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RiskLevelListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevelListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsOnCriticalPath" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOnCriticalPath" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MilestoneDepartmentRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartmentRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MilestoneDepartment" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneDepartment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Reminder" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Reminder" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MilestoneReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneReferenceId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree1" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree2" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree3" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT MilestoneRowId, Status, StatusListRowId, MilestoneID, PreceedingMilestoneIDRowId, PreceedingMilestoneID, Name, Description, Deliverables, IsFinalMilestone, Purpose, OwnerRoleListsRowId, OwnerRole, OwnerPersonRowId, OwnerPerson, ResponsibleRoleListsRowId, ResponsibleRole, ResponsiblePersonRowId, ResponsiblePerson, ValueChainListsRowId, ValueChain, ApproverRoleListsRowId, ApproverRole, ApproverPersonRowId, ApproverPerson, DateDueOriginal, DateDueEstimated, DateDueActual, DateApproved, MilestoneCost, MilestoneBudget, RiskLevel, RiskLevelListsRowId, IsOnCriticalPath, MilestoneDepartmentRowId, MilestoneDepartment, IsApproved, Reminder, MilestoneReferenceId, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, nTextFree1, nTextFree2, nTextFree3, rowguid FROM dbo.GAMilestone</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [dbo].[GAMilestone] SET [Status] = @Status, [StatusListRowId] = @StatusListRowId, [MilestoneID] = @MilestoneID, [PreceedingMilestoneIDRowId] = @PreceedingMilestoneIDRowId, [PreceedingMilestoneID] = @PreceedingMilestoneID, [Name] = @Name, [Description] = @Description, [Deliverables] = @Deliverables, [IsFinalMilestone] = @IsFinalMilestone, [Purpose] = @Purpose, [OwnerRoleListsRowId] = @OwnerRoleListsRowId, [OwnerRole] = @OwnerRole, [OwnerPersonRowId] = @OwnerPersonRowId, [OwnerPerson] = @OwnerPerson, [ResponsibleRoleListsRowId] = @ResponsibleRoleListsRowId, [ResponsibleRole] = @ResponsibleRole, [ResponsiblePersonRowId] = @ResponsiblePersonRowId, [ResponsiblePerson] = @ResponsiblePerson, [ValueChainListsRowId] = @ValueChainListsRowId, [ValueChain] = @ValueChain, [ApproverRoleListsRowId] = @ApproverRoleListsRowId, [ApproverRole] = @ApproverRole, [ApproverPersonRowId] = @ApproverPersonRowId, [ApproverPerson] = @ApproverPerson, [DateDueOriginal] = @DateDueOriginal, [DateDueEstimated] = @DateDueEstimated, [DateDueActual] = @DateDueActual, [DateApproved] = @DateApproved, [MilestoneCost] = @MilestoneCost, [MilestoneBudget] = @MilestoneBudget, [RiskLevel] = @RiskLevel, [RiskLevelListsRowId] = @RiskLevelListsRowId, [IsOnCriticalPath] = @IsOnCriticalPath, [MilestoneDepartmentRowId] = @MilestoneDepartmentRowId, [MilestoneDepartment] = @MilestoneDepartment, [IsApproved] = @IsApproved, [Reminder] = @Reminder, [MilestoneReferenceId] = @MilestoneReferenceId, [MasterRowId] = @MasterRowId, [DateCreated] = @DateCreated, [CreatedBy] = @CreatedBy, [DateChanged] = @DateChanged, [ChangedBy] = @ChangedBy, [DateDeleted] = @DateDeleted, [DeletedBy] = @DeletedBy, [SwitchFree1] = @SwitchFree1, [SwitchFree2] = @SwitchFree2, [SwitchFree3] = @SwitchFree3, [DateTimeFree1] = @DateTimeFree1, [DateTimeFree2] = @DateTimeFree2, [DateTimeFree3] = @DateTimeFree3, [TextFree1] = @TextFree1, [TextFree2] = @TextFree2, [TextFree3] = @TextFree3, [IntFree1] = @IntFree1, [IntFree2] = @IntFree2, [IntFree3] = @IntFree3, [nTextFree1] = @nTextFree1, [nTextFree2] = @nTextFree2, [nTextFree3] = @nTextFree3, [rowguid] = @rowguid WHERE (([MilestoneRowId] = @Original_MilestoneRowId) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_StatusListRowId = 1 AND [StatusListRowId] IS NULL) OR ([StatusListRowId] = @Original_StatusListRowId)) AND ((@IsNull_MilestoneID = 1 AND [MilestoneID] IS NULL) OR ([MilestoneID] = @Original_MilestoneID)) AND ((@IsNull_PreceedingMilestoneIDRowId = 1 AND [PreceedingMilestoneIDRowId] IS NULL) OR ([PreceedingMilestoneIDRowId] = @Original_PreceedingMilestoneIDRowId)) AND ((@IsNull_PreceedingMilestoneID = 1 AND [PreceedingMilestoneID] IS NULL) OR ([PreceedingMilestoneID] = @Original_PreceedingMilestoneID)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_IsFinalMilestone = 1 AND [IsFinalMilestone] IS NULL) OR ([IsFinalMilestone] = @Original_IsFinalMilestone)) AND ((@IsNull_OwnerRoleListsRowId = 1 AND [OwnerRoleListsRowId] IS NULL) OR ([OwnerRoleListsRowId] = @Original_OwnerRoleListsRowId)) AND ((@IsNull_OwnerRole = 1 AND [OwnerRole] IS NULL) OR ([OwnerRole] = @Original_OwnerRole)) AND ((@IsNull_OwnerPersonRowId = 1 AND [OwnerPersonRowId] IS NULL) OR ([OwnerPersonRowId] = @Original_OwnerPersonRowId)) AND ((@IsNull_OwnerPerson = 1 AND [OwnerPerson] IS NULL) OR ([OwnerPerson] = @Original_OwnerPerson)) AND ((@IsNull_ResponsibleRoleListsRowId = 1 AND [ResponsibleRoleListsRowId] IS NULL) OR ([ResponsibleRoleListsRowId] = @Original_ResponsibleRoleListsRowId)) AND ((@IsNull_ResponsibleRole = 1 AND [ResponsibleRole] IS NULL) OR ([ResponsibleRole] = @Original_ResponsibleRole)) AND ((@IsNull_ResponsiblePersonRowId = 1 AND [ResponsiblePersonRowId] IS NULL) OR ([ResponsiblePersonRowId] = @Original_ResponsiblePersonRowId)) AND ((@IsNull_ResponsiblePerson = 1 AND [ResponsiblePerson] IS NULL) OR ([ResponsiblePerson] = @Original_ResponsiblePerson)) AND ((@IsNull_ValueChainListsRowId = 1 AND [ValueChainListsRowId] IS NULL) OR ([ValueChainListsRowId] = @Original_ValueChainListsRowId)) AND ((@IsNull_ValueChain = 1 AND [ValueChain] IS NULL) OR ([ValueChain] = @Original_ValueChain)) AND ((@IsNull_ApproverRoleListsRowId = 1 AND [ApproverRoleListsRowId] IS NULL) OR ([ApproverRoleListsRowId] = @Original_ApproverRoleListsRowId)) AND ((@IsNull_ApproverRole = 1 AND [ApproverRole] IS NULL) OR ([ApproverRole] = @Original_ApproverRole)) AND ((@IsNull_ApproverPersonRowId = 1 AND [ApproverPersonRowId] IS NULL) OR ([ApproverPersonRowId] = @Original_ApproverPersonRowId)) AND ((@IsNull_ApproverPerson = 1 AND [ApproverPerson] IS NULL) OR ([ApproverPerson] = @Original_ApproverPerson)) AND ((@IsNull_DateDueOriginal = 1 AND [DateDueOriginal] IS NULL) OR ([DateDueOriginal] = @Original_DateDueOriginal)) AND ((@IsNull_DateDueEstimated = 1 AND [DateDueEstimated] IS NULL) OR ([DateDueEstimated] = @Original_DateDueEstimated)) AND ((@IsNull_DateDueActual = 1 AND [DateDueActual] IS NULL) OR ([DateDueActual] = @Original_DateDueActual)) AND ((@IsNull_DateApproved = 1 AND [DateApproved] IS NULL) OR ([DateApproved] = @Original_DateApproved)) AND ((@IsNull_MilestoneCost = 1 AND [MilestoneCost] IS NULL) OR ([MilestoneCost] = @Original_MilestoneCost)) AND ((@IsNull_MilestoneBudget = 1 AND [MilestoneBudget] IS NULL) OR ([MilestoneBudget] = @Original_MilestoneBudget)) AND ((@IsNull_RiskLevel = 1 AND [RiskLevel] IS NULL) OR ([RiskLevel] = @Original_RiskLevel)) AND ((@IsNull_RiskLevelListsRowId = 1 AND [RiskLevelListsRowId] IS NULL) OR ([RiskLevelListsRowId] = @Original_RiskLevelListsRowId)) AND ((@IsNull_IsOnCriticalPath = 1 AND [IsOnCriticalPath] IS NULL) OR ([IsOnCriticalPath] = @Original_IsOnCriticalPath)) AND ((@IsNull_MilestoneDepartmentRowId = 1 AND [MilestoneDepartmentRowId] IS NULL) OR ([MilestoneDepartmentRowId] = @Original_MilestoneDepartmentRowId)) AND ((@IsNull_MilestoneDepartment = 1 AND [MilestoneDepartment] IS NULL) OR ([MilestoneDepartment] = @Original_MilestoneDepartment)) AND ((@IsNull_IsApproved = 1 AND [IsApproved] IS NULL) OR ([IsApproved] = @Original_IsApproved)) AND ((@IsNull_MilestoneReferenceId = 1 AND [MilestoneReferenceId] IS NULL) OR ([MilestoneReferenceId] = @Original_MilestoneReferenceId)) AND ((@IsNull_MasterRowId = 1 AND [MasterRowId] IS NULL) OR ([MasterRowId] = @Original_MasterRowId)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_DateChanged = 1 AND [DateChanged] IS NULL) OR ([DateChanged] = @Original_DateChanged)) AND ((@IsNull_ChangedBy = 1 AND [ChangedBy] IS NULL) OR ([ChangedBy] = @Original_ChangedBy)) AND ((@IsNull_DateDeleted = 1 AND [DateDeleted] IS NULL) OR ([DateDeleted] = @Original_DateDeleted)) AND ((@IsNull_DeletedBy = 1 AND [DeletedBy] IS NULL) OR ([DeletedBy] = @Original_DeletedBy)) AND ((@IsNull_SwitchFree1 = 1 AND [SwitchFree1] IS NULL) OR ([SwitchFree1] = @Original_SwitchFree1)) AND ((@IsNull_SwitchFree2 = 1 AND [SwitchFree2] IS NULL) OR ([SwitchFree2] = @Original_SwitchFree2)) AND ((@IsNull_SwitchFree3 = 1 AND [SwitchFree3] IS NULL) OR ([SwitchFree3] = @Original_SwitchFree3)) AND ((@IsNull_DateTimeFree1 = 1 AND [DateTimeFree1] IS NULL) OR ([DateTimeFree1] = @Original_DateTimeFree1)) AND ((@IsNull_DateTimeFree2 = 1 AND [DateTimeFree2] IS NULL) OR ([DateTimeFree2] = @Original_DateTimeFree2)) AND ((@IsNull_DateTimeFree3 = 1 AND [DateTimeFree3] IS NULL) OR ([DateTimeFree3] = @Original_DateTimeFree3)) AND ((@IsNull_TextFree1 = 1 AND [TextFree1] IS NULL) OR ([TextFree1] = @Original_TextFree1)) AND ((@IsNull_TextFree2 = 1 AND [TextFree2] IS NULL) OR ([TextFree2] = @Original_TextFree2)) AND ((@IsNull_TextFree3 = 1 AND [TextFree3] IS NULL) OR ([TextFree3] = @Original_TextFree3)) AND ((@IsNull_IntFree1 = 1 AND [IntFree1] IS NULL) OR ([IntFree1] = @Original_IntFree1)) AND ((@IsNull_IntFree2 = 1 AND [IntFree2] IS NULL) OR ([IntFree2] = @Original_IntFree2)) AND ((@IsNull_IntFree3 = 1 AND [IntFree3] IS NULL) OR ([IntFree3] = @Original_IntFree3)) AND ([rowguid] = @Original_rowguid));
+SELECT MilestoneRowId, Status, StatusListRowId, MilestoneID, PreceedingMilestoneIDRowId, PreceedingMilestoneID, Name, Description, Deliverables, IsFinalMilestone, Purpose, OwnerRoleListsRowId, OwnerRole, OwnerPersonRowId, OwnerPerson, ResponsibleRoleListsRowId, ResponsibleRole, ResponsiblePersonRowId, ResponsiblePerson, ValueChainListsRowId, ValueChain, ApproverRoleListsRowId, ApproverRole, ApproverPersonRowId, ApproverPerson, DateDueOriginal, DateDueEstimated, DateDueActual, DateApproved, MilestoneCost, MilestoneBudget, RiskLevel, RiskLevelListsRowId, IsOnCriticalPath, MilestoneDepartmentRowId, MilestoneDepartment, IsApproved, Reminder, MilestoneReferenceId, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, nTextFree1, nTextFree2, nTextFree3, rowguid FROM GAMilestone WHERE (MilestoneRowId = @MilestoneRowId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@StatusListRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusListRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PreceedingMilestoneIDRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneIDRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PreceedingMilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreceedingMilestoneID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Deliverables" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Deliverables" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsFinalMilestone" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsFinalMilestone" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Purpose" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Purpose" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnerRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OwnerRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerRole" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnerPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPersonRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OwnerPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerPerson" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ResponsibleRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ResponsibleRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsibleRole" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ResponsiblePersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePersonRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ResponsiblePerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsiblePerson" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ValueChainListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChainListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ValueChain" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueChain" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ApproverRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ApproverRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverRole" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ApproverPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPersonRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ApproverPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverPerson" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDueOriginal" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueOriginal" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDueEstimated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueEstimated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDueActual" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueActual" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateApproved" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateApproved" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MilestoneCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneCost" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MilestoneBudget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneBudget" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RiskLevel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RiskLevel" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RiskLevelListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevelListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsOnCriticalPath" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOnCriticalPath" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MilestoneDepartmentRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartmentRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MilestoneDepartment" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneDepartment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Reminder" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Reminder" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MilestoneReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneReferenceId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree1" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree2" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree3" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StatusListRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusListRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_StatusListRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusListRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneID" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreceedingMilestoneIDRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneIDRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PreceedingMilestoneIDRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneIDRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreceedingMilestoneID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreceedingMilestoneID" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PreceedingMilestoneID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreceedingMilestoneID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsFinalMilestone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsFinalMilestone" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsFinalMilestone" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsFinalMilestone" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRoleListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnerRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerRole" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OwnerRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerRole" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPersonRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnerPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPersonRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerPerson" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerPerson" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OwnerPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OwnerPerson" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsibleRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRoleListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ResponsibleRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsibleRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsibleRole" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ResponsibleRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsibleRole" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsiblePersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePersonRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ResponsiblePersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePersonRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ResponsiblePerson" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ResponsiblePerson" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ResponsiblePerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ResponsiblePerson" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValueChainListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChainListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ValueChainListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChainListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValueChain" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueChain" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ValueChain" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueChain" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRoleListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ApproverRoleListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRoleListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverRole" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ApproverRole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverRole" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPersonRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ApproverPersonRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPersonRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApproverPerson" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApproverPerson" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ApproverPerson" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ApproverPerson" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDueOriginal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDueOriginal" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDueOriginal" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueOriginal" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDueEstimated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDueEstimated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDueEstimated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueEstimated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDueActual" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDueActual" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDueActual" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDueActual" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateApproved" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateApproved" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateApproved" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateApproved" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneCost" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneCost" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneBudget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneBudget" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneBudget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneBudget" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RiskLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevel" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RiskLevel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RiskLevel" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RiskLevelListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevelListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RiskLevelListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RiskLevelListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsOnCriticalPath" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsOnCriticalPath" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsOnCriticalPath" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOnCriticalPath" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneDepartmentRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartmentRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MilestoneDepartmentRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartmentRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneDepartment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneDepartment" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MilestoneDepartment" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneDepartment" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsApproved" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MilestoneReferenceId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MilestoneReferenceId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MilestoneReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MilestoneReferenceId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateChanged" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDeleted" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="MilestoneRowId" ColumnName="MilestoneRowId" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MilestoneRowId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MilestoneRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MilestoneRowId" DataSetColumn="MilestoneRowId" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="StatusListRowId" DataSetColumn="StatusListRowId" />
+              <Mapping SourceColumn="MilestoneID" DataSetColumn="MilestoneID" />
+              <Mapping SourceColumn="PreceedingMilestoneIDRowId" DataSetColumn="PreceedingMilestoneIDRowId" />
+              <Mapping SourceColumn="PreceedingMilestoneID" DataSetColumn="PreceedingMilestoneID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Deliverables" DataSetColumn="Deliverables" />
+              <Mapping SourceColumn="IsFinalMilestone" DataSetColumn="IsFinalMilestone" />
+              <Mapping SourceColumn="Purpose" DataSetColumn="Purpose" />
+              <Mapping SourceColumn="OwnerRoleListsRowId" DataSetColumn="OwnerRoleListsRowId" />
+              <Mapping SourceColumn="OwnerRole" DataSetColumn="OwnerRole" />
+              <Mapping SourceColumn="OwnerPersonRowId" DataSetColumn="OwnerPersonRowId" />
+              <Mapping SourceColumn="OwnerPerson" DataSetColumn="OwnerPerson" />
+              <Mapping SourceColumn="ResponsibleRoleListsRowId" DataSetColumn="ResponsibleRoleListsRowId" />
+              <Mapping SourceColumn="ResponsibleRole" DataSetColumn="ResponsibleRole" />
+              <Mapping SourceColumn="ResponsiblePersonRowId" DataSetColumn="ResponsiblePersonRowId" />
+              <Mapping SourceColumn="ResponsiblePerson" DataSetColumn="ResponsiblePerson" />
+              <Mapping SourceColumn="ValueChainListsRowId" DataSetColumn="ValueChainListsRowId" />
+              <Mapping SourceColumn="ValueChain" DataSetColumn="ValueChain" />
+              <Mapping SourceColumn="ApproverRoleListsRowId" DataSetColumn="ApproverRoleListsRowId" />
+              <Mapping SourceColumn="ApproverRole" DataSetColumn="ApproverRole" />
+              <Mapping SourceColumn="ApproverPersonRowId" DataSetColumn="ApproverPersonRowId" />
+              <Mapping SourceColumn="ApproverPerson" DataSetColumn="ApproverPerson" />
+              <Mapping SourceColumn="DateDueOriginal" DataSetColumn="DateDueOriginal" />
+              <Mapping SourceColumn="DateDueEstimated" DataSetColumn="DateDueEstimated" />
+              <Mapping SourceColumn="DateDueActual" DataSetColumn="DateDueActual" />
+              <Mapping SourceColumn="DateApproved" DataSetColumn="DateApproved" />
+              <Mapping SourceColumn="MilestoneCost" DataSetColumn="MilestoneCost" />
+              <Mapping SourceColumn="MilestoneBudget" DataSetColumn="MilestoneBudget" />
+              <Mapping SourceColumn="RiskLevel" DataSetColumn="RiskLevel" />
+              <Mapping SourceColumn="RiskLevelListsRowId" DataSetColumn="RiskLevelListsRowId" />
+              <Mapping SourceColumn="IsOnCriticalPath" DataSetColumn="IsOnCriticalPath" />
+              <Mapping SourceColumn="MilestoneDepartmentRowId" DataSetColumn="MilestoneDepartmentRowId" />
+              <Mapping SourceColumn="MilestoneDepartment" DataSetColumn="MilestoneDepartment" />
+              <Mapping SourceColumn="IsApproved" DataSetColumn="IsApproved" />
+              <Mapping SourceColumn="Reminder" DataSetColumn="Reminder" />
+              <Mapping SourceColumn="MilestoneReferenceId" DataSetColumn="MilestoneReferenceId" />
+              <Mapping SourceColumn="MasterRowId" DataSetColumn="MasterRowId" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="DateChanged" DataSetColumn="DateChanged" />
+              <Mapping SourceColumn="ChangedBy" DataSetColumn="ChangedBy" />
+              <Mapping SourceColumn="DateDeleted" DataSetColumn="DateDeleted" />
+              <Mapping SourceColumn="DeletedBy" DataSetColumn="DeletedBy" />
+              <Mapping SourceColumn="SwitchFree1" DataSetColumn="SwitchFree1" />
+              <Mapping SourceColumn="SwitchFree2" DataSetColumn="SwitchFree2" />
+              <Mapping SourceColumn="SwitchFree3" DataSetColumn="SwitchFree3" />
+              <Mapping SourceColumn="DateTimeFree1" DataSetColumn="DateTimeFree1" />
+              <Mapping SourceColumn="DateTimeFree2" DataSetColumn="DateTimeFree2" />
+              <Mapping SourceColumn="DateTimeFree3" DataSetColumn="DateTimeFree3" />
+              <Mapping SourceColumn="TextFree1" DataSetColumn="TextFree1" />
+              <Mapping SourceColumn="TextFree2" DataSetColumn="TextFree2" />
+              <Mapping SourceColumn="TextFree3" DataSetColumn="TextFree3" />
+              <Mapping SourceColumn="IntFree1" DataSetColumn="IntFree1" />
+              <Mapping SourceColumn="IntFree2" DataSetColumn="IntFree2" />
+              <Mapping SourceColumn="IntFree3" DataSetColumn="IntFree3" />
+              <Mapping SourceColumn="nTextFree1" DataSetColumn="nTextFree1" />
+              <Mapping SourceColumn="nTextFree2" DataSetColumn="nTextFree2" />
+              <Mapping SourceColumn="nTextFree3" DataSetColumn="nTextFree3" />
+              <Mapping SourceColumn="rowguid" DataSetColumn="rowguid" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MilestoneDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="MilestoneDS" msprop:Generator_DataSetName="MilestoneDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAMilestone" msprop:Generator_UserTableName="GAMilestone" msprop:Generator_RowDeletedName="GAMilestoneRowDeleted" msprop:Generator_TableClassName="GAMilestoneDataTable" msprop:Generator_RowChangedName="GAMilestoneRowChanged" msprop:Generator_RowClassName="GAMilestoneRow" msprop:Generator_RowChangingName="GAMilestoneRowChanging" msprop:Generator_RowEvArgName="GAMilestoneRowChangeEvent" msprop:Generator_RowEvHandlerName="GAMilestoneRowChangeEventHandler" msprop:Generator_TablePropName="GAMilestone" msprop:Generator_TableVarName="tableGAMilestone" msprop:Generator_RowDeletingName="GAMilestoneRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MilestoneRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="MilestoneRowId" msprop:Generator_ColumnPropNameInRow="MilestoneRowId" msprop:Generator_ColumnVarNameInTable="columnMilestoneRowId" msprop:Generator_ColumnPropNameInTable="MilestoneRowIdColumn" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusListRowId" msprop:Generator_UserColumnName="StatusListRowId" msprop:Generator_ColumnPropNameInRow="StatusListRowId" msprop:Generator_ColumnVarNameInTable="columnStatusListRowId" msprop:Generator_ColumnPropNameInTable="StatusListRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MilestoneID" msprop:Generator_UserColumnName="MilestoneID" msprop:Generator_ColumnPropNameInRow="MilestoneID" msprop:Generator_ColumnVarNameInTable="columnMilestoneID" msprop:Generator_ColumnPropNameInTable="MilestoneIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PreceedingMilestoneIDRowId" msprop:Generator_UserColumnName="PreceedingMilestoneIDRowId" msprop:Generator_ColumnPropNameInRow="PreceedingMilestoneIDRowId" msprop:Generator_ColumnVarNameInTable="columnPreceedingMilestoneIDRowId" msprop:Generator_ColumnPropNameInTable="PreceedingMilestoneIDRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PreceedingMilestoneID" msprop:Generator_UserColumnName="PreceedingMilestoneID" msprop:Generator_ColumnPropNameInRow="PreceedingMilestoneID" msprop:Generator_ColumnVarNameInTable="columnPreceedingMilestoneID" msprop:Generator_ColumnPropNameInTable="PreceedingMilestoneIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Deliverables" msprop:Generator_UserColumnName="Deliverables" msprop:Generator_ColumnPropNameInRow="Deliverables" msprop:Generator_ColumnVarNameInTable="columnDeliverables" msprop:Generator_ColumnPropNameInTable="DeliverablesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsFinalMilestone" msprop:Generator_UserColumnName="IsFinalMilestone" msprop:Generator_ColumnPropNameInRow="IsFinalMilestone" msprop:Generator_ColumnVarNameInTable="columnIsFinalMilestone" msprop:Generator_ColumnPropNameInTable="IsFinalMilestoneColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Purpose" msprop:Generator_UserColumnName="Purpose" msprop:Generator_ColumnPropNameInRow="Purpose" msprop:Generator_ColumnVarNameInTable="columnPurpose" msprop:Generator_ColumnPropNameInTable="PurposeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OwnerRoleListsRowId" msprop:Generator_UserColumnName="OwnerRoleListsRowId" msprop:Generator_ColumnPropNameInRow="OwnerRoleListsRowId" msprop:Generator_ColumnVarNameInTable="columnOwnerRoleListsRowId" msprop:Generator_ColumnPropNameInTable="OwnerRoleListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OwnerRole" msprop:Generator_UserColumnName="OwnerRole" msprop:Generator_ColumnPropNameInRow="OwnerRole" msprop:Generator_ColumnVarNameInTable="columnOwnerRole" msprop:Generator_ColumnPropNameInTable="OwnerRoleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OwnerPersonRowId" msprop:Generator_UserColumnName="OwnerPersonRowId" msprop:Generator_ColumnPropNameInRow="OwnerPersonRowId" msprop:Generator_ColumnVarNameInTable="columnOwnerPersonRowId" msprop:Generator_ColumnPropNameInTable="OwnerPersonRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OwnerPerson" msprop:Generator_UserColumnName="OwnerPerson" msprop:Generator_ColumnPropNameInRow="OwnerPerson" msprop:Generator_ColumnVarNameInTable="columnOwnerPerson" msprop:Generator_ColumnPropNameInTable="OwnerPersonColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ResponsibleRoleListsRowId" msprop:Generator_UserColumnName="ResponsibleRoleListsRowId" msprop:Generator_ColumnPropNameInRow="ResponsibleRoleListsRowId" msprop:Generator_ColumnVarNameInTable="columnResponsibleRoleListsRowId" msprop:Generator_ColumnPropNameInTable="ResponsibleRoleListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ResponsibleRole" msprop:Generator_UserColumnName="ResponsibleRole" msprop:Generator_ColumnPropNameInRow="ResponsibleRole" msprop:Generator_ColumnVarNameInTable="columnResponsibleRole" msprop:Generator_ColumnPropNameInTable="ResponsibleRoleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ResponsiblePersonRowId" msprop:Generator_UserColumnName="ResponsiblePersonRowId" msprop:Generator_ColumnPropNameInRow="ResponsiblePersonRowId" msprop:Generator_ColumnVarNameInTable="columnResponsiblePersonRowId" msprop:Generator_ColumnPropNameInTable="ResponsiblePersonRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ResponsiblePerson" msprop:Generator_UserColumnName="ResponsiblePerson" msprop:Generator_ColumnPropNameInRow="ResponsiblePerson" msprop:Generator_ColumnVarNameInTable="columnResponsiblePerson" msprop:Generator_ColumnPropNameInTable="ResponsiblePersonColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueChainListsRowId" msprop:Generator_UserColumnName="ValueChainListsRowId" msprop:Generator_ColumnPropNameInRow="ValueChainListsRowId" msprop:Generator_ColumnVarNameInTable="columnValueChainListsRowId" msprop:Generator_ColumnPropNameInTable="ValueChainListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ValueChain" msprop:Generator_UserColumnName="ValueChain" msprop:Generator_ColumnPropNameInRow="ValueChain" msprop:Generator_ColumnVarNameInTable="columnValueChain" msprop:Generator_ColumnPropNameInTable="ValueChainColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApproverRoleListsRowId" msprop:Generator_UserColumnName="ApproverRoleListsRowId" msprop:Generator_ColumnPropNameInRow="ApproverRoleListsRowId" msprop:Generator_ColumnVarNameInTable="columnApproverRoleListsRowId" msprop:Generator_ColumnPropNameInTable="ApproverRoleListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ApproverRole" msprop:Generator_UserColumnName="ApproverRole" msprop:Generator_ColumnPropNameInRow="ApproverRole" msprop:Generator_ColumnVarNameInTable="columnApproverRole" msprop:Generator_ColumnPropNameInTable="ApproverRoleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApproverPersonRowId" msprop:Generator_UserColumnName="ApproverPersonRowId" msprop:Generator_ColumnPropNameInRow="ApproverPersonRowId" msprop:Generator_ColumnVarNameInTable="columnApproverPersonRowId" msprop:Generator_ColumnPropNameInTable="ApproverPersonRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ApproverPerson" msprop:Generator_UserColumnName="ApproverPerson" msprop:Generator_ColumnPropNameInRow="ApproverPerson" msprop:Generator_ColumnVarNameInTable="columnApproverPerson" msprop:Generator_ColumnPropNameInTable="ApproverPersonColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateDueOriginal" msprop:Generator_UserColumnName="DateDueOriginal" msprop:Generator_ColumnPropNameInRow="DateDueOriginal" msprop:Generator_ColumnVarNameInTable="columnDateDueOriginal" msprop:Generator_ColumnPropNameInTable="DateDueOriginalColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateDueEstimated" msprop:Generator_UserColumnName="DateDueEstimated" msprop:Generator_ColumnPropNameInRow="DateDueEstimated" msprop:Generator_ColumnVarNameInTable="columnDateDueEstimated" msprop:Generator_ColumnPropNameInTable="DateDueEstimatedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateDueActual" msprop:Generator_UserColumnName="DateDueActual" msprop:Generator_ColumnPropNameInRow="DateDueActual" msprop:Generator_ColumnVarNameInTable="columnDateDueActual" msprop:Generator_ColumnPropNameInTable="DateDueActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateApproved" msprop:Generator_UserColumnName="DateApproved" msprop:Generator_ColumnPropNameInRow="DateApproved" msprop:Generator_ColumnVarNameInTable="columnDateApproved" msprop:Generator_ColumnPropNameInTable="DateApprovedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MilestoneCost" msprop:Generator_UserColumnName="MilestoneCost" msprop:Generator_ColumnPropNameInRow="MilestoneCost" msprop:Generator_ColumnVarNameInTable="columnMilestoneCost" msprop:Generator_ColumnPropNameInTable="MilestoneCostColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MilestoneBudget" msprop:Generator_UserColumnName="MilestoneBudget" msprop:Generator_ColumnPropNameInRow="MilestoneBudget" msprop:Generator_ColumnVarNameInTable="columnMilestoneBudget" msprop:Generator_ColumnPropNameInTable="MilestoneBudgetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="RiskLevel" msprop:Generator_UserColumnName="RiskLevel" msprop:Generator_ColumnPropNameInRow="RiskLevel" msprop:Generator_ColumnVarNameInTable="columnRiskLevel" msprop:Generator_ColumnPropNameInTable="RiskLevelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RiskLevelListsRowId" msprop:Generator_UserColumnName="RiskLevelListsRowId" msprop:Generator_ColumnPropNameInRow="RiskLevelListsRowId" msprop:Generator_ColumnVarNameInTable="columnRiskLevelListsRowId" msprop:Generator_ColumnPropNameInTable="RiskLevelListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IsOnCriticalPath" msprop:Generator_UserColumnName="IsOnCriticalPath" msprop:Generator_ColumnPropNameInRow="IsOnCriticalPath" msprop:Generator_ColumnVarNameInTable="columnIsOnCriticalPath" msprop:Generator_ColumnPropNameInTable="IsOnCriticalPathColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MilestoneDepartmentRowId" msprop:Generator_UserColumnName="MilestoneDepartmentRowId" msprop:Generator_ColumnPropNameInRow="MilestoneDepartmentRowId" msprop:Generator_ColumnVarNameInTable="columnMilestoneDepartmentRowId" msprop:Generator_ColumnPropNameInTable="MilestoneDepartmentRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MilestoneDepartment" msprop:Generator_UserColumnName="MilestoneDepartment" msprop:Generator_ColumnPropNameInRow="MilestoneDepartment" msprop:Generator_ColumnVarNameInTable="columnMilestoneDepartment" msprop:Generator_ColumnPropNameInTable="MilestoneDepartmentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsApproved" msprop:Generator_UserColumnName="IsApproved" msprop:Generator_ColumnPropNameInRow="IsApproved" msprop:Generator_ColumnVarNameInTable="columnIsApproved" msprop:Generator_ColumnPropNameInTable="IsApprovedColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Reminder" msprop:Generator_UserColumnName="Reminder" msprop:Generator_ColumnPropNameInRow="Reminder" msprop:Generator_ColumnVarNameInTable="columnReminder" msprop:Generator_ColumnPropNameInTable="ReminderColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MilestoneReferenceId" msprop:Generator_UserColumnName="MilestoneReferenceId" msprop:Generator_ColumnPropNameInRow="MilestoneReferenceId" msprop:Generator_ColumnVarNameInTable="columnMilestoneReferenceId" msprop:Generator_ColumnPropNameInTable="MilestoneReferenceIdColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MasterRowId" msprop:Generator_UserColumnName="MasterRowId" msprop:Generator_ColumnPropNameInRow="MasterRowId" msprop:Generator_ColumnVarNameInTable="columnMasterRowId" msprop:Generator_ColumnPropNameInTable="MasterRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreated" msprop:Generator_UserColumnName="DateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateChanged" msprop:Generator_UserColumnName="DateChanged" msprop:Generator_ColumnPropNameInRow="DateChanged" msprop:Generator_ColumnVarNameInTable="columnDateChanged" msprop:Generator_ColumnPropNameInTable="DateChangedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ChangedBy" msprop:Generator_UserColumnName="ChangedBy" msprop:Generator_ColumnPropNameInRow="ChangedBy" msprop:Generator_ColumnVarNameInTable="columnChangedBy" msprop:Generator_ColumnPropNameInTable="ChangedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateDeleted" msprop:Generator_UserColumnName="DateDeleted" msprop:Generator_ColumnPropNameInRow="DateDeleted" msprop:Generator_ColumnVarNameInTable="columnDateDeleted" msprop:Generator_ColumnPropNameInTable="DateDeletedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeletedBy" msprop:Generator_UserColumnName="DeletedBy" msprop:Generator_ColumnPropNameInRow="DeletedBy" msprop:Generator_ColumnVarNameInTable="columnDeletedBy" msprop:Generator_ColumnPropNameInTable="DeletedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SwitchFree1" msprop:Generator_UserColumnName="SwitchFree1" msprop:Generator_ColumnPropNameInRow="SwitchFree1" msprop:Generator_ColumnVarNameInTable="columnSwitchFree1" msprop:Generator_ColumnPropNameInTable="SwitchFree1Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree2" msprop:Generator_UserColumnName="SwitchFree2" msprop:Generator_ColumnPropNameInRow="SwitchFree2" msprop:Generator_ColumnVarNameInTable="columnSwitchFree2" msprop:Generator_ColumnPropNameInTable="SwitchFree2Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree3" msprop:Generator_UserColumnName="SwitchFree3" msprop:Generator_ColumnPropNameInRow="SwitchFree3" msprop:Generator_ColumnVarNameInTable="columnSwitchFree3" msprop:Generator_ColumnPropNameInTable="SwitchFree3Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DateTimeFree1" msprop:Generator_UserColumnName="DateTimeFree1" msprop:Generator_ColumnPropNameInRow="DateTimeFree1" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree1" msprop:Generator_ColumnPropNameInTable="DateTimeFree1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree2" msprop:Generator_UserColumnName="DateTimeFree2" msprop:Generator_ColumnPropNameInRow="DateTimeFree2" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree2" msprop:Generator_ColumnPropNameInTable="DateTimeFree2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree3" msprop:Generator_UserColumnName="DateTimeFree3" msprop:Generator_ColumnPropNameInRow="DateTimeFree3" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree3" msprop:Generator_ColumnPropNameInTable="DateTimeFree3Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TextFree1" msprop:Generator_UserColumnName="TextFree1" msprop:Generator_ColumnPropNameInRow="TextFree1" msprop:Generator_ColumnVarNameInTable="columnTextFree1" msprop:Generator_ColumnPropNameInTable="TextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree2" msprop:Generator_UserColumnName="TextFree2" msprop:Generator_ColumnPropNameInRow="TextFree2" msprop:Generator_ColumnVarNameInTable="columnTextFree2" msprop:Generator_ColumnPropNameInTable="TextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree3" msprop:Generator_UserColumnName="TextFree3" msprop:Generator_ColumnPropNameInRow="TextFree3" msprop:Generator_ColumnVarNameInTable="columnTextFree3" msprop:Generator_ColumnPropNameInTable="TextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IntFree1" msprop:Generator_UserColumnName="IntFree1" msprop:Generator_ColumnPropNameInRow="IntFree1" msprop:Generator_ColumnVarNameInTable="columnIntFree1" msprop:Generator_ColumnPropNameInTable="IntFree1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree2" msprop:Generator_UserColumnName="IntFree2" msprop:Generator_ColumnPropNameInRow="IntFree2" msprop:Generator_ColumnVarNameInTable="columnIntFree2" msprop:Generator_ColumnPropNameInTable="IntFree2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree3" msprop:Generator_UserColumnName="IntFree3" msprop:Generator_ColumnPropNameInRow="IntFree3" msprop:Generator_ColumnVarNameInTable="columnIntFree3" msprop:Generator_ColumnPropNameInTable="IntFree3Column" type="xs:int" minOccurs="0" />
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree2" msprop:Generator_UserColumnName="nTextFree2" msprop:Generator_ColumnPropNameInRow="nTextFree2" msprop:Generator_ColumnVarNameInTable="columnnTextFree2" msprop:Generator_ColumnPropNameInTable="nTextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree3" msprop:Generator_UserColumnName="nTextFree3" msprop:Generator_ColumnPropNameInRow="nTextFree3" msprop:Generator_ColumnVarNameInTable="columnnTextFree3" msprop:Generator_ColumnPropNameInTable="nTextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="rowguid" msprop:Generator_ColumnPropNameInRow="rowguid" msprop:Generator_ColumnVarNameInTable="columnrowguid" msprop:Generator_ColumnPropNameInTable="rowguidColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GAMilestone" />
+      <xs:field xpath="mstns:MilestoneRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

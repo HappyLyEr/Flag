@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CrisisMessageLogDS" targetNamespace="http://tempuri.org/CrisisMessageLogDS.xsd" xmlns:mstns="http://tempuri.org/CrisisMessageLogDS.xsd" xmlns="http://tempuri.org/CrisisMessageLogDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata20080117ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata20080117ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.Properties.Settings.GlobalReference.Default.flagdata20080117ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GACrisisMessageLogTableAdapter" GeneratorDataComponentClassName="GACrisisMessageLogTableAdapter" Name="GACrisisMessageLog" UserDataComponentName="GACrisisMessageLogTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flagdata20080117ConnectionString (Settings)" DbObjectName="flagdata20080117.dbo.GACrisisMessageLog" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [dbo].[GACrisisMessageLog] WHERE (([CrisisMessageLogRowId] = @Original_CrisisMessageLogRowId) AND ((@IsNull_CrisisMessageLogReferenceId = 1 AND [CrisisMessageLogReferenceId] IS NULL) OR ([CrisisMessageLogReferenceId] = @Original_CrisisMessageLogReferenceId)) AND ((@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)) AND ((@IsNull_RegisteredBy = 1 AND [RegisteredBy] IS NULL) OR ([RegisteredBy] = @Original_RegisteredBy)) AND ((@IsNull_ReportedBy = 1 AND [ReportedBy] IS NULL) OR ([ReportedBy] = @Original_ReportedBy)) AND ((@IsNull_ReportedDateTime = 1 AND [ReportedDateTime] IS NULL) OR ([ReportedDateTime] = @Original_ReportedDateTime)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_rowguid = 1 AND [rowguid] IS NULL) OR ([rowguid] = @Original_rowguid)) AND ((@IsNull_MasterRowId = 1 AND [MasterRowId] IS NULL) OR ([MasterRowId] = @Original_MasterRowId)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_DateChanged = 1 AND [DateChanged] IS NULL) OR ([DateChanged] = @Original_DateChanged)) AND ((@IsNull_ChangedBy = 1 AND [ChangedBy] IS NULL) OR ([ChangedBy] = @Original_ChangedBy)) AND ((@IsNull_DateDeleted = 1 AND [DateDeleted] IS NULL) OR ([DateDeleted] = @Original_DateDeleted)) AND ((@IsNull_DeletedBy = 1 AND [DeletedBy] IS NULL) OR ([DeletedBy] = @Original_DeletedBy)) AND ((@IsNull_SwitchFree1 = 1 AND [SwitchFree1] IS NULL) OR ([SwitchFree1] = @Original_SwitchFree1)) AND ((@IsNull_SwitchFree2 = 1 AND [SwitchFree2] IS NULL) OR ([SwitchFree2] = @Original_SwitchFree2)) AND ((@IsNull_SwitchFree3 = 1 AND [SwitchFree3] IS NULL) OR ([SwitchFree3] = @Original_SwitchFree3)) AND ((@IsNull_DateTimeFree1 = 1 AND [DateTimeFree1] IS NULL) OR ([DateTimeFree1] = @Original_DateTimeFree1)) AND ((@IsNull_DateTimeFree2 = 1 AND [DateTimeFree2] IS NULL) OR ([DateTimeFree2] = @Original_DateTimeFree2)) AND ((@IsNull_DateTimeFree3 = 1 AND [DateTimeFree3] IS NULL) OR ([DateTimeFree3] = @Original_DateTimeFree3)) AND ((@IsNull_TextFree1 = 1 AND [TextFree1] IS NULL) OR ([TextFree1] = @Original_TextFree1)) AND ((@IsNull_TextFree2 = 1 AND [TextFree2] IS NULL) OR ([TextFree2] = @Original_TextFree2)) AND ((@IsNull_TextFree3 = 1 AND [TextFree3] IS NULL) OR ([TextFree3] = @Original_TextFree3)) AND ((@IsNull_IntFree1 = 1 AND [IntFree1] IS NULL) OR ([IntFree1] = @Original_IntFree1)) AND ((@IsNull_IntFree2 = 1 AND [IntFree2] IS NULL) OR ([IntFree2] = @Original_IntFree2)) AND ((@IsNull_IntFree3 = 1 AND [IntFree3] IS NULL) OR ([IntFree3] = @Original_IntFree3)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CrisisMessageLogRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrisisMessageLogRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CrisisMessageLogReferenceId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrisisMessageLogReferenceId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CrisisMessageLogReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CrisisMessageLogReferenceId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Subject" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Subject" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Subject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Subject" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RegisteredBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegisteredBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RegisteredBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegisteredBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReportedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReportedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReportedDateTime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedDateTime" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ReportedDateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ReportedDateTime" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rowguid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateChanged" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDeleted" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [dbo].[GACrisisMessageLog] ([CrisisMessageLogReferenceId], [Subject], [RegisteredBy], [ReportedBy], [ReportedDateTime], [Description], [MessageResponse], [Comment], [Status], [rowguid], [MasterRowId], [DateCreated], [CreatedBy], [DateChanged], [ChangedBy], [DateDeleted], [DeletedBy], [SwitchFree1], [SwitchFree2], [SwitchFree3], [DateTimeFree1], [DateTimeFree2], [DateTimeFree3], [TextFree1], [TextFree2], [TextFree3], [IntFree1], [IntFree2], [IntFree3], [nTextFree1], [nTextFree2], [nTextFree3]) VALUES (@CrisisMessageLogReferenceId, @Subject, @RegisteredBy, @ReportedBy, @ReportedDateTime, @Description, @MessageResponse, @Comment, @Status, @rowguid, @MasterRowId, @DateCreated, @CreatedBy, @DateChanged, @ChangedBy, @DateDeleted, @DeletedBy, @SwitchFree1, @SwitchFree2, @SwitchFree3, @DateTimeFree1, @DateTimeFree2, @DateTimeFree3, @TextFree1, @TextFree2, @TextFree3, @IntFree1, @IntFree2, @IntFree3, @nTextFree1, @nTextFree2, @nTextFree3);
+SELECT CrisisMessageLogRowId, CrisisMessageLogReferenceId, Subject, RegisteredBy, ReportedBy, ReportedDateTime, Description, MessageResponse, Comment, Status, rowguid, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, nTextFree1, nTextFree2, nTextFree3 FROM GACrisisMessageLog WHERE (CrisisMessageLogRowId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CrisisMessageLogReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CrisisMessageLogReferenceId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Subject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Subject" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RegisteredBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegisteredBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReportedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ReportedDateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ReportedDateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MessageResponse" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="MessageResponse" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Comment" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Comment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree1" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree2" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree3" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT CrisisMessageLogRowId, CrisisMessageLogReferenceId, Subject, RegisteredBy, ReportedBy, ReportedDateTime, Description, MessageResponse, Comment, Status, rowguid, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, nTextFree1, nTextFree2, nTextFree3 FROM dbo.GACrisisMessageLog</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [dbo].[GACrisisMessageLog] SET [CrisisMessageLogReferenceId] = @CrisisMessageLogReferenceId, [Subject] = @Subject, [RegisteredBy] = @RegisteredBy, [ReportedBy] = @ReportedBy, [ReportedDateTime] = @ReportedDateTime, [Description] = @Description, [MessageResponse] = @MessageResponse, [Comment] = @Comment, [Status] = @Status, [rowguid] = @rowguid, [MasterRowId] = @MasterRowId, [DateCreated] = @DateCreated, [CreatedBy] = @CreatedBy, [DateChanged] = @DateChanged, [ChangedBy] = @ChangedBy, [DateDeleted] = @DateDeleted, [DeletedBy] = @DeletedBy, [SwitchFree1] = @SwitchFree1, [SwitchFree2] = @SwitchFree2, [SwitchFree3] = @SwitchFree3, [DateTimeFree1] = @DateTimeFree1, [DateTimeFree2] = @DateTimeFree2, [DateTimeFree3] = @DateTimeFree3, [TextFree1] = @TextFree1, [TextFree2] = @TextFree2, [TextFree3] = @TextFree3, [IntFree1] = @IntFree1, [IntFree2] = @IntFree2, [IntFree3] = @IntFree3, [nTextFree1] = @nTextFree1, [nTextFree2] = @nTextFree2, [nTextFree3] = @nTextFree3 WHERE (([CrisisMessageLogRowId] = @Original_CrisisMessageLogRowId) AND ((@IsNull_CrisisMessageLogReferenceId = 1 AND [CrisisMessageLogReferenceId] IS NULL) OR ([CrisisMessageLogReferenceId] = @Original_CrisisMessageLogReferenceId)) AND ((@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)) AND ((@IsNull_RegisteredBy = 1 AND [RegisteredBy] IS NULL) OR ([RegisteredBy] = @Original_RegisteredBy)) AND ((@IsNull_ReportedBy = 1 AND [ReportedBy] IS NULL) OR ([ReportedBy] = @Original_ReportedBy)) AND ((@IsNull_ReportedDateTime = 1 AND [ReportedDateTime] IS NULL) OR ([ReportedDateTime] = @Original_ReportedDateTime)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_rowguid = 1 AND [rowguid] IS NULL) OR ([rowguid] = @Original_rowguid)) AND ((@IsNull_MasterRowId = 1 AND [MasterRowId] IS NULL) OR ([MasterRowId] = @Original_MasterRowId)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_DateChanged = 1 AND [DateChanged] IS NULL) OR ([DateChanged] = @Original_DateChanged)) AND ((@IsNull_ChangedBy = 1 AND [ChangedBy] IS NULL) OR ([ChangedBy] = @Original_ChangedBy)) AND ((@IsNull_DateDeleted = 1 AND [DateDeleted] IS NULL) OR ([DateDeleted] = @Original_DateDeleted)) AND ((@IsNull_DeletedBy = 1 AND [DeletedBy] IS NULL) OR ([DeletedBy] = @Original_DeletedBy)) AND ((@IsNull_SwitchFree1 = 1 AND [SwitchFree1] IS NULL) OR ([SwitchFree1] = @Original_SwitchFree1)) AND ((@IsNull_SwitchFree2 = 1 AND [SwitchFree2] IS NULL) OR ([SwitchFree2] = @Original_SwitchFree2)) AND ((@IsNull_SwitchFree3 = 1 AND [SwitchFree3] IS NULL) OR ([SwitchFree3] = @Original_SwitchFree3)) AND ((@IsNull_DateTimeFree1 = 1 AND [DateTimeFree1] IS NULL) OR ([DateTimeFree1] = @Original_DateTimeFree1)) AND ((@IsNull_DateTimeFree2 = 1 AND [DateTimeFree2] IS NULL) OR ([DateTimeFree2] = @Original_DateTimeFree2)) AND ((@IsNull_DateTimeFree3 = 1 AND [DateTimeFree3] IS NULL) OR ([DateTimeFree3] = @Original_DateTimeFree3)) AND ((@IsNull_TextFree1 = 1 AND [TextFree1] IS NULL) OR ([TextFree1] = @Original_TextFree1)) AND ((@IsNull_TextFree2 = 1 AND [TextFree2] IS NULL) OR ([TextFree2] = @Original_TextFree2)) AND ((@IsNull_TextFree3 = 1 AND [TextFree3] IS NULL) OR ([TextFree3] = @Original_TextFree3)) AND ((@IsNull_IntFree1 = 1 AND [IntFree1] IS NULL) OR ([IntFree1] = @Original_IntFree1)) AND ((@IsNull_IntFree2 = 1 AND [IntFree2] IS NULL) OR ([IntFree2] = @Original_IntFree2)) AND ((@IsNull_IntFree3 = 1 AND [IntFree3] IS NULL) OR ([IntFree3] = @Original_IntFree3)));
+SELECT CrisisMessageLogRowId, CrisisMessageLogReferenceId, Subject, RegisteredBy, ReportedBy, ReportedDateTime, Description, MessageResponse, Comment, Status, rowguid, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, nTextFree1, nTextFree2, nTextFree3 FROM GACrisisMessageLog WHERE (CrisisMessageLogRowId = @CrisisMessageLogRowId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CrisisMessageLogReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CrisisMessageLogReferenceId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Subject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Subject" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RegisteredBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegisteredBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReportedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ReportedDateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ReportedDateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MessageResponse" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="MessageResponse" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Comment" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Comment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree1" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree2" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree3" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CrisisMessageLogRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrisisMessageLogRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CrisisMessageLogReferenceId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrisisMessageLogReferenceId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CrisisMessageLogReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CrisisMessageLogReferenceId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Subject" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Subject" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Subject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Subject" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RegisteredBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegisteredBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RegisteredBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegisteredBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReportedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReportedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReportedDateTime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReportedDateTime" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ReportedDateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ReportedDateTime" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rowguid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateChanged" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDeleted" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="CrisisMessageLogRowId" ColumnName="CrisisMessageLogRowId" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CrisisMessageLogRowId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CrisisMessageLogRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CrisisMessageLogRowId" DataSetColumn="CrisisMessageLogRowId" />
+              <Mapping SourceColumn="CrisisMessageLogReferenceId" DataSetColumn="CrisisMessageLogReferenceId" />
+              <Mapping SourceColumn="Subject" DataSetColumn="Subject" />
+              <Mapping SourceColumn="RegisteredBy" DataSetColumn="RegisteredBy" />
+              <Mapping SourceColumn="ReportedBy" DataSetColumn="ReportedBy" />
+              <Mapping SourceColumn="ReportedDateTime" DataSetColumn="ReportedDateTime" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="MessageResponse" DataSetColumn="MessageResponse" />
+              <Mapping SourceColumn="Comment" DataSetColumn="Comment" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="rowguid" DataSetColumn="rowguid" />
+              <Mapping SourceColumn="MasterRowId" DataSetColumn="MasterRowId" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="DateChanged" DataSetColumn="DateChanged" />
+              <Mapping SourceColumn="ChangedBy" DataSetColumn="ChangedBy" />
+              <Mapping SourceColumn="DateDeleted" DataSetColumn="DateDeleted" />
+              <Mapping SourceColumn="DeletedBy" DataSetColumn="DeletedBy" />
+              <Mapping SourceColumn="SwitchFree1" DataSetColumn="SwitchFree1" />
+              <Mapping SourceColumn="SwitchFree2" DataSetColumn="SwitchFree2" />
+              <Mapping SourceColumn="SwitchFree3" DataSetColumn="SwitchFree3" />
+              <Mapping SourceColumn="DateTimeFree1" DataSetColumn="DateTimeFree1" />
+              <Mapping SourceColumn="DateTimeFree2" DataSetColumn="DateTimeFree2" />
+              <Mapping SourceColumn="DateTimeFree3" DataSetColumn="DateTimeFree3" />
+              <Mapping SourceColumn="TextFree1" DataSetColumn="TextFree1" />
+              <Mapping SourceColumn="TextFree2" DataSetColumn="TextFree2" />
+              <Mapping SourceColumn="TextFree3" DataSetColumn="TextFree3" />
+              <Mapping SourceColumn="IntFree1" DataSetColumn="IntFree1" />
+              <Mapping SourceColumn="IntFree2" DataSetColumn="IntFree2" />
+              <Mapping SourceColumn="IntFree3" DataSetColumn="IntFree3" />
+              <Mapping SourceColumn="nTextFree1" DataSetColumn="nTextFree1" />
+              <Mapping SourceColumn="nTextFree2" DataSetColumn="nTextFree2" />
+              <Mapping SourceColumn="nTextFree3" DataSetColumn="nTextFree3" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CrisisMessageLogDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CrisisMessageLogDS" msprop:Generator_DataSetName="CrisisMessageLogDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GACrisisMessageLog" msprop:Generator_UserTableName="GACrisisMessageLog" msprop:Generator_RowDeletedName="GACrisisMessageLogRowDeleted" msprop:Generator_TableClassName="GACrisisMessageLogDataTable" msprop:Generator_RowChangedName="GACrisisMessageLogRowChanged" msprop:Generator_RowClassName="GACrisisMessageLogRow" msprop:Generator_RowChangingName="GACrisisMessageLogRowChanging" msprop:Generator_RowEvArgName="GACrisisMessageLogRowChangeEvent" msprop:Generator_RowEvHandlerName="GACrisisMessageLogRowChangeEventHandler" msprop:Generator_TablePropName="GACrisisMessageLog" msprop:Generator_TableVarName="tableGACrisisMessageLog" msprop:Generator_RowDeletingName="GACrisisMessageLogRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CrisisMessageLogRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="CrisisMessageLogRowId" msprop:Generator_ColumnPropNameInRow="CrisisMessageLogRowId" msprop:Generator_ColumnVarNameInTable="columnCrisisMessageLogRowId" msprop:Generator_ColumnPropNameInTable="CrisisMessageLogRowIdColumn" type="xs:int" />
+              <xs:element name="CrisisMessageLogReferenceId" msprop:Generator_UserColumnName="CrisisMessageLogReferenceId" msprop:Generator_ColumnPropNameInRow="CrisisMessageLogReferenceId" msprop:Generator_ColumnVarNameInTable="columnCrisisMessageLogReferenceId" msprop:Generator_ColumnPropNameInTable="CrisisMessageLogReferenceIdColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subject" msprop:Generator_UserColumnName="Subject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInTable="SubjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegisteredBy" msprop:Generator_UserColumnName="RegisteredBy" msprop:Generator_ColumnPropNameInRow="RegisteredBy" msprop:Generator_ColumnVarNameInTable="columnRegisteredBy" msprop:Generator_ColumnPropNameInTable="RegisteredByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ReportedBy" msprop:Generator_UserColumnName="ReportedBy" msprop:Generator_ColumnPropNameInRow="ReportedBy" msprop:Generator_ColumnVarNameInTable="columnReportedBy" msprop:Generator_ColumnPropNameInTable="ReportedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ReportedDateTime" msprop:Generator_UserColumnName="ReportedDateTime" msprop:Generator_ColumnPropNameInRow="ReportedDateTime" msprop:Generator_ColumnVarNameInTable="columnReportedDateTime" msprop:Generator_ColumnPropNameInTable="ReportedDateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MessageResponse" msprop:Generator_UserColumnName="MessageResponse" msprop:Generator_ColumnPropNameInRow="MessageResponse" msprop:Generator_ColumnVarNameInTable="columnMessageResponse" msprop:Generator_ColumnPropNameInTable="MessageResponseColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comment" msprop:Generator_UserColumnName="Comment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInTable="CommentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="rowguid" msprop:Generator_ColumnPropNameInRow="rowguid" msprop:Generator_ColumnVarNameInTable="columnrowguid" msprop:Generator_ColumnPropNameInTable="rowguidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MasterRowId" msprop:Generator_UserColumnName="MasterRowId" msprop:Generator_ColumnPropNameInRow="MasterRowId" msprop:Generator_ColumnVarNameInTable="columnMasterRowId" msprop:Generator_ColumnPropNameInTable="MasterRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreated" msprop:Generator_UserColumnName="DateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateChanged" msprop:Generator_UserColumnName="DateChanged" msprop:Generator_ColumnPropNameInRow="DateChanged" msprop:Generator_ColumnVarNameInTable="columnDateChanged" msprop:Generator_ColumnPropNameInTable="DateChangedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ChangedBy" msprop:Generator_UserColumnName="ChangedBy" msprop:Generator_ColumnPropNameInRow="ChangedBy" msprop:Generator_ColumnVarNameInTable="columnChangedBy" msprop:Generator_ColumnPropNameInTable="ChangedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateDeleted" msprop:Generator_UserColumnName="DateDeleted" msprop:Generator_ColumnPropNameInRow="DateDeleted" msprop:Generator_ColumnVarNameInTable="columnDateDeleted" msprop:Generator_ColumnPropNameInTable="DateDeletedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeletedBy" msprop:Generator_UserColumnName="DeletedBy" msprop:Generator_ColumnPropNameInRow="DeletedBy" msprop:Generator_ColumnVarNameInTable="columnDeletedBy" msprop:Generator_ColumnPropNameInTable="DeletedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SwitchFree1" msprop:Generator_UserColumnName="SwitchFree1" msprop:Generator_ColumnPropNameInRow="SwitchFree1" msprop:Generator_ColumnVarNameInTable="columnSwitchFree1" msprop:Generator_ColumnPropNameInTable="SwitchFree1Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree2" msprop:Generator_UserColumnName="SwitchFree2" msprop:Generator_ColumnPropNameInRow="SwitchFree2" msprop:Generator_ColumnVarNameInTable="columnSwitchFree2" msprop:Generator_ColumnPropNameInTable="SwitchFree2Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree3" msprop:Generator_UserColumnName="SwitchFree3" msprop:Generator_ColumnPropNameInRow="SwitchFree3" msprop:Generator_ColumnVarNameInTable="columnSwitchFree3" msprop:Generator_ColumnPropNameInTable="SwitchFree3Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DateTimeFree1" msprop:Generator_UserColumnName="DateTimeFree1" msprop:Generator_ColumnPropNameInRow="DateTimeFree1" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree1" msprop:Generator_ColumnPropNameInTable="DateTimeFree1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree2" msprop:Generator_UserColumnName="DateTimeFree2" msprop:Generator_ColumnPropNameInRow="DateTimeFree2" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree2" msprop:Generator_ColumnPropNameInTable="DateTimeFree2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree3" msprop:Generator_UserColumnName="DateTimeFree3" msprop:Generator_ColumnPropNameInRow="DateTimeFree3" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree3" msprop:Generator_ColumnPropNameInTable="DateTimeFree3Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TextFree1" msprop:Generator_UserColumnName="TextFree1" msprop:Generator_ColumnPropNameInRow="TextFree1" msprop:Generator_ColumnVarNameInTable="columnTextFree1" msprop:Generator_ColumnPropNameInTable="TextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree2" msprop:Generator_UserColumnName="TextFree2" msprop:Generator_ColumnPropNameInRow="TextFree2" msprop:Generator_ColumnVarNameInTable="columnTextFree2" msprop:Generator_ColumnPropNameInTable="TextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree3" msprop:Generator_UserColumnName="TextFree3" msprop:Generator_ColumnPropNameInRow="TextFree3" msprop:Generator_ColumnVarNameInTable="columnTextFree3" msprop:Generator_ColumnPropNameInTable="TextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IntFree1" msprop:Generator_UserColumnName="IntFree1" msprop:Generator_ColumnPropNameInRow="IntFree1" msprop:Generator_ColumnVarNameInTable="columnIntFree1" msprop:Generator_ColumnPropNameInTable="IntFree1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree2" msprop:Generator_UserColumnName="IntFree2" msprop:Generator_ColumnPropNameInRow="IntFree2" msprop:Generator_ColumnVarNameInTable="columnIntFree2" msprop:Generator_ColumnPropNameInTable="IntFree2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree3" msprop:Generator_UserColumnName="IntFree3" msprop:Generator_ColumnPropNameInRow="IntFree3" msprop:Generator_ColumnVarNameInTable="columnIntFree3" msprop:Generator_ColumnPropNameInTable="IntFree3Column" type="xs:int" minOccurs="0" />
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree2" msprop:Generator_UserColumnName="nTextFree2" msprop:Generator_ColumnPropNameInRow="nTextFree2" msprop:Generator_ColumnVarNameInTable="columnnTextFree2" msprop:Generator_ColumnPropNameInTable="nTextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree3" msprop:Generator_UserColumnName="nTextFree3" msprop:Generator_ColumnPropNameInRow="nTextFree3" msprop:Generator_ColumnVarNameInTable="columnnTextFree3" msprop:Generator_ColumnPropNameInTable="nTextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GACrisisMessageLog" />
+      <xs:field xpath="mstns:CrisisMessageLogRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

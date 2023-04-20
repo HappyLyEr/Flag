@@ -1,0 +1,1241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadToolbar.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.Design.RadToolbarDesigner">
+            <exclude/>
+        </member>
+        <member name="M:Telerik.WebControls.Design.RadToolbarDesigner.#ctor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.Design.RadToolbarDesigner.GetDesignTimeHtml">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadToolbar.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToolbarUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToolbarUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadToolbarUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbar.#ctor">
+            <summary>
+            The default contructor for RadToolBar
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbar.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbar.FindControl(System.String)">
+            <summary>
+            Searches the current naming container for a server control with the specified
+            <span class="parameter">id</span> parameter
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbar.RaisePostDataChangedEvent">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbar.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.CausesValidation">
+            <summary>
+             <para>Gets or sets a value indicating whether validation is performed when the
+                RadToolbar control postbacks to the server.</para>
+            </summary>
+            <remarks>
+             <para>By default, page validation is performed when a RadToolbar control is
+                clicked. Page validation determines whether the input controls associated with a
+                validation control on the page all pass the validation rules specified by the
+                validation control.</para>
+             <para>You can specify or determine whether validation is performed on both the
+                client and the server when a RadToolbar control is clicked by using the
+                CausesValidation property. To prevent validation from being performed, set the
+                CausesValidation property to false.</para>
+             <para>This property is commonly set to false for a reset or clear RadToolbar to
+                prevent validation from being performed when the RadToolbar is clicked.</para>
+             <para>When the value of the CausesValidation property is set to true, you can also
+                use the ValidationGroup property to specify the name of the validation group for
+                which the RadToolbar control causes validation.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ImagesDir">
+            <summary>
+                Specifies an override location for the toolbar button images. By default
+                <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see> looks for the image files inside its
+                selected skin images folder. Using this property you can set a new location for the
+                files that is independent of the skins.
+            </summary>
+            <remarks>
+            If this property is left blank the default location for the button images will be
+            inside the skin folder.
+            </remarks>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.UseFadeEffect">
+            <summary>
+            Specifies wether to use a fading mouseover effect for the buttons (IE Only).
+            </summary>
+            <remarks>Only supported on Internet Explorer for windows.</remarks>
+            <value>
+            Default: False
+            </value>
+            <requirements>Microsoft Internet Explorer v5.5 or later.</requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.DisplayEnds">
+            <summary>
+            Specifies wether to display skin specific ends for the toolbar.
+            </summary>
+            <remarks>
+            Useful when integrating RadToolBar with RadDock
+            </remarks>
+            <value>Boolean.</value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.SkinsPath">
+            <summary>
+            Gets or sets the relative path of the folder containing the skins.
+            </summary>
+            <example>
+            If the skin folder is located in the project root and is named "Skins" the
+            SkinsPath property should be set to: "~/Skins". Then you can create subfolders for
+            individual skins e.g. Skins/Gold, Skins/Classic etc.
+            </example>
+            <value>
+            A string specifying the relative path to the folder which contains
+            RadToolBar skins. The default value is
+            "~/RadControls/toolbar/Skins".
+            </value>
+            <remarks>
+            RadToolBar ships with a set of predefined skins which are ready
+            to use. They are located in RadControls/toolbar/Skins.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ContentFile">
+            <summary>
+            The location (path + filename) of the XML content file used to populate the menu.
+            </summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+            <example>
+                This is an example content file.
+                <code title="[New Example]">
+            &lt;?xml version="1.0" encoding="utf-8" ?&gt; 
+            &lt;radToolbar&gt;
+                &lt;Button ToolTip="New Document" CommandName="new" AutoPostBack="False" ButtonImage="new.gif" DisplayType="ImageOnly"  /&gt;
+                &lt;Button ToolTip="Open Document" CommandName="Open" AutoPostBack="False" ButtonImage="Open.gif" DisplayType="ImageOnly" /&gt;
+                &lt;Button ToolTip="Save Document" CommandName="Save" AutoPostBack="False" ButtonImage="Save.gif" DisplayType="ImageOnly" /&gt;
+                &lt;Separator /&gt;
+                &lt;ToggleButton CommandName="toggle" AutoPostBack="False" DisplayType="TextOnly" Enabled="True" Width="90px" Toggled="True" ButtonText="toggle button" Visible="True" /&gt;
+            &lt;/radToolbar&gt;
+                </code>
+            </example>
+            <remarks>
+            	<para>RadToolbarButton class is serilized to a &lt;Button&gt; element.</para>
+            	<para>RadToolbarToggleButton is serialized to a &lt;ToggleButton&gt;
+                element.</para>
+            	<para>Separators are serialized as &lt;Separator&gt;.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.DataSource">
+            <summary><para>Specifies the data source to be used during data binding.</para></summary>
+            <example>
+                Here is an example code used to create a datasource and bind a
+                <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see> instance to it. 
+                <code lang="CS" title="[New Example]">
+            DataTable dt = new DataTable();        
+            dt.Columns.Add("CommandName");
+            dt.Columns.Add("ToolTip");
+            dt.Columns.Add("ButtonImage");
+             
+            DataRow dr = dt.NewRow();
+            dr["CommandName"] = "new";
+            dr["ToolTip"] = "New Document";
+            dr["ButtonImage"] = "new.gif";
+            dt.Rows.Add(dr);
+             
+            DataRow dr1 = dt.NewRow();
+            dr1["CommandName"] = "open";
+            dr1["ToolTip"] = "Open Document";
+            dr1["ButtonImage"] = "open.gif";
+            dt.Rows.Add(dr1);
+             
+            DataRow dr2 = dt.NewRow();
+            dr2["CommandName"] = "save";
+            dr2["ToolTip"] = "Save Document";
+            dr2["ButtonImage"] = "save.gif";
+            dt.Rows.Add(dr2);
+             
+            toolbar1.DataSource = dt;
+            toolbar1.DataBind();
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim dt As New DataTable
+            dt.Columns.Add("CommandName")
+            dt.Columns.Add("ToolTip")
+            dt.Columns.Add("ButtonImage")
+             
+            Dim dr As DataRow = dt.NewRow()
+            dr("CommandName") = "new"
+            dr("ToolTip") = "New Document"
+            dr("ButtonImage") = "new.gif"
+            dt.Rows.Add(dr)
+             
+            Dim dr1 As DataRow = dt.NewRow()
+            dr1("CommandName") = "open"
+            dr1("ToolTip") = "Open Document"
+            dr1("ButtonImage") = "open.gif"
+            dt.Rows.Add(dr1)
+             
+            Dim dr2 As DataRow = dt.NewRow()
+            dr2("CommandName") = "save"
+            dr2("ToolTip") = "Save Document"
+            dr2("ButtonImage") = "save.gif"
+            dt.Rows.Add(dr2)
+             
+            toolbar1.DataSource = dt
+            toolbar1.DataBind()
+                </code>
+            </example>
+            <remarks>
+            	<para>
+                    To bind a data source to a <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see>, you must
+                    first use the control's DataBind method to ensure data binding. The data source
+                    can either be of type IEnumerable, or it can be of type IListSource. If the
+                    data source is of type IListSource, you can use the
+                    <see cref="P:Telerik.WebControls.RadToolbar.DataMember">DataMember</see> field to specify which member to
+                    extract.
+                </para>
+            	<para>
+            		<see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see> fully supports binding to collections,
+                    tables and datasets. Simply make sure you populate your collection from your
+                    data-source and set the DataSource property of
+                    <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see> to the instance of the the collection
+                    and call the DataBind() method. In addition, you can specify the
+                    <see cref="P:Telerik.WebControls.RadToolbar.ButtonTextField">ButtonTextFiled</see>,
+                    <see cref="P:Telerik.WebControls.RadToolbar.ButtonCommandField">ButtonCommandField</see> or
+                    <see cref="P:Telerik.WebControls.RadToolbar.ButtonImageField">ButtonImageField</see> of the data-source using
+                    the respective <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see> properties.
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.DataMember">
+            <summary>
+            If databinding to a dataset, this field indicates the table to bind data to.
+            </summary>
+            <value>
+            Default: string.Empty
+            </value>
+            <remarks>
+            	<para>This property is only used if the value of the DataSource property is of type
+                IListSource, rather than of type IEnumerable.</para>
+            	<para>To bind a data source to a toolbar, you must first use the control's
+                DataBind method to ensure data binding. The data source can either be of type
+                IEnumerable, or it can be of type IListSource. If the data source is of type
+                IListSource, you can use the <b>DataMember</b> field to specify which member to
+                extract.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ShortcutKey">
+            <summary>
+            Specifies which key to use for shortcut combinations.
+            Keyboard shortcut combination = ShortcutKey+RadToolbarButton.AccessKey
+            </summary>
+            <value>
+            Default: ShortcutKeyButton.Alt (Alt key)
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ButtonTextField">
+            <summary>
+                Instructs <see cref="T:Telerik.WebControls.RadToolbar"/> what datafield to use for the ButtonText
+                property of buttons during databinding.
+            </summary>
+            <remarks>
+            Setting this property will automatically databind the ButtonText property of <see cref="T:Telerik.WebControls.RadToolbar"/>.
+            If you need to bind other properties please, consume the <see cref="E:Telerik.WebControls.RadToolbar.ItemDataBound"/> event.
+            </remarks>
+            <value>Default: string.Empty</value>
+            <seealso cref="P:Telerik.WebControls.RadToolbar.DataSource">DataSource Property</seealso>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ButtonCommandField">
+            <summary>
+                Instructs <see cref="T:Telerik.WebControls.RadToolbar"/> what datafield to use for the ButtonCommand
+                property of buttons during databinding.
+            </summary>
+            <remarks>
+            Setting this property will automatically databind the ButtonCommand property of <see cref="T:Telerik.WebControls.RadToolbar"/>.
+            If you need to bind other properties please, consume the <see cref="E:Telerik.WebControls.RadToolbar.ItemDataBound"/> event.
+            </remarks>
+            <value>string.Empty</value>
+            <seealso cref="P:Telerik.WebControls.RadToolbar.DataSource">DataSource Property</seealso>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ButtonImageField">
+            <summary>
+                Instructs <see cref="T:Telerik.WebControls.RadToolbar"/> what datafield to use for the
+                ButtonImageField property of buttons during databinding.
+            </summary>
+            <remarks>
+            Setting this property will automatically databind the ButtonImageField property of <see cref="T:Telerik.WebControls.RadToolbar"/>.
+            If you need to bind other properties please, consume the <see cref="E:Telerik.WebControls.RadToolbar.ItemDataBound"/> event.
+            </remarks>
+            <value>string.Empty</value>
+            <seealso cref="P:Telerik.WebControls.RadToolbar.DataSource">DataSource Property</seealso>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.AutoPostBack">
+            <summary>
+                Set this property to TRUE if you wish to enable server side events that depend on
+                postacks. Currently the event is <see cref="E:Telerik.WebControls.RadToolbar.OnClick"/>.
+            </summary>
+            <value>
+            Default: False
+            </value>
+            <example>
+                Here you can see how to consume server side events in code-behind.
+                <code lang="CS" title="[New Example]">
+            Private void InitializeComponent()
+            {    
+                toolbar1.OnClick += New Telerik.WebControls.RadToolbar.OnClickDelegate(toolbar1_OnClick);
+            }
+             
+            Private void toolbar1_OnClick(Object sender, Telerik.WebControls.RadToolbarClickEventArgs e)
+            {
+                String text = e.Button.CommandName;
+                
+                If(e.Button Is RadToolbarToggleButton)
+                {
+                    If(((RadToolbarToggleButton)e.Button).Toggled)
+                    {
+                        text += " Toggled ON.";
+                    }
+                    Else
+                    {
+                        text += " Toggled OFF.";
+                    }
+                }
+                Else
+                {
+                    text += " Clicked.";
+                }
+             
+                label1.Text = text;
+            }
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Private Sub toolbar1_OnClick(ByVal sender As Object, ByVal e As Telerik.WebControls.RadToolbarClickEventArgs) Handles toolbar1.OnClick
+                Dim [text] As String = e.Button.CommandName
+             
+                If Typeof e.Button Is RadToolbarToggleButton Then
+                    If CType(e.Button, RadToolbarToggleButton).Toggled Then
+                        [text] += " Toggled ON."
+                    Else
+                        [text] += " Toggled OFF."
+                    End If
+                Else
+                    [text] += " Clicked."
+                End If
+             
+                label1.Text = [text]
+            End Sub 'toolbar1_OnClick
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ButtonHeight">
+            <summary>
+            Specifies the default height of all child buttons. Can be overriden
+            by setting the <see cref="P:Telerik.WebControls.RadToolbarButton.Height"/> property.
+            </summary>
+            <value>
+            Default: 24(px)
+            </value>
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ButtonWidth">
+            <summary>
+            Specifies the default width of all child buttons. Can be overriden
+            by setting the <see cref="P:Telerik.WebControls.RadToolbarButton.Width"/> property.
+            </summary>
+            <value>
+            Default: 24(px)
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.SkinsDir">
+            <summary>
+            Specifies the location of the <see cref="T:Telerik.WebControls.RadToolbar"/> skins directory.
+            Normally you would want to leave this to the default.
+            </summary>
+            <value>
+            Default: ~/RadControls/Toolbar/Skins/
+            </value>
+            <remarks>
+            If you change the default location of the RadControls folder, the value of this
+            property is not updated automatically. You need to change its value manually.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Skin">
+            <summary>
+            Specifies the skin to use with <see cref="T:Telerik.WebControls.RadToolbar"/>.
+            </summary>
+            <value>Default: default</value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Orientation">
+            <summary>
+            Specifies the <see cref="T:Telerik.WebControls.RadToolbar"/> orientation
+            </summary>
+            <value>
+            	<para>Default: RadToolbarOrientation.Horizontal</para>
+            	<para>Other possible values: RadToolbarOrientation.Vertical</para>
+            </value>
+            <seealso cref="T:Telerik.WebControls.RadToolbarOrientation">RadToolbarOrientation Enumeration</seealso>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Items">
+            <summary>Contains a collection of <see cref="T:Telerik.WebControls.RadToolbarItem"/> objects.</summary>
+            <example>
+                This example explains how to bind the toolbar in code-behind. 
+                <code lang="CS" title="[New Example]">
+            RadToolbarButton button_new = new RadToolbarButton();
+            button_new.CommandName = "new";
+            button_new.ButtonImage = "new.gif";
+            button_new.ToolTip = "New Document";
+             
+            RadToolbarButton button_open = new RadToolbarButton();
+            button_open.CommandName = "open";
+            button_open.ButtonImage = "open.gif";
+            button_open.ToolTip = "Open Document";
+             
+            RadToolbarButton button_save = new RadToolbarButton();
+            button_save.CommandName = "save";
+            button_save.ButtonImage = "save.gif";
+            button_save.ToolTip = "Save Document";
+             
+            RadToolbarSeparator separator1 = new RadToolbarSeparator();
+             
+            RadToolbarToggleButton toggle1 = new RadToolbarToggleButton();
+            toggle1.CommandName = "toggle";
+            toggle1.Toggled = true;
+            toggle1.DisplayType = RadToolbarButton.ButtonDisplayType.TextOnly;
+            toggle1.ButtonText = "toggle button";
+            toggle1.Width = Unit.Pixel(90);
+             
+            toolbar1.Items.Add(button_new);
+            toolbar1.Items.Add(button_open);
+            toolbar1.Items.Add(button_save);
+            toolbar1.Items.Add(separator1);
+            toolbar1.Items.Add(toggle1);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim button_new As New RadToolbarButton
+            button_new.CommandName = "new"
+            button_new.ButtonImage = "new.gif"
+            button_new.ToolTip = "New Document"
+             
+            Dim button_open As New RadToolbarButton
+            button_open.CommandName = "open"
+            button_open.ButtonImage = "open.gif"
+            button_open.ToolTip = "Open Document"
+             
+            Dim button_save As New RadToolbarButton
+            button_save.CommandName = "save"
+            button_save.ButtonImage = "save.gif"
+            button_save.ToolTip = "Save Document"
+             
+            Dim separator1 As New RadToolbarSeparator
+             
+            Dim toggle1 As New RadToolbarToggleButton
+            toggle1.CommandName = "toggle"
+            toggle1.Toggled = True
+            toggle1.DisplayType = RadToolbarButton.ButtonDisplayType.TextOnly
+            toggle1.ButtonText = "toggle button"
+            toggle1.Width = Unit.Pixel(90)
+             
+            toolbar1.Items.Add(button_new)
+            toolbar1.Items.Add(button_open)
+            toolbar1.Items.Add(button_save)
+            toolbar1.Items.Add(separator1)
+            toolbar1.Items.Add(toggle1)
+                </code>
+            </example>
+            <remarks>
+            Use the Add() and Insert() methods of the collection to add new items. See the
+            examples for more details.
+            </remarks>
+            <value><see cref="T:Telerik.WebControls.RadToolbarItemCollection">RadToolbarItemCollection Class</see></value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ValidationGroup">
+            <summary>
+             <para><font color="red">Note: This property is new in the .NET Framework version
+                2.0.</font></para>
+             <para>Gets or sets the name of the validation group to which this validation
+                control belongs.</para>
+            </summary>
+            <value>
+            The name of the validation group to which this validation control belongs. The
+            default is an empty string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+                This property works only when <see cref="P:Telerik.WebControls.RadToolbar.CausesValidation">CausesValidation</see>
+                is set to true.
+            </remarks>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.PostBackUrl">
+            <summary>
+             <para>Gets or sets the URL of the page to post to from the current page when a tab
+                from the tabstrip is clicked.</para>
+            </summary>
+            <value>
+            The URL of the Web page to post to from the current page when a tab from the
+            tabstrip control is clicked. The default value is an empty string (""), which causes
+            the page to post back to itself.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Width">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Height">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.BorderColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.BorderStyle">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.BorderWidth">
+            <excludetoc/>
+            <exclude/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.CssClass">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Font">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.BackColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.ForeColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="E:Telerik.WebControls.RadToolbar.OnClick">
+            <summary>This event fires whenever a button is clicked on the client.</summary>
+            <remarks>
+                Note that you need to set the <see cref="P:Telerik.WebControls.RadToolbar.AutoPostBack">AutoPostback</see> property
+                to true.
+            </remarks>
+            <example>
+                Here you can see how to consume server side events in code-behind.
+                <code lang="CS" title="[New Example]">
+            Private void InitializeComponent()
+            {    
+                toolbar1.OnClick += New Telerik.WebControls.RadToolbar.OnClickDelegate(toolbar1_OnClick);
+            }
+             
+            Private void toolbar1_OnClick(Object sender, Telerik.WebControls.RadToolbarClickEventArgs e)
+            {
+                String text = e.Button.CommandName;
+                
+                If(e.Button Is RadToolbarToggleButton)
+                {
+                    If(((RadToolbarToggleButton)e.Button).Toggled)
+                    {
+                        text += " Toggled ON.";
+                    }
+                    Else
+                    {
+                        text += " Toggled OFF.";
+                    }
+                }
+                Else
+                {
+                    text += " Clicked.";
+                }
+             
+                label1.Text = text;
+            }
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Private Sub toolbar1_OnClick(ByVal sender As Object, ByVal e As Telerik.WebControls.RadToolbarClickEventArgs) Handles toolbar1.OnClick
+                Dim [text] As String = e.Button.CommandName
+             
+                If Typeof e.Button Is RadToolbarToggleButton Then
+                    If CType(e.Button, RadToolbarToggleButton).Toggled Then
+                        [text] += " Toggled ON."
+                    Else
+                        [text] += " Toggled OFF."
+                    End If
+                Else
+                    [text] += " Clicked."
+                End If
+             
+                label1.Text = [text]
+            End Sub 'toolbar1_OnClick
+                </code>
+            </example>
+        </member>
+        <member name="E:Telerik.WebControls.RadToolbar.ItemAdded">
+            <summary>
+                Fires whenever a button is added to the <see cref="P:Telerik.WebControls.RadToolbar.Items">Items</see> collection of
+                the toolbar.
+            </summary>
+            <remarks>
+                Note that you need to set the <see cref="P:Telerik.WebControls.RadToolbar.AutoPostBack">AutoPostback</see> property
+                to true.
+            </remarks>
+            <example>
+                Here is an example how to handle the <see cref="E:Telerik.WebControls.RadToolbar.ItemAdded">ItemAdded</see> event.
+                <code lang="CS" title="[New Example]">
+            private void toolbar1_ItemAdded(object sender, Telerik.WebControls.RadToolbarItemAddedEventArgs e)
+            {
+                RadToolbarItem item = e.Item;
+                Response.Write(item.ItemType.ToString());
+            }
+                </code>
+            </example>
+        </member>
+        <member name="E:Telerik.WebControls.RadToolbar.ItemDataBound">
+            <summary>
+            Fires whenever a button is being databound. You can use this event to bind
+            additional properties to the dataitem provided.
+            </summary>
+            <remarks>
+                Note that you need to set the <see cref="P:Telerik.WebControls.RadToolbar.AutoPostBack">AutoPostback</see> property
+                to true.
+            </remarks>
+            <example>
+                Here you can see how to perform custom databinding with
+                <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see>. By default the control will automatically
+                databind the <see cref="P:Telerik.WebControls.RadToolbarButton.ButtonText">ButtonText</see>,
+                <see cref="P:Telerik.WebControls.RadToolbarButton.ButtonImage">ButtonImage</see> and
+                <see cref="P:Telerik.WebControls.RadToolbarButton.CommandName">CommandName</see> properties of
+                <see cref="T:Telerik.WebControls.RadToolbarButton">RadToolbarButton</see> using the
+                <see cref="P:Telerik.WebControls.RadToolbar.ButtonTextField">ButtonTextField</see>,
+                <see cref="P:Telerik.WebControls.RadToolbar.ButtonCommandField">ButtonCommandField</see> and
+                <see cref="P:Telerik.WebControls.RadToolbar.ButtonImageField">ButtonImageField</see> properties of
+                <see cref="T:Telerik.WebControls.RadToolbar">RadToolbar</see>.
+                <code lang="CS" title="[New Example]">
+            private void toolbar1_ItemDataBound(object sender, RadToolbarItemDataBoundEventArgs e)
+            {
+                e.Button.ToolTip = Convert.ToString(DataBinder.GetPropertyValue(e.DataItem, "ToolTip"));
+            }
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Private Sub toolbar1_ItemDataBound(ByVal sender As Object, ByVal e As RadToolbarItemDataBoundEventArgs) Handles toolbar1.ItemDataBound
+                e.Button.ToolTip = Convert.ToString(DataBinder.GetPropertyValue(e.DataItem, "ToolTip"))
+            End Sub 'toolbar1_ItemDataBound
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Description">
+            <summary>
+            Gets or sets a brief phrase that summarizes what a control does, for use in
+            ToolTips and catalogs of <b>WebPart</b> controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Title">
+            <summary>Gets or sets the title of a <b>WebPart</b> control.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.Subtitle">
+            <summary>
+            	<para>Gets a string that is concatenated with the
+                <a href="P_System_Web_UI_WebControls_WebParts_IWebPart_Title.htm">Title</a>
+                property value to form a complete title for a
+                <a href="T_System_Web_UI_WebControls_WebParts_WebPart.htm">WebPart</a>
+                control.</para>
+            </summary>
+            <remarks>
+            	<para>The <b>Subtitle</b> property is used to return a default subtitle string for
+                a <b>WebPart</b> control that is appended to the control's title in the title
+                bar.</para>
+            	<para>If you provide a default value for the <b>Subtitle</b> property in a control
+                that implements the
+                <a href="T_System_Web_UI_WebControls_WebParts_IWebPart.htm">IWebPart</a> interface,
+                the Web Parts control set automatically appends it to the value of the <b>Title</b>
+                property of the control at run time.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.TitleIconImageUrl">
+            <summary>
+            	<para>Gets or sets the URL to an image used to represent a Web Parts control in the
+                control's own title bar.</para>
+            </summary>
+            <remarks>
+            	<para>The <b>TitleIconImageUrl</b> property provides a way to associate an icon
+                with a <a href="T_System_Web_UI_WebControls_WebParts_WebPart.htm">WebPart</a>
+                control. The icon appears in the control's own title bar. For thematic consistency,
+                application developers might want to make this icon similar to the image that
+                represents the control in a catalog of Web Parts controls (the image referenced in
+                the
+                <a href="P_System_Web_UI_WebControls_WebParts_IWebPart_CatalogIconImageUrl.htm">CatalogIconImageUrl</a>
+                property).</para>
+            	<para>As it is implemented in the Web Parts control set, the
+                <b>TitleIconImageUrl</b> property can be personalized by end users to change the
+                image or icon that appears in a control's title bar.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.TitleUrl">
+            <summary>
+            	<para>Gets or sets a URL to supplemental information about a
+                <a href="T_System_Web_UI_WebControls_WebParts_WebPart.htm">WebPart</a>
+                control.</para>
+            </summary>
+            <remarks>
+            	<para>When you assign a URL to the <b>TitleUrl</b> property, the title of the
+                control becomes a link. The purpose of this property is to provide a convenient way
+                for end users to access additional information about a control. The additional
+                information could provide copyright data, contact data, details about the creator
+                of the control, or a summary of the control's purpose.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbar.CatalogIconImageUrl">
+            <summary>
+            	<para>Gets or sets the URL to an image that represents a
+                <a href="T_System_Web_UI_WebControls_WebParts_WebPart.htm">WebPart</a> control in a
+                catalog of controls.</para>
+            </summary>
+            <remarks>
+            	<para>Web Parts applications often provide a catalog (or list) of controls that
+                users can add to a page. The <b>CatalogIconImageUrl</b> property on a control
+                contains the URL to an image that represents the control when it appears in a
+                catalog.</para>
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbar.OnClickDelegate">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbar.OnItemAddedDelegate">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbar.OnItemDataBoundDelegate">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarItem">
+            <summary>An abstract base class for all toolbar items.</summary>
+            <remarks>
+            Use the <see cref="P:Telerik.WebControls.RadToolbarItem.ItemType"/> property to determine the type of the item and make casts as
+            necessary.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItem.#ctor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.ItemType">
+            <summary>Indicates the type of the toolbar item.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.BorderColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.BorderStyle">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.BorderWidth">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.CssClass">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.Font">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.BackColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItem.ForeColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarButton.#ctor">
+            <summary>The default constructor for RadToolbarButton</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.ParentToolbar">
+            <summary>
+            Read only. Returns an instance to the <see cref="T:Telerik.WebControls.RadToolbar"/> holding the button.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.BubbleCommandName">
+            <summary>
+            Specifies a command name to be used for bubbling events. This is used in the CommandEventArgs parameter for the RaiseBubbleEvent.
+            </summary>
+            <remarks>
+            If this value is left unchanged (i.e. string.Empty) the toolbar control will not fire a bubble event when this button is clicked.
+            Also, AutoPostBack property of <see cref="T:Telerik.WebControls.RadToolbar"/> must be set to True.
+            </remarks>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.AccessKey">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.BubbleCommandArgument">
+            <summary>
+            Specifies a command argument to be used for bubbling events. This is used in the CommandEventArgs parameter for the RaiseBubbleEvent.
+            </summary>
+            <remarks>
+            For bubbled events to work, AutoPostBack property of <see cref="T:Telerik.WebControls.RadToolbar"/> must be set to True.
+            </remarks>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.CommandArgument">
+            <summary>
+            Specifies a command argument to be used for bubbling events. This is used in the CommandEventArgs parameter for the RaiseBubbleEvent.
+            </summary>
+            <remarks>
+            For bubbled events to work, AutoPostBack property of <see cref="T:Telerik.WebControls.RadToolbar"/> must be set to True.
+            </remarks>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.DataItem">
+            <summary>
+            	<see cref="P:Telerik.WebControls.RadToolbarItem.ItemType">ItemType Property
+                (Telerik.WebControls.RadToolbarItem)</see><see cref="P:Telerik.WebControls.RadToolbarItem.ItemType">ItemType
+                Property
+                (Telerik.WebControls.RadToolbarItem)</see><see cref="T:Telerik.WebControls.RadToolbarItemType">RadToolbarItemType
+                Enumeration</see>This property is used in databinding. You should not assign values
+                to it.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.DisplayType">
+            <summary>
+            Specifies how the <see cref="T:Telerik.WebControls.RadToolbarButton"/> is rendered.
+            </summary>
+            <value>
+            Default: ButtonDisplayType.ImageOnly
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.ToolTip">
+            <summary>
+            Specifies the tooltip text that is displayed when the user hovers the mouse
+            pointer over the button.
+            </summary>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.CommandName">
+            <summary>
+            Specifies the command name of the button.
+            The button command name is should be an unique one-word string
+            that describes the purpose of the button.
+            </summary>
+            <remarks>
+            A button that does not have its CommandName property set will raise an exception.
+            </remarks>
+            <example>
+            Save, New, Open...
+            </example>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.ButtonText">
+            <summary>
+            Specifies the text to be displayed on the button.
+            </summary>
+            <remarks>
+                Will only be displayed if the <see cref="P:Telerik.WebControls.RadToolbarButton.DisplayType"/>
+                property is set to <see cref="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.TextImage"/> or
+                <see cref="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.TextOnly"/>.
+            </remarks>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.ButtonImage">
+            <summary>
+            Specifies the image to be displayed on the button.
+            </summary>
+            <remarks>
+                Will only be displayed if the <see cref="P:Telerik.WebControls.RadToolbarButton.DisplayType"/>
+                property is set to <see cref="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.TextImage"/> or
+                <see cref="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.ImageOnly"/>.
+            </remarks>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.Hidden">
+            <summary>
+            Gets or sets the visibility of the button.
+            </summary>
+            <value>
+            Default: False
+            </value>
+            <remarks>
+            Hidden buttons will still render to HTML, but will not be visible in the
+            browser.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.Enabled">
+            <summary>
+            Specifies whether the button can respond to user interaction in the browser.
+            </summary>
+            <value>
+            Default: True
+            </value>
+            <remarks>
+            When a button is disabled it will not generate any client-side or server-side
+            events.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.Width">
+             <summary>
+             Specifies the width of the button. Pixels. 
+             </summary>
+             <remarks>
+             If left blank it will be filled in by the default 
+             value specified in <see cref="P:Telerik.WebControls.RadToolbar.ButtonWidth"/> 
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.Height">
+            <summary>
+            Specifies the height of the button. Pixels.
+            </summary>
+            <remarks>
+            If left blank it will be filled in by the default 
+            value specified in <see cref="P:Telerik.WebControls.RadToolbar.ButtonHeight"/>
+            </remarks>
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarButton.ItemType">
+            <summary>Inherited. Gets the type of the ToolbarItem.</summary>
+            <value>
+            	<see cref="T:Telerik.WebControls.RadToolbar">Always returns RadToolbarItemType.Button for this
+                type.</see><see cref="T:Telerik.WebControls.RadToolbar">RadToolbar Class</see>
+            </value>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarButton.ButtonDisplayType">
+            <summary>Specifies how to display the button.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.TextOnly">
+            <summary>Button is displayed as text-only.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.ImageOnly">
+            <summary>Button is displayed as an image.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadToolbarButton.ButtonDisplayType.TextImage">
+            <summary>Button is displayed as a combination of image and text.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarClickEventArgs">
+            <summary>
+            Summary description for ToolbarClickEventArgs.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarClickEventArgs.#ctor(Telerik.WebControls.RadToolbarButton)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarClickEventArgs.Button">
+            <summary>Contains a reference to the button clicked.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarItemType">
+            <summary>An enumeration of different toolbar item types.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarItemAddedEventArgs">
+            <summary>
+            Event arguments for the <see cref="E:Telerik.WebControls.RadToolbar.ItemAdded"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItemAddedEventArgs.#ctor(Telerik.WebControls.RadToolbarItem)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemAddedEventArgs.Item">
+            <summary>
+            Gets a reference to the item being added.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarItemCollection">
+            <summary>
+            A strongly typed collection of RadToolbar items.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItemCollection.Add(System.Object)">
+            <summary>Adds an item to the list.</summary>
+            <example>
+            	<code lang="CS" title="[New Example]" description="Adding items to the toolbar in code-behind">
+            RadToolbarButton button_new = New RadToolbarButton();
+            button_new.CommandName = "new";
+            button_new.ButtonImage = "new.gif";
+            button_new.ToolTip = "New Document";
+             
+            RadToolbarButton button_open = New RadToolbarButton();
+            button_open.CommandName = "open";
+            button_open.ButtonImage = "open.gif";
+            button_open.ToolTip = "Open Document";
+             
+            RadToolbarButton button_save = New RadToolbarButton();
+            button_save.CommandName = "save";
+            button_save.ButtonImage = "save.gif";
+            button_save.ToolTip = "Save Document";
+             
+            RadToolbarSeparator separator1 = New RadToolbarSeparator();
+             
+            RadToolbarToggleButton toggle1 = New RadToolbarToggleButton();
+            toggle1.CommandName = "toggle";
+            toggle1.Toggled = True;
+            toggle1.DisplayType = RadToolbarButton.ButtonDisplayType.TextOnly;
+            toggle1.ButtonText = "toggle button";
+            toggle1.Width = Unit.Pixel(90);
+             
+            toolbar1.Items.Add(button_new);
+            toolbar1.Items.Add(button_open);
+            toolbar1.Items.Add(button_save);
+            toolbar1.Items.Add(separator1);
+            toolbar1.Items.Add(toggle1);
+                </code>
+            	<code lang="VB" title="[New Example]" description="Adding items to the toolbar in code-behind">
+            Dim button_new As New RadToolbarButton
+            button_new.CommandName = "new"
+            button_new.ButtonImage = "new.gif"
+            button_new.ToolTip = "New Document"
+             
+            Dim button_open As New RadToolbarButton
+            button_open.CommandName = "open"
+            button_open.ButtonImage = "open.gif"
+            button_open.ToolTip = "Open Document"
+             
+            Dim button_save As New RadToolbarButton
+            button_save.CommandName = "save"
+            button_save.ButtonImage = "save.gif"
+            button_save.ToolTip = "Save Document"
+             
+            Dim separator1 As New RadToolbarSeparator
+             
+            Dim toggle1 As New RadToolbarToggleButton
+            toggle1.CommandName = "toggle"
+            toggle1.Toggled = True
+            toggle1.DisplayType = RadToolbarButton.ButtonDisplayType.TextOnly
+            toggle1.ButtonText = "toggle button"
+            toggle1.Width = Unit.Pixel(90)
+             
+            toolbar1.Items.Add(button_new)
+            toolbar1.Items.Add(button_open)
+            toolbar1.Items.Add(button_save)
+            toolbar1.Items.Add(separator1)
+            toolbar1.Items.Add(toggle1)
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItemCollection.Clear">
+            <summary><para>Removes all items from the list.</para></summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItemCollection.Insert(System.Int32,System.Object)">
+            <summary>Inserts an item to the <b>List</b> at the specified index</summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItemCollection.GetEnumerator">
+            <summary>Removes all items from the list.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.TemplatedButtons">
+            <summary>
+                Returns a collection of all instances of
+                <see cref="T:Telerik.WebControls.RadToolbarTemplateButton">RadToolbarTemplateButton</see> in the toolbar
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.Buttons">
+            <summary>
+                Returns a collection of all instances of
+                <see cref="T:Telerik.WebControls.RadToolbarButton">RadToolbarButton</see> and <see cref="T:Telerik.WebControls.RadToolbarToggleButton">RadToolbarToggleButton</see> in the toolbar
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.ToggleButtons">
+            <summary>
+                Returns a collection of all instances of
+                <see cref="T:Telerik.WebControls.RadToolbarToggleButton">RadToolbarToggleButton</see> in the toolbar
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.Separators">
+            <summary>
+                Returns a collection of all instances of
+                <see cref="T:Telerik.WebControls.RadToolbarSeparator">RadToolbarSeparator</see> in the toolbar
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.AllItems">
+            <summary>Returns a collection of all items in the toolbar.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.Item(System.Int32)">
+            <summary>
+            Indexer for the collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.IsFixedSize">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.IsReadOnly">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemCollection.Count">
+            <summary>Returns a count of all the items in the toolbar.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarItemDataBoundEventArgs">
+            <summary>
+            Summary description for RadToolbarItemDataBoundEventArgs.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarItemDataBoundEventArgs.#ctor(Telerik.WebControls.RadToolbarButton,System.Object)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemDataBoundEventArgs.DataItem">
+            <summary>This object represents the dataitem currently being databound.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarItemDataBoundEventArgs.Button">
+            <summary>A reference to the button that is being databound.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarSeparator">
+            <summary>
+            Implements separator functionality for <see cref="T:Telerik.WebControls.RadToolbar"/>
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarSeparator.CreateChildControls">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarSeparator.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarSeparator.Render(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarSeparator.ItemType">
+            <summary>Inherited. Gets the type of the ToolbarItem.</summary>
+            <value>Always returns RadToolbarItemType.Separator for this type.</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarTemplateButton">
+            <summary>
+            Summary description for RadToolbarTemplateButton.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarTemplateButton.CreateChildControls">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarTemplateButton.FindControl(System.String)">
+            <summary>
+            Returns a reference to a child control by the specified ID.
+            </summary>
+            <param name="id">The id of the control to find.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarTemplateButton.#ctor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarTemplateButton.ButtonTemplate">
+            <summary>
+                Gets or sets the template for the items in the
+                <see cref="T:Telerik.WebControls.RadToolbarTemplateButton">RadToolbarTemplateButton Class</see> control
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarTemplateButton.ItemType">
+            <summary>Inherited. Gets the type of the ToolbarItem.</summary>
+            <value>Always returns RadToolbarItemType.TemplateButton for this type.</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarTemplateButtonContainer">
+            <summary>
+            Implements the templating functionality for <see cref="T:Telerik.WebControls.RadToolbarTemplateButton"/> class
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarTemplateButtonContainer.#ctor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.RadToolbarToggleButton">
+            <summary>
+            Implements toggle button functionality
+            </summary>
+            <remarks>
+                If you specify a button group through the <see cref="P:Telerik.WebControls.RadToolbarToggleButton.ButtonGroup">ButtonGroup</see>
+                property, <see cref="T:Telerik.WebControls.RadToolbar"/> will make sure there is only one
+                ToggleButton in the toggled state for that group.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarToggleButton.#ctor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarToggleButton.IsToggle">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadToolbarToggleButton.ToggleButtonInitializer(System.Text.StringBuilder)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarToggleButton.Toggled">
+            <summary>
+            Specifies wether the button is in a toggled state.
+            </summary>
+            <value>
+            Default: False
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarToggleButton.ButtonGroup">
+            <summary>
+            Sets or gets the button group associated with the toggle button.
+            </summary>
+            <value>
+            Default: string.Empty
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadToolbarToggleButton.ItemType">
+            <summary>Inherited. Gets the type of the ToolbarItem.</summary>
+            <value>Always returns RadToolbarItemType.ToggleButton for this type.</value>
+        </member>
+    </members>
+</doc>

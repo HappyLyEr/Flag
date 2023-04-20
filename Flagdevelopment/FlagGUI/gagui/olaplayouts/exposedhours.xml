@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<TOLAPGridSerializer>
+  <AxesLayout>
+    <TSerializedLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <RowHierarchies>
+        <string>[Time].[Calendar]</string>
+      </RowHierarchies>
+      <ColumnHierarchies>
+        <string>[Location]</string>
+      </ColumnHierarchies>
+      <PageHierarchies />
+      <Measures>
+        <TSerializedMeasure>
+          <ActiveModes>
+            <string>Value</string>
+          </ActiveModes>
+          <UniqueName>[Measures].[Hours Exposed]</UniqueName>
+          <DefaultFormat>Standard</DefaultFormat>
+        </TSerializedMeasure>
+      </Measures>
+      <OpenendNodes />
+      <OpenendActions />
+    </TSerializedLayout>
+  </AxesLayout>
+  <Hierarchies>
+    <ArrayOfTSerializedHierarchy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <TSerializedHierarchy>
+        <UniqueName>[Crew]</UniqueName>
+      </TSerializedHierarchy>
+      <TSerializedHierarchy>
+        <UniqueName>[Department]</UniqueName>
+      </TSerializedHierarchy>
+      <TSerializedHierarchy>
+        <UniqueName>[Location]</UniqueName>
+        <Levels>
+          <TSerializedLevel>
+            <VisibleMembers>
+              <string>[Location].[All Location].[Address]</string>
+              <string>[Location].[All Location].[Empty]</string>
+              <string>[Location].[All Location].[Vessel]</string>
+            </VisibleMembers>
+          </TSerializedLevel>
+          <TSerializedLevel />
+        </Levels>
+      </TSerializedHierarchy>
+      <TSerializedHierarchy>
+        <UniqueName>[Project]</UniqueName>
+      </TSerializedHierarchy>
+      <TSerializedHierarchy>
+        <UniqueName>[Time].[Calendar]</UniqueName>
+        <Levels>
+          <TSerializedLevel>
+            <VisibleMembers>
+              <string>[Time].[Calendar].[All Time].[2004]</string>
+              <string>[Time].[Calendar].[All Time].[2005]</string>
+              <string>[Time].[Calendar].[All Time].[2006]</string>
+              <string>[Time].[Calendar].[All Time].[2007]</string>
+              <string>[Time].[Calendar].[All Time].[2008]</string>
+            </VisibleMembers>
+          </TSerializedLevel>
+          <TSerializedLevel />
+          <TSerializedLevel />
+          <TSerializedLevel />
+        </Levels>
+      </TSerializedHierarchy>
+      <TSerializedHierarchy>
+        <UniqueName>[Workrea]</UniqueName>
+      </TSerializedHierarchy>
+    </ArrayOfTSerializedHierarchy>
+  </Hierarchies>
+</TOLAPGridSerializer>

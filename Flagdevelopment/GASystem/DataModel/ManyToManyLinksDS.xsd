@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ManyToManyLinksDS" targetNamespace="http://tempuri.org/ManyToManyLinksDS.xsd" xmlns:mstns="http://tempuri.org/ManyToManyLinksDS.xsd" xmlns="http://tempuri.org/ManyToManyLinksDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata071025ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata071025ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.Properties.Settings.GlobalReference.Default.flagdata071025ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GAManyToManyLinksTableAdapter" GeneratorDataComponentClassName="GAManyToManyLinksTableAdapter" Name="GAManyToManyLinks" UserDataComponentName="GAManyToManyLinksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flagdata071025ConnectionString (Settings)" DbObjectName="flagdata071025.dbo.GAManyToManyLinks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT LinkOwnerClass, LinkOwnerClassField, LinkMemberClass, LinkMemberClassField FROM dbo.GAManyToManyLinks</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LinkOwnerClass" DataSetColumn="LinkOwnerClass" />
+              <Mapping SourceColumn="LinkOwnerClassField" DataSetColumn="LinkOwnerClassField" />
+              <Mapping SourceColumn="LinkMemberClass" DataSetColumn="LinkMemberClass" />
+              <Mapping SourceColumn="LinkMemberClassField" DataSetColumn="LinkMemberClassField" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ManyToManyLinksDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ManyToManyLinksDS" msprop:Generator_DataSetName="ManyToManyLinksDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAManyToManyLinks" msprop:Generator_UserTableName="GAManyToManyLinks" msprop:Generator_RowDeletedName="GAManyToManyLinksRowDeleted" msprop:Generator_TableClassName="GAManyToManyLinksDataTable" msprop:Generator_RowChangedName="GAManyToManyLinksRowChanged" msprop:Generator_RowClassName="GAManyToManyLinksRow" msprop:Generator_RowChangingName="GAManyToManyLinksRowChanging" msprop:Generator_RowEvArgName="GAManyToManyLinksRowChangeEvent" msprop:Generator_RowEvHandlerName="GAManyToManyLinksRowChangeEventHandler" msprop:Generator_TablePropName="GAManyToManyLinks" msprop:Generator_TableVarName="tableGAManyToManyLinks" msprop:Generator_RowDeletingName="GAManyToManyLinksRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LinkOwnerClass" msprop:Generator_UserColumnName="LinkOwnerClass" msprop:Generator_ColumnPropNameInRow="LinkOwnerClass" msprop:Generator_ColumnVarNameInTable="columnLinkOwnerClass" msprop:Generator_ColumnPropNameInTable="LinkOwnerClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LinkOwnerClassField" msprop:Generator_UserColumnName="LinkOwnerClassField" msprop:Generator_ColumnPropNameInRow="LinkOwnerClassField" msprop:Generator_ColumnVarNameInTable="columnLinkOwnerClassField" msprop:Generator_ColumnPropNameInTable="LinkOwnerClassFieldColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LinkMemberClass" msprop:Generator_UserColumnName="LinkMemberClass" msprop:Generator_ColumnPropNameInRow="LinkMemberClass" msprop:Generator_ColumnVarNameInTable="columnLinkMemberClass" msprop:Generator_ColumnPropNameInTable="LinkMemberClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LinkMemberClassField" msprop:Generator_UserColumnName="LinkMemberClassField" msprop:Generator_ColumnPropNameInRow="LinkMemberClassField" msprop:Generator_ColumnVarNameInTable="columnLinkMemberClassField" msprop:Generator_ColumnPropNameInTable="LinkMemberClassFieldColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

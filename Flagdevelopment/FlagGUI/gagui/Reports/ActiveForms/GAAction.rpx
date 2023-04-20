@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="4">
+  <Object type="DataDynamics.ActiveReports.ActiveReport3" name="GAAction">
+    <Property name="StyleSheet">
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; </Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 16pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading1</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; </Argument>
+          <Argument type="System.String">Heading2</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 13pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading3</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+    </Property>
+    <Property name="DataMember">GAAction</Property>
+    <Property name="PageSettings">
+      <Property name="PaperWidth">8.27</Property>
+      <Property name="PaperHeight">11.69</Property>
+    </Property>
+    <Property name="Sections">
+      <Reference name="reportHeader1" />
+      <Reference name="detail" />
+      <Reference name="reportFooter1" />
+    </Property>
+    <Property name="DataSource">
+      <Reference name="reportView1" />
+    </Property>
+    <Property name="PrintWidth">7.0625</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Detail" name="detail">
+    <Property name="Controls">
+      <Reference name="label2" />
+      <Reference name="label3" />
+      <Reference name="label4" />
+      <Reference name="label5" />
+      <Reference name="label6" />
+      <Reference name="label8" />
+      <Reference name="label7" />
+      <Reference name="label9" />
+      <Reference name="label10" />
+      <Reference name="txtPriorityListsRowId1" />
+      <Reference name="txtResponsibleRoleListsRowId1" />
+      <Reference name="txtResponsible1" />
+      <Reference name="txtReportDate1" />
+      <Reference name="txtDateEndEstimated1" />
+      <Reference name="txtDateEndActual1" />
+      <Reference name="txtProcedureId1" />
+      <Reference name="txtDescription1" />
+      <Reference name="txtActionReferenceId1" />
+    </Property>
+    <Property name="Name">detail</Property>
+    <Property name="Height">2.15625</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label2">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Action Ref Id:</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL</Binary>
+    </Property>
+    <Property name="Name">label2</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label3">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Priority:</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD4L</Binary>
+    </Property>
+    <Property name="Name">label3</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label4">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Responsible</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAD8L</Binary>
+    </Property>
+    <Property name="Name">label4</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label5">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Responsible Role</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAQD8L</Binary>
+    </Property>
+    <Property name="Name">label5</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label6">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Report Date</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD8L</Binary>
+    </Property>
+    <Property name="Name">label6</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label8">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Procedure</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAwD8L</Binary>
+    </Property>
+    <Property name="Name">label8</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label7">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Date End Estimate</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAAgD8L</Binary>
+    </Property>
+    <Property name="Name">label7</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label9">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Actual End Date</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAQAAAgD8L</Binary>
+    </Property>
+    <Property name="Name">label9</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label10">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOg/AABAPgs=</Binary>
+    </Property>
+    <Property name="Text">Description</Property>
+    <Property name="Font">Arial, 10pt, style=Bold</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAA4D8L</Binary>
+    </Property>
+    <Property name="Name">label10</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtPriorityListsRowId1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAAgD4L</Binary>
+    </Property>
+    <Property name="DataField">PriorityListsRowId</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAI5AAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtPriorityListsRowId1</Property>
+    <Property name="Text">txtPriorityListsRowId1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtResponsibleRoleListsRowId1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAAQD8L</Binary>
+    </Property>
+    <Property name="DataField">ResponsibleRoleListsRowId</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAI5AAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtResponsibleRoleListsRowId1</Property>
+    <Property name="Text">txtResponsibleRoleListsRowId1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtResponsible1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAAAD8L</Binary>
+    </Property>
+    <Property name="DataField">Responsible</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAI5AAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtResponsible1</Property>
+    <Property name="Text">txtResponsible1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtReportDate1">
+    <Property name="OutputFormat">d-MMM-yyyy hh:mm</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAPQAAoD8L</Binary>
+    </Property>
+    <Property name="DataField">ReportDate</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOA/AABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtReportDate1</Property>
+    <Property name="Text">txtReportDate1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtDateEndEstimated1">
+    <Property name="OutputFormat">d-MMM-yyyy</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAEQAAAoD8L</Binary>
+    </Property>
+    <Property name="DataField">DateEndEstimated</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOA/AABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtDateEndEstimated1</Property>
+    <Property name="Text">txtDateEndEstimated1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtDateEndActual1">
+    <Property name="OutputFormat">d-MMM-yyyy hh:mm</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACCQAAAoD8L</Binary>
+    </Property>
+    <Property name="DataField">DateEndActual</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAOA/AABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtDateEndActual1</Property>
+    <Property name="Text">txtDateEndActual1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtProcedureId1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAAwD8L</Binary>
+    </Property>
+    <Property name="DataField">ProcedureId</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAI5AAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtProcedureId1</Property>
+    <Property name="Text">txtProcedureId1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtDescription1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAA4D8L</Binary>
+    </Property>
+    <Property name="DataField">Description</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAI5AAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtDescription1</Property>
+    <Property name="Text">txtDescription1</Property>
+  </Object>
+  <Object type="GASystem.DataModel.View.ReportView" name="reportView1">
+    <Property name="Locale">English (United States)</Property>
+    <Property name="DataSetName">ReportView</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.ReportHeader" name="reportHeader1">
+    <Property name="BackColor">233, 235, 235</Property>
+    <Property name="Controls">
+      <Reference name="label1" />
+      <Reference name="txtSubject1" />
+    </Property>
+    <Property name="Height">0.6979167</Property>
+    <Property name="Name">reportHeader1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label1">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAANxAAACgPgs=</Binary>
+    </Property>
+    <Property name="Text">Action</Property>
+    <Property name="Font">Arial, 15.75pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAPQAAgD0L</Binary>
+    </Property>
+    <Property name="Name">label1</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.ReportFooter" name="reportFooter1">
+    <Property name="Height">0.25</Property>
+    <Property name="Name">reportFooter1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtActionReferenceId1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAQAAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">ActionReferenceId</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAI5AAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtActionReferenceId1</Property>
+    <Property name="Text">txtActionReferenceId1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtSubject1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAPQAA4D4L</Binary>
+    </Property>
+    <Property name="DataField">Subject</Property>
+    <Property name="Font">Arial, 9.75pt, style=Bold</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAANxAAABAPgs=</Binary>
+    </Property>
+    <Property name="Name">txtSubject1</Property>
+    <Property name="Text">txtSubject1</Property>
+  </Object>
+</ActiveReportsLayout>

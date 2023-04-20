@@ -1,0 +1,157 @@
+using System;
+using GASystem.DataModel;
+using GASystem.DataAccess;
+using GASystem.BusinessLayer;
+using GASystem.AppUtils;
+using System.Data;
+
+namespace GASystem.BusinessLayer.Utils
+{
+	/// <summary>
+	/// Summary description for IdGenerator.
+	/// </summary>
+	public class IdGenerator
+	{
+        // Tor 20140412 added RefIdItem webconfigownerid - applied when impossible to create unique refid in any other way, for example when class is top class
+        // Tor 20190306 added RefIdItem autonumber
+        public enum RefIdItems { ownerprefix, shortyear, autonumber, autonumberyear, month2, autonumbermonth, webconfigownerid }
+        		
+		//public static string  REFERENCEIDPREFIX = "ReferenceIdPrefix";
+		
+		private GADataClass _dataClass;
+		private GADataTransaction _transaction;
+		private GADataRecord _owner;
+		private ClassDescription cd;
+		private System.DateTime refIdDate;
+		bool _hasRefIdField;
+		bool _hasRefIdConstructor;
+        // Tor 20180419 cannot have autonumber in refidconstructor when table type is multiline (LOOKUPFIELDMULTIPLE)
+        bool _hasAutonumberInMultilineRefIdConstructor;
+		
+		public IdGenerator(GADataClass DataClass, GADataRecord Owner, GADataTransaction Transaction )
+		{
+			_owner = Owner;
+			_dataClass = DataClass;
+			_transaction = Transaction;
+			cd = ClassDefinition.GetClassDescriptionByGADataClass(_dataClass);
+			_hasRefIdField = cd.NameOfReferenceId != string.Empty;
+			_hasRefIdConstructor = cd.RefIdConstructor != string.Empty;
+
+            // Tor 20180419 cannot have autonumber in refidconstructor when table type is multiline (LOOKUPFIELDMULTIPLE)
+            _hasAutonumberInMultilineRefIdConstructor = _hasRefIdConstructor && cd.isLookupfieldMultipleClass 
+                && cd.RefIdConstructor.Contains("<%autonumber");
+		}
+
+		public void ApplyReferenceId(DataSet RecordSet)
+		{
+			if (!_hasRefIdField || !_hasRefIdConstructor
+                // Tor 20180419 cannot have autonumber in refidconstructor when table type is multiline (LOOKUPFIELDMULTIPLE)
+                || _hasAutonumberInMultilineRefIdConstructor
+                )
+				return;
+
+			if (!RecordSet.Tables[_dataClass.ToString()].Columns.Contains(cd.NameOfReferenceId))
+				throw new GAExceptions.GAException("RefId column not found in datarecord");
+
+			//check for datefield and whether date is null
+            if (!RecordSet.Tables[_dataClass.ToString()].Columns.Contains(cd.DateField) || RecordSet.Tables[_dataClass.ToString()].Rows[0][cd.DateField] == DBNull.Value)
+                refIdDate = System.DateTime.Now;
+            else
+                refIdDate = (System.DateTime)RecordSet.Tables[_dataClass.ToString()].Rows[0][cd.DateField];
+
+                //  REMOVED BY JOF, 
+                //  if no date is defined used todays date
+                //throw new GAExceptions.GAException("Date field not found in datarecord");
+	
+		// JOF 20180418 Added code to create reference id on lookupfieldmultiple tables	
+            string newRefID = generateReferenceId();  //generate id once, use for all columns
+
+            foreach (DataRow row in RecordSet.Tables[_dataClass.ToString()].Rows)
+            {
+                if (row.RowState == DataRowState.Added)
+                    row[cd.NameOfReferenceId] = newRefID;
+            }
+
+            // JOF 20180418 RecordSet.Tables[_dataClass.ToString()].Rows[0][cd.NameOfReferenceId] = generateReferenceId();
+        }
+
+		private string generateReferenceId() 
+		{
+			string refId = cd.RefIdConstructor;
+            string originalRefId = refId;
+        // Tor 20140412 added RefIdItem webconfigownerid - applied when impossible to create unique refid in any other way, for example when class is top class
+            if (refId.IndexOf(RefIdItems.webconfigownerid.ToString()) > -1)
+				refId = refId.Replace("<%" + RefIdItems.webconfigownerid.ToString() + "%>", getWebConfigOwnerId());
+			if (refId.IndexOf(RefIdItems.ownerprefix.ToString()) > -1)
+				refId = refId.Replace("<%" + RefIdItems.ownerprefix.ToString() + "%>", getOwnerPrefix());
+			if (refId.IndexOf(RefIdItems.shortyear.ToString()) > -1)
+				refId = refId.Replace("<%" + RefIdItems.shortyear.ToString() + "%>", refIdDate.Year.ToString().Substring(2));
+			if (refId.IndexOf(RefIdItems.autonumberyear.ToString()) > -1)
+                refId = refId.Replace("<%" + RefIdItems.autonumberyear.ToString() + "%>", getAutoNumber(refId,originalRefId));
+
+            // Tor 20190306 added autonumber
+            if (refId.IndexOf(RefIdItems.autonumber.ToString()) > -1)
+                refId = refId.Replace("<%" + RefIdItems.autonumber.ToString() + "%>", getAutoNumber(refId, originalRefId));
+
+            if (refId.IndexOf(RefIdItems.month2.ToString()) > -1)
+				refId = refId.Replace("<%" + RefIdItems.month2.ToString() + "%>", refIdDate.Month.ToString().PadLeft(2, '0'));
+			if (refId.IndexOf(RefIdItems.autonumbermonth.ToString()) > -1)
+				refId = refId.Replace("<%" + RefIdItems.autonumbermonth.ToString() + "%>", getAutoNumber(refId));
+
+		return refId;
+	}
+
+    
+    private string getWebConfigOwnerId()
+    {
+        // Tor 20160303 This paremeter has to reside in the .config file
+        return System.Configuration.ConfigurationManager.AppSettings.Get("WebConfigOwnerId");
+    }
+	
+    private string getOwnerPrefix() 
+	{
+		if (_owner == null)
+		    return string.Empty;
+
+        ClassDescription cdowner = ClassDefinition.GetClassDescriptionByGADataClass(_owner.DataClass);
+
+        if (cdowner.NameOfReferenceIdPrefix == string.Empty)
+            return string.Empty;
+
+		BusinessClass bc = Utils.RecordsetFactory.Make(_owner.DataClass);
+		DataSet ds = bc.GetByRowId(_owner.RowId, _transaction);
+
+        if (ds.Tables[_owner.DataClass.ToString()].Columns.Contains(cdowner.NameOfReferenceIdPrefix))
+            return ds.Tables[_owner.DataClass.ToString()].Rows[0][cdowner.NameOfReferenceIdPrefix].ToString().Trim();
+				 
+		return string.Empty;
+	}
+
+        private string getAutoNumber(string refIdPattern, string originalRefIdPattern)
+        // Tor 20160707 added parameter originalRefIdPattern for generating referenceId autonumber from existing values when possible
+	{
+		//replace all <%somestring%> with % 
+		//refIdYear = refIdYear.Replace();
+		foreach (string item in Enum.GetNames(typeof(RefIdItems))) 
+			refIdPattern = refIdPattern.Replace("<%" +  item + "%>", "%");
+
+        // Tor 20160707 added original to get number as max number + 1
+        int autonumber = DataAccess.Utils.IdGenerator.GetNextAutoNumber(refIdPattern, _dataClass, cd.NameOfReferenceId, _transaction);
+        // Tor 20160720 revert to originael method int autonumber = DataAccess.Utils.IdGenerator.GetNextAutoNumber(originalRefIdPattern,refIdPattern, _dataClass, cd.NameOfReferenceId, _transaction);
+
+		return autonumber.ToString().PadLeft(3, '0');
+	}
+    private string getAutoNumber(string refIdPattern)
+    // Tor 20160707 added parameter originalRefIdPattern for generating referenceId autonumber from existing values when possible
+    {
+        //replace all <%somestring%> with % 
+        //refIdYear = refIdYear.Replace();
+        foreach (string item in Enum.GetNames(typeof(RefIdItems)))
+            refIdPattern = refIdPattern.Replace("<%" + item + "%>", "%");
+
+        int autonumber = DataAccess.Utils.IdGenerator.GetNextAutoNumber(refIdPattern, _dataClass, cd.NameOfReferenceId, _transaction);
+
+        return autonumber.ToString().PadLeft(3, '0');
+    }
+}
+}

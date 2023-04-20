@@ -1,0 +1,880 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GASystem</name>
+    </assembly>
+    <members>
+        <member name="T:GASystem.AppUtils.CodeTables">
+            <summary>
+            CodeTables. Implements all codetables (lists) used in the application. Use GetList(category)
+            to get an ArrayList of ListItems containing key,value pair for the given listcatgeory
+            </summary>
+        </member>
+        <member name="M:GASystem.AppUtils.CodeTables.GetList(System.String)">
+            <summary>
+            Returns an ArrayList of ListItem elements. This array may be bound directly to a
+            DropDownList or any other bindable control. In the current implementation all lists are
+            stored in a single database table (GALists). Different lists are identifyed with a listcategory 
+            </summary>
+            <param name="listCategory">A value identifying the list you want.</param>
+            <returns>ArrayList of ListItems</returns>
+        </member>
+        <member name="T:GASystem.AppUtils.FieldDefintion">
+            <summary>
+            Summary description for Fielddefintion.
+            </summary>
+        </member>
+        <member name="M:GASystem.AppUtils.FieldDefintion.GetFieldDescription(System.String,System.String)">
+            <summary>
+            Get a FieldDescription object for a given field
+            </summary>
+            <param name="fieldId">Name of field (usually corresponds to adatabasefield)</param>
+            <returns>FieldDescription or null if field is not found</returns>
+        </member>
+        <member name="T:GASystem.AppUtils.GAUsers">
+            <summary>
+            Summary description for GAUsers.
+            </summary>
+        </member>
+        <member name="M:GASystem.AppUtils.GAUsers.GetUserId">
+            <summary>
+            Get userid from GA using the current application/http context
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GASystem.AppUtils.GAUtils">
+            <summary>
+            Summary description for GAUtils.
+            </summary>
+        </member>
+        <member name="M:GASystem.AppUtils.GAUtils.IsNumeric(System.String)">
+            <summary>
+            Use this function to check if a given string may be convertet to a int (using int.Parse())
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GASystem.AppUtils.GUIGenerateUtils">
+            <summary>
+            Summary description for GUIGenerateUtils.
+            </summary>
+        </member>
+        <member name="T:GASystem.AppUtils.GUIQueryString">
+            <summary>
+            Summary description for GUIQueryString.
+            </summary>
+        </member>
+        <member name="T:GASystem.AppUtils.Localization">
+            <summary>
+            Summary description for Localization.
+            </summary>
+        </member>
+        <member name="M:GASystem.AppUtils.Localization.GetGuiElementTextPlural(System.String)">
+            <summary>
+            Retrive the plural form of the given word
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GASystem.AppUtils.Logger">
+            <summary>
+            Summary description for Logger.
+            </summary>
+        </member>
+        <member name="T:GASystem.AppUtils.PageDispatcher">
+            <summary>
+            Summary description for RequestDispatcher.
+            </summary>
+        </member>
+        <member name="M:GASystem.AppUtils.PageDispatcher.GotoDataRecordDetailsPage(System.Web.HttpResponse,GASystem.DataModel.GADataClass,System.Int32,GASystem.DataModel.GADataRecord)">
+            <summary>
+            Redirects the response to a DotNetNuke page depending on the given dataclass. Web.config must contain a mapping of
+            datatypes and DNN tabIDs
+            </summary>
+            <param name="CurrentResponse"></param>
+            <param name="DataClass"></param>
+            <param name="RowId"></param>
+        </member>
+        <member name="M:GASystem.AppUtils.PageDispatcher.GotoDataRecordListPage(System.Web.HttpResponse,GASystem.DataModel.GADataClass,GASystem.DataModel.GADataRecord)">
+            <summary>
+            
+            </summary>
+            <param name="CurrentResponse"></param>
+            <param name="DataClass">The dataclass of the records we are going to list</param>
+            <param name="Owner">The owner of the records we are listing</param>
+        </member>
+        <member name="M:GASystem.AppUtils.PageDispatcher.GotoDataRecordListPage(System.Web.HttpResponse,GASystem.DataModel.GADataClass)">
+            <summary>
+            Redirects the response to a DotNetNuke page depending on the given dataclass. Web.config must contain a mapping of
+            datatypes and DNN tabIDs. Redirected without setting a new GA sub context
+            </summary>
+        </member>
+        <member name="T:GASystem.AppUtils.SessionManagement">
+            <summary>
+            Summary description for SessionManagement.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.SkeltaUtils.SkeltaDesignerContext">
+            <summary>
+            Summary description for SkeltaDesignerContext.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Utils.RecordsetFactory">
+            <summary>
+            Summary description for RecordsetFactory.
+            </summary>
+        </member>
+        <member name="M:GASystem.BusinessLayer.Utils.RecordsetFactory.UpdateDataSet(GASystem.DataModel.GADataClass,System.Data.DataSet)">
+            <summary>
+            Update businessclass with data from dataset. Uses DataClass parameter to choose which 
+            businessclass to call update on
+            </summary>
+            <param name="DataClass">Sets which business class to update</param>
+            <param name="DS">Dataset holding data to update</param>
+            <returns>Updated dataset</returns>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Utils.StoreObject">
+            <summary>
+            Summary description for ObjectStore.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Action">
+            <summary>
+            Summary description for Action.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.BusinessClass">
+            <summary>
+            Abstract superclass for GA business classes that manages GA tables. Contains some default operations for managing the 
+            table data, and some abstract operatoins that must be overided by GA business classses.
+            </summary>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.DeleteRow(System.Int32)">
+            <summary>
+            For the current dataclass delete the row with rowid RowId. The property DataClass sets the GA table from 
+            which this row should be deleted.
+            </summary>
+            <param name="RowId">Rowid of datarow to be deleted</param>
+            <returns></returns>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.Update(System.Data.DataSet,System.String)">
+            <summary>
+            Update business class using data from a dataset. Use a trasaction object to make this update a part of 
+            a trasaction
+            </summary>
+            <param name="ds">DataSet with updated data</param>
+            <param name="transaction">Transaction object</param>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.Update(System.Data.DataSet)">
+            <summary>
+            Update business class using data from a dataset
+            </summary>
+            <param name="ds">DataSet with updated data</param>
+            <returns>Updated dataset</returns>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.GetByRowId(System.Int32)">
+            <summary>
+            Get single row table in a dataset for the current businessclass
+            </summary>
+            <param name="RowId">Rowid for the record to get</param>
+            <returns></returns>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.SaveNew(System.Data.DataSet,GASystem.DataModel.GADataRecord)">
+            <summary>
+            Save new record. Expects row 0 of the table in the dataset related to the current instance of this
+            business class to hold a new record. Validates this record and saves it to the database.
+            </summary>
+            <param name="ds">Dataset holding the record to be saved</param>
+            <param name="Owner">Onwer record for the new record</param>
+            <returns>GADataRecord holding a reference (GAClass and rowid) of the saved record</returns>
+        </member>
+        <member name="M:GASystem.BusinessLayer.BusinessClass.GetNewRecord">
+            <summary>
+            Get a new record for the current business class. 
+            </summary>
+            <returns>Dataset containing a table with the new row</returns>
+        </member>
+        <member name="P:GASystem.BusinessLayer.BusinessClass.DataClass">
+            <summary>
+            GADataClass identifier for the instance of this business class
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Audit">
+            <summary>
+            Summary description for Audit.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Certificate">
+            <summary>
+            Summary description for Certificate.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Company">
+            <summary>
+            Summary description for Company.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Cost">
+            <summary>
+            Summary description for Cost.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Course">
+            <summary>
+            Summary description for Course.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.DailyEmployeeCount">
+            <summary>
+            Summary description for DailyEmployeeCount.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.DamagedEquipment">
+            <summary>
+            Summary description for DamagedEquipment.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.DataClassRelations">
+            <summary>
+            Summary description for DataClassRelations.
+            </summary>
+        </member>
+        <member name="M:GASystem.BusinessLayer.DataClassRelations.GetNextLevelDataClasses(GASystem.DataModel.GADataClass)">
+            <summary>
+            Returns a list of dataclasses defined on next level in dataclass hierarcy. (Defined in databasetable GASuperClassLinks)
+            </summary>
+            <param name="DataClass"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GASystem.BusinessLayer.DataRecordLocator">
+            <summary>
+            Summary description for DataRecordLocator.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Department">
+            <summary>
+            Summary description for Department.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.DNNUsers">
+            <summary>
+            Summary description for DNNUsers.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Document">
+            <summary>
+            Summary description for Document.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Employment">
+            <summary>
+            Summary description for Employment.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.EquipmentDamageReport">
+            <summary>
+            Summary description for EquipmentDamageReport.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.FieldDefinition">
+            <summary>
+            Summary description for FieldDefinition.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.File">
+            <summary>
+            Summary description for File.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.FileFolder">
+            <summary>
+            Summary description for FileFolder.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.GAReport">
+            <summary>
+            Summary description for GAReport.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.HazardIdentification">
+            <summary>
+            Summary description for HazardIdentification.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Help">
+            <summary>
+            Summary description for Help.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.IdGenerator">
+            <summary>
+            Summary description for IdGenerator.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.IncidentReport">
+            <summary>
+            Summary description for IncidentReport.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.InjuredParty">
+            <summary>
+            Summary description for InjuredParty.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Link">
+            <summary>
+            Summary description for Link.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Lists">
+            <summary>
+            Summary description for Lists.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Location">
+            <summary>
+            Summary description for Location.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.MeansOfContact">
+            <summary>
+            Summary description for MeansOfContact.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Meeting">
+            <summary>
+            Summary description for Meeting.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.MeetingPersonList">
+            <summary>
+            Summary description for MeetingPersonList.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.MeetingText">
+            <summary>
+            Summary description for MeetingText.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.NextOfKin">
+            <summary>
+            Summary description for NextOfKin.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Personnel">
+            <summary>
+            Summary description for Personnel.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Procedure">
+            <summary>
+            Summary description for Procedure.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Project">
+            <summary>
+            Summary description for Project.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Report">
+            <summary>
+            Summary description for Report.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.ReportBuilder">
+            <summary>
+            Summary description for ReportBuilder.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Reporter">
+            <summary>
+            Summary description for Reporter.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.ReportInstance">
+            <summary>
+            Summary description for ReportInstance.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.ReportInstanceFilter">
+            <summary>
+            Summary description for ReportInstanceFilter.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Reports">
+            <summary>
+            Summary description for Reports.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Resource">
+            <summary>
+            Summary description for Resource.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.ResourceSpecification">
+            <summary>
+            Summary description for ResourceSpecification.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.SafetyObservation">
+            <summary>
+            Summary description for SafetyObservation.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.SafetyStatistics">
+            <summary>
+            Summary description for SafetyStatistics.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.WorkFlowActivityStatus">
+            <summary>
+            Summary description for SkeltaActivity.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.sms">
+            <summary>
+            Summary description for sms.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Task">
+            <summary>
+            Summary description for Task.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.TaskTemplate">
+            <summary>
+            Summary description for TaskTemplate.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Team">
+            <summary>
+            Summary description for Team.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.TextItem">
+            <summary>
+            Summary description for TextItem.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.TimeAndAttendance">
+            <summary>
+            Summary description for TimeAndAttendance.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.User">
+            <summary>
+            Summary description for User.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.UserPersonnelView">
+            <summary>
+            Summary description for User.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Users">
+            <summary>
+            Summary description for Users.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.ValidationResult">
+            <summary>
+            Summary description for ValidationResult.
+            </summary>
+        </member>
+        <member name="T:GASystem.BusinessLayer.Workflow">
+            <summary>
+            Summary description for Workflow.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.Utils.IdGenerator">
+            <summary>
+            Summary description for IdGenerator.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.Utils.SQLSelect">
+            <summary>
+            Summary description for SQLSelect.
+            </summary>
+        </member>
+        <member name="M:GASystem.DataAccess.Utils.SQLSelect.GenerateSQL(GASystem.DataModel.GADataRecord)">
+            <summary>
+            Genereate SQL for a singel DataRecord
+            </summary>
+            <param name="DataRecord">DataRecord</param>
+            <returns>sql string</returns>
+        </member>
+        <member name="M:GASystem.DataAccess.Utils.SQLSelect.GenerateSQL(GASystem.DataModel.GADataClass,System.Int32,GASystem.DataModel.GADataClass)">
+            <summary>
+            Generate SQL for getting all records of type GADataClass owned by a DataRecord
+            </summary>
+            <param name="MemberDataClass">Record types to get</param>
+            <param name="OwnerRowId">Owner rowid</param>
+            <param name="OwnerDataClass">Owner GADataClass type</param>
+            <returns>sql string</returns>
+        </member>
+        <member name="M:GASystem.DataAccess.Utils.SQLSelect.GenerateSQL(GASystem.DataModel.GADataClass)">
+            <summary>
+            Generate SQL for getting all records of type GADataClass
+            </summary>
+            <param name="MemberDataClass">Record types to get</param>
+            <returns>sql string</returns>
+        </member>
+        <member name="T:GASystem.DataAccess.ActionDb">
+            <summary>
+            Summary description for ActionDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ActionTemplateDb">
+            <summary>
+            Summary description for ActionTemplateDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.AuditDb">
+            <summary>
+            Summary description for AuditDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.CertificateDb">
+            <summary>
+            Summary description for CertificateDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.CompanyDb">
+            <summary>
+            Summary description for CompanyDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.CostDb">
+            <summary>
+            Summary description for CostDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.CourseDb">
+            <summary>
+            Summary description for CourseDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DailyEmployeeCountDb">
+            <summary>
+            Summary description for DailyEmployeeCountDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DamagedEquipmentDb">
+            <summary>
+            Summary description for DamagedEquipmentDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DatasetFactory">
+            <summary>
+            Summary description for DatasetFactory.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DataUtils">
+            <summary>
+            Summary description for DataUtils.
+            </summary>
+        </member>
+        <member name="M:GASystem.DataAccess.DataUtils.convertDataReaderToDataTable(System.Data.IDataReader,System.String)">
+               <summary>
+               Converts a SqlDataReader to a DataTable
+               <param name='reader'>
+            SqlDataReader to convert.</param>
+               <returns>
+            DataTable filled with the contents of the reader.</returns>
+               </summary>
+        </member>
+        <member name="M:GASystem.DataAccess.DataUtils.convertDataReaderToDataSet(System.Data.IDataReader)">
+               <summary>
+               Converts a SqlDataReader to a DataSet
+               <param name='reader'>
+            SqlDataReader to convert.</param>
+               <returns>
+            DataSet filled with the contents of the reader.</returns>
+               </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DepartmentDb">
+            <summary>
+            Summary description for DepartmentDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DNNUsersDb">
+            <summary>
+            Summary description for DNNUsersDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.DocumentDb">
+            <summary>
+            Summary description for DocumentDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.EmploymentDb">
+            <summary>
+            Summary description for EmploymentDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.EquipmentDamageReportDb">
+            <summary>
+            Summary description for EquipmentDamageReportDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.FieldDefinitionDb">
+            <summary>
+            Summary description for FieldDefinitionDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.FileDb">
+            <summary>
+            Summary description for FileDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.FileFolderDb">
+            <summary>
+            Summary description for FileFolderDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.GADataTransaction">
+            <summary>
+            Summary description for GADataTransaction.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.HazardIdentificationDb">
+            <summary>
+            Summary description for HazardIdentificationDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.HelpDb">
+            <summary>
+            Summary description for HelpDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.IncidentReportDb">
+            <summary>
+            Summary description for IncidentReportDb.
+            </summary>
+        </member>
+        <member name="M:GASystem.DataAccess.IncidentReportDb.UpdateIncidentReport(GASystem.DataModel.IncidentReportDS,GASystem.DataAccess.GADataTransaction)">
+            <summary>
+            Write any new/updated incident data to database. Transaction is optional. If this value is null, data is commited directly, if not,
+            caller must do commit or rollback
+            </summary>
+            <param name="IncidentReportSet"></param>
+            <param name="Transaction"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GASystem.DataAccess.InjuredPartyDb">
+            <summary>
+            Summary description for InjuredPartyDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.LinkDb">
+            <summary>
+            Summary description for LinkDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ListsDb">
+            <summary>
+            Summary description for ListsDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.LocationDb">
+            <summary>
+            Summary description for LocationDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.MeansOfContactDb">
+            <summary>
+            Summary description for MeansOfContactDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.MeetingDb">
+            <summary>
+            Summary description for MeetingDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.MeetingPersonListDb">
+            <summary>
+            Summary description for MeetingPersonListDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.MeetingTextDb">
+            <summary>
+            Summary description for MeetingTextDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.NextOfKinDb">
+            <summary>
+            Summary description for NextOfKinDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.PersonnelDb">
+            <summary>
+            Summary description for PersonnelDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ProcedureDb">
+            <summary>
+            Summary description for ProcedureDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ProjectDb">
+            <summary>
+            Summary description for ProjectDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.RecordDb">
+            <summary>
+            Summary description for RecordDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ReportDb">
+            <summary>
+            Summary description for ReportDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ReporterDb">
+            <summary>
+            Summary description for ReporterDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ReportInstanceDb">
+            <summary>
+            Summary description for ReportInstanceDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ReportInstanceFilterDb">
+            <summary>
+            Summary description for ReportInstanceFilterDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ReportsDb">
+            <summary>
+            Summary description for ReportInstaneDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ReportView">
+            <summary>
+            Summary description for ReportView.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ResourceDb">
+            <summary>
+            Summary description for ResourceDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.ResourceSpecificationDb">
+            <summary>
+            Summary description for ResourceSpecificationDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.SafetyObservationDb">
+            <summary>
+            Summary description for SafetyObservationDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.SafetyStatisticsDb">
+            <summary>
+            Summary description for SafetyStatisticsDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.SecurityHelper">
+            <summary>
+            Summary description for SecurityHelper.
+            </summary>
+        </member>
+        <member name="M:GASystem.DataAccess.SecurityHelper.GetUserId">
+            <summary>
+            Returns the userId of the current user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GASystem.DataAccess.SkeltaDb">
+            <summary>
+            Summary description for SkeltaDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.SQLGenerateUtils">
+            <summary>
+            Summary description for SQLGenerateUtils.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.StoreAttributeDb">
+            <summary>
+            Summary description for StoreAttributeDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.StoreObjectDb">
+            <summary>
+            Summary description for StoreObjectDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.SuperClassDb">
+            <summary>
+            Summary description for SuperClassDb.
+            </summary>
+        </member>
+        <member name="M:GASystem.DataAccess.SuperClassDb.UpdateSuperClass(GASystem.DataModel.SuperClassDS)">
+            <summary>
+            This command will take care of both delete, insert and update
+            delete: every row in the dataset that is marked "deleted"
+            insert: every row marked "new"
+            update: every touched row (marked "updated")
+            </summary>
+            <param name="superclassSet"></param>
+        </member>
+        <member name="T:GASystem.DataAccess.TaskDb">
+            <summary>
+            Summary description for TaskDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.TaskTemplateDb">
+            <summary>
+            Summary description for TaskTemplateDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.TeamDb">
+            <summary>
+            Summary description for TeamDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.TextItemDb">
+            <summary>
+            Summary description for TextItemDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.TimeAndAttendanceDb">
+            <summary>
+            Summary description for TimeAndAttendanceDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.UserDb">
+            <summary>
+            Summary description for UserDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.UserPersonnelViewDb">
+            <summary>
+            Summary description for UserDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.UsersDb">
+            <summary>
+            Summary description for TextItemDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataAccess.WorkflowDb">
+            <summary>
+            Summary description for GAWorkflowDb.
+            </summary>
+        </member>
+        <member name="T:GASystem.DataModel.GADataContext">
+            <summary>
+            Summary description for GADataContext.
+            </summary>
+        </member>
+    </members>
+</doc>

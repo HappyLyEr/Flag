@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TOLAPGridSerializer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AxesLayout>
+    <RowHierarchies />
+    <ColumnHierarchies />
+    <PageHierarchies />
+    <Measures />
+    <OpenendNodes />
+    <OpenendActions />
+  </AxesLayout>
+  <Hierarchies>
+    <TSerializedHierarchy>
+      <UniqueName>[Crew]</UniqueName>
+    </TSerializedHierarchy>
+    <TSerializedHierarchy>
+      <UniqueName>[Department]</UniqueName>
+    </TSerializedHierarchy>
+    <TSerializedHierarchy>
+      <UniqueName>[Location]</UniqueName>
+    </TSerializedHierarchy>
+    <TSerializedHierarchy>
+      <UniqueName>[Project]</UniqueName>
+    </TSerializedHierarchy>
+    <TSerializedHierarchy>
+      <UniqueName>[Time].[Calendar]</UniqueName>
+    </TSerializedHierarchy>
+    <TSerializedHierarchy>
+      <UniqueName>[Workrea]</UniqueName>
+    </TSerializedHierarchy>
+  </Hierarchies>
+</TOLAPGridSerializer>

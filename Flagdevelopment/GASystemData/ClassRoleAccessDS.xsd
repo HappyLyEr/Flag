@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClassRoleAccessDS" targetNamespace="http://tempuri.org/ClassRoleAccessDS.xsd" xmlns:mstns="http://tempuri.org/ClassRoleAccessDS.xsd" xmlns="http://tempuri.org/ClassRoleAccessDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString18" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString18 (Settings)" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.ConnectionString18" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClassRoleAccessDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ClassRoleAccessDS" msprop:Generator_DataSetName="ClassRoleAccessDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAClassRoleAccess" msprop:Generator_UserTableName="GAClassRoleAccess" msprop:Generator_RowDeletedName="GAClassRoleAccessRowDeleted" msprop:Generator_TableClassName="GAClassRoleAccessDataTable" msprop:Generator_RowChangedName="GAClassRoleAccessRowChanged" msprop:Generator_RowClassName="GAClassRoleAccessRow" msprop:Generator_RowChangingName="GAClassRoleAccessRowChanging" msprop:Generator_RowEvArgName="GAClassRoleAccessRowChangeEvent" msprop:Generator_RowEvHandlerName="GAClassRoleAccessRowChangeEventHandler" msprop:Generator_TablePropName="GAClassRoleAccess" msprop:Generator_TableVarName="tableGAClassRoleAccess" msprop:Generator_RowDeletingName="GAClassRoleAccessRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClassRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ClassRowId" msprop:Generator_ColumnPropNameInRow="ClassRowId" msprop:Generator_ColumnVarNameInTable="columnClassRowId" msprop:Generator_ColumnPropNameInTable="ClassRowIdColumn" type="xs:int" />
+              <xs:element name="Class" msprop:Generator_UserColumnName="Class" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnVarNameInTable="columnClass" msprop:Generator_ColumnPropNameInTable="ClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReadRoles" msprop:Generator_UserColumnName="ReadRoles" msprop:Generator_ColumnPropNameInRow="ReadRoles" msprop:Generator_ColumnVarNameInTable="columnReadRoles" msprop:Generator_ColumnPropNameInTable="ReadRolesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateRoles" msprop:Generator_UserColumnName="UpdateRoles" msprop:Generator_ColumnPropNameInRow="UpdateRoles" msprop:Generator_ColumnVarNameInTable="columnUpdateRoles" msprop:Generator_ColumnPropNameInTable="UpdateRolesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateRoles" msprop:Generator_UserColumnName="CreateRoles" msprop:Generator_ColumnPropNameInRow="CreateRoles" msprop:Generator_ColumnVarNameInTable="columnCreateRoles" msprop:Generator_ColumnPropNameInTable="CreateRolesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeleteRoles" msprop:Generator_UserColumnName="DeleteRoles" msprop:Generator_ColumnPropNameInRow="DeleteRoles" msprop:Generator_ColumnVarNameInTable="columnDeleteRoles" msprop:Generator_ColumnPropNameInTable="DeleteRolesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateWithinRoles" msprop:Generator_UserColumnName="UpdateWithinRoles" msprop:Generator_ColumnPropNameInRow="UpdateWithinRoles" msprop:Generator_ColumnVarNameInTable="columnUpdateWithinRoles" msprop:Generator_ColumnPropNameInTable="UpdateWithinRolesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GAClassRoleAccess" />
+      <xs:field xpath="mstns:ClassRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

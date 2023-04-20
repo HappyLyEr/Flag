@@ -1,0 +1,244 @@
+using System;
+using GASystem.DataModel;
+using GASystem.BusinessLayer;
+using openwfe.workitem;
+
+ 
+namespace GAWorkflow
+{
+	/// <summary>
+	/// Summary description for OWFEWorkFlowEngine.
+	/// </summary>
+    /// 
+	public class OWFEWorkFlowEngine
+	{
+		public enum WorkflowRunStatus {StartPending, Started, Finished, Failed};
+
+		public OWFEWorkFlowEngine()
+		{
+			
+		}
+
+		public static void SetStartPending(string UserId, int ActionId) 
+		{
+			ActionDS ds = Action.GetActionByActionRowId(ActionId);
+			if (ds.GAAction.Rows.Count == 0)
+				throw(new Exception("Action not found"));
+			ds.GAAction[0].WorkflowId = WorkflowRunStatus.StartPending + ":" + UserId; 
+			try 
+			{	
+				ds.GAAction[0].IntFree1 = GASystem.BusinessLayer.User.GetPersonnelIdByLogonId(UserId);
+			} 
+			catch (Exception ex) 
+			{
+				//TODO log exception not valid user
+			}
+			Action.UpdateAction(ds);
+		}
+
+        // Tor 20181118 return number of workflows started
+        //public static void startPendingWorkflows() 
+		public static int startPendingWorkflows() 
+		{
+			ActionDS ads = Action.GetActionForWorkFlowStartPending();
+            int foundStartPending = ads.Tables[0].Rows.Count;
+			foreach(ActionDS.GAActionRow row in ads.GAAction) 
+			{
+				try 
+				{
+                    GADataRecord owner = DataClassRelations.GetOwner(new GADataRecord(row.ActionRowId,GADataClass.GAAction ));
+                     
+                    if (row.WorkflowId.IndexOf(WorkflowRunStatus.StartPending.ToString()) > -1 )
+                    // Tor 20130523 /Jan Ove : check that action owner record exists
+                    // Tor 20130523 - removed because only GAAction records with owner are returned && GASystem.BusinessLayer.Utils.RecordSetUtils.DoesRecordExist(owner))
+                    {
+						string actionInitiator = row.WorkflowId.Replace(WorkflowRunStatus.StartPending.ToString() + ":", string.Empty);
+						StartWorkFlow(actionInitiator, row.ActionRowId);
+						System.Console.WriteLine("Started workflow with procedure id: " + row.ProcedureRowId );
+					}
+				} 
+				catch (Exception ex)
+				{
+					//todo logit
+					System.Console.WriteLine("Error starting workflow: " + ex.Message );
+				}
+			}
+            return foundStartPending;
+		}
+			
+
+		/// <summary>
+		/// Start workflow. Gets workflow definition to use from GAAction
+		/// </summary>
+		/// <param name="UserId"></param>
+		/// <param name="ActionId"></param>
+		/// <returns></returns>
+		
+		public static string StartWorkFlow(string UserId, int ActionId) 
+		{
+			
+			//TODO change to support new model using procedure directly
+			//0. get action
+			int UserRowId = GASystem.BusinessLayer.User.GetUserIdByLogonId(UserId);  //todo add this to launchitem
+			ActionDS ds = Action.GetActionByActionRowId(ActionId);
+			if (ds.GAAction.Rows.Count == 0)
+				throw(new Exception("Action not found"));
+
+			//1. get procedure linked to action
+			if (ds.GAAction[0].IsProcedureRowIdNull())
+				throw(new Exception("No procedure linked to Action"));
+			ProcedureDS pds = Procedure.GetProcedureByProcedureRowId(ds.GAAction[0].ProcedureRowId);
+			if (pds.GAProcedure.Rows.Count == 0 )
+				throw(new Exception("No procedure linked to Action"));
+
+			//2. get workflow name from procedure
+			if (pds.GAProcedure[0].IsWorkflownameNull() || pds.GAProcedure[0].Workflowname == string.Empty)
+				throw(new Exception("The procedure from this action does not have a workflow"));
+			string workFlowName = pds.GAProcedure[0].Workflowname;
+
+			//2.5 get default participant  //TODO refactor into a seperate metod or class
+		
+			string gaParticipantUser = string.Empty;
+			if (!ds.GAAction[0].IsResponsibleNull()) 
+				gaParticipantUser = GASystem.BusinessLayer.Workitem.createUserIdentifier(ds.GAAction[0].Responsible);
+
+			if (!ds.GAAction[0].IsResponsibleRoleListsRowIdNull()) 
+			{
+				if (gaParticipantUser != string.Empty)
+					gaParticipantUser += ", ";
+				gaParticipantUser += GASystem.BusinessLayer.Workitem.createRoleIdentifier(ds.GAAction[0].ResponsibleRoleListsRowId);
+			}
+
+			if (gaParticipantUser == string.Empty)
+				gaParticipantUser = OWFEDefaultRole;  //responisble not set on action get default from config.
+			
+
+			//3. start workflow
+			
+
+
+
+			string wfid = string.Empty;
+			
+			
+			//int UserRowId = GASystem.BusinessLayer.User.GetUserIdByLogonId(UserId);  //todo add this to launchitem
+			//ActionDS ds = Action.GetActionByActionRowId(ActionId);
+			
+
+//
+//			if (ds.GAAction[0].IsWorkflownameNull()) 
+//			{
+//				//TODO replace this with a ga exception
+//				throw(new Exception("Action has no workflow"));
+//			} 
+//			else
+//			{
+				try 
+				{
+					//connect to worklist store
+				
+					openwfe.rest.worklist.WorkSession ws = new openwfe.rest.worklist.WorkSession(WorkSessionServerAddress, WorkSessionServerPort, OWFEUserName, OWFEPassword); //TODO get values from web config
+					
+					//initilize launchitem (initial workitem)
+					Launchable launchable = new Launchable("mainEngine", workFlowName);
+					Launchitem li = launchable.generateLaunchitem();
+					li.attributes = new StringMapAttribute();
+					li.attributes[new StringAttribute("__gaactionid__")] = new IntegerAttribute(ActionId);
+					li.attributes[new StringAttribute("__subject__")] = new StringAttribute(ds.GAAction[0].Subject);
+					if (!ds.GAAction[0].IsDescriptionNull())
+						li.attributes[new StringAttribute("__notes__")] = new StringAttribute(ds.GAAction[0].Description);
+					li.attributes[new StringAttribute("GAActionInitiator")] = new StringAttribute(GASystem.BusinessLayer.Workitem.createUserIdentifier(UserId));
+					//li.attributes[new StringAttribute("GAActionResponsible")] = new StringAttribute(OWFEDefaultRole); 
+					li.attributes[new StringAttribute("GAActionResponsible")] = new StringAttribute(gaParticipantUser); 
+					li.attributes[new StringAttribute(GASystem.BusinessLayer.Workitem.GAPARTICIPANT)] = new StringAttribute(gaParticipantUser); 
+
+//					//find and set responsible
+//					
+//					bool ResponsibleIsRole = false;
+//					if(!ds.GAAction[0].IsResponsibleRoleListsRowIdNull()) 
+//					{
+//					    ListsDS lds = Lists.GetListsByListsRowId(ds.GAAction[0].ResponsibleRoleListsRowId);
+//						if (lds.GALists.Rows.Count != 0) 
+//						{
+//							li.attributes[new StringAttribute("GAActionResponsible")] = new StringAttribute("garole-" + lds.GALists[0].GAListValue);
+//							ResponsibleIsRole = true;
+//						}
+//								
+//					} else if (!ResponsibleIsRole && !ds.GAAction[0].IsResponsibleNull()) 
+//					{
+//						UserDS uds = User.GetUserByPersonnelRowId(ds.GAAction[0].Responsible);
+//						string responsibleLogonId = "default";
+//						if (uds.GAUser.Rows.Count != 0)
+//							responsibleLogonId = uds.GAUser[0].DNNUserId;
+//
+//						li.attributes[new StringAttribute("GAActionResponsible")] = new StringAttribute("gauser-" + responsibleLogonId);
+//				
+//					}
+
+					//launch flow  //TODO add transaction, new metod of starting??
+					wfid = ws.LaunchFlow(launchable.engineId, li);
+				
+					//update action with workflow id
+					ds.GAAction[0].WorkflowId = WorkflowRunStatus.Started + ":" + wfid; 
+					Action.UpdateAction(ds);
+					
+				} 
+				catch (Exception ex) 
+				{
+                    throw;
+				}
+
+//			}
+			return wfid;
+		}
+
+		public static string WorkSessionServerAddress
+		{
+			get 
+			{
+                //return "localhost"; 
+                // Tor 20160301 Cannot be stored in GALists with GAListValue SYS because the value is different on different sites
+                return System.Configuration.ConfigurationManager.AppSettings.Get("OWFEWorkSessionServerAddress");
+			}	
+		}
+
+		public static int WorkSessionServerPort
+		{
+			get 
+			{
+				//return 5080; 
+                // Tor 20160301	return int.Parse(System.Configuration.ConfigurationManager.AppSettings.Get("OWFEWorkSessionServerPort"));
+                return int.Parse(new GASystem.AppUtils.FlagSysResource().GetResourceString("OWFEWorkSessionServerPort"));
+
+			}	
+		}
+
+		public static string OWFEUserName
+		{
+			get 
+			{
+				//return "ga"; 
+                // Tor 20160301	return System.Configuration.ConfigurationManager.AppSettings.Get("OWFEUserName");
+                return new GASystem.AppUtils.FlagSysResource().GetResourceString("OWFEUserName");
+            }	
+		}
+		public static string OWFEPassword
+		{
+			get 
+			{
+				//return "bob"; 
+                // Tor 20160301	return System.Configuration.ConfigurationManager.AppSettings.Get("OWFEPassword");
+                return new GASystem.AppUtils.FlagSysResource().GetResourceString("OWFEPassword");
+            }	
+		}
+
+		public static string OWFEDefaultRole
+		{
+			get 
+			{
+                // Tor 20160301	return System.Configuration.ConfigurationManager.AppSettings.Get("OWFEDefaultRole");
+                return new GASystem.AppUtils.FlagSysResource().GetResourceString("OWFEDefaultRole");
+			}	
+		}
+	}
+}

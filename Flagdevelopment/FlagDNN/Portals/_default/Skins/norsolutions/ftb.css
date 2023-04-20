@@ -1,0 +1,31 @@
+
+select {
+    
+}
+
+body
+{
+	
+}
+
+table  
+{
+	table-layout:auto;
+	border-collapse: collapse;
+	border : solid 1px #909090;  
+}
+
+td 
+{
+	padding : 0px 10px 0px 2px;
+	margin : 2px 2px 2px 2px;
+	width : 10%;
+	vertical-align: top;
+	border-collapse : collapse;
+	border : solid 1px #909090;  
+}
+
+p
+{ 
+	margin-top: 0px; margin-bottom: 0px; 
+}

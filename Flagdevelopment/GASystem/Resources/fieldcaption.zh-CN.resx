@@ -1,0 +1,3615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessRoleListsRowId" xml:space="preserve">
+    <value>权限角色</value>
+  </data>
+  <data name="AcknowledgedByPersonnelRowId" xml:space="preserve">
+    <value>发起人</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>措施</value>
+  </data>
+  <data name="ActionManOverboard" xml:space="preserve">
+    <value>人员落水</value>
+  </data>
+  <data name="ActionName" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="ActionReference" xml:space="preserve">
+    <value>任务编号</value>
+  </data>
+  <data name="ActionReferenceId" xml:space="preserve">
+    <value>任务编号</value>
+  </data>
+  <data name="ActionStatusListsRowId" xml:space="preserve">
+    <value>任务状态</value>
+  </data>
+  <data name="ActionWorkitemView.BroadcastDataRecord" xml:space="preserve">
+    <value>待办事项负责人</value>
+  </data>
+  <data name="Activity" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="ActivityDescription" xml:space="preserve">
+    <value>活动描述</value>
+  </data>
+  <data name="ActivityListsRowId" xml:space="preserve">
+    <value>当时的生产活动状况：</value>
+  </data>
+  <data name="ActivityObserved" xml:space="preserve">
+    <value>观察卡标题</value>
+  </data>
+  <data name="ActivityPersonId" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="ActivityTask" xml:space="preserve">
+    <value>活动/任务</value>
+  </data>
+  <data name="ActivityTypeListsRowId" xml:space="preserve">
+    <value>产生排放的活动类别</value>
+  </data>
+  <data name="ActualRiskRatingListsRowId" xml:space="preserve">
+    <value>实际风险等级</value>
+  </data>
+  <data name="AddControlMeasure" xml:space="preserve">
+    <value>认可的附加控制措施</value>
+  </data>
+  <data name="AddGroupOfPeople" xml:space="preserve">
+    <value>添加一组人</value>
+  </data>
+  <data name="AdditionalControlMeasures" xml:space="preserve">
+    <value>额外的控制措施</value>
+  </data>
+  <data name="AdditionalKPIs" xml:space="preserve">
+    <value>其它关键绩效指标</value>
+  </data>
+  <data name="AdditionalMeasures" xml:space="preserve">
+    <value>其它措施</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="AE2ACH4 kgs" xml:space="preserve">
+    <value>甲烷（千克）</value>
+  </data>
+  <data name="AE2ACO2Tonnes" xml:space="preserve">
+    <value>二氧化碳（千克）</value>
+  </data>
+  <data name="AE2ACOkgs" xml:space="preserve">
+    <value>一氧化碳（千克）</value>
+  </data>
+  <data name="AE2AGHGEF" xml:space="preserve">
+    <value>GHG EF (总计)</value>
+  </data>
+  <data name="AE2AirHeading" xml:space="preserve">
+    <value>大气排放指标</value>
+  </data>
+  <data name="AE2AirHeadingOff" xml:space="preserve">
+    <value>气体排放统计（单位: Tons of CO2e）</value>
+  </data>
+  <data name="AE2AN2Okgs" xml:space="preserve">
+    <value>一氧化二氮（千克）</value>
+  </data>
+  <data name="AE2ANMVOCkgs" xml:space="preserve">
+    <value>非甲烷挥发性有机物（千克）</value>
+  </data>
+  <data name="AE2ANoxTonnes" xml:space="preserve">
+    <value>氮氧化物（千克）</value>
+  </data>
+  <data name="AE2APM10kgs" xml:space="preserve">
+    <value>PM10可吸入颗粒物（千克）</value>
+  </data>
+  <data name="AE2ASox kgs" xml:space="preserve">
+    <value>硫氧化物（千克）</value>
+  </data>
+  <data name="AffectedParties" xml:space="preserve">
+    <value>受影响方</value>
+  </data>
+  <data name="AgeListsRowId" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="Agenda" xml:space="preserve">
+    <value>议程/信息</value>
+  </data>
+  <data name="AirgunActivityAnimalsFirstDetectedListsRowId" xml:space="preserve">
+    <value>第一次有效观察时气枪状态</value>
+  </data>
+  <data name="AirgunActivityAnimalsLastDetectedListsRowId" xml:space="preserve">
+    <value>最后一次有效观察时气枪状态</value>
+  </data>
+  <data name="AmountOfPenalty" xml:space="preserve">
+    <value>罚金（美元）</value>
+  </data>
+  <data name="AnalysisName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="AnalysusComment" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="AnimalDirectionListsRowId" xml:space="preserve">
+    <value>海洋动物行动方向（罗盘方位）</value>
+  </data>
+  <data name="AnimalDirectionOfTravelRTSListsRowId" xml:space="preserve">
+    <value>动物移动方向（相对于船舶）</value>
+  </data>
+  <data name="AnimalTypeListsRowId" xml:space="preserve">
+    <value>动物类型</value>
+  </data>
+  <data name="ApplyAdditionalAccessControl" xml:space="preserve">
+    <value>应用附加权限</value>
+  </data>
+  <data name="ApprovalForChangeReportCloseOutById" xml:space="preserve">
+    <value>变更表格关闭人</value>
+  </data>
+  <data name="ApprovalResponsibleRoleListsRowId" xml:space="preserve">
+    <value>审批负责人岗位</value>
+  </data>
+  <data name="ApprovalRevieweDate" xml:space="preserve">
+    <value>甲方批准日期</value>
+  </data>
+  <data name="ApprovalReviewedById" xml:space="preserve">
+    <value>由甲方批准</value>
+  </data>
+  <data name="ApprovalStatusListsRowId" xml:space="preserve">
+    <value>审批状态</value>
+  </data>
+  <data name="ApprovedByClient" xml:space="preserve">
+    <value>甲方代表批准人</value>
+  </data>
+  <data name="ApprovedByClientDate" xml:space="preserve">
+    <value>批准日期</value>
+  </data>
+  <data name="ApprovedById" xml:space="preserve">
+    <value>批准人</value>
+  </data>
+  <data name="ApprovedByJobTitle" xml:space="preserve">
+    <value>批准人岗位</value>
+  </data>
+  <data name="ApprovedByOnshoreManagement" xml:space="preserve">
+    <value>由机关管理层批准</value>
+  </data>
+  <data name="ApprovedDate" xml:space="preserve">
+    <value>批准日期</value>
+  </data>
+  <data name="ApprovedScope" xml:space="preserve">
+    <value>已批准的商品或者服务内容</value>
+  </data>
+  <data name="ArchiveCheckbox" xml:space="preserve">
+    <value>归档</value>
+  </data>
+  <data name="AreaAuthorityRowId" xml:space="preserve">
+    <value>属地主管</value>
+  </data>
+  <data name="AreaOfOpportunityGAListDescription" xml:space="preserve">
+    <value>建议所属范畴</value>
+  </data>
+  <data name="AreaOfOpportunityListRowId" xml:space="preserve">
+    <value>改进方向</value>
+  </data>
+  <data name="Aspects" xml:space="preserve">
+    <value>环境因素</value>
+  </data>
+  <data name="AspectTypeListsRowId" xml:space="preserve">
+    <value>环境因素类型</value>
+  </data>
+  <data name="AssessedById" xml:space="preserve">
+    <value>评估人</value>
+  </data>
+  <data name="AssessmentPostcontrolMitigation" xml:space="preserve">
+    <value>控制、缓解措施后的评估</value>
+  </data>
+  <data name="AssessmentPrecontrolMitigation" xml:space="preserve">
+    <value>控制、缓解措施前的评估</value>
+  </data>
+  <data name="AssetsCheckbox" xml:space="preserve">
+    <value>资产</value>
+  </data>
+  <data name="AssignedRoleListsRowId" xml:space="preserve">
+    <value>指派到</value>
+  </data>
+  <data name="AssignedTo" xml:space="preserve">
+    <value>指派到</value>
+  </data>
+  <data name="AssignedToPeronnelRowId" xml:space="preserve">
+    <value>指派到</value>
+  </data>
+  <data name="AssignedToPersonnelRowId" xml:space="preserve">
+    <value>指派给人员</value>
+  </data>
+  <data name="AssignedToRoleListsRowId" xml:space="preserve">
+    <value>指派给岗位</value>
+  </data>
+  <data name="AssistanceRequired" xml:space="preserve">
+    <value>所需协助</value>
+  </data>
+  <data name="Attachment" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="AuditCategoryListsRowId" xml:space="preserve">
+    <value>内部/外部</value>
+  </data>
+  <data name="AuditClassListsRowId" xml:space="preserve">
+    <value>合规类型</value>
+  </data>
+  <data name="AuditDetailedComment" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Auditor" xml:space="preserve">
+    <value>内审员</value>
+  </data>
+  <data name="AuditParticipantPersonnelRowId" xml:space="preserve">
+    <value>审计参加人员</value>
+  </data>
+  <data name="AuditReferenceId" xml:space="preserve">
+    <value>审计编号</value>
+  </data>
+  <data name="AuditStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="AutoWorkflowStartPriorToNextRevisionListsRowId" xml:space="preserve">
+    <value>较下次修订日期提前多久发起工作流</value>
+  </data>
+  <data name="BankAccount" xml:space="preserve">
+    <value>银行账户</value>
+  </data>
+  <data name="BasicRequirements" xml:space="preserve">
+    <value>基础证件</value>
+  </data>
+  <data name="BasisofContract" xml:space="preserve">
+    <value>签约依据</value>
+  </data>
+  <data name="BatteryEwastekgs" xml:space="preserve">
+    <value>电池/电子废物（千克）</value>
+  </data>
+  <data name="BGPEntity" xml:space="preserve">
+    <value>我方签约单位</value>
+  </data>
+  <data name="BGPOContact" xml:space="preserve">
+    <value>物探处联系人</value>
+  </data>
+  <data name="BGPOContactEmail" xml:space="preserve">
+    <value>物探处联系人邮件地址</value>
+  </data>
+  <data name="BGPOControlMeasures" xml:space="preserve">
+    <value>海洋物探处控制措施</value>
+  </data>
+  <data name="BGPOPersonHeading" xml:space="preserve">
+    <value>物探处人员信息</value>
+  </data>
+  <data name="BidAnalysis" xml:space="preserve">
+    <value>投标分析</value>
+  </data>
+  <data name="BidNo" xml:space="preserve">
+    <value>标书号</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>区块</value>
+  </data>
+  <data name="BloodType" xml:space="preserve">
+    <value>血型</value>
+  </data>
+  <data name="BRRiskRatingListsRowId" xml:space="preserve">
+    <value>风险等级</value>
+  </data>
+  <data name="BursinessRiskStatus" xml:space="preserve">
+    <value>开启/关闭</value>
+  </data>
+  <data name="BusinessAddress" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="BusinessOpportunity" xml:space="preserve">
+    <value>商机</value>
+  </data>
+  <data name="BusinessRiskContextListsRowId" xml:space="preserve">
+    <value>环境</value>
+  </data>
+  <data name="BusinessRiskDocumentURL" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="CallSign" xml:space="preserve">
+    <value>船舶呼号（如有）</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>资金流向</value>
+  </data>
+  <data name="CaptainIsInformed" xml:space="preserve">
+    <value>已通知船长</value>
+  </data>
+  <data name="CaptainRowId" xml:space="preserve">
+    <value>船长</value>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="CategoryLevelListsRowId" xml:space="preserve">
+    <value>分类等级</value>
+  </data>
+  <data name="CategoryListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Cause" xml:space="preserve">
+    <value>原因</value>
+  </data>
+  <data name="CauseCategoryListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Causes" xml:space="preserve">
+    <value>原因</value>
+  </data>
+  <data name="Certificate" xml:space="preserve">
+    <value>证书</value>
+  </data>
+  <data name="CertificateCategory" xml:space="preserve">
+    <value>证书类别</value>
+  </data>
+  <data name="CertificateId" xml:space="preserve">
+    <value>证书编号</value>
+  </data>
+  <data name="CertificateType" xml:space="preserve">
+    <value>证书类型</value>
+  </data>
+  <data name="CetaceansCount" xml:space="preserve">
+    <value>鲸类</value>
+  </data>
+  <data name="ChangeCommunicatedById" xml:space="preserve">
+    <value>负责通知相关方的人员</value>
+  </data>
+  <data name="ChangedBy" xml:space="preserve">
+    <value>变更执行人</value>
+  </data>
+  <data name="ChangedByPersonnelRowId" xml:space="preserve">
+    <value>修改人</value>
+  </data>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>变更日志</value>
+  </data>
+  <data name="ChemicalsM3" xml:space="preserve">
+    <value>化学品（立方米）</value>
+  </data>
+  <data name="ClassificationListsRowId" xml:space="preserve">
+    <value>事件分类</value>
+  </data>
+  <data name="ClassLevel" xml:space="preserve">
+    <value>目前提供</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>甲方</value>
+  </data>
+  <data name="ClientContactNameAndPosition" xml:space="preserve">
+    <value>甲方联系人姓名和职位</value>
+  </data>
+  <data name="ClientIsInformed" xml:space="preserve">
+    <value>已通知甲方</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>客户名称</value>
+  </data>
+  <data name="ClientPersonHeading" xml:space="preserve">
+    <value>甲方人员信息</value>
+  </data>
+  <data name="ClientPersonnelCount" xml:space="preserve">
+    <value>甲方人员</value>
+  </data>
+  <data name="ClientReferenceId" xml:space="preserve">
+    <value>客户编号</value>
+  </data>
+  <data name="ClientRowId" xml:space="preserve">
+    <value>甲方公司名称</value>
+  </data>
+  <data name="ClosedDateTime" xml:space="preserve">
+    <value>关闭日期和时间</value>
+  </data>
+  <data name="CloseOutDate" xml:space="preserve">
+    <value>关闭日期</value>
+  </data>
+  <data name="ClosestDistanceM" xml:space="preserve">
+    <value>最近距离</value>
+  </data>
+  <data name="CMVbyJobTitleListsRowId" xml:space="preserve">
+    <value>控制措施验证人岗位</value>
+  </data>
+  <data name="CNPCReg" xml:space="preserve">
+    <value>集团备案号</value>
+  </data>
+  <data name="COCExp" xml:space="preserve">
+    <value>适任证书有效期</value>
+  </data>
+  <data name="CodeSortSequence" xml:space="preserve">
+    <value>下拉菜单中的顺序</value>
+  </data>
+  <data name="Commendation" xml:space="preserve">
+    <value>表扬</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>群组</value>
+  </data>
+  <data name="CompanyId" xml:space="preserve">
+    <value>公司编号</value>
+  </data>
+  <data name="CompanyOrganizationName" xml:space="preserve">
+    <value>公司/组织名称</value>
+  </data>
+  <data name="CompanyRowId" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="CompanyRowIdName" xml:space="preserve">
+    <value>隶属公司</value>
+  </data>
+  <data name="ComplaintContactAllowed" xml:space="preserve">
+    <value>是否需要针对此次抱怨内容进行沟通</value>
+  </data>
+  <data name="ComplaintDetails" xml:space="preserve">
+    <value>客户抱怨详细信息</value>
+  </data>
+  <data name="ComplaintTakenDate" xml:space="preserve">
+    <value>客户抱怨记录日期</value>
+  </data>
+  <data name="CompletionDate" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+  <data name="CompletionPercentageListsRowId" xml:space="preserve">
+    <value>完成比例</value>
+  </data>
+  <data name="ComplianceListsRowId" xml:space="preserve">
+    <value>合规定级</value>
+  </data>
+  <data name="ComplianceTypeListsRowId" xml:space="preserve">
+    <value>合规类型</value>
+  </data>
+  <data name="ComType" xml:space="preserve">
+    <value>甲方公司类型</value>
+  </data>
+  <data name="Conclusion" xml:space="preserve">
+    <value>结论</value>
+  </data>
+  <data name="Conductor" xml:space="preserve">
+    <value>主持人</value>
+  </data>
+  <data name="ConductorPersonnelRowId" xml:space="preserve">
+    <value>主持人</value>
+  </data>
+  <data name="Consequence" xml:space="preserve">
+    <value>后果</value>
+  </data>
+  <data name="ContactDepartmentListsRowId" xml:space="preserve">
+    <value>物探处联系人部门</value>
+  </data>
+  <data name="ContactDeviceAddress" xml:space="preserve">
+    <value>电话或者地址</value>
+  </data>
+  <data name="ContactDeviceTypeListsRowId" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="ContactEmail" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="ContactEmailAndPhone" xml:space="preserve">
+    <value>甲方联系人邮件和电话号码</value>
+  </data>
+  <data name="ContactMethodListsId" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="ContactPoint" xml:space="preserve">
+    <value>联系人</value>
+  </data>
+  <data name="ContactPointlabel" xml:space="preserve">
+    <value>联系人</value>
+  </data>
+  <data name="ContactPositionListsRowId" xml:space="preserve">
+    <value>物探处联系人职位</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="ContractCategory" xml:space="preserve">
+    <value>合同类别</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>合同生效日期</value>
+  </data>
+  <data name="ContractDesignatePersonnelRowId" xml:space="preserve">
+    <value>合同持有者</value>
+  </data>
+  <data name="ContractModeListsRowId" xml:space="preserve">
+    <value>合同模式</value>
+  </data>
+  <data name="ContractName" xml:space="preserve">
+    <value>合同名称</value>
+  </data>
+  <data name="ContractNumber" xml:space="preserve">
+    <value>合同编号</value>
+  </data>
+  <data name="Contractor" xml:space="preserve">
+    <value>承包商</value>
+  </data>
+  <data name="ContractOwnerRoleListsRowId" xml:space="preserve">
+    <value>合同所有者</value>
+  </data>
+  <data name="ContractReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ContractRequirements" xml:space="preserve">
+    <value>合同要求</value>
+  </data>
+  <data name="ContractText" xml:space="preserve">
+    <value>合同文本</value>
+  </data>
+  <data name="ContractValue" xml:space="preserve">
+    <value>合同额（万美元）</value>
+  </data>
+  <data name="ContributingFactorOrCause" xml:space="preserve">
+    <value>原因类型</value>
+  </data>
+  <data name="ContributingFactorOrCauseId" xml:space="preserve">
+    <value>间接原因编号</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <data name="ControlCategoryListsRowId" xml:space="preserve">
+    <value>控制类型</value>
+  </data>
+  <data name="ControlMeasures" xml:space="preserve">
+    <value>控制措施</value>
+  </data>
+  <data name="ControlMeasuresEngineering" xml:space="preserve">
+    <value>控制措施-工程技术方面</value>
+  </data>
+  <data name="ControlMeasuresManagerial" xml:space="preserve">
+    <value>控制措施-管理方面</value>
+  </data>
+  <data name="ControlMeasuresProcedural" xml:space="preserve">
+    <value>控制措施-程序方面</value>
+  </data>
+  <data name="ControlMeasureStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ControlMeasuresTrainingCompetence" xml:space="preserve">
+    <value>控制措施-培训和能力</value>
+  </data>
+  <data name="CookingOilL" xml:space="preserve">
+    <value>废食用油（升）</value>
+  </data>
+  <data name="CorporateObjectiveRowId" xml:space="preserve">
+    <value>对应到公司目标</value>
+  </data>
+  <data name="CorrectiveAction" xml:space="preserve">
+    <value>整改措施</value>
+  </data>
+  <data name="CorrectiveActionPersonRowId" xml:space="preserve">
+    <value>纠正措施整改人</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>预估费用（美元）</value>
+  </data>
+  <data name="CostOfChange" xml:space="preserve">
+    <value>变更产生的费用</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="CountryCodeListsRowId" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="CountryName" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="CountryOfRegistrationListsRowId" xml:space="preserve">
+    <value>船籍国</value>
+  </data>
+  <data name="CourseCategory" xml:space="preserve">
+    <value>培训、课程类型</value>
+  </data>
+  <data name="CourseCategoryName" xml:space="preserve">
+    <value>培训、课程类型</value>
+  </data>
+  <data name="CourseLeader" xml:space="preserve">
+    <value>负责人</value>
+  </data>
+  <data name="CourseLeaderGF" xml:space="preserve">
+    <value>负责人姓名</value>
+  </data>
+  <data name="CourseParticipationRowId" xml:space="preserve">
+    <value>主题/名称</value>
+  </data>
+  <data name="CourseReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="CourseTrainingCategory" xml:space="preserve">
+    <value>培训、课程类型</value>
+  </data>
+  <data name="CourseType" xml:space="preserve">
+    <value>课程类型</value>
+  </data>
+  <data name="CoxswainExp" xml:space="preserve">
+    <value>艇长证有效期</value>
+  </data>
+  <data name="CraneOpTestDate" xml:space="preserve">
+    <value>吊车操作证有效期</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>创建人</value>
+  </data>
+  <data name="CreatedByPersonnelRowId" xml:space="preserve">
+    <value>创建人</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>创建日期</value>
+  </data>
+  <data name="CreateRoles" xml:space="preserve">
+    <value>有创建权限的角色</value>
+  </data>
+  <data name="CrewRowId" xml:space="preserve">
+    <value>地震队</value>
+  </data>
+  <data name="CrisisCheckListStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="CrisisDateTime" xml:space="preserve">
+    <value>危机日期和时间</value>
+  </data>
+  <data name="CrisisIssueStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="CurrencyCode" xml:space="preserve">
+    <value>货币</value>
+  </data>
+  <data name="CurrencyCodeListsRowId" xml:space="preserve">
+    <value>币种</value>
+  </data>
+  <data name="CurrencyList" xml:space="preserve">
+    <value>币种</value>
+  </data>
+  <data name="CurrentlyProvides" xml:space="preserve">
+    <value>当前业务内容</value>
+  </data>
+  <data name="CurrentMitigation" xml:space="preserve">
+    <value>当前缓解措施</value>
+  </data>
+  <data name="CurrentOwnerProject" xml:space="preserve">
+    <value>当前所属项目</value>
+  </data>
+  <data name="CustomerFeedbackFormListsRowId" xml:space="preserve">
+    <value>客户满意度调查表类型</value>
+  </data>
+  <data name="DAATests" xml:space="preserve">
+    <value>药物酒精测试</value>
+  </data>
+  <data name="DailyActivityReferenceId" xml:space="preserve">
+    <value>活动记录编号</value>
+  </data>
+  <data name="DailyEmployeeCountReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="DamagedEquipment" xml:space="preserve">
+    <value>损坏的设备</value>
+  </data>
+  <data name="DataAcceptedByResponsible" xml:space="preserve">
+    <value>任务接受日期</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="DateAdded" xml:space="preserve">
+    <value>添加日期</value>
+  </data>
+  <data name="DateAndTimeNextMeeting" xml:space="preserve">
+    <value>下一次会议日期和时间</value>
+  </data>
+  <data name="DateAndTimeOfDamage" xml:space="preserve">
+    <value>日期和时间</value>
+  </data>
+  <data name="DateAndTimeOfIncident" xml:space="preserve">
+    <value>事件发生的日期和时间</value>
+  </data>
+  <data name="DateApprovalForChangeReportCloseOut" xml:space="preserve">
+    <value>关闭日期</value>
+  </data>
+  <data name="DateApproved" xml:space="preserve">
+    <value>批准日期</value>
+  </data>
+  <data name="DateAssessed" xml:space="preserve">
+    <value>评估日期</value>
+  </data>
+  <data name="DateCertificateExpire" xml:space="preserve">
+    <value>证书有效期</value>
+  </data>
+  <data name="DateChanged" xml:space="preserve">
+    <value>变更日期</value>
+  </data>
+  <data name="DateChangeRequirementsCompleted" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+  <data name="DateCreated" xml:space="preserve">
+    <value>上传日期</value>
+  </data>
+  <data name="DateDefined" xml:space="preserve">
+    <value>定义日期</value>
+  </data>
+  <data name="DateEffective" xml:space="preserve">
+    <value>生效日期</value>
+  </data>
+  <data name="DateEnd" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="DateEndActual" xml:space="preserve">
+    <value>实际结束日期</value>
+  </data>
+  <data name="DateEndEstimated" xml:space="preserve">
+    <value>预计结束日期</value>
+  </data>
+  <data name="DateExpire" xml:space="preserve">
+    <value>过期日期</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>起始日期</value>
+  </data>
+  <data name="DateLastAudit" xml:space="preserve">
+    <value>上一次/当前审计日期</value>
+  </data>
+  <data name="DateLastExternalAudit" xml:space="preserve">
+    <value>上一次外部审计日期</value>
+  </data>
+  <data name="DateLastInspection" xml:space="preserve">
+    <value>上一次检查日期</value>
+  </data>
+  <data name="DateLastReview" xml:space="preserve">
+    <value>上一次回顾日期</value>
+  </data>
+  <data name="DateNextAssessment" xml:space="preserve">
+    <value>下一次评估日期</value>
+  </data>
+  <data name="DateNextAudit" xml:space="preserve">
+    <value>下一次审计日期</value>
+  </data>
+  <data name="DateNextExternalAudit" xml:space="preserve">
+    <value>下一次外部审计日期</value>
+  </data>
+  <data name="DateNextInspection" xml:space="preserve">
+    <value>下一次检查日期</value>
+  </data>
+  <data name="DateNextReview" xml:space="preserve">
+    <value>下一次回顾日期</value>
+  </data>
+  <data name="DateOfAudit" xml:space="preserve">
+    <value>审计日期</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>出生日期</value>
+  </data>
+  <data name="DateOfCourse" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="DateOfInspection" xml:space="preserve">
+    <value>观察日期</value>
+  </data>
+  <data name="DateOfMeeting" xml:space="preserve">
+    <value>开始日期和时间</value>
+  </data>
+  <data name="DateOfObservation" xml:space="preserve">
+    <value>观察日期</value>
+  </data>
+  <data name="DateOfProposal" xml:space="preserve">
+    <value>建议日期</value>
+  </data>
+  <data name="DateOfReassessment" xml:space="preserve">
+    <value>再评估日期</value>
+  </data>
+  <data name="DateOfRegistration" xml:space="preserve">
+    <value>登记日期</value>
+  </data>
+  <data name="DateOfRemoval" xml:space="preserve">
+    <value>临时变更移除日期</value>
+  </data>
+  <data name="DateOfRequest" xml:space="preserve">
+    <value>申请日期</value>
+  </data>
+  <data name="DateOfReview" xml:space="preserve">
+    <value>回顾日期</value>
+  </data>
+  <data name="DateOfTest" xml:space="preserve">
+    <value>测试日期</value>
+  </data>
+  <data name="DatePermitAuthorized" xml:space="preserve">
+    <value>许可批准日期</value>
+  </data>
+  <data name="DatePermitStarted" xml:space="preserve">
+    <value>许可生效日期</value>
+  </data>
+  <data name="DateRegulatoryPermitRequirementsCompleted" xml:space="preserve">
+    <value>法规/许可要求完成日期</value>
+  </data>
+  <data name="DateStart" xml:space="preserve">
+    <value>起始日期</value>
+  </data>
+  <data name="DATestTypeListsRowId" xml:space="preserve">
+    <value>药物酒精测试类型</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>日期和时间</value>
+  </data>
+  <data name="DateTimeFrom" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="DateTimeTo" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>终止日期</value>
+  </data>
+  <data name="DateTrainingRequriementsCompleted" xml:space="preserve">
+    <value>培训完成日期</value>
+  </data>
+  <data name="DateValidFrom" xml:space="preserve">
+    <value>有效起始日期</value>
+  </data>
+  <data name="DaysReport.Reporter" xml:space="preserve">
+    <value>报告人</value>
+  </data>
+  <data name="DaysWorkedOnTheShift" xml:space="preserve">
+    <value>轮班工作天数</value>
+  </data>
+  <data name="DefinedBy" xml:space="preserve">
+    <value>由谁定义</value>
+  </data>
+  <data name="DeliveryTimeInDays" xml:space="preserve">
+    <value>交货天数</value>
+  </data>
+  <data name="DepartmentCategoryListsRowId" xml:space="preserve">
+    <value>人员类型</value>
+  </data>
+  <data name="DepartmentId" xml:space="preserve">
+    <value>部门编号</value>
+  </data>
+  <data name="DepartmentListsRowId" xml:space="preserve">
+    <value>人员类型</value>
+  </data>
+  <data name="DepartmentRowId" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="DeptListsRowId" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="DescribeCommunicationMethod" xml:space="preserve">
+    <value>通知方式</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>描述（需要做什么）</value>
+  </data>
+  <data name="DescriptionHow2FixIssue" xml:space="preserve">
+    <value>好的方面</value>
+  </data>
+  <data name="DescriptionMedicalTreatment" xml:space="preserve">
+    <value>医疗处理记录</value>
+  </data>
+  <data name="DescriptionOfChange" xml:space="preserve">
+    <value>变更描述</value>
+  </data>
+  <data name="DescriptionOfIssue" xml:space="preserve">
+    <value>问题描述</value>
+  </data>
+  <data name="DetectionDistanceListsRowId" xml:space="preserve">
+    <value>观测距离</value>
+  </data>
+  <data name="DetectMethodListsRowId" xml:space="preserve">
+    <value>观测方式</value>
+  </data>
+  <data name="DGAExp" xml:space="preserve">
+    <value>危险品航空意识培训有效期</value>
+  </data>
+  <data name="DistributionTo" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="DMXDocumentHyperlink" xml:space="preserve">
+    <value>文件超链接</value>
+  </data>
+  <data name="DNNUserId" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="DocumentApproverRoleListsRowId" xml:space="preserve">
+    <value>文件批准人</value>
+  </data>
+  <data name="DocumentationsCompltedBy" xml:space="preserve">
+    <value>文件变更完成人</value>
+  </data>
+  <data name="DocumentChangesRequired" xml:space="preserve">
+    <value>是否需要文件变更</value>
+  </data>
+  <data name="DocumentControlDocumentTypeListsRowId" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="DocumentDate" xml:space="preserve">
+    <value>文件日期</value>
+  </data>
+  <data name="DocumentName" xml:space="preserve">
+    <value>文件名称</value>
+  </data>
+  <data name="DocumentOwnerRoleListsRowId" xml:space="preserve">
+    <value>文件所有者</value>
+  </data>
+  <data name="DocumentReviewManagerRoleListsRowId" xml:space="preserve">
+    <value>文件修订负责人</value>
+  </data>
+  <data name="DocumentRevisionNumber" xml:space="preserve">
+    <value>文件版本号</value>
+  </data>
+  <data name="DocumentRevisionStatusListsRowId" xml:space="preserve">
+    <value>文件修订状态</value>
+  </data>
+  <data name="DocumentRowId" xml:space="preserve">
+    <value>影响因素</value>
+  </data>
+  <data name="DocumentsChanged" xml:space="preserve">
+    <value>变更的文件</value>
+  </data>
+  <data name="DocumentsReviewed" xml:space="preserve">
+    <value>评审文件</value>
+  </data>
+  <data name="DocumentStatusListsRowId" xml:space="preserve">
+    <value>文件状态</value>
+  </data>
+  <data name="DocumentTypeListsRowId" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="DoesChangeIncreaseRisk" xml:space="preserve">
+    <value>是否增加风险？（如果是，则上传风险评估登记表）</value>
+  </data>
+  <data name="DrillHours" xml:space="preserve">
+    <value>演习时长</value>
+  </data>
+  <data name="DrillsFire" xml:space="preserve">
+    <value>火灾演习</value>
+  </data>
+  <data name="DrillsFirstAid" xml:space="preserve">
+    <value>急救演习</value>
+  </data>
+  <data name="DrillsLifeBoat" xml:space="preserve">
+    <value>弃船逃生演习</value>
+  </data>
+  <data name="DrillsManOverBoard" xml:space="preserve">
+    <value>人员落水演习</value>
+  </data>
+  <data name="DrillsOther" xml:space="preserve">
+    <value>其他演习</value>
+  </data>
+  <data name="DueDate" xml:space="preserve">
+    <value>到期日</value>
+  </data>
+  <data name="DurationDays" xml:space="preserve">
+    <value>所需天数</value>
+  </data>
+  <data name="DurationHours" xml:space="preserve">
+    <value>暴露时间（小时）</value>
+  </data>
+  <data name="DurationPowerDown" xml:space="preserve">
+    <value>降低枪容量时间</value>
+  </data>
+  <data name="EMailAddress" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="EmailAddressName" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="EmploymentCategoryListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="EmploymentRowId" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
+  <data name="EnteredByRowId" xml:space="preserve">
+    <value>录入人</value>
+  </data>
+  <data name="EnvironmentCheckbox" xml:space="preserve">
+    <value>环境</value>
+  </data>
+  <data name="EstimatedProductionLossHour" xml:space="preserve">
+    <value>估计生产损失(小时)</value>
+  </data>
+  <data name="EstimatedStartDate" xml:space="preserve">
+    <value>预计开始时间</value>
+  </data>
+  <data name="EvaluateComplianceByPersonnelRowId" xml:space="preserve">
+    <value>合规评价人</value>
+  </data>
+  <data name="EvaluationDate" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="EvaluationReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="Executor" xml:space="preserve">
+    <value>执行人</value>
+  </data>
+  <data name="ExposedDaysPerWeek" xml:space="preserve">
+    <value>每周工作天数</value>
+  </data>
+  <data name="ExposureHours" xml:space="preserve">
+    <value>暴露时间</value>
+  </data>
+  <data name="ExposureHoursFloat" xml:space="preserve">
+    <value>暴露时间</value>
+  </data>
+  <data name="ExternalAuditFrequence" xml:space="preserve">
+    <value>外部审计</value>
+  </data>
+  <data name="ExternalAuditor" xml:space="preserve">
+    <value>外部审计师</value>
+  </data>
+  <data name="ExtraMitigation" xml:space="preserve">
+    <value>关键的法律和其它方面的要求</value>
+  </data>
+  <data name="EyeWitness" xml:space="preserve">
+    <value>证人</value>
+  </data>
+  <data name="FamilyName" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="FBClientName" xml:space="preserve">
+    <value>客户名称</value>
+  </data>
+  <data name="FBContactAddress" xml:space="preserve">
+    <value>联系地址</value>
+  </data>
+  <data name="FBContactCompany" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="FBContactEmail" xml:space="preserve">
+    <value>邮件地址</value>
+  </data>
+  <data name="FBContactName" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="FBContactTel" xml:space="preserve">
+    <value>电话号码</value>
+  </data>
+  <data name="FBContactTitle" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="FBCrew" xml:space="preserve">
+    <value>地震队</value>
+  </data>
+  <data name="FBProjectEndDate" xml:space="preserve">
+    <value>项目结束日期</value>
+  </data>
+  <data name="FBProjectName" xml:space="preserve">
+    <value>项目名称</value>
+  </data>
+  <data name="FBProjectStartDate" xml:space="preserve">
+    <value>项目开始日期</value>
+  </data>
+  <data name="FDClientName" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="FDCrewsName" xml:space="preserve">
+    <value>船舶</value>
+  </data>
+  <data name="FDDateEndActual" xml:space="preserve">
+    <value>实际结束日期</value>
+  </data>
+  <data name="FDDateStart" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="FDProjectName" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="FeedbackEvaluationTable" xml:space="preserve">
+    <value>针对我们的项目运作与管理，请在以下方面进行评估：</value>
+  </data>
+  <data name="FeedbackRecordedByRowId" xml:space="preserve">
+    <value>反馈记录人</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FileRowId" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FileURL" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FinalLikelihoodListsRowId" xml:space="preserve">
+    <value>最终可能性</value>
+  </data>
+  <data name="FinalProposal" xml:space="preserve">
+    <value>最终方案</value>
+  </data>
+  <data name="FinalSeverityListsRowId" xml:space="preserve">
+    <value>最终严重性</value>
+  </data>
+  <data name="FinalSignificanceListsRowId" xml:space="preserve">
+    <value>最终重要性</value>
+  </data>
+  <data name="FinancialCheckbox" xml:space="preserve">
+    <value>财务</value>
+  </data>
+  <data name="FishDebriskgs" xml:space="preserve">
+    <value>渔业废物/残骸/漂浮垃圾（千克）</value>
+  </data>
+  <data name="FishingGearMarineDebrisM3" xml:space="preserve">
+    <value>渔业废物/残骸/漂浮垃圾（立方米）</value>
+  </data>
+  <data name="FlagRequestCategory" xml:space="preserve">
+    <value>申请分类</value>
+  </data>
+  <data name="FlagRequestType" xml:space="preserve">
+    <value>申请类型</value>
+  </data>
+  <data name="FlagTaskId" xml:space="preserve">
+    <value>任务编号</value>
+  </data>
+  <data name="FlagTaskStatus" xml:space="preserve">
+    <value>任务状态</value>
+  </data>
+  <data name="FoodWaste2Seakgs" xml:space="preserve">
+    <value>食品垃圾-入海（千克）</value>
+  </data>
+  <data name="FoodWaste2SeaM3" xml:space="preserve">
+    <value>食品垃圾-入海（立方米）</value>
+  </data>
+  <data name="FoodWasteHeading" xml:space="preserve">
+    <value>食品垃圾</value>
+  </data>
+  <data name="ForkliftCertificationDate" xml:space="preserve">
+    <value>直升机降落指挥官有效期</value>
+  </data>
+  <data name="Frameworkagreement" xml:space="preserve">
+    <value>框架协议</value>
+  </data>
+  <data name="FRCTestDate" xml:space="preserve">
+    <value>直升机平台协助人员有效期</value>
+  </data>
+  <data name="FrequencyListsRowId" xml:space="preserve">
+    <value>频次</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>起始日期</value>
+  </data>
+  <data name="FuelDensityKgL" xml:space="preserve">
+    <value>油密度(Kg/L)</value>
+  </data>
+  <data name="FuelInfoHeading" xml:space="preserve">
+    <value>燃油信息</value>
+  </data>
+  <data name="FuelOilConsumedL" xml:space="preserve">
+    <value>耗油量(L)</value>
+  </data>
+  <data name="FuelOilConsumedM3" xml:space="preserve">
+    <value>耗油量(立方米)</value>
+  </data>
+  <data name="FuelSulphurContent" xml:space="preserve">
+    <value>含硫量(% m/m)</value>
+  </data>
+  <data name="FullText" xml:space="preserve">
+    <value>完整文本</value>
+  </data>
+  <data name="FurtherDescription" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="GAExtraParticipant" xml:space="preserve">
+    <value>添加的参与人</value>
+  </data>
+  <data name="GAExtraParticipantRole" xml:space="preserve">
+    <value>添加的参与人岗位</value>
+  </data>
+  <data name="GAListCategory" xml:space="preserve">
+    <value>列表编码类型</value>
+  </data>
+  <data name="GAListCategoryDescription" xml:space="preserve">
+    <value>列表编码描述</value>
+  </data>
+  <data name="GAListValue" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="GAParticipant" xml:space="preserve">
+    <value>指派到人员</value>
+  </data>
+  <data name="GAParticipantRole" xml:space="preserve">
+    <value>指派到岗位</value>
+  </data>
+  <data name="GasDetectionConductedByPersonnelRowId" xml:space="preserve">
+    <value>气体检测执行人</value>
+  </data>
+  <data name="GasDetectionEquipment" xml:space="preserve">
+    <value>气体检测设备</value>
+  </data>
+  <data name="GasDetectionResultsH2S" xml:space="preserve">
+    <value>气体检测结果（硫化氢）</value>
+  </data>
+  <data name="GasDetectionResultsHydrocarbons" xml:space="preserve">
+    <value>气体检测结果（碳氢化合物）</value>
+  </data>
+  <data name="GasDetectionResultsOxygen" xml:space="preserve">
+    <value>气体检测结果（氧气）</value>
+  </data>
+  <data name="GasDetectionResultsToxic" xml:space="preserve">
+    <value>气体检测结果（有毒气体）</value>
+  </data>
+  <data name="GeneralWasteIncineratedHeading" xml:space="preserve">
+    <value>焚烧垃圾</value>
+  </data>
+  <data name="GeoType" xml:space="preserve">
+    <value>观测系统</value>
+  </data>
+  <data name="GivenName" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="GivesCertificate" xml:space="preserve">
+    <value>授予证书</value>
+  </data>
+  <data name="GMDSSExp" xml:space="preserve">
+    <value>无线电通用操作员有效期</value>
+  </data>
+  <data name="GoalObjectiveLevelListsRowId" xml:space="preserve">
+    <value>级别</value>
+  </data>
+  <data name="GoalObjectiveListsRowId" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="GOCorpReference" xml:space="preserve">
+    <value>所属公司目标编号</value>
+  </data>
+  <data name="GraviMag" xml:space="preserve">
+    <value>重磁</value>
+  </data>
+  <data name="Group1" xml:space="preserve">
+    <value>组1</value>
+  </data>
+  <data name="Group2" xml:space="preserve">
+    <value>组2</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="GroupsRowId" xml:space="preserve">
+    <value>小组</value>
+  </data>
+  <data name="GWIOthersM3" xml:space="preserve">
+    <value>其它垃圾焚烧（立方米）</value>
+  </data>
+  <data name="GWIPaperM3" xml:space="preserve">
+    <value>纸类焚烧（立方米）</value>
+  </data>
+  <data name="GWIPlasticsM3" xml:space="preserve">
+    <value>塑料焚烧（立方米）</value>
+  </data>
+  <data name="GWIRagsM3" xml:space="preserve">
+    <value>布类焚烧（立方米）</value>
+  </data>
+  <data name="hasDocument" xml:space="preserve">
+    <value>是否有文件</value>
+  </data>
+  <data name="HasInitialReport" xml:space="preserve">
+    <value>初始报告</value>
+  </data>
+  <data name="HasMaritimeReport" xml:space="preserve">
+    <value>有关于海事部分的报告</value>
+  </data>
+  <data name="HasPassedTest" xml:space="preserve">
+    <value>是否通过测试</value>
+  </data>
+  <data name="Haz2SBatteryEWastekgs" xml:space="preserve">
+    <value>有害垃圾（送岸）- 电池/电子废弃物（千克）</value>
+  </data>
+  <data name="Haz2SBatteryEWasteM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-电池/电子废弃物（立方米）</value>
+  </data>
+  <data name="Haz2SChemicalsM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-化学品（立方米）</value>
+  </data>
+  <data name="Haz2SCookingOilL" xml:space="preserve">
+    <value>有害垃圾（送岸）- 食用油（公升）</value>
+  </data>
+  <data name="Haz2SCookingOilM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-废食用油（立方米）</value>
+  </data>
+  <data name="Haz2SIncineratorAsheskgs" xml:space="preserve">
+    <value>有害垃圾（送岸）- 焚烧炉灰（千克）</value>
+  </data>
+  <data name="Haz2SIncineratorAshesM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-焚烧炉炉灰（立方米）</value>
+  </data>
+  <data name="Haz2SMedicalWastekgs" xml:space="preserve">
+    <value>有害垃圾（送岸）- 医疗垃圾（千克）</value>
+  </data>
+  <data name="Haz2SMedicalWasteM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-医疗垃圾（立方米）</value>
+  </data>
+  <data name="Haz2SOilyWasteM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-含油废物（立方米）</value>
+  </data>
+  <data name="Haz2SOtherOperationalWastekgs" xml:space="preserve">
+    <value>有害垃圾（送岸）- 其它生产垃圾（千克）</value>
+  </data>
+  <data name="Haz2SOtherOperationalWasteM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-其它生产垃圾（立方米）</value>
+  </data>
+  <data name="Haz2SRagskgs" xml:space="preserve">
+    <value>有害垃圾（送岸）- 纺织品（千克）</value>
+  </data>
+  <data name="Haz2SRagsM3" xml:space="preserve">
+    <value>有害垃圾（送岸）-布类（立方米）</value>
+  </data>
+  <data name="Hazard" xml:space="preserve">
+    <value>危险源</value>
+  </data>
+  <data name="HazardCategoryListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="HazardEffect" xml:space="preserve">
+    <value>风险</value>
+  </data>
+  <data name="HazardEffects" xml:space="preserve">
+    <value>危险源影响</value>
+  </data>
+  <data name="HazardousOilyHeading" xml:space="preserve">
+    <value>有害垃圾/含油废物</value>
+  </data>
+  <data name="HazardsEvents" xml:space="preserve">
+    <value>危险源/事件</value>
+  </data>
+  <data name="HazardTask" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="HazardTextArea" xml:space="preserve">
+    <value>危险源</value>
+  </data>
+  <data name="HEADApprovals" xml:space="preserve">
+    <value>批准</value>
+  </data>
+  <data name="HEADCloseOut" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>备注主题</value>
+  </data>
+  <data name="HEADEvaluation" xml:space="preserve">
+    <value>评估</value>
+  </data>
+  <data name="HEADImplementation" xml:space="preserve">
+    <value>执行</value>
+  </data>
+  <data name="HEADInitiation" xml:space="preserve">
+    <value>发起</value>
+  </data>
+  <data name="HeadQuartersAddress" xml:space="preserve">
+    <value>总部地址</value>
+  </data>
+  <data name="HEADTBTActivityRecord" xml:space="preserve">
+    <value>工具箱会议-声明</value>
+  </data>
+  <data name="HEADTBTDeclaration" xml:space="preserve">
+    <value>声明</value>
+  </data>
+  <data name="HeliActivitiesCount" xml:space="preserve">
+    <value>直升机活动</value>
+  </data>
+  <data name="HERTLExp" xml:space="preserve">
+    <value>直升机平台应急反应组长培训有效期</value>
+  </data>
+  <data name="HERTMExp" xml:space="preserve">
+    <value>直升机平台应急反应成员培训有效期</value>
+  </data>
+  <data name="HistoryLog" xml:space="preserve">
+    <value>待办事项日志</value>
+  </data>
+  <data name="HOITExp" xml:space="preserve">
+    <value>直升机平台操作初始培训有效期</value>
+  </data>
+  <data name="HomeAddress" xml:space="preserve">
+    <value>家庭地址</value>
+  </data>
+  <data name="HomePhoneNumber" xml:space="preserve">
+    <value>家庭电话</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>持续时间：小时</value>
+  </data>
+  <data name="HRDocumentTypeListsRowId" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="HrsFinance" xml:space="preserve">
+    <value>财务经营科</value>
+  </data>
+  <data name="HrsHR" xml:space="preserve">
+    <value>人事科</value>
+  </data>
+  <data name="HrsOperation" xml:space="preserve">
+    <value>生产管理科</value>
+  </data>
+  <data name="HrsSales" xml:space="preserve">
+    <value>市场科</value>
+  </data>
+  <data name="Hyperlink" xml:space="preserve">
+    <value>超链接</value>
+  </data>
+  <data name="HzrdEffct" xml:space="preserve">
+    <value>危险源影响</value>
+  </data>
+  <data name="IdentificationIdNumber" xml:space="preserve">
+    <value>身份证号</value>
+  </data>
+  <data name="IfSubcontractor" xml:space="preserve">
+    <value>分包商</value>
+  </data>
+  <data name="ImmediateAction" xml:space="preserve">
+    <value>及时措施</value>
+  </data>
+  <data name="ImmediateActions" xml:space="preserve">
+    <value>及时措施</value>
+  </data>
+  <data name="ImmediateCorrectiveAction" xml:space="preserve">
+    <value>即时整改措施</value>
+  </data>
+  <data name="ImpactAssessmentListsRowId" xml:space="preserve">
+    <value>环境影响评估</value>
+  </data>
+  <data name="Impacts" xml:space="preserve">
+    <value>环境影响</value>
+  </data>
+  <data name="ImpacttoProcess" xml:space="preserve">
+    <value>影响</value>
+  </data>
+  <data name="ImplementationListsRowId" xml:space="preserve">
+    <value>执行负责岗位</value>
+  </data>
+  <data name="IncidentId" xml:space="preserve">
+    <value>事件编号</value>
+  </data>
+  <data name="IncidentReporter" xml:space="preserve">
+    <value>事件报告人</value>
+  </data>
+  <data name="IncinerationOtherskgs" xml:space="preserve">
+    <value>焚烧-其它（千克）</value>
+  </data>
+  <data name="IncinerationOthersM3" xml:space="preserve">
+    <value>焚烧-其它（立方米）</value>
+  </data>
+  <data name="IncinerationPaperkgs" xml:space="preserve">
+    <value>焚烧-纸类（千克）</value>
+  </data>
+  <data name="IncinerationPaperM3" xml:space="preserve">
+    <value>焚烧-纸类（立方米）</value>
+  </data>
+  <data name="IncinerationPlastickgs" xml:space="preserve">
+    <value>焚烧-塑料制品（千克）</value>
+  </data>
+  <data name="IncinerationPlasticM3" xml:space="preserve">
+    <value>焚烧-塑料（立方米）</value>
+  </data>
+  <data name="IncinerationRagskgs" xml:space="preserve">
+    <value>焚烧-纺织品（千克）</value>
+  </data>
+  <data name="IncinerationRagsM3" xml:space="preserve">
+    <value>焚烧-布类（立方米）</value>
+  </data>
+  <data name="IncinerationSludgeM3" xml:space="preserve">
+    <value>焚烧-污油（立方米）</value>
+  </data>
+  <data name="IncineratorAsheskgs" xml:space="preserve">
+    <value>焚烧炉炉灰（千克）</value>
+  </data>
+  <data name="IncreasedRisk" xml:space="preserve">
+    <value>变更是否会增加风险</value>
+  </data>
+  <data name="Indicators" xml:space="preserve">
+    <value>指标</value>
+  </data>
+  <data name="Indicators1" xml:space="preserve">
+    <value>指标（如何去测量）</value>
+  </data>
+  <data name="InfluenceListsRowId" xml:space="preserve">
+    <value>影响</value>
+  </data>
+  <data name="InitialRiskRatingListsRowId" xml:space="preserve">
+    <value>初始风险等级</value>
+  </data>
+  <data name="Initials" xml:space="preserve">
+    <value>CNPC要求类</value>
+  </data>
+  <data name="InitialSeverityListsRowId" xml:space="preserve">
+    <value>严重性</value>
+  </data>
+  <data name="InitiatedByPersonnelRowId" xml:space="preserve">
+    <value>报告人</value>
+  </data>
+  <data name="InjuredParty.PersonnelRowId" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="InjuredPersonnel" xml:space="preserve">
+    <value>受伤人员</value>
+  </data>
+  <data name="IntFree" xml:space="preserve">
+    <value>严重性</value>
+  </data>
+  <data name="InvolvedPersonnelCount" xml:space="preserve">
+    <value>涉及人数</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>是否为激活状态</value>
+  </data>
+  <data name="IsBanned" xml:space="preserve">
+    <value>列入黑名单</value>
+  </data>
+  <data name="IsChecked" xml:space="preserve">
+    <value>是否勾选</value>
+  </data>
+  <data name="IsCompanyUser" xml:space="preserve">
+    <value>是否是公司用户</value>
+  </data>
+  <data name="IsContinuousTestingRequired" xml:space="preserve">
+    <value>是否需要持续检测</value>
+  </data>
+  <data name="isDAATestCompleted" xml:space="preserve">
+    <value>是否完成药物酒精测试</value>
+  </data>
+  <data name="IsDomestic" xml:space="preserve">
+    <value>国内记录</value>
+  </data>
+  <data name="IsDomesticCheckbox" xml:space="preserve">
+    <value>是否为国内项目</value>
+  </data>
+  <data name="IsDrugAndAlcoholTestingConducted" xml:space="preserve">
+    <value>是否药物酒精测试</value>
+  </data>
+  <data name="IsDrugAndAlcoholTestPerformed" xml:space="preserve">
+    <value>药物酒精测试已完成</value>
+  </data>
+  <data name="IsEnvironmentalDamage" xml:space="preserve">
+    <value>环境破坏</value>
+  </data>
+  <data name="IsEnvRelated" xml:space="preserve">
+    <value>是否存在环境影响</value>
+  </data>
+  <data name="IsEquipmentDamage" xml:space="preserve">
+    <value>设备损坏</value>
+  </data>
+  <data name="IsFirstAidCase" xml:space="preserve">
+    <value>急救箱事件</value>
+  </data>
+  <data name="IsFlagSystemClass" xml:space="preserve">
+    <value>目前提供</value>
+  </data>
+  <data name="IsFramework" xml:space="preserve">
+    <value>是否为框架协议内订单</value>
+  </data>
+  <data name="IsGasDetectionRequired" xml:space="preserve">
+    <value>是否需要进行气体检测</value>
+  </data>
+  <data name="isHIPO" xml:space="preserve">
+    <value>潜在高风险事件（HIPO）</value>
+  </data>
+  <data name="IsHSEQ" xml:space="preserve">
+    <value>是否QHSSE课程</value>
+  </data>
+  <data name="IsInBridgingDocument" xml:space="preserve">
+    <value>是否涵盖在桥接文件中</value>
+  </data>
+  <data name="IsIncident" xml:space="preserve">
+    <value>是否与人员相关</value>
+  </data>
+  <data name="isInterventionFailed" xml:space="preserve">
+    <value>干预失败</value>
+  </data>
+  <data name="isISO14001Accredited" xml:space="preserve">
+    <value>ISO14001认证</value>
+  </data>
+  <data name="isISO9001Accredited" xml:space="preserve">
+    <value>ISO9001认证</value>
+  </data>
+  <data name="IsIsolationRequired" xml:space="preserve">
+    <value>是否需要隔离</value>
+  </data>
+  <data name="isLegalComplianceFailure" xml:space="preserve">
+    <value>是否存在违法行为</value>
+  </data>
+  <data name="IsLesson2BeCirculated" xml:space="preserve">
+    <value>经验总结是否需要被分享</value>
+  </data>
+  <data name="IsLSR" xml:space="preserve">
+    <value>违背保命法则</value>
+  </data>
+  <data name="isMarineRelated" xml:space="preserve">
+    <value>是否与船舶相关</value>
+  </data>
+  <data name="IsMedicalTreatmentCase" xml:space="preserve">
+    <value>医疗处理事件</value>
+  </data>
+  <data name="IsNormalOperationsMayResume" xml:space="preserve">
+    <value>正常生产作业可以继续</value>
+  </data>
+  <data name="IsolationCertificateNumber" xml:space="preserve">
+    <value>隔离证书编号</value>
+  </data>
+  <data name="IsolationInstalledByPersonnelRowId" xml:space="preserve">
+    <value>隔离执行人</value>
+  </data>
+  <data name="IsolationTagsUsed" xml:space="preserve">
+    <value>是否使用隔离标签</value>
+  </data>
+  <data name="IsolationTypeListsRowId" xml:space="preserve">
+    <value>隔离类型</value>
+  </data>
+  <data name="isOSHA18001Accredited" xml:space="preserve">
+    <value>OSHA18001认证</value>
+  </data>
+  <data name="isOverdueAudit" xml:space="preserve">
+    <value>审计是否逾期</value>
+  </data>
+  <data name="IsPenaltyForEarlyTermination" xml:space="preserve">
+    <value>提前终止合同所需罚金</value>
+  </data>
+  <data name="IsPermitAudited" xml:space="preserve">
+    <value>是否完成审计</value>
+  </data>
+  <data name="IsPermitExtensionRequired" xml:space="preserve">
+    <value>是否需要延长许可</value>
+  </data>
+  <data name="IsPlanning" xml:space="preserve">
+    <value>正在计划中</value>
+  </data>
+  <data name="IsProduct" xml:space="preserve">
+    <value>是否提供产品</value>
+  </data>
+  <data name="IsRecordable" xml:space="preserve">
+    <value>可记录时间</value>
+  </data>
+  <data name="IsRequiredMOPO" xml:space="preserve">
+    <value>是否需要计算MOPO分数？</value>
+  </data>
+  <data name="isRestHoursIssue" xml:space="preserve">
+    <value>休息时间是否作为一个影响因素</value>
+  </data>
+  <data name="IsRestrictedWorkdayCase" xml:space="preserve">
+    <value>限工事件</value>
+  </data>
+  <data name="IsSubcontractorRelated" xml:space="preserve">
+    <value>是否与分包商有关</value>
+  </data>
+  <data name="IssueRelatedToListsRowId" xml:space="preserve">
+    <value>相关问题</value>
+  </data>
+  <data name="IssueResponse" xml:space="preserve">
+    <value>需求响应</value>
+  </data>
+  <data name="IssueStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="IssuingAuthorityPersonnelRowId" xml:space="preserve">
+    <value>签发人</value>
+  </data>
+  <data name="isSupportProcedure" xml:space="preserve">
+    <value>支持程序</value>
+  </data>
+  <data name="isTBTConducted" xml:space="preserve">
+    <value>是否召开了工具箱会议</value>
+  </data>
+  <data name="isTeamLeader" xml:space="preserve">
+    <value>小组负责人</value>
+  </data>
+  <data name="isTeamMember" xml:space="preserve">
+    <value>小组成员</value>
+  </data>
+  <data name="IsTerminationWithoutCause" xml:space="preserve">
+    <value>无理由终止合同</value>
+  </data>
+  <data name="isTOFS" xml:space="preserve">
+    <value>安全暂停</value>
+  </data>
+  <data name="IsTop" xml:space="preserve">
+    <value>是否为最高级</value>
+  </data>
+  <data name="isVerified" xml:space="preserve">
+    <value>验证</value>
+  </data>
+  <data name="IsWorkCompleted" xml:space="preserve">
+    <value>工作已完成</value>
+  </data>
+  <data name="IsWorkRelated" xml:space="preserve">
+    <value>是否与工作相关</value>
+  </data>
+  <data name="ITPersonnelRowId" xml:space="preserve">
+    <value>事件调查小组成员</value>
+  </data>
+  <data name="JobDescription" xml:space="preserve">
+    <value>岗位说明书</value>
+  </data>
+  <data name="JobLevel" xml:space="preserve">
+    <value>岗级</value>
+  </data>
+  <data name="JobName" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="JobRole" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="JobTitle" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="JobTitleGAListDescription" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="JobTitleListsRowId" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="JobTitleOfReporter" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="JSADevelopmentOrReviewRequired" xml:space="preserve">
+    <value>是否需要进行工作风险评估或者对其回顾更新</value>
+  </data>
+  <data name="Justification" xml:space="preserve">
+    <value>变更理由</value>
+  </data>
+  <data name="KeyLegalAndOtherRequirements" xml:space="preserve">
+    <value>关键的法律和其它方面的要求</value>
+  </data>
+  <data name="KPICategoryListsRowId" xml:space="preserve">
+    <value>关键绩效指标分类</value>
+  </data>
+  <data name="KPICompletionPercentageListsRowId" xml:space="preserve">
+    <value>完成比例</value>
+  </data>
+  <data name="KPIFrequencyListsRowId" xml:space="preserve">
+    <value>频次</value>
+  </data>
+  <data name="KPIIndicatorListsRowId" xml:space="preserve">
+    <value>关键绩效指标</value>
+  </data>
+  <data name="LandfillFoodwastekgs" xml:space="preserve">
+    <value>填埋-食品垃圾（千克）</value>
+  </data>
+  <data name="LandfillFoodWasteM3" xml:space="preserve">
+    <value>填埋-食品垃圾（立方米）</value>
+  </data>
+  <data name="LandfillGlasskgs" xml:space="preserve">
+    <value>填埋-玻璃（千克）</value>
+  </data>
+  <data name="LandfillGlassM3" xml:space="preserve">
+    <value>填埋-玻璃（立方米）</value>
+  </data>
+  <data name="LandfillHeading" xml:space="preserve">
+    <value>填埋</value>
+  </data>
+  <data name="LandfillMetalkgs" xml:space="preserve">
+    <value>填埋-金属（千克）</value>
+  </data>
+  <data name="LandfillMetalM3" xml:space="preserve">
+    <value>填埋-金属（立方米）</value>
+  </data>
+  <data name="LandfillNonRecyclablekgs" xml:space="preserve">
+    <value>填埋-不可回收类（千克）</value>
+  </data>
+  <data name="LandfillNonRecyclableM3" xml:space="preserve">
+    <value>填埋-不可回收（立方米）</value>
+  </data>
+  <data name="LandfillPaperkgs" xml:space="preserve">
+    <value>填埋-纸类（千克）</value>
+  </data>
+  <data name="LandfillPaperM3" xml:space="preserve">
+    <value>填埋-纸类（立方米）</value>
+  </data>
+  <data name="LandfillPlasticskgs" xml:space="preserve">
+    <value>填埋-塑料（千克）</value>
+  </data>
+  <data name="LandfillPlasticsM3" xml:space="preserve">
+    <value>填埋-塑料（立方米）</value>
+  </data>
+  <data name="LANGUAGE_RESOURCE_KEY" xml:space="preserve">
+    <value>CCN</value>
+  </data>
+  <data name="LastDaATestDate" xml:space="preserve">
+    <value>司索证有效期</value>
+  </data>
+  <data name="LastRevisionDate" xml:space="preserve">
+    <value>上一次回顾日期</value>
+  </data>
+  <data name="LastRevisionStartedDate" xml:space="preserve">
+    <value>上一次修订开始日期</value>
+  </data>
+  <data name="LastRevisionWorkflowClosedDate" xml:space="preserve">
+    <value>上一次修订工作流关闭日期</value>
+  </data>
+  <data name="LastUpdateDate" xml:space="preserve">
+    <value>上一次更新日期</value>
+  </data>
+  <data name="LawsRegulations" xml:space="preserve">
+    <value>涉及到的法律法规</value>
+  </data>
+  <data name="LegalComplianceReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="LegalRepresentative" xml:space="preserve">
+    <value>法人代表</value>
+  </data>
+  <data name="LessonLearntForThisIssue" xml:space="preserve">
+    <value>建议</value>
+  </data>
+  <data name="LessonsLearned" xml:space="preserve">
+    <value>经验分享</value>
+  </data>
+  <data name="LessonsLearnedCommunicatedById" xml:space="preserve">
+    <value>经验分享完成人</value>
+  </data>
+  <data name="LessonsLearnt" xml:space="preserve">
+    <value>是否作为经验分享？</value>
+  </data>
+  <data name="LiftPlan" xml:space="preserve">
+    <value>吊装计划</value>
+  </data>
+  <data name="LikelihoodListsRowId" xml:space="preserve">
+    <value>可能性</value>
+  </data>
+  <data name="LikelyhoodListsRowId" xml:space="preserve">
+    <value>可能性</value>
+  </data>
+  <data name="LineNumberIfHave" xml:space="preserve">
+    <value>测线号</value>
+  </data>
+  <data name="LMRACarriedOut" xml:space="preserve">
+    <value>“最后一刻”风险评估已实施</value>
+  </data>
+  <data name="LocationHeadRoleListsRowId" xml:space="preserve">
+    <value>工作场所负责人岗位</value>
+  </data>
+  <data name="LocationHeadTitleListsRowId" xml:space="preserve">
+    <value>工作场所负责人岗位</value>
+  </data>
+  <data name="LocationHoursCount" xml:space="preserve">
+    <value>每天暴露时长</value>
+  </data>
+  <data name="LocationOfWork" xml:space="preserve">
+    <value>工作地点</value>
+  </data>
+  <data name="LocationRowId" xml:space="preserve">
+    <value>工作场所</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>工作流日志</value>
+  </data>
+  <data name="LWITWI" xml:space="preserve">
+    <value>作业指导书</value>
+  </data>
+  <data name="MainPointofContact" xml:space="preserve">
+    <value>电话号码或者传真</value>
+  </data>
+  <data name="MainSeverityTypeListsRowId" xml:space="preserve">
+    <value>后果类型</value>
+  </data>
+  <data name="MajorTypeOfTrainingListsRowId" xml:space="preserve">
+    <value>主要类型</value>
+  </data>
+  <data name="MalariaTestDate" xml:space="preserve">
+    <value>直升机水下逃生有效期</value>
+  </data>
+  <data name="ManageChange.ApprovalForChangeReportCloseOutById" xml:space="preserve">
+    <value>变更关闭人</value>
+  </data>
+  <data name="ManageChange.ApprovalRevieweDate" xml:space="preserve">
+    <value>甲方批准日期</value>
+  </data>
+  <data name="ManageChange.ChangeRequirementsCompletedById" xml:space="preserve">
+    <value>变更完成人</value>
+  </data>
+  <data name="ManageChange.DateApprovalForChangeReportCloseOut" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="ManageChange.DateChangeRequirementsCompleted" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+  <data name="ManageChange.ManageChangeReferenceId" xml:space="preserve">
+    <value>申请编号</value>
+  </data>
+  <data name="ManageChangeStatusListsRowId" xml:space="preserve">
+    <value>变更状态</value>
+  </data>
+  <data name="ManagementSystemListsRowId" xml:space="preserve">
+    <value>管理体系</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>经理</value>
+  </data>
+  <data name="ManHours" xml:space="preserve">
+    <value>人员工时</value>
+  </data>
+  <data name="MarinePersonnelCount" xml:space="preserve">
+    <value>船员</value>
+  </data>
+  <data name="MarRegion" xml:space="preserve">
+    <value>区域</value>
+  </data>
+  <data name="MeansOfCommunicating" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="Medicalkgs" xml:space="preserve">
+    <value>医疗垃圾（千克）</value>
+  </data>
+  <data name="MedicalRecordTypeListsRowId" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="MedicalTreatmentDescription" xml:space="preserve">
+    <value>医疗处理</value>
+  </data>
+  <data name="MedicalTreatmentLogReferenceId" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="MeetingPersonId" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="MeetingPresenter" xml:space="preserve">
+    <value>汇报人</value>
+  </data>
+  <data name="MeetingReferenceId" xml:space="preserve">
+    <value>会议编号</value>
+  </data>
+  <data name="MeetingRowId" xml:space="preserve">
+    <value>会议</value>
+  </data>
+  <data name="MeetingStartTime" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="MeetingText" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="Member" xml:space="preserve">
+    <value>成员</value>
+  </data>
+  <data name="MemberTableListRowId" xml:space="preserve">
+    <value>小组</value>
+  </data>
+  <data name="MethodOfCommunication" xml:space="preserve">
+    <value>沟通方式描述</value>
+  </data>
+  <data name="MigrationStepsAndPrecautions" xml:space="preserve">
+    <value>风险减控措施</value>
+  </data>
+  <data name="MimeType" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>持续时间：分钟</value>
+  </data>
+  <data name="MissionTypeListsRowId" xml:space="preserve">
+    <value>任务类型</value>
+  </data>
+  <data name="MitigatingActionAppliedListsRowId" xml:space="preserve">
+    <value>缓解措施</value>
+  </data>
+  <data name="Mitigations" xml:space="preserve">
+    <value>缓解措施</value>
+  </data>
+  <data name="MitigationsRecoveryMeasures" xml:space="preserve">
+    <value>缓解和恢复措施</value>
+  </data>
+  <data name="MMODescription" xml:space="preserve">
+    <value>描述（尺寸，天气情况，形状、颜色、特征等）</value>
+  </data>
+  <data name="MobilePhone" xml:space="preserve">
+    <value>移动电话（加国家代码）</value>
+  </data>
+  <data name="MobilePhoneNumber" xml:space="preserve">
+    <value>移动电话</value>
+  </data>
+  <data name="MonitoringListsRowId" xml:space="preserve">
+    <value>监督负责岗位</value>
+  </data>
+  <data name="MonthsOffshoreEx" xml:space="preserve">
+    <value>海上作业经验</value>
+  </data>
+  <data name="MonthsOffshoreExperience" xml:space="preserve">
+    <value>海上工作经验</value>
+  </data>
+  <data name="MonthsWorked" xml:space="preserve">
+    <value>工作经验</value>
+  </data>
+  <data name="MOPOScore" xml:space="preserve">
+    <value>MOPO分数（如需）</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="NameOfReferenceIdPrefix" xml:space="preserve">
+    <value>编号前缀</value>
+  </data>
+  <data name="NameOfReporter" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="NameOrTask" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="NamePrefix" xml:space="preserve">
+    <value>客户名称前缀</value>
+  </data>
+  <data name="NationalityListsRowId" xml:space="preserve">
+    <value>国籍</value>
+  </data>
+  <data name="NatureOfChange" xml:space="preserve">
+    <value>变更性质描述</value>
+  </data>
+  <data name="NatureOfChangeRowId" xml:space="preserve">
+    <value>变更范畴</value>
+  </data>
+  <data name="NatureOfWorkscope" xml:space="preserve">
+    <value>工作内容</value>
+  </data>
+  <data name="NextOfKin" xml:space="preserve">
+    <value>亲属</value>
+  </data>
+  <data name="NextRevisionDate" xml:space="preserve">
+    <value>下一次修订日期</value>
+  </data>
+  <data name="NonConformanceCategoryListsRowId" xml:space="preserve">
+    <value>发现项</value>
+  </data>
+  <data name="NonConformanceSourceListsRowId" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="NonConformanceStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="NonConformanceTitle" xml:space="preserve">
+    <value>不符合项</value>
+  </data>
+  <data name="NonHazardousHeading" xml:space="preserve">
+    <value>无害垃圾</value>
+  </data>
+  <data name="NoteInstructions" xml:space="preserve">
+    <value>注释</value>
+  </data>
+  <data name="notes" xml:space="preserve">
+    <value>待办事项说明</value>
+  </data>
+  <data name="NotGoodComments" xml:space="preserve">
+    <value>不符合项描述</value>
+  </data>
+  <data name="NoWorkflowForPRocedure" xml:space="preserve">
+    <value>这是一个单一任务的待办事项</value>
+  </data>
+  <data name="NoWorkflowsCheckbox" xml:space="preserve">
+    <value>不启动工作流</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="NumberOfDaysLost" xml:space="preserve">
+    <value>损失工作天数</value>
+  </data>
+  <data name="NumberOfDaysNotice" xml:space="preserve">
+    <value>合同终止提前通知时间</value>
+  </data>
+  <data name="NumberOfPersons" xml:space="preserve">
+    <value>人数</value>
+  </data>
+  <data name="objCompletionDate" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+  <data name="Objective" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="ObjectiveListsRowId" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="ObjectivePercentageInt" xml:space="preserve">
+    <value>完成比例</value>
+  </data>
+  <data name="ObjectivePhases" xml:space="preserve">
+    <value>监控（如何去追踪进展）</value>
+  </data>
+  <data name="ObjectivesTypeRowId" xml:space="preserve">
+    <value>目标类型</value>
+  </data>
+  <data name="ObjectiveTypeRowId" xml:space="preserve">
+    <value>目标类型</value>
+  </data>
+  <data name="Observer" xml:space="preserve">
+    <value>报告人</value>
+  </data>
+  <data name="OBSKPIIndicatorListsRowId" xml:space="preserve">
+    <value>关键绩效指标</value>
+  </data>
+  <data name="OBSKPIResponsibleJobTitleListsRowId" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="OccupationListsRowId" xml:space="preserve">
+    <value>职业</value>
+  </data>
+  <data name="OfficePersonnelCount" xml:space="preserve">
+    <value>办公室人员</value>
+  </data>
+  <data name="OffshoreMedicalExpiryDate" xml:space="preserve">
+    <value>健康证有效期</value>
+  </data>
+  <data name="OilyWasteM3" xml:space="preserve">
+    <value>含油废物（立方米）</value>
+  </data>
+  <data name="OnboardIncinerationHeading" xml:space="preserve">
+    <value>船上焚烧</value>
+  </data>
+  <data name="OnboardProcess" xml:space="preserve">
+    <value>现场处理</value>
+  </data>
+  <data name="OperationalConditionListsRowId" xml:space="preserve">
+    <value>作业条件</value>
+  </data>
+  <data name="OperationalControlsMeasures" xml:space="preserve">
+    <value>生产方面的控制措施</value>
+  </data>
+  <data name="OperationPara" xml:space="preserve">
+    <value>采集参数</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>执行人</value>
+  </data>
+  <data name="Opportunity.Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="OpportunityStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>相关组织机构</value>
+  </data>
+  <data name="OrganizationList" xml:space="preserve">
+    <value>承办部门</value>
+  </data>
+  <data name="OriginatedFromJobTitle" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="OriginatorId" xml:space="preserve">
+    <value>发起人</value>
+  </data>
+  <data name="OriginatorPersonnelName" xml:space="preserve">
+    <value>发起人</value>
+  </data>
+  <data name="OtherCompany" xml:space="preserve">
+    <value>其他甲方</value>
+  </data>
+  <data name="OtherHeading" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="OthersSpecify" xml:space="preserve">
+    <value>其它（请描述一下它们具体是什么）</value>
+  </data>
+  <data name="OtherWastekgs" xml:space="preserve">
+    <value>其它生产垃圾（千克）</value>
+  </data>
+  <data name="OverboardHeading" xml:space="preserve">
+    <value>倾倒入海</value>
+  </data>
+  <data name="OverDuelistRowId" xml:space="preserve">
+    <value>超期时间</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>所有者</value>
+  </data>
+  <data name="OwnerClass" xml:space="preserve">
+    <value>源记录</value>
+  </data>
+  <data name="OwnerReference" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ParentCompany" xml:space="preserve">
+    <value>隶属公司</value>
+  </data>
+  <data name="ParentCompanyRowId" xml:space="preserve">
+    <value>隶属公司 </value>
+  </data>
+  <data name="Participant" xml:space="preserve">
+    <value>是否为参与人</value>
+  </data>
+  <data name="ParticipantPersonnelRowId" xml:space="preserve">
+    <value>参与人</value>
+  </data>
+  <data name="PartyChiefRowId" xml:space="preserve">
+    <value>队长</value>
+  </data>
+  <data name="PassportCountryCodeListsRowId" xml:space="preserve">
+    <value>护照国籍</value>
+  </data>
+  <data name="PassportExp" xml:space="preserve">
+    <value>护照有效期</value>
+  </data>
+  <data name="PassportExpiryDate" xml:space="preserve">
+    <value>护照有效期</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="PaymentTermsListsRowId" xml:space="preserve">
+    <value>付款周期</value>
+  </data>
+  <data name="PeopleCheckbox" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PerformingAuthorityPersonnelRowId" xml:space="preserve">
+    <value>执行负责人</value>
+  </data>
+  <data name="PermitClosedDateTime" xml:space="preserve">
+    <value>许可关闭</value>
+  </data>
+  <data name="PermitExtensionTimeFrom" xml:space="preserve">
+    <value>许可延长开始时间</value>
+  </data>
+  <data name="PermitExtensionTimeTo" xml:space="preserve">
+    <value>许可延长结束时间</value>
+  </data>
+  <data name="PermitNumber" xml:space="preserve">
+    <value>许可编号</value>
+  </data>
+  <data name="PermitOpenedDateTime" xml:space="preserve">
+    <value>许可开启</value>
+  </data>
+  <data name="PermitTypeListsRowId" xml:space="preserve">
+    <value>许可类型</value>
+  </data>
+  <data name="PermitUserPersonnelRowId" xml:space="preserve">
+    <value>许可使用者</value>
+  </data>
+  <data name="PersonId" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PersonInChargeRowId" xml:space="preserve">
+    <value>负责人</value>
+  </data>
+  <data name="PersonName" xml:space="preserve">
+    <value>人名</value>
+  </data>
+  <data name="Personnel" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PersonnelCategory" xml:space="preserve">
+    <value>人员类型</value>
+  </data>
+  <data name="PersonnelCategoryGAListDescription" xml:space="preserve">
+    <value>人员类别</value>
+  </data>
+  <data name="PersonnelHyperlink" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PersonnelRowId" xml:space="preserve">
+    <value>由甲方批准</value>
+  </data>
+  <data name="PersonnelRowIdEdit" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PersonnelType" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="PersonnelView" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>电话号码</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>地点</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>计划（如何去做）</value>
+  </data>
+  <data name="PositionListsRowId" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="PositionXY" xml:space="preserve">
+    <value>位置（经纬度）</value>
+  </data>
+  <data name="PositiveOrNegative" xml:space="preserve">
+    <value>阳性/阴性</value>
+  </data>
+  <data name="PossibleConsequence" xml:space="preserve">
+    <value>可能的后果</value>
+  </data>
+  <data name="PostbackVerticalListsRowId" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="PotentialConsequence" xml:space="preserve">
+    <value>可能的后果（积极的和消极的）</value>
+  </data>
+  <data name="PotentialImpact" xml:space="preserve">
+    <value>变更可能带来的影响（正面和负面）</value>
+  </data>
+  <data name="PotentialListsRowId" xml:space="preserve">
+    <value>可能的</value>
+  </data>
+  <data name="PotentialRiskRatingListsRowId" xml:space="preserve">
+    <value>潜在风险等级</value>
+  </data>
+  <data name="PreciseLocationOfWorkscope" xml:space="preserve">
+    <value>进行工作的场所</value>
+  </data>
+  <data name="Presenter" xml:space="preserve">
+    <value>汇报人</value>
+  </data>
+  <data name="PrimaryStatusLists" xml:space="preserve">
+    <value>基本状态</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>优先级</value>
+  </data>
+  <data name="PriorityListsRowId" xml:space="preserve">
+    <value>优先级</value>
+  </data>
+  <data name="PrjctPhsListsRowId" xml:space="preserve">
+    <value>项目阶段</value>
+  </data>
+  <data name="ProcedureId" xml:space="preserve">
+    <value>程序编号</value>
+  </data>
+  <data name="ProcedureNotAvailable" xml:space="preserve">
+    <value>参考程序</value>
+  </data>
+  <data name="ProcedureReference" xml:space="preserve">
+    <value>相关BGPO程序</value>
+  </data>
+  <data name="ProcedureReferenceReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ProcedureRowId" xml:space="preserve">
+    <value>工作流</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>流程</value>
+  </data>
+  <data name="ProcessOwnerRoleListsRowId" xml:space="preserve">
+    <value>流程负责人岗位</value>
+  </data>
+  <data name="Processrelated2Issue" xml:space="preserve">
+    <value>存在的问题</value>
+  </data>
+  <data name="ProductServiceListsRowId" xml:space="preserve">
+    <value>产品、服务</value>
+  </data>
+  <data name="Programs" xml:space="preserve">
+    <value>程序/方案/计划</value>
+  </data>
+  <data name="ProjectDocument" xml:space="preserve">
+    <value>文件名称</value>
+  </data>
+  <data name="ProjectEndDate" xml:space="preserve">
+    <value>项目结束时间</value>
+  </data>
+  <data name="ProjectIsForListsRowId" xml:space="preserve">
+    <value>项目作业模式</value>
+  </data>
+  <data name="ProjectJobTitle" xml:space="preserve">
+    <value>项目管理岗位</value>
+  </data>
+  <data name="ProjectManagedByListsRowId" xml:space="preserve">
+    <value>项目管理者</value>
+  </data>
+  <data name="ProjectManHours" xml:space="preserve">
+    <value>项目工时</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>项目名称</value>
+  </data>
+  <data name="ProjectOwnedByListsRowId" xml:space="preserve">
+    <value>项目所有者</value>
+  </data>
+  <data name="ProjectPhaseListsRowId" xml:space="preserve">
+    <value>项目所处阶段</value>
+  </data>
+  <data name="ProjectReferenceId" xml:space="preserve">
+    <value>项目编号</value>
+  </data>
+  <data name="ProjectRowId" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="ProjectSpecificName" xml:space="preserve">
+    <value>证书名称</value>
+  </data>
+  <data name="ProjectStartDate" xml:space="preserve">
+    <value>项目开始时间</value>
+  </data>
+  <data name="ProjectStatusListsRowId" xml:space="preserve">
+    <value>项目状态</value>
+  </data>
+  <data name="ProposedById" xml:space="preserve">
+    <value>发起人</value>
+  </data>
+  <data name="ProposedMitigations" xml:space="preserve">
+    <value>建议的缓解措施</value>
+  </data>
+  <data name="PTWRequiredSwitch" xml:space="preserve">
+    <value>需要申请作业许可</value>
+  </data>
+  <data name="PublishDateTime" xml:space="preserve">
+    <value>发布日期和时间</value>
+  </data>
+  <data name="PublishStatus" xml:space="preserve">
+    <value>发布状态</value>
+  </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>目的</value>
+  </data>
+  <data name="QualificationFSListsRowId" xml:space="preserve">
+    <value>资质评级（仅限分包商）</value>
+  </data>
+  <data name="Raft" xml:space="preserve">
+    <value>橡皮艇</value>
+  </data>
+  <data name="Ragskgs" xml:space="preserve">
+    <value>布类（千克）</value>
+  </data>
+  <data name="ReasonForExtension" xml:space="preserve">
+    <value>许可延长的理由</value>
+  </data>
+  <data name="ReasonsOrFactsIllustrating" xml:space="preserve">
+    <value>辅助信息</value>
+  </data>
+  <data name="ReasonsToRejectNC" xml:space="preserve">
+    <value>拒绝原因</value>
+  </data>
+  <data name="RecommendedApprover" xml:space="preserve">
+    <value>建议批准人</value>
+  </data>
+  <data name="RecommendedApproverJobTitleListsRowId" xml:space="preserve">
+    <value>批准人</value>
+  </data>
+  <data name="RecommendedReviewerJobTitleListsRowId" xml:space="preserve">
+    <value>评审人</value>
+  </data>
+  <data name="RecoveryMeasures" xml:space="preserve">
+    <value>恢复措施</value>
+  </data>
+  <data name="RecycledGlasskgs" xml:space="preserve">
+    <value>可回收-玻璃（千克）</value>
+  </data>
+  <data name="RecycledGlassM3" xml:space="preserve">
+    <value>可回收-玻璃（立方米）</value>
+  </data>
+  <data name="RecycledHeading" xml:space="preserve">
+    <value>可回收</value>
+  </data>
+  <data name="RecycledMetalkgs" xml:space="preserve">
+    <value>可回收-金属（千克）</value>
+  </data>
+  <data name="RecycledMetalM3" xml:space="preserve">
+    <value>可回收-金属（立方米）</value>
+  </data>
+  <data name="RecycledPaperkgs" xml:space="preserve">
+    <value>可回收-纸类（千克）</value>
+  </data>
+  <data name="RecycledPaperM3" xml:space="preserve">
+    <value>可回收-纸类（立方米）</value>
+  </data>
+  <data name="RecycledPlasticskgs" xml:space="preserve">
+    <value>可回收-塑料（千克）</value>
+  </data>
+  <data name="RecycledPlasticsM3" xml:space="preserve">
+    <value>可回收-塑料（立方米）</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>参考</value>
+  </data>
+  <data name="Reference Id" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ReferencedJSA" xml:space="preserve">
+    <value>相关工作风险评估</value>
+  </data>
+  <data name="ReferencedPolicyListsRowId" xml:space="preserve">
+    <value>相关公司政策</value>
+  </data>
+  <data name="ReferencedProcedure" xml:space="preserve">
+    <value>相关程序</value>
+  </data>
+  <data name="ReferenceID" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ReferenceIdPrefix" xml:space="preserve">
+    <value>编号前缀</value>
+  </data>
+  <data name="ReferenceIdURL" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ReferenceLookup" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="ReferenceTo" xml:space="preserve">
+    <value>参考</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>地区</value>
+  </data>
+  <data name="RegionalOfficeReferenceId" xml:space="preserve">
+    <value>地区分公司编号</value>
+  </data>
+  <data name="RegisteredBy" xml:space="preserve">
+    <value>登记人</value>
+  </data>
+  <data name="RegisteredByPersonnelRowId" xml:space="preserve">
+    <value>发起人</value>
+  </data>
+  <data name="RegisteredDateTime" xml:space="preserve">
+    <value>登记日期和时间</value>
+  </data>
+  <data name="RegulatoryCompliance" xml:space="preserve">
+    <value>遵循标准</value>
+  </data>
+  <data name="RegulatoryPermitRequirements" xml:space="preserve">
+    <value>法规、许可要求描述</value>
+  </data>
+  <data name="RegulatoryPermitRequirementsCompleted" xml:space="preserve">
+    <value>法规/许可要求</value>
+  </data>
+  <data name="RegulatoryPermitRequirementsCompletedById" xml:space="preserve">
+    <value>法规、许可变更完成人</value>
+  </data>
+  <data name="RelationBGPListsId" xml:space="preserve">
+    <value>与BGPO关系</value>
+  </data>
+  <data name="Relationship2Project" xml:space="preserve">
+    <value>与项目的关系</value>
+  </data>
+  <data name="RelevantInformation" xml:space="preserve">
+    <value>相关资料</value>
+  </data>
+  <data name="RemedialActionLookupPath" xml:space="preserve">
+    <value>工作场所</value>
+  </data>
+  <data name="RemedialActionLookupProject" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="RenewalDate" xml:space="preserve">
+    <value>更新日期</value>
+  </data>
+  <data name="ReplyResult" xml:space="preserve">
+    <value>回复</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="ReportDate" xml:space="preserve">
+    <value>报告日期</value>
+  </data>
+  <data name="ReportDateFormatListsRowId" xml:space="preserve">
+    <value>时间范围</value>
+  </data>
+  <data name="ReportDescription" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="ReportDocumentType" xml:space="preserve">
+    <value>报告格式</value>
+  </data>
+  <data name="ReportedDateTime" xml:space="preserve">
+    <value>报告日期和时间</value>
+  </data>
+  <data name="Reporter" xml:space="preserve">
+    <value>报告人</value>
+  </data>
+  <data name="ReporterCheckbox" xml:space="preserve">
+    <value>是否为报告人</value>
+  </data>
+  <data name="ReporterContactInformation" xml:space="preserve">
+    <value>录入人联系信息</value>
+  </data>
+  <data name="ReporterJobTitle" xml:space="preserve">
+    <value>报告人岗位</value>
+  </data>
+  <data name="ReporterJobTitleListsRowId" xml:space="preserve">
+    <value>报告人岗位</value>
+  </data>
+  <data name="ReporterPersonnelRowId" xml:space="preserve">
+    <value>报告人</value>
+  </data>
+  <data name="ReportFile" xml:space="preserve">
+    <value>报告文件</value>
+  </data>
+  <data name="ReportId" xml:space="preserve">
+    <value>报告类型</value>
+  </data>
+  <data name="ReportInstanceDescription" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="ReportTitle" xml:space="preserve">
+    <value>报告标题</value>
+  </data>
+  <data name="ReportURL" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="ReputationCheckbox" xml:space="preserve">
+    <value>声誉</value>
+  </data>
+  <data name="RequestedByPersonnelRowId" xml:space="preserve">
+    <value>申请人</value>
+  </data>
+  <data name="RequestedByRowId" xml:space="preserve">
+    <value>申请人</value>
+  </data>
+  <data name="RequestedDateTime" xml:space="preserve">
+    <value>申请日期和时间</value>
+  </data>
+  <data name="Requestor" xml:space="preserve">
+    <value>申请人</value>
+  </data>
+  <data name="RequestorId" xml:space="preserve">
+    <value>发起人</value>
+  </data>
+  <data name="RequestResponse" xml:space="preserve">
+    <value>需求回应</value>
+  </data>
+  <data name="RequestStatusListsRowId" xml:space="preserve">
+    <value>申请状态</value>
+  </data>
+  <data name="RequiredTraining" xml:space="preserve">
+    <value>所需培训</value>
+  </data>
+  <data name="RescuePlan" xml:space="preserve">
+    <value>救援计划</value>
+  </data>
+  <data name="ResidualImpactAssessmentListsRowId" xml:space="preserve">
+    <value>剩余环境影响评估</value>
+  </data>
+  <data name="ResidualRiskRatingListsRowId" xml:space="preserve">
+    <value>剩余风险等级</value>
+  </data>
+  <data name="ResourceRowId" xml:space="preserve">
+    <value>资产</value>
+  </data>
+  <data name="ResourcesNeeded" xml:space="preserve">
+    <value>需要的资源</value>
+  </data>
+  <data name="ResourceSpecificationStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ResourceStatusListsRowId" xml:space="preserve">
+    <value>资产状态</value>
+  </data>
+  <data name="ResourceUniqueId" xml:space="preserve">
+    <value>资产编码</value>
+  </data>
+  <data name="ResponseBy" xml:space="preserve">
+    <value>应答人</value>
+  </data>
+  <data name="ResponseDate" xml:space="preserve">
+    <value>记录日期</value>
+  </data>
+  <data name="Responsible" xml:space="preserve">
+    <value>负责人</value>
+  </data>
+  <data name="ResponsibleForCompletionJobtitleListsRowId" xml:space="preserve">
+    <value>完成负责人</value>
+  </data>
+  <data name="ResponsibleId" xml:space="preserve">
+    <value>负责</value>
+  </data>
+  <data name="ResponsibleJobTitleListsRowId" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="ResponsibleJobTitleListsRowIdLookup" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="ResponsiblePersonFieldId" xml:space="preserve">
+    <value>负责人姓名</value>
+  </data>
+  <data name="ResponsibleRoleFieldId" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="ResponsibleRoleListsRowId" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="ResponsibleRoleListsRowIdLookup" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="ResponsibleRowId" xml:space="preserve">
+    <value>谁来负责？</value>
+  </data>
+  <data name="ReturnToNormalOperationsDate" xml:space="preserve">
+    <value>恢复日期</value>
+  </data>
+  <data name="ReviewDate" xml:space="preserve">
+    <value>回顾日期</value>
+  </data>
+  <data name="ReviewedById" xml:space="preserve">
+    <value>回顾人</value>
+  </data>
+  <data name="ReviewedByJobTitle" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="ReviewerJobTitle" xml:space="preserve">
+    <value>评审人岗位</value>
+  </data>
+  <data name="ReviewSchedule" xml:space="preserve">
+    <value>回顾计划</value>
+  </data>
+  <data name="RevisionFrequencyListsRowId" xml:space="preserve">
+    <value>回顾频次</value>
+  </data>
+  <data name="RevisionResponsibleRoleListsRowId" xml:space="preserve">
+    <value>修订负责人岗位</value>
+  </data>
+  <data name="Risk" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="RiskAssessment" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="RiskCategoryListsRowId" xml:space="preserve">
+    <value>风险类型</value>
+  </data>
+  <data name="RiskEvaluation" xml:space="preserve">
+    <value>风险评估</value>
+  </data>
+  <data name="RiskLevelInitialInteger" xml:space="preserve">
+    <value>初始风险等级</value>
+  </data>
+  <data name="RiskLevelListsRowId" xml:space="preserve">
+    <value>风险等级</value>
+  </data>
+  <data name="RiskLevelResidualInteger" xml:space="preserve">
+    <value>剩余风险等级</value>
+  </data>
+  <data name="RiskLikelihoodListsRowId" xml:space="preserve">
+    <value>产生负面后果的可能性</value>
+  </data>
+  <data name="RiskRankingInt" xml:space="preserve">
+    <value>风险等级排序</value>
+  </data>
+  <data name="RiskRatingAfterListsRowId" xml:space="preserve">
+    <value>剩余风险等级</value>
+  </data>
+  <data name="RiskRatingListsRowId" xml:space="preserve">
+    <value>风险等级</value>
+  </data>
+  <data name="RiskRevisionStatusListsRowId" xml:space="preserve">
+    <value>回顾状态</value>
+  </data>
+  <data name="RisksHazardsIdentified" xml:space="preserve">
+    <value>识别出的风险和危险源</value>
+  </data>
+  <data name="RoleListsRowId" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="RoleListsRowIdGAListDescription" xml:space="preserve">
+    <value>权限角色</value>
+  </data>
+  <data name="RootCause" xml:space="preserve">
+    <value>根本原因</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>航次</value>
+  </data>
+  <data name="RotationGAListDescription" xml:space="preserve">
+    <value>航次</value>
+  </data>
+  <data name="RotationListsRowId" xml:space="preserve">
+    <value>航次</value>
+  </data>
+  <data name="RowId" xml:space="preserve">
+    <value>行</value>
+  </data>
+  <data name="RvwCrctvActns" xml:space="preserve">
+    <value>整改措施的回顾</value>
+  </data>
+  <data name="RXTContractholderListsRowId" xml:space="preserve">
+    <value>合同所有者</value>
+  </data>
+  <data name="RXTFeedbackGroup" xml:space="preserve">
+    <value>BGPO应对/处理此次抱怨的科室、班组、人员</value>
+  </data>
+  <data name="RXTL2TrainingComplDate" xml:space="preserve">
+    <value>集团公司健康评估有效期</value>
+  </data>
+  <data name="rxtReport.CaptainIsInformed" xml:space="preserve">
+    <value>已通知船长</value>
+  </data>
+  <data name="rxtReport.ClientIsInformed" xml:space="preserve">
+    <value>已通知甲方</value>
+  </data>
+  <data name="rxtReport.rxtReportReferenceId" xml:space="preserve">
+    <value>报告编号</value>
+  </data>
+  <data name="rxtReport.StatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="rxtReportReferenceId" xml:space="preserve">
+    <value>报告编号</value>
+  </data>
+  <data name="SafetyDrillsCount" xml:space="preserve">
+    <value>安全演习</value>
+  </data>
+  <data name="SafetyObservationReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="SAPNumber" xml:space="preserve">
+    <value>SAP号</value>
+  </data>
+  <data name="ScAuditResultsListsRowId" xml:space="preserve">
+    <value>审计结果</value>
+  </data>
+  <data name="ScClassificationMatrixListsRowId" xml:space="preserve">
+    <value>分类矩阵分值</value>
+  </data>
+  <data name="ScopeOfService" xml:space="preserve">
+    <value>所提供商品或服务范畴</value>
+  </data>
+  <data name="SCStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="SeafarerReq" xml:space="preserve">
+    <value>船员相关证书</value>
+  </data>
+  <data name="SeamanbookExp" xml:space="preserve">
+    <value>海员证</value>
+  </data>
+  <data name="SeismicPersonnelCount" xml:space="preserve">
+    <value>物探人员</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="SelectionMethod" xml:space="preserve">
+    <value>选商方式</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>顺序</value>
+  </data>
+  <data name="SequenceNo" xml:space="preserve">
+    <value>序列号</value>
+  </data>
+  <data name="SequenceNumber" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="SequenceOfTheIncident" xml:space="preserve">
+    <value>事件顺序</value>
+  </data>
+  <data name="ServiceDeskPriorityListsRowId" xml:space="preserve">
+    <value>优先级</value>
+  </data>
+  <data name="ServiceDeskStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="SeverityListsRowId" xml:space="preserve">
+    <value>严重性</value>
+  </data>
+  <data name="SeverityOverallRating" xml:space="preserve">
+    <value>严重性</value>
+  </data>
+  <data name="SewageM3" xml:space="preserve">
+    <value>生活污水（立方米）</value>
+  </data>
+  <data name="SexListsRowId" xml:space="preserve">
+    <value>性别</value>
+  </data>
+  <data name="ShortDescription" xml:space="preserve">
+    <value>简述</value>
+  </data>
+  <data name="Shortname" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="SignificanceListsRowId" xml:space="preserve">
+    <value>重要性</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>技能类</value>
+  </data>
+  <data name="SOPHumanFactorListsRowId" xml:space="preserve">
+    <value>人为因素</value>
+  </data>
+  <data name="SOPLockOutListsRowId" xml:space="preserve">
+    <value>上锁挂签</value>
+  </data>
+  <data name="SOPPermitToWorkListsRowId" xml:space="preserve">
+    <value>作业许可</value>
+  </data>
+  <data name="SOPPersonalProtectiveEquipmentListsRowId" xml:space="preserve">
+    <value>PPE</value>
+  </data>
+  <data name="SOPProcedure" xml:space="preserve">
+    <value>参考程序</value>
+  </data>
+  <data name="SOPResponse" xml:space="preserve">
+    <value>反馈</value>
+  </data>
+  <data name="SOPResponsible" xml:space="preserve">
+    <value>负责人 (如选择了负责岗位此处为空)</value>
+  </data>
+  <data name="SOPToolsAndEquipmentListsRowId" xml:space="preserve">
+    <value>工具和设备</value>
+  </data>
+  <data name="SOPTypeOfObservationListsRowId" xml:space="preserve">
+    <value>观察类型</value>
+  </data>
+  <data name="SpecieListsRowId" xml:space="preserve">
+    <value>具体类型</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="StartWorkflow" xml:space="preserve">
+    <value>触发工作流</value>
+  </data>
+  <data name="StatusGAListDescription" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="StatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="STCWExp" xml:space="preserve">
+    <value>STCW/BOSIET有效期</value>
+  </data>
+  <data name="SubContractorAuditRequiredListsRowId" xml:space="preserve">
+    <value>审计频次</value>
+  </data>
+  <data name="SubContractorAuditStatusListsRowId" xml:space="preserve">
+    <value>分包商审计状态</value>
+  </data>
+  <data name="SubcontractorEmailAddress" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="SubcontractorName" xml:space="preserve">
+    <value>供应商、分包商名称</value>
+  </data>
+  <data name="SubContractorProcedure" xml:space="preserve">
+    <value>分包商程序</value>
+  </data>
+  <data name="SubContractorRowId" xml:space="preserve">
+    <value>分包商</value>
+  </data>
+  <data name="SubcontractorViewRowId" xml:space="preserve">
+    <value>分包商、厂家</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="SubjectTypeListsRowId" xml:space="preserve">
+    <value>活动类型</value>
+  </data>
+  <data name="SubVerticalListsRowId" xml:space="preserve">
+    <value>子部门</value>
+  </data>
+  <data name="SuggestedImplementation" xml:space="preserve">
+    <value>建议实施方法</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>总结</value>
+  </data>
+  <data name="SupervisionTitle" xml:space="preserve">
+    <value>负责的主管领导</value>
+  </data>
+  <data name="SupplierRowId" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="SupportProcedure" xml:space="preserve">
+    <value>支持程序</value>
+  </data>
+  <data name="SurvivalExpiryDate" xml:space="preserve">
+    <value>安保有效期</value>
+  </data>
+  <data name="SuspectedCause" xml:space="preserve">
+    <value>可能的原因</value>
+  </data>
+  <data name="Switch" xml:space="preserve">
+    <value>开关</value>
+  </data>
+  <data name="Symptoms" xml:space="preserve">
+    <value>症状</value>
+  </data>
+  <data name="tablename" xml:space="preserve">
+    <value>表名称</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="TaskId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="TaskStatus" xml:space="preserve">
+    <value>任务状态</value>
+  </data>
+  <data name="TaskTemplateId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="TBTCarriedOut" xml:space="preserve">
+    <value>工具箱会议已完成</value>
+  </data>
+  <data name="TBTChecklist" xml:space="preserve">
+    <value>工具箱会议检查表</value>
+  </data>
+  <data name="TBTHeading" xml:space="preserve">
+    <value>如果MOPO分数不大于4请直接到第三部分，如果不小于10请停止作业</value>
+  </data>
+  <data name="TBTReferenceNumber" xml:space="preserve">
+    <value>工具箱会议编号</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>电话号码</value>
+  </data>
+  <data name="TemporaryChangeCompletedById" xml:space="preserve">
+    <value>临时变更完成人</value>
+  </data>
+  <data name="TemporaryRemovalDateOrEvent" xml:space="preserve">
+    <value>恢复日期</value>
+  </data>
+  <data name="TenderReleaseDate" xml:space="preserve">
+    <value>发标日期</value>
+  </data>
+  <data name="TenderSubmissionDate" xml:space="preserve">
+    <value>闭标日期</value>
+  </data>
+  <data name="TestedBy" xml:space="preserve">
+    <value>检测人员/机构</value>
+  </data>
+  <data name="TestedPersonnelRowId" xml:space="preserve">
+    <value>被检测人员</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>说明</value>
+  </data>
+  <data name="TextItem.DateSigned" xml:space="preserve">
+    <value>录入日期</value>
+  </data>
+  <data name="TextItem.SignedBy" xml:space="preserve">
+    <value>录入人</value>
+  </data>
+  <data name="TextStatus" xml:space="preserve">
+    <value>待办事项状态</value>
+  </data>
+  <data name="THSA" xml:space="preserve">
+    <value>危险品使用风险评估</value>
+  </data>
+  <data name="TimeClosed" xml:space="preserve">
+    <value>关闭时间</value>
+  </data>
+  <data name="TimeEnd" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
+  <data name="TimeEndEncounter" xml:space="preserve">
+    <value>观察结束时间（UTC)</value>
+  </data>
+  <data name="TimeOpened" xml:space="preserve">
+    <value>开启时间</value>
+  </data>
+  <data name="TimeStart" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="TimeStartEncounter" xml:space="preserve">
+    <value>观察开始时间（UTC)</value>
+  </data>
+  <data name="TipMOPOScore" xml:space="preserve">
+    <value>如果MOPO分数不高于4分，请直接到第三部分。如果高于10分，请停止作业</value>
+  </data>
+  <data name="TipRequiredMOPO" xml:space="preserve">
+    <value>如果不需要计算MOPO分数，请直接到第二部分</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="ToolboxMeetingsCount" xml:space="preserve">
+    <value>工具箱会议 </value>
+  </data>
+  <data name="ToolboxMeetingsCountComment" xml:space="preserve">
+    <value>工具箱会议补充评论</value>
+  </data>
+  <data name="ToolboxTalk" xml:space="preserve">
+    <value>工具箱会议</value>
+  </data>
+  <data name="TotalNumber" xml:space="preserve">
+    <value>总数</value>
+  </data>
+  <data name="TRA" xml:space="preserve">
+    <value>工作风险评估</value>
+  </data>
+  <data name="TrainingConducted" xml:space="preserve">
+    <value>完成的培训</value>
+  </data>
+  <data name="TrainingInstitutionViewRowId" xml:space="preserve">
+    <value>培训机构</value>
+  </data>
+  <data name="TrainingRequired" xml:space="preserve">
+    <value>是否需要培训</value>
+  </data>
+  <data name="TrainingRequriementsCompletedById" xml:space="preserve">
+    <value>培训完成人</value>
+  </data>
+  <data name="Treatment" xml:space="preserve">
+    <value>治疗记录</value>
+  </data>
+  <data name="TypeIncidentCauseFactorListsRowId" xml:space="preserve">
+    <value>原因类型</value>
+  </data>
+  <data name="TypeOfActionListsRowId" xml:space="preserve">
+    <value>任务类型</value>
+  </data>
+  <data name="TypeOfAuditListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="TypeOfCertificateListsRowId" xml:space="preserve">
+    <value>证书类型</value>
+  </data>
+  <data name="TypeOfChangeRowId" xml:space="preserve">
+    <value>变更类别</value>
+  </data>
+  <data name="TypeOfContractListsRowId" xml:space="preserve">
+    <value>合同类型</value>
+  </data>
+  <data name="TypeOfCostListsRowId" xml:space="preserve">
+    <value>费用类型</value>
+  </data>
+  <data name="TypeOfCourseListsRowId" xml:space="preserve">
+    <value>培训、演习类型</value>
+  </data>
+  <data name="TypeOfDamageListsRowId" xml:space="preserve">
+    <value>损失类型</value>
+  </data>
+  <data name="TypeOfDepartmentListsRowId" xml:space="preserve">
+    <value>部门类型</value>
+  </data>
+  <data name="TypeOfExpCertificateListsRowId" xml:space="preserve">
+    <value>证书类型</value>
+  </data>
+  <data name="TypeOfHazardListsRowId" xml:space="preserve">
+    <value>危险源类型</value>
+  </data>
+  <data name="TypeOfIdListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="TypeOfIncidentListsRowId" xml:space="preserve">
+    <value>事件类型</value>
+  </data>
+  <data name="TypeOfLocationCertificateListsRowId" xml:space="preserve">
+    <value>船舶证书类型</value>
+  </data>
+  <data name="TypeOfLocationListsRowId" xml:space="preserve">
+    <value>工作场所类型</value>
+  </data>
+  <data name="TypeOfMeetingListsRowId" xml:space="preserve">
+    <value>会议类型</value>
+  </data>
+  <data name="TypeOfNonConformanceListsRowId" xml:space="preserve">
+    <value>发现项所属领域</value>
+  </data>
+  <data name="TypeOfObservationListsRowId" xml:space="preserve">
+    <value>观察类型</value>
+  </data>
+  <data name="TypeOfRegistrationListsRowId" xml:space="preserve">
+    <value>注册类型</value>
+  </data>
+  <data name="TypeOfResourceListsRowId" xml:space="preserve">
+    <value>资产类型</value>
+  </data>
+  <data name="TypeOfSeafarerCert" xml:space="preserve">
+    <value>证件类型</value>
+  </data>
+  <data name="TypeOfWorkListsRowId" xml:space="preserve">
+    <value>项目类型</value>
+  </data>
+  <data name="UAUCListsRowId" xml:space="preserve">
+    <value>不安全行为/状态</value>
+  </data>
+  <data name="UnsafeActCheckbox" xml:space="preserve">
+    <value>不安全行为</value>
+  </data>
+  <data name="UnsafeConditionCheckbox" xml:space="preserve">
+    <value>不安全状态</value>
+  </data>
+  <data name="UploadedByPersonnelRowId" xml:space="preserve">
+    <value>上传人</value>
+  </data>
+  <data name="Urgency" xml:space="preserve">
+    <value>优先级</value>
+  </data>
+  <data name="url" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="User.JobTitleGAListDescription" xml:space="preserve">
+    <value>岗位</value>
+  </data>
+  <data name="User.PersonnelRowId" xml:space="preserve">
+    <value>人员</value>
+  </data>
+  <data name="UserCommunityRowId" xml:space="preserve">
+    <value>群组</value>
+  </data>
+  <data name="Validator" xml:space="preserve">
+    <value>验证人</value>
+  </data>
+  <data name="ValueAmount" xml:space="preserve">
+    <value>标的金额</value>
+  </data>
+  <data name="ValueDecided" xml:space="preserve">
+    <value>是否明确标的金额</value>
+  </data>
+  <data name="VehicleTypeListsRowId" xml:space="preserve">
+    <value>车辆类型</value>
+  </data>
+  <data name="VenCategory" xml:space="preserve">
+    <value>供方类型</value>
+  </data>
+  <data name="VendorAddress" xml:space="preserve">
+    <value>供方地址</value>
+  </data>
+  <data name="VendorContact" xml:space="preserve">
+    <value>供方联系人</value>
+  </data>
+  <data name="VendorContactEmail" xml:space="preserve">
+    <value>供方联系人邮件地址</value>
+  </data>
+  <data name="VendorContactPosition" xml:space="preserve">
+    <value>供方联系人职位</value>
+  </data>
+  <data name="VendorInProject" xml:space="preserve">
+    <value>外部供方名称（如果是）</value>
+  </data>
+  <data name="VendorList" xml:space="preserve">
+    <value>合同相对人</value>
+  </data>
+  <data name="VendorName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="VendorReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="VendorRequestStatusListsRowId" xml:space="preserve">
+    <value>申请状态</value>
+  </data>
+  <data name="VendorScore" xml:space="preserve">
+    <value>分数</value>
+  </data>
+  <data name="VenturesKPIResponsibleJobTitleListsRowId" xml:space="preserve">
+    <value>负责人岗位</value>
+  </data>
+  <data name="VerificationActivity" xml:space="preserve">
+    <value>验证活动和验证主要目标</value>
+  </data>
+  <data name="VerificationHeading" xml:space="preserve">
+    <value>验证活动和验证主要目标</value>
+  </data>
+  <data name="VerificationSource" xml:space="preserve">
+    <value>风险来源</value>
+  </data>
+  <data name="VerifiedByJobTitleListsRowId" xml:space="preserve">
+    <value>验证人岗位</value>
+  </data>
+  <data name="VerifiedByPersonnelRowId" xml:space="preserve">
+    <value>验证人</value>
+  </data>
+  <data name="VerifiedDate" xml:space="preserve">
+    <value>验证日期</value>
+  </data>
+  <data name="VerifiedDateTime" xml:space="preserve">
+    <value>验证日期和时间</value>
+  </data>
+  <data name="VersionNo" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="VerticalListsRowId" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="VesselDirectionListsRowId" xml:space="preserve">
+    <value>船舶航向</value>
+  </data>
+  <data name="VibrationMagnitude" xml:space="preserve">
+    <value>震动量级</value>
+  </data>
+  <data name="VisitAddress" xml:space="preserve">
+    <value>地点</value>
+  </data>
+  <data name="VisitPurpose" xml:space="preserve">
+    <value>目的</value>
+  </data>
+  <data name="VisitTypeListsId" xml:space="preserve">
+    <value>走访类型</value>
+  </data>
+  <data name="VoyageTypeListsRowId" xml:space="preserve">
+    <value>船舶动态</value>
+  </data>
+  <data name="W2SIncineratorAshesM3" xml:space="preserve">
+    <value>送岸垃圾-焚烧炉灰（立方米）</value>
+  </data>
+  <data name="W2SLandfillHeading" xml:space="preserve">
+    <value>送岸垃圾-填埋</value>
+  </data>
+  <data name="W2SOilyInclude cooking oilM3" xml:space="preserve">
+    <value>送岸垃圾-含油废物(包括食用油)(立方米)</value>
+  </data>
+  <data name="W2SPlasticsM3" xml:space="preserve">
+    <value>送岸垃圾-塑料（立方米）</value>
+  </data>
+  <data name="W2SRecyclablesHeading" xml:space="preserve">
+    <value>送岸垃圾-可回收</value>
+  </data>
+  <data name="Waste2ShoreHeading" xml:space="preserve">
+    <value>送岸垃圾</value>
+  </data>
+  <data name="WaterDepthM" xml:space="preserve">
+    <value>水深</value>
+  </data>
+  <data name="WBPersonCategory" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="WebAddress" xml:space="preserve">
+    <value>网址</value>
+  </data>
+  <data name="WebAddressName" xml:space="preserve">
+    <value>网址</value>
+  </data>
+  <data name="WelderExp" xml:space="preserve">
+    <value>焊工证有效期</value>
+  </data>
+  <data name="WhatActuallyHappened" xml:space="preserve">
+    <value>期望实现情况</value>
+  </data>
+  <data name="WhatBGPneedImprovedMost" xml:space="preserve">
+    <value>BGP最需要提高的地方</value>
+  </data>
+  <data name="WhatCouldBeImprovedAndWhy" xml:space="preserve">
+    <value>哪些方面需要提高，为什么这些方面需要提高</value>
+  </data>
+  <data name="WhatDidYouDo" xml:space="preserve">
+    <value>您做了什么？</value>
+  </data>
+  <data name="WhatDidYouDoNC" xml:space="preserve">
+    <value>您采取的纠正措施是什么？</value>
+  </data>
+  <data name="WhatDidYouSee" xml:space="preserve">
+    <value>您看到了什么？</value>
+  </data>
+  <data name="WhatDoYouRecommend" xml:space="preserve">
+    <value>您的建议？</value>
+  </data>
+  <data name="WhatIsTheNonConformity" xml:space="preserve">
+    <value>您发现了什么？</value>
+  </data>
+  <data name="Whatisverified" xml:space="preserve">
+    <value>验证内容</value>
+  </data>
+  <data name="WhatWasSupposedToHappen" xml:space="preserve">
+    <value>甲方的期望</value>
+  </data>
+  <data name="WhatWentWellAndWhy" xml:space="preserve">
+    <value>哪些方面做得好，为什么在这些方面做得好</value>
+  </data>
+  <data name="WhereBGPneedImprovedMost" xml:space="preserve">
+    <value>BGP最需要在哪些方面进行提升？</value>
+  </data>
+  <data name="WhereToFindDocument" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="Witness" xml:space="preserve">
+    <value>证人</value>
+  </data>
+  <data name="WorkAreaListsRowId" xml:space="preserve">
+    <value>工作区域</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>工作经验</value>
+  </data>
+  <data name="WorkflowCategoryListsRowId" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="WorkflowDefaultDescription" xml:space="preserve">
+    <value>工作流默认描述</value>
+  </data>
+  <data name="WorkflowDefaultSubject" xml:space="preserve">
+    <value>工作流默认主题</value>
+  </data>
+  <data name="WorkflowDueDate" xml:space="preserve">
+    <value>工作流到期日</value>
+  </data>
+  <data name="WorkFlowId" xml:space="preserve">
+    <value>工作流、程序</value>
+  </data>
+  <data name="WorkflowLastStartedDateTime" xml:space="preserve">
+    <value>工作流上一次启动时间</value>
+  </data>
+  <data name="Workflowname" xml:space="preserve">
+    <value>工作流名称</value>
+  </data>
+  <data name="WorkflowNextStartDateTime" xml:space="preserve">
+    <value>工作流下一次启动时间</value>
+  </data>
+  <data name="WorkflowNotStarted" xml:space="preserve">
+    <value>工作流还未启动</value>
+  </data>
+  <data name="WorkflowRowId" xml:space="preserve">
+    <value>工作流</value>
+  </data>
+  <data name="WorkflowStarted" xml:space="preserve">
+    <value>工作流已启动</value>
+  </data>
+  <data name="WorkflowStarterRunFrequencyListsRowId" xml:space="preserve">
+    <value>工作流启动频率</value>
+  </data>
+  <data name="WorkflowStarterStatusListsRowId" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="WorkInstructionforTask" xml:space="preserve">
+    <value>相关作业指导书</value>
+  </data>
+  <data name="Workitem.extra" xml:space="preserve">
+    <value>负责</value>
+  </data>
+  <data name="Workitem.HistoryLog" xml:space="preserve">
+    <value>待办事项备注</value>
+  </data>
+  <data name="Workitem.Notes" xml:space="preserve">
+    <value>待办事项说明</value>
+  </data>
+  <data name="Workitem.Subject" xml:space="preserve">
+    <value>待办事项主题</value>
+  </data>
+  <data name="WorkitemNotes" xml:space="preserve">
+    <value>待办事项说明</value>
+  </data>
+  <data name="WorkitemResponsible" xml:space="preserve">
+    <value>指派到</value>
+  </data>
+  <data name="workitemstatus" xml:space="preserve">
+    <value>待办事项状态</value>
+  </data>
+  <data name="WorkitemSubject" xml:space="preserve">
+    <value>待办事项简述</value>
+  </data>
+  <data name="workitemType" xml:space="preserve">
+    <value>待办事项类型</value>
+  </data>
+  <data name="WorkLoad" xml:space="preserve">
+    <value>工作量</value>
+  </data>
+  <data name="WorkLocation" xml:space="preserve">
+    <value>工作地点</value>
+  </data>
+  <data name="WorkReferenceId" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="WorkResponsible" xml:space="preserve">
+    <value>负责人</value>
+  </data>
+  <data name="WorkStatus" xml:space="preserve">
+    <value>任务状态</value>
+  </data>
+  <data name="YearsOffshoreEx" xml:space="preserve">
+    <value>海上工作年限</value>
+  </data>
+  <data name="YearsWorked" xml:space="preserve">
+    <value>工作年限</value>
+  </data>
+</root>

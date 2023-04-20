@@ -1,0 +1,2611 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadInput.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.DateFormatParser">
+            <summary>
+            Summary description for DateFormatParser.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.DateRangeValidation">
+            <summary>
+            DateInputRangeValidation describes the method used when enforcing that the
+            selected date is within the MinDate-MaxDate bounds.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.DateRangeValidation.Immediate">
+            <summary>
+            The constraints are applied immediately. The control will not allow the user to
+            enter a date that is outside the preset range.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.DateRangeValidation.OnBlur">
+            <summary>
+            The constraints are applied when the control loses focus. It will be possible to
+            enter a date outside the range, but it will be truncated later.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadDateInput">
+            <summary>
+            A control which ensures the date entered by the user is verified and
+            accurate.
+            </summary>
+            <example>
+                The following example demonstrates how to dynamically add
+                <see cref="T:Telerik.WebControls.RadDateInput">RadDateInput</see> to the page. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e) 
+            { 
+                RadDateInput dateInput = new RadDateInput();
+                dateInput.ID = "dateInput";
+                dateInput.Format = "d"; //Short date format
+                dateInput.Culture = new CultureInfo("en-US");
+                dateInput.SelectedDate = DateTime.Now;
+                
+                DateInputPlaceholder.Controls.Add(dateInput);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim dateInput As New RadDateInput()
+                dateInput.ID = "dateInput"
+                dateInput.Format = "d" 'Short Date Format
+                dateInput.Culture = New CultureInfo("en-US")
+                dateInput.SelectedDate = DateTime.Now
+                
+                DateInputPlaceholder.Controls.Add(dateInput)
+            End Sub
+                </code>
+            </example>
+            <remarks>
+                You need to set the <see cref="P:Telerik.WebControls.RadDateInput.DateFormat">DateFormat Property</see> to specify the
+                relevant format for the date. You can also specify the culture information by
+                setting the <see cref="P:Telerik.WebControls.RadDateInput.Culture">Culture Property</see>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.RadInputUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadInputUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadInputControl.Focus">
+            <summary>Sets input focus to a RadInput.</summary>
+            <remarks>
+            	<para>Use the Focus method to set the initial focus of the Web page to the
+                RadInput. The page will be opened in the browser with the control
+                selected.</para>
+            	<para>The Focus method causes a call to the page focus script to be emitted on the
+                rendered page. If the page does not contain a control with an HTML ID attribute
+                that matches the control that the Focus method was invoked on, then page focus will
+                not be set. An example where this can occur is when you set the focus on a user
+                control instead of setting the focus on a child control of the user control. In
+                this scenario, you can use the FindControl method to find the child control of the
+                user control and invoke its Focus method.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="E:Telerik.WebControls.RadInputControl.ChildrenCreated">
+            <summary>
+            	Occurs after all child controls of the RadDateInput control have been created.
+            	You can customize the control there, and add additional child controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.Label">
+            <summary>
+            Gets or sets the text of the <label>tag rendered along with RadInput
+            control.</label>
+            </summary>
+            <value>
+            A string used as a label for the control. The default value is empty string
+            ("").
+            </value>
+            <remarks>
+            If the value of this property has not been set, a tag will not be rendered. Keep
+            in mind that accessibility standards require labels for all input controls.
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <example>
+            	<para>The following code example demonstrates how to use the Label property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;  <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>
+            &lt;head&gt;<br/>
+                &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>
+            		<br/>        protected void RadTextBox1_TextChanged(object sender, EventArgs e)<br/>
+                    {<br/>            this.RadTextBox1.Label = this.RadTextBox1.Text;<br/>        }<br/>&lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>
+                        RadTextBox Example<br/>        &lt;/h3&gt;<br/>
+                    &lt;radI:RadTextBox ID="RadTextBox1" AutoPostBack="true" EmptyMessage="Type Here" Label="Default Label: " runat="server" OnTextChanged="RadTextBox1_TextChanged"&gt;<br/>
+                    &lt;/radI:RadTextBox&gt;<br/>
+            		<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.LabelCssClass">
+            <summary>
+            Gets or sets the CSS class applied to the tag rendered along with RadInput
+            control.
+            </summary>
+            <value>
+            A string used specifying the CSS class of the label of the control. The default
+            value is empty string ("").
+            </value>
+            <remarks><para>This property is applicable only if the Label property has been set.</para></remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.AutoPostBack">
+            <summary>
+            Gets or sets a value indicating whether an automatic post back to the server
+            occurs whenever the user presses the ENTER or the TAB key while in the RadInput
+            control.
+            </summary>
+            <remarks>
+            Use the AutoPostBack property to specify whether an automatic post back to the
+            server will occur whenever the user presses the ENTER or the TAB key while in the
+            RadInput control.
+            </remarks>
+            <value>
+            true if an automatic postback occurs whenever the user presses the ENTER or the
+            TAB key while in the RadInput control; otherwise, false. The default is
+            false.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to use the AutoPostBack property
+                to automatically display the sum of the values entered in the RadTextBoxes when the
+                user presses the ENTER or the TAB key.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;  <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>      protected void Page_Load(Object sender, EventArgs e)<br/>      {<br/>         int Answer;<br/>
+            		<br/>         // Due to a timing issue with when page validation occurs, call the<br/>
+                     // Validate method to ensure that the values on the page are valid.<br/>         Page.Validate();<br/>
+            		<br/>         // Add the values in the text boxes if the page is valid.<br/>         if(Page.IsValid)<br/>         {<br/>            Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text);<br/>
+            		<br/>            AnswerMessage.Text = Answer.ToString();<br/>         }<br/>
+            		<br/>      }<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            RadTextBox Example<br/>
+                    &lt;/h3&gt;<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>                    Enter integer values into the text boxes.<br/>
+                                &lt;br /&gt;<br/>                    The two values are automatically added<br/>                    &lt;br /&gt;<br/>                    when you tab out of the text boxes.<br/>
+                                &lt;br /&gt;<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" AutoPostBack="True" Text="1" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+                                +<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" AutoPostBack="True" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>                        ErrorMessage="Please enter a value.&lt;br /&gt;" EnableClientScript="False" Display="Dynamic"<br/>
+                                    runat="server" /&gt;<br/>                    &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    EnableClientScript="False" Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td colspan="2"&gt;<br/>                    &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" EnableClientScript="False" Display="Dynamic"<br/>                        runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>                        MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    EnableClientScript="False" Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &amp;nbsp<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>
+                &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+            	</pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/><br/>&lt;!DOCTYPE html Public "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/><br/>    &lt;script runat="server"&gt;<br/><br/>
+                  Protected Sub Page_Load(sender As Object, e As EventArgs)<br/><br/>         Dim Answer As Integer<br/><br/>         ' Due to a timing issue with when page validation occurs, call the<br/>         ' Validate method to ensure that the values on the page are valid.<br/>
+                     Page.Validate()<br/><br/>         ' Add the values in the text boxes if the page is valid.<br/>         If Page.IsValid Then<br/><br/>            Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text)<br/><br/>
+                        AnswerMessage.Text = Answer.ToString()<br/><br/>         End If<br/><br/>      End Sub<br/>    &lt;/script&gt;<br/><br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>
+                        RadTextBox Example<br/>        &lt;/h3&gt;<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>
+                            &lt;td colspan="5"&gt;<br/>                    Enter Integer values into the text boxes.<br/>
+                                &lt;br /&gt;<br/>                    The two values are automatically added<br/>
+                                &lt;br /&gt;<br/>                    When you tab out of the text boxes.<br/>
+                                &lt;br /&gt;<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>
+                        &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/><br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" AutoPostBack="True" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" AutoPostBack="True" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" EnableClientScript="False" Display="Dynamic"<br/>
+                                    runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    EnableClientScript="False" Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" EnableClientScript="False" Display="Dynamic"<br/>
+                                    runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    EnableClientScript="False" Display="Dynamic" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &amp;nbsp<br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.CausesValidation">
+            <summary>
+            Gets or sets a value indicating whether validation is performed when the
+            RadInput control is set to validate when a postback occurs.
+            </summary>
+            <value>
+            true if validation is performed when the RadInput control is set to validate
+            when a postback occurs; otherwise, false. The default value is false.
+            </value>
+            <remarks>
+            	<para>Use the CausesValidation property to determine whether validation is
+                performed on both the client and the server when a RadInput control is set to
+                validate when a postback occurs. Page validation determines whether the input
+                controls associated with a validation control on the page all pass the validation
+                rules specified by the validation control.</para>
+            	<para>By default, a RadInput control does not cause page validation when the
+                control loses focus. To set the RadInput control to validate when a postback
+                occurs, set the CausesValidation property to true and the AutoPostBack property to
+                true.</para>
+            	<para>When the value of the CausesValidation property is set to true, you can also
+                use the ValidationGroup property to specify the name of the validation group for
+                which the RadInput control causes validation.</para>
+            	<para>This property cannot be set by themes or style sheet themes.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.MaxLength">
+            <summary>Gets or sets the maximum number of characters allowed in the text box.</summary>
+            <value>
+            The maximum number of characters allowed in the text box. The default is 0, which
+            indicates that the property is not set.
+            </value>
+            <remarks>
+            Use the MaxLength property to limit the number of characters that can be entered
+            in the RadInput control. This property cannot be set by themes or style sheet
+            themes. For more information, see ThemeableAttribute and Introduction to ASP.NET
+            Themes.
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the MaxLength property to
+                limit the number of characters allowed in the RadTextBox control to 3. This example
+                has a RadTextBox that accepts user input, which is a potential security threat. By
+                default, ASP.NET Web pages validate that user input does not include script or HTML
+                elements.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;  <br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+                &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>        protected void AddButton_Click(Object sender, EventArgs e)<br/>        {<br/>
+                        int Answer;<br/>
+            		<br/>            Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text);<br/>
+            		<br/>            AnswerMessage.Text = Answer.ToString();<br/>
+            		<br/>        }<br/>
+            		<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>
+                    &lt;h3&gt;<br/>            RadTextBox Example<br/>        &lt;/h3&gt;<br/>        &lt;table&gt;<br/>
+                        &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>                    Enter integer values into the text boxes.<br/>
+                                &lt;br /&gt;<br/>                    Click the Add button to add the two values.<br/>
+                                &lt;br /&gt;<br/>                    Click the Reset button to reset the text boxes.<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>
+            
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>
+                            &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+                                &amp;nbsp<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>
+                            &lt;td colspan="4"&gt;<br/>                    &lt;asp:Button ID="AddButton" Text="Add" OnClick="AddButton_Click" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+            	</pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;<br/><br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>
+            &lt;!DOCTYPE html Public "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>
+            &lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/><br/>    &lt;script runat="server"&gt;<br/><br/>
+                  Protected Sub AddButton_Click(sender As Object, e As EventArgs)<br/><br/>         Dim Answer As Integer<br/><br/>
+                     Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text)<br/><br/>         AnswerMessage.Text = Answer.ToString()<br/>
+            <br/>      End Sub<br/><br/>    &lt;/script&gt;<br/><br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>
+                    &lt;h3&gt;<br/>            RadTextBox Example<br/>        &lt;/h3&gt;<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>
+                            &lt;td colspan="5"&gt;<br/>                    Enter Integer values into the text boxes.<br/>
+                                &lt;br /&gt;<br/>                    Click the Add button To add the two values.<br/> 
+                               &lt;br /&gt;<br/>                    Click the Reset button To reset the text boxes.<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/><br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &amp;nbsp<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>
+                        &lt;tr align="center"&gt;<br/>                &lt;td colspan="4"&gt;<br/>
+                                &lt;asp:Button ID="AddButton" Text="Add" OnClick="AddButton_Click" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/><br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.ReadOnly">
+            <summary>
+            Gets or sets a value indicating whether the contents of the RadInput control
+            can be changed.
+            </summary>
+            <value>
+            true if the contents of the RadInput control cannot be changed; otherwise,
+            false. The default value is false.
+            </value>
+            <remarks>
+            Use the ReadOnly property to specify whether the contents of the RadInput
+            control can be changed. Setting this property to true will prevent users from entering
+            a value or changing the existing value. Note that the user of the RadInput control
+            cannot change this property; only the developer can. The Text value of a RadInput
+            control with the ReadOnly property set to true is sent to the server when a postback
+            occurs, but the server does no processing for a read-only RadInput. This prevents a
+            malicious user from changing a Text value that is read-only. The value of the Text
+            property is preserved in the view state between postbacks unless modified by
+            server-side code. This property cannot be set by themes or style sheet themes.
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the ReadOnly property to
+                prevent any changes to the text displayed in the RadTextBox control. This example
+                has a RadTextBox that accepts user input, which is a potential security threat. By
+                default, ASP.NET Web pages validate that user input does not include script or HTML
+                elements.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;  <br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+                &lt;title&gt;MultiLine TextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>        protected void SubmitButton_Click(Object sender, EventArgs e)<br/>
+                    {<br/>
+            		<br/>            Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text;<br/>
+            		<br/>        }<br/>
+            		<br/>        protected void Check_Change(Object sender, EventArgs e)<br/>        {<br/>
+            		<br/>            Comment.Wrap = WrapCheckBox.Checked;<br/>            Comment.ReadOnly = ReadOnlyCheckBox.Checked;<br/>
+            		<br/>        }<br/>
+            		<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>
+                        MultiLine TextBox Example<br/>        &lt;/h3&gt;<br/>        Please enter a comment and click the submit button.<br/>
+                    &lt;br /&gt;<br/>        &lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;<br/>
+                    &lt;br /&gt;<br/>        &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"<br/>
+                        ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"<br/>
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"<br/>
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;<br/>
+                    &lt;hr /&gt;<br/>        &lt;asp:Label ID="Message" runat="server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>
+            &lt;/html&gt;
+                </pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;  <br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+                &lt;title&gt;MultiLine RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>      Protected Sub SubmitButton_Click(sender As Object, e As EventArgs )<br/>
+            		<br/>         Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text<br/>
+            		<br/>      End Sub<br/>
+            		<br/>      Protected Sub Check_Change(sender As Object, e As EventArgs )<br/>
+            		<br/>         Comment.Wrap = WrapCheckBox.Checked<br/>         Comment.ReadOnly = ReadOnlyCheckBox.Checked<br/>
+            		<br/>      End Sub<br/>
+            		<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>
+                        MultiLine RadTextBox Example<br/>        &lt;/h3&gt;<br/>        Please enter a comment and click the submit button.<br/>
+                    &lt;br /&gt;<br/>        &lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;<br/>
+                    &lt;br /&gt;<br/>        &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"<br/>
+                        ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"<br/>
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"<br/>
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;<br/>
+                    &lt;hr /&gt;<br/>        &lt;asp:Label ID="Message" runat="server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>
+            &lt;/html&gt;
+                </pre>
+            </example>
+            <notes>
+            This example has a text box that accepts user input, which is a potential
+            security threat. By default, ASP.NET Web pages validate that user input does not
+            include script or HTML elements.
+            </notes>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.EmptyMessage">
+            <summary>Gets or sets a value message shown when the control is empty.</summary>
+            <value>
+            A string specifying the empty message. The default value is empty string.
+            ("").
+            </value>
+            <remarks>
+            Shown when the control is empty and loses focus. You can set the empty message
+            text through EmptyMessage property.
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to set an empty message in code
+                behind:</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;  <br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head runat="server"&gt;<br/>
+                &lt;title&gt;Untitled Page&lt;/title&gt;<br/>    &lt;script runat="server"&gt;    <br/>
+                    protected void Button1_Click(object sender, EventArgs e)<br/>        {<br/>
+                        RadNumericTextBox1.EmptyMessage = RadNumericTextBox1.Text;<br/>            RadNumericTextBox1.Text = String.Empty;            <br/>
+                    }<br/>&lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>
+                    &lt;radI:RadTextBox EmptyMessage="Type Here" ID="RadNumericTextBox1" runat="server"&gt;<br/>
+                    &lt;/radI:RadTextBox&gt;<br/>
+                    &lt;asp:Button ID="Button1" runat="server" Text="Set Empty Message" OnClick="Button1_Click" /&gt;<br/>
+                &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+            	</pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" /%&gt;<br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>
+            &lt;!DOCTYPE html Public "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>
+            <br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head id="Head1" runat="server"&gt;<br/>
+                &lt;title&gt;Untitled Page&lt;/title&gt;<br/>    &lt;script runat="server"&gt;<br/>
+                Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click<br/>
+                        RadNumericTextBox1.EmptyMessage = RadNumericTextBox1.Text<br/>            RadNumericTextBox1.Text = String.Empty<br/>
+                End Sub<br/>    &lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>
+                    &lt;radI:RadTextBox EmptyMessage="Type Here" ID="RadNumericTextBox1" runat="server"&gt;<br/>
+                    &lt;/radI:RadTextBox&gt;<br/>        &lt;asp:Button ID="Button1" runat="server" Text="Set Empty Message" /&gt;<br/>
+                &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.SelectionOnFocus">
+            <summary>Gets or sets the selection on focus options for the RadInput control</summary>
+            <value>
+            	<para>A Telerik.WebControls.SelectionOnFocus object that represents the selection on
+                focus in RadInput control. The default value is "None".</para>
+            	<list type="bullet">
+            		<item>None</item>
+            		<item>CaretToBeginning</item>
+            		<item>CaretToEnd</item>
+            		<item>SelectAll</item>
+            	</list>
+            </value>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <remarks>
+            	<para>Use this property to provide selection on focus of RadInput control. You
+                can set one of the following values:</para>
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to set the SelectionOnFocus property
+                from DropDownList:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;  <br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head id="Head1" runat="server"&gt;<br/>
+                &lt;title&gt;RadTextBox selection&lt;/title&gt;<br/>    &lt;script runat="server"&gt;<br/>
+                protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)<br/>    {<br/>
+                    if (DropDownList1.SelectedValue == "CaretToBeginning")<br/>        {<br/>
+                        this.RadTextBox1.SelectionOnFocus = Telerik.WebControls.SelectionOnFocus.CaretToBeginning;<br/>
+                    }<br/>        else if (DropDownList1.SelectedValue == "CaretToEnd")<br/>        {<br/>
+                        this.RadTextBox1.SelectionOnFocus = Telerik.WebControls.SelectionOnFocus.CaretToEnd;<br/>
+                    }<br/>        else if (DropDownList1.SelectedValue == "SelectAll")<br/>        {<br/>
+                        this.RadTextBox1.SelectionOnFocus = Telerik.WebControls.SelectionOnFocus.SelectAll;<br/>
+                    }<br/>    }<br/>    &lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>
+                &lt;form id="form1" runat="server"&gt;<br/>    &lt;div&gt;<br/>
+                    &lt;radI:RadTextBox SelectionOnFocus="CaretToBeginning" ID="RadTextBox1" runat="server"&gt;&lt;/radI:RadTextBox&gt;<br/>
+                    &lt;br /&gt;<br/>
+                    &lt;asp:DropDownList AutoPostBack="true" ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"&gt;<br/>
+                        &lt;asp:ListItem Text="CaretToBeginning"&gt;CaretToBeginning&lt;/asp:ListItem&gt;<br/>
+                        &lt;asp:ListItem Text="CaretToEnd"&gt;CaretToEnd&lt;/asp:ListItem&gt;<br/>
+                        &lt;asp:ListItem Text="SelectAll"&gt;SelectAll&lt;/asp:ListItem&gt;<br/>
+                    &lt;/asp:DropDownList&gt;&lt;/div&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.ClientEvents">
+            <summary>
+            Gets or sets an instance of the Telerik.WebControls.InputClientEvents class which defines 
+            the JavaScript functions (client-side event handlers) that are invoked when specific client-side events are raised.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.ShowButton">
+            <summary>
+            Gets or sets a value indicating whether the button is displayed in the
+            RadInput control.
+            </summary>
+            <value>
+            true if the button is displayed; otherwise, false. The default value is true,
+            however this property is only examined when the ButtonTemplate property is not a null
+            reference (Nothing in Visual Basic).
+            </value>
+            <remarks>
+            	<para>Use the ShowButton property to specify whether the button is displayed in the
+                RadInput control.</para>
+            	<para>The contents of the button are controlled by the ButtonTemplate
+                property.</para>
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the ShowButton property to
+                display the button in the RadInput control.</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;    <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;    <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; <br/>
+            
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt; <br/>&lt;head id="Head1" runat="server"&gt; <br/>
+                &lt;title&gt;Untitled Page&lt;/title&gt; <br/>
+                &lt;script language="javascript" type="text/javascript"&gt; <br/>    function Click(sender) <br/>    { <br/>
+                    alert("click"); <br/>    } <br/>    &lt;/script&gt; <br/>&lt;/head&gt; <br/>&lt;body&gt; <br/>
+                &lt;form id="form1" runat="server"&gt; <br/>
+                    &lt;radI:RadTextBox ShowButton="true" ID="RadNumericTextBox1" runat="server"&gt; <br/>
+                        &lt;ClientEvents OnButtonClick="Click" /&gt; <br/>            &lt;ButtonTemplate&gt; <br/>
+                            &lt;input type="button" value="click here"  /&gt; <br/>            &lt;/ButtonTemplate&gt; <br/>
+                    &lt;/radI:RadTextBox&gt; <br/>    &lt;/form&gt; <br/>&lt;/body&gt; <br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.ButtonsPosition">
+            <summary>
+            Gets or sets a value that indicates whether the button should be positioned left or right of the RadInput box.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.Text">
+            <summary>Gets or sets the text content of the RadInput control.</summary>
+            <value>
+            The text displayed in the RadInput control. The default is an empty string
+            ("").
+            </value>
+            <remarks>
+            	<para>Use the Text property to specify or determine the text displayed in the
+                RadInput control. To limit the number of characters accepted by the control, set
+                the MaxLength property. If you want to prevent the text from being modified, set
+                the ReadOnly property.</para>
+            	<para>The value of this property, when set, can be saved automatically to a
+                resource file by using a designer tool.</para>
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the Text property to
+                specify the text displayed in the RadTextBox control.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;  <br/>
+            &lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+                &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>
+            		<br/>        protected void AddButton_Click(object sender, EventArgs e)<br/>        {<br/> 
+                       int Answer;<br/>
+            		<br/>            Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text);<br/>
+            		<br/>            AnswerMessage.Text = Answer.ToString();<br/>        }<br/>&lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>
+                        RadTextBox Example<br/>        &lt;/h3&gt;<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>
+                            &lt;td colspan="5"&gt;<br/>                    Enter integer values into the text boxes.<br/>
+                                &lt;br /&gt;<br/>                    Click the Add button to add the two values.<br/>
+                                &lt;br /&gt;<br/>                    Click the Reset button to reset the text boxes.<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+                                &amp;nbsp<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>
+                            &lt;td colspan="4"&gt;<br/>
+                                &lt;asp:Button ID="AddButton" Text="Add" OnClick="AddButton_Click" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>
+            &lt;/html&gt;
+                </pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>
+            &lt;!DOCTYPE html Public "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+                &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/><br/>    &lt;script runat="server"&gt;<br/><br/>
+                  Protected Sub AddButton_Click(sender As Object, e As EventArgs)<br/><br/>         Dim Answer As Integer<br/><br/>
+                     Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text)<br/><br/>
+                     AnswerMessage.Text = Answer.ToString()<br/><br/>      End Sub<br/><br/>    &lt;/script&gt;<br/><br/>&lt;/head&gt;<br/>
+            &lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            RadTextBox Example<br/>
+                    &lt;/h3&gt;<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/> 
+                               Enter Integer values into the text boxes.<br/>                    &lt;br /&gt;<br/>
+                                Click the Add button To add the two values.<br/>                    &lt;br /&gt;<br/>
+                                Click the Reset button To reset the text boxes.<br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/><br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td colspan="2"&gt;<br/>
+                                &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &amp;nbsp<br/>
+                            &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td colspan="4"&gt;<br/>
+                                &lt;asp:Button ID="AddButton" Text="Add" OnClick="AddButton_Click" runat="server" /&gt;<br/>
+                            &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/><br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.ValidationGroup">
+            <summary>
+            Gets or sets the group of controls for which the ra.a.d.input control causes
+            validation when it posts back to the server.
+            </summary>
+            <value>
+            The group of controls for which the RadInput control causes validation when it
+            posts back to the server. The default value is an empty string ("").
+            </value>
+            <remarks>
+            	<para>Validation groups allow you to assign validation controls on a page to a
+                specific category. Each validation group can be validated independently from other
+                validation groups on the page. Use the ValidationGroup property to specify the name
+                of the validation group for which the RadInput control causes validation when it
+                posts back to the server.</para>
+            	<para>This property has an effect only when the CausesValidation property is set to
+                true. When you specify a value for the ValidationGroup property, only the
+                validation controls that are part of the specified group are validated when the
+                RadInput control posts back to the server. If you do not specify a value for
+                this property and the CausesValidation property is set to true, all validation
+                controls on the page that are not assigned to a validation group are validated when
+                the control posts back to the server.</para>
+            	<para>This property cannot be set by themes or style sheet themes.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.EmptyMessageStyle">
+            <summary>
+            	<para>Gets the style properties for RadInput when when the control is
+                empty.</para>
+            </summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for RadInput control. The default value is an empty TextBoxStyle object.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to set EmptyMessageStyle
+                property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;    <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;   <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; <br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt; <br/>&lt;head runat="server"&gt; <br/>    &lt;title&gt;Untitled Page&lt;/title&gt; <br/>
+            &lt;/head&gt; <br/>&lt;body&gt; <br/>    &lt;form id="form1" runat="server"&gt; <br/>
+                    &lt;radI:RadTextBox EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt; <br/>
+                        &lt;EnabledStyle BackColor="red" /&gt; <br/>            &lt;EmptyMessageStyle BackColor="AliceBlue" /&gt; <br/>
+                        &lt;FocusedStyle BackColor="yellow" /&gt; <br/>            &lt;HoveredStyle BackColor="blue" /&gt; <br/>
+                    &lt;/radI:RadTextBox&gt; <br/>    &lt;/form&gt; <br/>&lt;/body&gt; <br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <remarks>
+            	<para>Use this property to provide a custom style for the empty message state of
+                RadInput control. Common style attributes that can be adjusted include
+                foreground color, background color, font, and alignment within the RadInput.
+                Providing a different style enhances the appearance of the RadInput
+                control.</para>
+            	<para>Empty message style properties in the RadInput control are inherited from
+                one style property to another through a hierarchy. For example, if you specify a
+                red font for the EnabledStyle property, all other style properties in the
+                RadInput control will also have a red font. This allows you to provide a common
+                appearance for the control by setting a single style property. You can override the
+                inherited style settings for an item style property that is higher in the hierarchy
+                by setting its style properties. For example, you can specify a blue font for the
+                FocusedStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;EmptyMessageStyle&gt; tags between
+                the opening and closing tags of the RadInput control. You can then list the
+                style attributes within the opening &lt;EmptyMessageStyle&gt; tag.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.FocusedStyle">
+            <summary>Gets the style properties for focused RadInput control.</summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for focused RadInput control. The default value is an empty TextBoxStyle
+            object.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to set FocusedStyle
+                property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;    <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;    <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; <br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt; <br/>&lt;head runat="server"&gt; <br/>
+                &lt;title&gt;Untitled Page&lt;/title&gt; <br/>&lt;/head&gt; <br/>&lt;body&gt; <br/>
+                &lt;form id="form1" runat="server"&gt; <br/>
+                    &lt;radI:RadTextBox EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt; <br/>
+                        &lt;EnabledStyle BackColor="red" /&gt; <br/>            &lt;EmptyMessageStyle BackColor="AliceBlue" /&gt; <br/>
+                        &lt;FocusedStyle BackColor="yellow" /&gt; <br/>            &lt;HoveredStyle BackColor="blue" /&gt; <br/>
+                    &lt;/radI:RadTextBox&gt; <br/>    &lt;/form&gt; <br/>&lt;/body&gt; <br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <remarks>
+            	<para>Use this property to provide a custom style for the focused RadInput
+                control. Common style attributes that can be adjusted include foreground color,
+                background color, font, and alignment within the RadInput. Providing a different
+                style enhances the appearance of the RadInput control.</para>
+            	<para>Focused style properties in the RadInput control are inherited from one
+                style property to another through a hierarchy. For example, if you specify a red
+                font for the EnabledStyle property, all other style properties in the RadInput
+                control will also have a red font. This allows you to provide a common appearance
+                for the control by setting a single style property. You can override the inherited
+                style settings for an item style property that is higher in the hierarchy by
+                setting its style properties. For example, you can specify a blue font for the
+                FocusedStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;FocusedStyle&gt; tags between the
+                opening and closing tags of the RadInput control. You can then list the style
+                attributes within the opening &lt;FocusedStyle&gt; tag.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.DisabledStyle">
+            <summary>Gets the style properties for disabled RadInput control.</summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for disabled RadInput control. The default value is an empty TextBoxStyle
+            object.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to set
+                <strong>DisabledStyle</strong> property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;      <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;      <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;  <br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;  <br/>&lt;head runat="server"&gt;  <br/>    &lt;title&gt;Untitled Page&lt;/title&gt;  <br/>
+            &lt;/head&gt;  <br/>&lt;body&gt;  <br/>    &lt;form id="form1" runat="server"&gt;  <br/>
+                    &lt;radI:RadTextBox EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt;  <br/>
+                        &lt;EnabledStyle BackColor="red" /&gt;  <br/>            &lt;EmptyMessageStyle BackColor="AliceBlue" /&gt;  <br/>
+                        &lt;FocusedStyle BackColor="yellow" /&gt;  <br/>            &lt;HoveredStyle BackColor="blue" /&gt;  <br/>
+                    &lt;/radI:RadTextBox&gt;  <br/>    &lt;/form&gt;  <br/>&lt;/body&gt;  <br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <remarks>
+            	<para>Use this property to provide a custom style for the disabled RadInput
+                control. Common style attributes that can be adjusted include foreground color,
+                background color, font, and alignment within the RadInput. Providing a different
+                style enhances the appearance of the RadInput control.</para>
+            	<para>Disabled style properties in the RadInput control are inherited from one
+                style property to another through a hierarchy. For example, if you specify a red
+                font for the EnabledStyle property, all other style properties in the RadInput
+                control will also have a red font. This allows you to provide a common appearance
+                for the control by setting a single style property. You can override the inherited
+                style settings for an item style property that is higher in the hierarchy by
+                setting its style properties. For example, you can specify a blue font for the
+                DisabledStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;DisabledStyle&gt; tags between the
+                opening and closing tags of the RadInput control. You can then list the style
+                attributes within the opening &lt;DisabledStyle&gt; tag.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.InvalidStyle">
+            <summary>Gets the style properties for invalid state of RadInput control.</summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for invalid RadInput control. The default value is an empty TextBoxStyle
+            object.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to set InvalidStyle
+                property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;      <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;      <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;  <br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;  <br/>&lt;head runat="server"&gt;  <br/>    &lt;title&gt;Untitled Page&lt;/title&gt;  <br/>
+            &lt;/head&gt;  <br/>&lt;body&gt;  <br/>    &lt;form id="form1" runat="server"&gt;  <br/>
+                    &lt;radI:RadTextBox EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt;  <br/>
+                        &lt;EnabledStyle BackColor="red" /&gt;  <br/>            &lt;EmptyMessageStyle BackColor="AliceBlue" /&gt;  <br/>
+                        &lt;FocusedStyle BackColor="yellow" /&gt;  <br/>            &lt;HoveredStyle BackColor="blue" /&gt;  <br/>        &lt;/radI:RadTextBox&gt;  <br/>
+                &lt;/form&gt;  <br/>&lt;/body&gt;  <br/>&lt;/html&gt;<br/>
+            	</pre>
+            </example>
+            <remarks>
+            	<para>Use this property to provide a custom style for the invalid state RadInput
+                control. Common style attributes that can be adjusted include foreground color,
+                background color, font, and alignment within the RadInput. Providing a different
+                style enhances the appearance of the RadInput control.</para>
+            	<para>Enabled style properties in the RadInput control are inherited from one
+                style property to another through a hierarchy. For example, if you specify a red
+                font for the EnabledStyle property, all other style properties in the RadInput
+                control will also have a red font. This allows you to provide a common appearance
+                for the control by setting a single style property. You can override the inherited
+                style settings for an item style property that is higher in the hierarchy by
+                setting its style properties. For example, you can specify a blue font for the
+                InvalidStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;InvalidStyle&gt; tags between the
+                opening and closing tags of the RadInput control. You can then list the style
+                attributes within the opening &lt;InvalidStyle&gt; tag.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.HoveredStyle">
+            <summary>Gets the style properties for hovered RadInput control.</summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for hovered RadInput control. The default value is an empty TextBoxStyle
+            object.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to set HoveredStyle
+                property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;     <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;     <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; <br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt; <br/>&lt;head runat="server"&gt; <br/>
+                &lt;title&gt;Untitled Page&lt;/title&gt; <br/>&lt;/head&gt; <br/>&lt;body&gt; <br/>    &lt;form id="form1" runat="server"&gt; <br/>
+                    &lt;radI:RadTextBox EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt; <br/>
+                        &lt;EnabledStyle BackColor="red" /&gt; <br/>            &lt;EmptyMessageStyle BackColor="AliceBlue" /&gt; <br/>
+                        &lt;FocusedStyle BackColor="yellow" /&gt; <br/>            &lt;HoveredStyle BackColor="blue" /&gt; <br/>
+                    &lt;/radI:RadTextBox&gt; <br/>    &lt;/form&gt; <br/>&lt;/body&gt; <br/>&lt;/html&gt;
+            </pre>
+            </example>
+            <remarks>
+            	<para>Use this property to provide a custom style for the hovered RadInput
+                control. Common style attributes that can be adjusted include foreground color,
+                background color, font, and alignment within the RadInput. Providing a different
+                style enhances the appearance of the RadInput control.</para>
+            	<para>Hovered style properties in the RadInput control are inherited from one
+                style property to another through a hierarchy. For example, if you specify a red
+                font for the EnabledStyle property, all other style properties in the RadInput
+                control will also have a red font. This allows you to provide a common appearance
+                for the control by setting a single style property. You can override the inherited
+                style settings for an item style property that is higher in the hierarchy by
+                setting its style properties. For example, you can specify a blue font for the
+                HoveredStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;HoveredStyle&gt; tags between the
+                opening and closing tags of the RadInput control. You can then list the style
+                attributes within the opening &lt;HoveredStyle&gt; tag.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.EnabledStyle">
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <summary>Gets the style properties for enabled RadInput control.</summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for enabled RadInput control. The default value is an empty TextBoxStyle
+            object.
+            </value>
+            <remarks>
+            	<para>Use this property to provide a custom style for the enabled RadInput
+                control. Common style attributes that can be adjusted include foreground color,
+                background color, font, and alignment within the RadInput. Providing a different
+                style enhances the appearance of the RadInput control.</para>
+            	<para>Enabled style properties in the RadInput control are inherited from one
+                style property to another through a hierarchy. For example, if you specify a red
+                font for the EnabledStyle property, all other style properties in the RadInput
+                control will also have a red font. This allows you to provide a common appearance
+                for the control by setting a single style property. You can override the inherited
+                style settings for an item style property that is higher in the hierarchy by
+                setting its style properties. For example, you can specify a blue font for the
+                FocusedStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;EnabledStyle&gt; tags between the
+                opening and closing tags of the RadInput control. You can then list the style
+                attributes within the opening &lt;EnabledStyle&gt; tag.</para>
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to set EnabledStyle
+                property:</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;    <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;    <br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; <br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt; <br/>&lt;head runat="server"&gt; <br/>    &lt;title&gt;Untitled Page&lt;/title&gt; <br/>&lt;/head&gt; <br/>
+            &lt;body&gt; <br/>    &lt;form id="form1" runat="server"&gt; <br/>
+                    &lt;radI:RadTextBox EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt; <br/>
+                        &lt;EnabledStyle BackColor="red" /&gt; <br/>            &lt;EmptyMessageStyle BackColor="AliceBlue" /&gt; <br/>
+                        &lt;FocusedStyle BackColor="yellow" /&gt; <br/>            &lt;HoveredStyle BackColor="blue" /&gt; <br/>
+                    &lt;/radI:RadTextBox&gt; <br/>    &lt;/form&gt; <br/>&lt;/body&gt; <br/>&lt;/html&gt;
+                </pre>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.ButtonContainer">
+            <summary>Gets control that contains the buttons of RadInput control</summary>
+            <remarks>The ShowButton or ShowSpinButton properties must be set to true</remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.Skin">
+            <summary>Gets or sets the skin used by RadInput control.</summary>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <value>A String specifying the skin. The default value is empty string ("").</value>
+            <remarks>
+            If the value is "None" no skin is used. If the value id "" (String.Empty) the
+            default skin is used.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadInputControl.SkinsPath">
+            <summary>Gets or sets the relative path of the folder containing the skins.</summary>
+            <value>
+            A string specifying the relative path to the folder which contains RadInput
+            skins. The default value is "~/RadControls/Input/Skins".
+            </value>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <remarks>
+            RadInput ships with a set of predefined skins which are ready to use. They are
+            located in RadControls/Input/Skins. If the skin folder is located in the project root
+            and is named "Skins" the SkinsPath property should be set to: "~/Skins". Then you can
+            create subfolders for individual skins e.g. Skins/Gold, Skins/Default etc.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadDateInput.Clear">
+            <summary>
+            Clears the selected date of the RadDateInput control and displays a blank date.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.ShortYearCenturyEnd">
+            <summary>
+            Gets or sets a value that indicates the end of the century that is used to interpret 
+            the year value when a short year (single-digit or two-digit year) is entered in the input.
+            </summary>
+            <value>
+            The year when the century ends. Default is 2029.
+            </value>
+            <remarks>
+            Having a value of 2029 indicates that a short year will be interpreted as a year between 1930 and 2029. 
+            For example 55 will be interpreted as 1955 but 12 -- as 2012 
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.ShortYearCenturyStart">
+            <summary>
+            Gets a value that indicates the start of the century that is used to interpret 
+            the year value when a short year (single-digit or two-digit year) is entered in the input.
+            </summary>
+            <value>
+            The year when the century starts. Default is 2029.
+            </value>
+            <remarks>
+            Having a value of 2029 indicates that a short year will be interpreted as a year between 1930 and 2029. 
+            For example 55 will be interpreted as 1955 but 12 -- as 2012 
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.DisplayDateFormat">
+            <summary>
+            	<para>Gets or sets the display date format used by
+                <strong>RadDateInput</strong>.(Visible when the control is not on focus.)</para>
+            </summary>
+            <remarks>
+            You can examine <see cref="T:System.Globalization.DateTimeFormatInfo">DateTimeFormatInfo</see> class for a list of all
+            available format characters and patterns.
+            </remarks>
+            <example>
+            	<code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            {
+                RadDateInput1.DisplayDateFormat = "M/d/yyyy"; //Short date pattern. The same as "d".
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                RadDateInput1.DisplayDateFormat = "M/d/yyyy" 'Short date pattern. The same as "d".
+            End Sub
+                </code>
+            </example>
+            <value>
+            	<para>A string specifying the display date format used by RadDateInput. The default
+                value is "d" (short date format). If the <strong>DisplayDateFormat</strong> is left
+                blank, the <strong>DateFormat</strong> will be used both for editing and
+                display.</para>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.DateFormat">
+            <summary>
+            Gets or sets the date and time format used by
+            <strong>RadDateInput</strong>.
+            </summary>
+            <value>
+            A string specifying the date format used by <strong>RadDateInput</strong>. The
+            default value is "d" (short date format).
+            </value>
+            <example>
+            	<code lang="CS" title="[New Example]">
+            private void Page_Load(object sender, System.EventArgs e)
+            {
+                RadDateInput1.DateFormat = "M/d/yyyy"; //Short date pattern. The same as "d".
+            }
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                RadDateInput1.DateFormat = "M/d/yyyy" 'Short date pattern. The same as "d".
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.SelectedDate">
+            <summary>Gets or sets the date content of <strong>RadDateInput</strong>.</summary>
+            <value>
+                A <see cref="T:System.DateTime">DateTime</see> object that represents the selected
+                date. The default value is <see cref="P:Telerik.WebControls.RadDateInput.MinDate">MinDate</see>.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>SelectedDate</strong>
+                property to set the content of <strong>RadDateInput</strong>.
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            {
+                RadDateInput1.SelectedDate = DateTime.Now;
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                RadDateInput1.SelectedDate = DateTime.Now
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.DbSelectedDate">
+            <summary>
+            Gets or sets the date content of <strong>RadDateInput</strong> in a
+            database-friendly way.
+            </summary>
+            <value>
+                A <see cref="T:System.DateTime">DateTime</see> object that represents the selected
+                date. The default value is <see cref="P:Telerik.WebControls.RadDateInput.MinDate">MinDate</see>.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>SelectedDate</strong>
+                property to set the content of RadDateInput. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            {
+                RadDateInput1.DbSelectedDate = tableRow["BirthDate"];
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                RadDateInput1.DbSelectedDate = tableRow("BirthDate")
+            End Sub
+                </code>
+            </example>
+            <remarks>
+            This property behaves exactly like the <strong>SelectedDate</strong> property.
+            The only difference is that it will not throw an exception if the new value is null or
+            DBNull. Setting a null value will revert the selected date to the MinDate value.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.Culture">
+            <summary>
+            Gets or sets the culture used by <strong>RadDateInput</strong> to format the
+            date.
+            </summary>
+            <value>
+                A <see cref="T:System.Globalization.CultureInfo">CultureInfo</see> object that
+                represents the current culture used. The default value is
+                <strong>System.Threading.Thread.CurrentThread.CurrentUICulture</strong>.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>Culture</strong>
+                property. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            {
+                RadDateInput1.Culture = new CultureInfo("en-US");
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                RadDateInput1.Culture = New CultureInfo("en-US")
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.ValidationDate">
+            <summary>
+            This property is used by the <strong>RadDateInput</strong>'s internals only. It
+            is subject to change in the future versions. Please do not use.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.MinDate">
+            <summary>
+            Gets or sets the smallest date value allowed by
+            <strong>RadDateInput</strong>.
+            </summary>
+            <value>
+                A <see cref="T:System.DateTime">DateTime</see> object that represents the smallest
+                date value by <strong>RadDateInput</strong>. The default value is 1/1/1980.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.MaxDate">
+            <summary>
+            Gets or sets the largest date value allowed by
+            <strong>RadDateInput</strong>.
+            </summary>
+            <value>
+                A <see cref="T:System.DateTime">DateTime</see> object that represents the largest
+                date value allowed by <strong>RadDateInput</strong>. The default value is
+                <em>12/31/2099</em>.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.IsEmpty">
+            <summary>Used to determine if <strong>RadDateInput</strong> is empty.</summary>
+            <value>
+            	<strong>true</strong> if the date is empty; otherwise <strong>false</strong>.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadDateInput.OnClientDateChanged">
+            <summary>
+            Gets or sets the JavaScript event handler fired whenever the date of
+            <strong>RadDateInput</strong> changes.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript event handling routine. The
+            default value is empty string ("").
+            </value>
+            <remarks>
+                The event handler function is called with 2 parameters: 
+                <list type="bullet">
+            		<item>A reference to the <strong>RadDateInput</strong> object, which triggered
+                    the event;</item>
+            		<item>
+                        An event arguments object that contains the following properties: 
+                        <ul>
+            				<li><strong>OldDate</strong> - The old date of the
+                            <strong>RadDateInput</strong></li>
+            				<li><strong>NewDate</strong> - The new date of the
+                            <strong>RadDateInput</strong></li>
+            			</ul>
+            		</item>
+            	</list>
+            </remarks>
+            <example>
+            	<para>This example demonstrates the usage of the
+                <strong>OnClientDateChanged</strong> property.</para>
+            	<pre>
+            &lt;script type="text/javascript&amp;quot&gt;<br/>function onDateChange(dateInput, args)<br/>{<br/>     alert("New date:" + args.NewDate);<br/>} <br/>&lt;/script&gt;<br/>
+            		<br/>&lt;radI:RadDateInput<br/>      ID="RadDateInput1"<br/>      runat="server"<br/>      OnClientDateChanged="onDateChange"&gt;<br/>&lt;/radI:RadDateInput&gt;
+                </pre>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.Design.DateFormatEditorDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Design.MaskEditorDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.DigitMaskPart">
+            <summary>Represents a single character, digit only mask part.</summary>
+            <example>
+                This example demonstrates how to add a <strong>DigitMaskPart</strong> object in the
+                <strong>MaskParts</strong> property of RadMaskedTextBox.
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                DigitMaskPart digitPart = new DigitMaskPart();
+                RadMaskedTextBox1.MaskParts.Add(digitPart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim digitPart As New DigitMaskPart()
+                RadMaskedTextBox1.MaskParts.Add(digitPart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="T:Telerik.WebControls.MaskPart">
+            <summary>The abstract base class of all mask parts.</summary>
+            <remarks>This class is not intended to be used directly.</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.MaskPart.Value">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.DigitMaskPart.ToString">
+            <summary>
+            Returns the friendly name of the part.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.DigitMaskPart.Value">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.EnumerationMaskPart">
+            <summary>
+            Represents a MaskPart object which accepts only a predefined set of
+            options.
+            </summary>
+            <example>
+                This example demonstrates how to add an <strong>EnumerationMaskPart</strong> object
+                in the <strong>MaskParts</strong> property of RadMaskedTextBox. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                EnumerationMaskPart enumPart = new EnumerationMaskPart();
+                enumPart.Items.Add("Mon");
+                enumPart.Items.Add("Two");
+                enumPart.Items.Add("Wed");
+                enumPart.Items.Add("Thu");
+                enumPart.Items.Add("Fri");
+                enumPart.Items.Add("Sat");
+                enumPart.Items.Add("Sun");
+                
+                RadMaskedTextBox1.MaskParts.Add(enumPart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim  enumPart As New EnumerationMaskPart
+                enumPart.Items.Add("Mon")
+                enumPart.Items.Add("Two")
+                enumPart.Items.Add("Wed")
+                enumPart.Items.Add("Thu")
+                enumPart.Items.Add("Fri")
+                enumPart.Items.Add("Sat")
+                enumPart.Items.Add("Sun")
+                
+                RadMaskedTextBox1.MaskParts.Add(enumPart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.EnumerationMaskPart.ToString">
+            <summary>Returns the friendly name of the part.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.EnumerationMaskPart.Items">
+            <summary>
+            Gets the options collection of the part.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.EnumerationMaskPart.Value">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.FreeMaskPart">
+            <summary>
+            Represents a single character MaskPart object which accepting any
+            character.
+            </summary>
+            <example>
+                This example demonstrates how to add a <strong>FreeMaskPart</strong> object in the
+                <strong>MaskParts</strong> property of RadMaskedTextBox. 
+                <code lang="CS" title=" ">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                FreeMaskPart freePart = new FreeMaskPart();
+                RadMaskedTextBox1.MaskParts.Add(freePart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim fixedPart As New FreeMaskPart()
+                RadMaskedTextBox1.MaskParts.Add(fixedPart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.FreeMaskPart.ToString">
+            <summary>
+            Returns the friendly name of the part.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.LiteralMaskPart">
+            <summary>Represents a multi character MaskPart whose content cannot be modified.</summary>
+            <example>
+                This example demonstrates how to add a <strong>LiteralMaskPart</strong> object in
+                the <strong>MaskParts</strong> property of RadMaskedTextBox.
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                LiteralMaskPart literalPart = new LiteralMaskPart();
+                literalPart.Text = "(";
+                RadMaskedTextBox1.MaskParts.Add(literalPart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim literalPart As New LiteralMaskPart()
+                RadMaskedTextBox1.MaskParts.Add(literalPart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.LiteralMaskPart.ToString">
+            <summary>
+            Returns the friendly name of the part.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.LiteralMaskPart.Value">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.LiteralMaskPart.Text">
+            <summary>Gets or sets the string that the LiteralMaskPart will render.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.LowerMaskPart">
+            <summary>
+            Represents a single character MaskPart. The character is converted to lower upon
+            input.
+            </summary>
+            <example>
+                This example demonstrates how to add a <strong>LowerMaskPart</strong> object in the
+                <strong>MaskParts</strong> property of RadMaskedTextBox. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                LowerMaskPart lowerPart = new LowerMaskPart();
+                RadMaskedTextBox1.MaskParts.Add(lowerPart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim lowerPart As New LowerMaskPart()
+                RadMaskedTextBox1.MaskParts.Add(lowerPart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.LowerMaskPart.ToString">
+            <summary>
+            Returns the friendly name of the part.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.LowerMaskPart.Value">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.MaskPartCollection">
+            <summary>Represents the collection of mask parts in a RadMaskedTextBox.</summary>
+        </member>
+        <member name="M:Telerik.WebControls.MaskPartCollection.Add(Telerik.WebControls.MaskPart)">
+            <summary>
+                Appends the specified <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> to
+                the end of the collection.
+            </summary>
+            <param name="part">
+                The <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> to append to the
+                collection.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.MaskPartCollection.Insert(System.Int32,Telerik.WebControls.MaskPart)">
+            <summary>
+                Inserts the specified <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> in
+                the collection at the specified index location.
+            </summary>
+            <param name="index">
+                The location in the collection to insert the
+                <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see>.
+            </param>
+            <param name="part">
+                The <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> to add to the
+                collection.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.MaskPartCollection.Contains(Telerik.WebControls.MaskPart)">
+            <summary>Determines whether the collection contains the specified item</summary>
+            <returns>
+            	<strong>true</strong> if the collection contains the specified
+                <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see>; otherwise
+                <strong>false</strong>.
+            </returns>
+            <param name="part">
+                The <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> to search for in the
+                collection.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.MaskPartCollection.Remove(Telerik.WebControls.MaskPart)">
+            <summary>
+            	<para>
+                    Removes the specified <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see>
+                    from the collection.
+                </para>
+            </summary>
+            <param name="part">
+                The <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> to remove from the
+                collection.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.MaskPartCollection.IndexOf(Telerik.WebControls.MaskPart)">
+            <summary>
+                Determines the index value that represents the position of the specified
+                <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> in the collection.
+            </summary>
+            <returns>
+                The zero-based index position of the specified
+                <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> in the collection.
+            </returns>
+            <param name="part">
+                A <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> to search for in the
+                collection.
+            </param>
+        </member>
+        <member name="P:Telerik.WebControls.MaskPartCollection.Owner">
+            <summary>
+            Gets or sets the <strong>RadMaskedInputControl</strong>, which uses the
+            collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.MaskPartCollection.Item(System.Int32)">
+            <summary>
+                Gets a <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see> at the specified
+                index in the collection.
+            </summary>
+            <value>
+                Use this indexer to get a <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see>
+                from the
+                <see cref="T:Telerik.WebControls.MaskPartCollection">MaskPartCollection</see> at the
+                specified index, using array notation.
+            </value>
+            <param name="index">
+                The zero-based index of the <see cref="T:Telerik.WebControls.MaskPart">MaskPart</see>
+                to retrieve from the collection.
+            </param>
+        </member>
+        <member name="T:Telerik.WebControls.NumericRangeMaskPart">
+            <summary>Represents a MaskPart which accepts numbers in a specified range.</summary>
+            <example>
+                This example demonstrates how to add a <strong>NumericRangeMaskPart</strong> object
+                in the <strong>MaskParts</strong> collection of RadMaskedTextBox. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                NumericRangeMaskPart rangePart = new NumericRangeMaskPart();
+                rangePart.LowerLimit = 0;
+                rangePart.UpperLimit = 255;
+                RadMaskedTextBox1.MaskParts.Add(rangePart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim rangePart As New NumericRangeMaskPart()
+                rangePart.LowerLimit = 0
+                rangePart.UpperLimit = 255
+                RadMaskedTextBox1.MaskParts.Add(rangePart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.NumericRangeMaskPart.ToString">
+            <summary>Returns the friendly name of the part.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.NumericRangeMaskPart.Value">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.NumericRangeMaskPart.LowerLimit">
+            <summary>Gets or sets the smallest possible value the part can accept.</summary>
+            <value>
+            An integer representing the smallest acceptable number that the
+            NumericRangeMaskPart can accept. The default value is 0.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.NumericRangeMaskPart.UpperLimit">
+            <summary>Gets or sets the largest possible value the part can accept.</summary>
+            <value>
+            An integer representing the largest acceptable number that the
+            NumericRangeMaskPart can accept. The default value is 0.
+            </value>
+        </member>
+        <member name="T:Telerik.WebControls.UpperMaskPart">
+            <summary>
+            Represents a single character MaskPart. The character is converted to upper upon
+            input. .
+            </summary>
+            <example>
+                This example demonstrates how to add an <strong>UpperMaskPart</strong> object in
+                the <strong>MaskParts</strong> collection of RadMaskedTextBox. 
+                <code lang="CS">
+            private void Page_Load(object sender, System.EventArgs e)
+            { 
+                UpperMaskPart upperPart = new UpperMaskPart();
+                RadMaskedTextBox1.MaskParts.Add(upperPart);
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+                Dim upperPart As New UpperMaskPart()
+                RadMaskedTextBox1.MaskParts.Add(upperPart)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.UpperMaskPart.ToString">
+            <summary>Returns the friendly name of the part.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.NumericRangeAlign">
+            <summary>
+            Numeric range alignment options
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.NumericRangeAlign.Left">
+            <summary>
+            The numbers are aligned left
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.NumericRangeAlign.Right">
+            <summary>
+            The numbers are aligned right
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMaskedTextBox.OnClientError">
+            <summary>
+            Gets or sets the JavaScript event handler fired when the user attempts to type
+            unacceptable symbol into <strong>RadMaskedTextBox</strong>.
+            </summary>
+            <remarks>
+                The event handler function is called with 2 parameters: 
+                <list type="bullet">
+            		<item>A reference to the <strong>control</strong> object that
+                    triggered the event;</item>
+            		<item>
+                        An event arguments object with parameters specific to the control. 
+                        <ul>
+            				<li>Reason - an enumeration value containing the reason for the error: parse error, out of range, etc;</li>
+            				<li>InputText - the currently entered text.</li>
+            			</ul>
+            		</item>
+            	</list>
+            </remarks>
+            <example>
+                This example demonstrates the usage of the <strong>OnClientDown</strong> property. 
+                <code lang="CS">
+            &lt;script&gt;
+            function onError(input, args)
+            {
+               alert("Invalid character:" + args.NewValue);
+            }
+            &lt;/script&gt;
+             
+            &lt;radI:RadMaskedTextBox
+                  ID="RadMaskedTextBox1"
+                  runat="server"
+                  Mask="&lt;0..255&gt;.&lt;0..255&gt;.&lt;0..255&gt;.&lt;0..255&gt;"
+                  OnClientError="onError"&gt;
+            &lt;/radI:RadMaskedTextBox&gt;
+                </code>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript event handling routine. The
+            default value is empty string ("").
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMaskedTextBox.OnClientValueChanged">
+            <summary>
+            Gets or sets the JavaScript event handler fired whenever the value of
+            <strong>RadMaskedTextBox</strong> changes.
+            </summary>
+            <remarks>
+                The event handler function is called with 2 parameters: 
+                <list type="bullet">
+            		<item>A reference to the <strong>RadMaskedTextBox</strong> object that
+                    triggered the event;</item>
+            		<item>
+                        An event arguments object that contains the following properties: 
+                        <ul>
+            				<li>OldValue - The old value of the text box;</li>
+            				<li>NewValue - The new value of the text box.</li>
+            			</ul>
+            		</item>
+            	</list>
+            </remarks>
+            <value>
+            A string specifying the name of the JavaScript event handling routine. The
+            default value is an empty string ("").
+            </value>
+            <example>
+                This example demonstrates the use of the <strong>OnClientValueChanged</strong>
+                property.
+                <code lang="CS">
+            &lt;script&gt;
+            function onChange (input, args)
+            {
+                 alert("Value changed from:" + args.OldValue + " to:" + args.NewValue);
+            } 
+            &lt;/script&gt;
+             
+            &lt;radI:RadMaskedTextBox
+                  ID="RadMaskedTextBox1"
+                  runat="server"
+                  Mask="&lt;0..255&gt;.&lt;0..255&gt;.&lt;0..255&gt;.&lt;0..255&gt;"
+                  OnClientValueChanged="onChange"&gt;
+            &lt;/radI:RadMaskedTextBox&gt;
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.NumberFormatSettings.DecimalSeparator">
+            <summary>Gets or sets the string to use as the decimal separator in values.</summary>
+            <value>The string to use as the decimal separator in values.</value>
+            <exception cref="!:" caption="ArgumentException">The property is being set to an empty string.</exception>
+            <exception cref="!:" caption="ArgumentNullException">The property is being set to null. </exception>
+        </member>
+        <member name="P:Telerik.WebControls.NumberFormatSettings.DecimalDigits">
+            <summary>Gets or sets the number of decimal places to use in numeric values</summary>
+            <value>The number of decimal places to use in values.</value>
+            <permission cref="!:" caption="ArgumentOutOfRangeException">The property is being set to a value that is less than 0 or greater than 99. </permission>
+        </member>
+        <member name="P:Telerik.WebControls.NumberFormatSettings.GroupSizes">
+            <summary>
+            Gets or sets the number of digits in each group to the left of the decimal in
+            values.
+            </summary>
+            <value>The number of digits in each group to the left of the decimal in values.</value>
+            <exception cref="!:" caption="ArgumentNullException">The property is being set to null. </exception>
+        </member>
+        <member name="P:Telerik.WebControls.NumberFormatSettings.GroupSeparator">
+            <summary>
+            Gets or sets the string that separates groups of digits to the left of the
+            decimal in values.
+            </summary>
+            <value>
+            The string that separates groups of digits to the left of the decimal in
+            values.
+            </value>
+            <exception cref="!:" caption="ArgumentNullException">The property is being set to null. </exception>
+        </member>
+        <member name="P:Telerik.WebControls.NumberFormatSettings.NegativePattern">
+            <summary>Gets or sets the format pattern for negative values.</summary>
+            <value>The format pattern for negative percent values.</value>
+            <exception cref="!:" caption="ArgumentOutOfRangeException">The property is being set to a value that is less than 0 or greater than 11. </exception>
+        </member>
+        <member name="P:Telerik.WebControls.NumberFormatSettings.PositivePattern">
+            <summary>Gets or sets the format pattern for positive values.</summary>
+            <value>The format pattern for positive percent values. The</value>
+            <exception cref="!:" caption="ArgumentOutOfRangeException">The property is being set to a value that is less than 0 or greater than 3. </exception>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.NegativeStyle">
+            <summary>
+            	<para>Gets the style properties for RadInput when when the text is
+                negative.</para>
+            </summary>
+            <value>
+            A Telerik.WebControls.TextBoxStyle object that represents the style properties
+            for RadInput control. The default value is an empty TextBoxStyle object.
+            </value>
+            <example>
+            	<para>The following code example demonstrates how to set NegativeStyle
+                property:</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;<br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/><br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head runat="server"&gt;<br/>    &lt;title&gt;Untitled Page&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;radI:RadTextBox Text="-1" EmptyMessage="EmptyMessage" ID="RadNumericTextBox1" runat="server"&gt;<br/>            &lt;NegativeStyle BackColor="red" /&gt;<br/>        &lt;/radI:RadTextBox&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <remarks>
+            	<para>Use this property to provide a custom style for the negative state of
+                RadInput control. Common style attributes that can be adjusted include
+                foreground color, background color, font, and alignment within the RadInput.
+                Providing a different style enhances the appearance of the RadInput
+                control.</para>
+            	<para>Negative style properties in the RadInput control are inherited from one
+                style property to another through a hierarchy. For example, if you specify a red
+                font for the EnabledStyle property, all other style properties in the RadInput
+                control will also have a red font. This allows you to provide a common appearance
+                for the control by setting a single style property. You can override the inherited
+                style settings for an item style property that is higher in the hierarchy by
+                setting its style properties. For example, you can specify a blue font for the
+                NegativeStyle property, overriding the red font specified in the EnabledStyle
+                property.</para>
+            	<para>To specify a custom style, place the &lt;NegativeStyle&gt; tags between the
+                opening and closing tags of the RadInput control. You can then list the style
+                attributes within the opening &lt;NegativeStyle&gt; tag.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.Value">
+            <summary>Gets or sets the value of the RadInput control.</summary>
+            <remarks>
+            	<para>Use the Text property to specify or determine the text displayed in the
+                RadInput control. To limit the number of characters accepted by the control, set
+                the MaxLength property. If you want to prevent the text from being modified, set
+                the ReadOnly property.</para>
+            	<para>The value of this property, when set, can be saved automatically to a
+                resource file by using a designer tool.</para>
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <value>
+            null if the Text property is Empty.The Value property are Nullable Double type. A
+            nullable type can represent the normal range of values for its underlying value type,
+            plus an additional null value. For example, a Nullable&lt;Double&gt;, pronounced
+            "Nullable of Double," can be assigned any value from double.MinValue to
+            double.MaxValue, or it can be assigned the null value.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.DbValue">
+            <summary>
+            Gets or sets the date content of RadNumericTextBox in a database friendly
+            way.
+            </summary>
+            <value>An object that represents the Text property. The default value is null.</value>
+            <remarks>
+            This property behaves exactly like the Value property. The only difference is
+            that it will not throw an exception if the new value is not double object (or null). If
+            you assign null to the control you will see blank RadInput.
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to bind the RadNumericTextBox:</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;<br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/><br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head runat="server"&gt;<br/>&lt;title&gt;Untitled Page&lt;/title&gt;<br/>&lt;script runat="server"&gt;<br/>protected void Page_Load(object sender, EventArgs e)<br/>{<br/>  System.Data.DataTable table = new System.Data.DataTable();<br/>  table.Columns.Add("num");<br/>
+            		<br/>    System.Data.DataRow row = table.NewRow();<br/>   row["num"] = (double)12.56;<br/> table.Rows.Add(row);<br/>
+            		<br/>    row = table.NewRow();<br/>       row["num"] = (int)12;<br/>       table.Rows.Add(row);<br/>
+            		<br/>    row = table.NewRow();<br/>       row["num"] = DBNull.Value;<br/>  table.Rows.Add(row);<br/>
+            		<br/>    row = table.NewRow();<br/>       row["num"] = "33";<br/>  table.Rows.Add(row);<br/>
+            		<br/>    row = table.NewRow();<br/>       table.Rows.Add(row);<br/>
+            		<br/>    Repeater1.DataSource = table;<br/>       Repeater1.DataBind();<br/>}<br/>&lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;form id="form1" runat="server"&gt;<br/>    &lt;asp:Repeater runat="server" ID="Repeater1"&gt;<br/>          &lt;ItemTemplate&gt;<br/>                        &lt;radI:RadNumericTextBox DbValue='&lt;/%# Bind("num") /%&gt;'<br/>                             ID="RadNumericTextBox1" runat="server"&gt;<br/>                  &lt;/radI:RadNumericTextBox&gt;<br/>             &lt;/ItemTemplate&gt;<br/>       &lt;/asp:Repeater&gt;<br/>&lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            	<para>[VisualBasic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/><br/>&lt;!DOCTYPE html Public "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/><br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head runat="server"&gt;<br/>&lt;title&gt;Untitled Page&lt;/title&gt;<br/>&lt;script runat="server"&gt;<br/>Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load<br/>      Dim table As System.Data.DataTable = New System.Data.DataTable<br/>      table.Columns.Add("num")<br/>    Dim row As System.Data.DataRow = table.NewRow<br/>       row("num") = CType(12.56,Double)<br/>    table.Rows.Add(row)<br/> row = table.NewRow<br/>  row("num") = CType(12,Integer)<br/>      table.Rows.Add(row)<br/> row = table.NewRow<br/>  row("num") = DBNull.Value<br/>   table.Rows.Add(row)<br/> row = table.NewRow<br/>  row("num") = "33"<br/>   table.Rows.Add(row)<br/> row = table.NewRow<br/>  table.Rows.Add(row)<br/> Repeater1.DataSource = table<br/>        Repeater1.DataBind<br/>End Sub<br/>&lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;form id="form1" runat="server"&gt;<br/> &lt;asp:Repeater runat="server" ID="Repeater1"&gt;<br/>          &lt;ItemTemplate&gt;<br/>                        &lt;radI:RadNumericTextBox DbValue='&lt;/%# Bind("num") /%&gt;'<br/>                             ID="RadNumericTextBox1" runat="server"&gt;<br/>                  &lt;/radI:RadNumericTextBox&gt;<br/>             &lt;/ItemTemplate&gt;<br/>       &lt;/asp:Repeater&gt;<br/>&lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.ShowSpinButtons">
+            <summary>
+            Gets or sets a value indicating whether the button is displayed in the
+            RadInput control.
+            </summary>
+            <value>
+            true if the button is displayed; otherwise, false. The default value is true,
+            however this property is only examined when the ButtonTemplate property is not a null
+            reference (Nothing in Visual Basic).
+            </value>
+            <remarks>
+            	<para>Use the ShowButton property to specify whether the button is displayed in the
+                RadInput control.</para>
+            	<para>The contents of the button are controlled by the ButtonTemplate
+                property.</para>
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the ShowButton property to
+                display the button in the RadInput control.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;<br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" &gt;<br/>
+            		<br/>&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;<br/>&lt;head id="Head1" runat="server"&gt;<br/>    &lt;title&gt;Untitled Page&lt;/title&gt;<br/>    &lt;script language="javascript" type="text/javascript"&gt;<br/>    function Click(sender)<br/>    {<br/>        alert("click");<br/>    }<br/>    &lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;radI:RadTextBox ShowButton="true" ID="RadNumericTextBox1" runat="server"&gt;<br/>            &lt;ClientEvents OnButtonClick="Click" /&gt;<br/>            &lt;ButtonTemplate&gt;<br/>               &lt;input type="button" value="click here"  /&gt;<br/>            &lt;/ButtonTemplate&gt;<br/>        &lt;/radI:RadTextBox&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+            </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.Culture">
+            <summary>Gets or sets the culture used by RadNumericTextBox to format the numburs.</summary>
+            <value>
+            A CultureInfo object that represents the current culture used. The default value
+            is System.Threading.Thread.CurrentThread.CurrentUICulture.
+            </value>
+            <example>
+                The following example demonstrates how to use the Culture property. 
+                <code lang="CS" title="C#">
+            private void Page_Load(object sender, System.EventArgs e)
+            {
+            RadNumericTextBox.Culture = new CultureInfo("en-US");
+            }
+                </code>
+            	<code lang="VB" title="VB">
+            Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+            RadNumericTextBox1.Culture = New CultureInfo("en-US")
+            End Sub
+                </code>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.MaxValue">
+            <summary>Gets or sets the largest possible value of a RadNumericTextBox.</summary>
+            <value>The default value is positive 70368744177664.</value>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.MinValue">
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+            <summary>
+            	<br/>
+            Gets or sets the smallest possible value of a RadNumericTextBox.
+            </summary>
+            <value>The default value is negative -70368744177664.</value>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.Type">
+            <summary>Gets or sets the numeric type of the RadNumericTextBox.</summary>
+            <value>One of the NumericType enumeration values. The default is Number.</value>
+            <remarks>
+            Use the Type property to determine the numeric type that the RadNumericTextBox
+            represents. The Type property is represented by one of the NumericType enumeration
+            values.
+            </remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.ButtonDownContainer">
+            <summary>Gets control that contains the up button of RadInput control</summary>
+            <remarks>The ShowButton or ShowSpinButton properties must be set to true</remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadNumericTextBox.ButtonUpContainer">
+            <summary>Gets control that contains the up button of RadInput control</summary>
+            <remarks>The ShowButton or ShowSpinButton properties must be set to true</remarks>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadInput.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadInputUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadTextBox.TextMode">
+            <summary>
+            Gets or sets the behavior mode (single-line, multiline, or password) of the
+            RadTextBox control.
+            </summary>
+            <value>
+            One of the RadInputTextBoxMode enumeration values. The default value is
+            SingleLine.
+            </value>
+            <remarks>
+            	<para>Use the TextMode property to specify whether a RadTextBox control is
+                displayed as a single-line, multiline, or password text box.</para>
+            	<para>When the RadTextBox control is in multiline mode, you can control the number
+                of rows displayed by setting the Rows property. You can also specify whether the
+                text should wrap by setting the Wrap property.</para>
+            	<para>If the RadTextBox control is in password mode, all characters entered in the
+                control are masked.</para>
+            	<para>This property cannot be set by themes or style sheet themes</para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException" caption="System.ArgumentOutOfRangeException">The specified mode is not one of the TextBoxMode enumeration values.</exception>
+            <example>
+                The following code example demonstrates how to use the RadTextMode property to
+                specify a multiline text box. This example has a text box that accepts user input,
+                which is a potential security threat. By default, ASP.NET Web pages validate that
+                user input does not include script or HTML elements. 
+                <code lang="VB" title="Visual Basic">
+            &lt;%@ Page Language="VB" AutoEventWireup="True" %&gt;
+             
+            &lt;%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" %&gt;
+             
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;MultiLine RadTextBox Example &lt;/title&gt;
+             
+                &lt;script runat="server"&gt;
+             
+                  Protected Sub SubmitButton_Click(sender As Object, e As EventArgs )
+                           
+                     Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text
+             
+                  End Sub
+             
+                  Protected Sub Check_Change(sender As Object, e As EventArgs )
+                     
+                     Comment.Wrap = WrapCheckBox.Checked
+                     Comment.ReadOnly = ReadOnlyCheckBox.Checked
+             
+                  End Sub
+             
+                &lt;/script&gt;
+             
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;form id="form1" runat="server"&gt;
+                    &lt;h3&gt;
+                        MultiLine RadTextBox Example
+                    &lt;/h3&gt;
+                    Please enter a comment and click the submit button.
+                    &lt;br /&gt;
+                    &lt;br /&gt;
+                    &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;
+                    &lt;br /&gt;
+                    &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"
+                        ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;
+                      
+                    &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;
+                      
+                    &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;
+                    &lt;hr /&gt;
+                    &lt;asp:Label ID="Message" runat="server" /&gt;
+                &lt;/form&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                </code>
+            	<code lang="CS" title="C#">
+            &lt;%@ Page Language="C#" AutoEventWireup="True" %&gt;
+             
+            &lt;%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" %&gt;
+             
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;MultiLine RadTextBox Example &lt;/title&gt;
+             
+                &lt;script runat="server"&gt;
+             
+                    protected void SubmitButton_Click(Object sender, EventArgs e)
+                    {
+             
+                        Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text;
+             
+                    }
+             
+                    protected void Check_Change(Object sender, EventArgs e)
+                    {
+             
+                        Comment.Wrap = WrapCheckBox.Checked;
+                        Comment.ReadOnly = ReadOnlyCheckBox.Checked;
+             
+                    }
+             
+                &lt;/script&gt;
+             
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;form id="form1" runat="server"&gt;
+                    &lt;h3&gt;
+                        MultiLine RadTextBox Example
+                    &lt;/h3&gt;
+                    Please enter a comment and click the submit button.
+                    &lt;br /&gt;
+                    &lt;br /&gt;
+                    &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;
+                    &lt;br /&gt;
+                    &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"
+                        ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;
+                      
+                    &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;
+                      
+                    &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;
+                    &lt;hr /&gt;
+                    &lt;asp:Label ID="Message" runat="server" /&gt;
+                &lt;/form&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                </code>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadTextBox.AutoCompleteType">
+            <summary>
+            Gets or sets a value that indicates the AutoComplete behavior of the RadTextBox
+            control
+            </summary>
+            <value>
+            One of the System.Web.UI.WebControls.AutoCompleteType enumeration values,
+            indicating the AutoComplete behavior for the RadTextBox control. The default value is
+            None.
+            </value>
+            <exception cref="T:System.ArgumentOutOfRangeException" caption="System.ArgumentOutOfRangeException">The selected value is not one of the System.Web.UI.WebControls.AutoCompleteType enumeration values.</exception>
+            <remarks>
+            	<para>To assist with data entry, Microsoft Internet Explorer 5 and later and
+                Netscape support a feature called AutoComplete. AutoComplete monitors a RadTextBox
+                and creates a list of values entered by the user. When the user returns to the
+                RadTextBox at a later time, the list is displayed. Instead of retyping a previously
+                entered value, the user can simply select the value from this list. Use the
+                AutoCompleteType property to control the behavior of the AutoComplete feature for a
+                RadTextBox control. The System.Web.UI.WebControls.AutoCompleteType enumeration is
+                used to represent the values that you can apply to the AutoCompleteType property.
+                Not all browsers support the AutoComplete feature. Check with your browser to
+                determine compatibility.</para>
+            	<para>By default, the AutoCompleteType property for a RadTextBox control is set to
+                AutoCompleteType.None. With this setting, the RadTextBox control shares the list
+                with other RadTextBox controls with the same ID property across different pages.
+                You can also share a list between RadTextBox controls based on a category, instead
+                of an ID property. When you set the AutoCompleteType property to one of the
+                category values (such as AutoCompleteType.FirstName, AutoCompleteType.LastName, and
+                so on), all RadTextBox controls with the same category share the same list. You can
+                disable the AutoComplete feature for a RadTextBox control by setting the
+                AutoCompleteType property to AutoCompleteType.Disabled.</para>
+            	<para>Refer to your browser documentation for details on configuring and enabling
+                the AutoComplete feature. For example, to enable the AutoComplete feature in
+                Internet Explorer version 5 or later, select Internet Options from the Tools menu,
+                and then select the Content tab. Click the AutoComplete button to view and modify
+                the various browser options for the AutoComplete feature.</para>
+            	<para>This property cannot be set by themes or style sheet themes.</para>
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the AutoCompleteType
+                enumeration to specify the AutoComplete category for a RadTextBox control. This
+                example has a text box that accepts user input, which is a potential security
+                threat. By default, ASP.NET Web pages validate that user input does not include
+                script or HTML elements.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" /%&gt;<br/>
+            		<br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>
+            		<br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>
+            &lt;html&gt;<br/>&lt;head id="Head1" runat="server"&gt;<br/>    &lt;title&gt;AutoCompleteType example&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>
+                &lt;form id="form1" runat="server"&gt;<br/>        &lt;!-- You need to enable the AutoComplete feature on --&gt;<br/>
+                    &lt;!-- a browser that supports it (such as Internet   --&gt;<br/>        &lt;!-- Explorer 5.0 and later) for this sample to     --&gt;<br/>
+                    &lt;!-- work. The AutoComplete lists are created after --&gt;<br/>        &lt;!-- the Submit button is clicked.                  --&gt;<br/>
+                    &lt;h3&gt;<br/>            AutoCompleteType example&lt;/h3&gt;<br/>        Enter values in the text boxes and click the Submit<br/>        &lt;br /&gt;<br/>
+                    button.<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;!-- The following TextBox controls have different  --&gt;<br/>
+                    &lt;!-- categories assigned to their AutoCompleteType  --&gt;<br/>        &lt;!-- properties.                                    --&gt;<br/>
+                    First Name:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="FirstNameTextBox" AutoCompleteType="FirstName" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>
+                    Last Name:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="LastNameTextBox" AutoCompleteType="LastName" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>
+                    Email:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="EmailTextBox" AutoCompleteType="Email" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>
+                    &lt;!-- The following TextBox controls have the same   --&gt;<br/>        &lt;!-- categories assigned to their AutoCompleteType  --&gt;<br/>
+                    &lt;!-- properties. They share the same AutoComplete   --&gt;<br/>        &lt;!-- list.                                          --&gt;<br/>        Phone Line #1:&lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="Phone1TextBox" AutoCompleteType="HomePhone" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        Phone Line #2:&lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="Phone2TextBox" AutoCompleteType="HomePhone" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>
+                    &lt;!-- The following TextBox control has its          --&gt;<br/>        &lt;!-- AutoCompleteType property set to               --&gt;<br/>
+                    &lt;!-- AutoCompleteType.None. All TextBox controls    --&gt;<br/>
+                    &lt;!-- with the same ID across different pages share  --&gt;<br/>        &lt;!-- the same AutoComplete list.                    --&gt;<br/>        Category:&lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="CategoryTextBox" AutoCompleteType="None" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        &lt;!-- The following TextBox control has the          --&gt;<br/>
+                    &lt;!-- AutoComplete feature disabled.                 --&gt;<br/>        Comments:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="CommentsTextBox" AutoCompleteType="Disabled" runat="server" /&gt;<br/>
+                    &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" runat="Server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+            	</pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/><br/>
+            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head id="Head1" runat="server"&gt;<br/>
+                &lt;title&gt;AutoCompleteType example&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;!-- You need to enable the AutoComplete feature on --&gt;<br/>
+                    &lt;!-- a browser that supports it (such as Internet --&gt;<br/>        &lt;!-- Explorer 5.0 and later) for this sample to --&gt;<br/>        &lt;!-- work. The AutoComplete lists are created after --&gt;<br/>
+                    &lt;!-- the Submit button is clicked. --&gt;<br/>        &lt;h3&gt;<br/>            AutoCompleteType example&lt;/h3&gt;<br/>        Enter values in the text boxes and click the Submit<br/>        &lt;br /&gt;<br/>
+                    button.<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;!-- The following TextBox controls have different --&gt;<br/>        &lt;!-- categories assigned to their AutoCompleteType --&gt;<br/>
+                    &lt;!-- properties. --&gt;<br/>        First Name:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="FirstNameTextBox" AutoCompleteType="FirstName" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>
+                    Last Name:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="LastNameTextBox" AutoCompleteType="LastName" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        Email:&lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="EmailTextBox" AutoCompleteType="Email" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        &lt;!-- The following TextBox controls have the same --&gt;<br/>
+                    &lt;!-- categories assigned to their AutoCompleteType --&gt;<br/>        &lt;!-- properties. They share the same AutoComplete --&gt;<br/>        &lt;!-- list. --&gt;<br/>        Phone Line #1:&lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="Phone1TextBox" AutoCompleteType="HomePhone" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        Phone Line #2:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="Phone2TextBox" AutoCompleteType="HomePhone" runat="server" /&gt;<br/>
+                    &lt;br /&gt;<br/>        &lt;!-- The following TextBox control has its --&gt;<br/>        &lt;!-- AutoCompleteType property set to --&gt;<br/>        &lt;!-- AutoCompleteType.None. All TextBox controls --&gt;<br/>        &lt;!-- with the same ID across different pages share --&gt;<br/>
+                    &lt;!-- the same AutoComplete list. --&gt;<br/>        Category:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="CategoryTextBox" AutoCompleteType="None" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        &lt;!-- The following TextBox control has the --&gt;<br/>
+                    &lt;!-- AutoComplete feature disabled. --&gt;<br/>        Comments:&lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="CommentsTextBox" AutoCompleteType="Disabled" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" runat="Server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadTextBox.Rows">
+            <summary>Gets or sets the number of rows displayed in a multiline RadTextBox.</summary>
+            <value>
+            The number of rows in a multiline RadTextBox. The default is 0, which displays a
+            two-line text box.
+            </value>
+            <remarks>
+            Use the Rows property to specify the number of rows displayed in a multiline
+            RadTextBox. This property is applicable only when the TextMode property is set to
+            MultiLine. This property cannot be set by themes or style sheet themes. This example
+            has a text box that accepts user input, which is a potential security threat. By
+            default, ASP.NET Web pages validate that user input does not include script or HTML
+            elements.
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the Rows property to
+                specify a height of 5 rows for a multiline RadTextBox control.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;<br/>
+            		<br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>
+            		<br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;MultiLine TextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>        protected void SubmitButton_Click(Object sender, EventArgs e)<br/>        {  <br/>            Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text;  <br/>        }<br/>
+            		<br/>        protected void Check_Change(Object sender, EventArgs e)<br/>        {  <br/>            Comment.Wrap = WrapCheckBox.Checked;<br/>            Comment.ReadOnly = ReadOnlyCheckBox.Checked;  <br/>        }<br/>
+            		<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            MultiLine TextBox Example<br/>        &lt;/h3&gt;<br/>        Please enter a comment and click the submit button.<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>
+                    &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>        &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"<br/>            ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;<br/>        &lt;hr /&gt;<br/>        &lt;asp:Label ID="Message" runat="server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/><br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;MultiLine RadTextBox Example &lt;/title&gt;<br/><br/>    &lt;script runat="server"&gt;<br/><br/>      Protected Sub SubmitButton_Click(sender As Object, e As EventArgs )<br/><br/>
+                     Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text<br/><br/>      End Sub<br/><br/>      Protected Sub Check_Change(sender As Object, e As EventArgs )<br/><br/>         Comment.Wrap = WrapCheckBox.Checked<br/>         Comment.ReadOnly = ReadOnlyCheckBox.Checked<br/><br/>      End Sub<br/><br/>    &lt;/script&gt;<br/><br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>
+                &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            MultiLine RadTextBox Example<br/>        &lt;/h3&gt;<br/>        Please enter a comment and click the submit button.<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;<br/>
+                    &lt;br /&gt;<br/>        &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"<br/>            ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>        &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/><br/>
+                    &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/><br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;<br/>        &lt;hr /&gt;<br/>        &lt;asp:Label ID="Message" runat="server" /&gt;<br/>
+                &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="P:Telerik.WebControls.RadTextBox.Columns">
+            <summary>Gets or sets the display width of the RadTextBox in characters.</summary>
+            <value>
+            The display width, in characters, of the RadTextBox. The default is 0, which
+            indicates that the property is not set.
+            </value>
+            <exception cref="T:System.ArgumentOutOfRangeException" caption="System.ArgumentOutOfRangeException">The specified width is less than 0.</exception>
+            <example>
+            	<para>The following code example demonstrates how to use the Columns property to
+                specify a width of 2 characters for the RadTextBox control. This example has a text
+                box that accepts user input, which is a potential security threat. By default,
+                ASP.NET Web pages validate that user input does not include script or HTML
+                elements.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;<br/>
+            		<br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/>
+            		<br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>        protected void AddButton_Click(Object sender, EventArgs e)<br/>        {<br/>            int Answer;<br/>
+            		<br/>            Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text);<br/>
+            		<br/>            AnswerMessage.Text = Answer.ToString();<br/>
+            		<br/>        }<br/>
+            		<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            RadTextBox Example<br/>        &lt;/h3&gt;<br/>
+            		<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>                    Enter integer values into the text boxes.<br/>                    &lt;br /&gt;<br/>
+                                Click the Add button to add the two values.<br/>                    &lt;br /&gt;<br/>                    Click the Reset button to reset the text boxes.<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>                    &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>
+                                    ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>                    &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>                        MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>
+                                    Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td colspan="2"&gt;<br/>                    &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>                        ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>                        MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>                        Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td&gt;<br/>                    &amp;nbsp<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td colspan="4"&gt;<br/>                    &lt;asp:Button ID="AddButton" Text="Add" OnClick="AddButton_Click" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+            		<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+            	</pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/><br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+                &lt;title&gt;TextBox Example &lt;/title&gt;<br/><br/>    &lt;script runat="server"&gt;<br/><br/>      Protected Sub AddButton_Click(sender As Object, e As EventArgs)<br/><br/>         Dim Answer As Integer<br/><br/>         Answer = Convert.ToInt32(Value1.Text) + Convert.ToInt32(Value2.Text)<br/><br/>         AnswerMessage.Text = Answer.ToString()<br/><br/>      End Sub<br/><br/>
+                &lt;/script&gt;<br/><br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            RadTextBox Example<br/>        &lt;/h3&gt;<br/>        &lt;table&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/>                    Enter integer values into the text boxes.<br/>
+                                &lt;br /&gt;<br/>                    Click the Add button to add the two values.<br/>                    &lt;br /&gt;<br/>                    Click the Reset button to reset the text boxes.<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="5"&gt;<br/><br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr align="center"&gt;<br/>                &lt;td&gt;<br/>                    &lt;radI:RadTextBox ID="Value1" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    +<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>
+                                &lt;radI:RadTextBox ID="Value2" Columns="2" MaxLength="3" Text="1" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    =<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &lt;asp:Label ID="AnswerMessage" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                        &lt;/tr&gt;<br/>            &lt;tr&gt;<br/>                &lt;td colspan="2"&gt;<br/>                    &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Value1"<br/>                        ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                                &lt;asp:RangeValidator ID="Value1RangeValidator" ControlToValidate="Value1" Type="Integer"<br/>                        MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>                        Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>
+                            &lt;td colspan="2"&gt;<br/>                    &lt;asp:RequiredFieldValidator ID="Value2RequiredValidator" ControlToValidate="Value2"<br/>                        ErrorMessage="Please enter a value.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>                    &lt;asp:RangeValidator ID="Value2RangeValidator" ControlToValidate="Value2" Type="Integer"<br/>
+                                    MinimumValue="1" MaximumValue="100" ErrorMessage="Please enter an integer &lt;br /&gt; between than 1 and 100.&lt;br /&gt;"<br/>                        Display="Dynamic" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/>                    &amp;nbsp<br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>
+                        &lt;tr align="center"&gt;<br/>                &lt;td colspan="4"&gt;<br/>                    &lt;asp:Button ID="AddButton" Text="Add" OnClick="AddButton_Click" runat="server" /&gt;<br/>                &lt;/td&gt;<br/>                &lt;td&gt;<br/><br/>                &lt;/td&gt;<br/>            &lt;/tr&gt;<br/>        &lt;/table&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            </requirements>
+            <remarks>
+            .NET Framework<br/>
+            Supported in: 3.0, 2.0, 1.1, 1.0
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadTextBox.Wrap">
+            <summary>
+            Gets or sets a value indicating whether the text content wraps within a multiline
+            RadTextBox.
+            </summary>
+            <value>
+            true if the text content wraps within a multiline RadTextBox; otherwise, false.
+            The default is true.
+            </value>
+            <remarks>
+            Use the Wrap property to specify whether the text displayed in a multiline
+            RadTextBox control automatically continues on the next line when the text reaches the
+            end of the control. This property is applicable only when the RadTextMode property is
+            set to MultiLine
+            </remarks>
+            <example>
+            	<para>The following code example demonstrates how to use the Wrap property to wrap
+                text entered in the RadTextBox control. This example has a text box that accepts
+                user input, which is a potential security threat. By default, ASP.NET Web pages
+                validate that user input does not include script or HTML elements.</para>
+            	<para>[C#]</para>
+            	<pre>
+            &lt;/%@ Page Language="C#" AutoEventWireup="True" /%&gt;  <br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;  <br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;MultiLine RadTextBox Example &lt;/title&gt;<br/>
+            		<br/>    &lt;script runat="server"&gt;<br/>
+            		<br/>        protected void SubmitButton_Click(Object sender, EventArgs e)<br/>        {<br/>
+            		<br/>            Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text;<br/>
+            		<br/>        }<br/>
+            		<br/>        protected void Check_Change(Object sender, EventArgs e)<br/>        {<br/>
+            		<br/>            Comment.Wrap = WrapCheckBox.Checked;<br/>            Comment.ReadOnly = ReadOnlyCheckBox.Checked;<br/>
+            		<br/>        }<br/>
+            		<br/>    &lt;/script&gt;<br/>
+            		<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>            MultiLine RadTextBox Example<br/>        &lt;/h3&gt;<br/>
+                    Please enter a comment and click the submit button.<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;<br/>        &lt;br /&gt;<br/>
+                    &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"<br/>            ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/>
+            		<br/>        &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;<br/>        &lt;hr /&gt;<br/>        &lt;asp:Label ID="Message" runat="server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+            	</pre>
+            	<para>[Visual Basic]</para>
+            	<pre>
+            &lt;/%@ Page Language="VB" AutoEventWireup="True" /%&gt;<br/><br/>&lt;/%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" /%&gt;<br/><br/>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br/>
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>    &lt;title&gt;MultiLine RadTextBox Example &lt;/title&gt;<br/><br/>    &lt;script runat="server"&gt;<br/><br/>
+                  Protected Sub SubmitButton_Click(sender As Object, e As EventArgs )<br/><br/>         Message.Text = "Thank you for your comment: &lt;br /&gt;" + Comment.Text<br/><br/>      End Sub<br/><br/>      Protected Sub Check_Change(sender As Object, e As EventArgs )<br/><br/>
+                     Comment.Wrap = WrapCheckBox.Checked<br/>         Comment.ReadOnly = ReadOnlyCheckBox.Checked<br/><br/>      End Sub<br/><br/>    &lt;/script&gt;<br/><br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id="form1" runat="server"&gt;<br/>        &lt;h3&gt;<br/>
+                        MultiLine RadTextBox Example<br/>        &lt;/h3&gt;<br/>        Please enter a comment and click the submit button.<br/>        &lt;br /&gt;<br/>        &lt;br /&gt;<br/>        &lt;radI:RadTextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" /&gt;<br/>
+                    &lt;br /&gt;<br/>        &lt;asp:RequiredFieldValidator ID="Value1RequiredValidator" ControlToValidate="Comment"<br/>            ErrorMessage="Please enter a comment.&lt;br /&gt;" Display="Dynamic" runat="server" /&gt;<br/>
+                    &lt;asp:CheckBox ID="WrapCheckBox" Text="Wrap Text" Checked="True" AutoPostBack="True"<br/>
+                        OnCheckedChanged="Check_Change" runat="server" /&gt;<br/><br/>        &lt;asp:CheckBox ID="ReadOnlyCheckBox" Text="ReadOnly" Checked="False" AutoPostBack="True"<br/>            OnCheckedChanged="Check_Change" runat="server" /&gt;<br/><br/>
+                    &lt;asp:Button ID="SubmitButton" Text="Submit" OnClick="SubmitButton_Click" runat="server" /&gt;<br/>        &lt;hr /&gt;<br/>        &lt;asp:Label ID="Message" runat="server" /&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+                </pre>
+            </example>
+            <requirements>
+            	<para>Windows 98, Windows Server 2000 SP4, Windows Server 2003, Windows XP Media
+                Center Edition, Windows XP Professional x64 Edition, Windows XP SP2, Windows XP
+                Starter Edition</para>
+            	<para>The Microsoft .NET Framework 3.0 is supported on Windows Vista, Microsoft
+                Windows XP SP2, and Windows Server 2003 SP1.</para>
+            	<para>.NET Framework<br/>
+                Supported in: 3.0, 2.0, 1.1, 1.0</para>
+            </requirements>
+        </member>
+        <member name="T:Telerik.WebControls.DisplayFormatPosition">
+            <summary>
+            Summary description for DisplayFormatPosition.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.InputClientEvents.OnEnumerationChanged">
+            <summary>
+            Fired whenever the value of any enumeration mask part has changed.
+            </summary>
+            <remarks>
+            Note this event is effective only for the RadMaskedTextBox control.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.InputClientEvents.OnMoveUp">
+            <summary>
+            Fired whenever the user increases the value of any enumeration or numeric range mask part of RadMaskedTextBox 
+            (with either keyboard arrow keys or mouse wheel).
+            </summary>
+            <remarks>
+            Note this event is effective only for the RadMaskedTextBox control.
+            </remarks> 
+        </member>
+        <member name="P:Telerik.WebControls.InputClientEvents.OnMoveDown">
+            <summary>
+            Fired whenever the user decreases the value of any enumeration or numeric range mask part of RadMaskedTextBox 
+            (with either keyboard arrow keys or mouse wheel).
+            </summary>
+            <remarks>
+            Note this event is effective only for the RadMaskedTextBox control.
+            </remarks>  
+        </member>
+        <member name="P:Telerik.WebControls.InputClientEvents.OnShowHint">
+            <summary>
+            Fired after the hint is shown.
+            </summary>
+            <remarks>
+            Note this event is effective only for the RadMaskedTextBox control.
+            </remarks>  
+        </member>
+        <member name="T:Telerik.WebControls.SelectionOnFocus">
+            <summary>
+            Summary description for AutoPostBackControl.
+            </summary>
+        </member>
+    </members>
+</doc>

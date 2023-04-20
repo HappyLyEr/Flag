@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="4">
+  <Object type="DataDynamics.ActiveReports.ActiveReport3" name="LocationCoastGuardCrewList">
+    <Property name="StyleSheet">
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; </Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 16pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading1</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; </Argument>
+          <Argument type="System.String">Heading2</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 13pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading3</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+    </Property>
+    <Property name="DataMember">GALocation</Property>
+    <Property name="ShowParameterUI">False</Property>
+    <Property name="PageSettings">
+      <Property name="PaperWidth">8.27</Property>
+      <Property name="PaperHeight">11.69</Property>
+    </Property>
+    <Property name="Sections">
+      <Reference name="pageHeader" />
+      <Reference name="detail" />
+      <Reference name="pageFooter" />
+    </Property>
+    <Property name="DataSource">
+      <Reference name="reportView1" />
+    </Property>
+    <Property name="Parameters">
+      <Reference name="StartDate" />
+      <Reference name="EndDate" />
+      <Reference name="OwnerName" />
+    </Property>
+    <Property name="PrintWidth">7.96875</Property>
+    <Property name="CalculatedFields">
+      <Reference name="ToDay" />
+      <Reference name="myDateFrom" />
+    </Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.PageHeader" name="pageHeader">
+    <Property name="Controls">
+      <Reference name="picture1" />
+      <Reference name="label1" />
+      <Reference name="txtName2" />
+      <Reference name="txtToDay2" />
+      <Reference name="label3" />
+      <Reference name="txtCallSign1" />
+      <Reference name="label4" />
+      <Reference name="txtLocationIdNumber1" />
+      <Reference name="label5" />
+      <Reference name="label6" />
+      <Reference name="txtCountryOfRegistrationListsRowId1" />
+      <Reference name="label7" />
+      <Reference name="label8" />
+      <Reference name="label9" />
+      <Reference name="label10" />
+      <Reference name="label11" />
+      <Reference name="label12" />
+      <Reference name="label13" />
+      <Reference name="label15" />
+      <Reference name="label16" />
+      <Reference name="label17" />
+      <Reference name="line1" />
+    </Property>
+    <Property name="Height">2.362205</Property>
+    <Property name="Name">pageHeader</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Picture" name="picture1">
+    <Property name="ImageData">
+      <Binary>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</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="LineWeight">0</Property>
+    <Property name="SizeMode">Stretch</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL</Binary>
+    </Property>
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADw9/tAi8ViPws=</Binary>
+    </Property>
+    <Property name="Name">picture1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label1">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLhdAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Vessel Name</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAIvFYj8L</Binary>
+    </Property>
+    <Property name="Name">label1</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtName2">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAACuVij8L</Binary>
+    </Property>
+    <Property name="DataField">Name</Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLhdAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Name">txtName2</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="Text">txtName2</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtToDay2">
+    <Property name="OutputFormat">MMMM d, yyyy</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAI/Hoz8L</Binary>
+    </Property>
+    <Property name="DataField">myDateFrom</Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLhdAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Name">txtToDay2</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="Text">txtToDay2</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label3">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAB3u10/JpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Call Sign</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAXS4XQIvFYj8L</Binary>
+    </Property>
+    <Property name="Name">label3</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtCallSign1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAXS4XQCqVij8L</Binary>
+    </Property>
+    <Property name="DataField">CallSign</Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAB3u10/JpPJPgs=</Binary>
+    </Property>
+    <Property name="Name">txtCallSign1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="Text">txtCallSign1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label4">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAACFQiFAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Vessel ID Number</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAOp1OQIvFYj8L</Binary>
+    </Property>
+    <Property name="Name">label4</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtLocationIdNumber1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAmUxOQCuVij8L</Binary>
+    </Property>
+    <Property name="DataField">LocationIdNumber</Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAACFQiFAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Name">txtLocationIdNumber1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="Text">txtLocationIdNumber1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label5">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAACFQiFAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">IMO</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAOp1OQI/Hoz8L</Binary>
+    </Property>
+    <Property name="Name">label5</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label6">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAhEAhAJpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Country of Registry</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAA4O+3QIvFYj8L</Binary>
+    </Property>
+    <Property name="Name">label6</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtCountryOfRegistrationListsRowId1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAA4O+3QCqVij8L</Binary>
+    </Property>
+    <Property name="DataField">CountryOfRegistrationListsRowId</Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAhEAhAJpPJPgs=</Binary>
+    </Property>
+    <Property name="Name">txtCountryOfRegistrationListsRowId1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="Text">txtCountryOfRegistrationListsRowId1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label7">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLhdAJpPJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Name in Full</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAACaTyT8L</Binary>
+    </Property>
+    <Property name="Name">label7</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label8">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLpc/KJPJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Family Name</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAPD3+z8L</Binary>
+    </Property>
+    <Property name="Name">label8</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label9">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLpc/JpPJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Given Name and Initial</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAXS6XP/D3+z8L</Binary>
+    </Property>
+    <Property name="Name">label9</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label10">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAB3u10/JpNJPws=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Date of Birth (MM/DD/YY)</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAXS4XQCaTyT8L</Binary>
+    </Property>
+    <Property name="Name">label10</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label11">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADw93s/JpNJPws=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Nationality</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAOp1OQCaTyT8L</Binary>
+    </Property>
+    <Property name="Name">label11</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label12">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAATicQ/XS4XPws=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Identification (ID) - Passport or Merchant Mariner's Doc</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAm82GQCaTyT8L</Binary>
+    </Property>
+    <Property name="Name">label12</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label13">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLhc/JpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Type</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAm82GQCqVCkAL</Binary>
+    </Property>
+    <Property name="Name">label13</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label15">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADI43E/JpNJPgs=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Number</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAZ7OZQCqVCkAL</Binary>
+    </Property>
+    <Property name="Name">label15</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label16">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAhEIg/JpNJPws=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Position or Duties</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAA4O+3QCaTyT8L</Binary>
+    </Property>
+    <Property name="Name">label16</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label17">
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAhEIg/JpNJPws=</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Alignment">Center</Property>
+    <Property name="Text">Where Embarked (Port or Place &amp; Country)</Property>
+    <Property name="VerticalAlignment">Middle</Property>
+    <Property name="BackColor">Gainsboro</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAA5/PZQCaTyT8L</Binary>
+    </Property>
+    <Property name="Name">label17</Property>
+    <Property name="HyperLink" />
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Line" name="line1">
+    <Property name="X1">0</Property>
+    <Property name="Y2">1.5</Property>
+    <Property name="Y1">1.5</Property>
+    <Property name="Name">line1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="LineWeight">10</Property>
+    <Property name="X2">7.874016</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Detail" name="detail">
+    <Property name="Controls">
+      <Reference name="subReport1" />
+    </Property>
+    <Property name="ColumnSpacing">0</Property>
+    <Property name="Name">detail</Property>
+    <Property name="Height">1.125</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.SubReport" name="subReport1">
+    <Property name="CloseBorder">False</Property>
+    <Property name="ReportName">CoastGuardCrewListDetail</Property>
+    <Property name="Name">subReport1</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Report" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADw9/tAAACAPws=</Binary>
+    </Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.PageFooter" name="pageFooter">
+    <Property name="Controls">
+      <Reference name="textBox1" />
+      <Reference name="txtToDay1" />
+    </Property>
+    <Property name="Height">0.25</Property>
+    <Property name="Name">pageFooter</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL</Binary>
+    </Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAMA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">Report Date: </Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtToDay1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAADAPwAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">ToDay</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAMA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtToDay1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtToDay1</Property>
+  </Object>
+  <Object type="GASystem.DataModel.View.ReportView" name="reportView1">
+    <Property name="Locale">English (United States)</Property>
+    <Property name="DataSetName">ReportView</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="StartDate">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">False</Property>
+    <Property name="Tag" />
+    <Property name="Key">StartDate</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="EndDate">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">False</Property>
+    <Property name="Tag" />
+    <Property name="Key">EndDate</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="OwnerName">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">False</Property>
+    <Property name="Tag" />
+    <Property name="Key">OwnerName</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Field" name="ToDay">
+    <Property name="DefaultValue" />
+    <Property name="Formula">System.DateTime.Now.ToString("d-MMM-yyyy")</Property>
+    <Property name="FieldType">String</Property>
+    <Property name="Tag" />
+    <Property name="Name">ToDay</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Field" name="myDateFrom">
+    <Property name="DefaultValue" />
+    <Property name="Formula">StartDate</Property>
+    <Property name="FieldType">Date</Property>
+    <Property name="Tag" />
+    <Property name="Name">myDateFrom</Property>
+  </Object>
+</ActiveReportsLayout>

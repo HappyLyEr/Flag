@@ -1,0 +1,10 @@
+F:\flagsvn\FLAGweb\bin\FlagActiveReportDesigner.exe.config
+F:\flagsvn\FLAGweb\bin\FlagActiveReportDesigner.exe
+F:\flagsvn\FLAGweb\bin\FlagActiveReportDesigner.pdb
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\ResolveAssemblyReference.cache
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\FlagActiveReportDesigner.ActiveReports.GAMeeting.resources
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\FlagActiveReportDesigner.Properties.Resources.resources
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\FlagActiveReportDesigner.csproj.GenerateResource.Cache
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\FlagActiveReportDesigner.exe.licenses
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\FlagActiveReportDesigner.exe
+F:\flagsvn\Flagdevelopment\FlagActiveReportDesigner\obj\Debug\FlagActiveReportDesigner.pdb

@@ -1,0 +1,3021 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadPanelbar.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.Design.Panelbar.ControlBuilderForm">
+            <summary>
+            Summary description for ControlBuilderForm.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Design.Panelbar.ControlBuilderForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Design.Panelbar.ControlBuilderForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Design.RadPanelbarEditorForm">
+            <summary>
+            The Windows form that hosts the RadPanelbar editor.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbarEventArgs.#ctor(Telerik.WebControls.RadPanelItem)">
+            <summary>
+                Initializes a new instance of the
+                <see cref="T:Telerik.WebControls.RadPanelbarEventArgs">RadPanelbarEventArgs</see> class.
+            </summary>
+            <param name="item">
+                A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> which represents an item in the
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> control.
+            </param>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbarEventArgs.Item">
+            <summary>
+                Gets the referenced <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> in the
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> control when the event is raised.
+            </summary>
+            <value>
+                The referenced item in the <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> control when
+                the event is raised.
+            </value>
+            <remarks>
+                Use this property to programmatically access the item referenced in the
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> when the event is raised.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadPanelbar">
+            <summary>A navigation control used to create collapsing interfaces.</summary>
+            <remarks>
+            	<para>
+                    The <b>RadPanelbar</b> control is used to display a list of items in a Web Forms
+                    page.The <b>RadPanelbar</b> control supports the following features:
+                </para>
+            	<list type="bullet">
+            		<item>Databinding that allows the control to be populated from various
+                    datasources</item>
+            		<item>Programmatic access to the <strong>RadPanelbar</strong> object model
+                    which allows dynamic creation and customization of menus.
+                    </item>
+            		<item>Customizable appearance through built-in or user-defined skins.</item>
+            	</list>
+            	<h3>Items</h3>
+            	<para>
+                    The <strong>RadPanelbar</strong> control is made up of tree of items represented
+                    by <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> objects. Items at the top level (level 0) are
+                    called root items. An item that has a parent item is called child item. All root
+                    items are stored in the <see cref="P:Telerik.WebControls.RadPanelbar.Items">Items</see> collection. Child items are
+                    stored in a parent item's <see cref="P:Telerik.WebControls.RadPanelItem.Items">Items</see> collection.
+                </para>
+            	<para>
+                    Each item has a <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see>, <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see>, 
+                    and a <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property. The value of the <b>Text</b>
+                    property is displayed in the <b>RadPanelbar</b> control, while the <b>Value</b>
+                    property is used to store any additional data about the item, such as data
+                    passed to the postback event associated with the item. When clicked, an item can
+                    navigate to another Web page indicated by the
+                    <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see> property.
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.RadPanelbarUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadPanelbarUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.IRadPanelItemContainer">
+            <summary>
+                Defines properties that panel item containers (<see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see>,
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see>) should implement
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.IRadPanelItemContainer.Owner">
+            <summary>Gets the parent <see cref="T:Telerik.WebControls.IRadPanelItemContainer">IRadPanelItemContainer</see>.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.IRadPanelItemContainer.Items">
+            <summary>Gets the collection of child items.</summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadPanelItemCollection">RadPanelItemCollection</see> that represents the child
+                items.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items. You can also use it to
+            programmatically add or remove items.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.#ctor">
+            <summary>Initializes a new instance of the <strong>RadPanelbar</strong> class.</summary>
+            <remarks>
+            Use this constructor to create and initialize a new instance of the RadPanelbar
+            class.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically create a
+                <strong>RadPanelbar</strong><br/>
+                control.
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                RadPanelbar RadPanelbar1 = new RadPanelbar();
+                RadPanelbar1.ID = "RadPanelbar1";
+                
+                RadPanelItem sportItem = new RadPanelItem("Sport", "~/Sport.aspx");
+                RadPanelbar1.Items.Add(sportItem);
+                
+                RadPanelItem newsItem = new RadPanelItem("News");
+                RadPanelbar1.Items.Add(newsItem);
+             
+                PlaceHolder1.Controls.Add(newsItem);
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                Dim RadPanelbar1 As RadPanelbar = New RadPanelbar()
+                RadPanelbar1.ID = "RadPanelbar1"
+             
+                Dim sportItem As RadPanelItem = New RadPanelItem("Sport", "")
+                RadPanelbar1.Items.Add(sportItem)
+             
+                Dim newsItem As RadPanelItem = New RadPanelItem("News")
+                RadPanelbar1.Items.Add(newsItem)
+             
+                PlaceHolder1.Controls.Add(newsItem)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.FindItemByText(System.String)">
+            <summary>
+                Searches the <strong>RadPanelbar</strong> control for the first
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> with a <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property equal to
+                the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> whose <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property is equal
+                to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="text">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.FindItemByValue(System.String)">
+            <summary>
+                Searches the <strong>RadPanelbar</strong> control for the first
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> with a <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property equal
+                to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> whose <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property is
+                equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="value">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.FindItemByUrl(System.String)">
+            <summary>
+                Searches the <strong>RadPanelbar</strong> control for the first
+                <see cref="T:Telerik.WebControls.RadPanelItem">Item</see> with a <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see>
+                property equal to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> whose <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see>
+                property is equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first Item matching the search criteria. If no Item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="url">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.GetAllItems">
+            <summary>
+            Gets a linear list of all items in the <strong>RadPanelbar</strong>
+            control.
+            </summary>
+            <returns>
+            An <strong>ArrayList</strong> containing all items (from all hierarchy
+            levels).
+            </returns>
+            <remarks>
+            Use the <strong>GetAllItems</strong> method to obtain a linear collection of all
+            items regardless their place in the hierarchy.
+            </remarks>
+            <example>
+                The following example demonstrates how to disable all items within a
+                <strong>RadPanelbar</strong> control. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                foreach (RadPanelItem item in RadPanelbar1.GetAllItems())
+                {
+                    item.Enabled = false;
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                For Each childItem As RadPanelItem In RadPanelbar1.GetAllItems
+                    childItem.Enabled = False
+                Next
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.LoadContentFromXmlFile(System.String)">
+            <summary>
+            Populates the <strong>RadPanelbar</strong> control from external XML file. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <remarks>
+            The newly added items will be appended after any existing ones.
+            </remarks>
+            <param name="XmlDefinitionFile">The name of the XML file.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.LoadContentFile(System.String)">
+            <summary>
+            Populates the <strong>RadPanelbar</strong> control from external XML file. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <remarks>
+            The newly added items will be appended after any existing ones.
+            </remarks>
+            <example>
+                The following example demonstrates how to populate <strong>RadPanelbar</strong> control
+                from XML file. 
+                <code lang="CS">
+            private void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadPanelbar1.LoadContentFile("~/Panelbar/Examples/Panelbar.xml");
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+                If Not Page.IsPostBack Then
+                    RadPanelbar1.LoadContentFile("~/Panelbar/Examples/Panelbar.xml")
+                End If
+            End Sub
+                </code>
+            </example>
+            <param name="xmlFileName">The name of the XML file.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.LoadContentFromXmlString(System.String)">
+            <summary>
+            Populates the <strong>RadPanelbar</strong> control from a XML string. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <remarks>
+            The newly added items will be appended after any existing ones.
+            </remarks>
+            <param name="xmlString">String that contain the panelbar definition.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.LoadXmlString(System.String)">
+            <summary>
+            Populates the <strong>RadPanelbar</strong> control from a XML string. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <remarks>
+            The newly added items will be appended after any existing ones.
+            </remarks>
+            <param name="xmlData">String that contain the panelbar definition.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelbar.GetXmlString">
+            <summary>
+            Gets the <strong>RadPanelbar</strong> control structure as a XML string. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <returns>
+            XML string which contains the whole <strong>RadPanelbar</strong> object along
+            with its child items.
+            </returns>
+            <remarks>
+            	<list type="number">
+            		<item>The <strong>GetXmlString</strong> method gets all of the public
+                    properties of the RadPanelbar object and enumerates through all of them.</item>
+            		<item>If the current property is in the list of excluded properties ( These are
+                    properties which are not serialized. For example, Parent is such a property.)
+                    the process jumps to the next item.</item>
+            		<item>If the current value of the property that is being checked is different
+                    from the default value of that property, then this property will be serialized,
+                    and the new XML node attribute will be created for that property.</item>
+            		<item>After all of the RadPanelbar properties have been serialized, the
+                    GetXmlString method serializes all of the child items using the same
+                    algorithm</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.ValidationGroup">
+            <summary>
+            	<para><font color="red">Note: This property is new in the .NET Framework version
+                2.0.</font></para>
+            	<para>Gets or sets the name of the validation group to which this validation
+                control belongs.</para>
+            </summary>
+            <value>
+            The name of the validation group to which this validation control belongs. The
+            default is an empty string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+                This property works only when <see cref="P:Telerik.WebControls.RadPanelbar.CausesValidation">CausesValidation</see>
+                is set to true.
+            </remarks>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.PostBackUrl">
+            <summary>
+            	<para>Gets or sets the URL of the page to post to from the current page when an item
+                from the panel is clicked.</para>
+            </summary>
+            <value>
+            The URL of the Web page to post to from the current page when an item from the
+            panel control is clicked. The default value is an empty string (""), which causes
+            the page to post back to itself.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.CookieName">
+            <summary>
+            Specifies the name of the cookie which should be used when PersistStateInCookie is set to true.
+            </summary>
+            <remarks>
+            If this property is not set the ClientID property will be used as the name of the cookie.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.CausesValidation">
+            <summary>
+            Gets or sets a value indicating whether validation is performed when an item within
+            the <strong>RadPanelbar</strong> control is selected.
+            </summary>
+            <value>
+            	<strong>true</strong> if validation is performed when an item is selected;
+            otherwise, <b>false</b>. The default value is <b>true</b>.
+            </value>
+            <remarks>
+            	<para>By default, page validation is performed when an item is selected. Page
+                validation determines whether the input controls associated with a validation
+                control on the page all pass the validation rules specified by the validation
+                control. You can specify or determine whether validation is performed on both the
+                client and the server when an item is clicked by using the <b>CausesValidation</b>
+                property. To prevent validation from being performed, set the
+                <b>CausesValidation</b> property to <b>false</b>.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.SelectedItem">
+            <summary>Gets the selected panel item.</summary>
+            <value>
+            Returns the panel item which is currently selected. If no item is selected
+            the <strong>SelectedItem</strong> property will
+            return <strong>null</strong> (<strong>Nothing</strong> in VB.NET).
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.ItemTemplate">
+            <summary>
+            Gets or sets the template for displaying the items in
+            <strong>RadPanelbar</strong>.
+            </summary>
+            <value>
+            	<para>A <strong>ITemplate</strong> implemented object that contains the template
+                for displaying panel items. The default value is a null reference (<b>Nothing</b> in
+                Visual Basic), which indicates that this property is not set.</para>
+            	<para>The <strong>ItemTemplate</strong> property sets a template that will be used
+                for all panel items.</para>
+            	<para>
+                    To specify unique display for individual items use the
+                    <see cref="P:Telerik.WebControls.RadPanelItem.ItemTemplate">ItemTemplate</see> property of the
+                    <strong>RadPanelItem</strong> class.
+                </para>
+            </value>
+            <example>
+            	<para>The following example demonstrates how to use the
+                <strong>ItemTemplate</strong> property to add a CheckBox for each item.</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radP:RadPanelbar runat="server" ID="RadPanelbar1"&gt;</para>
+            	<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            		<para>&lt;ItemTemplate&gt;</para>
+            		<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            			<para>&lt;asp:CheckBox runat="server"
+                        ID="CheckBox"&gt;&lt;/asp:CheckBox&gt;<br/>
+                        &lt;asp:Label runat="server" ID="Label1"</para>
+            			<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            				<para>Text='&lt;%# DataBinder.Eval(Container, "Text") %&gt;'</para>
+            				<para>&gt;&lt;/asp:Label&gt;</para>
+            			</blockquote>
+            		</blockquote>
+            		<para>&lt;/ItemTemplate&gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            			<para>&lt;radP:RadPanelItem Text="News" /&gt;</para>
+            			<para>&lt;radP:RadPanelItem Text="Sports" /&gt;</para>
+            			<para>&lt;radP:RadPanelItem Text="Games" /&gt;</para>
+            		</blockquote>
+            		<para>&lt;/Items&gt;</para>
+            	</blockquote>
+            	<para>&lt;/radP:RadPanelbar&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataSource">
+            <summary>
+            The DataSource object used for data-binding. Can be either IListSource (DataSet, DataTable, DataView) or ICollection / IEnumerable (ArrayList, arrays, etc)
+            </summary>
+            <summary>
+            	<para>Gets or sets the object from which the data-bound control retrieves its list
+                of data items.</para>
+            </summary>
+            <remarks>
+            	<para>RadPanelbar fully supports binding to IList datasources (DataSet, DataTable)
+                and ICollection / IEnumerable (ArrayList, arrays, etc), so you can easily populate
+                your panelbar instance with only a few lines of code. The built-in data binding
+                supports auto-binding from a a single self-referencing table with ID -&gt; ParentID
+                relation.<br/>
+            		<br/>
+                Properties and methods related to data binding:</para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadPanelbar.DataSource">DataSource</see> - (mandatory) object. Set to an
+                    instance of your datasource.
+                </para>
+            	<para>
+            		<see cref="!:DataMember">DataMember</see> - (optional) string. If the DataSource
+                    is a DataSet and DataMember is set, then RadPanelBar assumes the DataTable
+                    with the respective name in the DataSet. Otherwise the first DataTable in the
+                    DataSet is used.
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadPanelbar.DataFieldID">DataFieldID</see> - (optional) string. The name of the
+                    DataColumn holding the ID value;
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadPanelbar.DataFieldParentID">DataFieldParentID</see> - (optional) string. The
+                    name of the DataColumn holding the ParentID value;
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadPanelbar.DataTextField">DataTextField</see> (optional) - Gets or sets the
+                    field name from a data source to bind to the PanelItem Text property.
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadPanelbar.DataValueField">DataValueField</see> (optional) - Gets or sets the
+                    field name from a data source to bind to the PanelItem Value property.
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadPanelbar.DataNavigateUrlField">DataNavigateUrlField</see> (optional) - Gets
+                    or set the field name from a data source to bind to the PanelItem NavigageUrl
+                    property.
+                </para>
+            	<para>DataBind() - (mandatory) method. Call this method after you've set the
+                aforementioned properties per your scenario.</para>
+            </remarks>
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+            <value>
+            	<para>A data source that provides data for populating the
+                <strong>RadPanelbar</strong> control.</para>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.AppendDataBoundItems">
+            <summary>
+            	<para>Gets or sets a value that indicates whether the items are cleared before data
+                binding.</para>
+            </summary>
+            <value>
+            	<strong>True</strong> if items should not be cleared before data binding;
+            otherwise <strong>false</strong>. The default value is <strong>false</strong> (child
+            items are cleared).
+            </value>
+            <remarks>
+            	<para>The <strong>AppendDataBoundItems</strong> property allows you to add items to
+                the <strong>RadPanelbar</strong> control before data binding occurs. After data
+                binding, the items collection contains both the items from the data source and the
+                previously added items.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.Items">
+            <summary>
+            Gets the collection of child items in the <strong>RadPanelbar</strong>
+            control.
+            </summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadPanelItemCollection">RadPanelItemCollection</see> that represents the children within
+                the <strong>RadPanelbar</strong> control. The default is empty collection.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items of the <strong>RadPanelbar</strong>
+            control. You can also use it to programmatically add or remove items.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically add items. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadPanelItem corporateItem = new RadPanelItem("Corporate");
+                    RadPanelbar1.Items.Add(corporateItem);
+             
+                    RadPanelItem newsItem = new RadPanelItem("News");
+                    RadPanelbar1.Items.Add(newsItem);
+                
+                    RadPanelItem aboutUsItem = new RadPanelItem("About us");
+                    RadPanelbar1.Items.Add(aboutUsItem);
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                If Not Page.IsPostBack Then
+                    Dim corporateItem As RadPanelItem = New RadPanelItem("Corporate")
+                    RadPanelbar1.Items.Add(newsItem)
+             
+                    Dim newsItem As RadPanelItem = New RadPanelItem("News")
+                    RadPanelbar1.Items.Add(newsItem)
+             
+                    Dim aboutUsItem As RadPanelItem = New RadPanelItem("About us")
+                    RadPanelbar1.Items.Add(aboutUsItem)
+                End If
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataFieldID">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+            RadPanelbar1.DataNavigateUrlField = "URL"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+            RadPanelbar1.DataNavigateUrlField = "URL";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+            <summary>
+            Gets or sets the field from the data source which is the "child" column in the
+            "parent-child" relationship used to databind the <strong>RadPanelbar</strong>
+            control.
+            </summary>
+            <value>
+            A string that specifies the field of the data source that will be the "child"
+            column during databinding. The default is empty string
+            </value>
+            <remarks>
+            	<strong>RadPanelbar</strong> requires both <strong>DataFieldID</strong> and
+            <strong>DataFieldParentID</strong> properties to be set in order to be databound
+            recursively.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataFieldParentID">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+            RadPanelbar1.DataNavigateUrlField = "URL"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+            RadPanelbar1.DataNavigateUrlField = "URL";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+            <summary>
+            Gets or sets the field from the data source which is the "parent" column in the
+            "parent-child" relationship used to databind the <strong>RadPanelbar</strong>
+            control.
+            </summary>
+            <value>
+            A string that specifies the field of the data source that will be the "parent"
+            column during databinding. The default is empty string.
+            </value>
+            <remarks>
+            	<strong>RadPanelbar</strong> requires both <strong>DataFieldID</strong> and
+            <strong>DataFieldParentID</strong> properties to be set in order to be databound
+            recursively.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataTextFormatString">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+            RadPanelbar1.DataNavigateUrlField = "URL"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+            RadPanelbar1.DataNavigateUrlField = "URL";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+            <summary>
+            Gets or sets the formatting string used to control how the item text would look
+            like.
+            </summary>
+            <remarks>
+            Use the <strong>DataTextFormatString</strong> property to provide a custom
+            display format for text of the items. The data format string consists of two parts,
+            separated by a colon, in the form { A: Bxx }. For example, the formatting string {0:F2}
+            would format the text as a fixed point number with two decimal places. Note the entire
+            string must be enclosed in braces to indicate that it is a format string and not a
+            literal string. Any text outside the braces is displayed as literal text. The value
+            before the colon (A in the general example) specifies the parameter index in a
+            zero-based list of parameters.
+            </remarks>
+            <value>
+                A string value representing the format of the
+                <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataTextField">
+            <summary>
+                Gets or sets the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property of the items.
+            </summary>
+            <value>
+                A string that specifies the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property of the items. The default value
+                is empty string.
+            </value>
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+            RadPanelbar1.DataNavigateUrlField = "URL"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+            RadPanelbar1.DataNavigateUrlField = "URL";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataValueField">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+            RadPanelbar1.DataNavigateUrlField = "URL"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+            RadPanelbar1.DataNavigateUrlField = "URL";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+            <summary>
+                Gets or sets the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property of the items.
+            </summary>
+            <value>
+                A string that specifies the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property of the items. The default is
+                empty string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.Skin">
+            <summary>
+            Gets or sets the skin used by RadPanelbar.
+            </summary>
+            <value>
+                A <see cref="T:System.String">String</see> specifying the skin. The default value is
+                empty string ("").
+            </value>
+            <remarks>If the value is empty string ("") no skin is used.</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.ExpandAnimation">
+            <summary>Gets the settings for the animation played when an item opens.</summary>
+            <value>
+                An <see cref="!:AnimationSettings">AnnimationSettings</see> that represents the
+                expand animation.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <strong>ExpandAnimation</strong> property to customize the expand
+                    animation of <strong>RadPanelbar</strong>. You can specify the
+                    <see cref="!:AnimationSettings.Type">Type</see>,
+                    <see cref="!:AnimationSettings.Duration">Duration</see> and the
+                    To disable expand animation effects you should set the
+                    <see cref="!:AnimationSettings.Type">Type</see> to
+                    <strong>PanelbarAnimationType.None</strong>.<br/>
+                    To customize the collapse animation you can use the
+                    <see cref="P:Telerik.WebControls.RadPanelbar.CollapseAnimation">CollapseAnimation</see> property.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to set the <strong>ExpandAnimation</strong>
+                of RadPanelbar. 
+                <para>
+            		<para><strong>ASPX:</strong></para>
+            	</para>
+            	<para>
+            		<para>&lt;radP:RadPanelbar ID="RadPanelbar1" runat="server"&gt;</para>
+            		<para><strong>&lt;ExpandAnimation Type="OutQuint" Duration="300"
+                    /&gt;</strong></para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="News" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="CNN" NavigateUrl="http://www.cnn.com"
+                    /&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="Google News" NavigateUrl="http://news.google.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radP:RadPanelItem&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="Sport" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="ESPN" NavigateUrl="http://www.espn.com"
+                    /&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="Eurosport" NavigateUrl="http://www.eurosport.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radP:RadPanelItem&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            	</para>
+            	<para>
+            		<para>&lt;/radP:RadPanelbar&gt;</para>
+            	</para>
+            	<code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                RadPanelbar1.ExpandAnimation.Type = PanelbarAnimationType.Linear;
+                RadPanelbar1.ExpandAnimation.Duration = 300;
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                RadPanelbar1.ExpandAnimation.Type = PanelbarAnimationType.Linear
+                RadPanelbar1.ExpandAnimation.Duration = 300
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.CollapseAnimation">
+            <summary>Gets the settings for the animation played when an item closes.</summary>
+            <value>
+                An <see cref="!:AnimationSettings">AnnimationSettings</see> that represents the
+                collapse animation.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <strong>CollapseAnimation</strong> property to customize the expand
+                    animation of <strong>RadPanelbar</strong>. You can specify the
+                    <see cref="!:AnimationSettings.Type">Type</see>,
+                    <see cref="!:AnimationSettings.Duration">Duration</see> and the
+                    items are collapsed.<br/>
+                    To disable expand animation effects you should set the
+                    <see cref="!:AnimationSettings.Type">Type</see> to
+                    <strong>PanelbarAnimationType.None</strong>. To customize the expand animation you can
+                    use the <see cref="P:Telerik.WebControls.RadPanelbar.ExpandAnimation">ExpandAnimation</see> property.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to set the
+                <strong>CollapseAnimation</strong> of RadPanelbar. 
+                <para>
+            		<para><strong>ASPX:</strong></para>
+            	</para>
+            	<para>
+            		<para>&lt;radP:RadPanelbar ID="RadPanelbar1" runat="server"&gt;</para>
+            		<para><strong>&lt;CollapseAnimation Type="OutQuint" Duration="300"
+                    /&gt;</strong></para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="News" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="CNN" NavigateUrl="http://www.cnn.com"
+                    /&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="Google News" NavigateUrl="http://news.google.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radP:RadPanelItem&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="Sport" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="ESPN" NavigateUrl="http://www.espn.com"
+                    /&gt;</para>
+            		<para>&lt;radP:RadPanelItem Text="Eurosport" NavigateUrl="http://www.eurosport.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radP:RadPanelItem&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            	</para>
+            	<para>
+            		<para>&lt;/radP:RadPanelbar&gt;</para>
+            		<code lang="CS">
+            		</code>
+            		<code lang="VB">
+            		</code>
+            	</para>
+            	<code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                RadPanelbar1.CollapseAnimation.Type = PanelbarAnimationType.Linear;
+                RadPanelbar1.CollapseAnimation.Duration = 300;
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                RadPanelbar1.CollapseAnimation.Type = PanelbarAnimationType.Linear
+                RadPanelbar1.CollapseAnimation.Duration = 300
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.SkinsPath">
+            <summary>
+            Gets or sets the relative path of the folder containing the skins.
+            </summary>
+            <example>
+            If the skin folder is located in the project root and is named "Skins" the
+            SkinsPath property should be set to: "~/Skins". Then you can create subfolders for
+            individual skins e.g. Skins/Gold, Skins/Default etc.
+            </example>
+            <value>
+            A string specifying the relative path to the folder which contains
+            RadPanelBar skins. The default value is
+            "~/RadControls/Panelbar/Skins".
+            </value>
+            <remarks>
+            RadPanelBar ships with a set of predefined skins which are ready
+            to use. They are located in RadControls/Panelbar/Skins.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.DataNavigateUrlField">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID"
+            RadPanelbar1.DataFieldParentID = "ParentID"
+            RadPanelbar1.DataNavigateUrlField = "URL"
+             
+            RadPanelbar1.DataSource = ds
+            RadPanelbar1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/Panelbar/Data/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadPanelbar1.DataTextField = "TextColumn"
+            RadPanelbar1.DataValueField = "ValueColumn"
+            RadPanelbar1.DataFieldID = "ID";
+            RadPanelbar1.DataFieldParentID = "ParentID";
+            RadPanelbar1.DataNavigateUrlField = "URL";
+             
+            RadPanelbar1.DataSource = ds;            
+            RadPanelbar1.DataBind();
+                </code>
+            </example>
+            <summary>
+                Gets or sets the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see> property of the items.
+            </summary>
+            <value>
+                A string that specifies the the field from the data source that provides values for
+                the <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see> property of the items.
+                The default value is empty string.
+            </value>
+        </member>
+        <member name="E:Telerik.WebControls.RadPanelbar.ItemCreated">
+            <summary>
+            Occurs on the server when an item in the <strong>RadPanelbar</strong> control is
+            created.
+            </summary>
+            <remarks>
+            	<para>The <b>ItemCreated</b> event is raised every time a new item is
+                added.</para>
+            	<para>The <b>ItemCreated</b> event is not related to data binding and you
+                cannot retrieve the <strong>DataItem</strong> of the item in the event
+                handler.</para>
+            	<para>The <b>ItemCreated</b> event is often useful in scenarios where you want
+                to initialize all items - for example setting the <strong>ToolTip</strong> of each
+                <strong>RadPanelItem</strong> to be equal to the <strong>Text</strong> property.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the <strong>ItemCreated</strong>
+                event to set the <strong>ToolTip</strong> property of each item.
+                <code lang="CS">
+            private void RadPanelbar1_ItemCreated(object sender, Telerik.WebControls.PanelItemEventArgs e)
+            {
+                e.Item.ToolTip = e.Item.Text;
+            }
+                </code>
+            	<code lang="VB">
+            Sub RadPanelbar1_ItemCreated(ByVal sender As Object, ByVal e As Telerik.WebControls.PanelItemEventArgs) Handles RadPanelbar1.ItemCreated
+                e.Item.ToolTip = e.Item.Text
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="E:Telerik.WebControls.RadPanelbar.ItemClick">
+            <summary>
+                Occurs on the server when a panel item in the <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see>
+                control is clicked.
+            </summary>
+            <remarks>
+            	<para>
+            		The panelbar will also postback if you navigate to a panel item
+                    using the [panel item] key and then press [enter] on the panel item that is focused. The
+                    instance of the clicked panel item is passed to the <strong>ItemClick</strong> event
+                    handler - you can obtain a reference to it using the eventArgs.RadPanelItem property.
+                </para>
+            </remarks>
+        </member>
+        <member name="E:Telerik.WebControls.RadPanelbar.ItemDataBound">
+            <summary>Occurs after a panel item is data bound.</summary>
+            <remarks>
+            	<para>
+                    The <strong>ItemDataBound</strong> event is raised for each panel item upon
+                    databinding. You can retrieve the item being bound using the event arguments.
+                    The <strong>DataItem</strong> associated with the item can be retrieved using
+                    the <see cref="P:Telerik.WebControls.RadPanelItem.DataItem">DataItem</see> property.
+                </para>
+            	<para>The <strong>ItemDataBound</strong> event is often used in scenarios when
+                you want to perform additional mapping of fields from the <strong>DataItem</strong>
+                to their respective properties in the <strong>RadPanelItem</strong> class.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to map fields from the data item to
+                <see cref="T:Telerik.WebControls.RadPanelItem">item properties using the <strong>ItemDataBound</strong>
+                event.</see>
+            	<code lang="CS">
+            private void RadPanelbar1_ItemDataBound(object sender, Telerik.WebControls.RadPanelbarEventArgs e)
+            {
+                RadPanelItem item = e.Item;
+                DataRowView dataRow = (DataRowView) e.Item.DataItem;
+             
+                item.ImageUrl = "image" + dataRow["ID"].ToString() + ".gif";
+                item.NavigateUrl = dataRow["URL"].ToString();
+            }
+                </code>
+            	<code lang="VB">
+            Sub RadPanelbar1_ItemDataBound(ByVal sender As Object, ByVal e As RadPanelbarEventArgs) Handles RadPanelbar1.ItemDataBound
+                Dim item As RadPanelItem = e.Item
+                Dim dataRow As DataRowView = CType(e.Item.DataItem, DataRowView)
+             
+                item.ImageUrl = "image" + dataRow("ID").ToString() + ".gif"
+                item.NavigateUrl = dataRow("URL").ToString()
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.ExpandMode">
+            <summary>
+            Gets of sets a value indicating the behavior of RadPanelbar when an item is
+            expanded.
+            </summary>
+            <value>
+                One of the <see cref="T:Telerik.WebControls.PanelbarExpandMode">PanelbarExpandMode Enumeration</see>
+                values. The default value is <strong>MultipleExpandedItems</strong>.
+            </value>
+            <remarks>
+            	<para>Use the <strong>ExpandMode</strong> property to specify the way RadPanelbar
+                should behave after an item is expanded. The available options are:</para>
+            	<list type="bullet">
+            		<item><strong>MultipleExpandedItems</strong> (default) - More than one item can
+                    be expanded at a time.</item>
+            		<item><strong>SingleExpandedItem</strong> - Only one item can be expanded at a
+                    time. Expanding another item collapses the previously expanded one.</item>
+            		<item><strong>FullExpandedItem</strong> - Only one item can be expanded at a
+                    time. The expanded area occupies the entire height of the RadPanelbar. The
+                    <strong>Height</strong> property should be set in order
+                    <strong>RadPanelbar</strong> to operate correctly in this mode.</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientContextMenu">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            before the browser context menu shows (after right-clicking an item).
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>Use the <strong>OnClientContextMenu</strong> property to specify a JavaScript
+                function that will be executed before the context menu shows after right clicking an
+                item.</para>
+            	<para>Two parameters are passed to the handler</para>
+            	<list type="bullet">
+            		<item>sender (the client-side RadPanelbar object)</item>
+            		<item>
+                        eventArgs with two properties 
+                        <ul>
+            				<li>Item - the instance of the selected item</li>
+            				<li>EventObject - the browser DOM event</li>
+            			</ul>
+            		</item>
+            	</list>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientContextMenu</strong> property. 
+                <para>
+            		<para class="sourcecode">&lt;script language="javascript"&gt;<br/>
+                    function <strong>OnContextMenuHandler</strong>(sender, eventArgs)<br/>
+                    {<br/>
+                    var panelbar = sender;<br/>
+                    var item = eventArgs.Item;<br/>
+            			<br/>
+                    alert("You have right-clicked the " + item.Text + " item in the " + panelbar.ID +
+                    "panelbar.");<br/>
+                    }<br/>
+                    &lt;/script&gt;</para>
+            		<para class="sourcecode">&lt;radP:RadPanelbar id="RadPanelbar1" runat="server"
+                    <strong>OnClientContextMenu="OnContextMenuHandler"</strong>&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radP:RadPanelItem Text="Personal Details"&gt;&lt;/radP:RadPanelItem&gt;<br/>
+                    &lt;radP:RadPanelItem Text="Education"&gt;&lt;/radP:RadPanelItem&gt;<br/>
+                    &lt;radP:RadPanelItem Text="Computing Skills"&gt;&lt;/radP:RadPanelItem&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radP:RadPanelbar&gt;</para>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientItemClicking">
+            <remarks>
+            	<para>This event is similar to <strong>OnClientItemFocus</strong> but fires only on
+                mouse click.</para>
+            	<para>If specified, the <strong>OnClientItemClicking</strong> client-side event
+                handler is called before a panel item is clicked upon. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>The <strong>OnClientItemClicking</strong> event can be cancelled. To do so,
+                return <strong>False</strong> from the event handler.</para>
+            	<div>
+            		<table class="hs-box"></table>
+            	</div>
+            </remarks>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a panel item is clicked.
+            </summary>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemClickingHandler(sender, eventArgs)<br/>
+                {<br/>
+                if (eventArgs.Item.Text == "News")<br/>
+                {</para>
+            	<para>return false;</para>
+            	<para>}<br/>
+                }<br/>
+                &lt;/script&gt;<br/>
+                &lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemClicking="OnClientItemClickingHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientItemClicked">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after a panel item is clicked.
+            </summary>
+            <remarks>
+            	<para>This event is similar to <strong>OnClientItemFocus</strong> but fires only on
+                mouse click.</para>
+            	<para>If specified, the <strong>OnClientItemClicked</strong> client-side event
+                handler is called after a panel item is clicked upon. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            &lt;script type="text/javascript"&gt;<br/>
+            function OnClientItemClickedHandler(sender, eventArgs)<br/>
+            {<br/>
+            alert(eventArgs.Item.Text);<br/>
+            }<br/>
+            &lt;/script&gt;<br/>
+            &lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+            runat="server"<br/>
+            	<strong>OnClientItemClicked="OnClientItemClickedHandler"</strong>&gt;<br/>
+            ....<br/>
+            &lt;/radP:RadPanelbar&gt;
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientItemFocus">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a panel item gets focus.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemFocusHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemFocus="OnClientItemFocusHandler"&gt;</strong><br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+            <remarks>
+            	<para>If specified, the <strong>OnClientItemFocus</strong> client-side event
+                handler is called when a panel item is selected using either the keyboard (the
+                [TAB] or arrow keys) or by clicking it. Two parameters are passed to the
+                handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientItemBlur">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after an item loses focus.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientItemBlur</strong> client-side event handler
+                is called when a panel item loses focus as a result of the user pressing a key or
+                clicking elsewhere on the page. Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemBlurHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemBlur="OnClientItemBlurHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientItemExpand">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a group of child items expands.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <requirements>
+            	<para>If specified, the <strong>OnClientItemOpen</strong> client-side event handler
+                is called when a group of child items opens. Two parameters are passed to the
+                handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </requirements>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemExpandHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemExpand="OnClientItemExpandHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientItemCollapse">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a group of child items collapses.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemCollapseHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemCollapse="OnClientItemCollapseHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+            <remarks>
+            	<para>If specified, the <strong>OnClientItemClose</strong> client-side event
+                handler is called when a group of child items closes. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientLoad">
+            <remarks>
+            	<para>If specified, the <strong>OnClienLoad</strong> client-side event handler is
+                called after the panelbar is fully initialized on the client.</para>
+            	<para>A single parameter - the panelbar client object - is passed to the
+                handler.</para>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientLoadHandler(sender)<br/>
+                {<br/>
+                alert(sender.ID);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat= "server"<br/>
+            		<strong>OnClientLoad= "OnClientLoadHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after the <strong>RadPanelbar</strong> client-side object is initialized.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientMouseOver">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the mouse moves over a panel item in the <strong>RadPanelbar</strong> control.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the
+                <strong>OnClientMouseOver</strong><font color="black">client-side event handler is
+                called when the mouse moves over a panel item.</font> Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientMouseOver</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                        function OnClientMouseOverHandler(sender, eventArgs)<br/>
+                        {<br/>
+                        alert(eventArgs.Item.Text);<br/>
+                        }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                        runat= "server"<br/>
+            			<strong>OnClientMouseOver= "OnClientMouseOverHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radP:RadPanelbar&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.OnClientMouseOut">
+            <remarks>
+            	<para>If specified, the <strong>OnClientMouseOut</strong> client-side event handler
+                is called when the mouse moves out of a panel item. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the panelbar client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the panel item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the mouse moves out of a panel item in the <strong>RadPanelbar</strong> control.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientMouseOutHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radP:RadPanelbar ID="RadPanelbar1"<br/>
+                runat= "server"<br/>
+            		<strong>OnClientMouseOut= "OnClientMouseOutHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radP:RadPanelbar&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelbar.PersistStateInCookie">
+            <summary>
+            Gets or sets a value indicating whether the control would persists its state
+            between pages (expanded and selected items).
+            </summary>
+            <value>
+            	<strong>true</strong> if the control would persist its state;
+            <strong>false</strong> otherwise. The default value is <strong>false</strong>.
+            </value>
+            <remarks>
+            	<para>Use the <strong>PersistStateInCookie</strong> property to make
+                <strong>RadPanelbar</strong> persist its state between pages. This feature requires
+                browser cookies to be enabled. Also the <strong>ClientID</strong> and
+                <strong>ID</strong> properties of the <strong>RadPanelbar</strong> control must be
+                the same in all pages accessible via the control (and containing it).</para>
+            	<para>Page1.aspx:</para>
+            	<para>&lt;radP:RadPanelbar <strong>ID="RadPanelbar1"</strong> &gt; ...
+                &lt;/radP:RadPanelbar&gt;</para>
+            	<para>Page2.aspx</para>
+            	<para>&lt;radP:RadPanelbar <strong>ID="RadPanelbar1"</strong> &gt; ...
+                &lt;/radP:RadPanelbar&gt;</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.DataMember">
+            <summary>Gets or sets the data member to bind to a menu item.</summary>
+            <remarks>
+            	<para>
+                    When creating a
+                    <a href="T_System_Web_UI_WebControls_MenuItemBinding.htm">RadPanelItemBinding</a>
+                    object, you must specify the criteria for binding. The criteria indicate when a
+                    data item should be bound to a menu item. You can specify the
+                    <see cref="P:Telerik.WebControls.RadPanelItemBinding.Depth">Depth</see> property, the <b>DataMember</b> property, or
+                    both.
+                </para>
+            	<para>
+                    When the data source contains multiple elements or tables, use the
+                    <b>DataMember</b> property to specify the element or table to bind to a menu
+                    item. A data member specifies the type of the data item in the underlying data
+                    source, but can represent different information depending on the data source.
+                    Each data item in a hierarchical data source <font color="black">exposes a
+                    IHierarchyData.Type property, which specifies the type of the data item. For
+                    example, the data member for an XML element specifies the name of the element.
+                    The following <b>RadPanelItemBinding</b> declaration binds the</font>
+            		<code inline="true">
+            			<font color="black"><font color="black">&lt;Book&gt;</font></font>
+            		</code>elements of an
+                    <a href="T_System_Web_UI_WebControls_XmlDataSource.htm">XmlDataSource</a>
+                    control to all the menu items in the menu, regardless of the location in the
+                    hierarchy:
+                </para>
+            	<pre>
+            &lt;asp:RadPanelItemBinding DataMember="Book" TextField="Title" ValueField= "ISBN"&gt;
+            </pre>
+            	<para>
+                    Sometimes you might need to create a menu item binding that specifies both a
+                    depth and a data member. This is often used when the data source contains items
+                    at different levels that have the same data member value. For example, you can
+                    have 
+                    <code inline="true">
+            			<font color="black">&lt;Item&gt;</font>
+            		</code>elements that appear at different levels within an XML file. The
+                    following <b>RadPanelItemBinding</b> declarations show how to specify menu item
+                    bindings that apply to identical data members at different menu depths:
+                </para>
+            	<para>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadPanelItemBinding DataMember="Item" Depth="1" TextField="Title"&gt;</font>
+            		</code>
+            	</para>
+            	<para>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadPanelItemBinding DataMember="Item" Depth="2" TextField="ISBN"&gt;</font>
+            		</code>
+            	</para>
+            	<para>If a menu item binding is defined without a depth or a data member, the menu
+                item binding is applied to all menu items within the menu. This is commonly used
+                when all data items have the same properties and should be displayed identically,
+                regardless of the menu depth.</para>
+            	<para>After the binding criteria are established, you can then bind a property of a
+                RadMenuItem object that can be
+                bound to a value. You can bind to a field of a data item or to a static value. When
+                bound to a static value, all <b>RadMenuItem</b> objects to which the
+                <b>RadPanelItemBinding</b> object is applied share the same value. Properties bound to
+                fields contain the values of the field from the data source.</para>
+            	<para>If conflicting <b>RadPanelItemBinding</b> objects are defined, the Menu control
+                applies the menu item bindings in the following order of precedence:</para>
+            	<list type="number">
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines and matches both a
+                        depth and a data member.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines and matches the data
+                        member only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines and matches the depth
+                        only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines neither the depth nor
+                        the data member. (This type of menu item binding is applied to all menu
+                        items in the menu.)</para>
+            		</item>
+            		<item>
+            			<para>
+                            The <b>RadPanelItemBinding</b> object that does not have a match in the
+                            data source. In this case, the value returned by the <b>ToString()</b>
+                            method of the data item is then bound to the
+                            <see cref="P:Telerik.WebControls.RadPanelItemBinding.Text">Text</see> and <see cref="P:Telerik.WebControls.RadPanelItemBinding.Value">Value</see>
+                            properties of the menu items to which the <b>RadPanelItemBinding</b> object
+                            is applied.
+                        </para>
+            		</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.Text">
+            <summary>Gets or sets the text caption for the item.</summary>
+            <value>The text of the item. The default value is empty string.</value>
+            <example>
+                This example demonstrates how to set the text of the item using the
+                <strong>Text</strong> property. 
+                <para>
+            		<para class="sourcecode">&lt;radM:RadMenu ID="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radM:RadMenuItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;radM:RadMenuItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radM:RadMenu&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            Specifying <strong>Text</strong> or
+            <strong><see cref="P:Telerik.WebControls.RadPanelItemBinding.TextField"><strong>TextField</strong></see> will override the values
+            populated from the
+            <strong><see cref="!:RadMenu.DataTextField"><strong>DataTextField</strong></see>
+            property.</strong></strong>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.TextField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.Text">Text</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.Text">Text</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            Specifying <strong><see cref="P:Telerik.WebControls.RadPanelItemBinding.Text"><strong>Text</strong></see> or
+            <strong>TextField</strong> will override the values populated from the
+            <strong><see cref="!:RadMenu.DataTextField"><strong>DataTextField</strong></see>
+            property.</strong></strong>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.Value">
+            <summary>Gets or sets the value associated with the item.</summary>
+            <value>The value associated with the item. The default value is empty string.</value>
+            <remarks>
+            	<para>Use the <b>Value</b> property to specify or determine the value associated
+                with the item.</para>
+            	<para>Specifying <strong>Value</strong> or <strong>ValueField</strong> will
+                override the values populated from the
+                <strong><see cref="!:RadMenu.DataValueField"><strong>DataValueField</strong></see>
+                property.</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ValueField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.Value">Value</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.Value">Value</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>Specifying <strong>Value</strong> or <strong>ValueField</strong> will
+                override the values populated from the
+                <strong><see cref="!:RadMenu.DataValueField"><strong>DataValueField</strong></see>
+                property.</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.NavigateUrl">
+            <summary>Gets or sets the URL to link to when the item is clicked.</summary>
+            <value>
+            The URL to link to when the item is clicked. The default value is empty
+            string.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>NavigateUrl</strong>
+                property 
+                <para>
+            		<para class="sourcecode">&lt;radM:RadMenu id="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radM:RadMenuItem Text="News" <strong>NavigateUrl="~/News.aspx"</strong>
+                    /&gt;<br/>
+                    &lt;radM:RadMenuItem Text="External URL"
+                    <strong>NavigateUrl="http://www.example.com"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radM:RadMenu&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            	<para>Use the <strong>NavigateUrl</strong> property to specify the URL to link to
+                when the item is clicked. Use "~" (tilde) in front of an URL within the same
+                ASP.NET application. When specifying external URL do not forget the protocol (e.g.
+                "http://").</para>
+            	<para>Specifying <strong>NavigateUrl</strong> or
+                <strong><see cref="P:Telerik.WebControls.RadPanelItemBinding.NavigateUrlField"><strong>NavigateUrlField</strong></see> will
+                override the values populated from the
+                <strong><see cref="!:RadMenu.DataNavigateUrlField"><strong>DataNavigateUrlField</strong></see>
+                property.</strong></strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.NavigateUrlField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.NavigateUrl">NavigateUrl</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.NavigateUrl">NavigateUrl</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>Specifying %<strong>NavigateUrl</strong>:NavigateUrl% or
+                <strong>NavigateUrlField</strong> will override the values populated from the
+                <strong><see cref="!:RadMenu.DataNavigateUrlField"><strong>DataNavigateUrlField</strong></see>
+                property.</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ToolTip">
+            <summary>
+            Gets or sets the ToolTip text for a menu item to which the
+            RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The ToolTip text for a menu item to which the RadPanelItemBinding is applied.
+            The default is an empty string (""), which indicates that this property is not
+            set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ToolTipField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.ToolTip">ToolTip</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.ToolTip">ToolTip</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ImageUrl">
+            <summary>
+            Gets or sets the URL to an image that is displayed next to the text of a menu
+            item to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The URL to an image that is displayed next to the text of a menu item to which
+            the RadPanelItemBinding is applied. The default is an empty string (""), which
+            indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>
+                    This image is shared with all <see cref="!:RadMenuItem">RadMenuItem</see> objects to
+                    which the RadPanelItemBinding object is applied.
+              </para>
+            	<para><strong>NOTE:</strong> You can override the image for an individual menu item
+              by setting its <b>ImageUrl</b> property directly.</para>
+            	<para>Instead of using this property to display the same image in each menu item,
+              you can also use the
+              <see cref="!:RadMenuItem.ImageUrlField">ImageUrlField</see>
+              property to bind the <b>ImageUrl</b> property of a <b>RadMenuItem</b> object to a
+              field of a data source. When rendered, the <b>ImageUrl</b> property of each menu
+              item to which the <b>RadPanelItemBinding</b> object is applied contains the
+              corresponding value from the field.</para>
+              <para>
+                  <strong>NOTE:</strong> If the <b>ImageUrl</b> and <b>ImageUrlField</b>
+                  properties are both set, the <b>ImageUrlField</b> property takes precedence.
+              </para>
+            </remarks>
+            <notes>
+            	<para>You can override the image for an individual menu item by setting its
+                <b>ImageUrl</b> property directly.</para>
+            </notes>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ImageUrlField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.ImageUrl">ImageUrl</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.ImageUrl">ImageUrl</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>
+                    If the data source contains multiple tables or attributes, you must first
+                    establish the binding criteria by setting the <see cref="P:Telerik.WebControls.RadPanelItemBinding.Depth">Depth</see>
+                    property, the <see cref="P:Telerik.WebControls.RadPanelItemBinding.DataMember">DataMember</see> property, or both.
+                </para>
+            	<para>
+                    Instead of using this property to bind the <b>ImageUrl</b> property of a
+                    <b>RadMenuItem</b> object to a field, you can also bind it to a static value by
+                    setting the <see cref="P:Telerik.WebControls.RadPanelItemBinding.ImageUrl">RadPanelItemBinding.ImageUrl</see> property. This
+                    allows you to display the same image in each menu item to which the
+                    <b>RadPanelItemBinding</b> object is applied.
+                </para>
+            	<para><strong>NOTE:</strong></para>
+            	<para>If the <strong>ImageUrl</strong> and <strong>ImageUrlField</strong>
+                properties are both set, the <strong>ImageUrlField</strong> property takes
+                precedence.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ImageOverUrl">
+            <summary>
+            Gets or sets the path to an image to display for the item when the user moves the
+            mouse over the item.
+            </summary>
+            <value>
+            The path to the image to display when the user moves the mouse over the item. The
+            default value is empty string.
+            </value>
+            <example>
+            	<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1" runat="server"&gt;<br/>
+                &lt;Items&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/inbox.gif"
+                <strong>ImageOverUrl="~/Img/inboxOver.gif"</strong> Text="Index" /&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/outbox.gif"
+                <strong>ImageOverUrl="~/Img/outboxOver.gif"</strong> Text="Outbox" /&gt;<br/>
+                &lt;/Items&gt;<br/>
+                &lt;/radm:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            Use the <strong>ImageOverUrl</strong> property to specify the image that will be
+            used when the user moves the mouse over the item. If the <strong>ImageOverUrl</strong>
+            property is set to empty string the image specified by the <strong>ImageUrl</strong>
+            property will be used. Use "~" (tilde) when referring to images within the current
+            ASP.NET application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.ImageOverUrlField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.ImageOverUrl">ImageOverUrl</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.ImageOverUrl">ImageOverUrl</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.Target">
+            <summary>
+            Gets or sets the target window or frame to display the Web page content linked to
+            when the menu item is clicked.
+            </summary>
+            <value>
+            	<para>The target window or frame to load the Web page linked to when the Item is
+                selected. Values must begin with a letter in the range of a through z (case
+                insensitive), except for the following special values, which begin with an
+                underscore:</para>
+            	<para>
+            		<list type="Itemle">
+            			<item>
+            				<term>_blank</term>
+            				<description>Renders the content in a new window without
+                            frames.</description>
+            			</item>
+            			<item>
+            				<term>_parent</term>
+            				<description>Renders the content in the immediate frameset
+                            parent.</description>
+            			</item>
+            			<item>
+            				<term>_self</term>
+            				<description>Renders the content in the frame with focus.</description>
+            			</item>
+            			<item>
+            				<term>_top</term>
+            				<description>Renders the content in the full window without
+                            frames.</description>
+            			</item>
+            		</list>
+            	</para>The default value is empty string.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <b>Target</b> property to specify the frame or window that displays the
+                    Web page linked to when the menu item is clicked. The Web page is specified by
+                    setting the <see cref="P:Telerik.WebControls.RadPanelItemBinding.NavigateUrl">NavigateUrl</see> property.
+                </para>
+            	<para>If this property is not set, the Web page specified by the
+                <strong>NavigateUrl</strong> property is loaded in the current window.</para>
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to use the <strong>Target</strong>
+                property</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu runat="server" ID="RadMenu1"&gt;</para>
+            	<para>&lt;Items&gt;</para>
+            	<para>&lt;radM:RadMenuItem <strong>Target="_blank"</strong>
+                NavigateUrl="http://www.google.com" /&gt;</para>
+            	<para>&lt;/Items&gt;</para>
+            	<para>&lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.TargetField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.Target">Target</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.Target">Target</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.Enabled">
+            <summary>Gets or sets a value indicating whether the menu item is enabled.</summary>
+            <remarks>
+            	<para>Use the <b>Enabled</b> property to specify or determine whether a menu item
+                is functional. When set to <b>false</b>, the item appears dimmed.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.EnabledField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.Enabled">Enabled</see> property of a
+                <see cref="!:RadMenuItem">RadMenuItem</see> object 
+                to which the RadPanelItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.Enabled">Enabled</see> of a
+            <see cref="!:RadMenuItem">RadMenuItem</see> to which the RadPanelItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.Depth">
+            <summary>
+            	<para>Gets or sets the menu depth to which the
+                RadPanelItemBinding object is applied.</para>
+            </summary>
+            <remarks>
+            	<para>
+                    When creating a <b>RadPanelItemBinding</b> object, you must specify the criteria
+                    for binding. The criteria indicate when a data item should be bound to a menu
+                    item. You can specify the <b>Depth</b> property, the
+                    <see cref="P:Telerik.WebControls.RadPanelItemBinding.DataMember">DataMember</see> property, or both.
+                </para>
+            	<para>
+                    Use the <b>Depth</b> property to specify the menu depth at which to apply the
+                    <b>RadPanelItemBinding</b> object. For example, the following
+                    <b>RadPanelItemBinding</b> declaration binds the Name and ID fields of the data
+                    source to the <see cref="P:Telerik.WebControls.RadPanelItemBinding.Text">Text</see> and <see cref="P:Telerik.WebControls.RadPanelItemBinding.Value">Value</see>
+                    properties, respectively, of all menu items with a depth of 0:
+                </para>
+            	<pre>
+            &lt;asp:RadPanelItemBinding Depth="0" TextField="Name" ValueField="ID"&gt;
+            </pre>
+            	<para>Sometimes you might need to create a menu item binding that specifies both a
+                depth and a data member. This is often used when the data source contains items at
+                different levels that have the same data member value. For example, you can
+                have<br/>
+                &lt;Item&gt; elements that appear at different levels within an XML file. The
+                following RadPanelItemBinding declarations show how to specify menu item bindings that
+                apply to identical data members at different menu depths:</para>
+            	<pre>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadPanelItemBinding DataMember="Item" Depth="1" TextField="Title"&gt;</font>
+            		</code>
+            	</pre>
+            	<pre>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadPanelItemBinding DataMember="Item" Depth="2" TextField="ISBN"&gt;</font>
+            		</code>
+            	</pre>
+            	<para>If a menu item binding is defined without a depth and a data member, the menu
+                item binding is applied to all menu items within the menu. This is commonly used
+                when all data items have the same properties and should be displayed identically,
+                regardless of the menu depth.</para>
+            	<para>After the binding criteria are established, you can then bind a property of a
+                <a href="T_System_Web_UI_WebControls_MenuItem.htm">RadMenuItem</a> object that can be
+                bound to a value. You can bind to a field of a data item or to a static value. When
+                bound to a static value, all RadMenuItem objects to which the RadPanelItemBinding object
+                is applied share the same value. Properties bound to fields contain the values of
+                the field from the data source.</para>
+            	<para>If conflicting RadPanelItemBinding objects are defined, the
+                <a href="T_System_Web_UI_WebControls_Menu.htm">Menu</a> control applies the menu
+                item bindings in the following order of precedence:</para>
+            	<para class="xmldocnumberedlist"></para>
+            	<list type="number">
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines and matches both a
+                        depth and a data member.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines and matches the data
+                        member only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines and matches the depth
+                        only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that defines neither the depth nor
+                        the data member. (This type of menu item binding is applied to all menu
+                        items in the menu.)</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadPanelItemBinding</b> object that does not have a match in the
+                        data source. In this case, the value returned by the <b>ToString()</b>
+                        method of the data item is then bound to the <b>Text</b> and <b>Value</b>
+                        properties of the menu items to which the <b>RadPanelItemBinding</b> object is
+                        applied.</para>
+            		</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemBinding.FormatString">
+            <summary>
+            Gets or sets the string that specifies the display format for the text of a menu
+            item to which the
+            RadPanelItemBinding object is
+            applied.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadPanelbar.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadPanelbarUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.PanelbarExpandMode">
+            <summary>
+            Represents the different ways RadPanelbar behaves when an item is
+            expanded.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.PanelbarExpandMode.MultipleExpandedItems">
+            <summary>More than one item can be expanded at a time.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.PanelbarExpandMode.SingleExpandedItem">
+            <summary>
+            Only one item can be expanded at a time. Expanding another item collapses the
+            previously expanded one.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.PanelbarExpandMode.FullExpandedItem">
+            <summary>
+            Only one item can be expanded at a time. The expanded area occupies the entire height of the RadPanelbar.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.PanelbarObjectWithState">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.PanelbarAnimationSettings">
+            <summary>Represents the animation settings used for expand or collapse effects.</summary>
+            <remarks>
+            	<para>RadPanelbar supports a wide variety of animation effects which are represented by
+                the <strong>PanelbarAnimationSettings</strong> class.</para>
+            	<list type="bullet">
+            		<item>
+                        To customize the animation played when items are opened use the
+                        <see cref="P:Telerik.WebControls.RadPanelbar.ExpandAnimation">ExpandAnimation</see> property.
+                    </item>
+            		<item>
+                        To customize the animation played when items are closed use the
+                        <see cref="P:Telerik.WebControls.RadPanelbar.CollapseAnimation">CollapseAnimation</see> property.
+                    </item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.PanelbarAnimationSettings.#ctor(System.String,System.Web.UI.StateBag)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.PanelbarAnimationSettings.Type">
+            <summary><para>Gets or sets the effect that will be used for the animation.</para></summary>
+            <value>
+                On of the <see cref="T:Telerik.WebControls.PanelbarAnimationType">PanelbarAnimationType</see> values. The default value
+                is <strong>None</strong>.
+            </value>
+            <remarks>
+            Use the <strong>Type</strong> property of the <strong>PanelbarAnimationSettings</strong>
+            class to customize the effect used for the animation. To turn off animation effects set
+            this property to <strong>None</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.PanelbarAnimationSettings.Duration">
+            <summary>Gets or sets the duration in milliseconds of the animation.</summary>
+            <value>An integer representing the duration in milliseconds of the animation.</value>
+        </member>
+        <member name="T:Telerik.WebControls.PanelbarAnimationType">
+            <summary>Represents the effects that can be used in an animation.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadPanelItem">
+            <summary>Represents a single item in the RadPanelbar control.</summary>
+            <remarks>
+            	<para>
+                    The <strong>RadPanelbar</strong> control is made up of a hierarchy of panel items
+                    represented by <b>RadPanelItem</b> objects. Panel items at the top level (level 0)
+                    are called root panel items. A panel item that has a parent panel item is called 
+                    subpanel item. All root panel items are stored in the <see cref="P:Telerik.WebControls.RadPanelbar.Items">Items</see> 
+                    collection of the panel. Subpanel items are stored in a parent panel item's
+                    <see cref="P:Telerik.WebControls.RadPanelItem.Items">Items</see> collection. You can access a panel item's parent
+                    panel item by using the <see cref="P:Telerik.WebControls.RadPanelItem.Owner">Owner</see> property.
+                </para>
+            	<para>To create the panel items for a <b>RadPanelbar</b> control, use one of the
+                following methods:</para>
+            	<list type="bullet">
+            		<item>Use declarative syntax to create static panel items.</item>
+            		<item>Use a constructor to dynamically create new instances of the
+                    <b>RadPanelItem</b> class. These <b>RadPanelItem</b> objects can then be added to the
+                    <b>Items</b> collection of their owner.</item>
+            		<item>Bind the <b>RadPanelbar</b> control to a data source.</item>
+            	</list>
+            	<para>
+                    When the user clicks a panel item, the <b>panel</b> control can either navigate
+                    to a linked Web page or simply post back to the server. If the
+                    <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see> property of a panel item is set, the
+                    <b>RadPanelbar</b> control navigates to the linked page. By default, a linked page
+                    is displayed in the same window or frame as the <strong>RadPanelbar</strong>
+                    control. To display the linked content in a different window or frame, use the
+                    <see cref="P:Telerik.WebControls.RadPanelItem.Target">Target</see> property.
+                </para>
+            	<para>
+                    Each panel item has a <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> and a
+                    <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property. The value of the <b>Text</b> property
+                    is displayed in the <b>RadPanelbar</b> control, while the <b>Value</b> property is
+                    used to store any additional data about the panel item.
+                </para>
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class.</summary>
+            <remarks>
+                Use this constructor to create and initialize a new instance of the
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class using default values.
+            </remarks>
+            <example>
+                The following example demonstrates how to add items to
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> controls. 
+                <code lang="CS" title="[New Example]">
+            RadPanelItem item = new RadPanelItem();
+            item.Text = "News";
+            item.NavigateUrl = "~/News.aspx";
+             
+            RadPanelbar1.Items.Add(item);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim item As New RadPanelItem()
+            item.Text = "News"
+            item.NavigateUrl = "~/News.aspx"
+             
+            RadPanelbar1.Items.Add(item)
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItem.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class with the
+                specified text data.
+            </summary>
+            <remarks>
+            	<para>
+                    Use this constructor to create and initialize a new instance of the
+                    <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class using the specified text.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to add items to
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> controls. 
+                <code lang="CS" title="[New Example]">
+            RadPanelItem item = new RadPanelItem("News");
+             
+            RadPanelbar1.Items.Add(item);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim item As New RadPanelItem("News")
+             
+            RadPanelbar1.Items.Add(item)
+                </code>
+            </example>
+            <param name="text">
+                The text of the item. The <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property is set to the value
+                of this parameter.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItem.ExpandParentItems">
+            <summary>
+            Expands all parent items so the item is visible.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItem.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class with the
+                specified text and URL to navigate to.
+            </summary>
+            <remarks>
+            	<para>
+                    Use this constructor to create and initialize a new instance of the
+                    <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class using the specified text and URL.
+                </para>
+            </remarks>
+            <example>
+                This example demonstrates how to add items to <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see>
+                controls. 
+                <code lang="CS" title="[New Example]">
+            RadPanelItem item = new RadPanelItem("News", "~/News.aspx");
+             
+            RadPanelbar1.Items.Add(item);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim item As New RadPanelItem("News", "~/News.aspx")
+             
+            RadPanelbar1.Items.Add(item)
+                </code>
+            </example>
+            <param name="text">
+                The text of the item. The <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property is set to the value
+                of this parameter.
+            </param>
+            <param name="navigateUrl">
+                The url which the item will navigate to. The
+                <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see> property is set to the value of this
+                parameter.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItem.Clone">
+            <summary>Creates a copy of the current <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> object.</summary>
+            <returns>A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> which is a copy of the current one.</returns>
+            <remarks>
+            Use the <strong>Clone</strong> method to create a copy of the current item. All
+            properties of the clone are set to the same values as the current ones. Child items are
+            not cloned.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItem.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Selected">
+            <summary>Gets or sets a value indicating whether the item is selected.</summary>
+            <value>
+            	<para><b>true</b> if the item is selected; otherwise, <b>false</b>. The default is
+                <b>false</b>.</para>
+            </value>
+            <value>
+            	<strong>true</strong> if the item is selected; otherwise <strong>false</strong>.
+            The default value is <strong>false</strong>.
+            </value>
+            <remarks>
+                Use the <b>Selected</b> property to determine whether the item is currently selected. 
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Expanded">
+            <summary>Gets or sets a value indicating whether the panel item is expanded.</summary>
+            <value>
+            	<strong>true</strong> if the panel item is expanded; otherwise,
+            <strong>false</strong>. The default is <strong>false</strong>.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ID">
+            <summary>
+            This property is being used internally by the <strong>RadPanelbar</strong> control.
+            Setting it may lead to unpredictable results.
+            </summary>
+            <remarks>
+                The <strong>ID</strong> property is used internally. Use the
+                <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property to store any item related data.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Owner">
+            <summary>Gets the <see cref="T:Telerik.WebControls.IRadPanelItemContainer">IRadPanelItemContainer</see> which contains the item.</summary>
+            <value>
+                The object which contains the item. It might be an instance of the
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> class or the <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see>
+                class depending on the hierarchy level.
+            </value>
+            <remarks>
+                The value is of the <see cref="T:Telerik.WebControls.IRadPanelItemContainer">IRadPanelItemContainer</see> type which is
+                implemented by the <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> class and the
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> class. Use the <strong>Owner</strong> property when
+                recursively traversing <strong>RadPanelbar</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Items">
+            <summary>Gets the collection of child items.</summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadPanelItemCollection">RadPanelItemCollection</see> that represents the child
+                items.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items. You can also use it to
+            programmatically add or remove items.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Index">
+            <summary>
+            Gets the zero based index of the item in the <strong>Items</strong> collection of
+            its parent.
+            </summary>
+            <value>
+                An integer specifying the zero based index of the item considering the
+                <see cref="T:Telerik.WebControls.RadPanelItemCollection">RadPanelItemCollection</see> that contains it.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Text">
+            <summary>Gets or sets the text caption for the panel item.</summary>
+            <value>The text of the item. The default value is empty string.</value>
+            <example>
+                This example demonstrates how to set the text of the item using the
+                <strong>Text</strong> property. 
+                <para>
+            		<para class="sourcecode">&lt;radP:RadPanelbar ID="RadPanelbar1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radP:RadPanelItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;radP:RadPanelItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radP:RadPanelbar&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            Use the <strong>Text</strong> property to specify the text to display for the
+            item.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Value">
+            <summary>Gets or sets the value associated with the panel item.</summary>
+            <value>The value associated with the item. The default value is empty string.</value>
+            <remarks>
+            	<para>Use the <b>Value</b> property to specify or determine the value associated
+                with the item.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Target">
+            <summary>
+            Gets or sets the target window or frame to display the Web page content linked to
+            when the panel item is clicked.
+            </summary>
+            <value>
+            	<para>The target window or frame to load the Web page linked to when the Item is
+                selected. Values must begin with a letter in the range of a through z (case
+                insensitive), except for the following special values, which begin with an
+                underscore:</para>
+            	<para>
+            		<list type="Itemle">
+            			<item>
+            				<term>_blank</term>
+            				<description>Renders the content in a new window without
+                            frames.</description>
+            			</item>
+            			<item>
+            				<term>_parent</term>
+            				<description>Renders the content in the immediate frameset
+                            parent.</description>
+            			</item>
+            			<item>
+            				<term>_self</term>
+            				<description>Renders the content in the frame with focus.</description>
+            			</item>
+            			<item>
+            				<term>_top</term>
+            				<description>Renders the content in the full window without
+                            frames.</description>
+            			</item>
+            		</list>
+            	</para>The default value is empty string.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <b>Target</b> property to specify the frame or window that displays the
+                    Web page linked to when the panel item is clicked. The Web page is specified by
+                    setting the <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see> property.
+                </para>
+            	<para>If this property is not set, the Web page specified by the
+                <strong>NavigateUrl</strong> property is loaded in the current window.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.NavigateUrl">
+            <summary>Gets or sets the URL to link to when the item is clicked.</summary>
+            <value>
+            The URL to link to when the item is clicked. The default value is empty
+            string.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>NavigateUrl</strong>
+                property 
+                <para>
+            		<para class="sourcecode">&lt;radP:RadPanelbar id="RadPanelbar1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radP:RadPanelItem Text="News" <strong>NavigateUrl="~/News.aspx"</strong>
+                    /&gt;<br/>
+                    &lt;radP:RadPanelItem Text="External URL"
+                    <strong>NavigateUrl="http://www.example.com"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radP:RadPanelbar&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            Use the <strong>NavigateUrl</strong> property to specify the URL to link to when
+            the item is clicked. Use "~" (tilde) in front of an URL within the same ASP.NET
+            application. When specifying external URL do not forget the protocol (e.g.
+            "http://").
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.DataItem">
+            <summary>Gets or sets the data item represented by the item.</summary>
+            <value>
+                An object representing the data item to which the Item is bound to. The
+                <strong>DataItem</strong> property will always return <strong>null</strong> when
+                accessed outside of <see cref="E:Telerik.WebControls.RadPanelbar.ItemDataBound">ItemDataBound</see>
+                event handler.
+            </value>
+            <remarks>
+                This property is applicable only during data binding. Use it along with the
+                <see cref="E:Telerik.WebControls.RadPanelbar.ItemDataBound">ItemDataBound</see> event to perform
+                additional mapping of fields from the data item to
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> properties.
+            </remarks>
+            <example>
+                The following example demonstrates how to map fields from the data item to
+                %<strong>RadPanelItem</strong> properties. It assumes the user has subscribed to
+                the ItemDataBound:RadPanelbar.ItemDataBound
+                <see cref="E:Telerik.WebControls.RadPanelbar.ItemDataBound">event.</see>:RadPanelItem% 
+                <code lang="CS">
+            private void RadPanelbar1_PanelItemDataBound(object sender, Telerik.WebControls.RadPanelbarEventArgs e)
+            {
+                RadPanelItem item = e.Item;
+                DataRowView dataRow = (DataRowView) e.Item.DataItem;
+             
+                item.ImageUrl = "image" + dataRow["ID"].ToString() + ".gif";
+                item.NavigateUrl = dataRow["URL"].ToString();
+            }
+                </code>
+            	<code lang="VB">
+            Sub RadPanel1_PanelItemDataBound(ByVal sender As Object, ByVal e As RadPanelbarEventArgs) Handles RadPanelbar1.ItemDataBound
+                Dim item As RadPanelItem = e.Item
+                Dim dataRow As DataRowView = CType(e.Item.DataItem, DataRowView)
+             
+                item.ImageUrl = "image" + dataRow("ID").ToString() + ".gif"
+                item.NavigateUrl = dataRow("URL").ToString()
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ItemTemplate">
+            <summary>Gets or sets the template for displaying the item.</summary>
+            <value>
+            	<para>A <strong>ITemplate</strong> implemented object that contains the template
+                for displaying the item. The default value is a null reference (<b>Nothing</b> in
+                Visual Basic), which indicates that this property is not set.</para>
+            	<para>
+                    To specify common display for all panel items use the
+                    <see cref="P:Telerik.WebControls.RadPanelbar.ItemTemplate">ItemTemplate</see> property of the
+                    <strong>RadPanelbar</strong> class.
+                </para>
+            </value>
+            <example>
+            	<para>The following template demonstrates how to add a Calendar control in certain
+                panel item.</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radP:RadPanelbar runat="server" ID="RadPanelbar1"&gt;</para>
+            	<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            		<para>&lt;Items&gt;</para>
+            		<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            			<para>&lt;radP:RadPanelItem Text="Date"&gt;</para>
+            			<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            				<para>&lt;Items&gt;</para>
+            				<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            					<para>&lt;radP:RadPanelItem Text="SelectDate"&gt;</para>
+            					<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            						<para>&lt;ItemTemplate&gt;</para>
+            						<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            							<para>&lt;asp:Calendar runat="server" ID="Calendar1"
+                                        /&gt;</para>
+            						</blockquote>
+            						<para>&lt;/ItemTemplate&gt;</para>
+            					</blockquote>
+            					<para>&lt;/radP:RadPanelItem&gt;</para>
+            				</blockquote>
+            				<para>&lt;/Items&gt;</para>
+            			</blockquote>
+            			<para>&lt;/radP:RadPanelItem&gt;</para>
+            		</blockquote>
+            		<para>&lt;/Items&gt;</para>
+            	</blockquote>
+            	<para>&lt;/radP:RadPanelbar&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Level">
+            <summary>
+            Manages the item level of a particular Item instance. This property allows easy
+            implementation/separation of the panel items in levels.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ImagePosition">
+            <summary>Gets or sets a value indicating the position of the image within the item.</summary>
+            <value>
+                One of the <see cref="T:Telerik.WebControls.RadPanelItemImagePosition">RadPanelItemImagePosition
+                Enumeration</see> values. The default value is <strong>Left</strong>.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ImageUrl">
+            <summary>Gets or sets the path to an image to display for the item.</summary>
+            <value>
+            The path to the image to display for the item. The default value is empty
+            string.
+            </value>
+            <remarks>
+            Use the <strong>ImageUrl</strong> property to specify the image for the item. If
+            the <strong>ImageUrl</strong> property is set to empty string no image will be
+            rendered. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ImageOverUrl">
+            <summary>
+            Gets or sets the path to an image to display for the item when the user moves the
+            mouse over the item.
+            </summary>
+            <value>
+            The path to the image to display when the user moves the mouse over the item. The
+            default value is empty string.
+            </value>
+            <remarks>
+            Use the <strong>ImageOverUrl</strong> property to specify the image that will be
+            used when the user moves the mouse over the item. If the <strong>ImageOverUrl</strong>
+            property is set to empty string the image specified by the <strong>ImageUrl</strong>
+            property will be used. Use "~" (tilde) when referring to images within the current
+            ASP.NET application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.DisabledImageUrl">
+            <summary>Gets or sets the path to an image to display for the item when it is disabled.</summary>
+            <value>
+            The path to the image to display for the item. The default value is empty
+            string.
+            </value>
+            <remarks>
+            Use the <strong>DisabledImageUrl</strong> property to specify the image for the item when it is disabled. If
+            the <strong>DisabledImageUrl</strong> property is set to empty string no image will be
+            rendered. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.SelectedImageUrl">
+            <summary>Gets or sets the path to an image to display for the item when it is selected.</summary>
+            <value>
+            The path to the image to display for the item. The default value is empty
+            string.
+            </value>
+            <remarks>
+            Use the <strong>SelectedImageUrl</strong> property to specify the image for the item when it is disabled. If
+            the <strong>SelectedImageUrl</strong> property is set to empty string no image will be
+            rendered. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ExpandedImageUrl">
+            <summary>Gets or sets the path to an image to display for the item when it is expanded.</summary>
+            <value>
+            The path to the image to display for the item. The default value is empty
+            string.
+            </value>
+            <remarks>
+            Use the <strong>ExpandedImageUrl</strong> property to specify the image for the item when it is expanded. If
+            the <strong>ExpandedImageUrl</strong> property is set to empty string no image will be
+            rendered. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.IsSeparator">
+            <summary>
+            Sets or gets whether the item is separator. It also represents a logical state of
+            the item. Might be used in some applications for keyboard navigation to omit processing
+            items that are marked as separators.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Panelbar">
+            <summary>Gets the <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> instance which contains the item.</summary>
+            <remarks>
+                Use this property to obtain an instance to the
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> object containing the item.
+            </remarks>		
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Enabled">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.Visible">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.CssClass">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ClickedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the panel item is
+            clicked.
+            </summary>
+            <value>
+            The CSS class applied when the panel item is clicked. The default value is
+            <strong>"clicked"</strong>.
+            </value>
+            <example>
+            By default the visual appearance of clicked panel items is defined in the skin CSS
+            file. You can use the <strong>ClickedCssClass</strong> property to specify unique
+            appearance for the panel item when it is clicked.
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ChildGroupCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied to the element enclosing the child items.
+            </summary>
+            <value>
+            The default value is empry string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ChildGroupHeight">
+            <summary>Gets or sets the height of the child item group.</summary>
+            <value>
+            A <strong>Unit</strong> that represents the height of the child item group. The
+            default value is <strong>Empty.</strong>
+            </value>
+            <remarks>
+            If the total child group height exceeds the value specified with the
+            <strong>ChildGroupHeight</strong> property scrolling will be applied.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.DisabledCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the panel item is
+            disabled.
+            </summary>
+            <value>
+            The CSS class applied when the panel item is disabled. The default value is
+            <strong>"disabled"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of disabled panel items is defined in the skin CSS
+            file. You can use the <strong>DisabledCssClass</strong> property to specify unique
+            appearance for the panel item when it is disabled.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.SelectedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the panel item is
+            selected.
+            </summary>
+            <value>
+            The CSS class applied when the panel item is selected. The default value is
+            <strong>"selected"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of selected panel items is defined in the skin CSS
+            file. You can use the <strong>SelectedCssClass</strong> property to specify unique
+            appearance for the panel item when it is selected.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.ExpandedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the panel item is
+            opened (its child items are visible).
+            </summary>
+            <value>
+            The CSS class applied when the panel item is opened. The default value is
+            <strong>"expanded"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of opened panel items is defined in the skin CSS
+            file. You can use the <strong>ExpandedCssClass</strong> property to specify unique
+            appearance for the panel item when it is opened.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.FocusedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the panel item is
+            focused.
+            </summary>
+            <value>
+            The CSS class applied when the panel item is focused. The default value is
+            <strong>"focused"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of focused panel items is defined in the skin CSS
+            file. You can use the <strong>FocusedCssClass</strong> property to specify unique
+            appearance for the panel item when it is focused.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItem.PostBack">
+            <summary>
+            Gets or sets a value indicating whether clicking on the item will
+            postback.
+            </summary>
+            <value>
+            	<strong>True</strong> if the panel item should postback; otherwise
+                <strong>false</strong>. By default all the items will postback provided the user
+                has subscribed to the <see cref="E:Telerik.WebControls.RadPanelbar.ItemClick">ItemClick</see> event.
+            </value>
+            <remarks>
+                If you subscribe to the <see cref="E:Telerik.WebControls.RadPanelbar.ItemClick">ItemClick</see> all panel
+                items will postback. To turn off that behavior you should set the
+                <strong>PostBack</strong> property to <strong>false</strong>. This property cannot
+                be set in design time.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadPanelItemCollection">
+            <summary>
+                A collection of <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> objects in a
+                <see cref="T:Telerik.WebControls.RadPanelbar">RadPanelbar</see> control.
+            </summary>
+            <remarks>
+            	<para>The <strong>RadPanelItemCollection</strong> class represents a collection of
+                <strong>RadPanelItem</strong> objects. The <strong>RadPanelItem</strong> objects in turn represent 
+                panel items within a <strong>RadPanelbar</strong> control.</para>
+            	<list type="bullet">
+            		<item>
+                        Use the <see cref="P:Telerik.WebControls.RadPanelItemCollection.Item(System.Int32)">indexer</see> to programmatically retrieve a
+                        single RadPanelItem from the collection, using array notation.
+                    </item>
+            		<item>
+                        Use the <strong>Count</strong> property to determine the total
+                        number of panel items in the collection.
+                    </item>
+            		<item>
+                        Use the <see cref="M:Telerik.WebControls.RadPanelItemCollection.Add(Telerik.WebControls.RadPanelItem)">Add</see> method to add panel items in the collection.
+                    </item>
+            		<item>
+                        Use the <see cref="M:Telerik.WebControls.RadPanelItemCollection.Remove(Telerik.WebControls.RadPanelItem)">Remove</see> method to remove panel items from the
+                        collection.
+                    </item>
+            	</list>
+            </remarks>
+            <moduleiscollection/>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.#ctor(Telerik.WebControls.IRadPanelItemContainer)">
+            <summary>Initializes a new instance of the <strong>RadPanelItemCollection</strong> class.</summary>
+            <remarks>Use the constructor to create a new <strong>RadPanelItemCollection</strong> class.</remarks>
+            <param name="owner">The owner of the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.Add(Telerik.WebControls.RadPanelItem)">
+            <summary>Appends a <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> to the end of the collection.</summary>
+            <example>
+            	<para>The following example demonstrates how to programmatically add items in a
+                <strong>RadPanelbar</strong> control.</para>
+            	<code lang="CS">
+            RadPanelItem newsItem = new RadPanelItem("News");
+             
+            RadPanelbar1.Items.Add(newsItem);
+                </code>
+            	<code lang="VB">
+            Dim newsItem As RadPanelItem = New RadPanelItem("News")
+             
+            RadPanelbar1.Items.Add(newsItem)
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.AddRange(Telerik.WebControls.RadPanelItem[])">
+            <summary>Adds the items in an array of <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> objects to the collection.</summary>
+            <remarks>
+            	<para>
+                    Use the <b>AddRange</b> method to add the items in the array of
+                    <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> objects specified by the <i>items</i> parameter. This
+                    allows you to add multiple <b>RadPanelItem</b> objects to the collection in a single
+                    step.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the <strong>AddRange</strong> method
+                to add multiple items in a single step. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadPanelItem[] items = new RadPanelItem[] { new RadPanelItem("First"), new RadPanelItem("Second"), new RadPanelItem("Third") };
+                    RadPanelbar1.Items.AddRange(items);
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                If Not Page.IsPostBack Then
+                    Dim items() As RadPanelItem = {New RadPanelItem("First"), New RadPanelItem("Second"), New RadPanelItem("Third")}
+                    RadPanelbar1.Items.AddRange(items)
+                End If
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.Insert(System.Int32,Telerik.WebControls.RadPanelItem)">
+            <summary>
+                Inserts the specified <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> in the collection at the specified
+                index location.
+            </summary>
+            <remarks>
+            Use the <b>Insert</b> method to add a <strong>RadPanelItem</strong> to the collection at
+            the index specified by the <i>index</i> parameter.
+            </remarks>
+            <param name="index">The location in the collection to insert the <strong>RadPanelItem</strong>.</param>
+            <param name="item">The <strong>RadPanelItem</strong> to add to the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.IndexOf(Telerik.WebControls.RadPanelItem)">
+            <summary>
+                Determines the index value that represents the position of the specified
+                <paramref name="item">RadPanelItem</paramref> in the collection.
+            </summary>
+            <returns>
+            The zero-based index position of the specified <strong>RadPanelItem</strong> in the
+            collection.
+            </returns>
+            <remarks>
+            Use the <b>IndexOf</b> method to determine the index value of the
+            <strong>RadPanelItem</strong> specified by the <i>item</i> parameter in the collection. If an item
+            with this criteria is not found in the collection, -1 is returned.
+            </remarks>
+            <param name="item">A <strong>RadPanelItem</strong> to search for in the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.Contains(Telerik.WebControls.RadPanelItem)">
+            <summary>
+                Determines whether the collection contains the specified
+                <paramref name="item">RadPanelItem</paramref>.
+            </summary>
+            <returns>
+            	<strong>true</strong> if the collection contains the specified item; otherwise,
+            <b>false</b>.
+            </returns>
+            <remarks>
+            Use the <b>Contains</b> method to determine whether the <strong>RadPanelItem</strong>
+            specified by the <i>item</i> parameter is in the collection.
+            </remarks>
+            <param name="item">A RadPanelItem to search for in the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.Remove(Telerik.WebControls.RadPanelItem)">
+            <summary>Removes the specified <paramref name="item">RadPanelItem</paramref> from the collection.</summary>
+            <remarks>
+            Use the <b>Remove</b> method to remove a <strong>RadPanelItem</strong> from the
+            collection.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically remove a RadPanelItem
+                from a <strong>RadPanelbar</strong> control. 
+                <code lang="CS">
+            RadPanelItem newsItem = RadPanelbar1.FindItemByText("News");
+            if (newsItem != null)
+            {
+                RadPanelbar1.Items.Remove(newsItem);
+            }
+                </code>
+            	<code lang="VB">
+            Dim newsItem As RadPanelItem = RadPanelbar1.FindItemByText("News")
+            If Not newsItem Is Nothing Then
+                RadPanelbar1.Items.Remove(newsItem)
+            End If
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.RemoveAt(System.Int32)">
+            <summary>Removes the <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> at the specified index from the collection.</summary>
+            <remarks>
+            	<para>Use the <b>RemoveAt</b> method to remove the <strong>RadPanelItem</strong> at the
+                specified index from the collection.</para>
+            </remarks>
+            <param name="index">The index of the <strong>RadPanelItem</strong> to remove.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.Clear">
+            <summary>Removes all items from the collection.</summary>
+            <remarks>
+                Use the <strong>Clear</strong> method to remove all items from the collection. The
+                <strong>Count</strong> property is set to 0.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.FindItemByText(System.String)">
+            <summary>
+                Searches the <strong>RadPanelItemCollection</strong> for the first
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> with a <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property equal to
+                the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> whose <see cref="P:Telerik.WebControls.RadPanelItem.Text">Text</see> property is equal
+                to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="text">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.FindItemByValue(System.String)">
+            <summary>
+                Searches the <strong>RadPanelItemCollection</strong> for the first
+                <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> with a <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property equal
+                to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> whose <see cref="P:Telerik.WebControls.RadPanelItem.Value">Value</see> property is
+                equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="value">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadPanelItemCollection.FindItemByUrl(System.String)">
+            <summary>
+                Searches the <strong>RadPanelItemCollection</strong> for the first
+                <see cref="T:Telerik.WebControls.RadPanelItem">Item</see> with a <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see>
+                property equal to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadPanelItem">Item</see> whose <see cref="P:Telerik.WebControls.RadPanelItem.NavigateUrl">NavigateUrl</see>
+                property is equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first Item matching the search criteria. If no Item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="url">The value to search for.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadPanelItemCollection.Item(System.Int32)">
+            <summary>
+            	<para>
+                    Gets a <see cref="T:Telerik.WebControls.RadPanelItem">RadPanelItem</see> at the specified index in the collection.
+                </para>
+            </summary>
+            <remarks>
+            	<para>Use this indexer to get a <strong>RadPanelItem</strong> from the collection at the
+                specified index, using array notation.</para>
+            </remarks>
+            <param name="index">
+            The zero-based index of the <strong>RadPanelItem</strong> to retrieve from the
+            collection.
+            </param>		
+        </member>
+        <member name="T:Telerik.WebControls.RadPanelItemImagePosition">
+            <summary>The position of the image within a panel item.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadPanelItemImagePosition.Left">
+            <summary>The image is rendered leftmost.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadPanelItemImagePosition.Right">
+            <summary>The image is rendered rightmost.</summary>
+        </member>
+    </members>
+</doc>

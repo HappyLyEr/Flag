@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadChart.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.ChartDesigner">
+            <summary>
+            Chart designer
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.ChartDesigner._actionLists">
+            <summary>
+            Action List collection, for action tags menu creation 
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.ChartDesigner.ActionLists">
+            <summary>
+            Gets Action List collection
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadChartDesignersActionList">
+            <summary>
+            This class describe action tags menu for chart control in design time.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadChartDesignersActionList.baseControl">
+            <summary>
+            Link to chart control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.#ctor(Telerik.WebControls.RadChart)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="radChart">Chart control</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetPropertyByName(System.String)">
+            <summary>
+            Method returns property descriptor by property name.
+            </summary>
+            <param name="propName">Property name</param>
+            <returns>Property descriptor</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetPropertyByName(System.String,System.Object)">
+            <summary>
+            Method returns property descriptor by property name.
+            </summary>
+            <param name="propName">Property name</param>
+            <param name="obj">Type name</param>
+            <returns>Property descriptor</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetSortedActionItems">
+            <summary>
+            Create action tags menu items collection.
+            </summary>
+            <returns>Action tags menu items collection</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetChartWizardForm">
+            <summary>
+            Call chart wizard action tags item.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.ConfigureData">
+            <summary>
+            Call configure data for the selected data source action tags item.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.RefreshSchema">
+            <summary>
+            Call refresh schema for the selected data source action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Designer">
+            <summary>
+            Designer
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Width">
+            <summary>
+            Chart width
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Height">
+            <summary>
+            Chart height
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.ChartTitle">
+            <summary>
+            Chart title
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.DefaultChartType">
+            <summary>
+            Chart image format action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.ChartImageFormat">
+            <summary>
+            Chart image format action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Skin">
+            <summary>
+            Chart series color palette action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Series">
+            <summary>
+            Chart series action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.SeriesOrientation">
+            <summary>
+            Chart series orientation action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.DataSourceID">
+            <summary>
+            Chart data source picker action tags item.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.ChartPaletteEditorFromAL.columnsListing_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Added to automatically close dropdown after user selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.WebControls.SeriesCollectionEditorFromAL.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.SeriesCollectionEditorFromAL.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadChart.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadChartUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadChartUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.Licensing">
+            <summary>
+            Summary description for Licensing.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadChart">
+            <summary>
+            The class represents the base functionality of the RadChart.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.AddChartSeries(Telerik.Charting.ChartSeries)">
+            <summary>
+            Adds a new data series to the RadChart's series collection.
+            </summary>
+            <param name="chartSeries"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.#ctor">
+            <summary>
+            Creates a new instance of RadChart.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.GetXml">
+            <summary>
+            Gets the current state of the chart as an XML string. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.ClearSkin">
+            <summary>
+            Resets current chart's skin to default
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.LoadSkin(System.IO.TextWriter)">
+            <summary>
+            Loads user skin from a TextWriter object
+            </summary>
+            <param name="skinXml"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.SaveSkin">
+            <summary>
+            Exports current chart's skin into TextWriter object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.SaveToXml(System.String)">
+            <summary>
+            Saves the chart's state into XML file in the specified by fileName location.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.LoadFromXml(System.String)">
+            <summary>
+            Loads RadChart's settings and data from external XML file.
+            </summary>
+            <param name="relativeFileName"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.Clear">
+            <summary>
+            Removes chart's data series and axis items.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.RemoveAllSeries">
+            <summary>
+            Removes all data series from the series collection without removing axis items.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.RemoveSeriesAt(System.Int32)">
+            <summary>
+            Removes the data series at the specified index.
+            </summary>
+            <param name="seriesIndex"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.GetSeries(System.Int32)">
+            <summary>
+            Gets a reference to the data series object at the specified index.
+            </summary>
+            <param name="seriesIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.GetSeries(System.String)">
+            <summary>
+            Gets a reference to the data series object with the specified name.
+            </summary>
+            <param name="seriesName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.GetSeries(System.Drawing.Color)">
+            <summary>
+            Gets a reference to the data series object with the specified color.
+            </summary>
+            <param name="seriesColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.CreateSeries(System.String,System.Drawing.Color,System.Drawing.Color,Telerik.Charting.ChartSeriesType)">
+            <summary>
+            Creates a new chart series and adds it to the series collection.
+            </summary>
+            <param name="seriesName"></param>
+            <param name="mainColor"></param>
+            <param name="secondColor"></param>
+            <param name="chartSeriesType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.Save(System.String)">
+            <summary>
+            Saves the chart with the specified file name.
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.Save(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Saves the chart with the specified file name and the specified image format.
+            </summary>
+            <param name="filename"></param>
+            <param name="imageFormat"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.SetDataSourceID(System.String)">
+            <summary>
+            Changes the DataSourceID property without DataBind method call
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.DataBind">
+            <summary>
+            Binds a data source to the invoked server control and all its child controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.CustomFigures">
+            <summary>
+            Specifies the custom palettes for chart
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Chart">
+            <summary>
+            Chart engine
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DefaultType">
+            <summary>
+            Default chart series type
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.SeriesPalette">
+            <summary>
+            Specifies the series palette
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Appearance">
+            <summary>
+            Chart style
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.SkinsOverrideStyles">
+            <summary>
+            Should skin override user setting or not
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataManager">
+            <summary>
+            Data management support object
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Series">
+            <summary>
+            Collection of the chart's data series.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Height">
+            <summary>
+            Chart height
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Width">
+            <summary>
+            Chart width
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Legend">
+            <summary>
+            Gets or sets RadChart's legend object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.PlotArea">
+            <summary>
+            Specifies the chart's plot area.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ChartTitle">
+            <summary>
+            The chart title message.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.UseSession">
+            <summary>
+            Enables or disables use of session.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.CreateImageMap">
+            <summary>
+            Enables or disables use of image maps.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.TempImagesFolder">
+            <summary>
+            Sets folder for the chart's temp images.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ContentFile">
+            <summary>
+            Gets or sets RadChart's content file path and file name.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ChartImageFormat">
+            <summary>
+            Specifies the color of the plot area's border.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.AlternateText">
+            <summary>
+            The alternate text displayed when the image cannot be shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.CustomPalettes">
+            <summary>
+            Specifies the custom palettes for chart
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.SeriesOrientation">
+            <summary>
+            Specifies the orientation of chart series on the plot area.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.IntelligentLabelsEnabled">
+            <summary>
+            Enables / disables Intelligent labels logic for series items labels in all plot areas.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataSourceID">
+            <summary>
+            Gets or sets the ID of the control from which the data-bound control retrieves its list of data items. 
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataSource">
+            <summary>
+            The DataSource object
+            </summary>
+            <remarks>Gets or sets the object from which the chart control retrieves its list of data items</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataMember">
+            <summary>
+            Gets or sets the name of the list of data that the data-bound control binds to, in cases where the data source contains more than one distinct list of data items.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataGroupColumn">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that will be used to split one column data into several chart Series
+            </summary>
+        </member>
+    </members>
+</doc>

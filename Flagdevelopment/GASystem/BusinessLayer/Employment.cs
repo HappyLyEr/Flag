@@ -1,0 +1,320 @@
+using System;
+using GASystem.DataModel;
+using GASystem.DataAccess;
+using System.Collections.Generic;
+
+namespace GASystem.BusinessLayer
+{
+	/// <summary>
+	/// Summary description for Employment.
+	/// </summary>
+	public class Employment : BusinessClass
+	{
+		public Employment()
+		{
+			//
+			// TODO: Add constructor logic here
+			//
+			DataClass = GADataClass.GAEmployment;
+		}
+
+        // Tor 20161028 use standard update method in : BusinessClass
+        //public override System.Data.DataSet Update(System.Data.DataSet ds, GADataTransaction transaction)
+        //{
+        //    return UpdateEmployment((EmploymentDS)ds, transaction);
+        //}
+		
+		public override System.Data.DataSet GetByRowId(int RowId)
+		{
+			return GetEmploymentByEmploymentRowId(RowId);
+		}
+
+		public static EmploymentDS GetAllEmployments()
+		{
+			return EmploymentDb.GetAllEmployments();
+		}
+	
+
+		public static EmploymentDS GetEmploymentsByOwner(GADataRecord EmploymentOwner)
+		{
+			return  EmploymentDb.GetEmploymentsByOwner(EmploymentOwner.RowId, EmploymentOwner.DataClass);
+		}
+
+		public static EmploymentDS GetEmploymentsByOwnerAndDate(GADataRecord EmploymentOwner, System.DateTime EmploymentDate)
+		{
+			return  EmploymentDb.GetEmploymentsByOwnerAndDate(EmploymentOwner.RowId, EmploymentOwner.DataClass, EmploymentDate);
+		}
+
+		public static EmploymentDS GetEmploymentsByPersonnelIdAndDate(int PersonnelId, System.DateTime EmploymentDate) 
+		{
+			return EmploymentDb.GetEmploymentsByPersonnelIdAndDate(PersonnelId, EmploymentDate);
+		}
+
+		public static EmploymentDS GetEmploymentByEmploymentRowId(int EmploymentRowId)
+		{
+			return EmploymentDb.GetEmploymentByEmploymentRowId(EmploymentRowId);
+		}
+		
+		public static EmploymentDS GetEmploymentByPersonnelIdOwnerAndStartDate(int PersonnelId, GADataRecord owner, DateTime startDate) 
+        {   //, DateTime endDate) {
+			return EmploymentDb.GetEmploymentByPersonnelIdOwnerAndStartDate(PersonnelId, owner, startDate);
+		}
+
+		public static EmploymentDS GetEmploymentsByOwnerDateAndRoleId(int OwnerRowId, GADataClass OwnerDataClass, System.DateTime EmploymentDate, int RoleId ) 
+		{
+			return EmploymentDb.GetEmploymentsByOwnerDateAndRoleId( OwnerRowId,  OwnerDataClass, EmploymentDate,  RoleId, null);
+		}
+
+        public static EmploymentDS GetEmploymentsByOwnerDateAndRoleId(int OwnerRowId, GADataClass OwnerDataClass, System.DateTime EmploymentDate, int RoleId, GADataTransaction Transaction)
+        {
+            return EmploymentDb.GetEmploymentsByOwnerDateAndRoleId(OwnerRowId, OwnerDataClass, EmploymentDate, RoleId, Transaction);
+        }
+
+        public static EmploymentDS GetEmploymentsByOwnerDateAndJobTitle(int OwnerRowId, GADataClass OwnerDataClass, System.DateTime EmploymentDate, int RoleId)
+        {
+            return EmploymentDb.GetEmploymentsByOwnerDateAndJobTitle(OwnerRowId, OwnerDataClass, EmploymentDate, RoleId, null);
+        }
+
+        public static EmploymentDS GetEmploymentsByOwnerDateAndJobTitle(int OwnerRowId, GADataClass OwnerDataClass, System.DateTime EmploymentDate, int RoleId, GADataTransaction Transaction)
+        {
+            return EmploymentDb.GetEmploymentsByOwnerDateAndJobTitle(OwnerRowId, OwnerDataClass, EmploymentDate, RoleId, Transaction);
+        }
+
+        public static EmploymentDS SearchEmploymentsByOwnerRecordsDateAndRoleId
+            (System.Collections.Generic.List<GADataRecord> owner, System.DateTime EmploymentDate, int roleId)
+        {
+            return Employment.SearchEmploymentsByOwnerRecordsDateAndRoleId(owner, EmploymentDate, roleId, null);
+        }
+
+        public static EmploymentDS SearchEmploymentsByOwnerRecordsDateAndJobTitle
+            (System.Collections.Generic.List<GADataRecord> owner, System.DateTime EmploymentDate, int roleId)
+        {
+            return Employment.SearchEmploymentsByOwnerRecordsDateAndJobTitle(owner,EmploymentDate,roleId,null);
+        }
+
+        public static EmploymentDS SearchEmploymentsByOwnerRecordsDateAndRoleId
+            (System.Collections.Generic.List<GADataRecord> owner, System.DateTime EmploymentDate, int roleId, GADataTransaction Transaction)
+        {
+            return EmploymentDb.SearchEmploymentsByOwnerRecordsDateAndRoleId(owner, EmploymentDate, roleId, Transaction);
+        }
+
+        public static EmploymentDS SearchEmploymentsByOwnerRecordsDateAndJobTitle
+            (System.Collections.Generic.List<GADataRecord> owner, System.DateTime EmploymentDate, int roleId, GADataTransaction Transaction)
+        {
+            return EmploymentDb.SearchEmploymentsByOwnerRecordsDateAndJobTitle(owner, EmploymentDate, roleId, Transaction);
+        }
+
+        public static bool IsCurrentEmploymentByPersonnelAndDate(int PersonnelRowId, System.DateTime EmploymentDate, GADataTransaction Transaction)
+        {
+            return EmploymentDb.IsCurrentEmploymentByPersonnelAndDate(PersonnelRowId,EmploymentDate, Transaction);
+        }
+
+        public static bool IsFilterOnVertical()
+        {
+            string OWFEisVerticalTestOnNotifications = new GASystem.AppUtils.FlagSysResource().GetResourceString("OWFEisVerticalTestOnNotifications");
+            return (OWFEisVerticalTestOnNotifications.ToUpper() == "YES");
+        }
+
+        /// <summary>
+		/// Find all employments having a specified role for an action. Searches up the hierarchy from the action untill
+		/// employments with the specified role is found
+		/// </summary>
+		/// <param name="ActionId"></param>
+		/// <param name="EmploymentDate"></param>
+		/// <param name="Role"></param>
+		/// <returns>
+		/// EmploymentsDS with the employments matching the parameters.
+		/// An empty EmploymentsDS is returned if no employments are found or if no owner of the specified action id  
+		/// can be found
+		///</returns>
+		public static EmploymentDS GetEmploymentsByActionIdDateAndRoleId(int ActionId, System.DateTime EmploymentDate, string Role) 
+		{
+			//get roleid
+			string roleName = Role.Replace(Workitem.ROLE_SUFFIX, string.Empty);
+            // Tor 20170313 Responsible changed from Role ER to Title TITL fd.ListCategory = "ER"; int categoryId = BusinessLayer.ListCategory.GetListCategoryRowIdByName("ER");  //TODO replace with value from config
+            int categoryId = BusinessLayer.ListCategory.GetListCategoryRowIdByName("TITL");  //TODO replace with value from config
+            // Tor 20170313 Responsible changed from Role ER to Title TITL int roleId = BusinessLayer.Lists.GetListsRowIdByCategoryAndKey("ER", roleName);
+            int roleId = BusinessLayer.Lists.GetListsRowIdByCategoryAndKey("TITL", roleName);
+
+			//get owner for actionid
+			GADataRecord owner = DataClassRelations.GetOwner(new GADataRecord(ActionId, GADataClass.GAAction));
+			if (owner == null)
+				return new EmploymentDS();  //owner for action not found return empty dataset
+
+            return SearchForEmploymentsByOwnerDateAndRoleId(owner, EmploymentDate, roleId);
+
+        }
+
+
+        public static EmploymentDS SearchForEmploymentsByOwnerDateAndRoleId(GADataRecord owner, System.DateTime EmploymentDate, int roleId)
+        {
+            return SearchForEmploymentsByOwnerDateAndRoleIdOrJobTitle(owner, EmploymentDate, roleId, "RoleListsRowId");
+        }
+
+        public static EmploymentDS SearchForEmploymentsByOwnerDateAndJobTitle(GADataRecord owner, System.DateTime EmploymentDate, int roleId)
+        {
+            return SearchForEmploymentsByOwnerDateAndRoleIdOrJobTitle(owner, EmploymentDate, roleId, "JobDescription");
+        }
+
+        public static EmploymentDS SearchForEmploymentsByOwnerDateAndRoleIdOrJobTitle(GADataRecord owner, System.DateTime EmploymentDate, int roleId, string FieldName) 
+        {
+            List<GADataRecord> manyToManyOwnerRecords = new List<GADataRecord>();  
+            //check direct paths
+			while (owner != null) 
+			{
+                EmploymentDS ds=new EmploymentDS();
+                if (FieldName == "JobDescription")
+                    ds=Employment.GetEmploymentsByOwnerDateAndJobTitle(owner.RowId, owner.DataClass, EmploymentDate, roleId);
+                else
+                    if (FieldName == "RoleListsRowId")
+                        ds = Employment.GetEmploymentsByOwnerDateAndRoleId(owner.RowId, owner.DataClass, EmploymentDate, roleId);
+                    else
+                        return new EmploymentDS(); 
+                if (ds.GAEmployment.Rows.Count != 0) 
+				{
+					return ds;
+					//role has been found in action path. leave loop
+				} 
+				else 
+				{
+                    //add many to many records
+                    //BusinessClass bco = GASystem.BusinessLayer.Utils.RecordsetFactory.Make(owner.DataClass);
+                    //foreach (GADataClass linkOwnerClass in ManyToManyLinks.GetManyToManyLinksOwnerClassByMemberClass(owner.DataClass))
+                    //{
+                    //    foreach (GADataRecord linkedOwner in bco.GetManyToManyOwnerRecordsList(linkOwnerClass, System.DateTime.Now, owner.RowId))
+                    //        manyToManyOwnerRecords.Add(linkedOwner);
+                    //}
+                    foreach (GADataRecord linkedOwner in ManyToManyLinks.GetManyToManyOwnerDataRecordsByMemberDataRecordAndDate(owner, System.DateTime.Now))
+                        manyToManyOwnerRecords.Add(linkedOwner);
+					//check for next level
+					owner = DataClassRelations.GetOwner(owner);
+				}
+			}
+
+            //no employments was found in direct path, check in many to many records
+            foreach (GADataRecord linkOwner in manyToManyOwnerRecords)
+            {
+                EmploymentDS linkedEmployments = SearchForEmploymentsByOwnerDateAndRoleId(linkOwner, EmploymentDate, roleId);
+                if (linkedEmployments.GAEmployment.Rows.Count > 0)
+                    return linkedEmployments;
+            }
+
+
+			//no roleholder has been found return empty employment set;
+			return new EmploymentDS();
+		}
+
+
+        // Tor 20170317 Method never referenced
+        ///// <summary>
+        ///// Get all employments by roleid for the given date
+        ///// </summary>
+        ///// <param name="PersonnelId"></param>
+        ///// <param name="EmploymentDate"></param>
+        ///// <returns></returns>
+
+        public static EmploymentDS GetEmploymentsByRoleAndDate(System.DateTime EmploymentDate, string Role)
+        {
+            //get roleid
+            string roleName = Role.Replace(Workitem.ROLE_SUFFIX, string.Empty);
+            // Tor 20170325 Job Role Category changed from "ER" to "TITL"
+            //int categoryId = BusinessLayer.ListCategory.GetListCategoryRowIdByName("ER");  //TODO replace with value from config
+            //int roleId = BusinessLayer.Lists.GetListsRowIdByCategoryAndKey("ER", roleName);
+            int categoryId = BusinessLayer.ListCategory.GetListCategoryRowIdByName("TITL");  //TODO replace with value from config
+            int roleId = BusinessLayer.Lists.GetListsRowIdByCategoryAndKey("TITL", roleName);
+
+            //set owner to top level datarecord
+            GADataRecord owner = new GADataRecord(1, GADataClass.GAFlag);
+
+            return EmploymentDb.GetEmploymentsByRoleIdAndDate(roleId, EmploymentDate);
+
+        }
+
+        public static EmploymentDS GetEmploymentsByRoleAndDate(System.DateTime EmploymentDate, int  roleId)
+        {
+            //set owner to top level datarecord
+            GADataRecord owner = new GADataRecord(1, GADataClass.GAFlag);
+
+            return EmploymentDb.GetEmploymentsByRoleIdAndDate(roleId, EmploymentDate);
+        }
+
+        // Tor 20170422 Added common method for getting Job Title and Access Role
+        public static EmploymentDS GetEmploymentsByRoleIdOrJobTitleAndDate(int JobOrRoleId, System.DateTime EmploymentDate, string FieldName)
+        {
+            //set owner to top level datarecord
+            GADataRecord owner = new GADataRecord(1, GADataClass.GAFlag);
+            return EmploymentDb.GetEmploymentsByRoleIdOrJobTitleAndDate(JobOrRoleId, EmploymentDate, FieldName);
+        }
+
+        //// Tor 20190227 Get distinct all tableid and fieldid above memberrecord where fieldname = inputvalue
+        //public static System.Collections.ArrayList GetDistinctJobTitleOrRoleAboveMember(GADataRecord fromMember, int PersonnelRowId, string RoleOrTitle)
+        //{
+        //    return EmploymentDb.GetDistinctJobTitleOrRoleAboveMember(fromMember, PersonnelRowId, RoleOrTitle);
+        //}
+
+        // Tor 20190227 Get distinct all tableid and fieldid above memberrecord where fieldname = inputvalue
+        public static string GetDistinctJobTitleOrRoleAboveMember(GADataRecord fromMember, int PersonnelRowId, string RoleOrTitle)
+        {
+            return EmploymentDb.GetDistinctJobTitleOrRoleAboveMember(fromMember, PersonnelRowId, RoleOrTitle);
+        }
+
+        // Tor 20181105 Added method for getting all assigned persons with Job Title and date above record
+        //public static EmploymentDS GetEmploymentsByJobTitleAndDateAboveRecord(int JobTitelListsRowId, System.DateTime EmploymentDate
+        //    , GADataRecord record)
+        //{
+        //    return EmploymentDb.GetEmploymentsByJobTitleAndDateAboveRecord(JobTitelListsRowId, EmploymentDate, record, IsFilterOnVertical());
+        //}
+
+		public static EmploymentDS GetNewEmployment()
+		{
+			EmploymentDS iDS = new EmploymentDS();
+			GASystem.DataModel.EmploymentDS.GAEmploymentRow row = iDS.GAEmployment.NewGAEmploymentRow();
+		//	set default values for non-null attributes
+		//	row.EmploymentRowId = 0;
+		//	row.DateTimeFrom = DateTime.Today;
+			iDS.GAEmployment.Rows.Add(row);
+			return iDS;
+			
+		}
+
+		// Tor start
+
+		public static EmploymentDS SaveNewEmployment(EmploymentDS EmploymentSet, GADataRecord EmploymentOwner)
+		{
+			//if (EmploymentSet.GAEmployment[0].IsDateAndTimeOfIncidentNull())
+			//	EmploymentSet.GAEmployment[0].DateAndTimeOfIncident = System.DateTime.Now;
+			//Generate ReferenceId
+			//EmploymentSet.GAEmployment[0].IncidentId = IdGenerator.GenerateId(GADataClass.GAEmployment, EmploymentOwner, EmploymentSet.GAEmployment[0].DateAndTimeOfIncident);
+			
+			GADataTransaction transaction = GADataTransaction.StartGADataTransaction();
+			try
+			{
+				EmploymentSet = UpdateEmployment(EmploymentSet, transaction);
+				DataClassRelations.CreateDataClassRelation(EmploymentOwner.RowId, EmploymentOwner.DataClass, EmploymentSet.GAEmployment[0].EmploymentRowId, GADataClass.GAEmployment, transaction);
+				//add member classes
+			//	Utils.StoreObject.AddMemberClasses(new GADataRecord(EmploymentSet.GAEmployment[0].EmploymentRowId, GADataClass.GAEmployment), transaction);
+			
+				transaction.Commit();
+			}
+			catch (Exception ex)
+			{
+				transaction.Rollback();
+				throw ex;
+			}
+			finally 
+			{
+				transaction.Connection.Close();
+			}
+			return EmploymentSet;
+		}
+
+		public static EmploymentDS UpdateEmployment(EmploymentDS EmploymentSet)
+		{
+			return UpdateEmployment(EmploymentSet, null);
+		}
+		public static EmploymentDS UpdateEmployment(EmploymentDS EmploymentSet, GADataTransaction transaction)
+		{
+			return EmploymentDb.UpdateEmployment(EmploymentSet, transaction);
+		}
+	}
+}

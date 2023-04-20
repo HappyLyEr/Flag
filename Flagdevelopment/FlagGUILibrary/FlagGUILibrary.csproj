@@ -1,0 +1,439 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29D84191-4921-44AD-8688-18B99F43C1DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GASystem.GAGUI</RootNamespace>
+    <AssemblyName>FlagGUILibrary</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\FLAGweb\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\FLAGweb\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Chart, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\CrystalDecisions\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeTextBox, Version=3.1.6.26954, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\FreeTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\adomd\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="RadAjax.Net2, Version=1.8.8.0, Culture=neutral, PublicKeyToken=3f7b438d1c762d0b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadAjax.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.RadarCube.Web, Version=2.2.1.28212, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\radarcube\RadarSoft.RadarCube.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.RadarCube.Web.Grid, Version=2.2.1.28212, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\radarcube\RadarSoft.RadarCube.Web.Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.RadarCube.Web.MSAS, Version=2.2.1.28212, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\radarcube\RadarSoft.RadarCube.Web.MSAS.dll</HintPath>
+    </Reference>
+    <Reference Include="RadCalendar.Net2, Version=2.2.8.0, Culture=neutral, PublicKeyToken=a1432cd341173140, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadCalendar.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadChart.Net2, Version=4.1.6.0, Culture=neutral, PublicKeyToken=d14f3dcc8e3e8763, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadChart.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadComboBox.Net2, Version=2.8.8.0, Culture=neutral, PublicKeyToken=175e9829b585f1f6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadComboBox.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadEditor.Net2, Version=7.3.6.0, Culture=neutral, PublicKeyToken=852c9eb6525c1b53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadEditor.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadGrid.Net2, Version=5.1.6.0, Culture=neutral, PublicKeyToken=ec87bc2939ec45df, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadGrid.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadInput.Net2, Version=2.1.8.0, Culture=neutral, PublicKeyToken=a1432cd341173140, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadInput.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadPanelbar.Net2, Version=4.3.8.0, Culture=neutral, PublicKeyToken=e0d16f6f4c7e05de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadPanelbar.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadSpell.NET2, Version=3.2.8.0, Culture=neutral, PublicKeyToken=b5dad7bf2bf594c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadSpell.NET2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadTabStrip.Net2, Version=3.6.8.0, Culture=neutral, PublicKeyToken=a87324b017ca21ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadTabStrip.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadUpload.Net2, Version=2.4.8.0, Culture=neutral, PublicKeyToken=b4e93c26a31a21f0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\RadControls for ASP.NET Q1 2009\bin\RadUpload.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GAControls\EditForm\AbstractDetailsForm.cs" />
+    <Compile Include="GAControls\EditForm\ActionDetailsForm.cs" />
+    <Compile Include="GAControls\EditForm\CreateMultipleRecordsForm.cs" />
+    <Compile Include="GAControls\EditForm\DailyEmpCountDetailsForm.cs" />
+    <Compile Include="GAControls\EditForm\ExposedHoursGroupViewDetailsForm.cs" />
+    <Compile Include="GAControls\EditForm\GADetailsFormFactory.cs" />
+    <Compile Include="GAControls\EditForm\GeneralDetailsForm.cs" />
+    <Compile Include="GAControls\EditForm\ReportDetailsForm.cs" />
+    <Compile Include="GAControls\Export\ExportListToExcel.cs" />
+    <Compile Include="GAControls\HomeContext.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\HomeContextNavigationHeader.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\ListData\ListClassByOwner.cs" />
+    <Compile Include="GAControls\ListData\ListClassAllWithinDataRecords.cs" />
+    <None Include="GAControls\ListData\ListClassByOwner.cs.old" />
+    <Compile Include="GAControls\ListData\ListClassByOwnerAndTimeSpan.cs" />
+    <Compile Include="GAControls\ListData\ListClassDataRecords.cs" />
+    <Compile Include="GAControls\ListData\ListWorkitemAllDataRecords.cs" />
+    <Compile Include="GAControls\ListData\ListWorkitemDataRecords.cs" />
+    <Compile Include="GAControls\OLAP\CubeGraph.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\OLAP\CubeView.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\ShortCutLinks.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\UtilityControls\ProcedureSelector.cs" />
+    <Compile Include="GAControls\UtilityControls\RowSelectorColumn.cs" />
+    <Compile Include="GAControls\ViewDataClass.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\ViewDetailsList\GeneralViewDetail.cs" />
+    <Compile Include="GAControls\ViewForm\ViewWorkItem.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\WorkflowKickOffConfirm.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\ActionOwnerContext.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\ActionStatus.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\AddWorkitemParticipant.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\CloseWorkitem.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\AddWorkitemComment.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\RemoveAddedParticipants.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\DelegateWorkitem.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\WorkflowStatus.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\WorkitemAcknowledgement.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\WorkitemNotifierSingleWebControl.cs" />
+    <Compile Include="GAControls\Workflow\WorkitemNotifierWebControl.cs" />
+    <Compile Include="GAControls\Workflow\WorkitemShortListControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GAControls\Workflow\WorkitemStatus.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+	<Compile Include="GAControls\Workflow\CloseNCWorkitem.ascx.cs">
+	  <SubType>ASPXCodeBehind</SubType>
+	</Compile>
+    <Compile Include="GAGUIEvents\GACommandEventArgs.cs" />
+    <Compile Include="GAGUIEvents\GAEventArgs.cs" />
+    <Compile Include="GUIUtils\ActionController.cs" />
+    <Compile Include="GUIUtils\SessionData\GeneralInfo.cs" />
+    <Compile Include="GUIUtils\DataFilter\CheckboxFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\SelectListEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\SelectListFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\LocalizedLabelFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\LocalizedLabelEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\PathLookupFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\DataClassFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\DatePeriodeFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\PathLookupEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\DataClassEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\DatePeriodeEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\SelectListViewWebcontrol.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\DatePeriodeViewWebcontrol.cs" />
+    <Compile Include="GUIUtils\DataFilter\WorkitemResponsibleFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\WorkitemResponsibleEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\LookupEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\LookupFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\DateFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\CheckboxEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\DateEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\GeneralEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\IEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\ListEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\EditElements\NumericEditWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\FilterBuilder.cs" />
+    <Compile Include="GUIUtils\DataFilter\FilterFactory.cs" />
+    <Compile Include="GUIUtils\DataFilter\FilterUtils.cs" />
+    <Compile Include="GUIUtils\DataFilter\FilterWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\GeneralFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\IFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\ListFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\NumericFilterElement.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\CheckboxViewWebcontrol.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\ListViewWebcontrol.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\DateViewWebcontrol.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\GeneralViewWebControl.cs" />
+    <Compile Include="GUIUtils\DataFilter\ViewElements\IViewWebControl.cs" />
+    <Compile Include="GUIUtils\DocumentReviewFrontController.cs" />
+    <Compile Include="GUIUtils\FrontController.cs" />
+    <Compile Include="GUIUtils\GeneralQueryStringUtils.cs" />
+    <Compile Include="GUIUtils\GUIGenerateUtils.cs" />
+    <Compile Include="GUIUtils\HTMLLiteralTags.cs" />
+    <Compile Include="GUIUtils\LeftMenuFrontController.cs" />
+    <Compile Include="GUIUtils\LinkUtils.cs" />
+    <Compile Include="GUIUtils\PageDispatcher.cs" />
+    <Compile Include="GUIUtils\QuerystringUtils.cs" />
+    <Compile Include="GUIUtils\ShortcutLinks.cs" />
+    <Compile Include="GUIUtils\ValidationControl\TextBoxLengthValidator.cs" />
+    <Compile Include="GUIUtils\ValidationControl\ValidationControlsCreator.cs" />
+    <Compile Include="GUIUtils\WorkitemFrontController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\export.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Utils\URLGenerator.cs" />
+    <Compile Include="UserControls\CreateMultipleRecords.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataContextInfo.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DatarecordField.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditArcLinksAccessRoles.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditClassAccessRoles.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditDataRecord.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditUserRoles.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ImportExcelCtrl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ListDataRecords.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Lists\ListCommandTemplate.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberDataTabs.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MultiPartCheckListTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserControls\PersonnelField.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RelatedDataRecordField.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RelatedDataRecordFieldMultiple.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReportAttributes.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SelectTemplate.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SubTabsNavigation.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Tabsnavigation.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlUtils.cs" />
+    <Compile Include="UserControls\UserMessage.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\viewDataRecord.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\EditControls\ComboMultiple.cs" />
+    <Compile Include="WebControls\EditControls\DataRecordPicker.cs" />
+    <Compile Include="WebControls\EditControls\DateControl.cs" />
+    <Compile Include="WebControls\EditControls\DateTimeControl.cs" />
+    <Compile Include="WebControls\EditControls\EditForm\GeneralEditForm.cs" />
+    <Compile Include="WebControls\EditControls\EmailURL.cs" />
+    <Compile Include="WebControls\EditControls\FileContent.cs" />
+    <Compile Include="WebControls\EditControls\FileMimetype.cs" />
+    <Compile Include="WebControls\EditControls\FileURL.cs" />
+    <Compile Include="WebControls\EditControls\Float.cs" />
+    <Compile Include="WebControls\EditControls\GeneralURL.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\AxisInfo.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\DefaultRiskAssessmentMatrixModel.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\HazardMatrixControl.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\HazardMatrixControlDesigner.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\Lights.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\Matrix.cs" />
+    <Compile Include="WebControls\EditControls\HazardMatrix\RiskAssessmentMatrixModel.cs" />
+    <Compile Include="WebControls\EditControls\Numeric.cs" />
+    <Compile Include="WebControls\EditControls\Responsible.cs" />
+    <Compile Include="WebControls\EditControls\WorkflowStarted.cs" />
+    <Compile Include="WebControls\EditControls\YearMonthSpan.cs" />
+    <None Include="WebControls\ListControls\GridBoundDateOverlapTester.cs.20150925" />
+    <Compile Include="WebControls\ListControls\GABoundDecimal2Column.cs" />
+    <Compile Include="WebControls\ListControls\GABoundMinutesColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundGADataRecordNameColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundIntToBoolColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundSelectListColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundAcknowledgeTester.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundLocalizedLabelColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundURLColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundWorkitemRoleParticipantColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundDateExpiredTester.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundGAPathLookupColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundDateOverlapTester.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundGADataClassColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundWorkitemParticipantColumn.cs" />
+    <Compile Include="WebControls\ListControls\GAColumnExcelItemFactory.cs" />
+    <Compile Include="WebControls\ListControls\GAListExcelColumnContainer.cs" />
+    <Compile Include="WebControls\ListControls\GridDateTimeItemEditorTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GridDateItemEditorTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GridDateTimeBoundColumn.cs" />
+    <Compile Include="WebControls\ListControls\GridDateItemTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GridDateBoundColumn.cs" />
+    <Compile Include="WebControls\ListControls\FlagListCommandItemTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GAColumnItemFactory.cs" />
+    <Compile Include="WebControls\ListControls\GAListColumnContainer.cs" />
+    <Compile Include="WebControls\ListControls\GADataRecordIdentifierTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GAHazardMatrixListItemTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GAListColumn.cs" />
+    <Compile Include="WebControls\ListControls\GAListDateTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GAListItemCheckboxTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GAListItemTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GAWorkitemResponsibleTemplate.cs" />
+    <Compile Include="WebControls\ListControls\GridBoundLimitColumn.cs" />
+    <Compile Include="WebControls\ListControls\gridelements\GridDateColumn.cs" />
+    <Compile Include="WebControls\ListControls\gridelements\GridDateColumnEditor.cs" />
+    <Compile Include="WebControls\ListControls\MyBoundColumn.cs" />
+    <Compile Include="WebControls\ViewControls\CheckBoxView.cs" />
+    <Compile Include="WebControls\ViewControls\WorkitemResponsibleRole.cs" />
+    <Compile Include="WebControls\ViewControls\FileLink.cs" />
+    <Compile Include="WebControls\ViewControls\FileLookupURL.cs" />
+    <Compile Include="WebControls\ViewControls\LocalizedLabel.cs" />
+    <Compile Include="WebControls\ViewControls\RecordLookupURL.cs" />
+    <Compile Include="WebControls\ViewControls\Responsible.cs" />
+    <Compile Include="WebControls\ViewControls\URLLink.cs" />
+    <Compile Include="WebControls\ViewControls\WorkflowStarted.cs" />
+    <Compile Include="WebControls\ViewControls\WorkitemResponsible.cs" />
+    <Compile Include="WebControls\ViewControls\YearMonthSpan.cs" />
+    <Compile Include="WebForms\OLAPGraph.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\olap.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Document.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\EditArcLinkRolePermission.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\EditDataClassRolesAccess.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\EditDataRecordRolePermissions.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\HelpDialog.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\toexcel.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GASystemData\GASystem.DataModel.csproj">
+      <Project>{E72963E4-E15C-44CA-B76C-A996B594E53C}</Project>
+      <Name>GASystem.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GASystem\GASystem.csproj">
+      <Project>{181A89D3-4B82-4002-9048-4B817FE9F894}</Project>
+      <Name>GASystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAWorkflow\GAWorkflow.csproj">
+      <Project>{719394B3-DF79-4176-818B-970A1CBA57E1}</Project>
+      <Name>GAWorkflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\CrystalForms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

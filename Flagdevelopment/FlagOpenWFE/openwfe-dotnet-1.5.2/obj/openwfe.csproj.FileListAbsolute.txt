@@ -1,0 +1,5 @@
+F:\flagsvn\FLAGweb\bin\openwfe.dll
+F:\flagsvn\FLAGweb\bin\openwfe.pdb
+F:\flagsvn\Flagdevelopment\flagopenwfe\openwfe-dotnet-1.5.2\obj\Debug\ResolveAssemblyReference.cache
+F:\flagsvn\Flagdevelopment\flagopenwfe\openwfe-dotnet-1.5.2\obj\Debug\openwfe.dll
+F:\flagsvn\Flagdevelopment\flagopenwfe\openwfe-dotnet-1.5.2\obj\Debug\openwfe.pdb

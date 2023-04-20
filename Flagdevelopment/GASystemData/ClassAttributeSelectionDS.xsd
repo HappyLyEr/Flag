@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClassAttributeSelectionDS" targetNamespace="http://tempuri.org/ClassAttributeSelectionDS.xsd" xmlns:mstns="http://tempuri.org/ClassAttributeSelectionDS.xsd" xmlns="http://tempuri.org/ClassAttributeSelectionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata20090427ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata20090427ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.flagdata20090427ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GAClassAttributeSelectionTableAdapter" GeneratorDataComponentClassName="GAClassAttributeSelectionTableAdapter" Name="GAClassAttributeSelection" UserDataComponentName="GAClassAttributeSelectionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flagdata20090427ConnectionString (Settings)" DbObjectName="flagdata20090427.dbo.GAClassAttributeSelection" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT ClassAttributeSelectionRowId, ClassAttributeSelectionReferenceId, ClassAttributeSelectionName, PersonnelRowId, ClassRowId, DateTimeLastUsed, Class, Type, FlagWhereStatement, IssueResponse, Comment, Status, Responsible, ResponsibleRoleListsRowId, ClosedDateTime, nTextFree1, nTextFree2, nTextFree3, TextFree3, IntFree1, IntFree2, ViewTypeListsRowId, DateTimeFree1, DateTimeFree2, QueryString, TextFree2, rowguid, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree3, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy FROM dbo.GAClassAttributeSelection</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ClassAttributeSelectionRowId" DataSetColumn="ClassAttributeSelectionRowId" />
+              <Mapping SourceColumn="ClassAttributeSelectionReferenceId" DataSetColumn="ClassAttributeSelectionReferenceId" />
+              <Mapping SourceColumn="ClassAttributeSelectionName" DataSetColumn="ClassAttributeSelectionName" />
+              <Mapping SourceColumn="PersonnelRowId" DataSetColumn="PersonnelRowId" />
+              <Mapping SourceColumn="ClassRowId" DataSetColumn="ClassRowId" />
+              <Mapping SourceColumn="DateTimeLastUsed" DataSetColumn="DateTimeLastUsed" />
+              <Mapping SourceColumn="Class" DataSetColumn="Class" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="FlagWhereStatement" DataSetColumn="FlagWhereStatement" />
+              <Mapping SourceColumn="IssueResponse" DataSetColumn="IssueResponse" />
+              <Mapping SourceColumn="Comment" DataSetColumn="Comment" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Responsible" DataSetColumn="Responsible" />
+              <Mapping SourceColumn="ResponsibleRoleListsRowId" DataSetColumn="ResponsibleRoleListsRowId" />
+              <Mapping SourceColumn="ClosedDateTime" DataSetColumn="ClosedDateTime" />
+              <Mapping SourceColumn="nTextFree1" DataSetColumn="nTextFree1" />
+              <Mapping SourceColumn="nTextFree2" DataSetColumn="nTextFree2" />
+              <Mapping SourceColumn="nTextFree3" DataSetColumn="nTextFree3" />
+              <Mapping SourceColumn="TextFree3" DataSetColumn="TextFree3" />
+              <Mapping SourceColumn="IntFree1" DataSetColumn="IntFree1" />
+              <Mapping SourceColumn="IntFree2" DataSetColumn="IntFree2" />
+              <Mapping SourceColumn="ViewTypeListsRowId" DataSetColumn="ViewTypeListsRowId" />
+              <Mapping SourceColumn="DateTimeFree1" DataSetColumn="DateTimeFree1" />
+              <Mapping SourceColumn="DateTimeFree2" DataSetColumn="DateTimeFree2" />
+              <Mapping SourceColumn="QueryString" DataSetColumn="QueryString" />
+              <Mapping SourceColumn="TextFree2" DataSetColumn="TextFree2" />
+              <Mapping SourceColumn="rowguid" DataSetColumn="rowguid" />
+              <Mapping SourceColumn="SwitchFree1" DataSetColumn="SwitchFree1" />
+              <Mapping SourceColumn="SwitchFree2" DataSetColumn="SwitchFree2" />
+              <Mapping SourceColumn="SwitchFree3" DataSetColumn="SwitchFree3" />
+              <Mapping SourceColumn="DateTimeFree3" DataSetColumn="DateTimeFree3" />
+              <Mapping SourceColumn="MasterRowId" DataSetColumn="MasterRowId" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="DateChanged" DataSetColumn="DateChanged" />
+              <Mapping SourceColumn="ChangedBy" DataSetColumn="ChangedBy" />
+              <Mapping SourceColumn="DateDeleted" DataSetColumn="DateDeleted" />
+              <Mapping SourceColumn="DeletedBy" DataSetColumn="DeletedBy" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClassAttributeSelectionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ClassAttributeSelectionDS" msprop:Generator_DataSetName="ClassAttributeSelectionDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAClassAttributeSelection" msprop:Generator_UserTableName="GAClassAttributeSelection" msprop:Generator_RowDeletedName="GAClassAttributeSelectionRowDeleted" msprop:Generator_TableClassName="GAClassAttributeSelectionDataTable" msprop:Generator_RowChangedName="GAClassAttributeSelectionRowChanged" msprop:Generator_RowClassName="GAClassAttributeSelectionRow" msprop:Generator_RowChangingName="GAClassAttributeSelectionRowChanging" msprop:Generator_RowEvArgName="GAClassAttributeSelectionRowChangeEvent" msprop:Generator_RowEvHandlerName="GAClassAttributeSelectionRowChangeEventHandler" msprop:Generator_TablePropName="GAClassAttributeSelection" msprop:Generator_TableVarName="tableGAClassAttributeSelection" msprop:Generator_RowDeletingName="GAClassAttributeSelectionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClassAttributeSelectionRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ClassAttributeSelectionRowId" msprop:Generator_ColumnPropNameInRow="ClassAttributeSelectionRowId" msprop:Generator_ColumnVarNameInTable="columnClassAttributeSelectionRowId" msprop:Generator_ColumnPropNameInTable="ClassAttributeSelectionRowIdColumn" type="xs:int" />
+              <xs:element name="ClassAttributeSelectionReferenceId" msprop:Generator_UserColumnName="ClassAttributeSelectionReferenceId" msprop:Generator_ColumnPropNameInRow="ClassAttributeSelectionReferenceId" msprop:Generator_ColumnVarNameInTable="columnClassAttributeSelectionReferenceId" msprop:Generator_ColumnPropNameInTable="ClassAttributeSelectionReferenceIdColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClassAttributeSelectionName" msprop:Generator_UserColumnName="ClassAttributeSelectionName" msprop:Generator_ColumnPropNameInRow="ClassAttributeSelectionName" msprop:Generator_ColumnVarNameInTable="columnClassAttributeSelectionName" msprop:Generator_ColumnPropNameInTable="ClassAttributeSelectionNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PersonnelRowId" msprop:Generator_UserColumnName="PersonnelRowId" msprop:Generator_ColumnPropNameInRow="PersonnelRowId" msprop:Generator_ColumnVarNameInTable="columnPersonnelRowId" msprop:Generator_ColumnPropNameInTable="PersonnelRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ClassRowId" msprop:Generator_UserColumnName="ClassRowId" msprop:Generator_ColumnPropNameInRow="ClassRowId" msprop:Generator_ColumnVarNameInTable="columnClassRowId" msprop:Generator_ColumnPropNameInTable="ClassRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateTimeLastUsed" msprop:Generator_UserColumnName="DateTimeLastUsed" msprop:Generator_ColumnPropNameInRow="DateTimeLastUsed" msprop:Generator_ColumnVarNameInTable="columnDateTimeLastUsed" msprop:Generator_ColumnPropNameInTable="DateTimeLastUsedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Class" msprop:Generator_UserColumnName="Class" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnVarNameInTable="columnClass" msprop:Generator_ColumnPropNameInTable="ClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInTable="TypeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FlagWhereStatement" msprop:Generator_UserColumnName="FlagWhereStatement" msprop:Generator_ColumnPropNameInRow="FlagWhereStatement" msprop:Generator_ColumnVarNameInTable="columnFlagWhereStatement" msprop:Generator_ColumnPropNameInTable="FlagWhereStatementColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueResponse" msprop:Generator_UserColumnName="IssueResponse" msprop:Generator_ColumnPropNameInRow="IssueResponse" msprop:Generator_ColumnVarNameInTable="columnIssueResponse" msprop:Generator_ColumnPropNameInTable="IssueResponseColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comment" msprop:Generator_UserColumnName="Comment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInTable="CommentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Responsible" msprop:Generator_UserColumnName="Responsible" msprop:Generator_ColumnPropNameInRow="Responsible" msprop:Generator_ColumnVarNameInTable="columnResponsible" msprop:Generator_ColumnPropNameInTable="ResponsibleColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ResponsibleRoleListsRowId" msprop:Generator_UserColumnName="ResponsibleRoleListsRowId" msprop:Generator_ColumnPropNameInRow="ResponsibleRoleListsRowId" msprop:Generator_ColumnVarNameInTable="columnResponsibleRoleListsRowId" msprop:Generator_ColumnPropNameInTable="ResponsibleRoleListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ClosedDateTime" msprop:Generator_UserColumnName="ClosedDateTime" msprop:Generator_ColumnPropNameInRow="ClosedDateTime" msprop:Generator_ColumnVarNameInTable="columnClosedDateTime" msprop:Generator_ColumnPropNameInTable="ClosedDateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree2" msprop:Generator_UserColumnName="nTextFree2" msprop:Generator_ColumnPropNameInRow="nTextFree2" msprop:Generator_ColumnVarNameInTable="columnnTextFree2" msprop:Generator_ColumnPropNameInTable="nTextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree3" msprop:Generator_UserColumnName="nTextFree3" msprop:Generator_ColumnPropNameInRow="nTextFree3" msprop:Generator_ColumnVarNameInTable="columnnTextFree3" msprop:Generator_ColumnPropNameInTable="nTextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree3" msprop:Generator_UserColumnName="TextFree3" msprop:Generator_ColumnPropNameInRow="TextFree3" msprop:Generator_ColumnVarNameInTable="columnTextFree3" msprop:Generator_ColumnPropNameInTable="TextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IntFree1" msprop:Generator_UserColumnName="IntFree1" msprop:Generator_ColumnPropNameInRow="IntFree1" msprop:Generator_ColumnVarNameInTable="columnIntFree1" msprop:Generator_ColumnPropNameInTable="IntFree1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree2" msprop:Generator_UserColumnName="IntFree2" msprop:Generator_ColumnPropNameInRow="IntFree2" msprop:Generator_ColumnVarNameInTable="columnIntFree2" msprop:Generator_ColumnPropNameInTable="IntFree2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="ViewTypeListsRowId" msprop:Generator_UserColumnName="ViewTypeListsRowId" msprop:Generator_ColumnPropNameInRow="ViewTypeListsRowId" msprop:Generator_ColumnVarNameInTable="columnViewTypeListsRowId" msprop:Generator_ColumnPropNameInTable="ViewTypeListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateTimeFree1" msprop:Generator_UserColumnName="DateTimeFree1" msprop:Generator_ColumnPropNameInRow="DateTimeFree1" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree1" msprop:Generator_ColumnPropNameInTable="DateTimeFree1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree2" msprop:Generator_UserColumnName="DateTimeFree2" msprop:Generator_ColumnPropNameInRow="DateTimeFree2" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree2" msprop:Generator_ColumnPropNameInTable="DateTimeFree2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QueryString" msprop:Generator_UserColumnName="QueryString" msprop:Generator_ColumnPropNameInRow="QueryString" msprop:Generator_ColumnVarNameInTable="columnQueryString" msprop:Generator_ColumnPropNameInTable="QueryStringColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree2" msprop:Generator_UserColumnName="TextFree2" msprop:Generator_ColumnPropNameInRow="TextFree2" msprop:Generator_ColumnVarNameInTable="columnTextFree2" msprop:Generator_ColumnPropNameInTable="TextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="rowguid" msprop:Generator_ColumnPropNameInRow="rowguid" msprop:Generator_ColumnVarNameInTable="columnrowguid" msprop:Generator_ColumnPropNameInTable="rowguidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SwitchFree1" msprop:Generator_UserColumnName="SwitchFree1" msprop:Generator_ColumnPropNameInRow="SwitchFree1" msprop:Generator_ColumnVarNameInTable="columnSwitchFree1" msprop:Generator_ColumnPropNameInTable="SwitchFree1Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree2" msprop:Generator_UserColumnName="SwitchFree2" msprop:Generator_ColumnPropNameInRow="SwitchFree2" msprop:Generator_ColumnVarNameInTable="columnSwitchFree2" msprop:Generator_ColumnPropNameInTable="SwitchFree2Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree3" msprop:Generator_UserColumnName="SwitchFree3" msprop:Generator_ColumnPropNameInRow="SwitchFree3" msprop:Generator_ColumnVarNameInTable="columnSwitchFree3" msprop:Generator_ColumnPropNameInTable="SwitchFree3Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DateTimeFree3" msprop:Generator_UserColumnName="DateTimeFree3" msprop:Generator_ColumnPropNameInRow="DateTimeFree3" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree3" msprop:Generator_ColumnPropNameInTable="DateTimeFree3Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MasterRowId" msprop:Generator_UserColumnName="MasterRowId" msprop:Generator_ColumnPropNameInRow="MasterRowId" msprop:Generator_ColumnVarNameInTable="columnMasterRowId" msprop:Generator_ColumnPropNameInTable="MasterRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreated" msprop:Generator_UserColumnName="DateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateChanged" msprop:Generator_UserColumnName="DateChanged" msprop:Generator_ColumnPropNameInRow="DateChanged" msprop:Generator_ColumnVarNameInTable="columnDateChanged" msprop:Generator_ColumnPropNameInTable="DateChangedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ChangedBy" msprop:Generator_UserColumnName="ChangedBy" msprop:Generator_ColumnPropNameInRow="ChangedBy" msprop:Generator_ColumnVarNameInTable="columnChangedBy" msprop:Generator_ColumnPropNameInTable="ChangedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateDeleted" msprop:Generator_UserColumnName="DateDeleted" msprop:Generator_ColumnPropNameInRow="DateDeleted" msprop:Generator_ColumnVarNameInTable="columnDateDeleted" msprop:Generator_ColumnPropNameInTable="DateDeletedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeletedBy" msprop:Generator_UserColumnName="DeletedBy" msprop:Generator_ColumnPropNameInRow="DeletedBy" msprop:Generator_ColumnVarNameInTable="columnDeletedBy" msprop:Generator_ColumnPropNameInTable="DeletedByColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GAClassAttributeSelection" />
+      <xs:field xpath="mstns:ClassAttributeSelectionRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

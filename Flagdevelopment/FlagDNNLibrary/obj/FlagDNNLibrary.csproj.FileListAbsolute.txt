@@ -1,0 +1,5 @@
+F:\flagsvn\FLAGweb\bin\FlagDNNLibrary.dll
+F:\flagsvn\FLAGweb\bin\FlagDNNLibrary.pdb
+F:\flagsvn\Flagdevelopment\FlagDNNLibrary\obj\Debug\ResolveAssemblyReference.cache
+F:\flagsvn\Flagdevelopment\FlagDNNLibrary\obj\Debug\FlagDNNLibrary.dll
+F:\flagsvn\Flagdevelopment\FlagDNNLibrary\obj\Debug\FlagDNNLibrary.pdb

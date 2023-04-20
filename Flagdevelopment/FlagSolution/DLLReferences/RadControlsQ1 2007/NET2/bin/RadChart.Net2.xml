@@ -1,0 +1,4210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadChart.Net2</name>
+    </assembly>
+    <members>
+        <member name="F:Telerik.WebControls.ChartDesigner.actionLists">
+            <summary>
+            Action List collection, for action tags menu creation 
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.ChartDesigner.ActionLists">
+            <summary>
+            Gets Action List collection
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadChartDesignersActionList">
+            <summary>
+            This class describe action tags menu for chart control in design time.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadChartDesignersActionList.baseControl">
+            <summary>
+            Link to chart control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.#ctor(Telerik.WebControls.RadChart)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="bc">Chart control</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetPropertyByName(System.String)">
+            <summary>
+            Method returns property descriptor by property name.
+            </summary>
+            <param name="propName">Property name</param>
+            <returns>Property descriptor</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetPropertyByName(System.String,System.Object)">
+            <summary>
+            Method returns property descriptor by property name.
+            </summary>
+            <param name="propName">Property name</param>
+            <param name="obj">Type name</param>
+            <returns>Property descriptor</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetSortedActionItems">
+            <summary>
+            Create action tags menu items collection.
+            </summary>
+            <returns>Action tags menu items collection</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.GetChartWizardForm">
+            <summary>
+            Call chart wizard action tags item.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.ConfigureData">
+            <summary>
+            Call configure data for the selected data source action tags item.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChartDesignersActionList.RefreshSchema">
+            <summary>
+            Call refresh schema for the selected data source action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Width">
+            <summary>
+            Chart width
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Height">
+            <summary>
+            Chart height
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Title">
+            <summary>
+            Chart title
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.DefaultChartType">
+            <summary>
+            Chart image format action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.ChartImageFormat">
+            <summary>
+            Chart image format action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.ImageQuality">
+            <summary>
+            Chart image quality action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.TextQuality">
+            <summary>
+            Chart text quality action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Palette">
+            <summary>
+            Chart series color palette action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.Series">
+            <summary>
+            Chart series action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.SeriesOrientation">
+            <summary>
+            Chart series orientation action tags item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChartDesignersActionList.DataSourceID">
+            <summary>
+            Chart data source picker action tags item.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.ChartPaletteEditorFromAL.columnsListing_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Added to automatically close dropdown after user selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.WebControls.SeriesCollectionEditorFromAL.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.SeriesCollectionEditorFromAL.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.WebControls.MapAreaBuilder">
+            <summary>
+            Summary description for MapAreaBuilder.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartMapAreaBuilder">
+            <summary>
+            Base map area builder class
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadChartEventArgs">
+            <summary>
+            Summary description for EventArgs.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadChart.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadChartUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadChartUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="T:Telerik.Charting.FillStyle">
+            <summary>
+            Specifies the fill style for the appearance/background.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.FillStyle.Solid">
+            <summary>
+            Specifies solid fill style for the background.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.FillStyle.Gradient">
+            <summary>
+            Specifies gradient fill style for the background.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.FillStyle.Hatch">
+            <summary>
+            Specifies hatched fill style for the background.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.FillStyle.Image">
+            <summary>
+            Specifies image fill style for the background.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.GradientFillStyle">
+            <summary>
+            Specifies the gradient type for gradient fills.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.GradientFillStyle.Horizontal">
+            <summary>
+            Specifies a gradient from left to right.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.GradientFillStyle.Vertical">
+            <summary>
+            Specifies a gradient from top to bottom.
+            </summary>        
+        </member>
+        <member name="F:Telerik.Charting.GradientFillStyle.ForwardDiagonal">
+            <summary>
+            Specifies a gradient from upper left to lower right.
+            </summary>        
+        </member>
+        <member name="F:Telerik.Charting.GradientFillStyle.BackwardDiagonal">
+            <summary>
+            Specifies a gradient from upper right to lower left.
+            </summary>        
+        </member>
+        <member name="F:Telerik.Charting.GradientFillStyle.Center">
+            <summary>
+            Specifies a gradient form center to the periphery.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.CornerType">
+            <summary>
+            Specifies the corner type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.CornerType.Rectangle">
+            <summary>
+            Specifies a sharp corner.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.CornerType.Round">
+            <summary>
+            Specifies a rounded corner.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.Corners">
+            <summary>
+            Sets the edge type of rectangular shapes.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Corners.TopLeft">
+            <summary>
+            Sets the type of the top left corner of the rectangular shape.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Corners.TopRight">
+            <summary>
+            Sets the type of the top right corner of the rectangular shape.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Corners.BottomLeft">
+            <summary>
+            Sets the type of the bottom left corner of the rectangular shape.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Corners.BottomRight">
+            <summary>
+            Sets the type of the bottom right corner of the rectangular shape.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Corners.RoundSize">
+            <summary>
+            Sets the round size of the corner.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ImageAlign">
+            <summary>
+            Specifies the alignment of the background image.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.TopLeft">
+            <summary>
+            Aligns the image to the top left corner of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.Top">
+            <summary>
+            Aligns the image to the top center position of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.TopRight">
+            <summary>
+            Aligns the image to the top right corner of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.Left">
+            <summary>
+            Aligns the image to the left center position of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.Center">
+            <summary>
+            Aligns the image to the center position of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.Right">
+            <summary>
+            Aligns the image to the right center position of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.BottomLeft">
+            <summary>
+            Aligns the image to the bottom left corner of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.BottomCenter">
+            <summary>
+            Aligns the image to the bottom center position of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageAlign.BottomRight">
+            <summary>
+            Aligns the image to the bottom right position of the rectangle.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ImageMode">
+            <summary>
+            Specifies how the background image fills the background.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageMode.Align">
+            <summary>
+            Specifies alignment mode for the background image.
+            </summary>        
+        </member>
+        <member name="F:Telerik.Charting.ImageMode.Stretch">
+            <summary>
+            Stretches the image to fit the size of the rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageMode.Tile">
+            <summary>
+            Tiles the image.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageMode.TileFlipX">
+            <summary>
+            Tiles the image by flipping it by X axis.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageMode.TileFlipY">
+            <summary>
+            Tiles the image by flipping it by Y axis.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageMode.TileFlipXY">
+            <summary>
+            Tiles the image by flipping it by X and Y axes.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Colors.MainColor">
+            <summary>
+            Specifies the main color for drawing.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Colors.SecondColor">
+            <summary>
+            Specifies the second color for drawing. Used in gradient and hatched fills.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Border.BorderColor">
+            <summary>
+            Specifies the color of the border.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Border.BorderWidth">
+            <summary>
+            Specifies the thickness of the border.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Border.PenStyle">
+            <summary>
+            Line style
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.GradientFill.GradientFillStyle">
+            <summary>
+            Specifies the gradient type for gradient fills.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.GradientFill.GammaCorrection">
+            <summary>
+            Specifies whether gamma correction should be used in gradient fills to set more uniform intensity between colors.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.GradientFill.GradientFocus">
+            <summary>
+            Sets the focus for the SecondColor.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.HatchFill.HatchStyle">
+            <summary>
+            Specifies the hatched fill style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextureFill.BackgroundImage">
+            <summary>
+            Specifies the relative url for the background image.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextureFill.ImageMode">
+            <summary>
+            Specifies how the background image fits the background.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextureFill.ImageAlign">
+            <summary>
+            Specifies the alignment of the background image.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.FillTypeSettings">
+            <summary>
+            Specifies the custom fill style settings of a chart element.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.FillTypeSettings.#ctor">
+            <summary>
+            Creates a new instance of FillTypeSettings class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.FillStyle">
+            <summary>
+            Specifies the fill style of the chart element's background.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.MainColor">
+            <summary>
+            Specifies the main color for drawing.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.SecondColor">
+            <summary>
+            Specifies the second color for drawing. Used in gradient and hatched fills.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.GradientFillStyle">
+            <summary>
+            Specifies the gradient type for gradient fills.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.GradientFocus">
+            <summary>
+            Sets the focus of the second color in gradient fill styles.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.GammaCorrection">
+            <summary>
+            Specifies whether gamma correction should be used in gradient fills to set more uniform intensity between colors.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.HatchStyle">
+            <summary>
+            Specifies the hatched fill style.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.ImageMode">
+            <summary>
+            Specifies how the background image fits the background.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.BackgroundImage">
+            <summary>
+            Specifies the relative url for the background image.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.FillTypeSettings.ImageAlign">
+            <summary>
+            Specifies the alignment of the background image.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartShape">
+            <summary>
+            Specifies a chart element with custom fill styles and a border.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartShape.#ctor">
+            <summary>
+             Creates a chart shape which has custom fill settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartShape.BorderWidth">
+            <summary>
+            Specifies the thickness of the border.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartShape.PenStyle">
+            <summary>
+            Specifies the line style of the border.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartShape.BorderColor">
+            <summary>
+            Specifies the color of the border.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartRectShape">
+            <summary>
+            Specifies a rectangular chart shape with custom fill styles and a border.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartRectShape.#ctor">
+            <summary>
+            Creates a shape which has rectangular appearance.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartRectShape.Corners">
+            <summary>
+            Sets the appearance for the corners of the rectangular shape.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.UnitType">
+            <summary>
+            Specifies the unit of measurement.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.UnitType.Pixel">
+            <summary>
+            Measurement is in pixels.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.UnitType.Percentage">
+            <summary>
+            Measurement is a percentage relative to the parent element.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.Unit">
+            <summary>
+            Represents a length measurement.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Unit.Empty">
+            <summary>
+            Represents an empty Unit. This field is read-only.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.Unit.op_Inequality(Telerik.Charting.Unit,Telerik.Charting.Unit)">
+            <summary>
+            Compares two Unit objects to determine whether they are not equal.
+            </summary>
+            <param name="left">The Unit on the left side of the operator.</param>
+            <param name="right">The Unit on the right side of the operator.</param>
+            <returns>true if the Unit objects are not equal; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.op_Equality(Telerik.Charting.Unit,Telerik.Charting.Unit)">
+            <summary>
+            Compares two Unit objects to determine whether they are equal.
+            </summary>
+            <param name="left">The Unit on the left side of the operator.</param>
+            <param name="right">The Unit on the right side of the operator.</param>
+            <returns>true if both Unit objects are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.op_Implicit(System.Int32)~Telerik.Charting.Unit">
+            <summary>
+            Implicitly creates a Unit of type Pixel from the specified 32-bit unsigned integer.
+            </summary>
+            <param name="n">A 32-bit signed integer that represents the length of the Unit.</param>
+            <returns>A Unit of type Pixel that represents the 32-bit unsigned integer specified by the n parameter.</returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.Parse(System.String)">
+            <summary>
+            Converts the specified string to a Unit.
+            </summary>
+            <param name="s">The string to convert.</param>
+            <returns>A Unit that represents the specified string.</returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.Percentage(System.Double)">
+            <summary>
+            Creates a Unit of type Percentage from the specified double-precision floating-point number.
+            </summary>
+            <param name="n">A double-precision floating-point number that represents the length of the Unit</param>
+            <returns>A Unit of type Percentage that represents the length specified by the double-precision floating-point number.</returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.Pixel(System.Int32)">
+            <summary>
+            Creates a Unit of type Pixel from the specified 32-bit signed integer.
+            </summary>
+            <param name="n">A 32-bit signed integer that represents the length of the Unit.</param>
+            <returns>A Unit of type Pixel that represents the length specified by the n parameter.</returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the Unit structure with the specified double precision floating point number.
+            </summary>
+            <param name="value">A double precision floating point number that represents the length of the Unit in pixels.</param>
+        </member>
+        <member name="M:Telerik.Charting.Unit.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the Unit structure with the specified 32-bit signed integer.
+            </summary>
+            <param name="value">A 32-bit signed integer that represents the length of the Unit in pixels.</param>
+        </member>
+        <member name="M:Telerik.Charting.Unit.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Unit structure with the specified length.
+            </summary>
+            <param name="value">A string that represents the length of the Unit.</param>
+        </member>
+        <member name="M:Telerik.Charting.Unit.#ctor(System.Double,Telerik.Charting.UnitType)">
+            <summary>
+            Initializes a new instance of the Unit structure with the specified double precision floating point number and UnitType.
+            </summary>
+            <param name="value">A double precision floating point number that represents the length of the Unit</param>
+            <param name="type">One of the UnitType enumeration values.</param>
+        </member>
+        <member name="M:Telerik.Charting.Unit.GetHashCode">
+            <summary>
+            Returns a hash code for this Unit.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Unit.Equals(System.Object)">
+            <summary>
+            Compares this Unit with the specified object.
+            </summary>
+            <param name="obj">The specified object for comparison.</param>
+            <returns>  true if the Unit that this method is called from is equal to the specified object; otherwise, false.</returns>
+        </member>
+        <member name="P:Telerik.Charting.Unit.Type">
+            <summary>
+            Gets the unit type of the Unit.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Unit.Value">
+            <summary>
+            Gets the length of the Unit.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.None">
+            <summary>
+            Specifies that no default format string is specified. Uses CustomFormat if is .
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.Currency">
+            <summary>
+            Default format string is set to currency : "C". 
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.Scientific">
+            <summary>
+            Default format string is set to scientific : "E".
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.General">
+            <summary>
+            Default format string is set to general : "G".
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.Number">
+            <summary>
+            Default format string is set to number : "N".
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.Percent">
+            <summary>
+            Default format string is set to percent : "P".
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.ShortDate">
+            <summary>
+            Converts to short date using ShortDatePattern set in CurrentCulture. Uses CustomFormat if is set.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.ShortTime">
+            <summary>
+            Converts to short time using ShortTimePattern set in CurrentCulture. Uses CustomFormat if is set.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.LongDate">
+            <summary>
+            Converts to long date using LongDatePattern set in CurrentCulture. Uses CustomFormat if is set.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartValueFormat.LongTime">
+            <summary>		
+            Converts to long time using LongTimePattern set in CurrentCulture. Uses CustomFormat if is set.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartAxisLabel">
+            <summary>
+            Represents axis label.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartAlignedLabel">
+            <summary>
+            Represents the RadChart's aligned label.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartBaseLabel">
+            <summary>
+            Represents the RadChart's base label.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartBaseLabel.#ctor">
+            <summary>
+            Creates a new instance of the RadChart's base label.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartBaseLabel.IsBackgroundNotEmpty">
+            <summary>
+            Returns true in case of a non-transparent background color
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartBaseLabel.DrawRotatedFromUpperLeft(System.Drawing.Graphics,System.Drawing.Point)">
+            <summary>
+            Draw labels for Pie chart
+            </summary>
+            <param name="graphic"></param>
+            <param name="pos"></param>
+            <param name="rotationAngle"></param>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.ShadowBlur">
+            <summary>
+            Specifies the shadow blur coefficient.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.ShadowColor">
+            <summary>
+            Specifies the shadow color.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.ShadowPosition">
+            <summary>
+            Specifies the shadow position.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.ShadowDistance">
+            <summary>
+            Specifies the distance between object and its shadow.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.Y">
+            <summary>
+            Gets or sets the Y coordinate of the upperleft corner of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.X">
+            <summary>
+            Gets or sets the X coordinate of the upper left corner of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.Text">
+            <summary>
+            Gets or sets the label caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.TextColor">
+            <summary>
+            Gets or sets the color of the label text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.TextFont">
+            <summary>
+            Gets or sets the font of the label text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.Visible">
+            <summary>
+            Specifies whether the label is visible or not.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.HorPadding">
+            <summary>
+            Specifies the distance between the text and vertical borders of the label.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.VerPadding">
+            <summary>
+            Specifies the distance between the text and horizontal borders of the label.
+            </summary>        
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseLabel.Background">
+            <summary>
+            Sets the appearance of the label's background.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAlignedLabel.HAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAlignedLabel.VAlignment">
+            <summary>
+            Gets or sets the vertical alignment of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAlignedLabel.HSpacing">
+            <summary>
+            Gets or sets the horizontal spacing of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAlignedLabel.VSpacing">
+            <summary>
+            Gets or sets the vertical spacing of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAlignedLabel.TextDirection">
+            <summary>
+            Gets or sets the text direction of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisLabel.Text">
+            <summary>
+            Gets or sets the label caption.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartAxis">
+            <summary>
+            Base axis class. Represents the basic functionality of the axes.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.#ctor(Telerik.Charting.Chart)">
+            <summary>
+            Creates a new instance of the ChartAxis class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.GetZeroValue">
+            <summary>
+            Return the base value of the axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.SetRange(System.Double,System.Double,System.Double)">
+            <summary>
+            Recalculates items values in collection
+            </summary>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="step"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.GetZeroX(Telerik.Charting.YAxisType)">
+            <summary>
+            Gets the X coordinate of the axis which corresponds to the base value (0, min (if positive), max (if negative))
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.GetZeroX">
+            <summary>
+            Gets the X coordinate of the axis which corresponds to the base value (0, min (if positive), max (if negative))
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.Clear">
+            <summary>
+            Clears data values of the axis.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.AddItem(System.String,System.Drawing.Color)">
+            <summary>
+            Adds a new ChartAxisItem object to the axis with the specified label and color.
+            </summary>
+            <param name="label"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.AddItem(System.String,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Adds a new ChartAxisItem object to the axis with the specified label and color.
+            </summary>
+            <param name="label"></param>
+            <param name="color"></param>
+            <param name="visible"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.AddItem(System.String)">
+            <summary>
+            Adds a new ChartAxisItem object to the axis with the specified label.
+            </summary>
+            <param name="label"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.AddRange(System.Double,System.Double,System.Double)">
+            <summary>
+            Adds new axis range.
+            </summary>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="step"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.RemoveLastItem">
+            <summary>
+            Removes the last item from the axis.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.RemoveItem(System.Int32)">
+            <summary>
+            Removes the ChartAxisItem at the specified index.
+            </summary>
+            <param name="itemIndex"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.SetItemLabel(System.Int32,System.String)">
+            <summary>
+            Sets new label for the axis item at the specified position.
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="newLabel"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxis.SetItemColor(System.Int32,System.Drawing.Color)">
+            <summary>
+            Sets new color for the axis item at the specified position.
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="newColor"></param>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.Item(System.Int32)">
+            <summary>
+            Returns the axis item at the specified position.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.Items">
+            <summary>
+            Returns a collection of axis items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.MinValue">
+            <summary>
+            Specifies the min value of the axis range.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.MaxValue">
+            <summary>
+            Specifies the max value of the axis range.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.Step">
+            <summary>
+            Specifies the step between min and max axis values.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.IsZeroBased">
+            <summary>
+            Specifies whether the axis begins from 0.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.MaxItemsCount">
+            <summary>
+            Gets or sets maximal count of the axis items when autoscaling.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.PenStyle">
+            <summary>
+            Pen style 
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.ShowMarks">
+            <summary>
+            Specifies whether axis marks should be displayed or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.ShowLabels">
+            <summary>
+            Specifies whether the labels of the axis items should be displayed or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.AxisColor">
+            <summary>
+            Specifies the color of the axis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.DefaultItemColor">
+            <summary>
+            Gets or sets the default color for the axis, its items and labels.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.DefaultItemFont">
+            <summary>
+            Gets or sets the default font for the axis items and labels.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.AutoScale">
+            <summary>
+            Enables or disables automatic axis scaling.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.AxisWidth">
+            <summary>
+            Specifies the width of the axis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.MarkLength">
+            <summary>
+            Specifies mark length.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.MarkWidth">
+            <summary>
+            Specifies mark width.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.SpaceToItem">
+            <summary>
+            Specifies the distance in pixels from the end of the axis mark to then item name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.SpaceToLabel">
+            <summary>
+            Specifies the distance in pixels from the item name to axis label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.MarkColor">
+            <summary>
+            Specifies the axis' marks color.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxis.Visible">
+            <summary>
+            Specifies if the axis is visible or not.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartAxisItem">
+            <summary>
+            Represents an element of the axis.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItem.#ctor">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItem.#ctor(System.String,System.Drawing.Color)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="label"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItem.#ctor(System.String,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="label"></param>
+            <param name="color"></param>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItem.Label">
+            <summary>
+            Gets or sets the label of the axis item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItem.Color">
+            <summary>
+            Gets or sets the color of the axis item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItem.Visible">
+            <summary>
+            Specifies whether the axis item is visible or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItem.Value">
+            <summary>
+            Specifies the value of the axis.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartAxisItemCollection">
+            <summary>
+            Represents a collection of axis items.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.Add(Telerik.Charting.ChartAxisItem)">
+            <summary>
+            Adds a chart axis item to the collection.
+            </summary>
+            <param name="chartAxisItem"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.AddRange(Telerik.Charting.ChartAxisItem[])">
+            <summary>
+            Adds a range of chart axis item to the collection.
+            </summary>
+            <param name="chartAxisItems"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.Remove(Telerik.Charting.ChartAxisItem)">
+            <summary>
+            Removes a chart axis item from the collection.
+            </summary>
+            <param name="chartAxisItem"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the chart axis item at the specified position.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.IndexOf(Telerik.Charting.ChartAxisItem)">
+            <summary>
+            Return the index of the specified chart axis item.
+            </summary>
+            <param name="chartAxisItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.Contains(Telerik.Charting.ChartAxisItem)">
+            <summary>
+            Indicates whether the element is contained in the collection.
+            </summary>
+            <param name="chartAxisItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.#ctor">
+            <summary>
+            Creates a new instance of the ChartAxisItems class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.#ctor(System.Drawing.Font)">
+            <summary>
+            Creates a new instance of the ChartAxisItems class with the specified default item font.
+            </summary>
+            <param name="defaultItemFont"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.#ctor(System.Drawing.Color)">
+            <summary>
+            Creates a new instance of the ChartAxisItems class with the specified default item color.
+            </summary>
+            <param name="defaultItemColor"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.#ctor(System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Creates a new instance of the ChartAxisItems class with the specified default item font and color.
+            </summary>
+            <param name="defaultItemFont"></param>
+            <param name="defaultItemColor"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.AddItem(Telerik.Charting.ChartAxisItem)">
+            <summary>
+            Adds a new ChartAxisItem element to the collection.
+            </summary>
+            <param name="axisItem"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.InsertItem(Telerik.Charting.ChartAxisItem,System.Int32)">
+            <summary>
+            Inserts a new ChartAxisItem object to the collection at the specifed position.
+            </summary>
+            <param name="axisItem"></param>
+            <param name="pos"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartAxisItemCollection.Clear">
+            <summary>
+            Clears the ChartAxisItems objects from the collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItemCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets a ChartAxisItem element at the specified position.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItemCollection.Color">
+            <summary>
+            Gets or sets the color of the ChartAxisItem elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartAxisItemCollection.Font">
+            <summary>
+            Gets or sets the font of the ChartAxisItem elements.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.AxisItemsCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.AxisItemsCollectionEditor.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Charting.ChartAxisLayoutStyle">
+            <summary>
+            Specifies different axis styles for positioning of item labels and marks.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartAxisLayoutStyle.Normal">
+            <summary>
+            Sets the default axis layout style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartAxisLayoutStyle.Inside">
+            <summary>
+            Sets the endmost axis items inside the axis.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartAxisLayoutStyle.Between">
+            <summary>
+            Sets axis items between axis marks.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartXAxis">
+            <summary>
+            Represents RadChart's X axis. 
+            </summary>	
+        </member>
+        <member name="M:Telerik.Charting.ChartXAxis.#ctor(Telerik.Charting.Chart)">
+            <summary>
+            Creates a new instance of the ChartXAxis class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartXAxis.AddItem(System.String)">
+            <summary>
+            Adds a new axis item.
+            </summary>
+            <param name="label"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartXAxis.AddItem(System.String,System.Drawing.Color)">
+            <summary>
+            Adds a new axis item.
+            </summary>
+            <param name="label"></param>
+            <param name="color"></param>
+        </member>
+        <member name="P:Telerik.Charting.ChartXAxis.AutoShrink">
+            <summary>
+            Specifies whether the axis is auto shrunk or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartXAxis.Label">
+            <summary>
+            Gets or sets X axis's label object.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartXAxis.LayoutStyle">
+            <summary>
+            Specifies the layout style of the axis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartXAxis.DataLabelsColumn">
+            <summary>
+            The data source column used as axis items labels source
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartXAxis.IsDataBound">
+            <summary>
+            Gets whether X Axis data bound or not
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartXAxisLabel">
+            <summary>
+            Represents the chart's X Axis.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartYAxisStyle">
+            <summary>
+            Specifies the RadChart's Y axis styles.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartYAxisStyle.Normal">
+            <summary>
+            Sets default Y axis style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartYAxisStyle.Extended">
+            <summary>
+            Forces the axis to be extended when AutoScale property is set to true.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.YAxisType">
+            <summary>
+            Specifies the Y axis type
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartYAxis">
+            <summary>
+            Represents RadChart's Y axis.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartYAxis.#ctor(Telerik.Charting.Chart,Telerik.Charting.YAxisType)">
+            <summary>
+            Creates a new instance of the RadChart's Y axis class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartYAxis.AxisStyle">
+            <summary>
+            Gets or sets the style of the Y axis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartYAxis.Label">
+            <summary>
+            Gets or sets Y axis label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartYAxis.Visible">
+            <summary>
+            Specifies whether the axis is visible.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartYAxisLabel">
+            <summary>
+            Represents a label for the Y axis.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartBackground">
+            <summary>
+            Represents the chart background.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartBackground.#ctor">
+            <summary>
+            Creates a new instance of ChartBackground class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ArrayDataHelper">
+            <summary>
+            Helper class used for an Arrays data binding
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.DataHelper">
+            <summary>
+            Common helper class. Implements most of ICommonDataHelper members
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ICommonDataHelper">
+            <summary>
+            Contains common members that should be implemented in the data source helpers for supported data sources
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetDataSourceRowsCount">
+            <summary>
+            Gets the data source rows count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetDataSourceColumnsCount">
+            <summary>
+            Gets the data source columns count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetColumnIndex(System.String)">
+            <summary>
+            Gets the column index by column name in the Data Source object 
+            </summary>
+            <param name="columnName"></param>
+            <returns>Column index if column found or -1 if column not found</returns>
+            <remarks>This method is not supported by all data sources</remarks>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetColumnName(System.Int32)">
+            <summary>
+            Gets the column name if it is supported by data source
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetDoubleValue(System.Int32,System.Int32)">
+            <summary>
+            Return the double value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetObjectValue(System.Int32,System.Int32)">
+            <summary>
+            Return the object value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetStringValue(System.Int32,System.Int32)">
+            <summary>
+            Return the string value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetFilteredColumn(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Return unique column's content
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetSortedAndFilteredColumn(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Return sorted unique column's content
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.IsColumnNumeric(System.Int32)">
+            <summary>
+            Returns true if given column contains numeric values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.IsColumnString(System.Int32)">
+            <summary>
+            Returns true if given column contains string type values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.IsItemNumeric(System.Int32,System.Int32)">
+            <summary>
+            Returns true if value at the given position is numeric
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetGroupsColumnIndex">
+            <summary>
+            Returns possible groups column automatic data binding
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetLabelsColumnIndex(System.Int32)">
+            <summary>
+            Returns possible column used as labels source
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetValuesXColumnIndex">
+            <summary>
+            Returns possible series items X values column
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetValuesYColumnIndex">
+            <summary>
+            Returns possible series items Y values column
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetValuesYColumns">
+            <summary>
+            Returns all possible series items Y values columns
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ICommonDataHelper.GetGanttValuesColumns">
+            <summary>
+            Returns possible series items Y2 values column
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetDataSourceRowsCount">
+            <summary>
+            Returns the dataSource source rows count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetDataSourceColumnsCount">
+            <summary>
+            Returns the dataSource source columns count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetDoubleValue(System.Int32,System.Int32)">
+            <summary>
+            Return the double value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetObjectValue(System.Int32,System.Int32)">
+            <summary>
+            Return the object value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetStringValue(System.Int32,System.Int32)">
+            <summary>
+            Return the string value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsColumnNumeric(System.Int32)">
+            <summary>
+            Returns true if given column contains numeric values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsColumnString(System.Int32)">
+            <summary>
+            Returns true if given column contains string type values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetColumnIndex(System.String)">
+            <summary>
+            Gets the column index by column name in the Data Source object 
+            </summary>
+            <param name="columnName"></param>
+            <returns>Column index if column found or -1 if column not found</returns>
+            <remarks>This method is not supported by all data sources</remarks>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetColumnName(System.Int32)">
+            <summary>
+            Gets the column name if it is supported by data source
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsItemNumeric(System.Int32,System.Int32)">
+            <summary>
+            Returns true if value at the given position is numeric
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetLabelsColumnIndex(System.Int32)">
+            <summary>
+            Returns possible column used as labels source when group column present
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetGroupsColumnIndex">
+            <summary>
+            Returns possible groups column used for automatic data binding
+            </summary>
+            <returns></returns>
+            <remarks>Only the first found numeric column will be checked. 
+            If such column is not found or does not contain repeatable values the -1 will be returned
+            </remarks>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetFilteredColumn(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Return unique column's content
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetSortedAndFilteredColumn(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Return sorted unique column's content
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetValuesXColumnIndex">
+            <summary>
+            Returns possible series items X values column
+            </summary>
+            <returns></returns>      
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetValuesYColumnIndex">
+            <summary>
+            Returns possible series items Y values column
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetValuesYColumns">
+            <summary>
+            Returns all possible series items Y values columns
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.GetGanttValuesColumns">
+            <summary>
+            Returns all possible data source columns that could be used as Gantt series items
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsTypeNumeric(System.Type)">
+            <summary>
+            Checks whether the type given is numeric
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsValueNumeric(System.Object)">
+            <summary>
+            Checks whether the value's type is numeric
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsTypeString(System.Type)">
+            <summary>
+            Checks whether the type given is string type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.IsValueString(System.Object)">
+            <summary>
+            Checks whether the value's type is String
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataHelper.CreateDataHelper(System.Object,System.String,System.Boolean)">
+            <summary>
+            Returns the data helper class accordingly to the data source type 
+            </summary>
+            <param name="dataSource"></param>
+            <param name="dataMember"></param>
+            <param name="isDesign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ArrayDataHelper.GetDataSourceRowsCount">
+            <summary>
+            Gets the data source rows count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ArrayDataHelper.GetDataSourceColumnsCount">
+            <summary>
+            Gets the data source columns count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ArrayDataHelper.GetObjectValue(System.Int32,System.Int32)">
+            <summary>
+            Return the object value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ArrayDataHelper.IsColumnNumeric(System.Int32)">
+            <summary>
+            Returns true if given column contains numeric values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ArrayDataHelper.IsColumnString(System.Int32)">
+            <summary>
+            Returns true if given column contains string type values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Charting.DataManager">
+            <summary>
+            Acquires and manipulates data from databases or other sources. 
+            Populates the SeriesCollection of the chart control. 
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getColumnIndex(System.String,System.Int32,Telerik.Charting.ICommonDataHelper,System.Int32,Telerik.Charting.DataManager.ColumnType,Telerik.Charting.ChartSeriesType,System.Boolean)">
+            <summary>
+            General column's index detection method
+            </summary>
+            <param name="column"></param>
+            <param name="dataHelper"></param>
+            <param name="columns"></param>
+            <param name="columnType"></param>
+            <param name="seriesType"></param>
+            <param name="tryAuto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getGroupsColumn(Telerik.Charting.ICommonDataHelper,System.Int32,System.String,Telerik.Charting.ChartSeriesType,System.Boolean)">
+            <summary>
+            Gets the groups column
+            </summary>
+            <param name="dataHelper"></param>
+            <param name="columns"></param>
+            <param name="groupsColumn"></param>
+            <param name="seriesType"></param>
+            <param name="tryAuto"></param> 
+            <returns></returns>
+            <remarks>When the groups column has not been set it will be found automatically</remarks> 
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getLabelsColumn(Telerik.Charting.ICommonDataHelper,System.Int32,System.String,System.Int32,Telerik.Charting.ChartSeriesType,System.Boolean)">
+            <summary>
+            Gets the labels column
+            </summary>
+            <param name="dataHelper"></param>
+            <param name="columns"></param>
+            <param name="labelsColumn"></param>
+            <param name="groupColumn"></param>
+            <param name="seriesType"></param>
+            <param name="tryAuto"></param>
+            <returns></returns>
+            <remarks>When the labels column has not been set it will be found automatically</remarks> 
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getValuesColumn(Telerik.Charting.ICommonDataHelper,System.Int32,System.String,System.String,Telerik.Charting.DataManager.ColumnType,Telerik.Charting.ChartSeriesType,System.Boolean)">
+            <summary>
+            Gets the series X, Y, X2 or Y2 values column
+            </summary>
+            <param name="dataHelper"></param>
+            <param name="columns"></param>
+            <param name="groupsColumn"></param>
+            <param name="column"></param>
+            <param name="columnType"></param>
+            <param name="seriesType"></param>
+            <param name="tryAuto"></param>
+            <returns></returns>
+            <remarks>When the series X, X2 or Y2 values column has not been set it will be found automatically</remarks> 
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getValuesYColumns(Telerik.Charting.ICommonDataHelper,System.Int32,System.String[],Telerik.Charting.ChartSeriesType,System.Boolean)">
+            <summary>
+            Gets the series Y values columns array
+            </summary>
+            <param name="dataHelper"></param>
+            <param name="columns"></param>
+            <param name="valuesYColumns"></param>
+            <param name="seriesType"></param>
+            <param name="tryAuto"></param>
+            <returns></returns>
+            <remarks>When the series Y values column has not been set it will be found automatically</remarks>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getAxisLabelsColumn(Telerik.Charting.ICommonDataHelper,System.Int32,System.String,Telerik.Charting.ChartSeriesType)">
+            <summary>
+            Gets the axis labels column index
+            </summary>
+            <param name="dataHelper"></param>
+            <param name="columns"></param>
+            <param name="axisLabelsColumn"></param>
+            <param name="seriesType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._getItemName(System.Int32,System.Boolean,System.Int32,System.Int32[],System.Int32,System.Int32,Telerik.Charting.DataManager.ItemType,Telerik.Charting.ICommonDataHelper)">
+            <summary>
+            Returns either chart series name or series item name
+            </summary>
+            <param name="groupColumn"></param>
+            <param name="isGroupColumnNumeric"></param>
+            <param name="labelsColumn"></param>
+            <param name="valuesYColumns"></param>
+            <param name="row"></param>
+            <param name="column"></param>
+            <param name="itemType"></param>
+            <param name="dataHelper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._isUseAutoBind">
+            <summary>
+            Checks if automatic data binding is required.
+            </summary>
+            <returns></returns>
+            <remarks>If chart Series collection is empty then automatic data binding will be called and Series collection will be automatically populated with Series</remarks>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._isChartSupportsXAxisDataBinding">
+            <summary>
+            Returns true if possible to use the automatic X Axis data binding
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._isChartSeriesSupportsXValues(Telerik.Charting.ChartSeriesType)">
+            <summary>
+            Does the chart series support the X Values
+            </summary>
+            <param name="seriesType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._dataBindXAxes(System.Int32,System.Int32,System.Int32,Telerik.Charting.ICommonDataHelper)">
+            <summary>
+            Data bind X Axis labels
+            </summary>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <param name="groupColumn"></param>
+            <param name="dataHelper"></param>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._dataBindSeries">
+            <summary>
+            Populates existing chart series collection with data.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._dataBindAuto">
+            <summary>
+            Automatically populates chart series collection with data.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._newChartSeries(System.Int32,System.Boolean,System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Telerik.Charting.ICommonDataHelper)">
+            <summary>
+            Returns new chart series 
+            </summary>
+            <param name="groupColumn"></param>
+            <param name="isGroupColumnNumeric"></param>
+            <param name="valuesYColumns"></param>
+            <param name="valuesXColumn"></param>
+            <param name="row"></param>
+            <param name="column"></param>
+            <param name="valuesXColumn2"></param>
+            <param name="valuesYColumn2"></param>
+            <param name="dataHelper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataManager._newChartSeriesItem(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32,System.Int32,Telerik.Charting.ICommonDataHelper,Telerik.Charting.ChartSeriesType,System.Boolean)">
+            <summary>
+            Creates new Chart Series item from data source
+            </summary>
+            <param name="row"></param>
+            <param name="column"></param>
+            <param name="groupColumn"></param>
+            <param name="labelsColumn"></param>
+            <param name="valuesYColumns"></param>
+            <param name="valuesXColumn"></param>
+            <param name="valuesXColumn2"></param>
+            <param name="valuesYColumn2"></param>
+            <param name="dataHelper"></param>
+            <param name="seriesType"></param>
+            <returns></returns>
+            <param name="useLabels"></param>
+        </member>
+        <member name="M:Telerik.Charting.DataManager.ValidateDataSource(System.Object)">
+            <summary>
+            Validates data source object passed
+            </summary>
+            <param name="dataSource"></param>
+            <remarks>The data source should implenent the IEnumerable interface</remarks>
+        </member>
+        <member name="M:Telerik.Charting.DataManager.DataBind">
+            <summary>
+            Forces the data to be refreshed
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DataManager.ClearDataSource">
+            <summary>
+            Clears the Data Source used
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.UseAutoBind">
+            <summary>
+            Sets the necessary using or not the automatic data binding at the design time
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.DataSource">
+            <summary>
+            Chart Data Source object
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.DataMember">
+            <summary>
+            Gets or sets the name of the list of data that the data-bound control binds to, in cases where the data source contains more than one distinct list of data items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.IsDataBindCalled">
+            <summary>
+            Returns true if DataBind method has been called
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.LabelsColumn">
+            <summary>
+            The data source column used as chart labels source
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.ValuesXColumn">
+            <summary>
+            The data source column used as series items X coordinate
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.ValuesYColumns">
+            <summary>
+            The data source columns array used as series items Y coordinate source
+            </summary>
+            <remarks>This array could be used to set the Gantt chart data source columns. 
+            The columns should be added in the following order: X, Y, X2, Y2 </remarks>
+        </member>
+        <member name="P:Telerik.Charting.DataManager.UseSeriesGrouping">
+            <summary>
+            Enables or disables the series grouping feature
+            </summary>
+            <remarks>Default value is True</remarks>
+        </member>
+        <member name="T:Telerik.Charting.DataTableDataHelper">
+            <summary>
+            DataTable data source helper class
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.GetDataSourceRowsCount">
+            <summary>
+            Gets the data source rows count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.GetDataSourceColumnsCount">
+            <summary>
+            Gets the data source columns count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.GetObjectValue(System.Int32,System.Int32)">
+            <summary>
+            Return the object value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.IsColumnNumeric(System.Int32)">
+            <summary>
+            Returns true if given column contains numeric values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.IsColumnString(System.Int32)">
+            <summary>
+            Returns true if given column contains string type values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.GetColumnIndex(System.String)">
+            <summary>
+            Gets the column index by column name in the Data Source object 
+            </summary>
+            <param name="columnName"></param>
+            <returns>Column index if column found or -1 if column not found</returns>
+        </member>
+        <member name="M:Telerik.Charting.DataTableDataHelper.GetColumnName(System.Int32)">
+            <summary>
+            Gets the column name 
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>        
+        </member>
+        <member name="P:Telerik.Charting.DataTableDataHelper.DataTable">
+            <summary>
+            Gets the DataTable object
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.Product">
+            <summary>
+            Sample object
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ProductsBL">
+            <summary>
+            Sample business logic object
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.DataSetClass">
+            <summary>
+            Sample class returns DataSet for an ObjectDataSource data binding demo
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ComplexDataSetClass">
+            <summary>
+            Sample class returns DataSet with several columns which could be used as Y values source
+            </summary>
+            <remarks>Shows products sales by month.</remarks>
+        </member>
+        <member name="T:Telerik.Charting.ProductsList">
+            <summary>
+            IBindingList example
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.DoubleCollection">
+            <summary>
+            Collection base object example
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DoubleCollection.InitData">
+            <summary>
+            Data load method
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.DemoData">
+            <summary>
+            Simple objects examples 
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.DemoData.DoubleArray">
+            <summary>
+            Double Array example
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.DemoData.ObjectsArray">
+            <summary>
+            Object array without groups column example
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.DemoData.ObjectsArrayCat">
+            <summary>
+            Object array with groups column example
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.DemoData.#ctor">
+            <summary>
+            Main class constructor
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.DemoData.DoubleList">
+            <summary>
+            Strong typed double list example
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.IListDataHelper">
+            <summary>
+            Helper class for data binding on the strongly typed lists of objects that can be accessed by index
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.IListDataHelper.GetDataSourceRowsCount">
+            <summary>
+            Gets the data source rows count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.IListDataHelper.GetDataSourceColumnsCount">
+            <summary>
+            Gets the data source columns count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.IListDataHelper.GetObjectValue(System.Int32,System.Int32)">
+            <summary>
+            Return the object value at the given row and column
+            </summary>
+            <param name="rowIndex">Row position index</param>
+            <param name="columnIndex">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.IListDataHelper.IsColumnNumeric(System.Int32)">
+            <summary>
+            Returns true if given column contains numeric values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.IListDataHelper.IsColumnString(System.Int32)">
+            <summary>
+            Returns true if given column contains string type values
+            </summary>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Styles.ChartStyleEditor.columnsListing_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Added to automatically close dropdown after user selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Telerik.Charting.Styles.ChartStylesCollection">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Styles.ChartStylesCollection.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Styles.ChartStylesCollection.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartBaseGridlines">
+            <summary>
+            Represents the base class for RadChart's gridlines.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartBaseGridlines.#ctor">
+            <summary>
+            Creates a new instance of base chart gridlines class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseGridlines.Visible">
+            <summary>
+            Determines whether the gridlines should be drawn or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseGridlines.Color">
+            <summary>
+            Specifies the color of the gridlines.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseGridlines.Width">
+            <summary>
+            Specifies the width of the gridlines.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseGridlines.LayoutStyle">
+            <summary>
+            Specifies the gridlines layout style.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartBaseGridlines.PenStyle">
+            <summary>
+            Specifies the pen style with which the gridlines are drawn.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartPaletteEditor.columnsListing_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Added to automatically close dropdown after user selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCustomPaletteCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCustomPaletteCollectionEditor.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.SeriesCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.SeriesCollectionEditor.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.DataColumnEditor.columnsListing_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Added to automatically close dropdown after user selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.Charting.TitlesCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.TitlesCollectionEditor.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Telerik.Charting.Wizard.BaseChart">
+            <summary>
+            Chart object in the design host
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.Wizard.#ctor(Telerik.Charting.IChartDesigner,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="rc"></param>
+        </member>
+        <member name="M:Telerik.Charting.Wizard.FillDataSourceIds">
+            <summary>
+            Get All DataSources in Design Host and put its names into combobox
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.Wizard.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.Wizard.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.Charting.Wizard.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartGridlineLayoutStyle">
+            <summary>
+            Specifies RadChart's styles for the gridlines layout.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartGridlineLayoutStyle.Normal">
+            <summary>
+            Sets normal gridlines.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartGridlineLayoutStyle.Expanded">
+            <summary>
+            Sets expanded gridlines.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Telerik.Charting.ChartVerticalGridlines" -->
+        <member name="T:Telerik.Charting.ChartHorizontalGridlines">
+            <summary>
+            Represents the RadChart's horizontal gridlines.
+            </summary>	
+        </member>
+        <member name="T:Telerik.Charting.ChartGridlines">
+            <summary>
+            Represents the RadChart's gridlines.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartGridlines.#ctor">
+            <summary>
+            Creates a new instance of the RadChart's gridlines.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.HorizontalGridlines">
+            <summary>
+            Gets or sets RadChart's horizontal gridlines object.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.VerticalGridlines">
+            <summary>
+            Gets or sets RadChart's vertical gridlnes object.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.LayoutStyle">
+            <summary>
+            Gets or sets chart's gridlines layout style.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.PenStyle">
+            <summary>
+            Gets or sets the style of the gridlines pen.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.Visible">
+            <summary>
+            Specifies whether the gridlines are visible or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.Color">
+            <summary>
+            Gets or sets gridlines color.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartGridlines.Width">
+            <summary>
+            Gets or sets gridlines width.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.MapRegion">
+            <summary>
+            Area region
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.MapRegion.CheckPoint(System.Drawing.PointF)">
+            <summary>
+            Checks if point is inside region or not
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Charting.MapRegion.MapData">
+            <summary>
+            Image map
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.MapRegion.Region">
+            <summary>
+             Graphics Path
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartBasicLabel">
+            <summary>
+            Represents the RadChart's basic label.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartBasicLabel.#ctor">
+            <summary>
+            Creates a new instance of the basic label.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartRotatingLabel">
+            <summary>
+            Represents the RadChart's rotating label.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartRotatingLabel.#ctor">
+            <summary>
+            Creates a new instance of the RadChart's rotating label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartRotatingLabel.RotationAngle">
+            <summary>
+            Gets or sets label's rotation angle relative to the upperleft corner of the label.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartLegend">
+            <summary>
+            Represents the RadChart's legend.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartLegend.#ctor">
+            <summary>
+            Creates a new instance of the ChartLegend class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ShadowBlur">
+            <summary>
+            Specifies the shadow blur coefficient.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ShadowColor">
+            <summary>
+            Specifies the shadow color.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ShadowPosition">
+            <summary>
+            Specifies the shadow position.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ShadowDistance">
+            <summary>
+            Specifies the distance between object and its shadow.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.LegendFrame">
+            <summary>
+            Gets or sets the frame rectangle of the legend.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.Background">
+            <summary>
+            Specifies the appearance of the legend's background.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ItemColor">
+            <summary>
+            Gets or sets the color of the legend items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ItemFont">
+            <summary>
+            Gets or sets the font of the legend items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.VAlignment">
+            <summary>
+            Gets or sets the vertical alignment of the legend box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.HAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the legend box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.WidthRatio">
+            <summary>
+            Gets or sets the scale ratio of the legend box's width.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.HeightRatio">
+            <summary>
+            Gets or sets the scale ratio of the legend box's height.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.AutoSize">
+            <summary>
+            Specifies whether the legend box should be autosized according to the legend items or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.Location">
+            <summary>
+            Gets or sets the location of the legend box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.HSpacing">
+            <summary>
+            Gets or sets horizontal spacing of the legend box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.VSpacing">
+            <summary>
+            Gets or sets vertical alignment of the legend box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.Visible">
+            <summary>
+            Specifies whether the legend if visible or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartLegend.ItemMark">
+            <summary>
+            Specified the type of mark displayed next to legend item name.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.LegendDataTable">
+            <summary>
+            Chart series values data table
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.LegendDataTable.Draw(System.Drawing.Graphics)">
+            <summary>
+            Draws the values table 
+            </summary>
+            <param name="InGraphic"></param>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.TableWidth">
+            <summary>
+            Values table width
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.TableHeight">
+            <summary>
+            Values table height
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.CellWidth">
+            <summary>
+            Values data table cell width
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.CellHeight">
+            <summary>
+            Values data table cell height
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.PositionType">
+            <summary>
+            Values data table position type
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.Position">
+            <summary>
+            Values data table position
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.Font">
+            <summary>
+            Values data table text font
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.BorderColor">
+            <summary>
+            Values data table border color
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.TextColor">
+            <summary>
+            Values data table text color
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.BorderWidth">
+            <summary>
+            Values data table border width
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.VerticalPadding">
+            <summary>
+            Values data table vertical padding
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.HorisontalPadding">
+            <summary>
+            Values data table horizontal padding
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.RenderType">
+            <summary>
+            Values data table rendering type
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.Background">
+            <summary>
+            Specifies the appearance of the values data table background
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.Visible">
+            <summary>
+            Specifies the values data table visibility
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.LegendDataTable.DrawHorizontalLines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartLegendItemMark">
+            <summary>
+            Specifies the type of the object drawn next to the series or item name in the legend.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLegendItemMark.Rectangle">
+            <summary>
+            Draws a rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLegendItemMark.Circle">
+            <summary>
+            Draws a circle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLegendItemMark.Triangle">
+            <summary>
+            Draws a triangle.
+            </summary>		
+        </member>
+        <member name="M:Telerik.Charting.LegendItemsCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.LegendItemsCollectionEditor.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Charting.ChartMargins">
+            <summary>
+            Represents the RadChart's margins.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartMargins.LoadFromXml(System.Xml.XmlNode)">
+            <summary>
+            Loads chart margins from the XmlNode.
+            </summary>
+            <param name="parentNode"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartMargins.SaveToXml(System.Xml.XmlDocument,System.Xml.XmlElement)">
+            <summary>
+            Saves chart margins to XmlDocument by creating an XmlElement called "margins".
+            </summary>
+            <param name="xmlDocument"></param>
+            <param name="rootElement"></param>
+        </member>
+        <member name="P:Telerik.Charting.ChartMargins.Left">
+            <summary>
+            Sets the left margin of the chart
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartMargins.Right">
+            <summary>
+            Sets the right margin of the chart in pixels or percent of the chart's width.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartMargins.Top">
+            <summary>
+            Sets the top margin of the chart in pixels or percent of the chart's height.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartMargins.Bottom">
+            <summary>
+            Sets the bottom margin of the chart in pixels or percent of the chart's height.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesOrientation">
+            <summary>
+            Specifies the orientation of the series.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartHAlignment">
+            <summary>
+            Specifies how a RadChart element is horizontally aligned according to the specified position.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartHAlignment.Left">
+            <summary>
+            The chart element is left aligned according to the containing rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartHAlignment.Center">
+            <summary>
+            The chart element is centered according to the containing rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartHAlignment.Right">
+            <summary>
+            The chart element is right aligned according to the containing rectangle.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartVAlignment">
+            <summary>
+            Specifies how a RadChart element is vertically aligned according to the specified position.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartVAlignment.Top">
+            <summary>
+            The chart element is top aligned according to the containing rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartVAlignment.Middle">
+            <summary>
+            The chart element is placed in the middle of the containing rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartVAlignment.Bottom">
+            <summary>
+            The chart element is bottom aligned according to the containgin rectangle.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartLocation">
+            <summary>
+            Specifies the location of the RadChart's elements.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLocation.InsidePlotArea">
+            <summary>
+            The chart element is placed inside plot area.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLocation.OutsidePlotArea">
+            <summary>
+            The chart element is placed outside plot area.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartPosition">
+            <summary>
+            Specifies the position of RadChart's elements.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPosition.Left">
+            <summary>
+            The chart element is placed left from the plot area.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPosition.Right">
+            <summary>
+            The chart element is placed right from the plot area.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPosition.Top">
+            <summary>
+            The chart element is placed over the plot area.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPosition.Bottom">
+            <summary>
+            The chart element is placed under the plot area.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartTextDirection">
+            <summary>
+            Specifies the text direction for RadChart's labels.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartTextDirection.Normal">
+            <summary>
+            Text is located normally in the text area.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartTextDirection.Left">
+            <summary>
+            Text is rotated to the left.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartTextDirection.Right">
+            <summary>
+            Text is rotated to the right.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartLinesPenStyle">
+            <summary>
+            Specifies the pen style with which the lines are drawn.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLinesPenStyle.Dash">
+            <summary>
+            Specifies a line consisting of dashes.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLinesPenStyle.DashDot">
+            <summary>
+            Specifies a line consisting of a repeating pattern of dash-dot.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLinesPenStyle.DashDotDot">
+            <summary>
+            Specifies a line consisting of a repeating pattern of dash-dot-dot.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLinesPenStyle.Dot">
+            <summary>
+            Specifies a line consisting of dots.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartLinesPenStyle.Solid">
+            <summary>
+            Specifies a solid line.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartPlotArea">
+            <summary>
+            Summary description for PlotArea.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartPlotArea.#ctor">
+            <summary>
+            Creates a new instance of the ChartPlotArea class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeries">
+            <summary>
+            Represents the common properties and methods of the RadChart's series.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.#ctor">
+            <summary>
+            Creates a new instance of Series class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.#ctor(System.String,System.Drawing.Color,Telerik.Charting.ChartSeriesType)">
+            <summary>
+            Creates a new instance of Series class.
+            </summary>
+            <param name="seriesName"></param>
+            <param name="seriesColor"></param>
+            <param name="seriesType"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.ClearDataBoundState">
+            <summary>
+            Removes data binding links from series
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.ResetItemsAppearance">
+            <summary>
+            Resets the appearance of the axis items to their default values.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.AddItem(System.Double)">
+            <summary>
+            Adds a new series item to the data series by specifying its value.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.AddItem(System.Double,System.String)">
+            <summary>
+            Adds a new series item to the data series by specifying its value and label.
+            </summary>
+            <param name="value"></param>
+            <param name="label"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.AddItem(System.Double,System.String,System.Drawing.Color)">
+            <summary>
+            Adds a new series item to the data series by specifying its value, label and color.
+            </summary>
+            <param name="value"></param>
+            <param name="label"></param>
+            <param name="color"></param>																	
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.AddItem(System.Double,System.String,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Adds a new series item to the data series by specifying its value, label, color and explosion.
+            </summary>
+            <param name="value"></param>
+            <param name="label"></param>
+            <param name="color"></param>
+            <param name="exploded"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetItemColor(System.Int32,System.Drawing.Color)">
+            <summary>
+            Sets a new color to the series item at the specified index.
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="newColor"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetItemValue(System.Int32,System.Double)">
+            <summary>
+            Sets a new value for the series item at the specified index.
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetItemLabel(System.Int32,System.String)">
+            <summary>
+            Sets a new label for the series item at the specified index.
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="newLabel"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetItemExplode(System.Int32,System.Boolean)">
+            <summary>
+            Sets a new explode status for the series item at the specified index.
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="exploded"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetValues(System.Double[])">
+            <summary>
+            Sets new values to the data series by passing an array of real values. Old values are cleared.
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetColors(System.Drawing.Color[])">
+            <summary>
+            Sets new colors to the items in the data series.
+            </summary>
+            <param name="colors"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetLabels(System.String[])">
+            <summary>
+            Sets new labels to the items in the data series.
+            </summary>
+            <param name="inlabels"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetExplodes(System.Boolean[])">
+            <summary>
+            Sets exploded statuses to the items in the data series.
+            </summary>
+            <param name="explodes"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.SetItems(Telerik.Charting.ChartSeriesItem[])">
+            <summary>
+            Sets new SeriesItems objects to the data series.
+            </summary>
+            <param name="seriesItems"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.RemoveItem(System.Int32)">
+            <summary>
+            Removes the ChartSeriesItem object at the specifed index.
+            </summary>
+            <param name="itemIndex"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.Clear">
+            <summary>
+            Clears all series items from the data series.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeries.GetSeriesItem(System.Int32)">
+            <summary>
+            Returns a reference to the ChartSeriesItem object at the specified index.
+            </summary>
+            <param name="itemIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.IsNormalStacked">
+            <summary>
+            Determines whether the series is stacked or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.IsStacked100">
+            <summary>
+            Determines whether the series is stacked or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.IsStacked">
+            <summary>
+            Determines whether the series is stacked or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.IsDataBound">
+            <summary>
+            Determines whether the series is configured as data bound or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ShadowBlur">
+            <summary>
+            Specifies the shadow blur coefficient.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ShadowColor">
+            <summary>
+            Specifies the shadow color.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ShadowPosition">
+            <summary>
+            Specifies the shadow position.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ShadowDistance">
+            <summary>
+            Specifies the distance between object and its shadow.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.Item(System.Int32)">
+            <summary>
+            Gets or sets a ChartSeriesItem object at the specified index.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.Items">
+            <summary>
+            Gets a collection of series items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DataXColumn">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that is used to data-bind to the series X-value
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DataXColumn2">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that is used to data-bind to the series X2-value
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DataYColumn">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that is used to data-bind to the series Y-value
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DataYColumn2">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that is used to data-bind to the series Y2-value
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DataLabelsColumn">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that will be used as Series names source when Y-values are taken from one column for a several chart Series
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ShowLabels">
+            <summary>
+            Specifies whether the item labels should be shown or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.MainColor">
+            <summary>
+            Gets or sets the color of the data series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.Name">
+            <summary>
+            Gets or sets the name of the data series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.LabelAppearance">
+            <summary>
+            Gets or sets the settings for the label background.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ShowLabelConnectors">
+            <summary>
+            Specifies whether a line should be drawn between the label and the item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.Type">
+            <summary>
+            Gets or sets the type of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.PointMark">
+            <summary>
+            Gets or sets the type of the point mark.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.PointSize">
+            <summary>
+            Gets or sets the radius of the point mark.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.PointColor">
+            <summary>
+            Gets or sets the color of the point mark.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.LineWidth">
+            <summary>
+            Gets or sets the width of the series line.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.StartAngle">
+            <summary>
+            Gets or sets the start angle of the pie. Zero angle is identical with the X axis direction.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DiameterScale">
+            <summary>
+            Gets or sets the pie's diameter length according to the size of the plot area.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.NotOverlapLabels">
+            <summary>
+            Enables or disables labels' overlapping.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ExplodePercent">
+            <summary>
+            Gets or sets the explode percent of the exploded items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.Appearance">
+            <summary>
+            Specifies the representation of series items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.CenterXOffset">
+            <summary>
+            Specifies the x offset of the pie center.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.CenterYOffset">
+            <summary>
+            Specifies the y offset of the pie center.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.ImageMap">
+            <summary>
+            Specifies the series area map settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.DefaultLabel">
+            <summary>
+            Specifies the default value for the series items labels.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeries.YAxisType">
+            <summary>
+            Y axis used
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesCollection">
+            <summary>
+            Represents an array collection of RadChart's data series.
+            </summary>	
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.#ctor(Telerik.Charting.Chart)">
+            <summary>
+            Creates a new instance of RadChart's Series.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetMinStackedValue(Telerik.Charting.ChartSeriesType)">
+            <summary>
+            Gets the min value of the stacked series of a specifies type.
+            </summary>
+            <param name="seriesType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetMaxStackedValue(Telerik.Charting.ChartSeriesType)">
+            <summary>
+            Gets the max value of the stacked series of a specified type.
+            </summary>
+            <param name="seriesType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetMinValue">
+            <summary>
+            Gets the minimal item value of all series.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetMaxValue">
+            <summary>
+            Gets the maximal item value of all series.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.Add(Telerik.Charting.ChartSeries)">
+            <summary>
+            Adds a new data series to the Series collection.
+            </summary>
+            <param name="series"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetMaxItemsCount">
+            <summary>
+            Returns the number of items in the longest data series.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.RemoveSeriesAt(System.Int32)">
+            <summary>
+            Removes the date series at the specified index.
+            </summary>
+            <param name="seriesIndex"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetSeries(System.Int32)">
+            <summary>
+            Returns a reference to the ChartsSereis object at the specified index.
+            </summary>
+            <param name="seriesIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.RemoveSeries">
+            <summary>
+            Removes the all data series from the series collection.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.InsertSeries(System.Int32,Telerik.Charting.ChartSeries)">
+            <summary>
+            Inserts a new Series object at the specified index.
+            </summary>
+            <param name="index"></param>
+            <param name="series"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.ClearDataBoundState">
+            <summary>
+            Removes data binding links from series
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesCollection.GetFilteredSeriesByYAxis(Telerik.Charting.YAxisType)">
+            <summary>
+            Gets all series related to the given Y Axis
+            </summary>
+            <param name="yAxisType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets Series object at the specified position in the series collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesCollection.BarSeriesCount">
+            <summary>
+            Returns the number of bar series which are drawn next to each other. StackedBars, StackedBars100 are counted as 1 bar series.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesType">
+            <summary>
+            Specifies the different types of RadChart's data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Bar">
+            <summary>
+            Specifies a bar data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.StackedBar">
+            <summary>
+            Specifies a stacked bar data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.StackedBar100">
+            <summary>
+            Specifies a stacked 100 bar data series.
+            </summary>        
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Line">
+            /// <summary>
+            Specifies a line data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Area">
+            <summary>
+            Specifies an area data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.StackedArea">
+            <summary>
+            Specifies a stacked area data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.StackedArea100">
+            <summary>
+            Specifies a stacked 100 area data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Pie">
+            /// <summary>
+            Specifies a pie data series.
+            </summary>        
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Gantt">
+            /// <summary>
+            Specifies a gantt data series.
+            </summary>       
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Bezier">
+            <summary>
+            Specifies a bezier data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Spline">
+            <summary>
+            Specifies a spline data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Bubble">
+            <summary>
+            Specifies a bubble data series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesType.Point">
+            <summary>
+            Specifies a point data series.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartPointMark">
+            <summary>
+            Specifies the type of the point marks used in some data series.
+            </summary>    
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.None">
+            <summary>
+            There is no point mark at the peaks.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Rectangle">
+            <summary>
+            Point mark is a rectangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Circle">
+            <summary>
+            Point mark is a circle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Triangle">
+            <summary>
+            Point mark is a triangle.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Diamond">
+            <summary>
+            Point mark is a diamond.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Cross">
+            <summary>
+            Point mark is a cross.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Star3">
+            <summary>
+            Point mark is a 3 rays star.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Star4">
+            <summary>
+            Point mark is a 4 rays star.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Star5">
+            <summary>
+            Point mark is a 5 rays star.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Star6">
+            <summary>
+            Point mark is a 6 rays star.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartPointMark.Star7">
+            <summary>
+            Point mark is a 7 rays star.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesLegendDisplayMode.Nothing">
+            <summary>
+            The legend does not show any information from the series.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesLegendDisplayMode.SeriesName">
+            <summary>
+            The legend shows the series name.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ChartSeriesLegendDisplayMode.ItemLabels">
+            <summary>
+            The legend shows the names of the series items.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.EmptySeriesMessage">
+            <summary>
+            Represents an empty series message
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.EmptySeriesMessage.Text">
+            <summary>
+            Gets or sets the label caption.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesLegendSettings">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.PaletteElement">
+            <summary>
+            Chart series palette element
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesPalette">
+            <summary>
+            Chart series color palette
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesPalette.Name">
+            <summary>
+            Palette name
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesPaletteCollection">
+            <summary>
+            Chart series palettes collection
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesCustomPaletteCollection">
+            <summary>
+            Custom palettes collection
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.PaletteElementCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.PaletteElementCollectionEditor.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesItem">
+            <summary>
+            Represents the base element of RadChart's series.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItem.#ctor">
+            <summary>
+            Creates a new instance of the ChartSeriesItem class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItem.#ctor(System.Double)">
+            <summary>
+            Creates a new instance of the ChartSeriesItem class.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItem.#ctor(System.Double,System.String)">
+            <summary>
+            Creates a new instance of the ChartSeriesItem class.
+            </summary>
+            <param name="value"></param>
+            <param name="label"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItem.#ctor(System.Double,System.String,System.Drawing.Color)">
+            <summary>
+            Creates a new instance of the ChartSeriesItem class.
+            </summary>
+            <param name="value"></param>
+            <param name="label"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItem.#ctor(System.Double,System.String,System.Drawing.Color,System.Boolean)">
+            <summary>		
+            Creates a new instance of the ChartSeriesItem class.		
+            </summary>
+            <param name="value"></param>
+            <param name="label"></param>
+            <param name="color"></param>
+            <param name="exploded"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItem.ResetAppearance">
+            <summary>
+            Sets the appearance to the default values.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItem.Label">
+            <summary>
+            Gets or sets item's label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItem.Name">
+            <summary>
+            Gets or sets item's legend name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItem.MainColor">
+            <summary>
+            Gets or sets item's color.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItem.Exploded">
+            <summary>
+            Specified whether the item is exploded or not. Applies only for the pie data series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItem.PointSize">
+            <summary>
+            Specified whether the item is exploded or not. Applies only for the pie data series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItem.Appearance">
+            <summary>
+            Specifies the custom appearance of a series item.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ChartSeriesItemCollection">
+            <summary>
+            A collection of series items.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.#ctor">
+            <summary>
+            Creates a new instance of chart series items collection class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.Add(Telerik.Charting.ChartSeriesItem)">
+            <summary>
+            Adds a chart series item to the items collection.
+            </summary>
+            <param name="chartSeriesItem"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.AddRange(Telerik.Charting.ChartSeriesItem[])">
+            <summary>
+            Adds an array of series items to the items collection.
+            </summary>
+            <param name="chartSeriesItems"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.Contains(Telerik.Charting.ChartSeriesItem)">
+            <summary>
+            Indicates whether the specified series item exists in the collection.
+            </summary>
+            <param name="seriesItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.IndexOf(Telerik.Charting.ChartSeriesItem)">
+            <summary>
+            Returns the index of the specified series item.
+            </summary>
+            <param name="chartSeriesItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.Insert(System.Int32,Telerik.Charting.ChartSeriesItem)">
+            <summary>
+            Inserts the specified series item into the series collection.
+            </summary>
+            <param name="index"></param>
+            <param name="chartSeriesItem"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.Remove(Telerik.Charting.ChartSeriesItem)">
+            <summary>
+            Removes the specified series item from the collection.
+            </summary>
+            <param name="chartSeriesItem"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartSeriesItemCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes a series item at the specified position.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="P:Telerik.Charting.ChartSeriesItemCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets a chart series item.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.SeriesItemsCollectionEditor1.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Called to edit a value in collection editor
+            </summary>
+            <param name="context"></param>
+            <param name="isp"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.SeriesItemsCollectionEditor1.CreateInstance(System.Type)">
+            <summary>
+            Creates a new instance of a column for custom collection
+            </summary>
+            <param name="itemType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Charting.Shadow">
+            <summary>
+            Shadow rendering support class
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.DrawLineShadow(System.Drawing.Graphics,System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Single,Telerik.Charting.Shadow.ShadowPositions)">
+            <summary>
+            Draw shadow for line
+            </summary>
+            <param name="graphics"></param>
+            <param name="pen"></param>
+            <param name="points"></param>
+            <param name="lineType"></param>
+            <param name="lineWidth"></param>
+            <param name="pa_width"></param>
+            <param name="pa_height"></param>
+            <param name="shadowDistance"></param>
+            <param name="shadowColor"></param>
+            <param name="shadowBlur"></param>
+            <param name="shadowPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.SetShadowPosition(Telerik.Charting.Shadow.ShadowPositions,System.Drawing.PointF,System.Single)">
+            <summary>
+            Set shadow start point position by shadowPosition parameter and shadowDistance 
+            </summary>
+            <param name="position"></param>
+            <param name="point"></param>
+            <param name="shadowDistance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.DrawPolygonShadow(Telerik.Charting.ChartSeries,System.Drawing.Drawing2D.GraphicsPath,System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            Draws shadow for polygon
+            </summary>
+            <param name="chartSeries"></param>
+            <param name="grPath"></param>
+            <param name="graphic"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.DrawPolygonShadow(Telerik.Charting.ChartSeries,System.Drawing.PointF[],System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            Draw shadow for polygon
+            </summary>
+            <param name="chartSeries"></param>
+            <param name="points"></param>
+            <param name="graphic"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.DrawPolygonShadow(System.Drawing.Drawing2D.GraphicsPath,System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Single,Telerik.Charting.Shadow.ShadowPositions)">
+            <summary>
+            Draw shadow for polygon
+            </summary>
+            <param name="grPath"></param>
+            <param name="graphic"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="shadowDistance"></param>
+            <param name="shadowColor"></param>
+            <param name="shadowBlur"></param>
+            <param name="shadowPosition"></param>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.DrawPolygonShadow(System.Drawing.PointF[],System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Single,Telerik.Charting.Shadow.ShadowPositions)">
+            <summary>
+            Draw shadow for polygon
+            </summary>
+            <param name="points"></param>
+            <param name="graphic"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="shadowDistance"></param>
+            <param name="shadowColor"></param>
+            <param name="shadowBlur"></param>
+            <param name="shadowPosition"></param>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.DrawShadow(System.Drawing.Drawing2D.GraphicsPath,System.Drawing.Brush,System.Drawing.Pen,System.Int32,System.Single,System.Drawing.Size,Telerik.Charting.DrawType)">
+            <summary>
+            Method creates shadow for path, based on shadow parameters and Gaussian blur logic for render shadow
+            </summary>
+            <param name="Path">Path, that describe a figure</param>
+            <param name="Brush">Brush, that use for drawing a shadow (define shadow color and transparency)</param>
+            <param name="Distance">Distance from object to it shadow</param>
+            <param name="BlurCoef">Blur coefficient</param>
+            <param name="ShadowImageSize">Size for image, that contain shadow</param>
+            <param name="DrawType">Draw figure type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.Blur(System.Drawing.Bitmap,System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            Incarnate a Gaussian bull algorithm for bitmap image
+            </summary>
+            <param name="source">Image, that can be degraded</param>
+            <param name="blurCoefficient">Blur coefficient</param>
+            <returns>Degraded bitmap</returns>
+            <param name="rect"></param>
+        </member>
+        <member name="M:Telerik.Charting.Shadow.GBlurRow(System.Int32)">
+            <summary>
+            Support function for blur, generate one dimensional array with coefficients
+            </summary>
+            <param name="count">Blur coefficient</param>
+            <returns>Array with blur coefficients</returns>
+        </member>
+        <member name="T:Telerik.Charting.Shadow.ShadowPositions">
+            <summary>
+            Possible shadow position
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.DrawType">
+            <summary>
+            Types for drawing figures
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.DrawType.Line">
+            <summary>
+            Only lines
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.DrawType.Fill">
+            <summary>
+            Only fills
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.DrawType.LineAndFill">
+            <summary>
+            Lines and fills
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.BColor">
+            <summary>
+            Describe a 4-byte color and functionality that works with color and byte arrays
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.BColor.R">
+            <summary>
+            Red channel
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.BColor.G">
+            <summary>
+            Green channel
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.BColor.B">
+            <summary>
+            Blue channel
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.BColor.A">
+            <summary>
+            Alpha (transparency) channel
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.BColor.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="r">Red channel value</param>
+            <param name="g">Green channel value</param>
+            <param name="b">Blue channel value</param>
+            <param name="a">Alpha (transparency) channel value</param>
+        </member>
+        <member name="M:Telerik.Charting.BColor.ToString">
+            <summary>
+            Convert BColor object to string representation
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Telerik.Charting.BColor.GetMatrix(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Transform one dimensional byte array to two dimensional BColor array, that describe the image 
+            </summary>
+            <param name="bytes">Array of 4 channel image bytes</param>
+            <param name="width">Image width</param>
+            <param name="height">Image height</param>
+            <returns>Two dimentional BColor array, that describe the image</returns>
+        </member>
+        <member name="M:Telerik.Charting.BColor.GetLine(System.Byte[])">
+            <summary>
+            Transform one dimensional byte array to one dimensional BColor array, that describe the image 
+            </summary>
+            <param name="bytes">Array of 4 channel image bytes</param>
+            <returns>One dimentional BColor array, that describe the image </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Telerik.Charting.BColor.GetByteArray(Telerik.Charting.BColor[])" -->
+        <member name="T:Telerik.Charting.ChartTitle">
+            <summary>
+            Represents the RadChart's title.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartTitle.#ctor">
+            <summary>
+            Creates a new instance of ChartTitle class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.ChartTitle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of ChartTitle class with specified text
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:Telerik.Charting.ChartTitle.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a new instance of ChartTitle class with the name and text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.Name">
+            <summary>
+            Gets or sets the name of the title in titles collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.TitleFrame">
+            <summary>
+            Gets or sets the custom frame rectangle for the title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.Location">
+            <summary>
+            Gets or sets the location of the chart's title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.Text">
+            <summary>
+            Sets the chart title text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.TextFont">
+            <summary>
+            Sets the chart title text font.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.TextColor">
+            <summary>
+            Sets the chart title text font.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.VAlignment">
+            <summary>
+            Gets or sets the vertical alignment of the title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.HAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.VSpacing">
+            <summary>
+            Gets or sets the vertical spacing of the label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.VerPadding">
+            <summary>
+            Specifies the distance between the text and horizontal borders of the title.
+            </summary>        
+        </member>
+        <member name="P:Telerik.Charting.ChartTitle.HorPadding">
+            <summary>
+            Specifies the distance between the text and horizontal borders of the title.
+            </summary>        
+        </member>
+        <member name="M:Telerik.Charting.ChartTitlesCollection.#ctor(Telerik.Charting.Chart)">
+            <summary>
+            Creates a new instance of RadChart's Titles.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.ChartTitlesCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets Titles object at the specified position in the titles collection.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.TextQuality">
+            <summary>
+            Specifies the quality at which text is rendered.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextQuality.SystemDefault">
+            <summary>
+            Specifies that each character is drawn using its glyph bitmap, with the system default rendering hint. The text will be drawn using whatever font smoothing settings the user has selected for the system.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextQuality.SingleBitPerPixel">
+            <summary>
+            Specifies that each character is drawn using its glyph bitmap. Hinting is not used.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextQuality.SingleBitPerPixelGridFit">
+            <summary>
+            Specifies that each character is drawn using its glyph bitmap. Hinting is used to improve character appearance on stems and curvature.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextQuality.AntiAlias">
+            <summary>
+            Specifies that each character is drawn using its anti aliased glyph bitmap without hinting. Better quality due to antialiasing. Stem width differences may be noticeable because hinting is turned off.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextQuality.AntiAliasGridFit">
+            <summary>
+            Specifies that each character is drawn using its anti aliased glyph bitmap with hinting. Much better quality due to antialiasing, but at a higher performance cost.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.TextQuality.ClearTypeGridFit">
+            <summary>
+            Specifies that each character is drawn using its glyph CT bitmap with hinting. The highest quality setting. Used to take advantage of ClearType font features.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.ImageQuality">
+            <summary>
+            Specifies the quality at which image is rendered.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageQuality.Default">
+            <summary>
+            Specifies the default mode.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageQuality.AntiAlias">
+            <summary>
+            Specifies anti aliased rendering.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageQuality.HighQuality">
+            <summary>
+            Specifies high quality, low speed rendering.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageQuality.HighSpeed">
+            <summary>
+            Specifies high speed, low quality rendering.
+            </summary>
+        </member>
+        <member name="F:Telerik.Charting.ImageQuality.None">
+            <summary>
+            Specifies no antialiasing.
+            </summary>        
+        </member>
+        <member name="M:Telerik.Charting.Chart.#ctor">
+            <summary>
+            Chart engine constructor
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.Chart.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of the chart.
+            </summary>
+            <param name="Width"></param>
+            <param name="Height"></param>
+        </member>
+        <member name="M:Telerik.Charting.Chart.SetDataGroupsColumn(System.String)">
+            <summary>
+            Changes the DataGroupColumn property without DataBind method call
+            </summary>
+            <param name="columnName"></param>
+        </member>
+        <member name="M:Telerik.Charting.Chart.GetBarWidth">
+            <summary>
+            Returns the width of the bars according to the number of bar series and overlap ratio between them.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Chart.AddChartSeries(Telerik.Charting.ChartSeries)">
+            <summary>
+            Adds a new data series to the chart's data series collection.
+            </summary>
+            <param name="series"></param>
+        </member>
+        <member name="M:Telerik.Charting.Chart.AddChartSeries(Telerik.Charting.ChartSeries[])">
+            <summary>
+            Adds an array of chart series to the chart's data series collection.
+            </summary>
+            <param name="chartSeriesArray"></param>
+        </member>
+        <member name="M:Telerik.Charting.Chart.GetBitmap">
+            <summary>
+            Returns a reference to the chart's bitmap.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Chart.RemoveAllSeries">
+            <summary>
+            Removes all data series from the chart's data series collection.
+            </summary>
+        </member>
+        <member name="M:Telerik.Charting.Chart.RemoveSeriesAt(System.Int32)">
+            <summary>
+            Removes the data series at the specified index.
+            </summary>
+            <param name="seriesIndex"></param>
+        </member>
+        <member name="M:Telerik.Charting.Chart.GetChartSeries(System.Int32)">
+            <summary>
+            Gets a reference to the data series at the specified index.
+            </summary>
+            <param name="seriesIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Chart.GetChartSeries(System.String)">
+            <summary>
+            Gets a reference to the data series by specifying its name.
+            </summary>
+            <param name="seriesName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Charting.Chart.GetChartSeries(System.Drawing.Color)">
+            <summary>
+            Gets a reference to the data series by specifying data series color.
+            </summary>
+            <param name="seriesColor"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Charting.Chart.SeriesOrientation">
+            <summary>
+            Specifies the orientation of chart series on the plot area.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.Bitmap">
+            <summary>
+            Gets the chart's bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.Margins">
+            <summary>
+            Gets or sets RadChart's margins.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.Series">
+            <summary>
+            Gets or sets the RadChart's chart series collection object.
+            </summary>  
+        </member>
+        <member name="P:Telerik.Charting.Chart.XAxis">
+            <summary>
+            Gets RadChart's XAxis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.YAxis">
+            <summary>
+            Gets RadChart's YAxis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.YAxis2">
+            <summary>
+            Gets RadChart's YAxis.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.ChartLegend">
+            <summary>
+            Gets RadChart's legend.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.Titles">
+            <summary>
+            Gets RadChart's titles collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.ChartDataTable">
+            <summary>
+            Gets RadChart's table with data.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.Gridlines">
+            <summary>
+            Gets RadChart's grid lines.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.Background">
+            <summary>
+            Specifies the chart's background
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.PlotArea">
+            <summary>
+            Specifies the chart's background
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.TextQuality">
+            <summary>
+            Specifies the quality at which text in chart is rendered.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.ImageQuality">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.BarWidthPercent">
+            <summary>
+            Determines the width of bars.
+            </summary>
+        </member>
+        <member name="P:Telerik.Charting.Chart.BarOverlapPercent">
+            <summary>
+            Determines how much of the bar's area is overlapped in multiple bar charts.
+            </summary>
+        </member>
+        <member name="T:Telerik.Charting.IChartComponent">
+            <summary>
+            Common chart components definitions
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Licensing">
+            <summary>
+            Summary description for Licensing.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadChart">
+            <summary>
+            The class represents the base functionality of the RadChart.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.#ctor">
+            <summary>
+            Creates a new instance of RadChart.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.CreateTitle">
+            <summary>
+            Creates a new chart title and adds it to the titles collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.SetDataSourceID(System.String)">
+            <summary>
+            Changes the DataSourceID property without DataBind method call
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Telerik.WebControls.RadChart.DataBind">
+            <summary>
+            Binds a data source to the invoked server control and all its child controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.EmptySeriesMessage">
+            <summary>
+            Empty series message
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataManager">
+            <summary>
+            Data management support object
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Height">
+            <summary>
+            Chart height
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Width">
+            <summary>
+            Chart width
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.XAxis">
+            <summary>
+            Gets or sets RadChart's X Axis object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.YAxis">
+            <summary>
+            Gets or sets RadChart's primary Y axis object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.YAxis2">
+            <summary>
+            Gets or sets RadChart's secondary Y axis object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Legend">
+            <summary>
+            Gets or sets RadChart's legend object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataTable">
+            <summary>
+            Gets or sets RadChart's legend object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Background">
+            <summary>
+            Specifies the chart background.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.PlotArea">
+            <summary>
+            Specifies the chart's plot area.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Margins">
+            <summary>
+            Gets or sets RadChart's margins.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Series">
+            <summary>
+            Collection of the chart's data series.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Titles">
+            <summary>
+            Collection of the chart's titles.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ChartTitle">
+            <summary>
+            The chart title message.  It is the first item in the Titles collection.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.Gridlines">
+            <summary>
+            Gets or sets RadChart's grid lines object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.UseSession">
+            <summary>
+            Enables or disables use of session.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.CreateImageMap">
+            <summary>
+            Enables or disables use of image maps.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.TempImagesFolder">
+            <summary>
+            Sets folder for the chart's temp images.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ContentFile">
+            <summary>
+            Gets or sets RadChart's content file path and file name.
+            </summary>		
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ChartImageFormat">
+            <summary>
+            Specifies the color of the plot area's border.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.AlternateText">
+            <summary>
+            The alternate text displayed when the image cannot be shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.TextQuality">
+            <summary>
+            Specifies the quality at which the text is rendered.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ImageQuality">
+            <summary>
+            Specifies the quality at which the image is rendered.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.BarOverlapPercent">
+            <summary>
+            Sets the overlap percent of the bars.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.BarWidthPercent">
+            <summary>
+            Sets the bar width percent of the bars.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.SeriesOrientation">
+            <summary>
+            Specifies the orientation of chart series on the plot area.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ShadowBlur">
+            <summary>
+            Specifies the shadow blur coefficient.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ShadowColor">
+            <summary>
+            Specifies the shadow color.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ShadowPosition">
+            <summary>
+            Specifies the shadow position.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.ShadowDistance">
+            <summary>
+            Specifies the distance between object and its shadow.
+            </summary>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataSourceID">
+            <summary>
+            Gets or sets the ID of the control from which the data-bound control retrieves its list of data items. 
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataSource">
+            <summary>
+            The DataSource object
+            </summary>
+            <remarks>Gets or sets the object from which the chart control retrieves its list of data items</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataMember">
+            <summary>
+            Gets or sets the name of the list of data that the data-bound control binds to, in cases where the data source contains more than one distinct list of data items.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadChart.DataGroupColumn">
+            <summary>
+            Gets or sets the name of the DataSource column (member) that will be used to split one column data into several chart Series
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.ChartClickEventArgs">
+            <summary>
+            Event arguments when a series item is clicked.
+            </summary>
+        </member>
+    </members>
+</doc>

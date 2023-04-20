@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClientFeedbackViewEvaluationFormDS" targetNamespace="http://tempuri.org/ClientFeedbackViewEvaluationFormDS.xsd" xmlns:mstns="http://tempuri.org/ClientFeedbackViewEvaluationFormDS.xsd" xmlns="http://tempuri.org/ClientFeedbackViewEvaluationFormDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString23" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString23 (Settings)" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.ConnectionString23" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClientFeedbackViewEvaluationFormDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ClientFeedbackViewEvaluationFormDS" msprop:Generator_DataSetName="ClientFeedbackViewEvaluationFormDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAClientFeedbackViewEvaluationForm" msprop:Generator_UserTableName="GAClientFeedbackViewEvaluationForm" msprop:Generator_RowDeletedName="GAClientFeedbackViewEvaluationFormRowDeleted" msprop:Generator_TableClassName="GAClientFeedbackViewEvaluationFormDataTable" msprop:Generator_RowChangedName="GAClientFeedbackViewEvaluationFormRowChanged" msprop:Generator_RowClassName="GAClientFeedbackViewEvaluationFormRow" msprop:Generator_RowChangingName="GAClientFeedbackViewEvaluationFormRowChanging" msprop:Generator_RowEvArgName="GAClientFeedbackViewEvaluationFormRowChangeEvent" msprop:Generator_RowEvHandlerName="GAClientFeedbackViewEvaluationFormRowChangeEventHandler" msprop:Generator_TablePropName="GAClientFeedbackViewEvaluationForm" msprop:Generator_TableVarName="tableGAClientFeedbackViewEvaluationForm" msprop:Generator_RowDeletingName="GAClientFeedbackViewEvaluationFormRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientFeedbackViewRowId" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ClientFeedbackViewRowId" msprop:Generator_ColumnPropNameInRow="ClientFeedbackViewRowId" msprop:Generator_ColumnVarNameInTable="columnClientFeedbackViewRowId" msprop:Generator_ColumnPropNameInTable="ClientFeedbackViewRowIdColumn" type="xs:int" />
+              <xs:element name="TextFree1" msprop:Generator_UserColumnName="TextFree1" msprop:Generator_ColumnPropNameInRow="TextFree1" msprop:Generator_ColumnVarNameInTable="columnTextFree1" msprop:Generator_ColumnPropNameInTable="TextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GAListDescription" msprop:Generator_UserColumnName="GAListDescription" msprop:Generator_ColumnPropNameInRow="GAListDescription" msprop:Generator_ColumnVarNameInTable="columnGAListDescription" msprop:Generator_ColumnPropNameInTable="GAListDescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sort1" msprop:Generator_UserColumnName="Sort1" msprop:Generator_ColumnPropNameInRow="Sort1" msprop:Generator_ColumnVarNameInTable="columnSort1" msprop:Generator_ColumnPropNameInTable="Sort1Column" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

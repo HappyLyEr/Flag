@@ -1,0 +1,5 @@
+F:\flagsvn\FLAGweb\bin\GAWorkflow.dll
+F:\flagsvn\FLAGweb\bin\GAWorkflow.pdb
+F:\flagsvn\Flagdevelopment\GAWorkflow\obj\Debug\ResolveAssemblyReference.cache
+F:\flagsvn\Flagdevelopment\GAWorkflow\obj\Debug\GAWorkflow.dll
+F:\flagsvn\Flagdevelopment\GAWorkflow\obj\Debug\GAWorkflow.pdb

@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DaysReportDS" targetNamespace="http://tempuri.org/DaysReportDS.xsd" xmlns:mstns="http://tempuri.org/DaysReportDS.xsd" xmlns="http://tempuri.org/DaysReportDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata070807ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata070807ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.Properties.Settings.GlobalReference.Default.flagdata070807ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GADaysReportTableAdapter" GeneratorDataComponentClassName="GADaysReportTableAdapter" Name="GADaysReport" UserDataComponentName="GADaysReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flagdata070807ConnectionString (Settings)" DbObjectName="flagdata070807.dbo.GADaysReport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [dbo].[GADaysReport] WHERE (([DaysReportRowId] = @Original_DaysReportRowId) AND ((@IsNull_ReferenceId = 1 AND [ReferenceId] IS NULL) OR ([ReferenceId] = @Original_ReferenceId)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_CetaceansCount = 1 AND [CetaceansCount] IS NULL) OR ([CetaceansCount] = @Original_CetaceansCount)) AND ((@IsNull_CrewBoatActivitiesCount = 1 AND [CrewBoatActivitiesCount] IS NULL) OR ([CrewBoatActivitiesCount] = @Original_CrewBoatActivitiesCount)) AND ((@IsNull_CrewSafetyMeetingsCount = 1 AND [CrewSafetyMeetingsCount] IS NULL) OR ([CrewSafetyMeetingsCount] = @Original_CrewSafetyMeetingsCount)) AND ((@IsNull_ToolboxMeetingsCount = 1 AND [ToolboxMeetingsCount] IS NULL) OR ([ToolboxMeetingsCount] = @Original_ToolboxMeetingsCount)) AND ((@IsNull_SafetyDrillsCount = 1 AND [SafetyDrillsCount] IS NULL) OR ([SafetyDrillsCount] = @Original_SafetyDrillsCount)) AND ((@IsNull_DrillHours = 1 AND [DrillHours] IS NULL) OR ([DrillHours] = @Original_DrillHours)) AND ((@IsNull_Reporter = 1 AND [Reporter] IS NULL) OR ([Reporter] = @Original_Reporter)) AND ((@IsNull_DrillsOther = 1 AND [DrillsOther] IS NULL) OR ([DrillsOther] = @Original_DrillsOther)) AND ((@IsNull_DrillsManOverBoard = 1 AND [DrillsManOverBoard] IS NULL) OR ([DrillsManOverBoard] = @Original_DrillsManOverBoard)) AND ((@IsNull_DrillsFirstAid = 1 AND [DrillsFirstAid] IS NULL) OR ([DrillsFirstAid] = @Original_DrillsFirstAid)) AND ((@IsNull_DrillsFire = 1 AND [DrillsFire] IS NULL) OR ([DrillsFire] = @Original_DrillsFire)) AND ((@IsNull_DrillsLifeBoat = 1 AND [DrillsLifeBoat] IS NULL) OR ([DrillsLifeBoat] = @Original_DrillsLifeBoat)) AND ((@IsNull_SeismicPersonnelCount = 1 AND [SeismicPersonnelCount] IS NULL) OR ([SeismicPersonnelCount] = @Original_SeismicPersonnelCount)) AND ((@IsNull_MarinePersonnelCount = 1 AND [MarinePersonnelCount] IS NULL) OR ([MarinePersonnelCount] = @Original_MarinePersonnelCount)) AND ((@IsNull_ThirdPartyPersonnelCount = 1 AND [ThirdPartyPersonnelCount] IS NULL) OR ([ThirdPartyPersonnelCount] = @Original_ThirdPartyPersonnelCount)) AND ((@IsNull_OfficePersonnelCount = 1 AND [OfficePersonnelCount] IS NULL) OR ([OfficePersonnelCount] = @Original_OfficePersonnelCount)) AND ((@IsNull_ClientPersonnelCount = 1 AND [ClientPersonnelCount] IS NULL) OR ([ClientPersonnelCount] = @Original_ClientPersonnelCount)) AND ((@IsNull_MaritimeIncidentAndIllnessCount = 1 AND [MaritimeIncidentAndIllnessCount] IS NULL) OR ([MaritimeIncidentAndIllnessCount] = @Original_MaritimeIncidentAndIllnessCount)) AND ((@IsNull_OwnIncidentAndIllnessCount = 1 AND [OwnIncidentAndIllnessCount] IS NULL) OR ([OwnIncidentAndIllnessCount] = @Original_OwnIncidentAndIllnessCount)) AND ((@IsNull_HIPCardUnsafeActsCount = 1 AND [HIPCardUnsafeActsCount] IS NULL) OR ([HIPCardUnsafeActsCount] = @Original_HIPCardUnsafeActsCount)) AND ((@IsNull_HIPCardNearMissesCount = 1 AND [HIPCardNearMissesCount] IS NULL) OR ([HIPCardNearMissesCount] = @Original_HIPCardNearMissesCount)) AND ((@IsNull_SOPDepartmentalInspectionsCount = 1 AND [SOPDepartmentalInspectionsCount] IS NULL) OR ([SOPDepartmentalInspectionsCount] = @Original_SOPDepartmentalInspectionsCount)) AND ((@IsNull_SOPCrossDepartmentalInspectionsCount = 1 AND [SOPCrossDepartmentalInspectionsCount] IS NULL) OR ([SOPCrossDepartmentalInspectionsCount] = @Original_SOPCrossDepartmentalInspectionsCount)) AND ((@IsNull_SOPPartyChiefInspectionsCount = 1 AND [SOPPartyChiefInspectionsCount] IS NULL) OR ([SOPPartyChiefInspectionsCount] = @Original_SOPPartyChiefInspectionsCount)) AND ((@IsNull_ManHours = 1 AND [ManHours] IS NULL) OR ([ManHours] = @Original_ManHours)) AND ((@IsNull_ProjectManHours = 1 AND [ProjectManHours] IS NULL) OR ([ProjectManHours] = @Original_ProjectManHours)) AND ((@IsNull_YesNoSafetyEventListsRowId = 1 AND [YesNoSafetyEventListsRowId] IS NULL) OR ([YesNoSafetyEventListsRowId] = @Original_YesNoSafetyEventListsRowId)) AND ([rowguid] = @Original_rowguid) AND ((@IsNull_MasterRowId = 1 AND [MasterRowId] IS NULL) OR ([MasterRowId] = @Original_MasterRowId)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_DateChanged = 1 AND [DateChanged] IS NULL) OR ([DateChanged] = @Original_DateChanged)) AND ((@IsNull_ChangedBy = 1 AND [ChangedBy] IS NULL) OR ([ChangedBy] = @Original_ChangedBy)) AND ((@IsNull_DateDeleted = 1 AND [DateDeleted] IS NULL) OR ([DateDeleted] = @Original_DateDeleted)) AND ((@IsNull_DeletedBy = 1 AND [DeletedBy] IS NULL) OR ([DeletedBy] = @Original_DeletedBy)) AND ((@IsNull_SwitchFree1 = 1 AND [SwitchFree1] IS NULL) OR ([SwitchFree1] = @Original_SwitchFree1)) AND ((@IsNull_SwitchFree2 = 1 AND [SwitchFree2] IS NULL) OR ([SwitchFree2] = @Original_SwitchFree2)) AND ((@IsNull_SwitchFree3 = 1 AND [SwitchFree3] IS NULL) OR ([SwitchFree3] = @Original_SwitchFree3)) AND ((@IsNull_DateTimeFree1 = 1 AND [DateTimeFree1] IS NULL) OR ([DateTimeFree1] = @Original_DateTimeFree1)) AND ((@IsNull_DateTimeFree2 = 1 AND [DateTimeFree2] IS NULL) OR ([DateTimeFree2] = @Original_DateTimeFree2)) AND ((@IsNull_DateTimeFree3 = 1 AND [DateTimeFree3] IS NULL) OR ([DateTimeFree3] = @Original_DateTimeFree3)) AND ((@IsNull_TextFree1 = 1 AND [TextFree1] IS NULL) OR ([TextFree1] = @Original_TextFree1)) AND ((@IsNull_TextFree2 = 1 AND [TextFree2] IS NULL) OR ([TextFree2] = @Original_TextFree2)) AND ((@IsNull_TextFree3 = 1 AND [TextFree3] IS NULL) OR ([TextFree3] = @Original_TextFree3)) AND ((@IsNull_IntFree1 = 1 AND [IntFree1] IS NULL) OR ([IntFree1] = @Original_IntFree1)) AND ((@IsNull_IntFree2 = 1 AND [IntFree2] IS NULL) OR ([IntFree2] = @Original_IntFree2)) AND ((@IsNull_IntFree3 = 1 AND [IntFree3] IS NULL) OR ([IntFree3] = @Original_IntFree3)) AND ((@IsNull_HeliActivitiesCount = 1 AND [HeliActivitiesCount] IS NULL) OR ([HeliActivitiesCount] = @Original_HeliActivitiesCount)) AND ((@IsNull_OtherActivitiesCount = 1 AND [OtherActivitiesCount] IS NULL) OR ([OtherActivitiesCount] = @Original_OtherActivitiesCount)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DaysReportRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysReportRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReferenceId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReferenceId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ReferenceId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CetaceansCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CetaceansCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CetaceansCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CetaceansCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CrewBoatActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewBoatActivitiesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CrewBoatActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewBoatActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CrewSafetyMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewSafetyMeetingsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CrewSafetyMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewSafetyMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToolboxMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToolboxMeetingsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToolboxMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToolboxMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SafetyDrillsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyDrillsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SafetyDrillsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyDrillsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillHours" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillHours" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reporter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reporter" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Reporter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reporter" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsOther" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsOther" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsOther" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsOther" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsManOverBoard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsManOverBoard" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsManOverBoard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsManOverBoard" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsFirstAid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFirstAid" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsFirstAid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFirstAid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsFire" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFire" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsFire" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFire" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsLifeBoat" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsLifeBoat" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsLifeBoat" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsLifeBoat" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SeismicPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeismicPersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SeismicPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeismicPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MarinePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MarinePersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MarinePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MarinePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ThirdPartyPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThirdPartyPersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ThirdPartyPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThirdPartyPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OfficePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OfficePersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OfficePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OfficePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ClientPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ClientPersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ClientPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ClientPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MaritimeIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MaritimeIncidentAndIllnessCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MaritimeIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MaritimeIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnIncidentAndIllnessCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HIPCardUnsafeActsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardUnsafeActsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_HIPCardUnsafeActsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardUnsafeActsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HIPCardNearMissesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardNearMissesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_HIPCardNearMissesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardNearMissesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SOPDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPDepartmentalInspectionsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SOPDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SOPCrossDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPCrossDepartmentalInspectionsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SOPCrossDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPCrossDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SOPPartyChiefInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPPartyChiefInspectionsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SOPPartyChiefInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPPartyChiefInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ManHours" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ManHours" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProjectManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProjectManHours" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProjectManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProjectManHours" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YesNoSafetyEventListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YesNoSafetyEventListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_YesNoSafetyEventListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YesNoSafetyEventListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateChanged" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDeleted" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HeliActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HeliActivitiesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_HeliActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HeliActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherActivitiesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OtherActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [dbo].[GADaysReport] ([ReferenceId], [Date], [CetaceansCount], [CrewBoatActivitiesCount], [CrewSafetyMeetingsCount], [ToolboxMeetingsCount], [SafetyDrillsCount], [DrillHours], [Reporter], [Comment], [DrillsOther], [DrillsManOverBoard], [DrillsFirstAid], [DrillsFire], [DrillsLifeBoat], [ShareInfoPC], [ShareInfoNav], [ShareInfoTech], [ShareInfoMech], [SeismicPersonnelCount], [MarinePersonnelCount], [ThirdPartyPersonnelCount], [OfficePersonnelCount], [ClientPersonnelCount], [MaritimeIncidentAndIllnessCount], [OwnIncidentAndIllnessCount], [HIPCardUnsafeActsCount], [HIPCardNearMissesCount], [SOPDepartmentalInspectionsCount], [SOPCrossDepartmentalInspectionsCount], [SOPPartyChiefInspectionsCount], [ManHours], [ProjectManHours], [YesNoSafetyEventListsRowId], [rowguid], [MasterRowId], [DateCreated], [CreatedBy], [DateChanged], [ChangedBy], [DateDeleted], [DeletedBy], [SwitchFree1], [SwitchFree2], [SwitchFree3], [DateTimeFree1], [DateTimeFree2], [DateTimeFree3], [TextFree1], [TextFree2], [TextFree3], [IntFree1], [IntFree2], [IntFree3], [HeliActivitiesCount], [OtherActivitiesCount], [nTextFree1], [nTextFree2], [nTextFree3]) VALUES (@ReferenceId, @Date, @CetaceansCount, @CrewBoatActivitiesCount, @CrewSafetyMeetingsCount, @ToolboxMeetingsCount, @SafetyDrillsCount, @DrillHours, @Reporter, @Comment, @DrillsOther, @DrillsManOverBoard, @DrillsFirstAid, @DrillsFire, @DrillsLifeBoat, @ShareInfoPC, @ShareInfoNav, @ShareInfoTech, @ShareInfoMech, @SeismicPersonnelCount, @MarinePersonnelCount, @ThirdPartyPersonnelCount, @OfficePersonnelCount, @ClientPersonnelCount, @MaritimeIncidentAndIllnessCount, @OwnIncidentAndIllnessCount, @HIPCardUnsafeActsCount, @HIPCardNearMissesCount, @SOPDepartmentalInspectionsCount, @SOPCrossDepartmentalInspectionsCount, @SOPPartyChiefInspectionsCount, @ManHours, @ProjectManHours, @YesNoSafetyEventListsRowId, @rowguid, @MasterRowId, @DateCreated, @CreatedBy, @DateChanged, @ChangedBy, @DateDeleted, @DeletedBy, @SwitchFree1, @SwitchFree2, @SwitchFree3, @DateTimeFree1, @DateTimeFree2, @DateTimeFree3, @TextFree1, @TextFree2, @TextFree3, @IntFree1, @IntFree2, @IntFree3, @HeliActivitiesCount, @OtherActivitiesCount, @nTextFree1, @nTextFree2, @nTextFree3);
+SELECT DaysReportRowId, ReferenceId, Date, CetaceansCount, CrewBoatActivitiesCount, CrewSafetyMeetingsCount, ToolboxMeetingsCount, SafetyDrillsCount, DrillHours, Reporter, Comment, DrillsOther, DrillsManOverBoard, DrillsFirstAid, DrillsFire, DrillsLifeBoat, ShareInfoPC, ShareInfoNav, ShareInfoTech, ShareInfoMech, SeismicPersonnelCount, MarinePersonnelCount, ThirdPartyPersonnelCount, OfficePersonnelCount, ClientPersonnelCount, MaritimeIncidentAndIllnessCount, OwnIncidentAndIllnessCount, HIPCardUnsafeActsCount, HIPCardNearMissesCount, SOPDepartmentalInspectionsCount, SOPCrossDepartmentalInspectionsCount, SOPPartyChiefInspectionsCount, ManHours, ProjectManHours, YesNoSafetyEventListsRowId, rowguid, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, HeliActivitiesCount, OtherActivitiesCount, nTextFree1, nTextFree2, nTextFree3 FROM GADaysReport WHERE (DaysReportRowId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ReferenceId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CetaceansCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CetaceansCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CrewBoatActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewBoatActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CrewSafetyMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewSafetyMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ToolboxMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToolboxMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SafetyDrillsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyDrillsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillHours" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Reporter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reporter" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Comment" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Comment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsOther" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsOther" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsManOverBoard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsManOverBoard" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsFirstAid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFirstAid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsFire" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFire" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsLifeBoat" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsLifeBoat" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoPC" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoPC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoNav" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoNav" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoTech" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoTech" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoMech" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoMech" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SeismicPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeismicPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MarinePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MarinePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ThirdPartyPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThirdPartyPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OfficePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OfficePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ClientPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ClientPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MaritimeIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MaritimeIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HIPCardUnsafeActsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardUnsafeActsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HIPCardNearMissesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardNearMissesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SOPDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SOPCrossDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPCrossDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SOPPartyChiefInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPPartyChiefInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ManHours" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProjectManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProjectManHours" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@YesNoSafetyEventListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YesNoSafetyEventListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HeliActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HeliActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OtherActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree1" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree2" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree3" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT DaysReportRowId, ReferenceId, Date, CetaceansCount, CrewBoatActivitiesCount, CrewSafetyMeetingsCount, ToolboxMeetingsCount, SafetyDrillsCount, DrillHours, Reporter, Comment, DrillsOther, DrillsManOverBoard, DrillsFirstAid, DrillsFire, DrillsLifeBoat, ShareInfoPC, ShareInfoNav, ShareInfoTech, ShareInfoMech, SeismicPersonnelCount, MarinePersonnelCount, ThirdPartyPersonnelCount, OfficePersonnelCount, ClientPersonnelCount, MaritimeIncidentAndIllnessCount, OwnIncidentAndIllnessCount, HIPCardUnsafeActsCount, HIPCardNearMissesCount, SOPDepartmentalInspectionsCount, SOPCrossDepartmentalInspectionsCount, SOPPartyChiefInspectionsCount, ManHours, ProjectManHours, YesNoSafetyEventListsRowId, rowguid, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, HeliActivitiesCount, OtherActivitiesCount, nTextFree1, nTextFree2, nTextFree3 FROM dbo.GADaysReport</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [dbo].[GADaysReport] SET [ReferenceId] = @ReferenceId, [Date] = @Date, [CetaceansCount] = @CetaceansCount, [CrewBoatActivitiesCount] = @CrewBoatActivitiesCount, [CrewSafetyMeetingsCount] = @CrewSafetyMeetingsCount, [ToolboxMeetingsCount] = @ToolboxMeetingsCount, [SafetyDrillsCount] = @SafetyDrillsCount, [DrillHours] = @DrillHours, [Reporter] = @Reporter, [Comment] = @Comment, [DrillsOther] = @DrillsOther, [DrillsManOverBoard] = @DrillsManOverBoard, [DrillsFirstAid] = @DrillsFirstAid, [DrillsFire] = @DrillsFire, [DrillsLifeBoat] = @DrillsLifeBoat, [ShareInfoPC] = @ShareInfoPC, [ShareInfoNav] = @ShareInfoNav, [ShareInfoTech] = @ShareInfoTech, [ShareInfoMech] = @ShareInfoMech, [SeismicPersonnelCount] = @SeismicPersonnelCount, [MarinePersonnelCount] = @MarinePersonnelCount, [ThirdPartyPersonnelCount] = @ThirdPartyPersonnelCount, [OfficePersonnelCount] = @OfficePersonnelCount, [ClientPersonnelCount] = @ClientPersonnelCount, [MaritimeIncidentAndIllnessCount] = @MaritimeIncidentAndIllnessCount, [OwnIncidentAndIllnessCount] = @OwnIncidentAndIllnessCount, [HIPCardUnsafeActsCount] = @HIPCardUnsafeActsCount, [HIPCardNearMissesCount] = @HIPCardNearMissesCount, [SOPDepartmentalInspectionsCount] = @SOPDepartmentalInspectionsCount, [SOPCrossDepartmentalInspectionsCount] = @SOPCrossDepartmentalInspectionsCount, [SOPPartyChiefInspectionsCount] = @SOPPartyChiefInspectionsCount, [ManHours] = @ManHours, [ProjectManHours] = @ProjectManHours, [YesNoSafetyEventListsRowId] = @YesNoSafetyEventListsRowId, [rowguid] = @rowguid, [MasterRowId] = @MasterRowId, [DateCreated] = @DateCreated, [CreatedBy] = @CreatedBy, [DateChanged] = @DateChanged, [ChangedBy] = @ChangedBy, [DateDeleted] = @DateDeleted, [DeletedBy] = @DeletedBy, [SwitchFree1] = @SwitchFree1, [SwitchFree2] = @SwitchFree2, [SwitchFree3] = @SwitchFree3, [DateTimeFree1] = @DateTimeFree1, [DateTimeFree2] = @DateTimeFree2, [DateTimeFree3] = @DateTimeFree3, [TextFree1] = @TextFree1, [TextFree2] = @TextFree2, [TextFree3] = @TextFree3, [IntFree1] = @IntFree1, [IntFree2] = @IntFree2, [IntFree3] = @IntFree3, [HeliActivitiesCount] = @HeliActivitiesCount, [OtherActivitiesCount] = @OtherActivitiesCount, [nTextFree1] = @nTextFree1, [nTextFree2] = @nTextFree2, [nTextFree3] = @nTextFree3 WHERE (([DaysReportRowId] = @Original_DaysReportRowId) AND ((@IsNull_ReferenceId = 1 AND [ReferenceId] IS NULL) OR ([ReferenceId] = @Original_ReferenceId)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_CetaceansCount = 1 AND [CetaceansCount] IS NULL) OR ([CetaceansCount] = @Original_CetaceansCount)) AND ((@IsNull_CrewBoatActivitiesCount = 1 AND [CrewBoatActivitiesCount] IS NULL) OR ([CrewBoatActivitiesCount] = @Original_CrewBoatActivitiesCount)) AND ((@IsNull_CrewSafetyMeetingsCount = 1 AND [CrewSafetyMeetingsCount] IS NULL) OR ([CrewSafetyMeetingsCount] = @Original_CrewSafetyMeetingsCount)) AND ((@IsNull_ToolboxMeetingsCount = 1 AND [ToolboxMeetingsCount] IS NULL) OR ([ToolboxMeetingsCount] = @Original_ToolboxMeetingsCount)) AND ((@IsNull_SafetyDrillsCount = 1 AND [SafetyDrillsCount] IS NULL) OR ([SafetyDrillsCount] = @Original_SafetyDrillsCount)) AND ((@IsNull_DrillHours = 1 AND [DrillHours] IS NULL) OR ([DrillHours] = @Original_DrillHours)) AND ((@IsNull_Reporter = 1 AND [Reporter] IS NULL) OR ([Reporter] = @Original_Reporter)) AND ((@IsNull_DrillsOther = 1 AND [DrillsOther] IS NULL) OR ([DrillsOther] = @Original_DrillsOther)) AND ((@IsNull_DrillsManOverBoard = 1 AND [DrillsManOverBoard] IS NULL) OR ([DrillsManOverBoard] = @Original_DrillsManOverBoard)) AND ((@IsNull_DrillsFirstAid = 1 AND [DrillsFirstAid] IS NULL) OR ([DrillsFirstAid] = @Original_DrillsFirstAid)) AND ((@IsNull_DrillsFire = 1 AND [DrillsFire] IS NULL) OR ([DrillsFire] = @Original_DrillsFire)) AND ((@IsNull_DrillsLifeBoat = 1 AND [DrillsLifeBoat] IS NULL) OR ([DrillsLifeBoat] = @Original_DrillsLifeBoat)) AND ((@IsNull_SeismicPersonnelCount = 1 AND [SeismicPersonnelCount] IS NULL) OR ([SeismicPersonnelCount] = @Original_SeismicPersonnelCount)) AND ((@IsNull_MarinePersonnelCount = 1 AND [MarinePersonnelCount] IS NULL) OR ([MarinePersonnelCount] = @Original_MarinePersonnelCount)) AND ((@IsNull_ThirdPartyPersonnelCount = 1 AND [ThirdPartyPersonnelCount] IS NULL) OR ([ThirdPartyPersonnelCount] = @Original_ThirdPartyPersonnelCount)) AND ((@IsNull_OfficePersonnelCount = 1 AND [OfficePersonnelCount] IS NULL) OR ([OfficePersonnelCount] = @Original_OfficePersonnelCount)) AND ((@IsNull_ClientPersonnelCount = 1 AND [ClientPersonnelCount] IS NULL) OR ([ClientPersonnelCount] = @Original_ClientPersonnelCount)) AND ((@IsNull_MaritimeIncidentAndIllnessCount = 1 AND [MaritimeIncidentAndIllnessCount] IS NULL) OR ([MaritimeIncidentAndIllnessCount] = @Original_MaritimeIncidentAndIllnessCount)) AND ((@IsNull_OwnIncidentAndIllnessCount = 1 AND [OwnIncidentAndIllnessCount] IS NULL) OR ([OwnIncidentAndIllnessCount] = @Original_OwnIncidentAndIllnessCount)) AND ((@IsNull_HIPCardUnsafeActsCount = 1 AND [HIPCardUnsafeActsCount] IS NULL) OR ([HIPCardUnsafeActsCount] = @Original_HIPCardUnsafeActsCount)) AND ((@IsNull_HIPCardNearMissesCount = 1 AND [HIPCardNearMissesCount] IS NULL) OR ([HIPCardNearMissesCount] = @Original_HIPCardNearMissesCount)) AND ((@IsNull_SOPDepartmentalInspectionsCount = 1 AND [SOPDepartmentalInspectionsCount] IS NULL) OR ([SOPDepartmentalInspectionsCount] = @Original_SOPDepartmentalInspectionsCount)) AND ((@IsNull_SOPCrossDepartmentalInspectionsCount = 1 AND [SOPCrossDepartmentalInspectionsCount] IS NULL) OR ([SOPCrossDepartmentalInspectionsCount] = @Original_SOPCrossDepartmentalInspectionsCount)) AND ((@IsNull_SOPPartyChiefInspectionsCount = 1 AND [SOPPartyChiefInspectionsCount] IS NULL) OR ([SOPPartyChiefInspectionsCount] = @Original_SOPPartyChiefInspectionsCount)) AND ((@IsNull_ManHours = 1 AND [ManHours] IS NULL) OR ([ManHours] = @Original_ManHours)) AND ((@IsNull_ProjectManHours = 1 AND [ProjectManHours] IS NULL) OR ([ProjectManHours] = @Original_ProjectManHours)) AND ((@IsNull_YesNoSafetyEventListsRowId = 1 AND [YesNoSafetyEventListsRowId] IS NULL) OR ([YesNoSafetyEventListsRowId] = @Original_YesNoSafetyEventListsRowId)) AND ([rowguid] = @Original_rowguid) AND ((@IsNull_MasterRowId = 1 AND [MasterRowId] IS NULL) OR ([MasterRowId] = @Original_MasterRowId)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_DateChanged = 1 AND [DateChanged] IS NULL) OR ([DateChanged] = @Original_DateChanged)) AND ((@IsNull_ChangedBy = 1 AND [ChangedBy] IS NULL) OR ([ChangedBy] = @Original_ChangedBy)) AND ((@IsNull_DateDeleted = 1 AND [DateDeleted] IS NULL) OR ([DateDeleted] = @Original_DateDeleted)) AND ((@IsNull_DeletedBy = 1 AND [DeletedBy] IS NULL) OR ([DeletedBy] = @Original_DeletedBy)) AND ((@IsNull_SwitchFree1 = 1 AND [SwitchFree1] IS NULL) OR ([SwitchFree1] = @Original_SwitchFree1)) AND ((@IsNull_SwitchFree2 = 1 AND [SwitchFree2] IS NULL) OR ([SwitchFree2] = @Original_SwitchFree2)) AND ((@IsNull_SwitchFree3 = 1 AND [SwitchFree3] IS NULL) OR ([SwitchFree3] = @Original_SwitchFree3)) AND ((@IsNull_DateTimeFree1 = 1 AND [DateTimeFree1] IS NULL) OR ([DateTimeFree1] = @Original_DateTimeFree1)) AND ((@IsNull_DateTimeFree2 = 1 AND [DateTimeFree2] IS NULL) OR ([DateTimeFree2] = @Original_DateTimeFree2)) AND ((@IsNull_DateTimeFree3 = 1 AND [DateTimeFree3] IS NULL) OR ([DateTimeFree3] = @Original_DateTimeFree3)) AND ((@IsNull_TextFree1 = 1 AND [TextFree1] IS NULL) OR ([TextFree1] = @Original_TextFree1)) AND ((@IsNull_TextFree2 = 1 AND [TextFree2] IS NULL) OR ([TextFree2] = @Original_TextFree2)) AND ((@IsNull_TextFree3 = 1 AND [TextFree3] IS NULL) OR ([TextFree3] = @Original_TextFree3)) AND ((@IsNull_IntFree1 = 1 AND [IntFree1] IS NULL) OR ([IntFree1] = @Original_IntFree1)) AND ((@IsNull_IntFree2 = 1 AND [IntFree2] IS NULL) OR ([IntFree2] = @Original_IntFree2)) AND ((@IsNull_IntFree3 = 1 AND [IntFree3] IS NULL) OR ([IntFree3] = @Original_IntFree3)) AND ((@IsNull_HeliActivitiesCount = 1 AND [HeliActivitiesCount] IS NULL) OR ([HeliActivitiesCount] = @Original_HeliActivitiesCount)) AND ((@IsNull_OtherActivitiesCount = 1 AND [OtherActivitiesCount] IS NULL) OR ([OtherActivitiesCount] = @Original_OtherActivitiesCount)));
+SELECT DaysReportRowId, ReferenceId, Date, CetaceansCount, CrewBoatActivitiesCount, CrewSafetyMeetingsCount, ToolboxMeetingsCount, SafetyDrillsCount, DrillHours, Reporter, Comment, DrillsOther, DrillsManOverBoard, DrillsFirstAid, DrillsFire, DrillsLifeBoat, ShareInfoPC, ShareInfoNav, ShareInfoTech, ShareInfoMech, SeismicPersonnelCount, MarinePersonnelCount, ThirdPartyPersonnelCount, OfficePersonnelCount, ClientPersonnelCount, MaritimeIncidentAndIllnessCount, OwnIncidentAndIllnessCount, HIPCardUnsafeActsCount, HIPCardNearMissesCount, SOPDepartmentalInspectionsCount, SOPCrossDepartmentalInspectionsCount, SOPPartyChiefInspectionsCount, ManHours, ProjectManHours, YesNoSafetyEventListsRowId, rowguid, MasterRowId, DateCreated, CreatedBy, DateChanged, ChangedBy, DateDeleted, DeletedBy, SwitchFree1, SwitchFree2, SwitchFree3, DateTimeFree1, DateTimeFree2, DateTimeFree3, TextFree1, TextFree2, TextFree3, IntFree1, IntFree2, IntFree3, HeliActivitiesCount, OtherActivitiesCount, nTextFree1, nTextFree2, nTextFree3 FROM GADaysReport WHERE (DaysReportRowId = @DaysReportRowId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ReferenceId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CetaceansCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CetaceansCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CrewBoatActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewBoatActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CrewSafetyMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewSafetyMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ToolboxMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToolboxMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SafetyDrillsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyDrillsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillHours" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Reporter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reporter" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Comment" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Comment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsOther" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsOther" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsManOverBoard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsManOverBoard" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsFirstAid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFirstAid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsFire" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFire" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DrillsLifeBoat" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsLifeBoat" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoPC" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoPC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoNav" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoNav" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoTech" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoTech" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShareInfoMech" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="ShareInfoMech" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SeismicPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeismicPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MarinePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MarinePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ThirdPartyPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThirdPartyPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OfficePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OfficePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ClientPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ClientPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MaritimeIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MaritimeIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HIPCardUnsafeActsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardUnsafeActsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HIPCardNearMissesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardNearMissesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SOPDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SOPCrossDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPCrossDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SOPPartyChiefInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPPartyChiefInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ManHours" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProjectManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProjectManHours" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@YesNoSafetyEventListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YesNoSafetyEventListsRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HeliActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HeliActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OtherActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree1" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree2" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nTextFree3" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="nTextFree3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DaysReportRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysReportRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReferenceId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReferenceId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ReferenceId" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ReferenceId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CetaceansCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CetaceansCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CetaceansCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CetaceansCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CrewBoatActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewBoatActivitiesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CrewBoatActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewBoatActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CrewSafetyMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewSafetyMeetingsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CrewSafetyMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CrewSafetyMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ToolboxMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToolboxMeetingsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ToolboxMeetingsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ToolboxMeetingsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SafetyDrillsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyDrillsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SafetyDrillsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyDrillsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillHours" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillHours" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reporter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reporter" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Reporter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reporter" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsOther" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsOther" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsOther" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsOther" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsManOverBoard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsManOverBoard" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsManOverBoard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsManOverBoard" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsFirstAid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFirstAid" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsFirstAid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFirstAid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsFire" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFire" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsFire" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsFire" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrillsLifeBoat" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsLifeBoat" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DrillsLifeBoat" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrillsLifeBoat" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SeismicPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeismicPersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SeismicPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeismicPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MarinePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MarinePersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MarinePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MarinePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ThirdPartyPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThirdPartyPersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ThirdPartyPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThirdPartyPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OfficePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OfficePersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OfficePersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OfficePersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ClientPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ClientPersonnelCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ClientPersonnelCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ClientPersonnelCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MaritimeIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MaritimeIncidentAndIllnessCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MaritimeIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MaritimeIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnIncidentAndIllnessCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnIncidentAndIllnessCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnIncidentAndIllnessCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HIPCardUnsafeActsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardUnsafeActsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_HIPCardUnsafeActsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardUnsafeActsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HIPCardNearMissesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardNearMissesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_HIPCardNearMissesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HIPCardNearMissesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SOPDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPDepartmentalInspectionsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SOPDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SOPCrossDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPCrossDepartmentalInspectionsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SOPCrossDepartmentalInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPCrossDepartmentalInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SOPPartyChiefInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPPartyChiefInspectionsCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SOPPartyChiefInspectionsCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SOPPartyChiefInspectionsCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ManHours" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ManHours" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProjectManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProjectManHours" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProjectManHours" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProjectManHours" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YesNoSafetyEventListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YesNoSafetyEventListsRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_YesNoSafetyEventListsRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YesNoSafetyEventListsRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_rowguid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="rowguid" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MasterRowId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MasterRowId" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateChanged" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateChanged" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateChanged" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChangedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChangedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateDeleted" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateDeleted" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateDeleted" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DeletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DeletedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SwitchFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SwitchFree3" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SwitchFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree1" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree2" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeFree3" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTimeFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TextFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TextFree3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TextFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree1" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree2" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IntFree3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IntFree3" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HeliActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HeliActivitiesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_HeliActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HeliActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherActivitiesCount" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OtherActivitiesCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherActivitiesCount" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="DaysReportRowId" ColumnName="DaysReportRowId" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DaysReportRowId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="DaysReportRowId" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DaysReportRowId" DataSetColumn="DaysReportRowId" />
+              <Mapping SourceColumn="ReferenceId" DataSetColumn="ReferenceId" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="CetaceansCount" DataSetColumn="CetaceansCount" />
+              <Mapping SourceColumn="CrewBoatActivitiesCount" DataSetColumn="CrewBoatActivitiesCount" />
+              <Mapping SourceColumn="CrewSafetyMeetingsCount" DataSetColumn="CrewSafetyMeetingsCount" />
+              <Mapping SourceColumn="ToolboxMeetingsCount" DataSetColumn="ToolboxMeetingsCount" />
+              <Mapping SourceColumn="SafetyDrillsCount" DataSetColumn="SafetyDrillsCount" />
+              <Mapping SourceColumn="DrillHours" DataSetColumn="DrillHours" />
+              <Mapping SourceColumn="Reporter" DataSetColumn="Reporter" />
+              <Mapping SourceColumn="Comment" DataSetColumn="Comment" />
+              <Mapping SourceColumn="DrillsOther" DataSetColumn="DrillsOther" />
+              <Mapping SourceColumn="DrillsManOverBoard" DataSetColumn="DrillsManOverBoard" />
+              <Mapping SourceColumn="DrillsFirstAid" DataSetColumn="DrillsFirstAid" />
+              <Mapping SourceColumn="DrillsFire" DataSetColumn="DrillsFire" />
+              <Mapping SourceColumn="DrillsLifeBoat" DataSetColumn="DrillsLifeBoat" />
+              <Mapping SourceColumn="ShareInfoPC" DataSetColumn="ShareInfoPC" />
+              <Mapping SourceColumn="ShareInfoNav" DataSetColumn="ShareInfoNav" />
+              <Mapping SourceColumn="ShareInfoTech" DataSetColumn="ShareInfoTech" />
+              <Mapping SourceColumn="ShareInfoMech" DataSetColumn="ShareInfoMech" />
+              <Mapping SourceColumn="SeismicPersonnelCount" DataSetColumn="SeismicPersonnelCount" />
+              <Mapping SourceColumn="MarinePersonnelCount" DataSetColumn="MarinePersonnelCount" />
+              <Mapping SourceColumn="ThirdPartyPersonnelCount" DataSetColumn="ThirdPartyPersonnelCount" />
+              <Mapping SourceColumn="OfficePersonnelCount" DataSetColumn="OfficePersonnelCount" />
+              <Mapping SourceColumn="ClientPersonnelCount" DataSetColumn="ClientPersonnelCount" />
+              <Mapping SourceColumn="MaritimeIncidentAndIllnessCount" DataSetColumn="MaritimeIncidentAndIllnessCount" />
+              <Mapping SourceColumn="OwnIncidentAndIllnessCount" DataSetColumn="OwnIncidentAndIllnessCount" />
+              <Mapping SourceColumn="HIPCardUnsafeActsCount" DataSetColumn="HIPCardUnsafeActsCount" />
+              <Mapping SourceColumn="HIPCardNearMissesCount" DataSetColumn="HIPCardNearMissesCount" />
+              <Mapping SourceColumn="SOPDepartmentalInspectionsCount" DataSetColumn="SOPDepartmentalInspectionsCount" />
+              <Mapping SourceColumn="SOPCrossDepartmentalInspectionsCount" DataSetColumn="SOPCrossDepartmentalInspectionsCount" />
+              <Mapping SourceColumn="SOPPartyChiefInspectionsCount" DataSetColumn="SOPPartyChiefInspectionsCount" />
+              <Mapping SourceColumn="ManHours" DataSetColumn="ManHours" />
+              <Mapping SourceColumn="ProjectManHours" DataSetColumn="ProjectManHours" />
+              <Mapping SourceColumn="YesNoSafetyEventListsRowId" DataSetColumn="YesNoSafetyEventListsRowId" />
+              <Mapping SourceColumn="rowguid" DataSetColumn="rowguid" />
+              <Mapping SourceColumn="MasterRowId" DataSetColumn="MasterRowId" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="DateChanged" DataSetColumn="DateChanged" />
+              <Mapping SourceColumn="ChangedBy" DataSetColumn="ChangedBy" />
+              <Mapping SourceColumn="DateDeleted" DataSetColumn="DateDeleted" />
+              <Mapping SourceColumn="DeletedBy" DataSetColumn="DeletedBy" />
+              <Mapping SourceColumn="SwitchFree1" DataSetColumn="SwitchFree1" />
+              <Mapping SourceColumn="SwitchFree2" DataSetColumn="SwitchFree2" />
+              <Mapping SourceColumn="SwitchFree3" DataSetColumn="SwitchFree3" />
+              <Mapping SourceColumn="DateTimeFree1" DataSetColumn="DateTimeFree1" />
+              <Mapping SourceColumn="DateTimeFree2" DataSetColumn="DateTimeFree2" />
+              <Mapping SourceColumn="DateTimeFree3" DataSetColumn="DateTimeFree3" />
+              <Mapping SourceColumn="TextFree1" DataSetColumn="TextFree1" />
+              <Mapping SourceColumn="TextFree2" DataSetColumn="TextFree2" />
+              <Mapping SourceColumn="TextFree3" DataSetColumn="TextFree3" />
+              <Mapping SourceColumn="IntFree1" DataSetColumn="IntFree1" />
+              <Mapping SourceColumn="IntFree2" DataSetColumn="IntFree2" />
+              <Mapping SourceColumn="IntFree3" DataSetColumn="IntFree3" />
+              <Mapping SourceColumn="HeliActivitiesCount" DataSetColumn="HeliActivitiesCount" />
+              <Mapping SourceColumn="OtherActivitiesCount" DataSetColumn="OtherActivitiesCount" />
+              <Mapping SourceColumn="nTextFree1" DataSetColumn="nTextFree1" />
+              <Mapping SourceColumn="nTextFree2" DataSetColumn="nTextFree2" />
+              <Mapping SourceColumn="nTextFree3" DataSetColumn="nTextFree3" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DaysReportDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DaysReportDS" msprop:Generator_DataSetName="DaysReportDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GADaysReport" msprop:Generator_UserTableName="GADaysReport" msprop:Generator_RowDeletedName="GADaysReportRowDeleted" msprop:Generator_TableClassName="GADaysReportDataTable" msprop:Generator_RowChangedName="GADaysReportRowChanged" msprop:Generator_RowClassName="GADaysReportRow" msprop:Generator_RowChangingName="GADaysReportRowChanging" msprop:Generator_RowEvArgName="GADaysReportRowChangeEvent" msprop:Generator_RowEvHandlerName="GADaysReportRowChangeEventHandler" msprop:Generator_TablePropName="GADaysReport" msprop:Generator_TableVarName="tableGADaysReport" msprop:Generator_RowDeletingName="GADaysReportRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DaysReportRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="DaysReportRowId" msprop:Generator_ColumnPropNameInRow="DaysReportRowId" msprop:Generator_ColumnVarNameInTable="columnDaysReportRowId" msprop:Generator_ColumnPropNameInTable="DaysReportRowIdColumn" type="xs:int" />
+              <xs:element name="ReferenceId" msprop:Generator_UserColumnName="ReferenceId" msprop:Generator_ColumnPropNameInRow="ReferenceId" msprop:Generator_ColumnVarNameInTable="columnReferenceId" msprop:Generator_ColumnPropNameInTable="ReferenceIdColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CetaceansCount" msprop:Generator_UserColumnName="CetaceansCount" msprop:Generator_ColumnPropNameInRow="CetaceansCount" msprop:Generator_ColumnVarNameInTable="columnCetaceansCount" msprop:Generator_ColumnPropNameInTable="CetaceansCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CrewBoatActivitiesCount" msprop:Generator_UserColumnName="CrewBoatActivitiesCount" msprop:Generator_ColumnPropNameInRow="CrewBoatActivitiesCount" msprop:Generator_ColumnVarNameInTable="columnCrewBoatActivitiesCount" msprop:Generator_ColumnPropNameInTable="CrewBoatActivitiesCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CrewSafetyMeetingsCount" msprop:Generator_UserColumnName="CrewSafetyMeetingsCount" msprop:Generator_ColumnPropNameInRow="CrewSafetyMeetingsCount" msprop:Generator_ColumnVarNameInTable="columnCrewSafetyMeetingsCount" msprop:Generator_ColumnPropNameInTable="CrewSafetyMeetingsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ToolboxMeetingsCount" msprop:Generator_UserColumnName="ToolboxMeetingsCount" msprop:Generator_ColumnPropNameInRow="ToolboxMeetingsCount" msprop:Generator_ColumnVarNameInTable="columnToolboxMeetingsCount" msprop:Generator_ColumnPropNameInTable="ToolboxMeetingsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SafetyDrillsCount" msprop:Generator_UserColumnName="SafetyDrillsCount" msprop:Generator_ColumnPropNameInRow="SafetyDrillsCount" msprop:Generator_ColumnVarNameInTable="columnSafetyDrillsCount" msprop:Generator_ColumnPropNameInTable="SafetyDrillsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DrillHours" msprop:Generator_UserColumnName="DrillHours" msprop:Generator_ColumnPropNameInRow="DrillHours" msprop:Generator_ColumnVarNameInTable="columnDrillHours" msprop:Generator_ColumnPropNameInTable="DrillHoursColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Reporter" msprop:Generator_UserColumnName="Reporter" msprop:Generator_ColumnPropNameInRow="Reporter" msprop:Generator_ColumnVarNameInTable="columnReporter" msprop:Generator_ColumnPropNameInTable="ReporterColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Comment" msprop:Generator_UserColumnName="Comment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInTable="CommentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DrillsOther" msprop:Generator_UserColumnName="DrillsOther" msprop:Generator_ColumnPropNameInRow="DrillsOther" msprop:Generator_ColumnVarNameInTable="columnDrillsOther" msprop:Generator_ColumnPropNameInTable="DrillsOtherColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DrillsManOverBoard" msprop:Generator_UserColumnName="DrillsManOverBoard" msprop:Generator_ColumnPropNameInRow="DrillsManOverBoard" msprop:Generator_ColumnVarNameInTable="columnDrillsManOverBoard" msprop:Generator_ColumnPropNameInTable="DrillsManOverBoardColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DrillsFirstAid" msprop:Generator_UserColumnName="DrillsFirstAid" msprop:Generator_ColumnPropNameInRow="DrillsFirstAid" msprop:Generator_ColumnVarNameInTable="columnDrillsFirstAid" msprop:Generator_ColumnPropNameInTable="DrillsFirstAidColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DrillsFire" msprop:Generator_UserColumnName="DrillsFire" msprop:Generator_ColumnPropNameInRow="DrillsFire" msprop:Generator_ColumnVarNameInTable="columnDrillsFire" msprop:Generator_ColumnPropNameInTable="DrillsFireColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DrillsLifeBoat" msprop:Generator_UserColumnName="DrillsLifeBoat" msprop:Generator_ColumnPropNameInRow="DrillsLifeBoat" msprop:Generator_ColumnVarNameInTable="columnDrillsLifeBoat" msprop:Generator_ColumnPropNameInTable="DrillsLifeBoatColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ShareInfoPC" msprop:Generator_UserColumnName="ShareInfoPC" msprop:Generator_ColumnPropNameInRow="ShareInfoPC" msprop:Generator_ColumnVarNameInTable="columnShareInfoPC" msprop:Generator_ColumnPropNameInTable="ShareInfoPCColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShareInfoNav" msprop:Generator_UserColumnName="ShareInfoNav" msprop:Generator_ColumnPropNameInRow="ShareInfoNav" msprop:Generator_ColumnVarNameInTable="columnShareInfoNav" msprop:Generator_ColumnPropNameInTable="ShareInfoNavColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShareInfoTech" msprop:Generator_UserColumnName="ShareInfoTech" msprop:Generator_ColumnPropNameInRow="ShareInfoTech" msprop:Generator_ColumnVarNameInTable="columnShareInfoTech" msprop:Generator_ColumnPropNameInTable="ShareInfoTechColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShareInfoMech" msprop:Generator_UserColumnName="ShareInfoMech" msprop:Generator_ColumnPropNameInRow="ShareInfoMech" msprop:Generator_ColumnVarNameInTable="columnShareInfoMech" msprop:Generator_ColumnPropNameInTable="ShareInfoMechColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SeismicPersonnelCount" msprop:Generator_UserColumnName="SeismicPersonnelCount" msprop:Generator_ColumnPropNameInRow="SeismicPersonnelCount" msprop:Generator_ColumnVarNameInTable="columnSeismicPersonnelCount" msprop:Generator_ColumnPropNameInTable="SeismicPersonnelCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MarinePersonnelCount" msprop:Generator_UserColumnName="MarinePersonnelCount" msprop:Generator_ColumnPropNameInRow="MarinePersonnelCount" msprop:Generator_ColumnVarNameInTable="columnMarinePersonnelCount" msprop:Generator_ColumnPropNameInTable="MarinePersonnelCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ThirdPartyPersonnelCount" msprop:Generator_UserColumnName="ThirdPartyPersonnelCount" msprop:Generator_ColumnPropNameInRow="ThirdPartyPersonnelCount" msprop:Generator_ColumnVarNameInTable="columnThirdPartyPersonnelCount" msprop:Generator_ColumnPropNameInTable="ThirdPartyPersonnelCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OfficePersonnelCount" msprop:Generator_UserColumnName="OfficePersonnelCount" msprop:Generator_ColumnPropNameInRow="OfficePersonnelCount" msprop:Generator_ColumnVarNameInTable="columnOfficePersonnelCount" msprop:Generator_ColumnPropNameInTable="OfficePersonnelCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ClientPersonnelCount" msprop:Generator_UserColumnName="ClientPersonnelCount" msprop:Generator_ColumnPropNameInRow="ClientPersonnelCount" msprop:Generator_ColumnVarNameInTable="columnClientPersonnelCount" msprop:Generator_ColumnPropNameInTable="ClientPersonnelCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MaritimeIncidentAndIllnessCount" msprop:Generator_UserColumnName="MaritimeIncidentAndIllnessCount" msprop:Generator_ColumnPropNameInRow="MaritimeIncidentAndIllnessCount" msprop:Generator_ColumnVarNameInTable="columnMaritimeIncidentAndIllnessCount" msprop:Generator_ColumnPropNameInTable="MaritimeIncidentAndIllnessCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OwnIncidentAndIllnessCount" msprop:Generator_UserColumnName="OwnIncidentAndIllnessCount" msprop:Generator_ColumnPropNameInRow="OwnIncidentAndIllnessCount" msprop:Generator_ColumnVarNameInTable="columnOwnIncidentAndIllnessCount" msprop:Generator_ColumnPropNameInTable="OwnIncidentAndIllnessCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="HIPCardUnsafeActsCount" msprop:Generator_UserColumnName="HIPCardUnsafeActsCount" msprop:Generator_ColumnPropNameInRow="HIPCardUnsafeActsCount" msprop:Generator_ColumnVarNameInTable="columnHIPCardUnsafeActsCount" msprop:Generator_ColumnPropNameInTable="HIPCardUnsafeActsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="HIPCardNearMissesCount" msprop:Generator_UserColumnName="HIPCardNearMissesCount" msprop:Generator_ColumnPropNameInRow="HIPCardNearMissesCount" msprop:Generator_ColumnVarNameInTable="columnHIPCardNearMissesCount" msprop:Generator_ColumnPropNameInTable="HIPCardNearMissesCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SOPDepartmentalInspectionsCount" msprop:Generator_UserColumnName="SOPDepartmentalInspectionsCount" msprop:Generator_ColumnPropNameInRow="SOPDepartmentalInspectionsCount" msprop:Generator_ColumnVarNameInTable="columnSOPDepartmentalInspectionsCount" msprop:Generator_ColumnPropNameInTable="SOPDepartmentalInspectionsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SOPCrossDepartmentalInspectionsCount" msprop:Generator_UserColumnName="SOPCrossDepartmentalInspectionsCount" msprop:Generator_ColumnPropNameInRow="SOPCrossDepartmentalInspectionsCount" msprop:Generator_ColumnVarNameInTable="columnSOPCrossDepartmentalInspectionsCount" msprop:Generator_ColumnPropNameInTable="SOPCrossDepartmentalInspectionsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SOPPartyChiefInspectionsCount" msprop:Generator_UserColumnName="SOPPartyChiefInspectionsCount" msprop:Generator_ColumnPropNameInRow="SOPPartyChiefInspectionsCount" msprop:Generator_ColumnVarNameInTable="columnSOPPartyChiefInspectionsCount" msprop:Generator_ColumnPropNameInTable="SOPPartyChiefInspectionsCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ManHours" msprop:Generator_UserColumnName="ManHours" msprop:Generator_ColumnPropNameInRow="ManHours" msprop:Generator_ColumnVarNameInTable="columnManHours" msprop:Generator_ColumnPropNameInTable="ManHoursColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ProjectManHours" msprop:Generator_UserColumnName="ProjectManHours" msprop:Generator_ColumnPropNameInRow="ProjectManHours" msprop:Generator_ColumnVarNameInTable="columnProjectManHours" msprop:Generator_ColumnPropNameInTable="ProjectManHoursColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="YesNoSafetyEventListsRowId" msprop:Generator_UserColumnName="YesNoSafetyEventListsRowId" msprop:Generator_ColumnPropNameInRow="YesNoSafetyEventListsRowId" msprop:Generator_ColumnVarNameInTable="columnYesNoSafetyEventListsRowId" msprop:Generator_ColumnPropNameInTable="YesNoSafetyEventListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="rowguid" msprop:Generator_ColumnPropNameInRow="rowguid" msprop:Generator_ColumnVarNameInTable="columnrowguid" msprop:Generator_ColumnPropNameInTable="rowguidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MasterRowId" msprop:Generator_UserColumnName="MasterRowId" msprop:Generator_ColumnPropNameInRow="MasterRowId" msprop:Generator_ColumnVarNameInTable="columnMasterRowId" msprop:Generator_ColumnPropNameInTable="MasterRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreated" msprop:Generator_UserColumnName="DateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateChanged" msprop:Generator_UserColumnName="DateChanged" msprop:Generator_ColumnPropNameInRow="DateChanged" msprop:Generator_ColumnVarNameInTable="columnDateChanged" msprop:Generator_ColumnPropNameInTable="DateChangedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ChangedBy" msprop:Generator_UserColumnName="ChangedBy" msprop:Generator_ColumnPropNameInRow="ChangedBy" msprop:Generator_ColumnVarNameInTable="columnChangedBy" msprop:Generator_ColumnPropNameInTable="ChangedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DateDeleted" msprop:Generator_UserColumnName="DateDeleted" msprop:Generator_ColumnPropNameInRow="DateDeleted" msprop:Generator_ColumnVarNameInTable="columnDateDeleted" msprop:Generator_ColumnPropNameInTable="DateDeletedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeletedBy" msprop:Generator_UserColumnName="DeletedBy" msprop:Generator_ColumnPropNameInRow="DeletedBy" msprop:Generator_ColumnVarNameInTable="columnDeletedBy" msprop:Generator_ColumnPropNameInTable="DeletedByColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SwitchFree1" msprop:Generator_UserColumnName="SwitchFree1" msprop:Generator_ColumnPropNameInRow="SwitchFree1" msprop:Generator_ColumnVarNameInTable="columnSwitchFree1" msprop:Generator_ColumnPropNameInTable="SwitchFree1Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree2" msprop:Generator_UserColumnName="SwitchFree2" msprop:Generator_ColumnPropNameInRow="SwitchFree2" msprop:Generator_ColumnVarNameInTable="columnSwitchFree2" msprop:Generator_ColumnPropNameInTable="SwitchFree2Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SwitchFree3" msprop:Generator_UserColumnName="SwitchFree3" msprop:Generator_ColumnPropNameInRow="SwitchFree3" msprop:Generator_ColumnVarNameInTable="columnSwitchFree3" msprop:Generator_ColumnPropNameInTable="SwitchFree3Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DateTimeFree1" msprop:Generator_UserColumnName="DateTimeFree1" msprop:Generator_ColumnPropNameInRow="DateTimeFree1" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree1" msprop:Generator_ColumnPropNameInTable="DateTimeFree1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree2" msprop:Generator_UserColumnName="DateTimeFree2" msprop:Generator_ColumnPropNameInRow="DateTimeFree2" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree2" msprop:Generator_ColumnPropNameInTable="DateTimeFree2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeFree3" msprop:Generator_UserColumnName="DateTimeFree3" msprop:Generator_ColumnPropNameInRow="DateTimeFree3" msprop:Generator_ColumnVarNameInTable="columnDateTimeFree3" msprop:Generator_ColumnPropNameInTable="DateTimeFree3Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TextFree1" msprop:Generator_UserColumnName="TextFree1" msprop:Generator_ColumnPropNameInRow="TextFree1" msprop:Generator_ColumnVarNameInTable="columnTextFree1" msprop:Generator_ColumnPropNameInTable="TextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree2" msprop:Generator_UserColumnName="TextFree2" msprop:Generator_ColumnPropNameInRow="TextFree2" msprop:Generator_ColumnVarNameInTable="columnTextFree2" msprop:Generator_ColumnPropNameInTable="TextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextFree3" msprop:Generator_UserColumnName="TextFree3" msprop:Generator_ColumnPropNameInRow="TextFree3" msprop:Generator_ColumnVarNameInTable="columnTextFree3" msprop:Generator_ColumnPropNameInTable="TextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IntFree1" msprop:Generator_UserColumnName="IntFree1" msprop:Generator_ColumnPropNameInRow="IntFree1" msprop:Generator_ColumnVarNameInTable="columnIntFree1" msprop:Generator_ColumnPropNameInTable="IntFree1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree2" msprop:Generator_UserColumnName="IntFree2" msprop:Generator_ColumnPropNameInRow="IntFree2" msprop:Generator_ColumnVarNameInTable="columnIntFree2" msprop:Generator_ColumnPropNameInTable="IntFree2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IntFree3" msprop:Generator_UserColumnName="IntFree3" msprop:Generator_ColumnPropNameInRow="IntFree3" msprop:Generator_ColumnVarNameInTable="columnIntFree3" msprop:Generator_ColumnPropNameInTable="IntFree3Column" type="xs:int" minOccurs="0" />
+              <xs:element name="HeliActivitiesCount" msprop:Generator_UserColumnName="HeliActivitiesCount" msprop:Generator_ColumnPropNameInRow="HeliActivitiesCount" msprop:Generator_ColumnVarNameInTable="columnHeliActivitiesCount" msprop:Generator_ColumnPropNameInTable="HeliActivitiesCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OtherActivitiesCount" msprop:Generator_UserColumnName="OtherActivitiesCount" msprop:Generator_ColumnPropNameInRow="OtherActivitiesCount" msprop:Generator_ColumnVarNameInTable="columnOtherActivitiesCount" msprop:Generator_ColumnPropNameInTable="OtherActivitiesCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="nTextFree1" msprop:Generator_UserColumnName="nTextFree1" msprop:Generator_ColumnPropNameInRow="nTextFree1" msprop:Generator_ColumnVarNameInTable="columnnTextFree1" msprop:Generator_ColumnPropNameInTable="nTextFree1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree2" msprop:Generator_UserColumnName="nTextFree2" msprop:Generator_ColumnPropNameInRow="nTextFree2" msprop:Generator_ColumnVarNameInTable="columnnTextFree2" msprop:Generator_ColumnPropNameInTable="nTextFree2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTextFree3" msprop:Generator_UserColumnName="nTextFree3" msprop:Generator_ColumnPropNameInRow="nTextFree3" msprop:Generator_ColumnVarNameInTable="columnnTextFree3" msprop:Generator_ColumnPropNameInTable="nTextFree3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GADaysReport" />
+      <xs:field xpath="mstns:DaysReportRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

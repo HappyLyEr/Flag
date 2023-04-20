@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="HazardDS" targetNamespace="http://tempuri.org/HazardDS.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/HazardDS.xsd" xmlns:mstns="http://tempuri.org/HazardDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="HazardDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GAHazardIdentification">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="HazardReferenceId" type="xs:string" minOccurs="0" />
+							<xs:element name="HazardIdentificationRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true"
+								type="xs:int" />
+							<xs:element name="LocationOfWork" type="xs:string" minOccurs="0" />
+							<xs:element name="WorkArea" type="xs:string" minOccurs="0" />
+							<xs:element name="IdentifiedDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="IdentifiedTime" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="ImmediateCorrectiveAction" type="xs:string" minOccurs="0" />
+							<xs:element name="RiskEvaluation" type="xs:string" minOccurs="0" />
+							<xs:element name="Potential" type="xs:string" minOccurs="0" />
+							<xs:element name="Severity" type="xs:string" minOccurs="0" />
+							<xs:element name="SeverityPeople" type="xs:string" minOccurs="0" />
+							<xs:element name="SeverityAssets" type="xs:string" minOccurs="0" />
+							<xs:element name="SeverityEnvironment" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="HazardDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GAHazardIdentification" />
+			<xs:field xpath="mstns:HazardIdentificationRowId" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,1292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadSpell.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.Design.Spell.ControlNamesEditor">
+            <summary>
+            Type editor that selects the controls on a page.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Dictionaries.DictionaryImporter">
+            <summary>
+            Summary description for DictionarySorter.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DictionaryImporter.Save(System.String)">
+            <summary>
+            Saves the dictionary to a file.
+            </summary>
+            <param name="outputFile">The output file name.</param>
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DictionaryImporter.Load(System.String)">
+            <summary>
+            Load a word list from a file.
+            </summary>
+            <param name="inputFile">The import file name.</param>
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DictionaryImporter.Load(System.IO.TextReader)">
+            <summary>
+            Load a word list from a StreamReader.
+            </summary>
+            <param name="input">The import reader.</param>
+        </member>
+        <member name="F:Telerik.WebControls.Dictionaries.DoubleMetaphone.VOWELS">
+            "Vowels" to test for
+        </member>
+        <member name="F:Telerik.WebControls.Dictionaries.DoubleMetaphone.SILENT_START">
+            Prefixes when present which are not pronounced
+        </member>
+        <member name="F:Telerik.WebControls.Dictionaries.DoubleMetaphone.maxCodeLen">
+            Maximum length of an encoding, default is 4
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Encode(System.String)">
+             Encode a value with Double Metaphone
+            
+             @param value string to encode
+             @return an encoded string
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Encode(System.String,System.Boolean)">
+             Encode a value with Double Metaphone, optionally using the alternate
+             encoding.
+            
+             @param value string to encode
+             @param alternate use alternate encode
+             @return an encoded string
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.IsDoubleMetaphoneEqual(System.String,System.String)">
+            Check if the Double Metaphone values of two <code>string</code> values
+            are equal.
+            
+            @param value1 The left-hand side of the encoded {@link string#equals(Object)}.
+            @param value2 The right-hand side of the encoded {@link string#equals(Object)}.
+            @return <code>true</code> if the encoded <code>string</code>s are equal;
+                     <code>false</code> otherwise.
+            @see #isDoubleMetaphoneEqual(string,string,bool)
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.IsDoubleMetaphoneEqual(System.String,System.String,System.Boolean)">
+            Check if the Double Metaphone values of two <code>string</code> values
+            are equal, optionally using the alternate value.
+            
+            @param value1 The left-hand side of the encoded {@link string#equals(Object)}.
+            @param value2 The right-hand side of the encoded {@link string#equals(Object)}.
+            @param alternate use the alternate value if <code>true</code>.
+            @return <code>true</code> if the encoded <code>string</code>s are equal;
+                     <code>false</code> otherwise.
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.GetMaxCodeLen">
+            Returns the maxCodeLen.
+            @return int
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.SetMaxCodeLen(System.Int32)">
+            Sets the maxCodeLen.
+            @param maxCodeLen The maxCodeLen to set
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleAEIOUY(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'A', 'E', 'I', 'O', 'U', and 'Y' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleC(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'C' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleCC(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'CC' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleCH(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'CH' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleD(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'D' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleG(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'G' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleGH(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'GH' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleH(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'H' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleJ(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'J' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleL(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'L' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleP(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'P' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleR(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'R' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleS(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'S' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleSC(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'SC' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleT(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'T' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleW(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'W' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleX(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32)">
+            Handles 'X' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.HandleZ(System.String,Telerik.WebControls.Dictionaries.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'Z' cases
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.ConditionC0(System.String,System.Int32)">
+            Complex condition 0 for 'C'
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.ConditionCH0(System.String,System.Int32)">
+            Complex condition 0 for 'CH'
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.ConditionCH1(System.String,System.Int32)">
+            Complex condition 1 for 'CH'
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.ConditionL0(System.String,System.Int32)">
+            Complex condition 0 for 'L'
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.ConditionM0(System.String,System.Int32)">
+            Complex condition 0 for 'M'
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.IsSlavoGermanic(System.String)">
+            Determines whether or not a value is of slavo-germanic orgin. A value is
+            of slavo-germanic origin if it contians any of 'W', 'K', 'CZ', or 'WITZ'.
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.IsVowel(System.Char)">
+            Determines whether or not a character is a vowel or not
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.IsSilentStart(System.String)">
+            Determines whether or not the value starts with a silent letter.  It will
+            return <code>true</code> if the value starts with any of 'GN', 'KN',
+            'PN', 'WR' or 'PS'.
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.CleanInput(System.String)">
+            Cleans the input
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.CharAt(System.String,System.Int32)">
+            Gets the character at index <code>index</code> if available, otherwise
+            it returns <code>Character.MIN_VALUE</code> so that there is some sort
+            of a default
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String)">
+            Shortcut method with 1 criteria
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String)">
+            Shortcut method with 2 criteria
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+            Shortcut method with 3 criteria
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            Shortcut method with 4 criteria
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            Shortcut method with 5 criteria
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
+            Shortcut method with 6 criteria
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String[])">
+            		* Determines whether <code>value</code> contains any of the criteria 
+            		starting
+            		* at index <code>start</code> and matching up to length <code>length</code>
+        </member>
+        <member name="T:Telerik.WebControls.Dictionaries.DoubleMetaphoneResult">
+            Inner class for storing results, since there is the optional alternate
+            encoding.
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.EditDistanceDictionary.InitArrays">
+            <summary>
+            	Initializes the length and offset arrays as well as the distance matrix.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.EditDistanceDictionary.GetSimilar(System.String)">
+            <summary>
+            	Finds possible suggestions for a misspelled word.
+            </summary>
+            <param name="word">the misspelled word string</param>
+            <returns>array of suggestion replacement strings</returns>
+        </member>
+        <member name="M:Telerik.WebControls.Dictionaries.EditDistanceDictionary.CalculateEditDistance(System.String,System.String)">
+            <summary>
+            	Calculates Levenshtein distance for two given strings.
+            </summary>
+            <param name="first">String 1.</param>
+            <param name="second">String 2.</param>
+            <returns>Edit Distance.</returns>
+        </member>
+        <member name="T:Telerik.WebControls.ICustomDictionarySource">
+            <summary>
+            A custom interface that defines the access to the custom dictionary.  
+            It can be used to replace the custom dictionary storage mechanism and store the words in a database or on a remote computer.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.ICustomDictionarySource.ReadWord">
+            <summary>
+            Reads a word from the storage.  It should return null if no more words are present.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WebControls.ICustomDictionarySource.AddWord(System.String)">
+            <summary>
+            Adds a new custom word.
+            </summary>
+            <param name="word">the new word</param>
+        </member>
+        <member name="P:Telerik.WebControls.ICustomDictionarySource.DictionaryPath">
+            <summary>
+            The directory that contains the custom dictionary file.
+            Necessary only for file based storage -- it is set to the physical directory corresponding to RadSpell's DictPath property setting.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.ICustomDictionarySource.Language">
+            <summary>
+            The language for the custom dictionary.  It is usually a culture name like en-US or de-DE.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.ICustomDictionarySource.CustomAppendix">
+            <summary>
+            A custom appendix string that can be used to distinguish different custom dictionaries.  It is passed the CustomAppendix of the RadSpell object.  This way one can create different dictionaries for John and Mary.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Dictionaries.SorterObjectArray">
+            <summary>
+            This is the .NET 1.x implementation.
+            The .NET 2.0 one gets into an infinite loop when using the WordComparer.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Dictionaries.WordComparer">
+            <summary>
+            Summary description for WordComparer.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.ISpellCheckProvider">
+            <summary>
+            ISpellCheckProvider interface -- defines the behavior that we need
+            from a component to do spell checking.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.TelerikSpellCheckProvider">
+            <summary>
+            Summary description for TelerikSpellCheckProvider.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadSpell.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadSpellUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadSpellUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadSpellUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="P:Telerik.RadSpellUtils.RadLocalizableControl.Localization">
+            <summary>
+            Provides access to the localization strings of the control.
+            </summary>
+            <example>
+            This example demonstrates how to change the localization strings of RadProgressArea 
+            object with code.
+            	<code lang="CS" title="[New Example]">
+            RadProgressArea1.Localization["CancelButton"] = "Cancel";
+            RadProgressArea1.Localization["TimeElapsed"] = "Elapsed time: ";
+            RadProgressArea1.Localization["TimeEstimated"] = "Estimated time: ";
+            RadProgressArea1.Localization["TransferSpeed"] = "Speed: ";
+            RadProgressArea1.Localization["CurrentFileName"] = "Uploading file: ";
+            RadProgressArea1.Localization["Uploaded"] = "Uploaded ";
+            RadProgressArea1.Localization["UploadedFiles"] = "Uploaded files: ";
+            RadProgressArea1.Localization["Total"] = "Total ";
+            RadProgressArea1.Localization["TotalFiles"] = "Total files: ";
+                </code>
+            	<code lang="VB" title="[New Example]">
+            RadProgressArea1.Localization("CancelButton") = "Cancel"
+            RadProgressArea1.Localization("TimeElapsed") = "Elapsed time: "
+            RadProgressArea1.Localization("TimeEstimated") = "Estimated time: "
+            RadProgressArea1.Localization("TransferSpeed") = "Speed: "
+            RadProgressArea1.Localization("CurrentFileName") = "Uploading file: "
+            RadProgressArea1.Localization("Uploaded") = "Uploaded "
+            RadProgressArea1.Localization("UploadedFiles") = "Uploaded files: "
+            RadProgressArea1.Localization("Total") = "Total "
+            RadProgressArea1.Localization("TotalFiles") = "Total files: "
+                </code>
+            </example>
+            <value>
+            Localization name/value collection.
+            </value>
+            <remarks>
+            This property is intended to be used when there is a need to access the localization
+            strings of the control from the code behind.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.Spell.DialogDefinition.#ctor(Telerik.WebControls.Spell.DialogParameters)">
+            <summary>
+            Used from DialogLoaderBase to extract the definition
+             of the dialog to be loaded
+            </summary>
+            <param name="parameters">
+            The parameters got from the DialogLoader. They must include
+             either VirtualPath or Type for the control to be loaded.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.Spell.DialogDefinition.#ctor(System.String,Telerik.WebControls.Spell.DialogParameters)">
+            <summary>
+            Used from a RadControl (Editor, Spell) to define an UserControl dialog
+            </summary>
+            <param name="virtualPath">The path to the ascx to be loaded</param>
+            <param name="parameters">The parameters to be passed to the dialog</param>
+        </member>
+        <member name="M:Telerik.WebControls.Spell.DialogDefinition.#ctor(System.Type,Telerik.WebControls.Spell.DialogParameters)">
+            <summary>
+            Used from a RadControl (Editor, Spell) to define a WebControl dialog
+            </summary>
+            <param name="virtualPath">The type of the control to be loaded</param>
+            <param name="parameters">The parameters to be passed to the dialog</param>
+        </member>
+        <member name="P:Telerik.WebControls.Spell.DialogOpener.AdditionalQueryString">
+            <summary>
+            Gets or sets an additional querystring appended to the dialog URL.
+            </summary>
+            <value>A <strong>String</strong>, appended to the dialog URL</value>
+            <remarks>TODO</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.Spell.DialogOpener.DialogDefinitions">
+            <summary>
+            Gets the DialogDefinitionDictionary, containing the DialogDefinitions of the managed dialogs.
+            </summary>
+            <value>TODO</value>
+            <remarks>TODO</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.Spell.DialogOpener.UseClassicDialogs">
+            <summary>
+            Gets or sets a value, indicating if classic windows will be used for opening a dialog.
+            </summary>
+            <value>A <strong>boolean</strong>, indicating if classic windows will be used
+            for opening a dialog</value>
+            <remarks>When set to true, the <strong>DialogOpener</strong> shows a dialog similar to the
+            ones opened by window.open and window.showModalDialog;</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.Spell.DialogOpener.DialogParametersMode">
+            <summary>
+            Gets or sets the value indicating how the control will pass the parameters to its dialogs.
+            </summary>
+            <value>
+            	The default value is <strong>DialogParametersMode.Javascript</strong>.
+            </value>
+            <remarks>
+            	<para>
+            		<see cref="P:Telerik.WebControls.Spell.DialogOpener.DialogParametersMode">DialogParametersMode</see> enum members
+                    <list type="table">
+            			<listheader>
+            				<term>Member</term>
+            				<description>Description</description>
+            			</listheader>
+            			<item>
+            				<term><strong>Javascript</strong></term>
+            				<description>The dialog parameters are serialized and rendered between 
+            				the control tags. This increases the html output a bit, but 
+            				makes posible the usage of the control in a web farm and eliminates the 
+            				problems when the session or the cookie expires.
+            				</description>
+            			</item>
+            			<item>
+            				<term><strong>Session</strong></term>
+            				<description>The dialog parameters are stored in the Session. This mode minimizes
+            				the size of the control html. It cannot be used when the SessionState is disabled and is 
+            				prone to problems when the Session expires before the dialog is opened.
+            				</description>
+            			</item>
+            			<item>
+            				<term><strong>Cookie</strong></term>
+            				<description>The dialog parameters are stored in the application Cache; à cookie 
+            				is used to transport the Cache object key. This mode also 
+            				minimizes the size of the control html. It cannot be used on web farms and is 
+            				prone to problems when the cookie expires before the dialog is opened.
+            				</description>
+            			</item>
+            		</list>
+            	</para>
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.WebControls.Spell.DialogOpener.Language" -->
+        <member name="T:Telerik.WebControls.Spell.DialogParametersMode">
+            <summary>
+            Provides enumerated values specifying how the editor will pass the
+            <see cref="!:Telerik.WebControls.RadEditor.DialogParametersMode">parameters</see> to its
+            dialogs.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.Spell.DialogParametersMode.Javascript">
+            <summary>
+            The dialog parameters are serialized and rendered between 
+            the editor tags. This increases the control's html size a bit, but 
+            makes posible the usage of the control in a web farm and eliminates the 
+            problems when the session or the cookie expires.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.Spell.DialogParametersMode.Session">
+            <summary>
+            The dialog parameters are stored in the Session. This mode minimizes
+            the size of the control html. It cannot be used when the SessionState is disabled and is 
+            prone to problems when the Session expires before the dialog is opened.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.Spell.DialogParametersMode.Cookie">
+            <summary>
+            The dialog parameters are stored in the application Cache; à cookie 
+            is used to transport the Cache object key. This mode also 
+            minimizes the size of the control html. It cannot be used on web farms and is 
+            prone to problems when the cookie expires before the dialog is opened.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Spell.DialogParametersSerializer">
+            <summary>
+            Summary description for DialogParametersSerializer.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadSpell">
+            <summary>
+            Telerik RadSpell
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.AdditionalQueryString">
+            <summary>
+            Gets or sets an additional querystring appended to the dialog URL.
+            </summary>
+            <value>A <strong>String</strong>, appended to the dialog URL</value>
+            <remarks>TODO</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.AllowAddCustom">
+            <summary>Gets or sets the value indicating whether the spell will allow adding custom words.</summary>
+            <value>The default is <b>true</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.AjaxUrl">
+            <summary>
+            Gets or sets the URL which the AJAX call will be made to. Check the help for more information.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.ButtonType">
+            <summary>Gets or sets the type of the button that will start the spellcheck.</summary>
+            <value>The default is <b>PushButton</b></value>
+            <remarks>
+            	<para>Values allowed:
+                <strong>PushButton</strong>/<strong>LinkButton</strong>/<strong>ImageButton</strong>/<strong>
+                None.</strong></para>
+            	<para>Setting the value to <strong>None</strong> will not render a button. The only
+                way to start a spellcheck will be through the client-side API.</para>
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.WebControls.RadSpell.ClientTextSource" -->
+        <member name="P:Telerik.WebControls.RadSpell.ControlToCheck">
+            <summary>
+            	The ID of the control to check.
+            </summary>
+            <remarks>
+            The ID can be both a server-side ID, or a client-side ID. RadSpell will find the
+            appropriate server control and use its ClientID to attach to it.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.CustomDictionarySourceTypeName">
+            <summary>
+            Gets or sets the fully qualified type name that will be used to store and read
+            the custom dictionary.
+            </summary>
+            <remarks>
+                The type name must be fully qualified if the type is in a GAC-deployed assembly.
+                The type must implement the
+                <see cref="!:Telerik.RadSpellUtils.Dictionary.ICustomDictionarySource">ICustomDictionarySource</see>
+                interface.
+            </remarks>
+            <example>
+            	<code lang="CS" title="C#">
+            spell1.CustomDictionarySourceTypeName = "RadSpellExtensions.CustomDictionarySource, RadSpellExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b5e57ccb698eab8e";
+                </code>
+            	<code lang="VB" title="VB">
+            spell1.CustomDictionarySourceTypeName = "RadSpellExtensions.CustomDictionarySource, RadSpellExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b5e57ccb698eab8e"
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.CustomDictionarySuffix">
+            <summary>Gets or sets the suffix for the custom dictionary files.</summary>
+            <value>The default is <b>-Custom</b></value>
+            <remarks>
+            The filenames are formed with the following scheme: Language + CustomDictionarySuffix +
+            ".txt". Different suffixes can be used to create different custom dictionaries for
+            different users.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.DialogParametersMode">
+            <summary>
+            Gets or sets the value indicating how the control will pass the parameters to its dialogs.
+            </summary>
+            <value>
+            	The default value is <strong>DialogParametersMode.Javascript</strong>.
+            </value>
+            <remarks>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadSpell.DialogParametersMode">DialogParametersMode</see> enum members
+                    <list type="table">
+            			<listheader>
+            				<term>Member</term>
+            				<description>Description</description>
+            			</listheader>
+            			<item>
+            				<term><strong>Javascript</strong></term>
+            				<description>The dialog parameters are serialized and rendered between 
+            				the control tags. This increases the html output a bit, but 
+            				makes posible the usage of the control in a web farm and eliminates the 
+            				problems when the session or the cookie expires.
+            				</description>
+            			</item>
+            			<item>
+            				<term><strong>Session</strong></term>
+            				<description>The dialog parameters are stored in the Session. This mode minimizes
+            				the size of the control html. It cannot be used when the SessionState is disabled and is 
+            				prone to problems when the Session expires before the dialog is opened.
+            				</description>
+            			</item>
+            			<item>
+            				<term><strong>Cookie</strong></term>
+            				<description>The dialog parameters are stored in the application Cache; à cookie 
+            				is used to transport the Cache object key. This mode also 
+            				minimizes the size of the control html. It cannot be used on web farms and is 
+            				prone to problems when the cookie expires before the dialog is opened.
+            				</description>
+            			</item>
+            		</list>
+            	</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.DialogTypeName">
+            <summary>Gets or sets the assembly qualified name of the SpellDialog type.</summary>
+            <value>The default is <strong>string.Empty</strong></value>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.DialogVirtualPath">
+            <summary>Gets or sets the virtual path of the UserControl that represents the SpellDialog.</summary>
+            <value>The default is <strong>string.Empty</strong></value>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.DictionaryLanguage">
+            <summary>Gets or sets the dictionary language used for spellchecking.</summary>
+            <value>The default is <b>en-US</b></value>
+            <remarks>
+                The language name is used to find a corresponding dictionary file. Spellchecking in
+                en-US will work only if a file en-US.TDF can be found inside the folder pointed to
+                by <see cref="!:DictPath">DictPath</see>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.DictionaryPath">
+            <summary>Gets or sets the path for the dictionary files.</summary>
+            <value>The default is <strong>~/RadControls/Spell/TDF/</strong></value>
+            <remarks>
+            This is the path that contains the TDF files, and the custom dictionary TXT
+            files.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.EditDistance">
+            <summary>
+            Gets or sets a the edit distance. If you increase the value, the checking speed
+            decreases but more suggestions are presented. Applicable only in EditDistance mode.
+            </summary>
+            <value>The default is <b>1</b></value>
+            <remarks>
+                This property takes effect only if the
+                <see cref="P:Telerik.WebControls.RadSpell.SpellCheckProvider">SpellCheckProvider</see> property is set to
+                <strong>EditDistanceProvider</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.FragmentIgnoreOptions">
+            <summary>
+            Configures the spellchecker engine, so that it knows whether to skip URL's, email
+            addresses, and filenames and not flag them as erros.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.IsClientID">
+            <summary>
+            Gets or sets a value indicating whether whether the ControlToCheck
+            property provides a client element ID or a server side control ID.
+            </summary>
+            <value>The default is <strong>false</strong>.</value>
+            <remarks>
+                When <strong>true</strong> RadSpell will look for the server-side control and get
+                its ClientID. When <strong>false</strong> the
+                <see cref="P:Telerik.WebControls.RadSpell.ControlToCheck">ControlToCheck</see> property will be interpreted as a
+                client-side ID and will be used to attach to the target control.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.WebControls.RadSpell.Language" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.WebControls.RadSpell.SpellChecked" -->
+        <member name="P:Telerik.WebControls.RadSpell.SpellCheckProvider">
+            <summary>Specifies the spellchecking algorithm which will be used by RadSpell.</summary>
+            <value>The default is <b>TelerikProvider</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.SupportedLanguages">
+            <summary>Gets or sets the supported languages.</summary>
+            <remarks>
+            The supported languages will be displayed in a drop-down list, and the user can
+            select the language for spellchecking.
+            </remarks>
+            <value>
+            A string array containing the codes and names of the languages (code, name, code,
+            name...)
+            </value>
+            <example>
+            	<code title="ASPNET">
+            &lt;radS:RadSpell ID="spell1"
+                Runat="server"
+                ControlToCheck="textBox1"
+                SupportedLanguages="en-US,English,fr-FR,French"&gt;
+            &lt;/radS:RadSpell&gt;
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.WordIgnoreOptions">
+            <summary>
+            Gets or sets the value used to configure the spellchecker engine to ignore words containing: UPPERCASE, some 
+            CaPitaL letters, numbers; or to ignore repeated words (very very)
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.UseClassicDialogs">
+            <summary>
+            Gets or sets a value, indicating if classic windows will be used for opening a dialog.
+            </summary>
+            <value>A <strong>boolean</strong>, indicating if classic windows will be used
+            for opening a dialog</value>
+            <remarks>When set to true, the <strong>DialogOpener</strong> shows a dialog similar to the
+            ones opened by window.open and window.showModalDialog;</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientCheckStarted">
+            <summary>
+            Gets or sets the name of the client-side function that will be called when the
+            spell check starts.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            </remarks>
+            <example>
+            	<code lang="JScript">
+            function onCheckStarted(sender, args)
+            {
+                log("spell: " + sender.clientId + " started for: " + sender.targetControlId);
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientCheckFinished">
+            <summary>
+            Gets or sets the name of the client-side function that will be called when the
+            spell check is finished.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            </remarks>
+            <example>
+            	<code lang="JScript">
+            function onCheckFinished(sender, args)
+            {
+                log("spell: " + sender.clientId + " finished for: " + sender.targetControlId);
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientCheckCancelled">
+            <summary>
+            Specifies the name of the client-side function that will be called when the user
+            cancels the spell check.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            </remarks>
+            <example>
+            	<code lang="JScript" title="[New Example]">
+            function onCheckCancelled(sender, args)
+            {
+                log("spell: " + sender.clientId + " cancelled for: " + sender.targetControlId);
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientDialogClosing">
+            <summary>
+            Specifies the name of the client-side function that will be called before the
+            spell check dialog closes.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            </remarks>
+            <example>
+            	<code lang="JScript" title="[New Example]">
+            function onDialogClosing(sender, args)
+            {
+                log("spell: " + sender.clientId + " dialog closing for: " + sender.targetControlId);
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientWordCorrected">
+            <summary>
+            Gets or sets the name of the client-side function that will be called when the
+            user corrects a mistake.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            The significant argument properties are: args.originalWord, args.newWord, args.offsets, args.changeAll.
+            </remarks>
+            <example>
+            	<code lang="JScript">
+            function onWordCorrected(sender, args)
+            {
+                log("spell: " + sender.clientId + " word corrected : " + args.originalWord + " --&gt; " + args.newWord + " at [" + args.offsets + "]");
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientWordIgnored">
+            <summary>
+            Specifies the name of the client-side function that will be called when the user
+            ignores a mistaken word.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            The significant argument properties are: args.ignoreWord, args.offsets, args.ignoreAll.
+            </remarks>
+            <example>
+            	<code lang="JScript" title="[New Example]">
+            function onWordIgnored(sender, args)
+            {
+                log("spell: " + sender.clientId + " word ignored: " + args.ignoreWord + " at [" + args.offsets+ "]");
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientActionUndone">
+            <summary>
+            Specifies the name of the client side-function that will be called when the user
+            undoes an operation.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            The significant argument properties are: args.originalWord, args.offsets.
+            </remarks>
+            <example>
+            	<code lang="JScript" title="[New Example]">
+            function onActionUndone(sender, args)
+            {
+                log("spell: " + sender.clientId + " restored word: " + args.originalWord + " offsets: " + args.offsets);
+            }
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSpell.OnClientCustomWordAdded">
+            <summary>
+            Specifies the name of the client-side function that will be called when the user
+            adds a word to the custom dictionary.
+            </summary>
+            <remarks>
+            The function accepts two parameters: sender and arguments.
+            The significant argument property is: args.customWord.
+            </remarks>
+            <example>
+            	<code lang="JScript" title="[New Example]">
+            function onCustomWordAdded(sender, args)
+            {
+                log("spell: " + sender.clientId + " custom word: " + args.customWord);
+            }
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.SpellChecker.#ctor(System.String)">
+            <summary>
+            Create a new RadSpellChecker object.  You need to pass a correct path to the folder that contains the dictionary files (*.TDF)
+            </summary>
+            <remarks>
+            The method expects local paths. E.g. "C:\SomeFolder\RadControls\Spell\TDF".  Transform URL's to local paths with the <see cref="M:System.Web.HttpServerUtility.MapPath(System.String)"/> method.
+            C#
+            <code>
+            SpellChecker checker = new SpellChecker(Server.MapPath("~/RadControls/Spell/TDF"));
+            </code>
+            VB.NET
+            <code>
+            </code>
+            Dim checker As SpellChecker
+            checker = New SpellChecker(Server.MapPath("~/RadControls/Spell/TDF"))
+            </remarks>
+            <param name="dictionaryPath"></param>
+        </member>
+        <member name="M:Telerik.WebControls.SpellChecker.Close">
+            <summary>
+            Cleans up any resources held by the SpellChecker object.  It is an alias of <see cref="!:Telerik.WebControls.RadSpellUtils.SpellChecker.Dispose"/>
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.SpellChecker.CheckText">
+            <summary>
+            Performs the actual spellchecking.  It will be automatically called by the Errors property accessor.
+            </summary>
+            <returns><see cref="!:Telerik.WebControls.RadSpellUtils.SpellCheckErrors"/> -- a collection with all the errors found.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.SpellChecker.AddToCustom(System.String)">
+            <summary>
+            Adds a new word to the custom dictionary.  It first checks if the word is already present in the current base or custom dictionaries.
+            </summary>
+            <param name="word">The new custom word.</param>
+        </member>
+        <member name="M:Telerik.WebControls.SpellChecker.Dispose">
+            <summary>
+            Clean up used resources.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.Text">
+             <summary>
+             Sets the text to be spellchecked.  It can be plain text or HTML.
+             </summary>
+             <remarks>
+             This property can be used to pass the text to the spellchecker engine programmatically.  The engine can deal with plaintext or any HTML-like format.  
+             It ignores text inside angle brackets (&lt;&gt;) and transforms HTML entities to their character values.  E.g. &amp;amp; becomes &amp;
+             C#:
+             <code>
+            using (SpellChecker checker = new SpellChecker(Server.MapPath("~/RadControls/Spell/TDF")))
+            {
+            	checker.Text = text;
+            	return checker.Errors;
+            }
+             </code>
+             VB.NET
+             <code>
+            Dim checker As SpellChecker
+            Try
+            	checker = New SpellChecker(Server.MapPath("~/RadControls/Spell/TDF"))
+            	checker.Text = text
+            	Return checker.Errors
+            Finally
+            	checker.Dispose()
+            End Try 
+             </code>
+             </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.DictionaryLanguage">
+            <summary>
+            The language of the dictionary to be used for spellchecking.  It usually is the same as the corresponding TDF file (without the extension).
+            </summary>
+            <remarks>
+            To spellcheck in German you have to have de-DE.tdf inside your dictionary folder, and set DictionaryLanguage to "de-DE"
+            C#:
+            <code>
+            spellChecker.DictionaryLanguage = "de-DE";
+            </code>
+            VB.NET
+            <code>
+            spellChecker.DictionaryLanguage = "de-DE"
+            </code>
+            </remarks>
+            <value>The default is <b>en-US</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.DictionaryPath">
+            <summary>
+            The folder path that contains the TDF files.
+            </summary>
+            <remarks>
+            The method expects local paths. E.g. "C:\SomeFolder\RadControls\Spell\TDF".  Transform URL's to local paths with the <see cref="M:System.Web.HttpServerUtility.MapPath(System.String)"/> method.
+            C#
+            <code>
+            SpellChecker checker = new SpellChecker(Server.MapPath("~/RadControls/Spell/TDF"));
+            </code>
+            VB.NET
+            <code>
+            </code>
+            Dim checker As SpellChecker
+            checker = New SpellChecker(Server.MapPath("~/RadControls/Spell/TDF"))
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CustomAppendix">
+            <summary>
+            The suffix that gets appended to the custom dictionary file name.  It is usually a user specific string that allows to distinguish dictionaries for different users.
+            Default filenames are Language + CustomAppendix + ".txt".
+            <value>The default is <b>-Custom</b></value>
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.EditDistance">
+            <summary>
+            	Specifies the edit distance. If you increase the value, the checking speed decreases but more suggestions are presented.  It does not do anything for the phonetic spellchecking.
+            </summary>
+            <value>The default is <b>1</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CheckAllCaps">
+            <summary>
+            	Specifies whether or not to check words in CAPITALS (e.g. "UNESCO")
+            </summary>
+            <value>The default is <b>false</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CheckForRepeatWords">
+            <summary>
+            	Specifies whether or not to count repeating words as errors (e.g. "very very")
+            </summary>
+            <value>The default is <b>false</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CheckCapital">
+            <summary>
+            	Specifies whether or not to check words in Capitals (e.g. "Washington")
+            </summary>
+            <value>The default is <b>true</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CheckWordsWNumbers">
+            <summary>
+            	Specifies whether or not to check words containing numbers (e.g. "l8r")
+            </summary>
+            <value>The default is <b>false</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.SpellCheckProvider">
+            <summary>
+            	Specifies whether RadSpell should use the internal spellchecking algorithm or try to use Microsoft Word. The possible values are defined in the <see cref="T:Telerik.WebControls.SpellCheckProvider"/> enum.
+            </summary>
+            <value>The default is <b>TelerikProvider</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.FragmentIgnoreOptions">
+            <summary>
+            Configures the spellchecker engine, so that it knows whether to skip URL's, email addresses, and filenames and not flag them as erros.
+            <see cref="!:FragmentIgnoreSettings"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CustomDictionarySource">
+            <summary>
+            Manipulate the custom dictionary source.  The new value must implement ICustomDictionarySource.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.CustomDictionarySourceType">
+            <summary>
+            The fully qualified name of the type that will be used for the custom dictionary storage.  The type name must include the assembly, culture and public key token.
+            A new instance will be created internally unless you set <see cref="P:Telerik.WebControls.SpellChecker.CustomDictionarySource"/> CustomDictionarySource directly.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellChecker.Errors">
+            <summary>
+            The errors after the last spellcheck.  The getter method will call <see cref="M:Telerik.WebControls.SpellChecker.CheckText"/> automatically that.
+            </summary>
+            <value><see cref="!:Telerik.WebControls.RadSpellUtils.SpellCheckErrors"/></value>
+        </member>
+        <member name="T:Telerik.WebControls.SpellCheckError">
+            <summary>
+            Contains the information about a spellcheck error.  The most important properties are the mistaken word and its offset in the source text.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckError.OffsetInText">
+            <summary>
+            The offset in the source text.  It is useful for locating the original word and replacing it with one of the suggestions.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckError.MistakenWord">
+            <summary>
+            The original word that the spellchecker has determined to be wrong.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckError.Suggestions">
+            <summary>
+            Suggestions for replacing the mistaken word.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.SpellCheckErrors">
+            <summary>
+                <para>
+                  A collection that stores <see cref="T:Telerik.WebControls.SpellCheckError"/> objects.
+               </para>
+            </summary>
+            <seealso cref="T:Telerik.WebControls.SpellCheckErrors"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.#ctor">
+            <summary>
+                <para>
+                  Initializes a new instance of <see cref="T:Telerik.WebControls.SpellCheckErrors"/>.
+               </para>
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.#ctor(System.Boolean)">
+            <summary>
+                <para>
+                  Initializes a new instance of <see cref="T:Telerik.WebControls.SpellCheckErrors"/>.
+               </para>
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.Add(Telerik.WebControls.SpellCheckError)">
+            <summary>
+               <para>Adds a <see cref="T:Telerik.WebControls.SpellCheckError"/> with the specified value to the 
+               <see cref="T:Telerik.WebControls.SpellCheckErrors"/> .</para>
+            </summary>
+            <param name="value">The <see cref="T:Telerik.WebControls.SpellCheckError"/> to add.</param>
+            <returns>
+               <para>The index at which the new element was inserted.</para>
+            </returns>
+            <seealso cref="M:Telerik.WebControls.SpellCheckErrors.AddRange(Telerik.WebControls.SpellCheckError[])"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.AddRange(Telerik.WebControls.SpellCheckError[])">
+            <summary>
+            <para>Copies the elements of an array to the end of the <see cref="T:Telerik.WebControls.SpellCheckErrors"/>.</para>
+            </summary>
+            <param name="value">
+               An array of type <see cref="T:Telerik.WebControls.SpellCheckError"/> containing the objects to add to the collection.
+            </param>
+            <returns>
+              <para>None.</para>
+            </returns>
+            <seealso cref="M:Telerik.WebControls.SpellCheckErrors.Add(System.Int32,Telerik.WebControls.ITextWord,System.String[])"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.AddRange(Telerik.WebControls.SpellCheckErrors)">
+            <summary>
+                <para>
+                  Adds the contents of another <see cref="T:Telerik.WebControls.SpellCheckErrors"/> to the end of the collection.
+               </para>
+            </summary>
+            <param name="value">
+               A <see cref="T:Telerik.WebControls.SpellCheckErrors"/> containing the objects to add to the collection.
+            </param>
+            <returns>
+              <para>None.</para>
+            </returns>
+            <seealso cref="M:Telerik.WebControls.SpellCheckErrors.Add(System.Int32,Telerik.WebControls.ITextWord,System.String[])"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.Contains(Telerik.WebControls.SpellCheckError)">
+            <summary>
+            <para>Gets a value indicating whether the 
+               <see cref="T:Telerik.WebControls.SpellCheckErrors"/> contains the specified <see cref="T:Telerik.WebControls.SpellCheckError"/>.</para>
+            </summary>
+            <param name="value">The <see cref="T:Telerik.WebControls.SpellCheckError"/> to locate.</param>
+            <returns>
+            <para><see langword="true"/> if the <see cref="T:Telerik.WebControls.SpellCheckError"/> is contained in the collection; 
+              otherwise, <see langword="false"/>.</para>
+            </returns>
+            <seealso cref="M:Telerik.WebControls.SpellCheckErrors.IndexOf(Telerik.WebControls.SpellCheckError)"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.CopyTo(Telerik.WebControls.SpellCheckError[],System.Int32)">
+            <summary>
+            <para>Copies the <see cref="T:Telerik.WebControls.SpellCheckErrors"/> values to a one-dimensional <see cref="T:System.Array"/> instance at the 
+               specified index.</para>
+            </summary>
+            <param name="array"><para>The one-dimensional <see cref="T:System.Array"/> that is the destination of the values copied from <see cref="T:Telerik.WebControls.SpellCheckErrors"/> .</para></param>
+            <param name="index">The index in <paramref name="array"/> where copying begins.</param>
+            <returns>
+              <para>None.</para>
+            </returns>
+            <exception cref="T:System.ArgumentException"><para><paramref name="array"/> is multidimensional.</para> <para>-or-</para> <para>The number of elements in the <see cref="T:Telerik.WebControls.SpellCheckErrors"/> is greater than the available space between <paramref name="arrayIndex"/> and the end of <paramref name="array"/>.</para></exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array"/> is <see langword="null"/>. </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is less than <paramref name="array"/>'s lowbound. </exception>
+            <seealso cref="T:System.Array"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.IndexOf(Telerik.WebControls.SpellCheckError)">
+            <summary>
+               <para>Returns the index of a <see cref="T:Telerik.WebControls.SpellCheckError"/> in 
+                  the <see cref="T:Telerik.WebControls.SpellCheckErrors"/> .</para>
+            </summary>
+            <param name="value">The <see cref="T:Telerik.WebControls.SpellCheckError"/> to locate.</param>
+            <returns>
+            <para>The index of the <see cref="T:Telerik.WebControls.SpellCheckError"/> of <paramref name="value"/> in the 
+            <see cref="T:Telerik.WebControls.SpellCheckErrors"/>, if found; otherwise, -1.</para>
+            </returns>
+            <seealso cref="M:Telerik.WebControls.SpellCheckErrors.Contains(System.String)"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.Insert(System.Int32,Telerik.WebControls.SpellCheckError)">
+            <summary>
+            <para>Inserts a <see cref="T:Telerik.WebControls.SpellCheckError"/> into the <see cref="T:Telerik.WebControls.SpellCheckErrors"/> at the specified index.</para>
+            </summary>
+            <param name="index">The zero-based index where <paramref name="value"/> should be inserted.</param>
+            <param name=" value">The <see cref="T:Telerik.WebControls.SpellCheckError"/> to insert.</param>
+            <returns><para>None.</para></returns>
+            <seealso cref="M:Telerik.WebControls.SpellCheckErrors.Add(System.Int32,Telerik.WebControls.ITextWord,System.String[])"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.GetEnumerator">
+            <summary>
+               <para>Returns an enumerator that can iterate through 
+                  the <see cref="T:Telerik.WebControls.SpellCheckErrors"/> .</para>
+            </summary>
+            <returns><para>None.</para></returns>
+            <seealso cref="T:System.Collections.IEnumerator"/>
+        </member>
+        <member name="M:Telerik.WebControls.SpellCheckErrors.Remove(Telerik.WebControls.SpellCheckError)">
+            <summary>
+               <para> Removes a specific <see cref="T:Telerik.WebControls.SpellCheckError"/> from the 
+               <see cref="T:Telerik.WebControls.SpellCheckErrors"/> .</para>
+            </summary>
+            <param name="value">The <see cref="T:Telerik.WebControls.SpellCheckError"/> to remove from the <see cref="T:Telerik.WebControls.SpellCheckErrors"/> .</param>
+            <returns><para>None.</para></returns>
+            <exception cref="T:System.ArgumentException"><paramref name="value"/> is not found in the Collection. </exception>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckErrors.Item(System.Int32)">
+            <summary>
+            <para>Represents the entry at the specified index of the <see cref="T:Telerik.WebControls.SpellCheckError"/>.</para>
+            </summary>
+            <param name="index"><para>The zero-based index of the entry to locate in the collection.</para></param>
+            <value>
+               <para> The entry at the specified index of the collection.</para>
+            </value>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is outside the valid range of indexes for the collection.</exception>
+        </member>
+        <member name="T:Telerik.WebControls.SpellCheckProvider">
+            <summary>
+            The spellcheck provider enumeration.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.SpellCheckProvider.TelerikProvider">
+            <summary>
+            The default provider.  The same as PhoneticProvider
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.SpellCheckProvider.EditDistanceProvider">
+            <summary>
+            This provider uses the edit distance algorithm. It will work for non-western
+            languages.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.SpellCheckProvider.PhoneticProvider">
+            <summary>
+            This provider uses phonetic codes to provide "sounds like" word suggestions.  Really effective for English, and less so for other languages.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.SpellCheckProvider.MicrosoftWordProvider">
+            <summary>
+            This provider automates Microsoft Word via its COM Interop interface.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.CustomDictionarySourceTypeName">
+            <summary>
+            Gets or sets the fully qualified type name that will be used to store and read
+            the custom dictionary.
+            </summary>
+            <remarks>
+                The type name must be fully qualified if the type is in a GAC-deployed assembly.
+                The type must implement the
+                <see cref="!:Telerik.RadSpellUtils.Dictionary.ICustomDictionarySource">ICustomDictionarySource</see>
+                interface.
+            </remarks>
+            <example>
+            	<code lang="CS" title="C#">
+            spell1.CustomDictionarySourceTypeName = "RadSpellExtensions.CustomDictionarySource, RadSpellExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b5e57ccb698eab8e";
+                </code>
+            	<code lang="VB" title="VB">
+            spell1.CustomDictionarySourceTypeName = "RadSpellExtensions.CustomDictionarySource, RadSpellExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b5e57ccb698eab8e"
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.CustomDictionarySuffix">
+            <summary>Gets or sets the suffix for the custom dictionary files.</summary>
+            <value>The default is <b>-Custom</b></value>
+            <remarks>
+            The filenames are formed with the following scheme: Language + CustomDictionarySuffix +
+            ".txt". Different suffixes can be used to create different custom dictionaries for
+            different users.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.DictionaryLanguage">
+            <summary>Gets or sets the dictionary language used for spellchecking.</summary>
+            <value>The default is <b>en-US</b></value>
+            <remarks>
+                The language name is used to find a corresponding dictionary file. Spellchecking in
+                en-US will work only if a file en-US.TDF can be found inside the folder pointed to
+                by <see cref="!:DictPath">DictPath</see>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.DictionaryPath">
+            <summary>Gets or sets the path for the dictionary files.</summary>
+            <value>The default is <strong>~/RadControls/Spell/TDF/</strong></value>
+            <remarks>
+            This is the path that contains the TDF files, and the custom dictionary TXT
+            files.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.EditDistance">
+            <summary>
+            Gets or sets a the edit distance. If you increase the value, the checking speed
+            decreases but more suggestions are presented. Applicable only in EditDistance mode.
+            </summary>
+            <value>The default is <b>1</b></value>
+            <remarks>
+                This property takes effect only if the
+                <see cref="P:Telerik.WebControls.SpellCheckService.SpellCheckProvider">SpellCheckProvider</see> property is set to
+                <strong>EditDistanceProvider</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.FragmentIgnoreOptions">
+            <summary>
+            Configures the spellchecker engine, so that it knows whether to skip URL's, email
+            addresses, and filenames and not flag them as erros.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.SpellCheckProvider">
+            <summary>Specifies the spellchecking algorithm that will be used.</summary>
+            <value>The default is <b>TelerikProvider</b></value>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.WordIgnoreOptions">
+            <summary>
+            Gets or sets the value used to configure the spellchecker engine to ignore words containing: UPPERCASE, some 
+            CaPitaL letters, numbers; or to ignore repeated words (very very)
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.SpellCheckService.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.SpellCheckValidator">
+            <summary>
+            SpellCheckValidator validates a form based on a RadSpell control.  It can be used to enforce spellchecking before form submission.
+            The ControlToValidate must be set to the ID of a RadSpell control.  The RadSpell control should be separately set up with a control to check and other options.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.WordIgnoreOptions.UPPERCASE">
+            <summary>
+            Specifies whether or not to check words in CAPITALS (e.g. 'UNESCO')
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.WordIgnoreOptions.WordsWithCapitalLetters">
+            <summary>
+            Specifies whether or not to check words in Capitals (e.g. 'Washington')
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.WordIgnoreOptions.RepeatedWords">
+            <summary>
+            Specifies whether or not to count repeating words as errors (e.g. 'very very')
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.WordIgnoreOptions.WordsWithNumbers">
+            <summary>
+            Specifies whether or not to check words containing numbers (e.g. 'l8r')
+            </summary>
+        </member>
+    </members>
+</doc>

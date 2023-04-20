@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadRotator.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.Design.RadTickerDesigner">
+            <summary>
+            Summary description for RadTickerDesigner.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadRotator.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadRotatorUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadRotatorUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadRotatorUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotator.#ctor">
+            <summary>
+            The default contructor for RadRotator.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotator.FindControl(System.String)">
+            <summary>
+            Finds a control inside the control hierarchy.
+            </summary>
+            <param name="id">The ID of the searched control.</param>
+            <returns>Reference to the found control or null if no control was found.</returns>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotator.RaisePostBackEvent(System.String)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotator.RaisePostDataChangedEvent">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotator.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.NumberOfFrames">
+            <summary>
+            Read only. Gets the number of frames currently instantiated in the rotator.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.ToolTip">
+            <summary>
+            Specifies the tooltip that appears when the user moves the mouse over the control.
+            </summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.AutoPostBack">
+            <summary>Specifies whether the control will require postback event handling.</summary>
+            <value>
+            Default: <b>False</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.AutoAdvance">
+            <summary>
+            Specifies whether <see cref="T:Telerik.WebControls.RadRotator"/> will advance through its slides automatically.
+            </summary>
+            <value>
+            Default: <b>True</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.PauseOnMouseOver">
+            <summary>
+            Specifies whether scrolling or slideshows pause when
+            the user hoovers the mouse cursor over the control.
+            </summary>
+            <remarks>
+                Currently, when <see cref="T:Telerik.WebControls.RadRotator"/> is in SlideShow mode, this feature
+                only works on Microsoft Internet Explorer
+            </remarks>
+            <value>
+            Default: <b>True</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.CustomTransitionFilter">
+            <summary>
+                Specifies a custom transition effect that overrides the default filter strings used
+                when the <see cref="P:Telerik.WebControls.RadRotator.TransitionEffect">TransitionEffect</see> property is set. Use
+                the CustomTransitionFilter propery to fine-tune the DXTransform filters to your
+                liking.
+            </summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.FrameTimeout">
+            <summary>
+            Specifies the frame timeout in ms.
+            </summary>
+            <value>
+            Default: <b>4000ms</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.FramesToShow">
+            <summary>Specifies how many frames are visible in the rotator.</summary>
+            <value>
+            Default: <b>1</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.ScrollSpeed">
+            <summary>
+            	<para>Specifies the duration of a scroll in ms. The measured time interval is the
+                pause between two sequential scrolls.</para>
+            </summary>
+            <value>
+            Default: <b>10ms</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.ScrollDirection">
+            <summary>
+            Specifies the direction for the scroller.
+            <seealso cref="T:Telerik.WebControls.RadRotator.RotatorScrollDirection"/>
+            </summary>
+            <value>
+            Default: <b>RotatorScrollDirection.Up</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.TransitionType">
+            <seealso cref="T:Telerik.WebControls.RadRotator.RotatorTransitionType"/>
+            <summary>
+            Specifies the type of transition. Could be set to either Scroll or
+            Slideshow.
+            </summary>
+            <value>
+            Default: <b>RotatorTransitionType.Slideshow</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.TransitionEffect">
+            <summary>
+            Specifies the transition effect for the slideshow mode.
+            <seealso cref="T:Telerik.WebControls.RadRotator.RotatorTransitionEffect"/>
+            </summary>
+            <value>
+            Default: <b>RotatorTransitionEffect.NONE</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.UseSmoothScroll">
+            <summary>
+                Specifies whether the <see cref="T:Telerik.WebControls.RadRotator"/> will use a smoothscroll effect
+                when in Scroll mode.
+            </summary>
+            <value>
+            Default: <b>True</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.UseRandomSlide">
+            <summary>
+                Specifies whether <see cref="T:Telerik.WebControls.RadRotator"/> will display a random slide when in
+                Slideshow mode.
+            </summary>
+            <value>
+            Default: <b>False</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.Height">
+            <summary>
+            Specifies the height of the <see cref="T:Telerik.WebControls.RadRotator"/> instance.
+            </summary>
+            <remarks>
+            The RadRotator control has a default size of 100px (height) and 300px (width). If you
+            don't set the height and width properties they will persist their defualt values. 
+            Having a default value in pixels provides a work-around to a well known Internet Explorer
+            issue that DXTransform effects fails for objects that have relative or no size.
+            </remarks>
+            <value>
+            Default: <b>Unit.Pixel(100)</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.Width">
+            <summary>
+            Specifies the width of the <see cref="T:Telerik.WebControls.RadRotator"/> instance.
+            </summary>
+            <remarks>
+            The RadRotator control has a default size of 100px (height) and 300px (width). If you
+            don't set the height and width properties they will persist their defualt values. 
+            Having a default value in pixels provides a work-around to a well known Internet Explorer
+            issue that DXTransform effects fails for objects that have relative or no size.
+            </remarks>
+            <value>
+            Default: <b>Unit.Pixel(300)</b> 
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.SmoothScrollDelay">
+            <summary>
+                Specifies a delay for the smoothscroll effect of the <see cref="T:Telerik.WebControls.RadRotator"/>
+                instance.
+            </summary>
+            <value>
+            Default: <b>10</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.DataSource">
+            <summary>Specifies or retrieves the data source for the control.</summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.DataMember">
+            <summary>
+            If databinding to a dataset, this field indicates the table to bind data to.
+            </summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.FrameTemplate">
+            <summary>
+            This property is used for templating. You should not use this.
+            Try creating &lt;FrameTemplate&gt; tags in the control instead.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.ContentFile">
+            <summary>
+            The location (path + filename) of the XML content file used to populate the menu.
+            </summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.Controls">
+            <summary>
+            Returns a reference to the controls collection of the RadRotator instance.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.BorderColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.BorderStyle">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.AccessKey">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.BorderWidth">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.Font">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.BackColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.ForeColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotator.CssClass">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="E:Telerik.WebControls.RadRotator.ItemDataBound">
+            <summary>Occurs after a frame is data bound.</summary>
+            <example>
+                The following example demonstrates how to use the <strong>ItemDataBound</strong>
+                event.
+                <code lang="CS" title="[New Example]">
+            protected void RadRotator1_ItemDataBound(object sender, Telerik.WebControls.RadRotatorItemEventArgs e)
+            {
+                TextBox textBox = (TextBox)e.Item.FindControl("TextBox1");
+                textBox.Text = (string)DataBinder.Eval(e.Item.DataItem, "Text");
+            }
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Protected Sub RadRotator1_ItemDataBound(ByVal sender As Object, ByVal e As Telerik.WebControls.RadRotatorItemEventArgs) Handles RadRotator1.ItemDataBound
+                Dim textBox As TextBox = e.Item.FindControl("TextBox1")
+                textBox.Text = CStr(DataBinder.Eval(e.Item.DataItem, "Text"))
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="E:Telerik.WebControls.RadRotator.ItemClicked">
+            <summary>
+            This event fires whenever the user performs a mouseclick on the <see cref="T:Telerik.WebControls.RadRotator"/> instance.
+            <seealso cref="T:Telerik.WebControls.RadRotator.RadRotatorClickEventHandler"/>
+            </summary>
+            <remarks>
+            You should set the <see cref="P:Telerik.WebControls.RadRotator.AutoPostBack"/> property to <b>true</b> in order for this
+            event to work.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadRotator.RotatorTransitionEffect">
+            <summary>
+            This enumeration contains the different effects that RadRotator could use
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadRotator.RotatorTransitionType">
+            <summary>
+            This enumeration lists the possible modes of rotation
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadRotator.RotatorScrollDirection">
+            <summary>
+            This enumeration lists the possible directions for scrolling
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadRotator.RadRotatorClickEventHandler">
+            <summary>
+            This is the event handler for the <see cref="E:Telerik.WebControls.RadRotator.ItemClicked"/> event.
+            <seealso cref="E:Telerik.WebControls.RadRotator.ItemClicked"/>
+            <seealso cref="T:Telerik.WebControls.RadRotatorClickEventArgs"/>
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadRotatorClickEventArgs">
+            <summary>
+            This is a container class which inherits <b>System.EventArgs</b> and provides
+            functionality specific to <see cref="T:Telerik.WebControls.RadRotator"/>
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotatorClickEventArgs.#ctor(Telerik.WebControls.RadRotatorFrame)">
+            <summary>
+            Default Constructor of <see cref="T:Telerik.WebControls.RadRotatorClickEventArgs"/>
+            As a developer using RadRotator you do not need to ever worry about this constructor.
+            </summary>
+            <param name="_item">The instance of the RadRotatorFrame from which the event originated</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotatorClickEventArgs.Item">
+            <summary>
+            This property exposes a reference to the RadRotatorFrame which raised the event.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadRotatorFrame">
+            <summary>
+            This class represents a <see cref="T:Telerik.WebControls.RadRotator"/> frame.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotatorFrame.#ctor">
+            <summary>
+            Default constructor of <see cref="T:Telerik.WebControls.RadRotatorFrame"/>
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadRotatorFrame.#ctor(System.Int32,System.Object)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotatorFrame.DataItem">
+            <summary>
+                Retrieves or specifies the data item of the
+                <see cref="T:Telerik.WebControls.RadRotatorFrame">RadRotatorFrame Class</see>.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadRotatorFrame.ItemIndex">
+            <summary>Retrieves or specifies the index of the frame.</summary>
+            <remarks>Please, only use this property to get the item index.</remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadTicker">
+            <summary>
+            RadTicker v2.1
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.AutoStart">
+            <summary>
+            Specifies whether the ticker begins ticking automatically.
+            </summary>
+            <remarks>
+            You should leave this set to <b>false</b> if you are using the ticker within a RadRotator
+            If you use the ticker independently and leave this setting to <b>false</b> you should use the
+            client API call <b>ticker_id.StartTicker()</b> to start it.
+            </remarks>
+            <value>
+            Default: <b>False</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.AutoAdvance">
+            <summary>
+            Specifies whether <see cref="T:Telerik.WebControls.RadTicker"/> will begin ticking the next tickerline 
+            (if any) after it has finished ticking the current one.
+            </summary>
+            <remarks>
+            If you set the <b>AutoAdvance</b> property to <b>false</b>, then you will have to use 
+            a client API Call <b>ticker_id.TickNextLine()</b>
+            </remarks>
+            <value>
+            Default: <b>True</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.Loop">
+            <summary>
+            Specifies whether <see cref="T:Telerik.WebControls.RadTicker"/> will repeat the first tickerline after displaying the last one.
+            </summary>
+            <remarks>
+            If you set this property to <b>true</b> RadTicker will never finish ticking.
+            This may have possible implications when having more than one <see cref="T:Telerik.WebControls.RadTicker"/> instance  in
+            a <see cref="T:Telerik.WebControls.RadRotator"/>. They way <see cref="T:Telerik.WebControls.RadRotator"/> works is that when the first ticker
+            on a frame has finished ticking it will start ticking the next ticker on the frame. If a <see cref="T:Telerik.WebControls.RadTicker"/>
+            instance is ticking (has Loop=true) it will never finish and the next ticker on the frame will not get started.
+            </remarks>
+            <value>
+            Default: <b>False</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.TickSpeed">
+            <summary>
+            Specifies the duration in milliseconds between ticking each character of a tickerline.
+            The lower the value the faster a line will finish ticking.
+            </summary>
+            <value>
+            Default: <b>20ms</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.LineDuration">
+            <summary>
+            Specifies in milliseconds the pause <see cref="T:Telerik.WebControls.RadTicker"/> makes before starting to tick
+            the next line (if AutoAdvance=True).
+            </summary>
+            <value>
+            Default: <b>2000ms</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.CssClass">
+            <summary>The CSS Class name applied to the ticker.</summary>
+            <value>
+            Default: <b>string.Empty</b>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.UserTickerLines">
+            <summary>
+            Allows the user to add tickerlines programmatically.
+            </summary>
+            <value>
+            Default: null
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.BorderColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.BorderStyle">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.TabIndex">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.AccessKey">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.BorderWidth">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.Font">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.BackColor">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.ForeColor">
+            <excludetoc/>
+            <exclude/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.Width">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.Height">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTicker.ToolTip">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.RadTickerLine">
+            <excludetoc/>
+            <exclude/>
+        </member>
+        <member name="P:Telerik.WebControls.RadTickerLine.Text">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="T:Telerik.WebControls.RadTickerLineCollection">
+            <exclude/>
+            <moduleiscollection/>
+            <excludetoc/>
+        </member>
+    </members>
+</doc>

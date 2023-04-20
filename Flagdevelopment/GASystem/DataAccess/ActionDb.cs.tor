@@ -1,0 +1,154 @@
+using System;
+using GASystem.DataModel;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace GASystem.DataAccess
+{
+	/// <summary>
+	/// Summary description for ActionDb.
+	/// </summary>
+	public class ActionDb
+	{
+
+		//private static SqlConnection myConnection;
+		private static string _selectSql = @"SELECT * FROM GAAction";
+        //private static string _selectSqlStartPending = @"SELECT * FROM GAAction";
+        // Tor 20120507 : create select for ensuring that StartPending Actions have an owner
+        private static string _filterForSelectSqlStartPending = @"select ' Select s.SuperClassRowId '
+union all Select ' ,Case '
+union all select ' when s.OwnerClass='''+l.OwnerClass+''' and not('+l.OwnerClass+'.'+SUBSTRING(l.OwnerClass,3,99)+'RowId is null) THEN '+l.OwnerClass+'.'+SUBSTRING(l.OwnerClass,3,99)+'RowId' from GASuperClassLinks l where l.MemberClass='GAAction'
+union all select ' else null end as myOwnerClassRowId'
+union all select ' from GASuperClass s '
+union all select ' left join '+l.OwnerClass+' '+l.OwnerClass+' on s.OwnerClassRowId='+l.OwnerClass+'.'+SUBSTRING(l.OwnerClass,3,99)+'RowId and s.OwnerClass='''+l.OwnerClass+'''' from GASuperClassLinks l where l.MemberClass='GAAction'
+";
+        public enum WorkflowRunStatus { StartPending, Started, Finished, Failed };
+		
+		public ActionDb()
+		{
+			//
+			// TODO: Add constructor logic here
+			//
+		}
+
+		public static ActionDS GetAllActions()
+		{
+
+			ActionDS ActionData = new ActionDS();	
+			SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+			
+			SqlDataAdapter da = new SqlDataAdapter(_selectSql, myConnection);
+			da.Fill(ActionData, "GAAction");
+		
+			return ActionData;
+		}
+
+		public static ActionDS GetActionByActionRowId(int ActionRowId)
+		{
+			String appendSql = " WHERE ActionRowId="+ActionRowId;
+			ActionDS ActionData = new ActionDS();
+            SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+		
+			SqlDataAdapter da = new SqlDataAdapter(_selectSql+appendSql, myConnection);
+			da.Fill(ActionData, "GAAction");
+			return ActionData;
+		}
+
+        public static ActionDS GetActionByActionRowId(int ActionRowId, GADataTransaction transaction)
+		{
+			String appendSql = " WHERE ActionRowId="+ActionRowId;
+			ActionDS ActionData = new ActionDS();
+            SqlConnection myConnection = DataUtils.GetConnection(transaction);
+		
+			SqlDataAdapter da = new SqlDataAdapter(_selectSql+appendSql, myConnection);
+            if (transaction != null)
+                da.SelectCommand.Transaction = (SqlTransaction)transaction.Transaction;
+
+			da.Fill(ActionData, "GAAction");
+			return ActionData;
+		}
+
+		public static ActionDS GetActionForWorkFlowStartPending()
+		{
+            // Tor 20120507: create select for ensuring that StartPending Actions have an owner
+            // Tor 20130813 : added 'and b.myOwnerClassRowId is not null' at the end of string appendSQL to avoid starting workflow with non existing GAAction owner record
+            SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+            System.Data.DataSet ds = new System.Data.DataSet();
+            SqlDataAdapter daf = new SqlDataAdapter(_filterForSelectSqlStartPending, myConnection);
+            daf.Fill(ds);
+            String appendSqlFilter = "";
+
+            foreach (System.Data.DataRow row in ds.Tables[0].Rows)
+                appendSqlFilter += row[0];
+
+            String appendSql = " a inner join GASuperClass s on a.ActionRowId=s.MemberClassRowId and s.MemberClass='GAAction' inner join ( "
+                + appendSqlFilter
+                + " ) b on s.SuperClassRowId=b.SuperClassRowId  WHERE a.workflowid like '" + WorkflowRunStatus.StartPending.ToString() + "%' and b.myOwnerClassRowId is not null";
+            // end changes 
+
+            // Tor 20120507 : replaced by above. String appendSql = " WHERE workflowid like '" + WorkflowRunStatus.StartPending.ToString()  + "%'";
+			ActionDS ActionData = new ActionDS();
+            //SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+		
+			// Tor 20181024 SqlDataAdapter da = new SqlDataAdapter(_selectSql+appendSql, myConnection);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT a.* FROM GAAction" + appendSql, myConnection);
+			da.Fill(ActionData, "GAAction");
+			return ActionData;
+		}
+
+		public static ActionDS GetActionsByOwner(int OwnerRowId, GADataClass OwnerDataClass )
+		{
+			ActionDS ActionData = new ActionDS();	
+			string selectSqlOwner = SQLGenerateUtils.GetSelectSqlMembers(GADataClass.GAAction, OwnerRowId, OwnerDataClass);
+			
+			SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+			SqlDataAdapter da = new SqlDataAdapter(selectSqlOwner , myConnection);
+			da.Fill(ActionData, GADataClass.GAAction.ToString());
+			return ActionData;
+		}
+
+		public static ActionDS GetOpenActionsByOwner(int OwnerRowId, GADataClass OwnerDataClass )
+		{
+			ActionDS ActionData = new ActionDS();	
+			string selectSqlOwner = SQLGenerateUtils.GetSelectSqlMembers(GADataClass.GAAction, OwnerRowId, OwnerDataClass);
+			selectSqlOwner += "and (ActionStatusListsRowId <> 243 or ActionStatusListsRowId is null) ";
+			SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+			SqlDataAdapter da = new SqlDataAdapter(selectSqlOwner , myConnection);
+			da.Fill(ActionData, GADataClass.GAAction.ToString());
+			return ActionData;
+		}
+
+
+		public static ActionDS GetActionByWorkFlowId(int WorkflowId)
+		{
+			String appendSql = " WHERE WorkflowId="+WorkflowId;
+			ActionDS ActionData = new ActionDS();
+            SqlConnection myConnection = new SqlConnection(DataUtils.getConnectionString());
+		
+			SqlDataAdapter da = new SqlDataAdapter(_selectSql+appendSql, myConnection);
+			da.Fill(ActionData, "GAAction");
+			return ActionData;
+		}
+		
+		public static ActionDS UpdateAction(ActionDS ActionSet, GADataTransaction Transaction)
+		{
+		// Transaction start
+			SqlConnection myConnection = DataUtils.GetConnection(Transaction);
+			SqlDataAdapter da = new SqlDataAdapter(_selectSql, myConnection);
+			if (Transaction != null)
+				da.SelectCommand.Transaction = (SqlTransaction) Transaction.Transaction;
+			da.SelectCommand.Connection = myConnection;
+		// 
+			SqlCommandBuilder  cb = new SqlCommandBuilder(da);
+			da.RowUpdated += new SqlRowUpdatedEventHandler(DataUtils.DataAdapter_RowUpdated);
+
+			da.Update(ActionSet, GADataClass.GAAction.ToString());
+			return ActionSet;
+		}
+		public static ActionDS UpdateAction(ActionDS ActionSet)
+		{
+			return UpdateAction(ActionSet, null);
+		}
+
+	}
+}

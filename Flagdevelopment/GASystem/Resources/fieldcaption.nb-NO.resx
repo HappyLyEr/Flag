@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmployeNo" xml:space="preserve">
+    <value>Ansatt nr</value>
+  </data>
+  <data name="DepartmentId" xml:space="preserve">
+    <value>Avd. id</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Født dato</value>
+  </data>
+  <data name="HomeAddress" xml:space="preserve">
+    <value>Hjemmeadresse</value>
+  </data>
+  <data name="HomePhoneNumber" xml:space="preserve">
+    <value>Tlf. hjemme</value>
+  </data>
+  <data name="MobilePhoneNumber" xml:space="preserve">
+    <value>Tlf. mobil</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>e-post</value>
+  </data>
+  <data name="NationalOrSecurityNumber" xml:space="preserve">
+    <value>National Security Number</value>
+  </data>
+  <data name="NationalityListsRowId" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="BloodType" xml:space="preserve">
+    <value>Blodtype</value>
+  </data>
+  <data name="GivenName" xml:space="preserve">
+    <value>Fornavn</value>
+  </data>
+  <data name="FamilyName" xml:space="preserve">
+    <value>Etternavn</value>
+  </data>
+  <data name="Initials" xml:space="preserve">
+    <value>Initialer</value>
+  </data>
+  <data name="MaritalStatusListsRowId" xml:space="preserve">
+    <value>Sivil status</value>
+  </data>
+  <data name="DepartmentRowId" xml:space="preserve">
+    <value>Avdeling</value>
+  </data>
+  <data name="CompanyRowId" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tittel</value>
+  </data>
+  <data name="DocumentName" xml:space="preserve">
+    <value>Dokument navn</value>
+  </data>
+  <data name="DocumentId" xml:space="preserve">
+    <value>Dokument id</value>
+  </data>
+  <data name="VersionNo" xml:space="preserve">
+    <value>Versjon</value>
+  </data>
+  <data name="SexListsRowId" xml:space="preserve">
+    <value>Kjønn</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="PersonnelType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Navn</value>
+  </data>
+  <data name="Attachment" xml:space="preserve">
+    <value>Vedlegg</value>
+  </data>
+  <data name="WorkAreaListsRowId" xml:space="preserve">
+    <value>Arbeidsoperasjon</value>
+  </data>
+  <data name="ShortDescription" xml:space="preserve">
+    <value>Kort beskrivelse</value>
+  </data>
+  <data name="ClassificationListsRowId" xml:space="preserve">
+    <value>Hendelse klassifisering</value>
+  </data>
+  <data name="DateAndTimeOfIncident" xml:space="preserve">
+    <value>Dato og tid for hendelse</value>
+  </data>
+  <data name="HasMaritimeReport" xml:space="preserve">
+    <value>Har maritim rapport</value>
+  </data>
+  <data name="ImmediateActions" xml:space="preserve">
+    <value>Umiddelbar aksjoner</value>
+  </data>
+  <data name="IncidentId" xml:space="preserve">
+    <value>Hendelse id</value>
+  </data>
+  <data name="ReportDate" xml:space="preserve">
+    <value>Rapport dato</value>
+  </data>
+  <data name="RiskLossEvaluation" xml:space="preserve">
+    <value>Risiko og tapsevaluering</value>
+  </data>
+  <data name="RootCause" xml:space="preserve">
+    <value>Årsak</value>
+  </data>
+  <data name="StatusListsRowId" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Witness" xml:space="preserve">
+    <value>Vitne</value>
+  </data>
+  <data name="ActionReferenceId" xml:space="preserve">
+    <value>Aksjon ref.id</value>
+  </data>
+  <data name="ActionTemplateName" xml:space="preserve">
+    <value>Mal navn</value>
+  </data>
+  <data name="NoteInstructions" xml:space="preserve">
+    <value>Notat / Instruks</value>
+  </data>
+  <data name="DateEndEstimated" xml:space="preserve">
+    <value>Estimert ferdig dato</value>
+  </data>
+  <data name="TypeOfWorkListsRowId" xml:space="preserve">
+    <value>Arbeidstype</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Velg</value>
+  </data>
+  <data name="ActionReference" xml:space="preserve">
+    <value>Aksjons ref. id</value>
+  </data>
+  <data name="WorkflowName" xml:space="preserve">
+    <value>Arbeidsflyt navn</value>
+  </data>
+  <data name="WorkflowCategoryListsRowId" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="Shortname" xml:space="preserve">
+    <value>Kort navn</value>
+  </data>
+  <data name="ActionName" xml:space="preserve">
+    <value>Aksjonsnavn</value>
+  </data>
+  <data name="DailyEmployeeCountReferenceId" xml:space="preserve">
+    <value>Referanse id</value>
+  </data>
+  <data name="LocationOfWork" xml:space="preserve">
+    <value>Arbeidssted</value>
+  </data>
+  <data name="YesNoSafetyEventListsRowId" xml:space="preserve">
+    <value>Sikkerhets hendelse</value>
+  </data>
+  <data name="SeismicPersonnelCount" xml:space="preserve">
+    <value>Seismisk personell</value>
+  </data>
+  <data name="MarinePersonnelCount" xml:space="preserve">
+    <value>Maritimt personell</value>
+  </data>
+  <data name="ThirdPartyPersonnelCount" xml:space="preserve">
+    <value>3. parts personell</value>
+  </data>
+  <data name="OfficePersonnelCount" xml:space="preserve">
+    <value>Kontorpersonale</value>
+  </data>
+  <data name="ProjectReferenceId" xml:space="preserve">
+    <value>Prosjekt id</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>Klient</value>
+  </data>
+  <data name="CountryCodeListsRowId" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Blokk</value>
+  </data>
+  <data name="DateStart" xml:space="preserve">
+    <value>Start dato</value>
+  </data>
+  <data name="DateEndActual" xml:space="preserve">
+    <value>Virkelig ferdig dato</value>
+  </data>
+  <data name="AssignedOn" xml:space="preserve">
+    <value>Tildelt dato</value>
+  </data>
+  <data name="ResponseBy" xml:space="preserve">
+    <value>Svar innen</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Filnavn</value>
+  </data>
+  <data name="Mimetype" xml:space="preserve">
+    <value>Dokument type</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Eier</value>
+  </data>
+  <data name="TaskStatus" xml:space="preserve">
+    <value>Oppgave status</value>
+  </data>
+  <data name="WorkflowRowId" xml:space="preserve">
+    <value>Arbeidsflyt</value>
+  </data>
+  <data name="Member" xml:space="preserve">
+    <value>Medlem</value>
+  </data>
+  <data name="SeverityListsRowId" xml:space="preserve">
+    <value>Alvorlighetsgrad</value>
+  </data>
+  <data name="SeverityPeopleListsRowId" xml:space="preserve">
+    <value>Konsekvens for personelll</value>
+  </data>
+  <data name="SeverityAssetsListsRowId" xml:space="preserve">
+    <value>Konsekvens for Materiell</value>
+  </data>
+  <data name="SeverityEnvironmentListsRowId" xml:space="preserve">
+    <value>Konsekvens for miljø</value>
+  </data>
+  <data name="ReportId" xml:space="preserve">
+    <value>Rapport id</value>
+  </data>
+  <data name="ReportInstanceName" xml:space="preserve">
+    <value>Forekomst navn</value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>Kolonne navn</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operatør</value>
+  </data>
+  <data name="ColumnValue" xml:space="preserve">
+    <value>Kolonne verdi</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Overskrift</value>
+  </data>
+  <data name="Presenter" xml:space="preserve">
+    <value>Presentert av</value>
+  </data>
+  <data name="PresenterId" xml:space="preserve">
+    <value>Presentert av id</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>Sekvens</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="TextItemRowId" xml:space="preserve">
+    <value>Tekstelement rad id</value>
+  </data>
+  <data name="TimeEnd" xml:space="preserve">
+    <value>Slutt tid</value>
+  </data>
+  <data name="TimeStart" xml:space="preserve">
+    <value>Start tid</value>
+  </data>
+  <data name="ContractNumber" xml:space="preserve">
+    <value>Kontrakt id</value>
+  </data>
+  <data name="EmploymentCategoryListsRowId" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>Fra dato</value>
+  </data>
+  <data name="JobTitleListsRowId" xml:space="preserve">
+    <value>Stilling</value>
+  </data>
+  <data name="Personnel" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="RoleListsRowId" xml:space="preserve">
+    <value>Rolle</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>Til dato</value>
+  </data>
+  <data name="ChangedBy" xml:space="preserve">
+    <value>Endret av</value>
+  </data>
+  <data name="DateChanged" xml:space="preserve">
+    <value>Endret dato</value>
+  </data>
+  <data name="DateDefined" xml:space="preserve">
+    <value>Definert dato</value>
+  </data>
+  <data name="DefinedBy" xml:space="preserve">
+    <value>Definert av</value>
+  </data>
+  <data name="MilestoneText" xml:space="preserve">
+    <value>Milepæl tekst</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Referanse</value>
+  </data>
+  <data name="RequiredForRiskLevel" xml:space="preserve">
+    <value>Behov for risiko nivå</value>
+  </data>
+  <data name="TaskTemplateId" xml:space="preserve">
+    <value>Oppgave mal id</value>
+  </data>
+  <data name="TaskId" xml:space="preserve">
+    <value>Oppgave id</value>
+  </data>
+  <data name="CompanyId" xml:space="preserve">
+    <value>Firma id</value>
+  </data>
+  <data name="BankAccount" xml:space="preserve">
+    <value>Bank konto</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="CourseReferenceId" xml:space="preserve">
+    <value>Kurs referanse id</value>
+  </data>
+  <data name="TypeOfCourseListsRowId" xml:space="preserve">
+    <value>Kurs type</value>
+  </data>
+  <data name="InvolvedPersonnelCount" xml:space="preserve">
+    <value>Antall involvert</value>
+  </data>
+  <data name="DateOfCourse" xml:space="preserve">
+    <value>Kurs dato</value>
+  </data>
+  <data name="CourseLeader" xml:space="preserve">
+    <value>Kursleder</value>
+  </data>
+  <data name="Cause" xml:space="preserve">
+    <value>Årsak</value>
+  </data>
+  <data name="ContributingFactors" xml:space="preserve">
+    <value>Bidragsfaktorer</value>
+  </data>
+  <data name="YearsOffshoreEx" xml:space="preserve">
+    <value>År offshore erfaring</value>
+  </data>
+  <data name="MonthsOffshoreExperience" xml:space="preserve">
+    <value>Offshore erfaring</value>
+  </data>
+  <data name="YearsWorked" xml:space="preserve">
+    <value>År arbeidet</value>
+  </data>
+  <data name="MonthsWorked" xml:space="preserve">
+    <value>Arbeidserfaring</value>
+  </data>
+  <data name="DaysWorkedOnTheShift" xml:space="preserve">
+    <value>Dager på dette skiftet</value>
+  </data>
+  <data name="HoursWorkedOnTheDay" xml:space="preserve">
+    <value>Timer arbeidet denne dagen</value>
+  </data>
+  <data name="NumberOfDaysLost" xml:space="preserve">
+    <value>Antall dager tapt</value>
+  </data>
+  <data name="MedicalTreatmentDescription" xml:space="preserve">
+    <value>Medisinsk behandling</value>
+  </data>
+  <data name="SummaryOfTreatment" xml:space="preserve">
+    <value>Oppsummering av behandling</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Arbeidserfaring</value>
+  </data>
+  <data name="ContactDeviceTypeListsRowId" xml:space="preserve">
+    <value>Kontakt type</value>
+  </data>
+  <data name="ContactDeviceAddress" xml:space="preserve">
+    <value>Nr. / adresse</value>
+  </data>
+  <data name="MeetingReferenceId" xml:space="preserve">
+    <value>Møte referanse id</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Sted</value>
+  </data>
+  <data name="DateOfMeeting" xml:space="preserve">
+    <value>Møte dato</value>
+  </data>
+  <data name="TypeOfMeetingListsRowId" xml:space="preserve">
+    <value>Møte type</value>
+  </data>
+  <data name="Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>Formål</value>
+  </data>
+  <data name="Conductor" xml:space="preserve">
+    <value>Møteleder</value>
+  </data>
+  <data name="MeetingOwner" xml:space="preserve">
+    <value>Møte eier</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Leder</value>
+  </data>
+  <data name="DateAndTimeNextMeeting" xml:space="preserve">
+    <value>Dato/tid for neste møte</value>
+  </data>
+  <data name="AuditReferenceId" xml:space="preserve">
+    <value>Kontroll referanse id</value>
+  </data>
+  <data name="TypeOfAuditListsRowId" xml:space="preserve">
+    <value>Revisjons type</value>
+  </data>
+  <data name="Auditor" xml:space="preserve">
+    <value>Revisor</value>
+  </data>
+  <data name="DateOfAudit" xml:space="preserve">
+    <value>Kontroll dato</value>
+  </data>
+  <data name="AuditStatusListsRowId" xml:space="preserve">
+    <value>Revisjons status</value>
+  </data>
+  <data name="TypeOfCertificateListsRowId" xml:space="preserve">
+    <value>Sertifikat type</value>
+  </data>
+  <data name="CertificateId" xml:space="preserve">
+    <value>Sertifikat id/nr.</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>Fra dato</value>
+  </data>
+  <data name="DateExpire" xml:space="preserve">
+    <value>Utgår dato</value>
+  </data>
+  <data name="TypeOfKinListsRowId" xml:space="preserve">
+    <value>Pårørende type</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefonnr.</value>
+  </data>
+  <data name="TypeOfLocationListsRowId" xml:space="preserve">
+    <value>Lokalitet type</value>
+  </data>
+  <data name="CountryOfRegistrationListsRowId" xml:space="preserve">
+    <value>Registrert i land</value>
+  </data>
+  <data name="CallSign" xml:space="preserve">
+    <value>Kallesignal</value>
+  </data>
+  <data name="LocationIdNumber" xml:space="preserve">
+    <value>Lokalitet id</value>
+  </data>
+  <data name="PriorityListsRowId" xml:space="preserve">
+    <value>Prioritet</value>
+  </data>
+  <data name="Responsible" xml:space="preserve">
+    <value>Ansvarlig</value>
+  </data>
+  <data name="ReportDescription" xml:space="preserve">
+    <value>Rapport beskrivelse</value>
+  </data>
+  <data name="ReportFile" xml:space="preserve">
+    <value>Rapport fil</value>
+  </data>
+  <data name="ReportInstanceDescription" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="ActionStatusListsRowId" xml:space="preserve">
+    <value>Aksjon status</value>
+  </data>
+  <data name="InjuredPersonnel" xml:space="preserve">
+    <value>Skadet person</value>
+  </data>
+  <data name="MonthsOffshoreEx" xml:space="preserve">
+    <value>Måneder med offshore erfaring</value>
+  </data>
+  <data name="DateTimeFrom" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="DateTimeTo" xml:space="preserve">
+    <value>Til</value>
+  </data>
+  <data name="PlaceOfEmbarkment" xml:space="preserve">
+    <value>Sted for ombordstigning</value>
+  </data>
+  <data name="TypeOfIdListsRowId" xml:space="preserve">
+    <value>Id type</value>
+  </data>
+  <data name="IdentificationIDNumber" xml:space="preserve">
+    <value>Id nummer</value>
+  </data>
+  <data name="RoomId" xml:space="preserve">
+    <value>Rom id</value>
+  </data>
+  <data name="BunksInRoom" xml:space="preserve">
+    <value>Køyer i rom</value>
+  </data>
+  <data name="Bunk" xml:space="preserve">
+    <value>Køye</value>
+  </data>
+  <data name="Raft" xml:space="preserve">
+    <value>Livbåt</value>
+  </data>
+  <data name="ActionAbandonShip" xml:space="preserve">
+    <value>Aksjon når båt rømmes</value>
+  </data>
+  <data name="ActionFire" xml:space="preserve">
+    <value>Aksjon ved brann</value>
+  </data>
+  <data name="ActionManOverboard" xml:space="preserve">
+    <value>Aksjon når mann overbord</value>
+  </data>
+  <data name="WatchListsRowId" xml:space="preserve">
+    <value>Skift</value>
+  </data>
+  <data name="TypeOfCostListsRowId" xml:space="preserve">
+    <value>Kostnad type</value>
+  </data>
+  <data name="NumberOfUnits" xml:space="preserve">
+    <value>Enheter</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Enhetspris</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Kostnader i Kr</value>
+  </data>
+  <data name="CurrencyCode" xml:space="preserve">
+    <value>Valuta</value>
+  </data>
+  <data name="ContributingFactor" xml:space="preserve">
+    <value>Bidragsfaktor</value>
+  </data>
+  <data name="DateAndTimeOfDamage" xml:space="preserve">
+    <value>Dato og tid</value>
+  </data>
+  <data name="TypeOfDamageListsRowId" xml:space="preserve">
+    <value>Skade type</value>
+  </data>
+  <data name="SuggestedCorrectiveAction" xml:space="preserve">
+    <value>Forslag til rettelser</value>
+  </data>
+  <data name="DamagedEquipment" xml:space="preserve">
+    <value>Skadet Materiell</value>
+  </data>
+  <data name="MeetingRowId" xml:space="preserve">
+    <value>Møte</value>
+  </data>
+  <data name="DistributionTo" xml:space="preserve">
+    <value>Til</value>
+  </data>
+  <data name="DistributionCC" xml:space="preserve">
+    <value>Kopi til</value>
+  </data>
+  <data name="DistributionBCC" xml:space="preserve">
+    <value>Blind kopi til</value>
+  </data>
+  <data name="Participant" xml:space="preserve">
+    <value>Deltaker</value>
+  </data>
+  <data name="Absent" xml:space="preserve">
+    <value>Fraværende</value>
+  </data>
+  <data name="PersonId" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="MeetingPresenter" xml:space="preserve">
+    <value>Presentert av</value>
+  </data>
+  <data name="SequenceNo" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="MeetingStartTime" xml:space="preserve">
+    <value>Start tid</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="ResourceId" xml:space="preserve">
+    <value>Ressurs id</value>
+  </data>
+  <data name="TypeOfResourceListsRowId" xml:space="preserve">
+    <value>Ressurs type</value>
+  </data>
+  <data name="ResourceUniqueId" xml:space="preserve">
+    <value>Ressurs unik id</value>
+  </data>
+  <data name="DateOfAcquisition" xml:space="preserve">
+    <value>Anskaffet dato</value>
+  </data>
+  <data name="SupplierRowId" xml:space="preserve">
+    <value>Leverandør</value>
+  </data>
+  <data name="UnitCost" xml:space="preserve">
+    <value>Enhetskost</value>
+  </data>
+  <data name="NumberOfSpareParts" xml:space="preserve">
+    <value>Antall på lager</value>
+  </data>
+  <data name="NumberOfPartsInOrder" xml:space="preserve">
+    <value>Antall i bestilling</value>
+  </data>
+  <data name="DeliveryTimeInDays" xml:space="preserve">
+    <value>Leveringstid i dager</value>
+  </data>
+  <data name="TypeOfSpecificationListsRowId" xml:space="preserve">
+    <value>Spesifikasjons type</value>
+  </data>
+  <data name="DateLastInspection" xml:space="preserve">
+    <value>Inspeksjons dato</value>
+  </data>
+  <data name="DateNextInspection" xml:space="preserve">
+    <value>Neste inspeksjon dato</value>
+  </data>
+  <data name="DateCertificateExpire" xml:space="preserve">
+    <value>Sertifikat utgår dato</value>
+  </data>
+  <data name="MotherTask" xml:space="preserve">
+    <value>Underlagt</value>
+  </data>
+  <data name="Requestor" xml:space="preserve">
+    <value>Anmoder</value>
+  </data>
+  <data name="ManagerResourceRequestDate" xml:space="preserve">
+    <value>Leder på dato for forespørsel</value>
+  </data>
+  <data name="RequestStatusListsRowId" xml:space="preserve">
+    <value>Status på anmodning</value>
+  </data>
+  <data name="ManagerAcceptanseDate" xml:space="preserve">
+    <value>Leder på dato for aksept</value>
+  </data>
+  <data name="DataAcceptedByResponsible" xml:space="preserve">
+    <value>Dato for aksept</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Viktighet av oppgave </value>
+  </data>
+  <data name="TeamId" xml:space="preserve">
+    <value>Team id</value>
+  </data>
+  <data name="ParentTeamId" xml:space="preserve">
+    <value>Overordnet team id</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>Til dato</value>
+  </data>
+  <data name="WorkLocation" xml:space="preserve">
+    <value>Arbeidssted</value>
+  </data>
+  <data name="NameOfReporter" xml:space="preserve">
+    <value>Rapportør navn</value>
+  </data>
+  <data name="JobTitleOfReporter" xml:space="preserve">
+    <value>Rapportørens stilling</value>
+  </data>
+  <data name="ResourceRowId" xml:space="preserve">
+    <value>Ressurs</value>
+  </data>
+  <data name="SuggestedFurtherAction" xml:space="preserve">
+    <value>Forslag til videre tiltak</value>
+  </data>
+  <data name="PossibleConsequence" xml:space="preserve">
+    <value>Mulig konsekvens</value>
+  </data>
+  <data name="HazardReferenceId" xml:space="preserve">
+    <value>Fare referanse</value>
+  </data>
+  <data name="PotentialListsRowId" xml:space="preserve">
+    <value>Potensial</value>
+  </data>
+  <data name="RiskEvaluation" xml:space="preserve">
+    <value>Risiko evaluering</value>
+  </data>
+  <data name="IdentifiedDate" xml:space="preserve">
+    <value>Identifisert dato</value>
+  </data>
+  <data name="ImmediateAction" xml:space="preserve">
+    <value>Umiddelbar aksjon</value>
+  </data>
+  <data name="DailyEmployeeCountComment" xml:space="preserve">
+    <value>Kommentar</value>
+  </data>
+  <data name="ClientPersonnelCount" xml:space="preserve">
+    <value>Personell fra klient</value>
+  </data>
+  <data name="EmploymentRowId" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="TypeOfHIPListsRowId" xml:space="preserve">
+    <value>Fare Type</value>
+  </data>
+  <data name="ActivityObserved" xml:space="preserve">
+    <value>Aktivitet observert</value>
+  </data>
+  <data name="SOPProcedure" xml:space="preserve">
+    <value>Referanse prosedyre</value>
+  </data>
+  <data name="ProcedureNotAvailable" xml:space="preserve">
+    <value>Referanse prosedyre ikke tilgjengelig</value>
+  </data>
+  <data name="SOPTypeOfObservationListsRowId" xml:space="preserve">
+    <value>Observasjonstype</value>
+  </data>
+  <data name="SOPProceduresAndInstructionListsRowId" xml:space="preserve">
+    <value>Prosedyre og instruks</value>
+  </data>
+  <data name="SOPHumanFactorListsRowId" xml:space="preserve">
+    <value>Menneskelig faktor</value>
+  </data>
+  <data name="SOPPermitToWorkListsRowId" xml:space="preserve">
+    <value>Arbeidstillatelse</value>
+  </data>
+  <data name="SafetyObservationReferenceId" xml:space="preserve">
+    <value>Referanse id</value>
+  </data>
+  <data name="DateOfInspection" xml:space="preserve">
+    <value>Inspeksjonsdato</value>
+  </data>
+  <data name="Observer" xml:space="preserve">
+    <value>Observatør</value>
+  </data>
+  <data name="SOPPersonalProtectiveEquipmentListsRowId" xml:space="preserve">
+    <value>Personlig verneutstyr</value>
+  </data>
+  <data name="SOPLockOutListsRowId" xml:space="preserve">
+    <value>Avkryssing</value>
+  </data>
+  <data name="NotGoodComments" xml:space="preserve">
+    <value>Beskrivelse av mangler</value>
+  </data>
+  <data name="SuggestionForImprovement" xml:space="preserve">
+    <value>Forslag til forbedringer</value>
+  </data>
+  <data name="SOPToolsAndEquipmentListsRowId" xml:space="preserve">
+    <value>Verktøy og utstyr</value>
+  </data>
+  <data name="PersonnelRowId" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="DepartmentListsRowId" xml:space="preserve">
+    <value>Avdeling</value>
+  </data>
+  <data name="DNNUserId" xml:space="preserve">
+    <value>Login id</value>
+  </data>
+  <data name="ContextClass" xml:space="preserve">
+    <value>Ståsted klasse</value>
+  </data>
+  <data name="ContextRowId" xml:space="preserve">
+    <value>Ståsted rad</value>
+  </data>
+  <data name="CetaceansCount" xml:space="preserve">
+    <value>Havdyr</value>
+  </data>
+  <data name="CetaceansCountComment" xml:space="preserve">
+    <value>Havdyr kommentar</value>
+  </data>
+  <data name="CrewBoatActivitiesCountComment" xml:space="preserve">
+    <value>Båt oppgave kommentar</value>
+  </data>
+  <data name="MaritimeIcidentAndIllnessCount" xml:space="preserve">
+    <value>Maritime hendelser og sykdom</value>
+  </data>
+  <data name="MaritimeIcidentAndIllnessCountComment" xml:space="preserve">
+    <value>Maritime hendelser og sykdom kommentar</value>
+  </data>
+  <data name="OwnIncidentAndIllnessCount" xml:space="preserve">
+    <value>Eget personell hendelser og sykdom</value>
+  </data>
+  <data name="OwnIncidentAndIllnessCountComment" xml:space="preserve">
+    <value>Eget personell hendelser og sykdom kommentar</value>
+  </data>
+  <data name="HIPCardUnsafeActsCount" xml:space="preserve">
+    <value>Fareregistreringskort farlige handlinger</value>
+  </data>
+  <data name="HIPCardUnsafeActsCountComment" xml:space="preserve">
+    <value>Fareregistreringskort farlige handlinger kommentar</value>
+  </data>
+  <data name="HIPCardNearMissesCount" xml:space="preserve">
+    <value>Fareregistreringskort nestenulykker </value>
+  </data>
+  <data name="HIPCardNearMissesCountComment" xml:space="preserve">
+    <value>Fareregistreringskort nestenulykker kommentar</value>
+  </data>
+  <data name="CrewSafetyMeetingsCountComment" xml:space="preserve">
+    <value>Mannskap sikkerhetsmøter kommentar</value>
+  </data>
+  <data name="ToolboxMeetingsCountComment" xml:space="preserve">
+    <value>Arbeidskasse møter kommentar</value>
+  </data>
+  <data name="SafetyDrillsCountComment" xml:space="preserve">
+    <value>Sikkerhetsøvelser kommentar</value>
+  </data>
+  <data name="SOPDepartmentalInspectionsCount" xml:space="preserve">
+    <value>Avdelings-sikkerhetsinspeksjon</value>
+  </data>
+  <data name="SOPDepartmentalInspectionsCountComment" xml:space="preserve">
+    <value>Avdelings-sikkerhetsinspeksjon, kommentar</value>
+  </data>
+  <data name="SOPCrossDepartmentalInspectionsCount" xml:space="preserve">
+    <value>Sikkerhetsinspeksjon av flere avdelinger </value>
+  </data>
+  <data name="SOPCrossDepartmentalInspectionsCountComment" xml:space="preserve">
+    <value>Sikkerhetsinspeksjon av flere avdelinger, kommentar</value>
+  </data>
+  <data name="SOPPartyChiefInspectionsCount" xml:space="preserve">
+    <value>Arbeidsleders sikkerhetsinspeksjon</value>
+  </data>
+  <data name="SOPPartyChiefInspectionsCountComment" xml:space="preserve">
+    <value>Arbeidsleders sikkerhetsinspeksjon, kommentar</value>
+  </data>
+  <data name="AOBComment" xml:space="preserve">
+    <value>Eventuelt kommentar</value>
+  </data>
+  <data name="ManHours" xml:space="preserve">
+    <value>Mann timer</value>
+  </data>
+  <data name="ProjectManHours" xml:space="preserve">
+    <value>Prosjekt mann timer</value>
+  </data>
+  <data name="ReporterJobTitle" xml:space="preserve">
+    <value>Rapportørs stilling</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subjekt</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Fil</value>
+  </data>
+  <data name="ReferenceIdPrefix" xml:space="preserve">
+    <value>Referanse id prefiks</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Klasse</value>
+  </data>
+  <data name="Risk" xml:space="preserve">
+    <value>Risikovurdering</value>
+  </data>
+  <data name="IncidentReporter" xml:space="preserve">
+    <value>Hendelse rapportør</value>
+  </data>
+  <data name="ReporterJobTitleListsRowId" xml:space="preserve">
+    <value>Rapportørs stilling</value>
+  </data>
+  <data name="MeetingOwnerPersonnelRowId" xml:space="preserve">
+    <value>Møte eier</value>
+  </data>
+  <data name="ConductorPersonnelRowId" xml:space="preserve">
+    <value>Møteleder</value>
+  </data>
+  <data name="ReporterPersonnelRowId" xml:space="preserve">
+    <value>Referent</value>
+  </data>
+  <data name="SequenceOfTheIncident" xml:space="preserve">
+    <value>Hendelse forløp</value>
+  </data>
+  <data name="ContributionFactorToTheIncident" xml:space="preserve">
+    <value>Medvirkende faktorer</value>
+  </data>
+  <data name="TypeOfIncidentListsRowId" xml:space="preserve">
+    <value>Hendelse type</value>
+  </data>
+  <data name="CurrencyCodeListsRowId" xml:space="preserve">
+    <value>Valuta</value>
+  </data>
+  <data name="WorkExperienceFromDate" xml:space="preserve">
+    <value>Arbeidserfaring fra dato</value>
+  </data>
+  <data name="OffshoreExperienceFromDate" xml:space="preserve">
+    <value>Offshore erfaring fra dato</value>
+  </data>
+  <data name="GivesCertificate" xml:space="preserve">
+    <value>Gir sertifikat</value>
+  </data>
+  <data name="ParentCompanyRowId" xml:space="preserve">
+    <value>Selskap</value>
+  </data>
+  <data name="DescriptionMedicalTreatment" xml:space="preserve">
+    <value>Medisinsk behandling</value>
+  </data>
+  <data name="DescriptionInjury" xml:space="preserve">
+    <value>Beskrivelse av skade</value>
+  </data>
+  <data name="WebAddress" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="ReporterCheckbox" xml:space="preserve">
+    <value>Referent</value>
+  </data>
+  <data name="JobDescription" xml:space="preserve">
+    <value>Arbeidsbeskrivelse dokument</value>
+  </data>
+  <data name="FileRowId" xml:space="preserve">
+    <value>Dokument</value>
+  </data>
+  <data name="ClientRowId" xml:space="preserve">
+    <value>Klient</value>
+  </data>
+  <data name="GAListCategory" xml:space="preserve">
+    <value>Kode kategori</value>
+  </data>
+  <data name="GAListValue" xml:space="preserve">
+    <value>Kode verdi</value>
+  </data>
+  <data name="GAListDescription" xml:space="preserve">
+    <value>Engelsk kode beskrivelse</value>
+  </data>
+  <data name="GAListValue_nb_no" xml:space="preserve">
+    <value>Kode verdi</value>
+  </data>
+  <data name="GAListDescription_nb_no" xml:space="preserve">
+    <value>Kode beskrivelse</value>
+  </data>
+  <data name="Sort1" xml:space="preserve">
+    <value>Sekvens i sorteringsvalg 1</value>
+  </data>
+  <data name="Sort2" xml:space="preserve">
+    <value>Sekvens i sorteringsvalg 2</value>
+  </data>
+  <data name="Sort3" xml:space="preserve">
+    <value>Sekvens i sorteringsvalg 3</value>
+  </data>
+  <data name="Sort4" xml:space="preserve">
+    <value>Sekvens i sorteringsvalg 4</value>
+  </data>
+  <data name="Sort5" xml:space="preserve">
+    <value>Sekvens i sorteringsvalg 5</value>
+  </data>
+  <data name="Group1" xml:space="preserve">
+    <value>Gruppering nr. 1</value>
+  </data>
+  <data name="Group2" xml:space="preserve">
+    <value>Gruppering nr. 2</value>
+  </data>
+  <data name="Group3" xml:space="preserve">
+    <value>Gruppering nr. 3</value>
+  </data>
+  <data name="Group4" xml:space="preserve">
+    <value>Gruppering nr. 4</value>
+  </data>
+  <data name="Group5" xml:space="preserve">
+    <value>Gruppering nr. 5</value>
+  </data>
+  <data name="Group1Sort1" xml:space="preserve">
+    <value>Alternativ sortering for gruppering nr. 1</value>
+  </data>
+  <data name="Group2Sort1" xml:space="preserve">
+    <value>Alternativ sortering for gruppering nr. 2</value>
+  </data>
+  <data name="Group3Sort1" xml:space="preserve">
+    <value>Alternativ sortering for gruppering nr. 3</value>
+  </data>
+  <data name="Group4Sort1" xml:space="preserve">
+    <value>Alternativ sortering for gruppering nr. 4</value>
+  </data>
+  <data name="ListCategoryRowId" xml:space="preserve">
+    <value>Kode kategori</value>
+  </data>
+  <data name="GAListCategoryDescription" xml:space="preserve">
+    <value>Kode liste beskrivelse - Engelsk</value>
+  </data>
+  <data name="GAListCategoryDescription_nb_no" xml:space="preserve">
+    <value>Kode liste beskrivelse</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Prioritet</value>
+  </data>
+  <data name="EyeWitness" xml:space="preserve">
+    <value>Vitne</value>
+  </data>
+  <data name="ResourceStatusListsRowId" xml:space="preserve">
+    <value>Ressurs status</value>
+  </data>
+  <data name="ResourceSpecificationStatusListsRowId" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TypeOfDepartmentListsRowId" xml:space="preserve">
+    <value>Type avdeling</value>
+  </data>
+  <data name="WorkitemNotes" xml:space="preserve">
+    <value>Oppgave merknad</value>
+  </data>
+  <data name="WorkitemResponsible" xml:space="preserve">
+    <value>Oppgave ansvarlig</value>
+  </data>
+  <data name="WorkitemReaction" xml:space="preserve">
+    <value>Reaksjon på oppgave</value>
+  </data>
+  <data name="ProcedureRowId" xml:space="preserve">
+    <value>Prosedyre</value>
+  </data>
+  <data name="WorkflowId" xml:space="preserve">
+    <value>Prosess status</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Dato og tid</value>
+  </data>
+  <data name="rxtReportReferenceId" xml:space="preserve">
+    <value>Ref. id.</value>
+  </data>
+  <data name="SeverityReputationListsRowId" xml:space="preserve">
+    <value>Konsekvens for omdømme</value>
+  </data>
+  <data name="IsIncident" xml:space="preserve">
+    <value>Personskade</value>
+  </data>
+  <data name="IsRisk" xml:space="preserve">
+    <value>Risiko</value>
+  </data>
+  <data name="IsEquipmentDamage" xml:space="preserve">
+    <value>Materiell Skade</value>
+  </data>
+  <data name="ReportTitle" xml:space="preserve">
+    <value>Rapport tittel</value>
+  </data>
+  <data name="IsEnvironmentalDamage" xml:space="preserve">
+    <value> Miljø skade</value>
+  </data>
+  <data name="HasInitialReport" xml:space="preserve">
+    <value>Initiell rapport</value>
+  </data>
+  <data name="TargetPotentialListsRowId" xml:space="preserve">
+    <value>Mål potesial</value>
+  </data>
+  <data name="TargetSeverityAssetsListsRowId" xml:space="preserve">
+    <value>Mål aktiva</value>
+  </data>
+  <data name="TargetSeverityEnvironmentListsRowId" xml:space="preserve">
+    <value>Mål miljø</value>
+  </data>
+  <data name="TargetSeverityReputationListsRowId" xml:space="preserve">
+    <value>Mål omdømme</value>
+  </data>
+  <data name="TargetSeverityPeopleListsRowId" xml:space="preserve">
+    <value>Mål personell</value>
+  </data>
+  <data name="DateMitigationCompleted" xml:space="preserve">
+    <value>Tiltak iverksatt</value>
+  </data>
+  <data name="DateMitigationEstimated" xml:space="preserve">
+    <value>Tiltak iverksatt estimert</value>
+  </data>
+  <data name="CaptainIsInformed" xml:space="preserve">
+    <value>Kaptein er informert</value>
+  </data>
+  <data name="ClientIsInformed" xml:space="preserve">
+    <value>Klient er informert</value>
+  </data>
+  <data name="DaysInTravelFrom" xml:space="preserve">
+    <value>Reisedager fra</value>
+  </data>
+  <data name="DaysInTravelTo" xml:space="preserve">
+    <value>Reisedager til</value>
+  </data>
+  <data name="DocumentStatusListsRowId" xml:space="preserve">
+    <value>Dokument status</value>
+  </data>
+  <data name="ProjectRowId" xml:space="preserve">
+    <value>Prosjekt</value>
+  </data>
+  <data name="ManageChangeReferenceId" xml:space="preserve">
+    <value>Forespørsel id</value>
+  </data>
+  <data name="DateOfRequest" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="DateEffective" xml:space="preserve">
+    <value>Dato iverksatt</value>
+  </data>
+  <data name="IsContractual" xml:space="preserve">
+    <value>Kontraktuell endring</value>
+  </data>
+  <data name="TypeOfChangeRowId" xml:space="preserve">
+    <value>Type Endring</value>
+  </data>
+  <data name="DateOfRemoval" xml:space="preserve">
+    <value>Midlertidig endring fjernes dato</value>
+  </data>
+  <data name="NatureOfChange" xml:space="preserve">
+    <value>Type endring</value>
+  </data>
+  <data name="NatureOfChangeRowId" xml:space="preserve">
+    <value>Type endring</value>
+  </data>
+  <data name="DescriptionCurrent" xml:space="preserve">
+    <value>Beskriv nåværende</value>
+  </data>
+  <data name="RequestorId" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="EndorserId" xml:space="preserve">
+    <value>Arbeidsleder</value>
+  </data>
+  <data name="DateOfEndorsement" xml:space="preserve">
+    <value>Støttet dato</value>
+  </data>
+  <data name="Justification" xml:space="preserve">
+    <value>Bakgrunn</value>
+  </data>
+  <data name="OnSiteRiskAssessmentCompleted" xml:space="preserve">
+    <value>On-site risikoanalyse gjennomført</value>
+  </data>
+  <data name="OnshoreRiskAssessmentCompleted" xml:space="preserve">
+    <value>Onshore risikoanalyse gjennomført</value>
+  </data>
+  <data name="OnSiteJobSafetyAnalysisCompleted" xml:space="preserve">
+    <value>On-site jobb sikkerhetsanalyse gjneoomført</value>
+  </data>
+  <data name="ApprovedByOnshoreManagement" xml:space="preserve">
+    <value>Godkjent av onshore ledelse</value>
+  </data>
+  <data name="OnSiteWorkInstructionCompleted" xml:space="preserve">
+    <value>On-site arbeidsbeskrivelser ferdigstilt</value>
+  </data>
+  <data name="PotentialConsequence" xml:space="preserve">
+    <value>Mulig konsekvens (positiv og negativ)</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>Fremdrift og spesielle forholdsregler</value>
+  </data>
+  <data name="TrainingRequired" xml:space="preserve">
+    <value>Påkrevd opplæring</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Beskriv påkrevd trening</value>
+  </data>
+  <data name="CostOfChange" xml:space="preserve">
+    <value>Kostnad av endringen</value>
+  </data>
+  <data name="IncreasedRisk" xml:space="preserve">
+    <value>ker endringen risiko</value>
+  </data>
+  <data name="ProposedById" xml:space="preserve">
+    <value>Foreslått av</value>
+  </data>
+  <data name="DateOfProposal" xml:space="preserve">
+    <value>Foslagsdato</value>
+  </data>
+  <data name="ReviewedById" xml:space="preserve">
+    <value>Vurdert av</value>
+  </data>
+  <data name="DateOfReview" xml:space="preserve">
+    <value>Vurdert dato</value>
+  </data>
+  <data name="ApprovalReviewedById1" xml:space="preserve">
+    <value>Godkjenning vurdert av</value>
+  </data>
+  <data name="ApprovalRevieweDate1" xml:space="preserve">
+    <value>Godkjenning vurdert dato</value>
+  </data>
+  <data name="ApprovalReviewedById2" xml:space="preserve">
+    <value>Godkjenning vurdert av</value>
+  </data>
+  <data name="ApprovalRevieweDate2" xml:space="preserve">
+    <value>Godkjenning vurdert dato</value>
+  </data>
+  <data name="ApprovalEndorsedById" xml:space="preserve">
+    <value>Godkjenning støtte fra</value>
+  </data>
+  <data name="ApprovalEndorsedDate" xml:space="preserve">
+    <value>Godkjenning støtte dato</value>
+  </data>
+  <data name="ApprovedDate" xml:space="preserve">
+    <value>Godkjent dato</value>
+  </data>
+  <data name="LessonsLearned" xml:space="preserve">
+    <value>Erfaringer fra endringen</value>
+  </data>
+  <data name="ChangeCommunicatedById" xml:space="preserve">
+    <value>Endring kommunisert til alle involvert av</value>
+  </data>
+  <data name="DateChangeCommunicated" xml:space="preserve">
+    <value>Endring kommunisert til alle involvert dato</value>
+  </data>
+  <data name="MethodOfCommunication" xml:space="preserve">
+    <value>Metode for kommunisering av endring</value>
+  </data>
+  <data name="DocumentationChangesById" xml:space="preserve">
+    <value>Dokumentasjon endret av</value>
+  </data>
+  <data name="DateDocumentationChanges" xml:space="preserve">
+    <value>Dokumentasjon endret dato</value>
+  </data>
+  <data name="DocumentsChanged" xml:space="preserve">
+    <value>Liste av endrede dokumenter</value>
+  </data>
+  <data name="TrainingRequriementsCompletedById" xml:space="preserve">
+    <value>Opplæringskrav gjennomført av</value>
+  </data>
+  <data name="DateTrainingRequriementsCompleted" xml:space="preserve">
+    <value>Opplæringskrav gjennomført dato</value>
+  </data>
+  <data name="TrainingConducted" xml:space="preserve">
+    <value>Opplæring gjennomført beskrivelse</value>
+  </data>
+  <data name="RegulatoryPermitRequirementsCompletedById" xml:space="preserve">
+    <value>Regulatoriske krav gjennomført av</value>
+  </data>
+  <data name="DateRegulatoryPermitRequirementsCompleted" xml:space="preserve">
+    <value>Regulatoriske krav gjennomført dato</value>
+  </data>
+  <data name="RegulatoryPermitRequirementsCompleted" xml:space="preserve">
+    <value>Regulatoriske krav gjennomført beskrivelse</value>
+  </data>
+  <data name="ChangeRequirementsCompletedById" xml:space="preserve">
+    <value>Endringskrav gjennomført av</value>
+  </data>
+  <data name="DateChangeRequirementsCompleted" xml:space="preserve">
+    <value>Endringskrav gjennomført dato</value>
+  </data>
+  <data name="ChangeRequirementsCompletedComments" xml:space="preserve">
+    <value>Endringskrav gjennomført kommentarer</value>
+  </data>
+  <data name="LessonsLearnedCommunicatedById" xml:space="preserve">
+    <value>Erfaringer kommunisert av</value>
+  </data>
+  <data name="DateLessonsLearnedCommunicated" xml:space="preserve">
+    <value>Erfaringer kommunisert dato</value>
+  </data>
+  <data name="ChangeReportCloseOutDocumentationById" xml:space="preserve">
+    <value>Endringsdokumentasjon lukket av</value>
+  </data>
+  <data name="DateChangeReportCloseOutDocumentation" xml:space="preserve">
+    <value>Endringsdokumentasjon lukket dato</value>
+  </data>
+  <data name="ApprovalForChangeReportCloseOutById" xml:space="preserve">
+    <value>Endringsdokumentasjon lukket godkjent av</value>
+  </data>
+  <data name="DateApprovalForChangeReportCloseOut" xml:space="preserve">
+    <value>Endringsdokumentasjon lukket godkjent dato</value>
+  </data>
+  <data name="SignedBy" xml:space="preserve">
+    <value>Signert av</value>
+  </data>
+  <data name="DateSigned" xml:space="preserve">
+    <value>Signert dato</value>
+  </data>
+  <data name="ManageChangeStatusListsRowId" xml:space="preserve">
+    <value>Endring status</value>
+  </data>
+  <data name="ReadRoles" xml:space="preserve">
+    <value>Roller med lesetilgang</value>
+  </data>
+  <data name="UpdateRoles" xml:space="preserve">
+    <value>Roller med rett til å oppdatere</value>
+  </data>
+  <data name="CreateRoles" xml:space="preserve">
+    <value>Roller med rett til å lage nye forekomster</value>
+  </data>
+  <data name="DeleteRoles" xml:space="preserve">
+    <value>Roller med rett til å slette forekomster</value>
+  </data>
+  <data name="url" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutter</value>
+  </data>
+  <data name="ShareInfoPC" xml:space="preserve">
+    <value>Info for other PCs</value>
+  </data>
+  <data name="ShareInfoTech" xml:space="preserve">
+    <value>Info for other Technicians</value>
+  </data>
+  <data name="RiskControlReferenceId" xml:space="preserve">
+    <value>Forespørsel id</value>
+  </data>
+  <data name="DateNextAssessment" xml:space="preserve">
+    <value>Dato neste vurdering</value>
+  </data>
+  <data name="ControlCategoryListsRowId" xml:space="preserve">
+    <value>Kontroll kategori</value>
+  </data>
+  <data name="ResourcesNeeded" xml:space="preserve">
+    <value>Ressursbehov</value>
+  </data>
+  <data name="notes" xml:space="preserve">
+    <value>Workitem Beskrivelse</value>
+  </data>
+  <data name="HistoryLog" xml:space="preserve">
+    <value>Workitem Log</value>
+  </data>
+  <data name="GAParticipant" xml:space="preserve">
+    <value>Workitem Ansvarlig</value>
+  </data>
+  <data name="IsHSEQ" xml:space="preserve">
+    <value>HMS kurs</value>
+  </data>
+  <data name="IsRecordable" xml:space="preserve">
+    <value>Registrerbar tid</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Timer</value>
+  </data>
+  <data name="CourseCategory" xml:space="preserve">
+    <value>Kurs type</value>
+  </data>
+  <data name="OpportunityStatusListsRowId" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="AreaOfOpportunityListRowId" xml:space="preserve">
+    <value>Forbedrings område</value>
+  </data>
+  <data name="OriginatorId" xml:space="preserve">
+    <value>Forslagstiller</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="ReasonsOrFactsIllustrating" xml:space="preserve">
+    <value>Bakgrunn</value>
+  </data>
+  <data name="SuggestedImplementation" xml:space="preserve">
+    <value>Forslag til implementering</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Kommentar</value>
+  </data>
+  <data name="ReferenceId" xml:space="preserve">
+    <value>Referanse id</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="CrewBoatActivitiesCount" xml:space="preserve">
+    <value>Mannskapsbåt aktiviteter</value>
+  </data>
+  <data name="CrewSafetyMeetingsCount" xml:space="preserve">
+    <value>Mannskap sikkerhetsmøter</value>
+  </data>
+  <data name="ToolboxMeetingsCount" xml:space="preserve">
+    <value>Toolboks møter</value>
+  </data>
+  <data name="SafetyDrillsCount" xml:space="preserve">
+    <value>Sikkerhetsøvelser</value>
+  </data>
+  <data name="DrillHours" xml:space="preserve">
+    <value>Timer med øvelse</value>
+  </data>
+  <data name="Reporter" xml:space="preserve">
+    <value>Rapportert av</value>
+  </data>
+  <data name="DrillsOther" xml:space="preserve">
+    <value>Andre øvelser</value>
+  </data>
+  <data name="DrillsManOverBoard" xml:space="preserve">
+    <value>Mann over bord øvelse</value>
+  </data>
+  <data name="DrillsFirstAid" xml:space="preserve">
+    <value>Førstehjelpsøvelse</value>
+  </data>
+  <data name="DrillsFire" xml:space="preserve">
+    <value>Brannøvelser</value>
+  </data>
+  <data name="DrillsLifeBoat" xml:space="preserve">
+    <value>Livbåtøvelse</value>
+  </data>
+  <data name="ShareInfoNav" xml:space="preserve">
+    <value>Info for other Navigators</value>
+  </data>
+  <data name="ShareInfoMech" xml:space="preserve">
+    <value>Info for other Mechanics</value>
+  </data>
+  <data name="ResponsibleRoleListsRowId" xml:space="preserve">
+    <value>Ansvarlig rolle</value>
+  </data>
+  <data name="ResponsibleId" xml:space="preserve">
+    <value>Ansvarlig</value>
+  </data>
+  <data name="AssessedById" xml:space="preserve">
+    <value>Vurdert av</value>
+  </data>
+  <data name="ApprovedById" xml:space="preserve">
+    <value>Godkjent av</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Kontroll</value>
+  </data>
+  <data name="ProcedureReferenceReferenceId" xml:space="preserve">
+    <value>Referanse id</value>
+  </data>
+  <data name="PreMitigationRiskRatingRowId" xml:space="preserve">
+    <value>Risikorangering før tiltak</value>
+  </data>
+  <data name="PostMitigationRiskRatingRowId" xml:space="preserve">
+    <value>Risikorangering etter tiltak</value>
+  </data>
+  <data name="DateApproved" xml:space="preserve">
+    <value>Dato godkjent</value>
+  </data>
+  <data name="DateAssessed" xml:space="preserve">
+    <value>Dato vurdert</value>
+  </data>
+  <data name="RiskReferenceId" xml:space="preserve">
+    <value>Forespørsel id</value>
+  </data>
+  <data name="AssessmentPrecontrolMitigation" xml:space="preserve">
+    <value>Vurdering av fare før kontroll og tiltak</value>
+  </data>
+  <data name="RisksHazardsIdentified" xml:space="preserve">
+    <value>Identifisert Risiko, Fare</value>
+  </data>
+  <data name="ExistingControlMitigationMeasures" xml:space="preserve">
+    <value>Eksisterende tiltak</value>
+  </data>
+  <data name="ProcedureId" xml:space="preserve">
+    <value>Prosedyre id</value>
+  </data>
+  <data name="AssessmentPostcontrolMitigation" xml:space="preserve">
+    <value>Vurdering av fare etter kontroll og tiltak</value>
+  </data>
+  <data name="SuggestionFurtherRiskReduction" xml:space="preserve">
+    <value>Forlslag til videre tiltak</value>
+  </data>
+  <data name="ControlRowId" xml:space="preserve">
+    <value>Generisk kontroll</value>
+  </data>
+  <data name="IntFree1&#xD;&#xA;" xml:space="preserve">
+    <value>Skadetype / Kategori</value>
+  </data>
+  <data name="LANGUAGE_RESOURCE_KEY" xml:space="preserve">
+    <value>CNO</value>
+  </data>
+</root>

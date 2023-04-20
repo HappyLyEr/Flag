@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="4">
+  <Object type="DataDynamics.ActiveReports.ActiveReport3" name="GAIncidentReport">
+    <Property name="StyleSheet">
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; </Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 16pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading1</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; </Argument>
+          <Argument type="System.String">Heading2</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 13pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading3</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+    </Property>
+    <Property name="DataMember">GAIncidentReport</Property>
+    <Property name="PageSettings">
+      <Property name="PaperWidth">8.5</Property>
+      <Property name="PaperHeight">11</Property>
+    </Property>
+    <Property name="Sections">
+      <Reference name="pageHeader" />
+      <Reference name="detail" />
+      <Reference name="pageFooter" />
+    </Property>
+    <Property name="DataSource">
+      <Reference name="reportView1" />
+    </Property>
+    <Property name="Parameters">
+      <Reference name="owner" />
+      <Reference name="startdate" />
+      <Reference name="enddate" />
+    </Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.PageHeader" name="pageHeader">
+    <Property name="Controls">
+      <Reference name="txtTitle1" />
+    </Property>
+    <Property name="Height">0.25</Property>
+    <Property name="Name">pageHeader</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtTitle1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD0L</Binary>
+    </Property>
+    <Property name="DataField">Title</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtTitle1</Property>
+    <Property name="Text">txtTitle1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Detail" name="detail">
+    <Property name="Controls">
+      <Reference name="txtDateAndTimeOfIncident1" />
+      <Reference name="txtShortDescription1" />
+      <Reference name="txtWitness1" />
+      <Reference name="txtHasMaritimeReport1" />
+      <Reference name="txtWitnessPersonnelRowId1" />
+    </Property>
+    <Property name="Name">detail</Property>
+    <Property name="Height">2</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtDateAndTimeOfIncident1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAVVWFP6uquj4L</Binary>
+    </Property>
+    <Property name="DataField">DateAndTimeOfIncident</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtDateAndTimeOfIncident1</Property>
+    <Property name="Text">txtDateAndTimeOfIncident1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtShortDescription1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAq6pkQFVVxT4L</Binary>
+    </Property>
+    <Property name="DataField">ShortDescription</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtShortDescription1</Property>
+    <Property name="Text">txtShortDescription1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtWitness1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAVVWBPwAAQD8L</Binary>
+    </Property>
+    <Property name="DataField">Witness</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtWitness1</Property>
+    <Property name="Text">txtWitness1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtHasMaritimeReport1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAq6pkQKuqMj8L</Binary>
+    </Property>
+    <Property name="DataField">HasMaritimeReport</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtHasMaritimeReport1</Property>
+    <Property name="Text">txtHasMaritimeReport1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.PageFooter" name="pageFooter">
+    <Property name="Height">0.25</Property>
+    <Property name="Name">pageFooter</Property>
+  </Object>
+  <Object type="GASystem.DataModel.View.ReportView" name="reportView1">
+    <Property name="Locale">English (United States)</Property>
+    <Property name="DataSetName">ReportView</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="owner">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">True</Property>
+    <Property name="Tag" />
+    <Property name="Key">owner</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="startdate">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">True</Property>
+    <Property name="Tag" />
+    <Property name="Key">startdate</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="enddate">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">True</Property>
+    <Property name="Tag" />
+    <Property name="Key">enddate</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtWitnessPersonnelRowId1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAVVWFPwAAmD8L</Binary>
+    </Property>
+    <Property name="DataField">WitnessPersonnelRowId</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtWitnessPersonnelRowId1</Property>
+    <Property name="Text">txtWitnessPersonnelRowId1</Property>
+  </Object>
+</ActiveReportsLayout>

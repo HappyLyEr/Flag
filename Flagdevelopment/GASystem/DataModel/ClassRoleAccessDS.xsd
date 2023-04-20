@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ClassRoleAccessDS" targetNamespace="http://tempuri.org/ClassRoleAccessDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ClassRoleAccessDS.xsd"
+	xmlns:mstns="http://tempuri.org/ClassRoleAccessDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ClassRoleAccessDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GAClassRoleAccess">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ClassRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Class" type="xs:string" minOccurs="0" />
+							<xs:element name="ReadRoles" type="xs:string" minOccurs="0" />
+							<xs:element name="UpdateRoles" type="xs:string" minOccurs="0" />
+							<xs:element name="CreateRoles" type="xs:string" minOccurs="0" />
+							<xs:element name="DeleteRoles" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

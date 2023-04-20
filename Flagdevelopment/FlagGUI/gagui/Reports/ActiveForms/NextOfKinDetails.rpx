@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="4">
+  <Object type="DataDynamics.ActiveReports.ActiveReport3" name="NextOfKinDetails">
+    <Property name="StyleSheet">
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; </Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 16pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading1</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; </Argument>
+          <Argument type="System.String">Heading2</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 13pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading3</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+    </Property>
+    <Property name="DataMember">GACrewListView</Property>
+    <Property name="ShowParameterUI">False</Property>
+    <Property name="PageSettings">
+      <Property name="PaperWidth">8.27</Property>
+      <Property name="PaperHeight">11.69</Property>
+    </Property>
+    <Property name="Script">public void ActiveReport_ReportStart()
+{
+            ((System.Data.DataView)rpt.DataSource).Sort = "Department, EmploymentLevel, FamilyName, GivenName, NextOfKinPrioritySort";							
+}</Property>
+    <Property name="Sections">
+      <Reference name="reportHeader1" />
+      <Reference name="groupHeader1" />
+      <Reference name="detail" />
+      <Reference name="groupFooter1" />
+      <Reference name="reportFooter1" />
+    </Property>
+    <Property name="DataSource">
+      <Reference name="reportView1" />
+    </Property>
+    <Property name="Parameters">
+      <Reference name="StartDate" />
+      <Reference name="EndDate" />
+    </Property>
+    <Property name="PrintWidth">7.874016</Property>
+    <Property name="CalculatedFields">
+      <Reference name="CompleteName" />
+      <Reference name="myAddress" />
+      <Reference name="myPhone" />
+      <Reference name="OnBoardDate" />
+    </Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Detail" name="detail">
+    <Property name="Controls">
+      <Reference name="txtNextOfKin1" />
+      <Reference name="txtNextOfKinAddress1" />
+      <Reference name="txtNextOfKinPhoneNumber1" />
+      <Reference name="txtNextOfKinPriority1" />
+      <Reference name="txtCompleteName1" />
+      <Reference name="txtNextOfKinRelationship1" />
+      <Reference name="line1" />
+      <Reference name="line2" />
+    </Property>
+    <Property name="ColumnSpacing">0</Property>
+    <Property name="Name">detail</Property>
+    <Property name="Height">0.2007874</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtNextOfKin1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAd7vdPwAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">NextOfKin</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAmk8k/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">txtNextOfKin1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtNextOfKin1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtNextOfKinAddress1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAApVKJQAAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">myAddress</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABTqRRANptNPgs=</Binary>
+    </Property>
+    <Property name="Name">txtNextOfKinAddress1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtNextOfKinAddress1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtNextOfKinPhoneNumber1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAATqfTQAAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">myPhone</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLpc/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">txtNextOfKinPhoneNumber1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtNextOfKinPhoneNumber1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtNextOfKinPriority1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAGQSyQAAAgL8L</Binary>
+    </Property>
+    <Property name="DataField">NextOfKinPriority</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAAAIA/zcxMPgs=</Binary>
+    </Property>
+    <Property name="Name">txtNextOfKinPriority1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtNextOfKinPriority1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtCompleteName1">
+    <Property name="SummaryFunc">DStdDevP</Property>
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAANBqNPgAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">CompleteName</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="SummaryType">SubTotal</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADqdLo/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">txtCompleteName1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtCompleteName1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtNextOfKinRelationship1">
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAATqdTQAAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">NextOfKinRelationship</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADw93s/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">txtNextOfKinRelationship1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtNextOfKinRelationship1</Property>
+  </Object>
+  <Object type="GASystem.DataModel.View.ReportView" name="reportView1">
+    <Property name="Locale">English (United States)</Property>
+    <Property name="DataSetName">ReportView</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.ReportHeader" name="reportHeader1">
+    <Property name="Height">0.135416672</Property>
+    <Property name="Visible">False</Property>
+    <Property name="Name">reportHeader1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox1">
+    <Property name="OutputFormat" />
+    <Property name="BackColor">230, 238, 243</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAANBqNPiaTyT4L</Binary>
+    </Property>
+    <Property name="Font">Arial, 9.75pt, style=Bold, Italic</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADqdLo/JpNJPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox1</Property>
+    <Property name="Border">
+      <Property name="BottomColor">SlateGray</Property>
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="LeftColor">SlateGray</Property>
+      <Property name="RightColor">SlateGray</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="TopColor">SlateGray</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Text">Name</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox3">
+    <Property name="OutputFormat" />
+    <Property name="BackColor">230, 238, 243</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAd7vdPyaTyT4L</Binary>
+    </Property>
+    <Property name="Font">Arial, 9.75pt, style=Bold, Italic</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAAmk8k/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox3</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Text"> Next of Kin</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox4">
+    <Property name="OutputFormat" />
+    <Property name="BackColor">230, 238, 243</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAApVKJQCaTyT4L</Binary>
+    </Property>
+    <Property name="Font">Arial, 9.75pt, style=Bold, Italic</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABTqRRANptNPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox4</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Text">Address</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox5">
+    <Property name="OutputFormat" />
+    <Property name="BackColor">230, 238, 243</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAATqfTQCaTyT4L</Binary>
+    </Property>
+    <Property name="Font">Arial, 9.75pt, style=Bold, Italic</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAABdLpc/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox5</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Text">Phone Number</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox2">
+    <Property name="OutputFormat" />
+    <Property name="BackColor">230, 238, 243</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAATqdTQCaTyT4L</Binary>
+    </Property>
+    <Property name="Font">Arial, 9.75pt, style=Bold, Italic</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADw93s/NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox2</Property>
+    <Property name="Border">
+      <Property name="TopStyle">Solid</Property>
+      <Property name="LeftStyle">Solid</Property>
+      <Property name="RightStyle">Solid</Property>
+      <Property name="BottomStyle">Solid</Property>
+    </Property>
+    <Property name="Text">Relationship</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.ReportFooter" name="reportFooter1">
+    <Property name="Visible">False</Property>
+    <Property name="Height">0.6183289</Property>
+    <Property name="Name">reportFooter1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.GroupHeader" name="groupHeader1">
+    <Property name="DataField">Department</Property>
+    <Property name="GroupKeepTogether">All</Property>
+    <Property name="Name">groupHeader1</Property>
+    <Property name="Height">0.5905512</Property>
+    <Property name="Controls">
+      <Reference name="txtDepartment1" />
+      <Reference name="textBox6" />
+      <Reference name="textBox1" />
+      <Reference name="textBox3" />
+      <Reference name="textBox4" />
+      <Reference name="textBox5" />
+      <Reference name="textBox2" />
+      <Reference name="picture1" />
+      <Reference name="line4" />
+      <Reference name="line3" />
+    </Property>
+    <Event name="Format">groupHeader1_Format</Event>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtDepartment1">
+    <Property name="ForeColor">Navy</Property>
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAcLfbPwAAAAAL</Binary>
+    </Property>
+    <Property name="DataField">Department</Property>
+    <Property name="Font">Arial Black, 12pt, style=Bold</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAACPxyNAJpPJPgs=</Binary>
+    </Property>
+    <Property name="Name">txtDepartment1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="VerticalAlignment">Bottom</Property>
+    <Property name="Text">txtDepartment1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="textBox6">
+    <Property name="ForeColor">Navy</Property>
+    <Property name="OutputFormat" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAhUKhPQAAAAAL</Binary>
+    </Property>
+    <Property name="Font">Arial Black, 12pt, style=Bold</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAADA388/J5PJPgs=</Binary>
+    </Property>
+    <Property name="Name">textBox6</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="VerticalAlignment">Bottom</Property>
+    <Property name="Text">Department:</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.GroupFooter" name="groupFooter1">
+    <Property name="Visible">False</Property>
+    <Property name="Name">groupFooter1</Property>
+    <Property name="Height">1.63541663</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Field" name="CompleteName">
+    <Property name="DefaultValue" />
+    <Property name="Formula">FamilyName+", "+GivenName</Property>
+    <Property name="FieldType">String</Property>
+    <Property name="Tag" />
+    <Property name="Name">CompleteName</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Field" name="myAddress">
+    <Property name="DefaultValue" />
+    <Property name="Formula">NextOfKinAddress == "" ? (Address == "" ? " " : "Crew address: " + Address) : NextOfKinAddress</Property>
+    <Property name="FieldType">String</Property>
+    <Property name="Tag" />
+    <Property name="Name">myAddress</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Field" name="myPhone">
+    <Property name="DefaultValue" />
+    <Property name="Formula">NextOfKinPhoneNumber == "" ? (PersonnelHomePhone == "" ? "" : "Crew Phone Number: " + PersonnelHomePhone) : NextOfKinPhoneNumber</Property>
+    <Property name="FieldType">String</Property>
+    <Property name="Tag" />
+    <Property name="Name">myPhone</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="StartDate">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">True</Property>
+    <Property name="Tag" />
+    <Property name="Key">StartDate</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="EndDate">
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">
+    </Property>
+    <Property name="Prompt" />
+    <Property name="PromptUser">True</Property>
+    <Property name="Tag" />
+    <Property name="Key">EndDate</Property>
+    <Property name="QueryCreated">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Field" name="OnBoardDate">
+    <Property name="DefaultValue" />
+    <Property name="Formula">StartDate</Property>
+    <Property name="FieldType">Date</Property>
+    <Property name="Tag" />
+    <Property name="Name">OnBoardDate</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Picture" name="picture1">
+    <Property name="ImageData">
+      <Binary>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</Binary>
+    </Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="LineWeight">0</Property>
+    <Property name="SizeMode">Stretch</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAhUKhPSaTyT4L</Binary>
+    </Property>
+    <Property name="Size">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFRTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0xLjAuNTAwMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABRTeXN0ZW0uRHJhd2luZy5TaXplRgIAAAAFd2lkdGgGaGVpZ2h0AAALCwIAAAA2m00+NptNPgs=</Binary>
+    </Property>
+    <Property name="Name">picture1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Line" name="line1">
+    <Property name="X1">0</Property>
+    <Property name="Y2">0.2007874</Property>
+    <Property name="Y1">0</Property>
+    <Property name="Name">line1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="LineColor">167, 188, 200</Property>
+    <Property name="LineWeight">4</Property>
+    <Property name="X2">0</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Line" name="line2">
+    <Property name="X1">7.874016</Property>
+    <Property name="Y2">0.2007874</Property>
+    <Property name="Y1">0</Property>
+    <Property name="Name">line2</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="LineColor">167, 188, 200</Property>
+    <Property name="LineWeight">4</Property>
+    <Property name="X2">7.874016</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Line" name="line3">
+    <Property name="X1">7.874016</Property>
+    <Property name="Y2">0.5905512</Property>
+    <Property name="Y1">0</Property>
+    <Property name="Name">line3</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="LineColor">167, 188, 200</Property>
+    <Property name="LineWeight">4</Property>
+    <Property name="X2">7.874016</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Line" name="line4">
+    <Property name="X1">0</Property>
+    <Property name="Y2">0.5905512</Property>
+    <Property name="Y1">0</Property>
+    <Property name="Name">line4</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="LineColor">167, 188, 200</Property>
+    <Property name="LineWeight">4</Property>
+    <Property name="X2">0</Property>
+  </Object>
+</ActiveReportsLayout>

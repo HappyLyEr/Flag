@@ -1,0 +1,46 @@
+using System;
+using GASystem;
+using GASystem.DataModel;
+using GASystem.BusinessLayer;
+using System.Data;
+
+namespace GASystem.DotNetApre.impl
+{
+	/// <summary>
+	/// Agent for setting a new value to any field in the owner of the current action
+	/// Expected workitem attributes:
+	///		GAOwnerDataClass - Expected owner of action, ignored if missing or empty
+	///		GAFieldName - field name to update
+	///		GAFieldValue - new value
+	/// </summary>
+	public class GetOwnerAgent : AbstractAgent
+	{
+        //public const string DATACLASS = "GAOwnerDataClass";
+        //public const string FIELDNAME = "GAFieldName";
+		public const string FIELDVALUE = "GAFieldValue";
+        //public const string CODEVALUE = "GAFieldCodeValue";
+        //private const int MAXNUMBEROFLEVELS = 20;
+		
+		//private string fieldName;
+		private GADataRecord owner;
+
+		public GetOwnerAgent()
+		{
+			//
+			// TODO: Add constructor logic here
+			//
+		}
+
+		public override openwfe.workitem.InFlowWorkitem Use(openwfe.workitem.InFlowWorkitem wi)
+		{
+			//get owner for current action
+			owner = DataClassRelations.GetOwner(new GADataRecord(GetActionId(wi), GADataClass.GAAction));
+			//get wi attribute values
+
+            System.Console.WriteLine("Get Owner Agent. Class: "+owner.DataClass.ToString()+" RowId:" +owner.RowId.ToString());
+
+            utils.AttributeHelper.SetAttribute(wi, FIELDVALUE, owner.DataClass.ToString());
+			return wi;
+		}
+	}
+}

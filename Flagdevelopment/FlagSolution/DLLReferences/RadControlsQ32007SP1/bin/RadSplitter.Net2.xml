@@ -1,0 +1,1391 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadSplitter.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.Ide.Common.RadSplitter.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadSplitterUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="P:Telerik.RadSplitterUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadSplitterUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitterItem.Index">
+            <summary>
+            This property is being used internally by the <strong>RadSplitter</strong> control.
+            Setting it may lead to unpredictable results.
+            </summary>
+            <remarks>
+                The <strong>Index</strong> property is used internally.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.MinWidth">
+            <summary>
+            Sets/gets the min width to which the pane can be resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.MaxWidth">
+            <summary>
+            Sets/gets the max width to which the pane can be resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.MinHeight">
+            <summary>
+            Sets/gets the min height to which the pane can be resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.MaxHeight">
+            <summary>
+            Sets/gets the max height to which the pane can be resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.Scrolling">
+            <summary>
+            Sets/gets whether the content of the pane will get a scrollbars when it exceeds the pane area size
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.OnClientPaneCollapsed">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadPane</strong> is collapsed.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientPaneCollapsed</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadPane</strong>
+                is collapsed.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>paneObj</strong> (the
+                    instance of the RadPane).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientPaneCollapsed</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientPaneCollapsedHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadPane ID="RadPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientPaneCollapsed="OnClientPaneCollapsedHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.OnClientBeforePaneCollapse">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called before
+            the <strong>RadPane</strong> is collapsed.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientBeforePaneCollapse</strong>
+            		<font color="black">client-side event handler is called before the <strong>RadPane</strong>
+                is collapsed.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>paneObj</strong> (the
+                    instance of the RadPane).</item>
+            	</list>
+            	<para>This event can be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientBeforePaneCollapse</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientBeforePaneCollapseHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+            			 return true;//false to cancel the event<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadPane ID="RadPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientBeforePaneCollapse="OnClientBeforePaneCollapseHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.OnClientPaneExpanded">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadPane</strong> is expanded.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientPaneExpanded</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadPane</strong>
+                is expanded.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>paneObj</strong> (the
+                    instance of the RadPane).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientPaneExpanded</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientPaneExpandedHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadPane ID="RadPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientPaneExpanded="OnClientPaneExpandedHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.OnClientBeforePaneExpand">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called before
+            the <strong>RadPane</strong> is expanded.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientBeforePaneExpand</strong>
+            		<font color="black">client-side event handler is called before the <strong>RadPane</strong>
+                is expanded.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>paneObj</strong> (the
+                    instance of the RadPane).</item>
+            	</list>
+            	<para>This event can be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientBeforePaneExpand</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientBeforePaneExpandHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+            			 return true;//false to cancel the event<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadPane ID="RadPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientBeforePaneExpand="OnClientBeforePaneExpandHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.OnClientPaneResized">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadPane</strong> is resized.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientPaneResized</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadPane</strong>
+                is resized.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with the following properties:
+             			<list type="bullet">
+            				<item><strong>paneObj</strong> - the pane object that has been resized</item>
+            				<item><strong>oldWidth</strong> - the width of the pane before the resize</item>
+            				<item><strong>oldHeight</strong> - the height of the pane before the resize</item>
+            				<item><strong>newWidth</strong> - the current pane width</item>
+            				<item><strong>newHeight</strong> - the current pane height</item>
+            			</list>
+                    </item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientPaneResized</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientPaneResizedHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadPane ID="RadPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientPaneResized="OnClientPaneResizedHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.OnClientBeforePaneResize">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called before
+            the <strong>RadPane</strong> is resized.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientBeforePaneResize</strong>
+            		<font color="black">client-side event handler is called before the <strong>RadPane</strong>
+                is resized.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with the following properties:
+             			<list type="bullet">
+            				<item><strong>paneObj</strong> - the pane object that will be resized</item>
+            				<item><strong>delta</strong> - the delta with which the pane will be resized</item>
+            				<item><strong>direction</strong> - the direction in which the pane will be resized. You can use the RadSplitterNamespace.RAD_SPLITTER_DIRECTION hash to check the direction. The 2 possible values are : Forward and Backward</item>
+            			</list>
+                    </item>
+            	</list>
+            	<para>This event can be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientBeforePaneResize</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientBeforePaneResizeHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+            			 return true;//false to cancel the event<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadPane ID="RadPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientBeforePaneResize="OnClientBeforePaneResizeHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadPaneBase.PersistScrollPosition">
+            <summary>
+            Sets/gets whether the scrolls position will be persisted acrosss postbacks
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadPane.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadPane.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadPane.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.InitiallyCollapsed">
+            <summary>
+            Sets/gets whether the pane is initially collapsed
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.Collapsed">
+            <summary>
+            Sets/gets whether the pane is collapsed
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.Locked">
+            <summary>
+            Sets/gets whether the pane is locked
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.ContentUrl">
+            <summary>
+            The URL of the page to load inside the pane.
+            </summary>
+            <remarks>
+            Use the <strong>ContentUrl</strong> property if you want to load external page 
+            into the pane content area.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.Width">
+            <summary>
+            Get/Set the Width of the pane.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.Height">
+            <summary>
+            Get/Set the Height of the pane.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadPane.Splitter">
+            <summary>
+            Reference to the parent Splitter object
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingPane.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingPane.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingPane.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.MinHeight">
+            <summary>
+            Sets/gets the min height to which the pane can be resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.Height">
+            <summary>
+            Sets/gets the height of the sliding pane
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.MinWidth">
+            <summary>
+            Sets/gets the min width to which the pane can be resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.Width">
+            <summary>
+            Sets/gets the width of the sliding pane
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.EnableResize">
+            <summary>
+            Sets/gets whether the resize bar will be active
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.IconUrl">
+            <summary>
+            Gets or sets the path to an image to display for the item.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.TabView">
+            <summary>
+            Sets/gets way the tab of the pane is rendered
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.EnableDock">
+            <summary>
+            Sets/gets whether the pane can be docked
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.Title">
+            <summary>
+            The title that will be displayed when the pane is docked/docked
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.OnClientPaneDocked">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadSlidingPane</strong> is docked.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientPaneDocked</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadSlidingPane</strong>
+                is docked.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>paneObj</strong> (the
+                    instance of the RadSlidingPane).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientPaneDocked</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientPaneDockedHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSlidingPane ID="RadSlidingPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientPaneDocked="OnClientPaneDockedHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSlidingPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.OnClientPaneUnDocked">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadSlidingPane</strong> is undocked.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientPaneUnDocked</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadSlidingPane</strong>
+                is docked.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>paneObj</strong> (the
+                    instance of the RadSlidingPane).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientPaneUnDocked</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientPaneUnDockedHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSlidingPane ID="RadSlidingPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientPaneUnDocked="OnClientPaneUnDockedHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSlidingPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.OnClientBeforePaneDock">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called before
+            the <strong>RadSlidingPane</strong> is docked.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientBeforePaneDock</strong>
+            		<font color="black">client-side event handler is called before the <strong>RadSlidingPane</strong>
+                is docked.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with the following properties:
+             			<list type="bullet">
+            				<item><strong>paneObj</strong> - the pane object that will be docked</item>
+            			</list>
+                    </item>
+            	</list>
+            	<para>This event can be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientBeforePaneDock</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientBeforePaneDockHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+            			 return true;//false to cancel the event<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSlidingPane ID="RadSlidingPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientBeforePaneDock="OnClientBeforePaneDockHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSlidingPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.OnClientBeforePaneUnDock">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called before
+            the <strong>RadSlidingPane</strong> is undocked.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientBeforePaneUnDock</strong>
+            		<font color="black">client-side event handler is called before the <strong>RadSlidingPane</strong>
+                is undocked.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with the following properties:
+             			<list type="bullet">
+            				<item><strong>paneObj</strong> - the pane object that will be undocked</item>
+            			</list>
+                    </item>
+            	</list>
+            	<para>This event can be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientBeforePaneUnDock</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientBeforePaneUnDockHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.paneObj.ID);<br/>
+            			 return true;//false to cancel the event<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSlidingPane ID="RadSlidingPane1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientBeforePaneUnDock="OnClientBeforePaneUnDockHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSlidingPane&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingPane.SlidingZone">
+            <summary>
+            Reference to the parent SlidingZone object
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitterItemsContainer.Items">
+            <summary>
+            Gets the collection of child items in the <strong>RadSplitter</strong>
+            control.
+            </summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadSplitterItemsCollection">RadSplitterItemsCollection</see> that represents the children within
+                the <strong>RadSplitter</strong> control. The default is empty collection.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items of the <strong>RadSplitter</strong>
+            control. You can also use it to programmatically add or remove items.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically add items. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadPane pane1 = new RadPane();
+                    RadSplitter1.Items.Add(pane1);
+             
+                    RadSplitbar splitBar1 = new RadSplitBar();
+                    RadSplitter1.Items.Add(splitBar1);
+                
+                    RadPane pane2 = new RadPane();
+                    RadSplitter1.Items.Add(pane2);
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                If Not Page.IsPostBack Then
+                    Dim pane1 As RadPane = New RadPane()
+                    RadSplitter1.Items.Add(pane1)
+             
+                    Dim splitBar1 As RadSplitbar = New RadSplitBar()
+                    RadSplitter1.Items.Add(splitBar1)
+             
+                    Dim pane2 As RadPane = New RadPane()
+                    RadSplitter1.Items.Add(pane2)
+            
+                End If
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitterItemsContainer.EnableClientDebug">
+            <summary>
+            Sets/gets whether the debug console will be enabled
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingZone.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingZone.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingZone.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSlidingZone.RenderPanes(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.Height">
+            <summary>
+            Sets/gets the height of the sliding zone
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.Width">
+            <summary>
+            Sets/gets the width of the sliding zone
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.ClickToOpen">
+            <summary>
+            Sets/gets whether the pane should be clicked in order to open
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.InitiallyDockedPaneId">
+            <summary>
+            Sets/gets the id of the pane that is will be displayed docked
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.DockedPaneId">
+            <summary>
+            Sets/gets the id of the pane that is will be displayed docked
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.InitiallyExpandedPaneId">
+            <summary>
+            Sets/gets the id of the pane that is will be expanded
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.ExpandedPaneId">
+            <summary>
+            Sets/gets the id of the pane that is will be expanded
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.SlideDirection">
+            <summary>
+            Sets/gets the direction in which the panes will slide
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.ResizeStep">
+            <summary>
+            Sets/gets the step in px in which the resize bar will be moved when dragged.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.SlideDuration">
+            <summary>
+            Sets/gets the duration of the slide animation in milliseconds.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.OnClientLoaded">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadSlidingZone</strong> control is initialized.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientLoaded</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadSlidingZone</strong>
+                is initialized.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>slidingZoneObj</strong> (the
+                    instance of the RadSlidingZone object).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientLoaded</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnSlidingZoneLoadHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.slidingZoneObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSlidingZone ID="RadSlidingZone1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientLoaded="OnSlidingZoneLoadHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSlidingZone&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSlidingZone.Splitter">
+            <summary>
+            Reference to the parent Splitter object
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitBar.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitBar.RenderCollapseBars(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitBar.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitBar.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitBar.RenderClientObject(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitBar.CollapseMode">
+            <summary>
+            Sets/gets the collapse mode of the splitbar
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitBar.EnableResize">
+            <summary>
+            Sets/gets whether the resize bar will be active
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitBar.ResizeStep">
+            <summary>
+            Sets/gets the step in px in which the resize bar will be moved when dragged.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitBar.Splitter">
+            <summary>
+            Reference to the parent Splitter object
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitBarCollapseMode">
+            <summary>
+            Specifies the collapse mode of a splitbar
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitBarCollapseMode.None">
+            <summary>
+            No collapse is available
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitBarCollapseMode.Forward">
+            <summary>
+            Forward collapse availalbe only
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitBarCollapseMode.Backward">
+            <summary>
+            Backward collapse availalbe only
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitBarCollapseMode.Both">
+            <summary>
+            Both - forward and backward collapse available
+            </summary>
+            <value>4</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitter">
+            <summary>
+            Telerik RadSplitter is a flexible UI component for ASP.NET applications which allows users to manage effectively the content size and layout.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitter.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitter.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitter.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitter.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.HeightOffset">
+            <summary>
+            Sets/gets the pixels that should be substracted from the splitter height when its height is defined in percent
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.FullScreenMode">
+            <summary>
+            Resize the splitter in 100% of the page
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.VisibleDuringInit">
+            <summary>
+            Whether the Splitter should be visible during its initialization or not
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.Height">
+            <summary>
+            Sets/gets the height of the splitter
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.Width">
+            <summary>
+            Sets/gets the width of the splitter
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.LiveResize">
+            <summary>
+            Sets/gets whether the rendering of the splitter panes is previewed during the resize
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.ResizeWithBrowserWindow">
+            <summary>
+            Sets/gets whether the splitter will be resized when the browser window is resized. The Width or Height properties should be defined in percent.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.ResizeWithParentPane">
+            <summary>
+            Sets/gets whether the splitter will resize when the parent pane is resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.Orientation">
+            <summary>
+            Specify the orientation of the panes inside the splitter
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.ResizeMode">
+            <summary>
+            Set/Get the way the panes are resized
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.BorderSize">
+            <summary>
+            Set/Get size of the splitter border
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.PanesBorderSize">
+            <summary>
+            Set/Get size of the splitter panes border
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.SplitBarsSize">
+            <summary>
+            Set/Get size of the split bars - in pixels
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.OnClientLoaded">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadSplitter</strong> control is initialized.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientLoaded</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadSplitter</strong>
+                is initialized.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>splitterObj</strong> (the
+                    instance of the RadSplitter object).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientLoaded</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnSplitterLoadHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.splitterObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSplitter ID="RadSplitter1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientLoaded="OnSplitterLoadHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSplitter&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.OnClientResized">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the <strong>RadSplitter</strong> is resized.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientResized</strong>
+            		<font color="black">client-side event handler is called when the <strong>RadSplitter</strong>
+                is resized.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with the following properties:
+             			<list type="bullet">
+            				<item><strong>splitterObj</strong> - the splitter object that has been resized</item>
+            				<item><strong>oldWidth</strong> - the width of the splitter before the resize</item>
+            				<item><strong>oldHeight</strong> - the height of the splitter before the resize</item>
+            				<item><strong>newWidth</strong> - the current splitter width</item>
+            				<item><strong>newHeight</strong> - the current splitter height</item>
+            			</list>
+                    </item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientResized</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientResizedHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.splitterObj.ID);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSplitter ID="RadSplitter1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientResized="OnClientResizedHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSplitter&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.OnClientBeforeResize">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called before
+            the <strong>RadSplitter</strong> is resized.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientBeforeResize</strong>
+            		<font color="black">client-side event handler is called before the <strong>RadSplitter</strong>
+                is resized.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>event</strong>, the event object;</item>
+            		<item><strong>eventArgs</strong> with the following properties:
+             			<list type="bullet">
+            				<item><strong>splitterObj</strong> - the splitter object that will be resized</item>
+            				<item><strong>newWidth</strong> - the new width that will be applied to the <strong>RadSplitter</strong> object</item>
+            				<item><strong>newHeight</strong> - the new height that will be applied to the <strong>RadSplitter</strong> object</item>
+            			</list>
+                    </item>
+            	</list>
+            	<para>This event can be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientBeforeResize</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientBeforeResizeHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.splitterObj.ID);<br/>
+            			 return true;//false to cancel the event<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radspl:RadSplitter ID="RadSplitter1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientBeforeResize="OnClientBeforeResizeHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radspl:RadSplitter&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.Skin">
+            <summary>
+            Gets or sets the skin used by RadSplitter.
+            </summary>
+            <value>
+                A <see cref="T:System.String">String</see> specifying the skin. The default value is
+                empty string ("").
+            </value>
+            <remarks>If the value is empty string ("") no skin is used.</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitter.SkinsPath">
+            <summary>
+            Gets or sets the relative path to the Skin folder.
+            </summary>
+            <remarks>The ~ at the begining of the SkinPath denotes the application root path.</remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterCollapseDirection">
+            <summary>
+            Specifies the collapse direction options of the splitter bar
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterCollapseDirection.Forward">
+            <summary>
+            On collapse the current pane is collapsed
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterCollapseDirection.Backward">
+            <summary>
+            On collapse the next pane is resized
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterItemsCollection">
+            <summary>
+                A collection of <see cref="T:Telerik.WebControls.RadSplitterItem">RadSplitterItem</see> objects in a
+                <see cref="T:Telerik.WebControls.RadSplitter">RadSplitter</see> control.
+            </summary>
+            <remarks>
+            	<para>The <strong>RadSplitterItemsCollection</strong> class represents a collection of
+                <strong>RadSplitterItem</strong> objects. The <strong>RadSplitterItem</strong> objects in turn represent 
+                panes items within a <strong>RadSplitter</strong> control.</para>
+            	<list type="bullet">
+            		<item>
+                        Use the <see cref="P:Telerik.WebControls.RadSplitterItemsCollection.Item(System.Int32)">indexer</see> to programmatically retrieve a
+                        single RadSplitterItem from the collection, using array notation.
+                    </item>
+            		<item>
+                        Use the <strong>Count</strong> property to determine the total
+                        number of panes in the collection.
+                    </item>
+            		<item>
+                        Use the <see cref="M:Telerik.WebControls.RadSplitterItemsCollection.Add(Telerik.WebControls.RadSplitterItem)">Add</see> method to add panes in the collection.
+                    </item>
+            		<item>
+                        Use the <see cref="M:Telerik.WebControls.RadSplitterItemsCollection.Remove(Telerik.WebControls.RadSplitterItem)">Remove</see> method to remove panes from the
+                        collection.
+                    </item>
+            	</list>
+            </remarks>
+            <moduleiscollection/>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.#ctor(Telerik.WebControls.RadSplitterItemsContainer)">
+            <summary>Initializes a new instance of the <strong>RadSplitterItemsCollection</strong> class.</summary>
+            <remarks>Use the constructor to create a new <strong>RadSplitterItemsCollection</strong> class.</remarks>
+            <param name="container">The container of the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.Add(Telerik.WebControls.RadSplitterItem)">
+            <summary>Appends a <see cref="T:Telerik.WebControls.RadSplitterItem">RadSplitterItem</see> to the end of the collection.</summary>
+            <example>
+            	<para>The following example demonstrates how to programmatically add items in a
+                <strong>RadSplitter</strong> control.</para>
+            	<code lang="CS">
+            RadPane pane = new RadPane();
+             
+            RadMenu1.Panes.Add(pane);
+                </code>
+            	<code lang="VB">
+            Dim pane As RadPane = New RadPane()
+             
+            RadMenu1.Panes.Add(pane)
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.Insert(System.Int32,Telerik.WebControls.RadSplitterItem)">
+            <summary>
+                Inserts the specified <see cref="T:Telerik.WebControls.RadSplitterItem">RadSplitterItem</see> in the collection at the specified
+                index location.
+            </summary>
+            <remarks>
+            Use the <b>Insert</b> method to add a <strong>RadSplitterItem</strong> to the collection at
+            the index specified by the <i>index</i> parameter.
+            </remarks>
+            <param name="index">The location in the collection to insert the <strong>RadSplitterItem</strong>.</param>
+            <param name="item">The <strong>RadSplitterItem</strong> to add to the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.IndexOf(Telerik.WebControls.RadSplitterItem)">
+            <summary>
+                Determines the index value that represents the position of the specified
+                <paramref name="item">RadSplitterItem</paramref> in the collection.
+            </summary>
+            <returns>
+            The zero-based index position of the specified <strong>RadSplitterItem</strong> in the
+            collection.
+            </returns>
+            <remarks>
+            Use the <b>IndexOf</b> method to determine the index value of the
+            <strong>RadSplitterItem</strong> specified by the <i>item</i> parameter in the collection. If an item
+            with this criteria is not found in the collection, -1 is returned.
+            </remarks>
+            <param name="item">A <strong>RadSplitterItem</strong> to search for in the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.Contains(Telerik.WebControls.RadSplitterItem)">
+            <summary>
+                Determines whether the collection contains the specified
+                <paramref name="item">RadSplitterItem</paramref>.
+            </summary>
+            <returns>
+            	<strong>true</strong> if the collection contains the specified item; otherwise,
+            <b>false</b>.
+            </returns>
+            <remarks>
+            Use the <b>Contains</b> method to determine whether the <strong>RadSplitterItem</strong>
+            specified by the <i>item</i> parameter is in the collection.
+            </remarks>
+            <param name="item">A RadSplitterItem to search for in the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.Remove(Telerik.WebControls.RadSplitterItem)">
+            <summary>Removes the specified <paramref name="item">RadSplitterItem</paramref> from the collection.</summary>
+            <remarks>
+            Use the <b>Remove</b> method to remove a <strong>RadSplitterItem</strong> from the
+            collection.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically remove a RadSplitterItem from a
+                <strong>RadSplitter</strong> control. 
+                <code lang="CS">
+            RadPane pane = RadSplitter1.GetPaneById("pane1");
+            if (pane != null)
+            {
+                RadSplitter1.Panes.Remove(pane);
+            }
+                </code>
+            	<code lang="VB">
+            Dim pane As RadPane = RadSplitter1.GetPaneById("pane1")
+            If Not pane Is Nothing Then
+                RadSplitter1.Panes.Remove(pane)
+            End If
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.RemoveAt(System.Int32)">
+            <summary>Removes the <see cref="T:Telerik.WebControls.RadSplitterItem">RadSplitterItem</see> at the specified index from the collection.</summary>
+            <remarks>
+            	<para>Use the <b>RemoveAt</b> method to remove the <strong>RadSplitterItem</strong> at the
+                specified index from the collection.</para>
+            </remarks>
+            <param name="index">The index of the <strong>RadSplitterItem</strong> to remove.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadSplitterItemsCollection.Clear">
+            <summary>Removes all items from the collection.</summary>
+            <remarks>
+                Use the <strong>Clear</strong> method to remove all items from the collection. The
+                <strong>Count</strong> property is set to 0.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadSplitterItemsCollection.Item(System.Int32)">
+            <summary>
+            	<para>
+                    Gets a <see cref="T:Telerik.WebControls.RadSplitterItem">RadSplitterItem</see> at the specified index in the collection.
+                </para>
+            </summary>
+            <remarks>
+            	<para>Use this indexer to get a <strong>RadSplitterItem</strong> from the collection at the
+                specified index, using array notation.</para>
+            </remarks>
+            <param name="index">
+            The zero-based index of the <strong>RadSplitterItem</strong> to retrieve from the
+            collection.
+            </param>		
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterOrientation">
+            <summary>
+            Specifies Orientation options for the RadSplitter object
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterOrientation.Vertical">
+            <summary>
+            Splitter panes are rendered verticaly
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterOrientation.Horizontal">
+            <summary>
+            Splitter panes are rendered horizontaly
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterPaneScrolling">
+            <summary>
+            Specifies the scrolling options for the RadPane object
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterPaneScrolling.Both">
+            <summary>
+            Both X and Y scrolls are displayed
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterPaneScrolling.X">
+            <summary>
+            Only the scroll on X dimension is displayed
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterPaneScrolling.Y">
+            <summary>
+            Only the scroll on Y dimension is displayed
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterPaneScrolling.None">
+            <summary>
+            No scrolls are displayed
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterResizeMode">
+            <summary>
+            Specifies resize mode options for the RadSplitter object
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterResizeMode.AdjacentPane">
+            <summary>
+            On resize of a pane the adjacent pane is resized also
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterResizeMode.Proportional">
+            <summary>
+            On resize of a pane the other panes are resize proportionaly
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterResizeMode.EndPane">
+            <summary>
+            On resize of a pane the end pane in the splitter is resized also
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterSlideDirection">
+            <summary>
+            Specifies the available directions for the slide panes
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlideDirection.Right">
+            <summary>
+            Slide panes are sliding from left to right
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlideDirection.Left">
+            <summary>
+            Slide panes are sliding from right to left
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlideDirection.Top">
+            <summary>
+            Slide panes are sliding from top to bottom
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlideDirection.Bottom">
+            <summary>
+            Slide panes are sliding from bottom to top
+            </summary>
+            <value>4</value>
+        </member>
+        <member name="T:Telerik.WebControls.RadSplitterSlidePaneTabView">
+            <summary>
+            Specifies views of the pane tab
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlidePaneTabView.TextAndImage">
+            <summary>
+            Pane tab is displayed using its Title and Icon
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlidePaneTabView.TextOnly">
+            <summary>
+            Pane tab is displayed using only its Title
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:Telerik.WebControls.RadSplitterSlidePaneTabView.ImageOnly">
+            <summary>
+            Pane tab is displayed using only its Icon
+            </summary>
+            <value>3</value>
+        </member>
+    </members>
+</doc>

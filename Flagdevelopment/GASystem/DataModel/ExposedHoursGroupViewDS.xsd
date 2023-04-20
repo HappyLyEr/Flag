@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExposedHoursGroupViewDS" targetNamespace="http://tempuri.org/ExposedHoursGroupViewDS.xsd" xmlns:mstns="http://tempuri.org/ExposedHoursGroupViewDS.xsd" xmlns="http://tempuri.org/ExposedHoursGroupViewDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata20080117ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata20080117ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.Properties.Settings.GlobalReference.Default.flagdata20080117ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GAExposedHoursGroupViewTableAdapter" GeneratorDataComponentClassName="GAExposedHoursGroupViewTableAdapter" Name="GAExposedHoursGroupView" UserDataComponentName="GAExposedHoursGroupViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flagdata20080117ConnectionString (Settings)" DbObjectName="flagdata20080117.dbo.GAExposedHoursGroupView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT ExposedHoursGroupViewRowId, DateTimeFrom, DateTimeTo, DepartmentCategoryListsRowId, WatchListsRowId, ViewTypeListsRowId, NumberOfPersons, ExposedHoursPerWorkDay, ExposedDaysPerWeek FROM dbo.GAExposedHoursGroupView</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ExposedHoursGroupViewRowId" DataSetColumn="ExposedHoursGroupViewRowId" />
+              <Mapping SourceColumn="DateTimeFrom" DataSetColumn="DateTimeFrom" />
+              <Mapping SourceColumn="DateTimeTo" DataSetColumn="DateTimeTo" />
+              <Mapping SourceColumn="DepartmentCategoryListsRowId" DataSetColumn="DepartmentCategoryListsRowId" />
+              <Mapping SourceColumn="WatchListsRowId" DataSetColumn="WatchListsRowId" />
+              <Mapping SourceColumn="ViewTypeListsRowId" DataSetColumn="ViewTypeListsRowId" />
+              <Mapping SourceColumn="NumberOfPersons" DataSetColumn="NumberOfPersons" />
+              <Mapping SourceColumn="ExposedHoursPerWorkDay" DataSetColumn="ExposedHoursPerWorkDay" />
+              <Mapping SourceColumn="ExposedDaysPerWeek" DataSetColumn="ExposedDaysPerWeek" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExposedHoursGroupViewDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ExposedHoursGroupViewDS" msprop:Generator_DataSetName="ExposedHoursGroupViewDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAExposedHoursGroupView" msprop:Generator_UserTableName="GAExposedHoursGroupView" msprop:Generator_RowDeletedName="GAExposedHoursGroupViewRowDeleted" msprop:Generator_TableClassName="GAExposedHoursGroupViewDataTable" msprop:Generator_RowChangedName="GAExposedHoursGroupViewRowChanged" msprop:Generator_RowClassName="GAExposedHoursGroupViewRow" msprop:Generator_RowChangingName="GAExposedHoursGroupViewRowChanging" msprop:Generator_RowEvArgName="GAExposedHoursGroupViewRowChangeEvent" msprop:Generator_RowEvHandlerName="GAExposedHoursGroupViewRowChangeEventHandler" msprop:Generator_TablePropName="GAExposedHoursGroupView" msprop:Generator_TableVarName="tableGAExposedHoursGroupView" msprop:Generator_RowDeletingName="GAExposedHoursGroupViewRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExposedHoursGroupViewRowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ExposedHoursGroupViewRowId" msprop:Generator_ColumnPropNameInRow="ExposedHoursGroupViewRowId" msprop:Generator_ColumnVarNameInTable="columnExposedHoursGroupViewRowId" msprop:Generator_ColumnPropNameInTable="ExposedHoursGroupViewRowIdColumn" type="xs:int" />
+              <xs:element name="DateTimeFrom" msprop:Generator_UserColumnName="DateTimeFrom" msprop:Generator_ColumnPropNameInRow="DateTimeFrom" msprop:Generator_ColumnVarNameInTable="columnDateTimeFrom" msprop:Generator_ColumnPropNameInTable="DateTimeFromColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeTo" msprop:Generator_UserColumnName="DateTimeTo" msprop:Generator_ColumnPropNameInRow="DateTimeTo" msprop:Generator_ColumnVarNameInTable="columnDateTimeTo" msprop:Generator_ColumnPropNameInTable="DateTimeToColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DepartmentCategoryListsRowId" msprop:Generator_UserColumnName="DepartmentCategoryListsRowId" msprop:Generator_ColumnPropNameInRow="DepartmentCategoryListsRowId" msprop:Generator_ColumnVarNameInTable="columnDepartmentCategoryListsRowId" msprop:Generator_ColumnPropNameInTable="DepartmentCategoryListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="WatchListsRowId" msprop:Generator_UserColumnName="WatchListsRowId" msprop:Generator_ColumnPropNameInRow="WatchListsRowId" msprop:Generator_ColumnVarNameInTable="columnWatchListsRowId" msprop:Generator_ColumnPropNameInTable="WatchListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ViewTypeListsRowId" msprop:Generator_UserColumnName="ViewTypeListsRowId" msprop:Generator_ColumnPropNameInRow="ViewTypeListsRowId" msprop:Generator_ColumnVarNameInTable="columnViewTypeListsRowId" msprop:Generator_ColumnPropNameInTable="ViewTypeListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberOfPersons" msprop:Generator_UserColumnName="NumberOfPersons" msprop:Generator_ColumnPropNameInRow="NumberOfPersons" msprop:Generator_ColumnVarNameInTable="columnNumberOfPersons" msprop:Generator_ColumnPropNameInTable="NumberOfPersonsColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ExposedHoursPerWorkDay" msprop:Generator_UserColumnName="ExposedHoursPerWorkDay" msprop:Generator_ColumnPropNameInRow="ExposedHoursPerWorkDay" msprop:Generator_ColumnVarNameInTable="columnExposedHoursPerWorkDay" msprop:Generator_ColumnPropNameInTable="ExposedHoursPerWorkDayColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ExposedDaysPerWeek" msprop:Generator_UserColumnName="ExposedDaysPerWeek" msprop:Generator_ColumnPropNameInRow="ExposedDaysPerWeek" msprop:Generator_ColumnVarNameInTable="columnExposedDaysPerWeek" msprop:Generator_ColumnPropNameInTable="ExposedDaysPerWeekColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GAExposedHoursGroupView" />
+      <xs:field xpath="mstns:ExposedHoursGroupViewRowId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

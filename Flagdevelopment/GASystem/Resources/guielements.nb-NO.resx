@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Lagre</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Angre</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editer</value>
+  </data>
+  <data name="PrintReport" xml:space="preserve">
+    <value>Skriv ut rapport</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Velg</value>
+  </data>
+  <data name="NewRecord" xml:space="preserve">
+    <value>Opprett {0}</value>
+  </data>
+  <data name="ButtonNewIncident" xml:space="preserve">
+    <value>Ny hendelse</value>
+  </data>
+  <data name="GAActionPlur" xml:space="preserve">
+    <value>Handlinger</value>
+  </data>
+  <data name="NoRecords" xml:space="preserve">
+    <value>Ingen {0} er registrert</value>
+  </data>
+  <data name="GAIncidentReportPlur" xml:space="preserve">
+    <value>Hendelser</value>
+  </data>
+  <data name="GADailyEmployeeCountPlur" xml:space="preserve">
+    <value>Ansatt tellinger</value>
+  </data>
+  <data name="GAHazardIdentificationPlur" xml:space="preserve">
+    <value>Risikohåndteringer</value>
+  </data>
+  <data name="GAVesselVisitPlur" xml:space="preserve">
+    <value>Besøk på skip</value>
+  </data>
+  <data name="GAAuditPlur" xml:space="preserve">
+    <value>Kontroller</value>
+  </data>
+  <data name="GAMeetingPlur" xml:space="preserve">
+    <value>Møter/Rapporter</value>
+  </data>
+  <data name="GACoursePlur" xml:space="preserve">
+    <value>Kurs</value>
+  </data>
+  <data name="GAAction" xml:space="preserve">
+    <value>Handling</value>
+  </data>
+  <data name="GAIncidentReport" xml:space="preserve">
+    <value>Hendelse</value>
+  </data>
+  <data name="GADailyEmployeeCount" xml:space="preserve">
+    <value>Ansatt telling</value>
+  </data>
+  <data name="GAHazardIdentification" xml:space="preserve">
+    <value>Risikohåndtering</value>
+  </data>
+  <data name="GAVesselVisit" xml:space="preserve">
+    <value>Besøk på skip</value>
+  </data>
+  <data name="GAMeeting" xml:space="preserve">
+    <value>Møte/Rapport</value>
+  </data>
+  <data name="GACourse" xml:space="preserve">
+    <value>Kurs</value>
+  </data>
+  <data name="GAAudit" xml:space="preserve">
+    <value>Kontroll</value>
+  </data>
+  <data name="GAProject" xml:space="preserve">
+    <value>Prosjekt</value>
+  </data>
+  <data name="GAProjectPlur" xml:space="preserve">
+    <value>Prosjekter</value>
+  </data>
+  <data name="ContextMemberInfo" xml:space="preserve">
+    <value>Denne {0} er eid av </value>
+  </data>
+  <data name="ListAllIn" xml:space="preserve">
+    <value>List alle {0} i</value>
+  </data>
+  <data name="GAFile" xml:space="preserve">
+    <value>Dokument</value>
+  </data>
+  <data name="GAFilePlur" xml:space="preserve">
+    <value>Dokumenter</value>
+  </data>
+  <data name="GAPersonnel" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="GAPersonnelPlur" xml:space="preserve">
+    <value>Personell</value>
+  </data>
+  <data name="Goto" xml:space="preserve">
+    <value>Gå til</value>
+  </data>
+  <data name="ListAll" xml:space="preserve">
+    <value>List alle {0} </value>
+  </data>
+  <data name="ContextMemberInfoPlur" xml:space="preserve">
+    <value>Disse {0} er eid av</value>
+  </data>
+  <data name="GAProcedure" xml:space="preserve">
+    <value>Prosedyre</value>
+  </data>
+  <data name="GAProcedurePlur" xml:space="preserve">
+    <value>Prosedyrer</value>
+  </data>
+  <data name="GAReportInstanceFilter" xml:space="preserve">
+    <value>Rapport forekomst filter</value>
+  </data>
+  <data name="GAReportInstanceFilterPlur" xml:space="preserve">
+    <value>Rapport forekomst filtre</value>
+  </data>
+  <data name="GATextItem" xml:space="preserve">
+    <value>Detalj</value>
+  </data>
+  <data name="GATextItemPlur" xml:space="preserve">
+    <value>Detaljer</value>
+  </data>
+  <data name="GAEmployment" xml:space="preserve">
+    <value>Engasjement</value>
+  </data>
+  <data name="GAEmploymentPlur" xml:space="preserve">
+    <value>Engasjementer</value>
+  </data>
+  <data name="GALocation" xml:space="preserve">
+    <value>Lokasjon</value>
+  </data>
+  <data name="GALocationPlur" xml:space="preserve">
+    <value>Lokasjoner</value>
+  </data>
+  <data name="GATaskTemplate" xml:space="preserve">
+    <value>Oppgave mal</value>
+  </data>
+  <data name="GATaskTemplatePlur" xml:space="preserve">
+    <value>Oppgave maler</value>
+  </data>
+  <data name="GATimeAndAttendance" xml:space="preserve">
+    <value>Til stede</value>
+  </data>
+  <data name="GATimeAndAttendancePlur" xml:space="preserve">
+    <value>Til stede</value>
+  </data>
+  <data name="GaCompany" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="GaCompanyPlur" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="GADepartment" xml:space="preserve">
+    <value>Avdeling</value>
+  </data>
+  <data name="GADepartmentPlur" xml:space="preserve">
+    <value>Avdelinger</value>
+  </data>
+  <data name="GAInjuredParty" xml:space="preserve">
+    <value>Skadet person</value>
+  </data>
+  <data name="GAInjuredPartyPlur" xml:space="preserve">
+    <value>Skadede personer</value>
+  </data>
+  <data name="GAMeansOfContact" xml:space="preserve">
+    <value>Kontaktdetalj</value>
+  </data>
+  <data name="GAMeansOfContactPlur" xml:space="preserve">
+    <value>Kontaktdetaljer</value>
+  </data>
+  <data name="GAReports" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="GAReportsPlur" xml:space="preserve">
+    <value>Rapporter</value>
+  </data>
+  <data name="GAReportInstance" xml:space="preserve">
+    <value>Rapport Generering</value>
+  </data>
+  <data name="GAReportInstancePlur" xml:space="preserve">
+    <value>Rapport Genereringer</value>
+  </data>
+  <data name="GANextOfKinPlur" xml:space="preserve">
+    <value>Pårørende</value>
+  </data>
+  <data name="GANextOfKin" xml:space="preserve">
+    <value>Pårørende</value>
+  </data>
+  <data name="GACertificatePlur" xml:space="preserve">
+    <value>Sertifikater</value>
+  </data>
+  <data name="GACertificate" xml:space="preserve">
+    <value>Sertifikat</value>
+  </data>
+  <data name="GADamagedEquipment" xml:space="preserve">
+    <value>Materiell Skade</value>
+  </data>
+  <data name="GADamagedEquipmentPlur" xml:space="preserve">
+    <value>Materiell Skade</value>
+  </data>
+  <data name="GAOpportunityPlur" xml:space="preserve">
+    <value>Ideer, muligheter</value>
+  </data>
+  <data name="GAEquipmentDamageReport" xml:space="preserve">
+    <value>Rapport ødelagt utstyr</value>
+  </data>
+  <data name="GAEquipmentDamageReportPlur" xml:space="preserve">
+    <value>Rapporter ødelagt utstyr</value>
+  </data>
+  <data name="GACost" xml:space="preserve">
+    <value>Kostnad</value>
+  </data>
+  <data name="GACostPlur" xml:space="preserve">
+    <value>Kostnader</value>
+  </data>
+  <data name="GAResourceSpecification" xml:space="preserve">
+    <value>Ressurs spesifikasjon</value>
+  </data>
+  <data name="GAResourceSpecificationPlur" xml:space="preserve">
+    <value>Ressurs spesifikasjoner</value>
+  </data>
+  <data name="GAResource" xml:space="preserve">
+    <value>Ressurs</value>
+  </data>
+  <data name="GAResourcePlur" xml:space="preserve">
+    <value>Ressurser</value>
+  </data>
+  <data name="GATeam" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="GATeamPlur" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="GAMeetingText" xml:space="preserve">
+    <value>Detalj</value>
+  </data>
+  <data name="GAMeetingTextPlur" xml:space="preserve">
+    <value>Detaljer</value>
+  </data>
+  <data name="GATask" xml:space="preserve">
+    <value>Oppgave</value>
+  </data>
+  <data name="GATaskPlur" xml:space="preserve">
+    <value>Oppgaver</value>
+  </data>
+  <data name="GAReport" xml:space="preserve">
+    <value>Møte/Rapport Arkiv</value>
+  </data>
+  <data name="GAReportPlur" xml:space="preserve">
+    <value>Møter/Rapporter Arkiv</value>
+  </data>
+  <data name="GAReporter" xml:space="preserve">
+    <value>Referent</value>
+  </data>
+  <data name="GAReporterPlur" xml:space="preserve">
+    <value>Referenter</value>
+  </data>
+  <data name="GAMeetingPersonList" xml:space="preserve">
+    <value>Involvert person</value>
+  </data>
+  <data name="GAMeetingPersonListPlur" xml:space="preserve">
+    <value>Involverte personer</value>
+  </data>
+  <data name="GAWorkflow" xml:space="preserve">
+    <value>Arbeidsflyt</value>
+  </data>
+  <data name="GAWorkflowPlur" xml:space="preserve">
+    <value>Arbeidsflyt</value>
+  </data>
+  <data name="GALists" xml:space="preserve">
+    <value>Kodeliste</value>
+  </data>
+  <data name="GAListCategory" xml:space="preserve">
+    <value>Kodeliste kategori</value>
+  </data>
+  <data name="GAListsPlur" xml:space="preserve">
+    <value>Kodelister</value>
+  </data>
+  <data name="GAListCategoryPlur" xml:space="preserve">
+    <value>Kodeliste kategorier</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>lik</value>
+  </data>
+  <data name="NotEqual" xml:space="preserve">
+    <value>forskjellig fra</value>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>større enn</value>
+  </data>
+  <data name="GreaterThanEqual" xml:space="preserve">
+    <value>større enn eller lik</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>mindre enn</value>
+  </data>
+  <data name="LessThanEqual" xml:space="preserve">
+    <value>mindre enn eller lik</value>
+  </data>
+  <data name="AllRecordsWithinOwner" xml:space="preserve">
+    <value>Alle {0} innen {1} {2} </value>
+  </data>
+  <data name="ViewRecordsForDifferenContext" xml:space="preserve">
+    <value>Se {0} fra et annet ståsted</value>
+  </data>
+  <data name="GASafetyObservation" xml:space="preserve">
+    <value>Sikkerhetsobservasjon</value>
+  </data>
+  <data name="GASafetyObservationPlur" xml:space="preserve">
+    <value>Sikkerhetsobservasjoner</value>
+  </data>
+  <data name="GAUser" xml:space="preserve">
+    <value>Bruker</value>
+  </data>
+  <data name="GAUserPlur" xml:space="preserve">
+    <value>Brukere</value>
+  </data>
+  <data name="GALink" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="GALinkPlur" xml:space="preserve">
+    <value>Linker</value>
+  </data>
+  <data name="ForwardActivity" xml:space="preserve">
+    <value>Vidersend askjon</value>
+  </data>
+  <data name="CancelForward" xml:space="preserve">
+    <value>Angre videresend</value>
+  </data>
+  <data name="ActivityDetails" xml:space="preserve">
+    <value>Aksjons detaljer</value>
+  </data>
+  <data name="SelectUserForActivityForward" xml:space="preserve">
+    <value>Velg bruker du vil videresende oppgaven til:</value>
+  </data>
+  <data name="GAFileFolder" xml:space="preserve">
+    <value>Dokument mappe</value>
+  </data>
+  <data name="GAFileFolderPlur" xml:space="preserve">
+    <value>Dokument mapper</value>
+  </data>
+  <data name="GAHelp" xml:space="preserve">
+    <value>Hjelpetekst</value>
+  </data>
+  <data name="GAHelpPlur" xml:space="preserve">
+    <value>Hjelpetekster</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Hjelp</value>
+  </data>
+  <data name="GACoursePersonList" xml:space="preserve">
+    <value>Kursdeltaker</value>
+  </data>
+  <data name="GACoursePersonListPlur" xml:space="preserve">
+    <value>Kursdeltakere</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Lagre</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="YearMonthSpanView" xml:space="preserve">
+    <value>År: {0}</value>
+  </data>
+  <data name="WorkItemUnAssigned" xml:space="preserve">
+    <value>Denne oppgaven er tildelt deg fordi du har en koordinator rolle. Oppgaven er tildelt rolle {0}, men ingen brukere har denne rollen for denne aktiviteten</value>
+  </data>
+  <data name="WorkItemAssignedToUser" xml:space="preserve">
+    <value>Denne oppgaven er tildelt deg</value>
+  </data>
+  <data name="WorkItemAssignedToRole" xml:space="preserve">
+    <value>Denne oppgaven er tildelt rolle {0}. Brukere med denne rollen er</value>
+  </data>
+  <data name="url" xml:space="preserve">
+    <value>Dokument</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Oppdater</value>
+  </data>
+  <data name="rejected" xml:space="preserve">
+    <value>Avslått</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>Les</value>
+  </data>
+  <data name="NoActionInWorkitem" xml:space="preserve">
+    <value>Denne oppgaven har ingen referanse til en aksjon</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Måned</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Gruppe navn</value>
+  </data>
+  <data name="GAWorkItem" xml:space="preserve">
+    <value>Oppgave</value>
+  </data>
+  <data name="GAWorkItemPlur" xml:space="preserve">
+    <value>Oppgaver</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Slett</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Opprett</value>
+  </data>
+  <data name="completed" xml:space="preserve">
+    <value>utført</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Angre</value>
+  </data>
+  <data name="AllRecords" xml:space="preserve">
+    <value>Alle {0}</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Adminn</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Legg til</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="reject" xml:space="preserve">
+    <value>Avvis</value>
+  </data>
+  <data name="DelegateWorkitem" xml:space="preserve">
+    <value>Deleger oppgave</value>
+  </data>
+  <data name="AddParticipant" xml:space="preserve">
+    <value>Legg til ansvarlig</value>
+  </data>
+  <data name="WorkitemsAssignedToYou" xml:space="preserve">
+    <value>Oppgaver tildelt deg</value>
+  </data>
+  <data name="WorkitemsAssignedToRoles" xml:space="preserve">
+    <value>Oppgaver tildelt en role du holder</value>
+  </data>
+  <data name="WorkitemsAssignedCoordinator" xml:space="preserve">
+    <value>Oppgaver tildelt deg fordi du har en HMS koordinator rolle</value>
+  </data>
+  <data name="GArxtReport" xml:space="preserve">
+    <value>Hendelse rapport</value>
+  </data>
+  <data name="GArxtReportPlur" xml:space="preserve">
+    <value>Hendelse rapporter</value>
+  </data>
+  <data name="GAManageChangePlur" xml:space="preserve">
+    <value>Endringer</value>
+  </data>
+  <data name="GAManageChange" xml:space="preserve">
+    <value>Endring</value>
+  </data>
+  <data name="GAOpportunity" xml:space="preserve">
+    <value>Forslag</value>
+  </data>
+  <data name="GARiskControl" xml:space="preserve">
+    <value>Risiko kontroll</value>
+  </data>
+  <data name="GARiskControlPlur" xml:space="preserve">
+    <value>Risiko kontroller</value>
+  </data>
+  <data name="GARisk" xml:space="preserve">
+    <value>Risiko</value>
+  </data>
+  <data name="GARiskPlur" xml:space="preserve">
+    <value>Risiki</value>
+  </data>
+  <data name="GAProcedureReference" xml:space="preserve">
+    <value>Prosedyre Referanse</value>
+  </data>
+  <data name="GAProcedureReferencePlur" xml:space="preserve">
+    <value>Prosedyre Referanser</value>
+  </data>
+  <data name="GADaysReport" xml:space="preserve">
+    <value>Annen aktivitet</value>
+  </data>
+  <data name="GADaysReportPlur" xml:space="preserve">
+    <value>Andre aktiviteter</value>
+  </data>
+  <data name="GAControl" xml:space="preserve">
+    <value>Kontroll</value>
+  </data>
+  <data name="GAControlPlur" xml:space="preserve">
+    <value>Kontroller</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Hjemme</value>
+  </data>
+  <data name="ListMyWorkitems" xml:space="preserve">
+    <value>List mine oppgaver</value>
+  </data>
+  <data name="UseAsHome" xml:space="preserve">
+    <value>Bruk som hjemme</value>
+  </data>
+  <data name="NotIncluding" xml:space="preserve">
+    <value>Inneholder ikke</value>
+  </data>
+  <data name="isChecked" xml:space="preserve">
+    <value>Krysset Av</value>
+  </data>
+  <data name="isNotChecked" xml:space="preserve">
+    <value>Ikke Krysset Av</value>
+  </data>
+  <data name="applyFilter" xml:space="preserve">
+    <value>Bruk utvalg</value>
+  </data>
+  <data name="datafilterhelptext" xml:space="preserve">
+    <value>Utvalg</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Inneholder</value>
+  </data>
+  <data name="infoFilterNoElements" xml:space="preserve">
+    <value>Viser all informasjon</value>
+  </data>
+  <data name="infoFilterOneElement" xml:space="preserve">
+    <value>Hvor:</value>
+  </data>
+  <data name="infoFilterOneElementold" xml:space="preserve">
+    <value>Filtrer utalg basert på følgende:</value>
+  </data>
+  <data name="infoFilterMultipleElements" xml:space="preserve">
+    <value>Hvor:</value>
+  </data>
+  <data name="setFilter" xml:space="preserve">
+    <value>Rediger utvalg - av/på</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Gjeldende</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Betingelse</value>
+  </data>
+  <data name="Fieldname" xml:space="preserve">
+    <value>Felt navn</value>
+  </data>
+  <data name="exporttoexcel" xml:space="preserve">
+    <value>Overfør til Excel</value>
+  </data>
+  <data name="isCurrent" xml:space="preserve">
+    <value>Er gjeldende</value>
+  </data>
+  <data name="LANGUAGE_RESOURCE_KEY" xml:space="preserve">
+    <value>GNO</value>
+  </data>
+</root>

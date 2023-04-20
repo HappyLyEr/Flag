@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EmploymentPathViewDS" targetNamespace="http://tempuri.org/GAEmploymentPathViewDS.xsd" xmlns:mstns="http://tempuri.org/GAEmploymentPathViewDS.xsd" xmlns="http://tempuri.org/GAEmploymentPathViewDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="ExcludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata20081118ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata20081118ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.flagdata20081118ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="flagdata_pathConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flagdata_pathConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.flagdata_pathConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString24" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString24 (Settings)" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.ConnectionString24" Provider="System.Data.OleDb">
+          </Connection>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString23" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString23 (Settings)" PropertyReference="ApplicationSettings.GASystem.DataModel.Properties.Settings.GlobalReference.Default.ConnectionString23" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EmploymentPathViewDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EmploymentPathViewDS" msprop:Generator_DataSetName="EmploymentPathViewDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GAEmploymentPathView" msprop:Generator_UserTableName="GAEmploymentPathView" msprop:Generator_RowDeletedName="GAEmploymentPathViewRowDeleted" msprop:Generator_RowChangedName="GAEmploymentPathViewRowChanged" msprop:Generator_RowClassName="GAEmploymentPathViewRow" msprop:Generator_RowChangingName="GAEmploymentPathViewRowChanging" msprop:Generator_RowEvArgName="GAEmploymentPathViewRowChangeEvent" msprop:Generator_RowEvHandlerName="GAEmploymentPathViewRowChangeEventHandler" msprop:Generator_TableClassName="GAEmploymentPathViewDataTable" msprop:Generator_TableVarName="tableGAEmploymentPathView" msprop:Generator_RowDeletingName="GAEmploymentPathViewRowDeleting" msprop:Generator_TablePropName="GAEmploymentPathView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmploymentRowId" msprop:Generator_UserColumnName="EmploymentRowId" msprop:Generator_ColumnVarNameInTable="columnEmploymentRowId" msprop:Generator_ColumnPropNameInRow="EmploymentRowId" msprop:Generator_ColumnPropNameInTable="EmploymentRowIdColumn" type="xs:int" />
+              <xs:element name="Personnel" msprop:Generator_UserColumnName="Personnel" msprop:Generator_ColumnVarNameInTable="columnPersonnel" msprop:Generator_ColumnPropNameInRow="Personnel" msprop:Generator_ColumnPropNameInTable="PersonnelColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="RoleListsRowId" msprop:Generator_UserColumnName="RoleListsRowId" msprop:Generator_ColumnVarNameInTable="columnRoleListsRowId" msprop:Generator_ColumnPropNameInRow="RoleListsRowId" msprop:Generator_ColumnPropNameInTable="RoleListsRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="JobDescription" msprop:Generator_UserColumnName="JobDescription" msprop:Generator_ColumnVarNameInTable="columnJobDescription" msprop:Generator_ColumnPropNameInRow="JobDescription" msprop:Generator_ColumnPropNameInTable="JobDescriptionColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OwnerClass" msprop:Generator_UserColumnName="OwnerClass" msprop:Generator_ColumnVarNameInTable="columnOwnerClass" msprop:Generator_ColumnPropNameInRow="OwnerClass" msprop:Generator_ColumnPropNameInTable="OwnerClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OwnerClassRowId" msprop:Generator_UserColumnName="OwnerClassRowId" msprop:Generator_ColumnVarNameInTable="columnOwnerClassRowId" msprop:Generator_ColumnPropNameInRow="OwnerClassRowId" msprop:Generator_ColumnPropNameInTable="OwnerClassRowIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="path" msprop:Generator_UserColumnName="path" msprop:Generator_ColumnVarNameInTable="columnpath" msprop:Generator_ColumnPropNameInRow="path" msprop:Generator_ColumnPropNameInTable="pathColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="weight" msdata:ReadOnly="true" msprop:Generator_UserColumnName="weight" msprop:Generator_ColumnVarNameInTable="columnweight" msprop:Generator_ColumnPropNameInRow="weight" msprop:Generator_ColumnPropNameInTable="weightColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FromDate" msprop:Generator_UserColumnName="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ToDate" msprop:Generator_UserColumnName="ToDate" msprop:Generator_ColumnVarNameInTable="columnToDate" msprop:Generator_ColumnPropNameInRow="ToDate" msprop:Generator_ColumnPropNameInTable="ToDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PathLevel1" msprop:Generator_UserColumnName="PathLevel1" msprop:Generator_ColumnVarNameInTable="columnPathLevel1" msprop:Generator_ColumnPropNameInRow="PathLevel1" msprop:Generator_ColumnPropNameInTable="PathLevel1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PathLevel2" msprop:Generator_UserColumnName="PathLevel2" msprop:Generator_ColumnVarNameInTable="columnPathLevel2" msprop:Generator_ColumnPropNameInRow="PathLevel2" msprop:Generator_ColumnPropNameInTable="PathLevel2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PathLevel3" msprop:Generator_UserColumnName="PathLevel3" msprop:Generator_ColumnVarNameInTable="columnPathLevel3" msprop:Generator_ColumnPropNameInRow="PathLevel3" msprop:Generator_ColumnPropNameInTable="PathLevel3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PathLevel4" msprop:Generator_UserColumnName="PathLevel4" msprop:Generator_ColumnVarNameInTable="columnPathLevel4" msprop:Generator_ColumnPropNameInRow="PathLevel4" msprop:Generator_ColumnPropNameInTable="PathLevel4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PathLevel5" msprop:Generator_UserColumnName="PathLevel5" msprop:Generator_ColumnVarNameInTable="columnPathLevel5" msprop:Generator_ColumnPropNameInRow="PathLevel5" msprop:Generator_ColumnPropNameInTable="PathLevel5Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PathLevel6" msprop:Generator_UserColumnName="PathLevel6" msprop:Generator_ColumnVarNameInTable="columnPathLevel6" msprop:Generator_ColumnPropNameInRow="PathLevel6" msprop:Generator_ColumnPropNameInTable="PathLevel6Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,173 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE36BC11-914D-477A-9CE5-9CC77A6A7A0A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DotNetApre</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GASystem.DotNetApre</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PSWinCom.Gateway.Client, Version=1.0.1787.20859, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FlagSolution\DLLReferences\PSWinCom.Gateway.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAgentBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IConsumer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\ActionCompletedAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\BroadcastSMTPAgent.cs" />
+    <Compile Include="impl\GetListDescriptionFromCodeValue.cs" />
+    <Compile Include="impl\GetOwnerClassNameAgent.cs" />
+    <Compile Include="impl\GetOwnerObjectNameAgent.cs" />
+    <Compile Include="impl\GetOwnerReferenceIdAgent.cs" />
+    <Compile Include="impl\OpportunityGoPublicAgent.cs" />
+    <Compile Include="impl\SmtpToCommunityMembersAgent.cs" />
+    <Compile Include="impl\CreateNewRecordFromRecordAgent.cs" />
+    <Compile Include="impl\GetOwnerAgent.cs" />
+    <Compile Include="impl\GetOwnerclassAgent.cs" />
+    <Compile Include="impl\GetResponsibleAgent.cs" />
+    <Compile Include="impl\GetDBFieldAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\GetUserIdFromDBFieldAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\SimpleAgentBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\SimpleConsumer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\SimpleRouter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\SMSAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\SMTPAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="impl\UpdateDBFieldAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRouter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\AttributeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GASystemData\GASystem.DataModel.csproj">
+      <Project>{E72963E4-E15C-44CA-B76C-A996B594E53C}</Project>
+      <Name>GASystem.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\openwfe-dotnet-1.5.2\openwfe.csproj">
+      <Project>{AF7506AF-9182-41EC-BD55-AC5691902504}</Project>
+      <Name>openwfe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GASystem\GASystem.csproj">
+      <Project>{181A89D3-4B82-4002-9048-4B817FE9F894}</Project>
+      <Name>GASystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

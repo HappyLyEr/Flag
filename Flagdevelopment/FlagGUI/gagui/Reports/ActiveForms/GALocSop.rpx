@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="4">
+  <Object type="DataDynamics.ActiveReports.ActiveReport3" name="GALocSop">
+    <Property name="StyleSheet">
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; </Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 16pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading1</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; </Argument>
+          <Argument type="System.String">Heading2</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+      <Item type="DDCssLib.StyleSheetRule">
+        <InstanceDescriptor type="DDCssLib.StyleSheetRule">
+          <Argument type="System.String">font-size: 13pt; font-weight: bold; </Argument>
+          <Argument type="System.String">Heading3</Argument>
+          <Argument type="System.String">Normal</Argument>
+        </InstanceDescriptor>
+      </Item>
+    </Property>
+    <Property name="DataMember">GALocation</Property>
+    <Property name="DataSource">
+      <Reference name="reportView1" />
+    </Property>
+    <Property name="Sections">
+      <Reference name="reportHeader1" />
+      <Reference name="detail" />
+      <Reference name="reportFooter1" />
+    </Property>
+    <Property name="Parameters">
+      <Reference name="EndDate" />
+      <Reference name="StartDate" />
+      <Reference name="OwnerName" />
+    </Property>
+    <Property name="PrintWidth">11.0625</Property>
+    <Property name="PageSettings">
+      <Property name="PaperWidth">8.5</Property>
+      <Property name="PaperHeight">11</Property>
+    </Property>
+    <Property name="ShowParameterUI">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtName1">
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtName1</Property>
+    <Property name="DataField">Name</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACQPwAAgD0L</Binary>
+    </Property>
+    <Property name="OutputFormat" />
+    <Property name="Name">txtName1</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">1.9375, 0.1875</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label1">
+    <Property name="HyperLink" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAPQAAgD0L</Binary>
+    </Property>
+    <Property name="Text">SOP Report for</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Name">label1</Property>
+    <Property name="Size">1, 0.1875</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label2">
+    <Property name="HyperLink" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACgQAAAgD0L</Binary>
+    </Property>
+    <Property name="Text">To:</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Name">label2</Property>
+    <Property name="Size">0.25, 0.1875</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label3">
+    <Property name="HyperLink" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAABIQAAAgD0L</Binary>
+    </Property>
+    <Property name="Text">From: </Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Name">label3</Property>
+    <Property name="Size">0.4375, 0.1875</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Detail" name="detail">
+    <Property name="ColumnSpacing">0</Property>
+    <Property name="Name">detail</Property>
+    <Property name="Height">2.61458325</Property>
+    <Property name="Controls">
+      <Reference name="subReport1" />
+      <Reference name="label2" />
+      <Reference name="label1" />
+      <Reference name="txtEndDate1" />
+      <Reference name="label4" />
+      <Reference name="txtName1" />
+      <Reference name="label3" />
+      <Reference name="txtStartDate1" />
+    </Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.SubReport" name="subReport1">
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAPQAAMD8L</Binary>
+    </Property>
+    <Property name="Name">subReport1</Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="ReportName">SOPList</Property>
+    <Property name="Report" />
+    <Property name="CloseBorder">False</Property>
+    <Property name="Size">11, 1.75</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.ReportHeader" name="reportHeader1">
+    <Property name="Name">reportHeader1</Property>
+    <Property name="Height">0.1875</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Label" name="label4">
+    <Property name="HyperLink" />
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACAPQAAwD4L</Binary>
+    </Property>
+    <Property name="Text"> </Property>
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Name">label4</Property>
+    <Property name="Size">10.8125, 0.1875</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.ReportFooter" name="reportFooter1">
+    <Property name="Height">0.25</Property>
+    <Property name="Name">reportFooter1</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="EndDate">
+    <Property name="Tag" />
+    <Property name="Prompt" />
+    <Property name="QueryCreated">False</Property>
+    <Property name="Key">EndDate</Property>
+    <Property name="Type">Date</Property>
+    <Property name="DefaultValue" />
+    <Property name="PromptUser">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="StartDate">
+    <Property name="Tag" />
+    <Property name="Prompt" />
+    <Property name="QueryCreated">False</Property>
+    <Property name="Key">StartDate</Property>
+    <Property name="Type">Date</Property>
+    <Property name="DefaultValue" />
+    <Property name="PromptUser">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.Parameter" name="OwnerName">
+    <Property name="Tag" />
+    <Property name="Prompt" />
+    <Property name="QueryCreated">False</Property>
+    <Property name="Key">OwnerName</Property>
+    <Property name="Type">String</Property>
+    <Property name="DefaultValue">norsolutions</Property>
+    <Property name="PromptUser">False</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtEndDate1">
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtEndDate1</Property>
+    <Property name="DataField">param:EndDate</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAACqQAAAgD0L</Binary>
+    </Property>
+    <Property name="OutputFormat">dd-MMM-yyyy</Property>
+    <Property name="Name">txtEndDate1</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">1, 0.2</Property>
+  </Object>
+  <Object type="DataDynamics.ActiveReports.TextBox" name="txtStartDate1">
+    <Property name="Border">
+      <Property name="TopStyle">None</Property>
+      <Property name="RightStyle">None</Property>
+      <Property name="LeftStyle">None</Property>
+      <Property name="BottomStyle">None</Property>
+    </Property>
+    <Property name="Text">txtStartDate1</Property>
+    <Property name="DataField">param:StartDate</Property>
+    <Property name="Font">Arial, 10pt</Property>
+    <Property name="Location">
+      <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAABoQAAAgD0L</Binary>
+    </Property>
+    <Property name="OutputFormat">dd-MMM-yyyy</Property>
+    <Property name="Name">txtStartDate1</Property>
+    <Property name="DistinctField" />
+    <Property name="Size">1, 0.2</Property>
+  </Object>
+  <Object type="GASystem.DataModel.View.ReportView" name="reportView1">
+    <Property name="DataSetName">ReportView</Property>
+    <Property name="Locale">English (United States)</Property>
+    <Property name="SchemaSerializationMode">IncludeSchema</Property>
+  </Object>
+</ActiveReportsLayout>

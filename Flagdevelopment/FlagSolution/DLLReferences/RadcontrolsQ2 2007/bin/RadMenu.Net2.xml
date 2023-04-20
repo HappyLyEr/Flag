@@ -1,0 +1,3282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RadMenu.Net2</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WebControls.Design.Menu.ControlBuilderForm">
+            <summary>
+            Summary description for ControlBuilderForm.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Design.Menu.ControlBuilderForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.Design.Menu.ControlBuilderForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Design.RadMenuEditorForm">
+            <summary>
+            The Windows form that hosts the RadMenu editor.
+            </summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuEventArgs.#ctor(Telerik.WebControls.RadMenuItem)">
+            <summary>
+                Initializes a new instance of the
+                <see cref="T:Telerik.WebControls.RadMenuEventArgs">RadMenuEventArgs</see> class.
+            </summary>
+            <param name="item">
+                A <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> which represents an item in the
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> control.
+            </param>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuEventArgs.Item">
+            <summary>
+                Gets the referenced <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> in the
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> control when the event is raised.
+            </summary>
+            <value>
+                The referenced item in the <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> control when
+                the event is raised.
+            </value>
+            <remarks>
+                Use this property to programmatically access the item referenced in the
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> when the event is raised.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadMenu">
+            <summary>A navigation control used to create collapsing interfaces.</summary>
+            <remarks>
+            	<para>
+                    The <b>RadMenu</b> control is used to display a list of items in a Web Forms
+                    page.The <b>RadMenu</b> control supports the following features:
+                </para>
+            	<list type="bullet">
+            		<item>Databinding that allows the control to be populated from various
+                    datasources</item>
+            		<item>Programmatic access to the <strong>RadMenu</strong> object model
+                    which allows dynamic creation and customization of menus.
+                    </item>
+            		<item>Customizable appearance through built-in or user-defined skins.</item>
+            	</list>
+            	<h3>Items</h3>
+            	<para>
+                    The <strong>RadMenu</strong> control is made up of tree of items represented
+                    by <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> objects. Items at the top level (level 0) are
+                    called root items. An item that has a parent item is called a child item. All root
+                    items are stored in the <see cref="P:Telerik.WebControls.RadMenu.Items">Items</see> collection. Child items are
+                    stored in a parent item's <see cref="P:Telerik.WebControls.RadMenuItem.Items">Items</see> collection.
+                </para>
+            	<para>
+                    Each item has a <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see>, <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see>, 
+                    and a <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property. The value of the <b>Text</b>
+                    property is displayed in the <b>RadMenu</b> control, while the <b>Value</b>
+                    property is used to store any additional data about the item, such as data
+                    passed to the postback event associated with the item. When clicked, an item can
+                    navigate to another Web page indicated by the
+                    <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property.
+                </para>
+            </remarks>
+            
+        </member>
+        <member name="P:Telerik.RadMenuUtils.RadControl.Version">
+            <summary>Gets the component's current version.</summary>
+        </member>
+        <member name="P:Telerik.RadMenuUtils.RadControl.UseEmbeddedScripts">
+            <summary>
+            Gets or sets a value indicating whether to use the embedded JavaScript files or not.
+            </summary>
+            <value>
+            	<strong>True</strong> if embedded JavaScript files are to be used; otherwise
+            <strong>false</strong>. The default value is <strong>true</strong>.
+            </value>
+            <remarks>
+            Use this property for debugging purposes or to apply any modifications to the
+            JavaScript files.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.IRadMenuItemContainer">
+            <summary>
+                Defines properties that menu item containers (<see cref="T:Telerik.WebControls.RadMenu">RadMenu</see>,
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see>) should implement
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.IRadMenuItemContainer.Owner">
+            <summary>Gets the parent <see cref="T:Telerik.WebControls.IRadMenuItemContainer">IMenuItemContainer</see>.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.IRadMenuItemContainer.Items">
+            <summary>Gets the collection of child items.</summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadMenuItemCollection">RadMenuItemCollection</see> that represents the child
+                items.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items. You can also use it to
+            programmatically add or remove items.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenu.#ctor">
+            <summary>Initializes a new instance of the RadMenu class.</summary>
+            <remarks>
+            Use this constructor to create and initialize a new instance of the RadMenu
+            control.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically create a RadMenu
+                control. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                RadMenu RadMenu1 = new RadMenu();
+                RadMenu1.ID = "RadMenu1";
+                
+                RadMenuItem sportItem = new RadMenuItem("Sport", "~/Sport.aspx");
+                RadMenu1.Items.Add(sportItem);
+                
+                RadMenuItem newsItem = new RadMenuItem("News");
+                RadMenu1.Items.Add(newsItem);
+             
+                PlaceHolder1.Controls.Add(newsItem);
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                Dim RadMenu1 As RadMenu = New RadMenu()
+                RadMenu1.ID = "RadMenu1"
+             
+                Dim sportItem As RadMenuItem = New RadMenuItem("Sport", "")
+                RadMenu1.Items.Add(sportItem)
+             
+                Dim newsItem As RadMenuItem = New RadMenuItem("News")
+                RadMenu1.Items.Add(newsItem)
+             
+                PlaceHolder1.Controls.Add(newsItem)
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenu.GetAllItems">
+            <summary>
+            Gets a linear list of all items in the <strong>RadMenu</strong>
+            control.
+            </summary>
+            <returns>
+            An <strong>ArrayList</strong> containing all items (from all hierarchy
+            levels).
+            </returns>
+            <remarks>
+            Use the <strong>GetAllItems</strong> method to obtain a linear collection of all
+            items regardless their place in the hierarchy.
+            </remarks>
+            <example>
+                The following example demonstrates how to disable all items within a
+                <strong>RadMenu</strong> control. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                foreach (RadMenuItem item in RadMenu1.GetAllItems())
+                {
+                    item.Enabled = false;
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                For Each childItem As RadMenuItem In RadMenu1.GetAllItems
+                    childItem.Enabled = False
+                Next
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenu.FindItemByUrl(System.String)">
+            <summary>
+                Searches the <strong>RadMenu</strong> control for the first
+                <see cref="T:Telerik.WebControls.RadMenuItem">Item</see> with a <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see>
+                property equal to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadMenuItem">Item</see> whose <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see>
+                property is equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first Item matching the search criteria. If no Item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="url">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenu.FindItemByText(System.String)">
+            <summary>
+                Searches the <strong>RadMenu</strong> control for the first
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> with a <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property equal to
+                the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> whose <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property is equal
+                to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="text">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenu.FindItemByValue(System.String)">
+            <summary>
+                Searches the <strong>RadMenu</strong> control for the first
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> with a <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property equal
+                to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> whose <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property is
+                equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="value">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenu.LoadContentFile(System.String)">
+            <summary>
+            Populates the <strong>RadMenu</strong> control from external XML file. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <remarks>
+            The newly added items will be appended after any existing ones.
+            </remarks>
+            <example>
+                The following example demonstrates how to populate <strong>RadMenu</strong> control
+                from XML file. 
+                <code lang="CS">
+            private void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadMenu1.LoadContentFile("~/Menu/Examples/Menu.xml");
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Private Sub Page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+                If Not Page.IsPostBack Then
+                    RadMenu1.LoadContentFile("~/Menu/Examples/Menu.xml")
+                End If
+            End Sub
+                </code>
+            </example>
+            <param name="xmlFileName">The name of the XML file.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Telerik.WebControls.RadMenu.LoadXmlString(System.String)" -->
+        <member name="M:Telerik.WebControls.RadMenu.GetXmlString">
+            <summary>
+            Gets the <strong>RadMenu</strong> control structure as a XML string. Added to
+            support the legacy XML format used in previous versions.
+            </summary>
+            <returns>
+            XML string which contains the whole <strong>RadMenu</strong> object along with
+            its child items.
+            </returns>
+            <remarks>
+            	<list type="number">
+            		<item>The <strong>GetXmlString</strong> method gets all of the public
+                    properties of the RadMenu object and enumerates through all of them.</item>
+            		<item>If the current property is in the list of excluded properties ( These are
+                    properties which are not serialized. For example, Parent is such a property.)
+                    the process jumps to the next item.</item>
+            		<item>If the current value of the property that is being checked is different
+                    from the default value of that property, then this property will be serialized,
+                    and the new XML node attribute will be created for that property.</item>
+            		<item>After all of the RadMenu properties have been serialized, the
+                    GetXmlString method serializes all of the child items using the same
+                    algorithm</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.ValidationGroup">
+            <summary>
+            	<para><font color="red">Note: This property is new in the .NET Framework version
+                2.0.</font></para>
+            	<para>Gets or sets the name of the validation group to which this validation
+                control belongs.</para>
+            </summary>
+            <value>
+            The name of the validation group to which this validation control belongs. The
+            default is an empty string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+                This property works only when <see cref="P:Telerik.WebControls.RadMenu.CausesValidation">CausesValidation</see>
+                is set to true.
+            </remarks>
+            
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.PostBackUrl">
+            <summary>
+            	<para>Gets or sets the URL of the page to post to from the current page when an item
+                from the menu is clicked.</para>
+            </summary>
+            <value>
+            The URL of the Web page to post to from the current page when an item from the
+            menu control is clicked. The default value is an empty string (""), which causes
+            the page to post back to itself.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.ExpandAnimation">
+            <summary>Gets the settings for the animation played when an item opens.</summary>
+            <value>
+                An <see cref="T:Telerik.WebControls.AnimationSettings">AnnimationSettings</see> that represents the
+                expand animation.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <strong>ExpandAnimation</strong> property to customize the expand
+                    animation of <strong>RadMenu</strong>. You can specify the
+                    <see cref="P:Telerik.WebControls.AnimationSettings.Type">Type</see>,
+                    <see cref="P:Telerik.WebControls.AnimationSettings.Duration">Duration</see> and the
+                    To disable expand animation effects you should set the
+                    <see cref="P:Telerik.WebControls.AnimationSettings.Type">Type</see> to
+                    <strong>AnimationType.None</strong>.<br/>
+                    To customize the collapse animation you can use the
+                    <see cref="P:Telerik.WebControls.RadMenu.CollapseAnimation">CollapseAnimation</see> property.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to set the <strong>ExpandAnimation</strong>
+                of RadMenu. 
+                <para>
+            		<para><strong>ASPX:</strong></para>
+            	</para>
+            	<para>
+            		<para>&lt;radM:RadMenu ID="RadMenu1" runat="server"&gt;</para>
+            		<para><strong>&lt;ExpandAnimation Type="OutQuint" Duration="300"
+                    /&gt;</strong></para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="News" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="CNN" NavigateUrl="http://www.cnn.com"
+                    /&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="Google News" NavigateUrl="http://news.google.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radM:RadMenuItem&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="Sport" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="ESPN" NavigateUrl="http://www.espn.com"
+                    /&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="Eurosport" NavigateUrl="http://www.eurosport.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radM:RadMenuItem&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            	</para>
+            	<para>
+            		<para>&lt;/radM:RadMenu&gt;</para>
+            	</para>
+            	<code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                RadMenu1.ExpandAnimation.Type = AnimationType.Linear;
+                RadMenu1.ExpandAnimation.Duration = 300;
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                RadMenu1.ExpandAnimation.Type = AnimationType.Linear
+                RadMenu1.ExpandAnimation.Duration = 300
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.IsContext">
+            <summary>Gets or sets a value indicating whether the menu is context or not.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DefaultGroupSettings">
+            <summary>Specifies the default settings for child item behavior.</summary>
+            <value>
+                An instance of the <see cref="T:Telerik.WebControls.RadMenuItemGroupSettings">MenuItemGroupSettings</see>
+                class.
+            </value>
+            <remarks>
+            	<para>You can customize the following settings</para>
+            	<list type="bullet">
+            		<item>item flow</item>
+            		<item>expand direction</item>
+            		<item>horizontal offset from the parent item</item>
+            		<item>vertical offset from the parent item</item>
+            		<item>width</item>
+            		<item>height</item>
+            	</list>
+            	<para>
+                    For more information check
+                    <see cref="T:Telerik.WebControls.RadMenuItemGroupSettings">MenuItemGroupSettings</see>.
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.EnableAutoScroll">
+            <summary>Gets or sets a value indicating if an automatic scroll is applied if the groups are larger then the screen height.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.EnableScreenBoundaryDetection">
+            <summary>Gets or sets a value indicating whether the screen boundary detection will be applied when expanded.</summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.ContextMenuElementID">
+            <summary>
+            Gets or sets the ID of the html element which if right-clicked will display the
+            context menu.
+            </summary>
+            <remarks>
+            If the ID is empty the menu will appear on right-clicking anywhere on the page.
+            In popup scenarios, where you show the menu programmatically, you can set the
+            <strong>ContextMenuElementID</strong> property to some nonexisting value e.g.
+            <strong>"None"</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.ClickToOpen">
+            <summary>
+            Gets or sets a value indicating whether root items should open on mouse
+            click.
+            </summary>
+            <value>
+            	<strong>True</strong> if the root items open on mouse click; otherwise
+            <strong>false</strong>. The default value is <strong>false</strong>.
+            </value>
+            <remarks>
+            Use the <strong>ClickToOpen</strong> property to customize the way root menu
+            items are opened. By default menu items are opened on mouse hovering.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.CollapseAnimation">
+            <summary>Gets the settings for the animation played when an item closes.</summary>
+            <value>
+                An <see cref="T:Telerik.WebControls.AnimationSettings">AnnimationSettings</see> that represents the
+                collapse animation.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <strong>CollapseAnimation</strong> property to customize the expand
+                    animation of <strong>RadMenu</strong>. You can specify the
+                    <see cref="P:Telerik.WebControls.AnimationSettings.Type">Type</see>,
+                    <see cref="P:Telerik.WebControls.AnimationSettings.Duration">Duration</see> and the
+                    items are collapsed.<br/>
+                    To disable expand animation effects you should set the
+                    <see cref="P:Telerik.WebControls.AnimationSettings.Type">Type</see> to
+                    <strong>AnimationType.None</strong>. To customize the expand animation you can
+                    use the <see cref="P:Telerik.WebControls.RadMenu.ExpandAnimation">ExpandAnimation</see> property.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to set the
+                <strong>CollapseAnimation</strong> of RadMenu. 
+                <para>
+            		<para><strong>ASPX:</strong></para>
+            	</para>
+            	<para>
+            		<para>&lt;radM:RadMenu ID="RadMenu1" runat="server"&gt;</para>
+            		<para><strong>&lt;CollapseAnimation Type="OutQuint" Duration="300"
+                    /&gt;</strong></para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="News" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="CNN" NavigateUrl="http://www.cnn.com"
+                    /&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="Google News" NavigateUrl="http://news.google.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radM:RadMenuItem&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="Sport" &gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="ESPN" NavigateUrl="http://www.espn.com"
+                    /&gt;</para>
+            		<para>&lt;radM:RadMenuItem Text="Eurosport" NavigateUrl="http://www.eurosport.com"
+                    /&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            		<para>&lt;/radM:RadMenuItem&gt;</para>
+            		<para>&lt;/Items&gt;</para>
+            	</para>
+            	<para>
+            		<para>&lt;/radM:RadMenu&gt;</para>
+            		<code lang="CS">
+            		</code>
+            		<code lang="VB">
+            		</code>
+            	</para>
+            	<code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                RadMenu1.CollapseAnimation.Type = AnimationType.Linear;
+                RadMenu1.CollapseAnimation.Duration = 300;
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                RadMenu1.CollapseAnimation.Type = AnimationType.Linear
+                RadMenu1.CollapseAnimation.Duration = 300
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.ItemTemplate">
+            <summary>
+            Gets or sets the template for displaying the items in
+            <strong>RadMenu</strong>.
+            </summary>
+            <value>
+            	<para>A <strong>ITemplate</strong> implemented object that contains the template
+                for displaying menu items. The default value is a null reference (<b>Nothing</b> in
+                Visual Basic), which indicates that this property is not set.</para>
+            	<para>The <strong>ItemTemplate</strong> property sets a template that will be used
+                for all menu items.</para>
+            	<para>
+                    To specify unique display for individual items use the
+                    <see cref="P:Telerik.WebControls.RadMenuItem.ItemTemplate">ItemTemplate</see> property of the
+                    <strong>RadMenuItem</strong> class.
+                </para>
+            </value>
+            <example>
+            	<para>The following example demonstrates how to use the
+                <strong>ItemTemplate</strong> property to add a CheckBox for each item.</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu runat="server" ID="RadMenu1"&gt;</para>
+            	<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            		<para>&lt;ItemTemplate&gt;</para>
+            		<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            			<para>&lt;asp:CheckBox runat="server"
+                        ID="CheckBox"&gt;&lt;/asp:CheckBox&gt;<br/>
+                        &lt;asp:Label runat="server" ID="Label1"</para>
+            			<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            				<para>Text='&lt;%# DataBinder.Eval(Container, "Text") %&gt;'</para>
+            				<para>&gt;&lt;/asp:Label&gt;</para>
+            			</blockquote>
+            		</blockquote>
+            		<para>&lt;/ItemTemplate&gt;</para>
+            		<para>&lt;Items&gt;</para>
+            		<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            			<para>&lt;radM:RadMenuItem Text="News" /&gt;</para>
+            			<para>&lt;radM:RadMenuItem Text="Sports" /&gt;</para>
+            			<para>&lt;radM:RadMenuItem Text="Games" /&gt;</para>
+            		</blockquote>
+            		<para>&lt;/Items&gt;</para>
+            	</blockquote>
+            	<para>&lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.SkinsPath">
+            <summary>
+            Gets or sets the relative path of the folder containing the skins.
+            </summary>
+            <example>
+            If the skin folder is located in the project root and is named "Skins" the
+            SkinsPath property should be set to: "~/Skins". Then you can create subfolders for
+            individual skins e.g. Skins/Gold, Skins/Default etc.
+            </example>
+            <value>
+            A string specifying the relative path to the folder which contains
+            RadMenu skins. The default value is
+            "~/RadControls/Menu/Skins".
+            </value>
+            <remarks>
+            RadMenu ships with a set of predefined skins which are ready
+            to use. They are located in RadControls/Menu/Skins.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.Skin">
+            <summary>
+            Gets or sets the skin used by RadMenu.
+            </summary>
+            <value>
+                A <see cref="T:System.String">String</see> specifying the skin. The default value is
+                empty string ("").
+            </value>
+            <remarks>If the value is empty string ("") no skin is used.</remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.CausesValidation">
+            <summary>
+            Gets or sets a value indicating whether validation is performed when an item within
+            the <strong>RadMenu</strong> control is selected.
+            </summary>
+            <value>
+            	<strong>true</strong> if validation is performed when an item is selected;
+            otherwise, <b>false</b>. The default value is <b>true</b>.
+            </value>
+            <remarks>
+            	<para>By default, page validation is performed when an item is selected. Page
+                validation determines whether the input controls associated with a validation
+                control on the page all pass the validation rules specified by the validation
+                control. You can specify or determine whether validation is performed on both the
+                client and the server when an item is clicked by using the <b>CausesValidation</b>
+                property. To prevent validation from being performed, set the
+                <b>CausesValidation</b> property to <b>false</b>.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.ExpandDelay">
+            <summary>
+            Gets or sets a value indicating the timeout after which a menu item starts to
+            open.
+            </summary>
+            <value>
+            An integer specifying the timeout measured in milliseconds. The default value is
+            0 which means that menu items open immediately.
+            </value>
+            <remarks>
+            	<para>Use the <strong>ExpandDelay</strong> property to delay item opening.</para>
+            	<para>
+                    To customize the timeout prior to item closing use the
+                    <see cref="P:Telerik.WebControls.RadMenu.CollapseDelay">CollapseDelay</see> property.
+                </para>
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to specify a half second (500
+                milliseconds) timeout prior to item opening:</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1" runat="server"
+                <strong>ExpandDelay="500"</strong> /&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.Flow">
+            <summary>Gets or sets a value indicating the way top level items will flow.</summary>
+            <value>
+                One of the <see cref="T:Telerik.WebControls.ItemFlow">ItemFlow</see> values. The default value for top
+                level items is <strong>Horizontal</strong>.
+            </value>
+            <remarks>
+            Use the <strong>Flow</strong> property to customize the way top level items are
+            displayed. If set to <strong>Horizontal</strong> items are positioned one after
+            another. <strong>Vertical</strong> causes the items to flow one below the other.
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to make a vertical menu.</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1" runat="server"
+                <strong>Flow="Vertical"</strong> /&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.CollapseDelay">
+            <summary>
+            Gets or sets a value indicating the timeout after which a menu item starts to
+            close.
+            </summary>
+            <value>
+            An integer specifying the timeout measured in milliseconds. The default value is
+            500 (half a second).
+            </value>
+            <remarks>
+            	<para>Use the <strong>CollapseDelay</strong> property to delay item closing. To
+                cause immediate item closing set this property to 0 (zero).</para>
+            	<para>
+                    To customize the timeout prior to item closing use the
+                    <see cref="P:Telerik.WebControls.RadMenu.ExpandDelay">ExpandDelay</see> property.
+                </para>
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to specify one second (1000
+                milliseconds) timeout prior to item closing:</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1" runat="server"
+                <strong>ClosingDelay="1000"</strong> /&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataSource">
+            <summary>
+            The DataSource object used for data-binding. Can be either IListSource (DataSet, DataTable, DataView) or ICollection / IEnumerable (ArrayList, arrays, etc)
+            </summary>
+            <summary>
+            	<para>Gets or sets the object from which the data-bound control retrieves its list
+                of data items.</para>
+            </summary>
+            <remarks>
+            	<para>RadMenu fully supports binding to IList datasources (DataSet, DataTable)
+                and ICollection / IEnumerable (ArrayList, arrays, etc), so you can easily populate
+                your menu instance with only a few lines of code. The built-in data binding
+                supports auto-binding from a a single self-referencing table with ID -&gt; ParentID
+                relation.<br/>
+            		<br/>
+                Properties and methods related to data binding:</para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadMenu.DataSource">DataSource</see> - (mandatory) object. Set to an
+                    instance of your datasource.
+                </para>
+            	<para>
+            		<see cref="!:DataMember">DataMember</see> - (optional) string. If the DataSource
+                    is a DataSet and DataMember is set, then RadMenu assumes the DataTable
+                    with the respective name in the DataSet. Otherwise the first DataTable in the
+                    DataSet is used.
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadMenu.DataFieldID">DataFieldID</see> - (optional) string. The name of the
+                    DataColumn holding the ID value;
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadMenu.DataFieldParentID">DataFieldParentID</see> - (optional) string. The
+                    name of the DataColumn holding the ParentID value;
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadMenu.DataTextField">DataTextField</see> (optional) - Gets or sets the
+                    field name from a data source to bind to the MenuItem Text property.
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadMenu.DataValueField">DataValueField</see> (optional) - Gets or sets the
+                    field name from a data source to bind to the MenuItem Value property.
+                </para>
+            	<para>
+            		<see cref="P:Telerik.WebControls.RadMenu.DataNavigateUrlField">DataNavigateUrlField</see> (optional) - Gets
+                    or set the field name from a data source to bind to the MenuItem NavigageUrl
+                    property.
+                </para>
+            	<para>DataBind() - (mandatory) method. Call this method after you've set the
+                aforementioned properties per your scenario.</para>
+            </remarks>
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/data.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/data.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+            <value>
+            	<para>A data source that provides data for populating the
+                <strong>RadMenu</strong> control.</para>
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataTextField">
+            <summary>
+                Gets or sets the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property of the items.
+            </summary>
+            <value>
+                A string that specifies the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property of the items. The default value is
+                empty string.
+            </value>
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+            RadMenu1.DataNavigateUrlField = "URL"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+            RadMenu1.DataNavigateUrlField = "URL";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataNavigateUrlField">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+            RadMenu1.DataNavigateUrlField = "URL"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+            RadMenu1.DataNavigateUrlField = "URL";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+            <summary>
+                Gets or sets the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property of the items.
+            </summary>
+            <value>
+                A string that specifies the the field from the data source that provides values for
+                the <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property of the items. The
+                default value is empty string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataValueField">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+            RadMenu1.DataNavigateUrlField = "URL"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+            RadMenu1.DataNavigateUrlField = "URL";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+            <summary>
+                Gets or sets the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property of the items.
+            </summary>
+            <value>
+                A string that specifies the field from the data source that provides values for the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property of the items. The default is empty
+                string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataTextFormatString">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+            RadMenu1.DataNavigateUrlField = "URL"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+            RadMenu1.DataNavigateUrlField = "URL";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+            <summary>
+            Gets or sets the formatting string used to control how the item text would look
+            like.
+            </summary>
+            <remarks>
+            Use the <strong>DataTextFormatString</strong> property to provide a custom
+            display format for text of the items. The data format string consists of two parts,
+            separated by a colon, in the form { A: Bxx }. For example, the formatting string {0:F2}
+            would format the text as a fixed point number with two decimal places. Note the entire
+            string must be enclosed in braces to indicate that it is a format string and not a
+            literal string. Any text outside the braces is displayed as literal text. The value
+            before the colon (A in the general example) specifies the parameter index in a
+            zero-based list of parameters.
+            </remarks>
+            <value>
+                A string value representing the format of the <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see>
+                property.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientMouseOver">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the mouse moves over a menu item in the <strong>RadMenu</strong> control.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientMouseOver</strong>
+            		<font color="black">client-side event handler is called when the mouse moves over a
+                menu item.</font> Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the
+                <strong>OnClientMouseOver</strong> property. 
+                <para>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;script type="text/javascript"&gt;<br/>
+                         function OnClientMouseOverHandler(sender, eventArgs)<br/>
+                         {<br/>
+                         alert(eventArgs.Item.Text);<br/>
+                         }<br/>
+                        &lt;/script&gt;
+                    </div>
+            		<div class="LanguageSpecific" name="Code_VB">
+                        &lt;radM:RadMenu ID="RadMenu1"<br/>
+                         runat= "server"<br/>
+            			<strong>OnClientMouseOver= "OnClientMouseOverHandler"</strong>&gt;<br/>
+                        ....<br/>
+                        &lt;/radM:RadMenu&gt;
+                    </div>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientMouseOut">
+            <remarks>
+            	<para>If specified, the <strong>OnClientMouseOut</strong> client-side event handler
+                is called when the mouse moves out of a menu item. Two parameters are passed to the
+                handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            the mouse moves out of a menu item in the <strong>RadMenu</strong> control.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                 function OnClientMouseOutHandler(sender, eventArgs)<br/>
+                 {<br/>
+                 alert(eventArgs.Item.Text);<br/>
+                 }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                 runat= "server"<br/>
+            		<strong>OnClientMouseOut= "OnClientMouseOutHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientItemFocus">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a menu item gets focus.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemFocusHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemFocus="OnClientItemFocusHandler"&gt;</strong><br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            	<para>If specified, the <strong>OnClientItemFocus</strong> client-side event
+                handler is called when a menu item is selected using either the keyboard (the [TAB]
+                or arrow keys) or by clicking it. Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientItemBlur">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after an item loses focus.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <remarks>
+            	<para>If specified, the <strong>OnClientItemBlur</strong> client-side event handler
+                is called when a menu item loses focus as a result of the user pressing a key or
+                clicking elsewhere on the page. Two parameters are passed to the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                 function OnClientItemBlurHandler(sender, eventArgs)<br/>
+                 {<br/>
+                 alert(eventArgs.Item.Text);<br/>
+                 }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                 runat="server"<br/>
+            		<strong>OnClientItemBlur="OnClientItemBlurHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientItemClicking">
+            <remarks>
+            	<para>This event is similar to <strong>OnClientItemFocus</strong> but fires only on
+                mouse click.</para>
+            	<para>If specified, the <strong>OnClientItemClicking</strong> client-side event
+                handler is called before a menu item is clicked upon. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>The <strong>OnClientItemClicking</strong> event can be cancelled. To do so,
+                return <strong>False</strong> from the event handler.</para>
+            	<div>
+            		<table class="hs-box"></table>
+            	</div>
+            </remarks>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a menu item is clicked.
+            </summary>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemClickingHandler(sender, eventArgs)<br/>
+                {<br/>
+                if (eventArgs.Item.Text == "News")<br/>
+                {</para>
+            	<para>return false;</para>
+            	<para>}<br/>
+                }<br/>
+                &lt;/script&gt;<br/>
+                &lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemClicking="OnClientItemClickingHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientItemClicked">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after a menu item is clicked.
+            </summary>
+            <remarks>
+            	<para>This event is similar to <strong>OnClientItemFocus</strong> but fires only on
+                mouse click.</para>
+            	<para>If specified, the <strong>OnClientItemClicked</strong> client-side event
+                handler is called after a menu item is clicked upon. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            &lt;script type="text/javascript"&gt;<br/>
+            function OnClientItemClickedHandler(sender, eventArgs)<br/>
+            {<br/>
+            alert(eventArgs.Item.Text);<br/>
+            }<br/>
+            &lt;/script&gt;<br/>
+            &lt;radM:RadMenu ID="RadMenu1"<br/>
+            runat="server"<br/>
+            	<strong>OnClientItemClicked="OnClientItemClickedHandler"</strong>&gt;<br/>
+            ....<br/>
+            &lt;/radM:RadMenu&gt;
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientItemOpen">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a group of child items opens.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <requirements>
+            	<para>If specified, the <strong>OnClientItemOpen</strong> client-side event handler
+                is called when a group of child items opens. Two parameters are passed to the
+                handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </requirements>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemOpenHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemOpen="OnClientItemOpenHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientItemClose">
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called when
+            a group of child items closes.
+            </summary>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientItemCloseHandler(sender, eventArgs)<br/>
+                {<br/>
+                alert(eventArgs.Item.Text);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat="server"<br/>
+            		<strong>OnClientItemClose="OnClientItemCloseHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            	<para>If specified, the <strong>OnClientItemClose</strong> client-side event
+                handler is called when a group of child items closes. Two parameters are passed to
+                the handler:</para>
+            	<list type="bullet">
+            		<item><strong>sender</strong>, the menu client object;</item>
+            		<item><strong>eventArgs</strong> with one property, <strong>Item</strong> (the
+                    instance of the menu item).</item>
+            	</list>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientLoad">
+            <remarks>
+            	<para>If specified, the <strong>OnClienLoad</strong> client-side event handler is
+                called after the menu is fully initialized on the client.</para>
+            	<para>A single parameter - the menu client object - is passed to the
+                handler.</para>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientLoadHandler(sender)<br/>
+                {<br/>
+                alert(sender.ID);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat= "server"<br/>
+            		<strong>OnClientLoad= "OnClientLoadHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after the <strong>RadMenu</strong> client-side object is initialized.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientContextShowing">
+            <remarks>
+            	<para>If specified, the <strong>OnClientContextShowing</strong> client-side event handler is
+                called before the context menu is shown on the client.</para>
+            	<para>A single parameter - the menu client object - is passed to the
+                handler.</para>
+            	<para>The <strong>OnClientContextShowing</strong> event can be cancelled. To do so,
+                return <strong>false</strong> from the event handler.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientContextShowingHandler(sender)<br/>
+                {<br/>
+                alert(sender.ID);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat= "server"<br/>
+            		<strong>OnClientContextShowing= "OnClientContextShowingHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            before the <strong>RadMenu</strong> client-side object is shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientContextShown">
+            <remarks>
+            	<para>If specified, the <strong>OnClientContextShown</strong> client-side event handler is
+                called after the context menu is shown on the client.</para>
+            	<para>A single parameter - the menu client object - is passed to the
+                handler.</para>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientContextShownHandler(sender)<br/>
+                {<br/>
+                alert(sender.ID);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat= "server"<br/>
+            		<strong>OnClientContextShown="OnClientContextShownHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after the <strong>RadMenu</strong> client-side object is shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.OnClientContextHidden">
+            <remarks>
+            	<para>If specified, the <strong>OnClientContextHidden</strong> client-side event handler is
+                called after the context menu is hidden on the client.</para>
+            	<para>A single parameter - the menu client object - is passed to the
+                handler.</para>
+            	<para>This event cannot be cancelled.</para>
+            </remarks>
+            <example>
+            	<para>&lt;script type="text/javascript"&gt;<br/>
+                function OnClientContextHiddenHandler(sender)<br/>
+                {<br/>
+                alert(sender.ID);<br/>
+                }<br/>
+                &lt;/script&gt;</para>
+            	<para>&lt;radM:RadMenu ID="RadMenu1"<br/>
+                runat= "server"<br/>
+            		<strong>OnClientContextHidden="OnClientContextHiddenHandler"</strong>&gt;<br/>
+                ....<br/>
+                &lt;/radM:RadMenu&gt;</para>
+            </example>
+            <value>
+            A string specifying the name of the JavaScript function that will handle the
+            event. The default value is empty string.
+            </value>
+            <summary>
+            Gets or sets a value indicating the client-side event handler that is called
+            after the <strong>RadMenu</strong> client-side object is hidden.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataFieldID">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+            RadMenu1.DataNavigateUrlField = "URL"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+            RadMenu1.DataNavigateUrlField = "URL";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+            <summary>
+            Gets or sets the field from the data source which is the "child" column in the
+            "parent-child" relationship used to databind the <strong>RadMenu</strong>
+            control.
+            </summary>
+            <value>
+            A string that specifies the field of the data source that will be the "child"
+            column during databinding. The default is empty string
+            </value>
+            <remarks>
+            	<strong>RadMenu</strong> requires both <strong>DataFieldID</strong> and
+            <strong>DataFieldParentID</strong> properties to be set in order to be databound
+            recursively.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.DataFieldParentID">
+            <example>
+            	<code lang="VB">
+            Dim dbCon As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"))
+            dbCon.Open()
+             
+            Dim adapter As New OleDbDataAdapter("SELECT * FROM Links", dbCon)
+            Dim ds As New DataSet()
+            adapter.Fill(ds)
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID"
+            RadMenu1.DataFieldParentID = "ParentID"
+            RadMenu1.DataNavigateUrlField = "URL"
+             
+            RadMenu1.DataSource = ds
+            RadMenu1.DataBind()
+                </code>
+            	<code lang="CS">
+            OleDbConnection dbCon = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("~/menu/Data/Tree.mdb"));
+            dbCon.Open();
+             
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Links", dbCon);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+             
+            RadMenu1.DataTextField = "TextColumn"
+            RadMenu1.DataValueField = "ValueColumn"
+            RadMenu1.DataFieldID = "ID";
+            RadMenu1.DataFieldParentID = "ParentID";
+            RadMenu1.DataNavigateUrlField = "URL";
+             
+            RadMenu1.DataSource = ds;            
+            RadMenu1.DataBind();
+                </code>
+            </example>
+            <summary>
+            Gets or sets the field from the data source which is the "parent" column in the
+            "parent-child" relationship used to databind the <strong>RadMenu</strong>
+            control.
+            </summary>
+            <value>
+            A string that specifies the field of the data source that will be the "parent"
+            column during databinding. The default is empty string.
+            </value>
+            <remarks>
+            	<strong>RadMenu</strong> requires both <strong>DataFieldID</strong> and
+            <strong>DataFieldParentID</strong> properties to be set in order to be databound
+            recursively.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.AppendDataBoundItems">
+            <summary>
+            	<para>Gets or sets a value that indicates whether the items are cleared before data
+                binding.</para>
+            </summary>
+            <value>
+            	<strong>True</strong> if items should not be cleared before data binding;
+            otherwise <strong>false</strong>. The default value is <strong>false</strong> (child
+            items are cleared).
+            </value>
+            <remarks>
+            	<para>The <strong>AppendDataBoundItems</strong> property allows you to add items to
+                the <strong>RadMenu</strong> control before data binding occurs. After data
+                binding, the items collection contains both the items from the data source and the
+                previously added items.</para>
+            </remarks>
+        </member>
+        <member name="E:Telerik.WebControls.RadMenu.ItemCreated">
+            <summary>
+            Occurs on the server when an item in the <strong>RadMenu</strong> control is
+            created.
+            </summary>
+            <remarks>
+            	<para>The <b>ItemCreated</b> event is raised every time a new item is
+                added.</para>
+            	<para>The <b>ItemCreated</b> event is not related to data binding and you
+                cannot retrieve the <strong>DataItem</strong> of the item in the event
+                handler.</para>
+            	<para>The <b>ItemCreated</b> event is often useful in scenarios where you want
+                to initialize all items - for example setting the <strong>ToolTip</strong> of each
+                <strong>RadMenuItem</strong> to be equal to the <strong>Text</strong> property.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the <strong>ItemCreated</strong>
+                event to set the <strong>ToolTip</strong> property of each item.
+                <code lang="CS">
+            private void RadMenu1_ItemCreated(object sender, Telerik.WebControls.RadMenuItemEventArgs e)
+            {
+                e.Item.ToolTip = e.Item.Text;
+            }
+                </code>
+            	<code lang="VB">
+            Sub RadMenu1_ItemCreated(ByVal sender As Object, ByVal e As Telerik.WebControls.RadMenuItemEventArgs) Handles RadMenu1.ItemCreated
+                e.Item.ToolTip = e.Item.Text
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="E:Telerik.WebControls.RadMenu.ItemClick">
+            <summary>
+                Occurs on the server when a menu item in the <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see>
+                control is clicked.
+            </summary>
+            <remarks>
+            	<para>
+            		The menu will also postback if you navigate to a menu item
+                    using the [menu item] key and then press [enter] on the menu item that is focused. The
+                    instance of the clicked menu item is passed to the <strong>MenuItemClick</strong> event
+                    handler - you can obtain a reference to it using the eventArgs.RadMenuItem property.
+                </para>
+            </remarks>
+        </member>
+        <member name="E:Telerik.WebControls.RadMenu.ItemDataBound">
+            <summary>Occurs after a menu item is data bound.</summary>
+            <remarks>
+            	<para>
+                    The <strong>ItemDataBound</strong> event is raised for each menu item upon
+                    databinding. You can retrieve the item being bound using the event arguments.
+                    The <strong>DataItem</strong> associated with the item can be retrieved using
+                    the <see cref="P:Telerik.WebControls.RadMenuItem.DataItem">DataItem</see> property.
+                </para>
+            	<para>The <strong>ItemDataBound</strong> event is often used in scenarios when
+                you want to perform additional mapping of fields from the <strong>DataItem</strong>
+                to their respective properties in the <strong>RadMenuItem</strong> class.</para>
+            </remarks>
+            <example>
+                The following example demonstrates how to map fields from the data item to
+                <see cref="T:Telerik.WebControls.RadMenuItem">item properties using the <strong>ItemDataBound</strong>
+                event.</see>
+            	<code lang="CS">
+            private void RadMenu1_ItemDataBound(object sender, Telerik.WebControls.RadMenuEventArgs e)
+            {
+                RadMenuItem item = e.RadMenuItem;
+                DataRowView dataRow = (DataRowView) e.Item.DataItem;
+             
+                item.ImageUrl = "image" + dataRow["ID"].ToString() + ".gif";
+                item.NavigateUrl = dataRow["URL"].ToString();
+            }
+                </code>
+            	<code lang="VB">
+            Sub RadMenu1_ItemDataBound(ByVal sender As Object, ByVal e As RadMenuEventArgs) Handles RadMenu1.ItemDataBound
+                Dim item As RadMenuItem = e.RadMenuItem
+                Dim dataRow As DataRowView = CType(e.Item.DataItem, DataRowView)
+             
+                item.ImageUrl = "image" + dataRow("ID").ToString() + ".gif"
+                item.NavigateUrl = dataRow("URL").ToString()
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenu.Items">
+            <summary>
+            Gets the collection of child items in the <strong>RadMenu</strong>
+            control.
+            </summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadMenuItemCollection">RadMenuItemCollection</see> that represents the children within
+                the <strong>RadMenu</strong> control. The default is empty collection.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items of the <strong>RadMenu</strong>
+            control. You can also use it to programmatically add or remove items.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically add items. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadMenuItem corporateItem = new RadMenuItem("Corporate");
+                    RadMenu1.Items.Add(corporateItem);
+             
+                    RadMenuItem newsItem = new RadMenuItem("News");
+                    RadMenu1.Items.Add(newsItem);
+                
+                    RadMenuItem aboutUsItem = new RadMenuItem("About us");
+                    RadMenu1.Items.Add(aboutUsItem);
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                If Not Page.IsPostBack Then
+                    Dim corporateItem As RadMenuItem = New RadMenuItem("Corporate")
+                    RadMenu1.Items.Add(newsItem)
+             
+                    Dim newsItem As RadMenuItem = New RadMenuItem("News")
+                    RadMenu1.Items.Add(newsItem)
+             
+                    Dim aboutUsItem As RadMenuItem = New RadMenuItem("About us")
+                    RadMenu1.Items.Add(aboutUsItem)
+                End If
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.DataMember">
+            <summary>Gets or sets the data member to bind to a menu item.</summary>
+            <remarks>
+            	<para>
+                    When creating a
+                    <a href="T_System_Web_UI_WebControls_MenuItemBinding.htm">RadMenuItemBinding</a>
+                    object, you must specify the criteria for binding. The criteria indicate when a
+                    data item should be bound to a menu item. You can specify the
+                    <see cref="P:Telerik.WebControls.RadMenuItemBinding.Depth">Depth</see> property, the <b>DataMember</b> property, or
+                    both.
+                </para>
+            	<para>
+                    When the data source contains multiple elements or tables, use the
+                    <b>DataMember</b> property to specify the element or table to bind to a menu
+                    item. A data member specifies the type of the data item in the underlying data
+                    source, but can represent different information depending on the data source.
+                    Each data item in a hierarchical data source <font color="black">exposes a
+                    IHierarchyData.Type property, which specifies the type of the data item. For
+                    example, the data member for an XML element specifies the name of the element.
+                    The following <b>RadMenuItemBinding</b> declaration binds the</font>
+            		<code inline="true">
+            			<font color="black"><font color="black">&lt;Book&gt;</font></font>
+            		</code>elements of an
+                    <a href="T_System_Web_UI_WebControls_XmlDataSource.htm">XmlDataSource</a>
+                    control to all the menu items in the menu, regardless of the location in the
+                    hierarchy:
+                </para>
+            	<pre>
+            &lt;asp:RadMenuItemBinding DataMember="Book" TextField="Title" ValueField= "ISBN"&gt;
+            </pre>
+            	<para>
+                    Sometimes you might need to create a menu item binding that specifies both a
+                    depth and a data member. This is often used when the data source contains items
+                    at different levels that have the same data member value. For example, you can
+                    have 
+                    <code inline="true">
+            			<font color="black">&lt;Item&gt;</font>
+            		</code>elements that appear at different levels within an XML file. The
+                    following <b>RadMenuItemBinding</b> declarations show how to specify menu item
+                    bindings that apply to identical data members at different menu depths:
+                </para>
+            	<para>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadMenuItemBinding DataMember="Item" Depth="1" TextField="Title"&gt;</font>
+            		</code>
+            	</para>
+            	<para>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadMenuItemBinding DataMember="Item" Depth="2" TextField="ISBN"&gt;</font>
+            		</code>
+            	</para>
+            	<para>If a menu item binding is defined without a depth or a data member, the menu
+                item binding is applied to all menu items within the menu. This is commonly used
+                when all data items have the same properties and should be displayed identically,
+                regardless of the menu depth.</para>
+            	<para>After the binding criteria are established, you can then bind a property of a
+                RadMenuItem object that can be
+                bound to a value. You can bind to a field of a data item or to a static value. When
+                bound to a static value, all <b>RadMenuItem</b> objects to which the
+                <b>RadMenuItemBinding</b> object is applied share the same value. Properties bound to
+                fields contain the values of the field from the data source.</para>
+            	<para>If conflicting <b>RadMenuItemBinding</b> objects are defined, the Menu control
+                applies the menu item bindings in the following order of precedence:</para>
+            	<list type="number">
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines and matches both a
+                        depth and a data member.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines and matches the data
+                        member only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines and matches the depth
+                        only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines neither the depth nor
+                        the data member. (This type of menu item binding is applied to all menu
+                        items in the menu.)</para>
+            		</item>
+            		<item>
+            			<para>
+                            The <b>RadMenuItemBinding</b> object that does not have a match in the
+                            data source. In this case, the value returned by the <b>ToString()</b>
+                            method of the data item is then bound to the
+                            <see cref="P:Telerik.WebControls.RadMenuItemBinding.Text">Text</see> and <see cref="P:Telerik.WebControls.RadMenuItemBinding.Value">Value</see>
+                            properties of the menu items to which the <b>RadMenuItemBinding</b> object
+                            is applied.
+                        </para>
+            		</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.Text">
+            <summary>Gets or sets the text caption for the item.</summary>
+            <value>The text of the item. The default value is empty string.</value>
+            <example>
+                This example demonstrates how to set the text of the item using the
+                <strong>Text</strong> property. 
+                <para>
+            		<para class="sourcecode">&lt;radM:RadMenu ID="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radM:RadMenuItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;radM:RadMenuItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radM:RadMenu&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            Specifying <strong>Text</strong> or
+            <strong><see cref="P:Telerik.WebControls.RadMenuItemBinding.TextField"><strong>TextField</strong></see> will override the values
+            populated from the
+            <strong><see cref="P:Telerik.WebControls.RadMenu.DataTextField"><strong>DataTextField</strong></see>
+            property.</strong></strong>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.TextField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            Specifying <strong><see cref="P:Telerik.WebControls.RadMenuItemBinding.Text"><strong>Text</strong></see> or
+            <strong>TextField</strong> will override the values populated from the
+            <strong><see cref="P:Telerik.WebControls.RadMenu.DataTextField"><strong>DataTextField</strong></see>
+            property.</strong></strong>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.Value">
+            <summary>Gets or sets the value associated with the item.</summary>
+            <value>The value associated with the item. The default value is empty string.</value>
+            <remarks>
+            	<para>Use the <b>Value</b> property to specify or determine the value associated
+                with the item.</para>
+            	<para>Specifying <strong>Value</strong> or <strong>ValueField</strong> will
+                override the values populated from the
+                <strong><see cref="P:Telerik.WebControls.RadMenu.DataValueField"><strong>DataValueField</strong></see>
+                property.</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ValueField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>Specifying <strong>Value</strong> or <strong>ValueField</strong> will
+                override the values populated from the
+                <strong><see cref="P:Telerik.WebControls.RadMenu.DataValueField"><strong>DataValueField</strong></see>
+                property.</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.NavigateUrl">
+            <summary>Gets or sets the URL to link to when the item is clicked.</summary>
+            <value>
+            The URL to link to when the item is clicked. The default value is empty
+            string.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>NavigateUrl</strong>
+                property 
+                <para>
+            		<para class="sourcecode">&lt;radM:RadMenu id="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radM:RadMenuItem Text="News" <strong>NavigateUrl="~/News.aspx"</strong>
+                    /&gt;<br/>
+                    &lt;radM:RadMenuItem Text="External URL"
+                    <strong>NavigateUrl="http://www.example.com"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radM:RadMenu&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            	<para>Use the <strong>NavigateUrl</strong> property to specify the URL to link to
+                when the item is clicked. Use "~" (tilde) in front of an URL within the same
+                ASP.NET application. When specifying external URL do not forget the protocol (e.g.
+                "http://").</para>
+            	<para>Specifying <strong>NavigateUrl</strong> or
+                <strong><see cref="P:Telerik.WebControls.RadMenuItemBinding.NavigateUrlField"><strong>NavigateUrlField</strong></see> will
+                override the values populated from the
+                <strong><see cref="P:Telerik.WebControls.RadMenu.DataNavigateUrlField"><strong>DataNavigateUrlField</strong></see>
+                property.</strong></strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.NavigateUrlField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>Specifying %<strong>NavigateUrl</strong>:NavigateUrl% or
+                <strong>NavigateUrlField</strong> will override the values populated from the
+                <strong><see cref="P:Telerik.WebControls.RadMenu.DataNavigateUrlField"><strong>DataNavigateUrlField</strong></see>
+                property.</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ToolTip">
+            <summary>
+            Gets or sets the ToolTip text for a menu item to which the
+            RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The ToolTip text for a menu item to which the RadMenuItemBinding is applied.
+            The default is an empty string (""), which indicates that this property is not
+            set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ToolTipField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="!:RadMenuItem.ToolTip">ToolTip</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="!:RadMenuItem.ToolTip">ToolTip</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ImageUrl">
+            <summary>
+            Gets or sets the URL to an image that is displayed next to the text of a menu
+            item to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The URL to an image that is displayed next to the text of a menu item to which
+            the RadMenuItemBinding is applied. The default is an empty string (""), which
+            indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>
+                    This image is shared with all <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> objects to
+                    which the RadMenuItemBinding object is applied.
+              </para>
+            	<para><strong>NOTE:</strong> You can override the image for an individual menu item
+              by setting its <b>ImageUrl</b> property directly.</para>
+            	<para>Instead of using this property to display the same image in each menu item,
+              you can also use the
+              <see cref="!:RadMenuItem.ImageUrlField">ImageUrlField</see>
+              property to bind the <b>ImageUrl</b> property of a <b>RadMenuItem</b> object to a
+              field of a data source. When rendered, the <b>ImageUrl</b> property of each menu
+              item to which the <b>RadMenuItemBinding</b> object is applied contains the
+              corresponding value from the field.</para>
+              <para>
+                  <strong>NOTE:</strong> If the <b>ImageUrl</b> and <b>ImageUrlField</b>
+                  properties are both set, the <b>ImageUrlField</b> property takes precedence.
+              </para>
+            </remarks>
+            <notes>
+            	<para>You can override the image for an individual menu item by setting its
+                <b>ImageUrl</b> property directly.</para>
+            </notes>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ImageUrlField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.ImageUrl">ImageUrl</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.ImageUrl">ImageUrl</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+            <remarks>
+            	<para>
+                    If the data source contains multiple tables or attributes, you must first
+                    establish the binding criteria by setting the <see cref="P:Telerik.WebControls.RadMenuItemBinding.Depth">Depth</see>
+                    property, the <see cref="P:Telerik.WebControls.RadMenuItemBinding.DataMember">DataMember</see> property, or both.
+                </para>
+            	<para>
+                    Instead of using this property to bind the <b>ImageUrl</b> property of a
+                    <b>RadMenuItem</b> object to a field, you can also bind it to a static value by
+                    setting the <see cref="P:Telerik.WebControls.RadMenuItemBinding.ImageUrl">RadMenuItemBinding.ImageUrl</see> property. This
+                    allows you to display the same image in each menu item to which the
+                    <b>RadMenuItemBinding</b> object is applied.
+                </para>
+            	<para><strong>NOTE:</strong></para>
+            	<para>If the <strong>ImageUrl</strong> and <strong>ImageUrlField</strong>
+                properties are both set, the <strong>ImageUrlField</strong> property takes
+                precedence.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ImageOverUrl">
+            <summary>
+            Gets or sets the path to an image to display for the item when the user moves the
+            mouse over the item.
+            </summary>
+            <value>
+            The path to the image to display when the user moves the mouse over the item. The
+            default value is empty string.
+            </value>
+            <example>
+            	<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1" runat="server"&gt;<br/>
+                &lt;Items&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/inbox.gif"
+                <strong>ImageOverUrl="~/Img/inboxOver.gif"</strong> Text="Index" /&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/outbox.gif"
+                <strong>ImageOverUrl="~/Img/outboxOver.gif"</strong> Text="Outbox" /&gt;<br/>
+                &lt;/Items&gt;<br/>
+                &lt;/radm:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            Use the <strong>ImageOverUrl</strong> property to specify the image that will be
+            used when the user moves the mouse over the item. If the <strong>ImageOverUrl</strong>
+            property is set to empty string the image specified by the <strong>ImageUrl</strong>
+            property will be used. Use "~" (tilde) when referring to images within the current
+            ASP.NET application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.ImageOverUrlField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.ImageOverUrl">ImageOverUrl</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.ImageOverUrl">ImageOverUrl</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.Target">
+            <summary>
+            Gets or sets the target window or frame to display the Web page content linked to
+            when the menu item is clicked.
+            </summary>
+            <value>
+            	<para>The target window or frame to load the Web page linked to when the Item is
+                selected. Values must begin with a letter in the range of a through z (case
+                insensitive), except for the following special values, which begin with an
+                underscore:</para>
+            	<para>
+            		<list type="Itemle">
+            			<item>
+            				<term>_blank</term>
+            				<description>Renders the content in a new window without
+                            frames.</description>
+            			</item>
+            			<item>
+            				<term>_parent</term>
+            				<description>Renders the content in the immediate frameset
+                            parent.</description>
+            			</item>
+            			<item>
+            				<term>_self</term>
+            				<description>Renders the content in the frame with focus.</description>
+            			</item>
+            			<item>
+            				<term>_top</term>
+            				<description>Renders the content in the full window without
+                            frames.</description>
+            			</item>
+            		</list>
+            	</para>The default value is empty string.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <b>Target</b> property to specify the frame or window that displays the
+                    Web page linked to when the menu item is clicked. The Web page is specified by
+                    setting the <see cref="P:Telerik.WebControls.RadMenuItemBinding.NavigateUrl">NavigateUrl</see> property.
+                </para>
+            	<para>If this property is not set, the Web page specified by the
+                <strong>NavigateUrl</strong> property is loaded in the current window.</para>
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to use the <strong>Target</strong>
+                property</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu runat="server" ID="RadMenu1"&gt;</para>
+            	<para>&lt;Items&gt;</para>
+            	<para>&lt;radM:RadMenuItem <strong>Target="_blank"</strong>
+                NavigateUrl="http://www.google.com" /&gt;</para>
+            	<para>&lt;/Items&gt;</para>
+            	<para>&lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.TargetField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Target">Target</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.Target">Target</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.Enabled">
+            <summary>Gets or sets a value indicating whether the menu item is enabled.</summary>
+            <remarks>
+            	<para>Use the <b>Enabled</b> property to specify or determine whether a menu item
+                is functional. When set to <b>false</b>, the item appears dimmed.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.EnabledField">
+            <summary>
+                Gets or sets the name of the field from the data source to bind to the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Enabled">Enabled</see> property of a
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object 
+                to which the RadMenuItemBinding object is applied.
+            </summary>
+            <value>
+            The name of the field from the data source to bind to the <see cref="P:Telerik.WebControls.RadMenuItem.Enabled">Enabled</see> of a
+            <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to which the RadMenuItemBinding is applied. The default is an empty
+            string (""), which indicates that this property is not set.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.Depth">
+            <summary>
+            	<para>Gets or sets the menu depth to which the
+                RadMenuItemBinding object is applied.</para>
+            </summary>
+            <remarks>
+            	<para>
+                    When creating a <b>RadMenuItemBinding</b> object, you must specify the criteria
+                    for binding. The criteria indicate when a data item should be bound to a menu
+                    item. You can specify the <b>Depth</b> property, the
+                    <see cref="P:Telerik.WebControls.RadMenuItemBinding.DataMember">DataMember</see> property, or both.
+                </para>
+            	<para>
+                    Use the <b>Depth</b> property to specify the menu depth at which to apply the
+                    <b>RadMenuItemBinding</b> object. For example, the following
+                    <b>RadMenuItemBinding</b> declaration binds the Name and ID fields of the data
+                    source to the <see cref="P:Telerik.WebControls.RadMenuItemBinding.Text">Text</see> and <see cref="P:Telerik.WebControls.RadMenuItemBinding.Value">Value</see>
+                    properties, respectively, of all menu items with a depth of 0:
+                </para>
+            	<pre>
+            &lt;asp:RadMenuItemBinding Depth="0" TextField="Name" ValueField="ID"&gt;
+            </pre>
+            	<para>Sometimes you might need to create a menu item binding that specifies both a
+                depth and a data member. This is often used when the data source contains items at
+                different levels that have the same data member value. For example, you can
+                have<br/>
+                &lt;Item&gt; elements that appear at different levels within an XML file. The
+                following RadMenuItemBinding declarations show how to specify menu item bindings that
+                apply to identical data members at different menu depths:</para>
+            	<pre>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadMenuItemBinding DataMember="Item" Depth="1" TextField="Title"&gt;</font>
+            		</code>
+            	</pre>
+            	<pre>
+            		<code inline="true">
+            			<font color="black">&lt;asp:RadMenuItemBinding DataMember="Item" Depth="2" TextField="ISBN"&gt;</font>
+            		</code>
+            	</pre>
+            	<para>If a menu item binding is defined without a depth and a data member, the menu
+                item binding is applied to all menu items within the menu. This is commonly used
+                when all data items have the same properties and should be displayed identically,
+                regardless of the menu depth.</para>
+            	<para>After the binding criteria are established, you can then bind a property of a
+                <a href="T_System_Web_UI_WebControls_MenuItem.htm">RadMenuItem</a> object that can be
+                bound to a value. You can bind to a field of a data item or to a static value. When
+                bound to a static value, all RadMenuItem objects to which the RadMenuItemBinding object
+                is applied share the same value. Properties bound to fields contain the values of
+                the field from the data source.</para>
+            	<para>If conflicting RadMenuItemBinding objects are defined, the
+                <a href="T_System_Web_UI_WebControls_Menu.htm">Menu</a> control applies the menu
+                item bindings in the following order of precedence:</para>
+            	<para class="xmldocnumberedlist"></para>
+            	<list type="number">
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines and matches both a
+                        depth and a data member.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines and matches the data
+                        member only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines and matches the depth
+                        only.</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that defines neither the depth nor
+                        the data member. (This type of menu item binding is applied to all menu
+                        items in the menu.)</para>
+            		</item>
+            		<item>
+            			<para>The <b>RadMenuItemBinding</b> object that does not have a match in the
+                        data source. In this case, the value returned by the <b>ToString()</b>
+                        method of the data item is then bound to the <b>Text</b> and <b>Value</b>
+                        properties of the menu items to which the <b>RadMenuItemBinding</b> object is
+                        applied.</para>
+            		</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemBinding.FormatString">
+            <summary>
+            Gets or sets the string that specifies the display format for the text of a menu
+            item to which the
+            RadMenuItemBinding object is
+            applied.
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.Ide.Common.RadMenu.ProjectManagement">
+            <summary>
+            Utility class for Design - Time VisualStudio.NET project management.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadMenuUtils.PropertyCategory">
+            <summary>
+            Defines the common property categories' names
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.AnimationSettings">
+            <summary>Represents the animation settings used for expand or collapse effects.</summary>
+            <remarks>
+            	<para>RadMenu supports a wide variety of animation effects which are represented by
+                the <strong>AnimationSettings</strong> class.</para>
+            	<list type="bullet">
+            		<item>
+                        To customize the animation played when items are opened use the
+                        <see cref="P:Telerik.WebControls.RadMenu.ExpandAnimation">ExpandAnimation</see> property.
+                    </item>
+            		<item>
+                        To customize the animation played when items are closed use the
+                        <see cref="P:Telerik.WebControls.RadMenu.CollapseAnimation">CollapseAnimation</see> property.
+                    </item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.MenuObjectWithState">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="M:Telerik.WebControls.AnimationSettings.#ctor(System.String,System.Web.UI.StateBag)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.AnimationSettings.Type">
+            <summary><para>Gets or sets the effect that will be used for the animation.</para></summary>
+            <value>
+                On of the <see cref="T:Telerik.WebControls.AnimationType">AnimationType</see> values. The default value
+                is <strong>OutQuint</strong>.
+            </value>
+            <remarks>
+            Use the <strong>Type</strong> property of the <strong>AnimationSettings</strong>
+            class to customize the effect used for the animation. To turn off animation effects set
+            this property to <strong>None</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.AnimationSettings.Duration">
+            <summary>Gets or sets the duration in milliseconds of the animation.</summary>
+            <value>An integer representing the duration in milliseconds of the animation.</value>
+        </member>
+        <member name="T:Telerik.WebControls.AnimationType">
+            <summary>Represents the effects that can be used in an animation.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.ExpandDirection">
+            <summary>This enumeration determines the direction in which child items will open.</summary>
+            <remarks>
+            	<para>When set to <strong>Auto</strong> the direction is determined by the
+                following rules</para>
+            	<list type="bullet">
+            		<item>If the item is top level and the parent item flow is
+                    <strong>Horizontal</strong> the direction will be <strong>Down</strong>.</item>
+            		<item>If the item is top level and the parent item flow is
+                    <strong>Vertical</strong> the direction will be <strong>Right</strong>.</item>
+            		<item>If the item is subitem (a child of another menu item rather than the
+                    <strong>RadMenu</strong> itself) the direction is
+                    <strong>Right</strong>.</item>
+            	</list>
+            	<para class="xmldocbulletlist">Note:</para>
+            	<para class="xmldocbulletlist">If there is not enough room for the child items to
+                open the expand direction is inverted. For example <strong>Right</strong> becomes
+                <strong>Left</strong>, <strong>Down</strong> becomes <strong>Up</strong> and vice
+                versa.</para>
+            </remarks>
+        </member>
+        <member name="F:Telerik.WebControls.ExpandDirection.Auto">
+            <summary>
+                The direction is determined by parent's <see cref="T:Telerik.WebControls.ItemFlow">ItemFlow</see> and
+                level.
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.ExpandDirection.Up">
+            <summary>Child items open above their parent.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.ExpandDirection.Down">
+            <summary>Child items open below their parent.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.ExpandDirection.Left">
+            <summary>Child items open from the left side of their parent.</summary>
+        </member>
+        <member name="F:Telerik.WebControls.ExpandDirection.Right">
+            <summary>Child items open from the right side of their parent.</summary>
+        </member>
+        <member name="T:Telerik.WebControls.ItemFlow">
+            <summary>Represents the different ways menu items can flow.</summary>
+            <remarks>
+            The <strong>ItemFlow</strong> enumeration is used to specify the flow of submenu
+            items.
+            </remarks>
+        </member>
+        <member name="F:Telerik.WebControls.ItemFlow.Vertical">
+            <summary>
+            Items will flow one below the other
+            </summary>
+        </member>
+        <member name="F:Telerik.WebControls.ItemFlow.Horizontal">
+            <summary>
+            Items will flow one after another
+            </summary>
+        </member>
+        <member name="T:Telerik.WebControls.RadMenuItem">
+            <summary>Represents a single item in the RadMenu class.</summary>
+            <remarks>
+            	<para>
+                    The <strong>RadMenu</strong> control is made up of a hierarchy of menu items
+                    represented by <b>RadMenuItem</b> objects. Menu items at the top level (level 0)
+                    that do not have a parent menu item are called root or top-level menu items. A
+                    menu item that has a parent menu item is called a submenu item. All root menu
+                    items are stored in the <see cref="P:Telerik.WebControls.RadMenu.Items">Items</see> collection of the
+                    menu. Submenu items are stored in a parent menu item's
+                    <see cref="P:Telerik.WebControls.RadMenuItem.Items">Items</see> collection. You can access a menu item's parent
+                    menu item by using the <see cref="P:Telerik.WebControls.RadMenuItem.Owner">Owner</see> property.
+                </para>
+            	<para>To create the menu items for a <b>RadMenu</b> control, use one of the
+                following methods:</para>
+            	<list type="bullet">
+            		<item>Use declarative syntax to create static menu items.</item>
+            		<item>Use a constructor to dynamically create new instances of the
+                    <b>RadMenuItem</b> class. These <b>RadMenuItem</b> objects can then be added to the
+                    <b>Items</b> collection of their owner.</item>
+            		<item>Bind the <b>Menu</b> control to a data source.</item>
+            	</list>
+            	<para>
+                    When the user clicks a menu item, the <b>Menu</b> control can either navigate
+                    to a linked Web page or simply post back to the server. If the
+                    <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property of a menu item is set, the
+                    <b>RadMenu</b> control navigates to the linked page. By default, a linked page
+                    is displayed in the same window or frame as the <strong>RadMenu</strong>
+                    control. To display the linked content in a different window or frame, use the
+                    <see cref="P:Telerik.WebControls.RadMenuItem.Target">Target</see> property.
+                </para>
+            	<para>
+                    Each menu item has a <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> and a
+                    <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property. The value of the <b>Text</b> property
+                    is displayed in the <b>RadMenu</b> control, while the <b>Value</b> property is
+                    used to store any additional data about the menu item.
+                </para>
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class.</summary>
+            <remarks>
+                Use this constructor to create and initialize a new instance of the
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class using default values.
+            </remarks>
+            <example>
+                The following example demonstrates how to add items to
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> controls. 
+                <code lang="CS" title="[New Example]">
+            RadMenuItem item = new RadMenuItem();
+            item.Text = "News";
+            item.NavigateUrl = "~/News.aspx";
+             
+            RadMenu1.Items.Add(item);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim item As New RadMenuItem()
+            item.Text = "News"
+            item.NavigateUrl = "~/News.aspx"
+             
+            RadMenu1.Items.Add(item)
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItem.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class with the
+                specified text data.
+            </summary>
+            <remarks>
+            	<para>
+                    Use this constructor to create and initialize a new instance of the
+                    <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class using the specified text.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to add items to
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> controls. 
+                <code lang="CS" title="[New Example]">
+            RadMenuItem item = new RadMenuItem("News");
+             
+            RadMenu1.Items.Add(item);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim item As New RadMenuItem("News")
+             
+            RadMenu1.Items.Add(item)
+                </code>
+            </example>
+            <param name="text">
+                The text of the item. The <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property is set to the value
+                of this parameter.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItem.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class with the
+                specified text and URL to navigate to.
+            </summary>
+            <remarks>
+            	<para>
+                    Use this constructor to create and initialize a new instance of the
+                    <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class using the specified text and URL.
+                </para>
+            </remarks>
+            <example>
+                This example demonstrates how to add items to <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see>
+                controls. 
+                <code lang="CS" title="[New Example]">
+            RadMenuItem item = new RadMenuItem("News", "~/News.aspx");
+             
+            RadMenu1.Items.Add(item);
+                </code>
+            	<code lang="VB" title="[New Example]">
+            Dim item As New RadMenuItem("News", "~/News.aspx")
+             
+            RadMenu1.Items.Add(item)
+                </code>
+            </example>
+            <param name="text">
+                The text of the item. The <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property is set to the value
+                of this parameter.
+            </param>
+            <param name="navigateUrl">
+                The url which the item will navigate to. The
+                <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property is set to the value of this
+                parameter.
+            </param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItem.Clone">
+            <summary>Creates a copy of the current <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> object.</summary>
+            <returns>A <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> which is a copy of the current one.</returns>
+            <remarks>
+            Use the <strong>Clone</strong> method to create a copy of the current item. All
+            properties of the clone are set to the same values as the current ones. Child items are
+            not cloned.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItem.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.CssClass">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.DataItem">
+            <summary>Gets or sets the data item represented by the item.</summary>
+            <value>
+                An object representing the data item to which the Item is bound to. The
+                <strong>DataItem</strong> property will always return <strong>null</strong> when
+                accessed outside of <see cref="E:Telerik.WebControls.RadMenu.ItemDataBound">MenuItemDataBound</see>
+                event handler.
+            </value>
+            <remarks>
+                This property is applicable only during data binding. Use it along with the
+                <see cref="E:Telerik.WebControls.RadMenu.ItemDataBound">MenuItemDataBound</see> event to perform
+                additional mapping of fields from the data item to
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> properties.
+            </remarks>
+            <example>
+                The following example demonstrates how to map fields from the data item to
+                <see cref="T:Telerik.WebControls.RadMenuItem">
+            		<strong>RadMenuItem</strong> properties. It assumes the user has subscribed to the
+                    MenuItemDataBound:RadMenu.MenuItemDataBound
+                    <see cref="E:Telerik.WebControls.RadMenu.ItemDataBound">event.</see>
+            	</see>
+            	<code lang="CS">
+            private void RadMenu1_MenuItemDataBound(object sender, Telerik.WebControls.ItemStripEventArgs e)
+            {
+                RadMenuItem item = e.Item;
+                DataRowView dataRow = (DataRowView) e.Item.DataItem;
+             
+                item.ImageUrl = "image" + dataRow["ID"].ToString() + ".gif";
+                item.NavigateUrl = dataRow["URL"].ToString();
+            }
+                </code>
+            	<code lang="VB">
+            Sub RadMenu1_MenuItemDataBound(ByVal sender As Object, ByVal e As ItemStripEventArgs) Handles RadMenu1.MenuItemDataBound
+                Dim item As RadMenuItem = e.Item
+                Dim dataRow As DataRowView = CType(e.Item.DataItem, DataRowView)
+             
+                item.ImageUrl = "image" + dataRow("ID").ToString() + ".gif"
+                item.NavigateUrl = dataRow("URL").ToString()
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.DisabledCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the menu item is
+            disabled.
+            </summary>
+            <value>
+            The CSS class applied when the menu item is disabled. The default value is
+            <strong>"disabled"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of disabled menu items is defined in the skin CSS
+            file. You can use the <strong>DisabledCssClass</strong> property to specify unique
+            appearance for the menu item when it is disabled.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Enabled">
+            <exclude/>
+            <excludetoc/>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ExpandedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the menu item is
+            opened (its child items are visible).
+            </summary>
+            <value>
+            The CSS class applied when the menu item is opened. The default value is
+            <strong>"expanded"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of opened menu items is defined in the skin CSS
+            file. You can use the <strong>ExpandedCssClass</strong> property to specify unique
+            appearance for the menu item when it is opened.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.FocusedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the menu item is
+            focused.
+            </summary>
+            <value>
+            The CSS class applied when the menu item is focused. The default value is
+            <strong>"focused"</strong>.
+            </value>
+            <remarks>
+            By default the visual appearance of focused menu items is defined in the skin CSS
+            file. You can use the <strong>FocusedCssClass</strong> property to specify unique
+            appearance for the menu item when it is focused.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ClickedCssClass">
+            <summary>
+            Gets or sets the Cascading Style Sheet (CSS) class applied when the menu item is
+            clicked.
+            </summary>
+            <value>
+            The CSS class applied when the menu item is clicked. The default value is
+            <strong>"clicked"</strong>.
+            </value>
+            <example>
+            By default the visual appearance of clicked menu items is defined in the skin CSS
+            file. You can use the <strong>ClickedCssClass</strong> property to specify unique
+            appearance for the menu item when it is clicked.
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.GroupSettings">
+            <summary>Specifies the settings for child item behavior.</summary>
+            <value>
+                An instance of the <see cref="T:Telerik.WebControls.RadMenuItemGroupSettings">MenuItemGroupSettings</see>
+                class.
+            </value>
+            <remarks>
+            	<para>You can customize the following settings</para>
+            	<list type="bullet">
+            		<item>item flow</item>
+            		<item>expand direction</item>
+            		<item>horizontal offset from the parent item</item>
+            		<item>vertical offset from the parent item</item>
+            		<item>width</item>
+            		<item>height</item>
+            	</list>
+            	<para>
+                    For more information check
+                    <see cref="T:Telerik.WebControls.RadMenuItemGroupSettings">MenuItemGroupSettings</see>.
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ImageUrl">
+            <summary>Gets or sets the path to an image to display for the item.</summary>
+            <value>
+            The path to the image to display for the item. The default value is empty
+            string.
+            </value>
+            <remarks>
+            Use the <strong>ImageUrl</strong> property to specify the image for the item. If
+            the <strong>ImageUrl</strong> property is set to empty string no image will be
+            rendered. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to specify the image to display for
+                the item using the <strong>ImageUrl</strong> property.</para>
+            	<para>
+            		<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radm:RadMenuItem <strong>ImageUrl="~/Img/inbox.gif"</strong> Text="Index"
+                    /&gt;<br/>
+                    &lt;radm:RadMenuItem <strong>ImageUrl="~/Img/outbox.gif"</strong> Text="Outbox"
+                    /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radm:RadMenu&gt;</para>
+            	</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ImageOverUrl">
+            <summary>
+            Gets or sets the path to an image to display for the item when the user moves the
+            mouse over the item.
+            </summary>
+            <value>
+            The path to the image to display when the user moves the mouse over the item. The
+            default value is empty string.
+            </value>
+            <example>
+            	<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1" runat="server"&gt;<br/>
+                &lt;Items&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/inbox.gif"
+                <strong>ImageOverUrl="~/Img/inboxOver.gif"</strong> Text="Index" /&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/outbox.gif"
+                <strong>ImageOverUrl="~/Img/outboxOver.gif"</strong> Text="Outbox" /&gt;<br/>
+                &lt;/Items&gt;<br/>
+                &lt;/radm:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            Use the <strong>ImageOverUrl</strong> property to specify the image that will be
+            used when the user moves the mouse over the item. If the <strong>ImageOverUrl</strong>
+            property is set to empty string the image specified by the <strong>ImageUrl</strong>
+            property will be used. Use "~" (tilde) when referring to images within the current
+            ASP.NET application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ImageClickedUrl">
+            <summary>
+            Gets or sets the path to an image to display for the item when the user clicks the
+            item.
+            </summary>
+            <value>
+            The path to the image to display when the user clicks the item. The default value
+            is empty string.
+            </value>
+            <example>
+            	<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1" runat="server"&gt;<br/>
+                &lt;Items&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/inbox.gif"
+                <strong>ImageClickedUrl="~/Img/inboxClicked.gif"</strong> Text="Index" /&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/outbox.gif"
+                <strong>ImageClickedUrl="~/Img/outboxClicked.gif"</strong> Text="Outbox"
+                /&gt;<br/>
+                &lt;/Items&gt;<br/>
+                &lt;/radm:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            Use the <strong>ImageClickedUrl</strong> property to specify the image that will be
+            used when the user clicks the item. If the <strong>ImageClickedUrl</strong>
+            property is set to empty string the image specified by the <strong>ImageUrl</strong>
+            property will be used. Use "~" (tilde) when referring to images within the current
+            ASP.NET application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.DisabledImageUrl">
+            <summary>Gets or sets the path to an image to display when the items is disabled.</summary>
+            <value>
+            The path to the image to display when the item is disabled. The default value is
+            empty string.
+            </value>
+            <remarks>
+            Use the <strong>DisabledImageUrl</strong> property to specify the image that will
+            be used when the item is disabled. If the <strong>DisabledImageUrl</strong> property is
+            set to empty string the image specified by the <strong>ImageUrl</strong> property will
+            be used. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+            <example>
+            	<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1" runat="server"&gt;<br/>
+                &lt;Items&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/inbox.gif"
+                <strong>DisabledImageUrl="~/Img/inboxDisabled.gif"</strong> Text="Index"
+                /&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/outbox.gif"
+                <strong>DisabledImageUrl="~/Img/outboxDisabled.gif"</strong> Text="Outbox"
+                /&gt;<br/>
+                &lt;/Items&gt;<br/>
+                &lt;/radm:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ExpandedImageUrl">
+            <summary>Gets or sets the path to an image to display when the items is expanded.</summary>
+            <value>
+            The path to the image to display when the item is expanded. The default value is
+            empty string.
+            </value>
+            <example>
+            	<para class="sourcecode">&lt;radm:RadMenu id="RadMenu1" runat="server"&gt;<br/>
+                &lt;Items&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/inbox.gif"
+                <strong>ExpandedImageUrl="~/Img/inboxExpanded.gif"</strong> Text="Index"
+                /&gt;<br/>
+                &lt;radm:RadMenuItem ImageUrl="~/Img/outbox.gif"
+                <strong>ExpandedImageUrl="~/Img/outboxExpanded.gif"</strong> Text="Outbox"
+                /&gt;<br/>
+                &lt;/Items&gt;<br/>
+                &lt;/radm:RadMenu&gt;</para>
+            </example>
+            <remarks>
+            Use the <strong>ExpandedImageUrl</strong> property to specify the image that will
+            be used when the item is expanded. If the <strong>ExpandedImageUrl</strong> property is
+            set to empty string the image specified by the <strong>ImageUrl</strong> property will
+            be used. Use "~" (tilde) when referring to images within the current ASP.NET
+            application.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Index">
+            <summary>
+            Gets the zero based index of the item in the <strong>Items</strong> collection of
+            its parent.
+            </summary>
+            <value>
+                An integer specifying the zero based index of the item considering the
+                <see cref="T:Telerik.WebControls.RadMenuItemCollection">RadMenuItemCollection</see> that contains it.
+            </value>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.IsSeparator">
+            <summary>
+            Sets or gets whether the item is separator. It also represents a logical state of
+            the item. Might be used in some applications for keyboard navigation to omit processing
+            items that are marked as separators.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ItemTemplate">
+            <summary>Gets or sets the template for displaying the item.</summary>
+            <value>
+            	<para>A <strong>ITemplate</strong> implemented object that contains the template
+                for displaying the item. The default value is a null reference (<b>Nothing</b> in
+                Visual Basic), which indicates that this property is not set.</para>
+            	<para>
+                    To specify common display for all menu items use the
+                    <see cref="P:Telerik.WebControls.RadMenu.ItemTemplate">ItemTemplate</see> property of the
+                    <strong>RadMenu</strong> class.
+                </para>
+            </value>
+            <example>
+            	<para>The following template demonstrates how to add a Calendar control in certain
+                menu item.</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu runat="server" ID="RadMenu1"&gt;</para>
+            	<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            		<para>&lt;Items&gt;</para>
+            		<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            			<para>&lt;radM:RadMenuItem Text="Date"&gt;</para>
+            			<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            				<para>&lt;Items&gt;</para>
+            				<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            					<para>&lt;radM:RadMenuItem Text="SelectDate"&gt;</para>
+            					<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            						<para>&lt;ItemTemplate&gt;</para>
+            						<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+            							<para>&lt;asp:Calendar runat="server" ID="Calendar1"
+                                        /&gt;</para>
+            						</blockquote>
+            						<para>&lt;/ItemTemplate&gt;</para>
+            					</blockquote>
+            					<para>&lt;/radM:RadMenuItem&gt;</para>
+            				</blockquote>
+            				<para>&lt;/Items&gt;</para>
+            			</blockquote>
+            			<para>&lt;/radM:RadMenuItem&gt;</para>
+            		</blockquote>
+            		<para>&lt;/Items&gt;</para>
+            	</blockquote>
+            	<para>&lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Items">
+            <summary>Gets the collection of child items in the menu item.</summary>
+            <value>
+                A <see cref="T:Telerik.WebControls.RadMenuItemCollection">RadMenuItemCollection</see> that represents the children within
+                the menu item. The default is empty collection.
+            </value>
+            <remarks>
+            Use this property to retrieve the child items of the menu item. You can also use it to
+            programmatically add or remove child items.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically add child items. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadMenuItem newsItem = new RadMenuItem("News");
+                    RadMenu1.Items.Add(newsItem);
+                
+                    RadMenuItem cnnItem = new RadMenuItem("CNN");
+                    newsItem.Items.Add(cnnItem);
+             
+                    RadMenuItem nbcItem = new RadMenuItem("NBC");
+                    newsItem.Items.Add(nbcItem);
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                If Not Page.IsPostBack Then
+                    Dim newsItem As RadMenuItem = New RadMenuItem("News")
+                    RadMenu1.Items.Add(newsItem)
+             
+                    Dim cnnItem As RadMenuItem = New RadMenuItem("CNN")
+                    newsItem.Items.Add(cnnItem)
+             
+                    Dim nbcItem As RadMenuItem = New RadMenuItem("NBC")
+                    newsItem.Items.Add(nbcItem)
+                End If
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Level">
+            <summary>
+            Manages the item level of a particular Item instance. This property allows easy
+            implementation/separation of the menu items in levels.
+            </summary>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Menu">
+            <summary>Gets the <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> instance which contains the item.</summary>
+            <remarks>
+                Use this property to obtain an instance to the
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> object containing the item.
+            </remarks>		
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.NavigateUrl">
+            <summary>Gets or sets the URL to link to when the item is clicked.</summary>
+            <value>
+            The URL to link to when the item is clicked. The default value is empty
+            string.
+            </value>
+            <example>
+                The following example demonstrates how to use the <strong>NavigateUrl</strong>
+                property 
+                <para>
+            		<para class="sourcecode">&lt;radM:RadMenu id="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radM:RadMenuItem Text="News" <strong>NavigateUrl="~/News.aspx"</strong>
+                    /&gt;<br/>
+                    &lt;radM:RadMenuItem Text="External URL"
+                    <strong>NavigateUrl="http://www.example.com"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radM:RadMenu&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            Use the <strong>NavigateUrl</strong> property to specify the URL to link to when
+            the item is clicked. Use "~" (tilde) in front of an URL within the same ASP.NET
+            application. When specifying external URL do not forget the protocol (e.g.
+            "http://").
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Owner">
+            <summary>Gets the <see cref="T:Telerik.WebControls.IRadMenuItemContainer">IRadMenuItemContainer</see> which contains the item.</summary>
+            <value>
+                The object which contains the item. It might be an instance of the
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> class or the <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see>
+                class depending on the hierarchy level.
+            </value>
+            <remarks>
+                The value is of the <see cref="T:Telerik.WebControls.IRadMenuItemContainer">IRadMenuItemContainer</see> type which is
+                implemented by the <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> class and the
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> class. Use the <strong>Owner</strong> property when
+                recursively traversing <strong>RadMenu</strong>.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Target">
+            <summary>
+            Gets or sets the target window or frame to display the Web page content linked to
+            when the menu item is clicked.
+            </summary>
+            <value>
+            	<para>The target window or frame to load the Web page linked to when the Item is
+                selected. Values must begin with a letter in the range of a through z (case
+                insensitive), except for the following special values, which begin with an
+                underscore:</para>
+            	<para>
+            		<list type="Itemle">
+            			<item>
+            				<term>_blank</term>
+            				<description>Renders the content in a new window without
+                            frames.</description>
+            			</item>
+            			<item>
+            				<term>_parent</term>
+            				<description>Renders the content in the immediate frameset
+                            parent.</description>
+            			</item>
+            			<item>
+            				<term>_self</term>
+            				<description>Renders the content in the frame with focus.</description>
+            			</item>
+            			<item>
+            				<term>_top</term>
+            				<description>Renders the content in the full window without
+                            frames.</description>
+            			</item>
+            		</list>
+            	</para>The default value is empty string.
+            </value>
+            <remarks>
+            	<para>
+                    Use the <b>Target</b> property to specify the frame or window that displays the
+                    Web page linked to when the menu item is clicked. The Web page is specified by
+                    setting the <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see> property.
+                </para>
+            	<para>If this property is not set, the Web page specified by the
+                <strong>NavigateUrl</strong> property is loaded in the current window.</para>
+            </remarks>
+            <example>
+            	<para>The following example demonstrates how to use the <strong>Target</strong>
+                property</para>
+            	<para>ASPX:</para>
+            	<para>&lt;radM:RadMenu runat="server" ID="RadMenu1"&gt;</para>
+            	<para>&lt;Items&gt;</para>
+            	<para>&lt;radM:RadMenuItem <strong>Target="_blank"</strong>
+                NavigateUrl="http://www.google.com" /&gt;</para>
+            	<para>&lt;/Items&gt;</para>
+            	<para>&lt;/radM:RadMenu&gt;</para>
+            </example>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Text">
+            <summary>Gets or sets the text caption for the menu item.</summary>
+            <value>The text of the item. The default value is empty string.</value>
+            <example>
+                This example demonstrates how to set the text of the item using the
+                <strong>Text</strong> property. 
+                <para>
+            		<para class="sourcecode">&lt;radM:RadMenu ID="RadMenu1"
+                    runat="server"&gt;<br/>
+                    &lt;Items&gt;<br/>
+                    &lt;radM:RadMenuItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;radM:RadMenuItem <strong>Text="News"</strong> /&gt;<br/>
+                    &lt;/Items&gt;<br/>
+                    &lt;/radM:RadMenu&gt;</para>
+            	</para>
+            </example>
+            <remarks>
+            Use the <strong>Text</strong> property to specify the text to display for the
+            item.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Value">
+            <summary>Gets or sets the value associated with the menu item.</summary>
+            <value>The value associated with the item. The default value is empty string.</value>
+            <remarks>
+            	<para>Use the <b>Value</b> property to specify or determine the value associated
+                with the item.</para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.ID">
+            <summary>
+            This property is being used internally by the <strong>RadMenu</strong> control.
+            Setting it may lead to unpredictable results.
+            </summary>
+            <remarks>
+                The <strong>ID</strong> property is used internally. Use the
+                <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property to store any item related data.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.Visible">
+            <excludetoc/>
+            <exclude/>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItem.PostBack">
+            <summary>
+            Gets or sets a value indicating whether clicking on the item will
+            postback.
+            </summary>
+            <value>
+            	<strong>True</strong> if the menu item should postback; otherwise
+                <strong>false</strong>. By default all the items will postback provided the user
+                has subscribed to the <see cref="E:Telerik.WebControls.RadMenu.ItemClick">ItemClick</see> event.
+            </value>
+            <remarks>
+                If you subscribe to the <see cref="E:Telerik.WebControls.RadMenu.ItemClick">ItemClick</see> all menu
+                items will postback. To turn off that behavior you should set the
+                <strong>PostBack</strong> property to <strong>false</strong>. This property cannot
+                be set in design time.
+            </remarks>
+        </member>
+        <member name="T:Telerik.WebControls.RadMenuItemCollection">
+            <summary>
+                A collection of <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> objects in a
+                <see cref="T:Telerik.WebControls.RadMenu">RadMenu</see> control.
+            </summary>
+            <remarks>
+            	<para>The <strong>RadMenuItemCollection</strong> class represents a collection of
+                <strong>RadMenuItem</strong> objects. The <strong>RadMenuItem</strong> objects in turn represent 
+                menu items within a <strong>RadMenu</strong> control.</para>
+            	<list type="bullet">
+            		<item>
+                        Use the <see cref="P:Telerik.WebControls.RadMenuItemCollection.Item(System.Int32)">indexer</see> to programmatically retrieve a
+                        single RadMenuItem from the collection, using array notation.
+                    </item>
+            		<item>
+                        Use the <strong>Count</strong> property to determine the total
+                        number of menu items in the collection.
+                    </item>
+            		<item>
+                        Use the <see cref="M:Telerik.WebControls.RadMenuItemCollection.Add(Telerik.WebControls.RadMenuItem)">Add</see> method to add menu items in the collection.
+                    </item>
+            		<item>
+                        Use the <see cref="M:Telerik.WebControls.RadMenuItemCollection.Remove(Telerik.WebControls.RadMenuItem)">Remove</see> method to remove menu items from the
+                        collection.
+                    </item>
+            	</list>
+            </remarks>
+            <moduleiscollection/>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.#ctor(Telerik.WebControls.IRadMenuItemContainer)">
+            <summary>Initializes a new instance of the <strong>RadMenuItemCollection</strong> class.</summary>
+            <remarks>Use the constructor to create a new <strong>RadMenuItemCollection</strong> class.</remarks>
+            <param name="owner">The owner of the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.Add(Telerik.WebControls.RadMenuItem)">
+            <summary>Appends a <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> to the end of the collection.</summary>
+            <example>
+            	<para>The following example demonstrates how to programmatically add items in a
+                <strong>RadMenu</strong> control.</para>
+            	<code lang="CS">
+            RadMenuItem newsItem = new RadMenuItem("News");
+             
+            RadMenu1.Items.Add(newsItem);
+                </code>
+            	<code lang="VB">
+            Dim newsItem As RadMenuItem = New RadMenuItem("News")
+             
+            RadMenu1.Items.Add(newsItem)
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.AddRange(Telerik.WebControls.RadMenuItem[])">
+            <summary>Adds the items in an array of <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> objects to the collection.</summary>
+            <remarks>
+            	<para>
+                    Use the <b>AddRange</b> method to add the items in the array of
+                    <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> objects specified by the <i>items</i> parameter. This
+                    allows you to add multiple <b>RadMenuItem</b> objects to the collection in a single
+                    step.
+                </para>
+            </remarks>
+            <example>
+                The following example demonstrates how to use the <strong>AddRange</strong> method
+                to add multiple items in a single step. 
+                <code lang="CS">
+            void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    RadMenuItem[] items = new RadMenuItem[] { new RadMenuItem("First"), new RadMenuItem("Second"), new RadMenuItem("Third") };
+                    RadMenu1.Items.AddRange(items);
+                }
+            }
+                </code>
+            	<code lang="VB">
+            Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+                If Not Page.IsPostBack Then
+                    Dim items() As RadMenuItem = {New RadMenuItem("First"), New RadMenuItem("Second"), New RadMenuItem("Third")}
+                    RadMenu1.Items.AddRange(items)
+                End If
+            End Sub
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.Insert(System.Int32,Telerik.WebControls.RadMenuItem)">
+            <summary>
+                Inserts the specified <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> in the collection at the specified
+                index location.
+            </summary>
+            <remarks>
+            Use the <b>Insert</b> method to add a <strong>RadMenuItem</strong> to the collection at
+            the index specified by the <i>index</i> parameter.
+            </remarks>
+            <param name="index">The location in the collection to insert the <strong>RadMenuItem</strong>.</param>
+            <param name="item">The <strong>RadMenuItem</strong> to add to the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.IndexOf(Telerik.WebControls.RadMenuItem)">
+            <summary>
+                Determines the index value that represents the position of the specified
+                <paramref name="item">RadMenuItem</paramref> in the collection.
+            </summary>
+            <returns>
+            The zero-based index position of the specified <strong>RadMenuItem</strong> in the
+            collection.
+            </returns>
+            <remarks>
+            Use the <b>IndexOf</b> method to determine the index value of the
+            <strong>RadMenuItem</strong> specified by the <i>item</i> parameter in the collection. If an item
+            with this criteria is not found in the collection, -1 is returned.
+            </remarks>
+            <param name="item">A <strong>RadMenuItem</strong> to search for in the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.Contains(Telerik.WebControls.RadMenuItem)">
+            <summary>
+                Determines whether the collection contains the specified
+                <paramref name="item">RadMenuItem</paramref>.
+            </summary>
+            <returns>
+            	<strong>true</strong> if the collection contains the specified item; otherwise,
+            <b>false</b>.
+            </returns>
+            <remarks>
+            Use the <b>Contains</b> method to determine whether the <strong>RadMenuItem</strong>
+            specified by the <i>item</i> parameter is in the collection.
+            </remarks>
+            <param name="item">A RadMenuItem to search for in the collection.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.Remove(Telerik.WebControls.RadMenuItem)">
+            <summary>Removes the specified <paramref name="item">RadMenuItem</paramref> from the collection.</summary>
+            <remarks>
+            Use the <b>Remove</b> method to remove a <strong>RadMenuItem</strong> from the
+            collection.
+            </remarks>
+            <example>
+                The following example demonstrates how to programmatically remove a RadMenuItem from a
+                <strong>RadMenu</strong> control. 
+                <code lang="CS">
+            RadMenuItem newsItem = RadMenu1.FindItemByText("News");
+            if (newsItem != null)
+            {
+                RadMenu1.Items.Remove(newsItem);
+            }
+                </code>
+            	<code lang="VB">
+            Dim newsItem As RadMenuItem = RadMenu1.FindItemByText("News")
+            If Not newsItem Is Nothing Then
+                RadMenu1.Items.Remove(newsItem)
+            End If
+                </code>
+            </example>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.RemoveAt(System.Int32)">
+            <summary>Removes the <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> at the specified index from the collection.</summary>
+            <remarks>
+            	<para>Use the <b>RemoveAt</b> method to remove the <strong>RadMenuItem</strong> at the
+                specified index from the collection.</para>
+            </remarks>
+            <param name="index">The index of the <strong>RadMenuItem</strong> to remove.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.Clear">
+            <summary>Removes all items from the collection.</summary>
+            <remarks>
+                Use the <strong>Clear</strong> method to remove all items from the collection. The
+                <strong>Count</strong> property is set to 0.
+            </remarks>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.FindItemByText(System.String)">
+            <summary>
+                Searches the <strong>RadMenuItemCollection</strong> for the first
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> with a <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property equal to
+                the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> whose <see cref="P:Telerik.WebControls.RadMenuItem.Text">Text</see> property is equal
+                to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="text">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.FindItemByValue(System.String)">
+            <summary>
+                Searches the <strong>RadMenuItemCollection</strong> for the first
+                <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> with a <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property equal
+                to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> whose <see cref="P:Telerik.WebControls.RadMenuItem.Value">Value</see> property is
+                equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first item matching the search criteria. If no item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="value">The value to search for.</param>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemCollection.FindItemByUrl(System.String)">
+            <summary>
+                Searches the <strong>RadMenuItemCollection</strong> for the first
+                <see cref="T:Telerik.WebControls.RadMenuItem">Item</see> with a <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see>
+                property equal to the specified value.
+            </summary>
+            <returns>
+                A <see cref="T:Telerik.WebControls.RadMenuItem">Item</see> whose <see cref="P:Telerik.WebControls.RadMenuItem.NavigateUrl">NavigateUrl</see>
+                property is equal to the specified value.
+            </returns>
+            <remarks>
+            The method returns the first Item matching the search criteria. If no Item is
+            matching then <strong>null</strong> (<strong>Nothing</strong> in VB.NET) is
+            returned.
+            </remarks>
+            <param name="url">The value to search for.</param>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemCollection.Item(System.Int32)">
+            <summary>
+            	<para>
+                    Gets a <see cref="T:Telerik.WebControls.RadMenuItem">RadMenuItem</see> at the specified index in the collection.
+                </para>
+            </summary>
+            <remarks>
+            	<para>Use this indexer to get a <strong>RadMenuItem</strong> from the collection at the
+                specified index, using array notation.</para>
+            </remarks>
+            <param name="index">
+            The zero-based index of the <strong>RadMenuItem</strong> to retrieve from the
+            collection.
+            </param>		
+        </member>
+        <member name="T:Telerik.WebControls.RadMenuItemGroupSettings">
+            <summary>Represents settings controlling child item behavior.</summary>
+        </member>
+        <member name="M:Telerik.WebControls.RadMenuItemGroupSettings.#ctor(System.Web.UI.StateBag)">
+            <excludetoc/>
+            <exclude/>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemGroupSettings.Flow">
+            <summary>Gets or sets the flow of child items.</summary>
+            <value>
+                One of the <see cref="T:Telerik.WebControls.ItemFlow">ItemFlow</see> enumeration values. The default
+                value is <strong>Vertical</strong>.
+            </value>
+            <remarks>
+            Use the <strong>Flow</strong> property to customize the flow of child menu items.
+            By default <strong>RadMenu</strong> mimics the behavior of Windows and child items
+            (apart from top level ones) flow vertically.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemGroupSettings.ExpandDirection">
+            <summary>Gets or sets the direction in which child items will open.</summary>
+            <value>
+                One of the <see cref="P:Telerik.WebControls.RadMenuItemGroupSettings.ExpandDirection">ExpandDirection</see> enumeration values.
+                The default value is <strong>Auto</strong>.
+            </value>
+            <remarks>
+                Use the <strong>ExpandDirection</strong> property to specify different expand
+                direction than the automatically determined one. See the
+                <see cref="P:Telerik.WebControls.RadMenuItemGroupSettings.ExpandDirection">ExpandDirection</see> description for more information.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemGroupSettings.OffsetX">
+            <summary>
+            Gets or sets a value indicating the horizontal offset of child menu items
+            considering their parent.
+            </summary>
+            <value>
+            An integer specifying the horizontal offset of child menu items (measured in
+            pixels). The default value is 0 (no offset).
+            </value>
+            <remarks>
+            	<para>Use the <strong>OffsetX</strong> property to change the position where child
+                items will appear.</para>
+            	<para>
+                    To customize the vertical offset use the <see cref="P:Telerik.WebControls.RadMenuItemGroupSettings.OffsetY">OffsetY</see>
+                    property.
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemGroupSettings.OffsetY">
+            <summary>
+            Gets or sets a value indicating the vertical offset of child menu items
+            considering their parent.
+            </summary>
+            <value>
+            An integer specifying the vertical offset of child menu items (measured in
+            pixels). The default value is 0 (no offset).
+            </value>
+            <remarks>
+            	<para>Use the <strong>OffsetY</strong> property to change the position where child
+                items will appear.</para>
+            	<para>
+                    To customize the horizontal offset use the <see cref="P:Telerik.WebControls.RadMenuItemGroupSettings.OffsetX">OffsetX</see>
+                    property.
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemGroupSettings.Width">
+            <summary>
+            Gets or sets a value indicating the width of child menu items (the whole item
+            group).
+            </summary>
+            <value>
+            A <strong>Unit</strong> that represents the width of the child item group. The
+            default value is <strong>Unit.Empty</strong>.
+            </value>
+            <remarks>
+            If the total width of menu items exceeds the <strong>Width</strong> property
+            scrolling will be applied.
+            </remarks>
+        </member>
+        <member name="P:Telerik.WebControls.RadMenuItemGroupSettings.Height">
+            <summary>
+            Gets or sets a value indicating the height of child menu items (the whole item
+            group).
+            </summary>
+            <value>
+            A <strong>Unit</strong> that represents the height of the child item group. The
+            default value is <strong>Unit.Empty</strong>.
+            </value>
+            <remarks>
+            If the total height of menu items exceeds the <strong>Height</strong> property
+            scrolling will be applied.
+            </remarks>
+        </member>
+    </members>
+</doc>

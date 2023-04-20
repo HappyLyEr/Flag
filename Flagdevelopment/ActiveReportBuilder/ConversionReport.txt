@@ -1,0 +1,39 @@
+﻿This report shows the steps taken to convert your Web application from ASP.NET 1.1 to ASP.NET 2.0. 
+There may be some unresolved conversion issues you will need to manually fix. 
+For more information, please refer to http://go.microsoft.com/fwlink/?LinkId=46995 or search for the help topic "Converting from Visual Studio .NET 2002 or 2003".
+Conversion Started on project file ActiveReportBuilder.csproj at January 23 2007, 17:13:39.
+
+=========================ERRORS===================
+ERROR: The following files were not migrated because they were not found in the project file or the associated 'BuildAction' is set to 'None'.
+You may need to exclude these files from the project after the conversion process in order to compile your web site: 
+File List == newactivereport1.cs.
+
+=========================WARNINGS=================
+Warning: If the base class of any of the code-behind classes declares page fields please add the 'CodeFileBaseClass' attribute in the corresponding Page.
+
+=========================COMMENTS=================
+Web.Config: Added 'xhtmlConformance' attribute.
+Web.Config: added a reference for assembly ActiveReports3.
+Web.Config: added a reference for assembly ActiveReports.Viewer3.
+Web.Config: added a reference for assembly ActiveReports.Chart.
+Web.Config: added a reference for assembly ActiveReports.Interop.
+Removed attribute Codebehind from file Global.asax.
+Removed attribute AutoEventWireup from file WebForm1.aspx.
+Removed attribute Codebehind from file WebForm1.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file WebForm1.aspx.cs (Line 19).
+Added folder App_Code.
+Moved file GAMeetingText.cs to the App_Code\ directory.
+Moved file GAMeeting.cs to the App_Code\ directory.
+Moved file SOPList.cs to the App_Code\ directory.
+Moved file Global.asax.cs to the App_Code\ directory.
+Moved file GApersonnel.cs to the App_Code\ directory.
+Moved file LocationSOPs.cs to the App_Code\ directory.
+Moved file GAMeetingPersonList.cs to the App_Code\ directory.
+Moved file GALocSop.cs to the App_Code\ directory.
+Moved file GAAction.cs to the App_Code\ directory.
+Moved file GAIncidentReport.cs to the App_Code\ directory.
+Moved file AssemblyInfo.cs to the App_Code\ directory.
+Changed HTML validation schema for all projects to 'Internet Explorer 6.0'.
+Removed file ActiveReportBuilder.csproj.
+Removed file ActiveReportBuilder.csproj.webinfo.
+Project ActiveReportBuilder.csproj has been converted successfully at January 23 2007, 17:13:42.

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="GACrewListView" targetNamespace="http://tempuri.org/GACrewListView.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/GACrewListView.xsd" xmlns:mstns="http://tempuri.org/GACrewListView.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="GACrewListView" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GACrewListView">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Location" type="xs:string" minOccurs="0" />
+							<xs:element name="CallSign" type="xs:string" minOccurs="0" />
+							<xs:element name="LocationIdNumber" type="xs:string" minOccurs="0" /> 
+							<xs:element name="CountryOfRegistration" type="xs:string" minOccurs="0" />
+							<xs:element name="FamilyName" type="xs:string" minOccurs="0" />
+							<xs:element name="GivenName" type="xs:string" minOccurs="0" />
+							<xs:element name="Sex" type="xs:string" minOccurs="0" />
+							<xs:element name="DateOfBirth" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="MaritalStatus" type="xs:string" minOccurs="0" />
+							<xs:element name="Nationality" type="xs:string" minOccurs="0" />
+							<xs:element name="Board" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Leave" type="xs:dateTime" minOccurs="0" />							
+							<xs:element name="PlaceOfEmbarkment" type="xs:string" minOccurs="0" />
+							<xs:element name="TypeOfId" type="xs:string" minOccurs="0" />
+							<xs:element name="IdentificationIDNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="Role" type="xs:string" minOccurs="0" />
+							<xs:element name="ContractNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="Department" type="xs:string" minOccurs="0" />
+							<xs:element name="EmploymentCategory" type="xs:string" minOccurs="0" />
+							<xs:element name="FromDate" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

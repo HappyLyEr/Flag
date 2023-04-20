@@ -1,0 +1,966 @@
+body {
+	background-color: FFFFFF;
+	margin-top: 0px;
+	margin-left: 0px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+
+
+.Login
+{
+	font-family: Tahoma, Arial, Helvetica; 
+	font-size: 8pt; 
+	font-weight: bold; 
+	font-style: normal;
+	text-align: right;
+}
+
+.ga_breadcrumb
+{
+	color: Black;
+	margin: 10px;
+	font-size: 10px;
+	clear: both;
+}
+
+.ga_header
+{
+	background-image: url(bakgrunn_overst.jpg);
+}
+
+.ga_container 
+{
+	width:100%;
+}
+
+.ga_left_pane
+{
+	float: left;
+	/*clear: right;*/
+	width: 250px;
+	padding-right: 2px;
+	border-right: solid 1px #eeeeee;
+	vertical-align: top;
+}
+
+.ga_content_pane
+{
+	width: 740px;
+	float: left;
+	clear: right;
+   /* margin-left: 260px;*/
+	padding-left: 2px;
+	vertical-align: top;
+}
+
+.ga_right_pane
+{
+	float: left;
+	clear: right;
+	padding-left: 2px;
+	vertical-align: top;
+	visibility: hidden;
+}
+
+.ga_main_menu
+{
+	background: url(bakgrunn_overst.jpg);
+	width: 100%;
+	height: 20px;
+}
+
+.ga_navigationWheel
+{
+	margin-top: 40px;
+}
+
+.ga_navigationWheel_links
+{
+	font-size: 10pt;
+}
+
+.va_top
+{
+	vertical-align: top;
+	width: auto;
+}
+
+/* Main Menu */
+
+.MainMenu_MenuContainer {
+	border: solid 0px white;
+	background: none;
+}
+
+.MainMenu_MenuBar {
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.MainMenu_Test 
+{
+	font-size: 8pt;
+}
+
+.MainMenu_MenuItem {
+	cursor: pointer; 
+	cursor: hand; 
+	color: Black; 
+	font-family: Verdana, Tahoma, Arial, Helvetica; 
+	font-size: 8pt; 
+	font-weight: bold; 
+	font-style: normal; 
+	border: solid 0px white;
+}
+
+.MainMenu_MenuIcon {
+	cursor: pointer; 
+	cursor: hand; 
+	background: #878770; 
+	border: solid 0px white;
+	text-align: center; 
+	width: 21; 
+	height: 21;
+}
+
+.MainMenu_SubMenu {
+	z-index: 1000; 
+	cursor: pointer; 
+	cursor: hand; 
+	background-color: #DCDCB9; 
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='DimGray', Direction=135, Strength=3) ; 
+	border: solid 0px white;
+}
+
+.MainMenu_MenuBreak {
+	border: solid 0px white;
+	background-color: White; 
+	height: 1px;
+}
+
+.MainMenu_MenuItemSel {
+	background-color: #DCDCB9; 
+	cursor: pointer; 
+	cursor: hand; 
+	color: #D34326; 
+	font-family: Verdana, Tahoma, Arial, Helvetica; 
+	font-size: 8pt; 
+	font-weight: bold; 
+	font-style: normal;
+}
+
+.MainMenu_MenuArrow {
+	font-family: webdings; 
+	font-size: 8pt; 
+	cursor: pointer; 
+	cursor: hand; 
+	border: solid 0px white;
+	color: Black;
+}
+
+.MainMenu_RootMenuArrow {
+	font-family: webdings; 
+	font-size: 8pt; 
+	cursor: pointer; 
+	cursor: hand;
+	color: Black;
+}
+
+/* GA Grids */
+.gridStyle 
+{
+	background-color: White;
+	font-size: 10px;
+	line-height: 11px;
+	vertical-align: top;
+}
+
+.gridStyle_AlernatingItem
+{
+	color: #222222;
+	background-color: #DCDCB9;
+	vertical-align: top;
+	word-wrap: break-word;
+}
+
+.gridStyle_ItemStyle
+{
+	color: #222222;
+	background-color: #FFFFFF;
+	vertical-align: top;
+	word-wrap: break-word;
+}
+
+.SubTabsTableStyle 
+{
+	
+}
+
+.SubTabsNavigationStyle 
+{
+	color: #222222;
+	vertical-align: top;
+	word-wrap: break-word;
+	text-align : center; 
+	padding: 0px 2px 8px 2px;
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+
+
+
+.gridStyle_HeaderStyle
+{
+	font-size: 11px;
+	font-weight: bold;
+	color: #F7F7F7;
+	background-color: #878770;
+	background-image: url(flip2_bg.jpg);
+	background-repeat: repeat-x;
+	height: 16pt;
+	vertical-align: middle;
+	word-wrap: break-word;
+}
+
+.gridStyle_HeaderStyle A:link
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	text-decoration: none;
+}
+
+.gridStyle_HeaderStyle A:visited
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	text-decoration: none;
+}
+
+.gridStyle_HeaderStyle A:active
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	text-decoration: none;
+}
+
+.gridStyle_HeaderStyle A:hover
+{
+	font-weight:bold;
+	color: #F7F7F7;
+	text-decoration: underline;
+}
+
+
+
+.gridStyle_FooterStyle
+{
+	color: #000;
+	background-color: #FFF;
+}
+
+.gridStyle_PagerStyle
+{
+	color: #000;
+	background-color: #FFF;
+}
+
+/** Style for context info panel (UserControls/DataContextInfo.ascx) **/
+.ContextInfoPanel
+{
+	 color: #333;
+	 padding: 4px 4px 4px 4px;
+	 margin-bottom: 8px;
+	 background-image: url(bakgrunn_overst.jpg);
+}
+
+.ListInfoPanel
+{
+	 color: #333;
+	 padding: 4px 4px 4px 4px;
+	 margin-bottom: 8px;
+}
+
+/** style for filter **/
+.FilterPanel 
+{
+	 font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	 color: #333;
+	 padding: 0px 4px 4px 4px;
+	 margin-bottom: 8px;
+	 font-size : 10px;
+	 
+}
+
+.FilterPanel td
+{
+	font-size : 10pt;
+}
+
+.FilterPanel h3
+{
+	color : Black;
+	font-size : 12pt;
+}
+
+
+.SubCaption {
+	font-size: 16pt;
+}
+
+.SubCaptionAllWithin {
+	font-size: 14pt;
+}
+
+.ContextInfoPanel a
+{
+	font-size: 11px;
+}
+
+.ContextNavigation
+{
+	width: 100%;
+}
+
+a.ContextHome, a.ContextHome:visited
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+a.ContextHome:hover
+{
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.ContextNavigationHeader {
+	color: #FFF;
+	background-color: #878770;
+	padding: 4px;
+}
+
+.ContextNavigationBody {
+	background-image: url(bakgrunn_overst.jpg);
+	background-repeat: repeat-x;
+	padding: 4px;
+}
+
+.ContextNavigationTitle
+{
+	font-size: 18px;
+	color: #FFF;
+}
+
+A.ContextNavigationLink 
+{
+ 
+	color: #FFF;
+	font-weight :bold;
+	font-size: 10pt;
+}
+
+A.ContextNavigationLink:visited 
+{
+ 
+	color: #FFF;
+	font-weight :bold;
+	font-size: 10pt;
+}
+
+
+
+.ContextNavigationTable
+{
+	font-size: 10pt;
+}
+
+.H1Label
+{
+	font-size: 18pt;
+}
+/**** START view data class *****/
+td.ClassViewMenuItem 
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	
+	margin : 1px 5px 1px 5px;
+}
+
+.ClassViewMenuItem 
+{
+	vertical-align : middle;
+}
+
+/**** END view data class *****/
+
+
+/**** START MemberDataTabs ****/
+.MemberDataTabs {
+    padding: 0px;
+    margin: 0px;
+}
+
+.MemberDataTabsHead {
+    background-color: #FFF;
+    width: 100%;
+    border-width: 1px solid red;
+    padding: 0px;
+    margin: 0px;
+}
+
+.MemberDataTabsBody {
+    padding: 8px 4px 4px 4px;
+    background-color: #DCDCB9;
+}
+
+/**** END MemberDataTabs ****/
+
+/**** START ViewDetailsPanel *****/
+.ViewDetailsPanel 
+{
+	margin: 10px 0px 10px 0px;
+    padding: 8px 4px 8px 4px;
+    background-color: #DCDCB9;
+}
+
+.ViewDetailsPanelTitle 
+{
+	margin-bottom : 3px;
+}
+
+.ViewDetailsPanelNewLink
+{
+	margin-bottom : 3px;
+	text-align : right;
+	font-size: 11px;
+	margin-right: 10px;
+	
+}
+
+
+/**** END ViewDetailsPanel *****/
+
+
+
+/** HomeContext **/
+.ContextNavigation
+{
+	font-size: 11px;
+}
+/** END HomeContext **/
+
+
+/**** START  Style definitions for GA Tabstrip  START *****/
+/* background/border colors for the selected tab */
+
+.TabPanel
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DCDCB9;
+	padding: 8px 4px 8px 4px;
+}
+
+
+.ScreenTabBg {
+    background-color: #878770;
+    border-color: #878770;
+    background-image: url(flip2_bg.jpg);
+    background-repeat: repeat-x;
+}
+
+.ScreenSeparatorBg {
+    background-color: #FFF;
+    border-color: #FFF;
+    width: 3px;
+    text-align : center;
+}
+
+
+.ScreenTabPanel 
+{
+	background-color:#f0f0f0;
+}
+
+/* text style for the selected tab */
+.ScreenSelectedTab {
+    text-align: center;
+    border: 1px solid #DCDCB9;
+    background-color: #DCDCB9;
+    background-image: url(flip_bg.jpg);
+    background-repeat: repeat-x;
+    height: 24px;
+    padding: 2px 4px 0px 4px;
+    vertical-align : top;
+}
+
+.ScreenSelectedTabLabel {
+    /*line-height: 24px;*/
+    font-size: 11px;
+    color: #221111;
+    font-weight: bold;
+    
+}
+
+/* text style for the unselected tabs 
+.ScreenOtherTabs {
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration:none;
+    font-weight: bold;
+    padding: 0px 4px 0px 4px;
+    text-align: center;
+}*/
+
+/* background/border colors for the unselected tabs */
+.ScreenOtherTabsBg {
+    background-color: gray;
+    border-color: white;
+}
+/* hyperlink styles of the unselected tabs */
+A.ScreenOtherTabs:link    {
+    text-decoration:    none;
+    color: white;
+}
+
+.ScreenOtherTabsLabel 
+{
+	text-align : center; 
+	vertical-align : top;
+	padding: 2px 2px 2px 2px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #ffffff;
+	border: 1px solid #000000;
+	border-bottom: 1px solid #DCDCB9;
+	
+}
+
+A.ScreenOtherTabs:visited {
+    text-decoration:    none;
+    color:white;
+}
+
+A.ScreenOtherTabs:active  {
+    text-decoration:    none;
+    color:white;
+}
+
+A.ScreenOtherTabs:hover   {
+    text-decoration:    none;
+    color:white;
+}
+
+A.addmultiplerecords 
+{
+	padding-left: 6px;
+	font-size : 11px;
+	font-family: Tahoma, Arial, Helvetica;
+}
+
+/**** END  Style definitions for GA Tabstrip END *****/
+
+/**** START EditDataRecord style definitions ****/
+.EditForm_Table {
+    border: 0px solid white;
+    margin : 0px 0px 0px 0px;
+    background-color : F4F4E1;
+   
+}
+
+table.EditForm_Table 
+{
+	width : 720px;
+}
+
+
+
+.EditForm_Table td
+{
+    border: 0px solid white;
+  
+    margin : 0px 0px 0px 0px;
+    border-top : solid 2px white;
+}
+
+
+td.FieldViewContentCell 
+{
+	/*background-color : Blue;*/
+}
+
+td.FieldViewContentCell span 
+{
+	
+	/*background-color : Red;*/
+	
+}
+
+td.FieldViewLabelCell
+{
+	font-size: 10pt;
+	padding: 4px;
+	background-color: #878770;
+	color: #FFF;
+	font-weight: bold;
+	width: 180px;  
+	
+	vertical-align : top;
+}
+
+.FieldViewContentCell
+{
+	font-size: 10pt;
+	padding: 4px;
+	background-color: #F4F4E1;
+	color: #000;
+	/*width: auto;*/
+	border-top : solid 2px white;
+	width : 180px;
+}
+
+
+
+
+.FieldViewContentBelowCell
+{
+	font-size: 10pt;
+	padding: 4px, 4px, 4px, 0px;
+	background-color: #F4F4E1;
+	color: #000;
+	/*width: auto;*/
+	border-top : solid 0px white;
+	padding-bottom : 3px;
+	width : 180px;
+	vertical-align : top;
+}
+
+td.FieldViewContentBelowCell input.LookupDisplay
+{
+	width : 130px;
+}
+
+
+
+td.FieldViewSingleLabelCell
+{
+	font-size: 10pt;
+	padding: 4px;
+	background-color: #878770;
+	color: #FFF;
+	font-weight: bold;
+	width: 400px;  
+	
+	vertical-align : top;
+}
+
+
+.FieldViewSingleContentBelowCell 
+{
+	font-size: 10pt;
+	padding: 4px;
+	background-color: #F4F4E1;
+	color: #000;
+	/*width: auto;*/
+	border-top : solid 0px white;
+	padding-bottom : 3px;
+	width : 700px;
+}
+
+td.FieldViewSingleContentBelowCell 
+{
+	width : 715px;
+}
+
+.FieldContent_MCETextEditor
+{
+	width : 715px;
+}
+.FieldContent_MCETextEditor  span 
+{
+	width : auto;
+
+}
+
+.FieldContent_MCETextEditor p
+{ 
+	margin-top: 0px; margin-bottom: 0px; 
+}
+
+
+
+
+
+.FieldViewSingleContentBelowCell  p 
+{ 
+	margin-top: 0px; margin-bottom: 0px; 
+}
+
+.FieldViewSingleContentBelowCell  select 
+{
+	width : auto;
+}
+
+
+
+.FieldViewSingleContentBelowCell  td 
+{
+    border : solid 1px #909090; 
+    padding : 1px  5p  qpx 5px;
+    margin : 1px  5p  qpx 5px;
+    border: auto;
+    border-top : auto;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	border-collapse : collapse;
+	width : 10%;
+}
+
+
+.FieldViewSingleContentBelowCell  table 
+{
+    border : solid 1px #909090;  
+    margin : 0px, 0px, 0px, 0px;
+    padding : 1px 5px 1px 5px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	border-collapse : collapse;
+	width : 90%;
+    	
+ 
+}
+
+
+.FTBEditor  select 
+{
+	width : auto;
+}
+
+
+td.FieldLastInRow 
+{
+	font-size: 10pt;
+	padding: 0px;
+	background-color: #F4F4E1;
+	color: #000;
+	/*width: auto;*/
+	border-top : solid 2px white;
+
+	width : 550px;
+}
+
+td.FieldLastInRow span 
+{
+	width : 550px;
+}
+
+td.FieldLastInRow select 
+{
+	width : 615px;
+}
+
+td.FieldLastInRow input.input_text
+{
+	width : 550px;
+}
+
+td.FieldViewContentBelowCell span 
+{
+	/*width : 25%;*/
+	/*background-color : Yellow;*/
+	width : 180px;
+}
+
+
+
+td.FieldViewSingleContentBelowCell span 
+{
+	width : 400px;
+}
+
+td.FieldViewContentBelowCell input.input_text
+{
+	width : 180px;
+}
+
+
+
+td.FieldViewContentBelowCell
+{
+	/*width : 25%;*/
+	
+	/*background-color : Green;*/
+}
+
+td.FieldViewLabelCell span 
+{
+	/*width : 25%;*/
+	width: 180px;
+	/*background-color :Lime;	*/
+}
+
+/*
+td.FieldViewContentBelowCell checkbox {
+	text-align : center;
+	width : 180px;
+}*/
+
+.FieldDefaultLabel {
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.FieldDefaultViewLabel {
+    font-size: 10pt;
+    line-height: 1em;
+}
+
+.FieldLabelCell 
+{
+	vertical-align: middle;
+}
+
+.FieldRootCause {
+    height: 20em;
+    width: 25em;
+    border: 1px solid gray;
+}
+
+.FieldText_FieldLabelCell
+{
+	vertical-align: top;
+	background-color: #878770;
+	font-weight: bold;
+	color: #FFF;
+	padding: 6px;
+	font-size: 10pt;
+}
+
+.WorkArea_FieldLabelCell
+{
+	background-color: #878770;
+	font-weight: bold;
+	color: #FFF;
+	padding: 6px;
+	font-size: 10pt;
+}
+
+
+.FieldShortDescription {
+    width: 25em;
+    border: 1px solid red;
+}
+
+.FieldText {
+    height: 30em;
+    width: 25em;
+    font-family: Arial;
+    font-size: 9pt;
+}
+
+/**
+.linkLabel 
+{
+	font-size : 11px;
+}
+
+**/
+/**** END EditDataRecord style definitions ****/
+
+/***** START View DataRecord Style ****/
+
+pre.FieldText_TextArea {
+    /*width: 500px;*/
+   /* font-family: Arial;
+    font-size: 13pt;*/
+    
+    
+}
+
+.FieldContent_TextArea {
+    width: 800px;
+   /* font-family: Arial;
+    font-size: 13pt;*/
+    
+    
+}
+
+pre.FieldContent_TextArea {
+    width: 800px;
+   /* font-family: Arial;
+    font-size: 13pt;*/
+    
+    
+}
+
+select {
+     width: 170px;
+}
+
+
+/**** added to get word wrap for pre tag. different browsers uses different css for this  ***/
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
+/***** END View DataRecord Style ****/
+
+
+/** START MinorTable style defs **/
+.MinorTable
+{
+	font-size: 10pt;
+	width: 100%;
+}
+
+.MinorTableHeader
+{
+	background-color: #878770;
+	background-image: url(flip2_bg.jpg);
+	color: #FFF;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.MinorTableItem
+{
+	background-color: #F4F4E1;
+}
+/** END MinorTable style defs **/
+
+/** START Message style defintions ***/
+
+.MessageNormal
+{
+	font-size: 10pt;
+}
+
+.MessageError
+{
+	font-size: 10pt;
+	color: Red;
+}
+
+.MessageValidationError
+{
+	font-size: 10pt;
+	color: Blue;
+}
+
+.MessageWarn
+{
+	font-size: 10pt;
+	color: Yellow;
+}
+
+/** END Message style defintions ***/

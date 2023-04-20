@@ -1,0 +1,802 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{181A89D3-4B82-4002-9048-4B817FE9F894}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GASystem</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GASystem</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\FLAGweb\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\FLAGweb\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Chart, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.HtmlExport, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports.HtmlExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports.Viewer3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.XlsExport, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports.XlsExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\activereport\ActiveReports3.DLL</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\CrystalDecisions\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\CrystalDecisions\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\CrystalDecisions\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=3.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\EPPlus.3.1.1\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NCalc, Version=1.3.8.0, Culture=neutral, PublicKeyToken=973cde3f1cafed03, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\Ncalc\NCalc.dll</HintPath>
+    </Reference>
+    <Reference Include="PSWinCom.Gateway.Client, Version=1.0.1787.20859, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\PSWinCom.Gateway.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.HtmlToRtf, Version=1.8.2574.23371, Culture=neutral, PublicKeyToken=bce916f184012969">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FlagSolution\DLLReferences\htmltortf_net_full\SautinSoft.HtmlToRtf.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\flagopenwfe\openwfe-dotnet-1.5.2\openwfe.csproj">
+      <Name>openwfe</Name>
+      <Project>{AF7506AF-9182-41EC-BD55-AC5691902504}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\GASystemData\GASystem.DataModel.csproj">
+      <Project>{E72963E4-E15C-44CA-B76C-A996B594E53C}</Project>
+      <Name>GASystem.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\AppUtils\ClassDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\ClassDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\CodeTables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\AbstractDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\AllDatesDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\AllToDateDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\CurrentMonth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\CurrentQuarterDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\CurrentWeekDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\CurrentWeekToDateDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\CurrentYear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\DateRangeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\DateUtilities\DateUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\DeafultRangeDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\Last12MonthsDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\Last30DaysBeforeDateDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\Last30DaysDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\LastMonthDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\LastQuarterDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\LastWeekDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\LastYearDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\QuarterToDateDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\ThisMonthToDateDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\ThisYearToDateDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\ToDayDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\DateRangeGenerator\YesterdayDateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\ErrorUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\FieldDefintion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\FlagResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\FlagResourceFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\FlagSysResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\GAUsers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\GAUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\GUIGenerateUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\GUIQueryString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\IWorkflowStarterNextRun.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\Localization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\Logger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\DropdownFilter.cs" />
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\CurrentInLookupTableLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\CurrentLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\DropdownFilterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\FollowUpActionLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\GeneralLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\ILookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\LookupFilterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\OwnerFilterLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\PersonnelLoginFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\SiblingLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\SpecificOwnerLookupFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\LookupFilterGenerator\LiteralLookupFilter.cs" />
+    <Compile Include="BusinessLayer\AppUtils\SessionManagement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\AppUtils\SuperClassAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Class.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\CreateRecordFromClass.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\GetBitValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\GetDateTimeValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\GetIntValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\GetSmallIntValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\GetStringValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\SQLExpression.cs" />
+    <Compile Include="BusinessLayer\ExcelImport.cs" />
+    <Compile Include="BusinessLayer\ExcelImportResult.cs" />
+    <Compile Include="BusinessLayer\RecordHistoryLog.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\DateComputeValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\DateTimeNowUTCValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\EvaluateExpression.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\LookupField.cs" />
+    <Compile Include="BusinessLayer\DocumentControl.cs" />
+    <Compile Include="BusinessLayer\Flag.cs" />
+    <Compile Include="BusinessLayer\Risk.cs" />
+    <Compile Include="BusinessLayer\SecurityRoles\FlagNonCompanyRole.cs" />
+    <Compile Include="BusinessLayer\SubcontractorView.cs" />
+    <Compile Include="BusinessLayer\TABUtils\TABSQLExpression.cs" />
+    <Compile Include="BusinessLayer\Vendor.cs" />
+    <Compile Include="BusinessLayer\WorkflowStarter.cs" />
+    <Compile Include="BusinessLayer\ProjectRisk.cs" />
+    <Compile Include="BusinessLayer\LocationInCrew.cs" />
+    <Compile Include="BusinessLayer\CrewInProject.cs" />
+    <Compile Include="DataAccess\ClassDb.cs" />
+    <Compile Include="DataAccess\CreateRecordFromClassDb.cs" />
+    <Compile Include="DataAccess\RecordHistoryLogDb.cs" />
+    <Compile Include="DataAccess\DocumentControlDb.cs" />
+    <Compile Include="DataAccess\FlagDb.cs" />
+    <Compile Include="DataAccess\RiskDb.cs" />
+    <Compile Include="DataAccess\SubcontractorViewDb.cs" />
+    <Compile Include="DataAccess\Utils\DatabaseMapping.cs" />
+    <Compile Include="DataAccess\VendorDb.cs" />
+    <Compile Include="DataAccess\WorkflowStarterDb.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Action.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ActionWorkitemView.cs" />
+    <Compile Include="BusinessLayer\BusinessClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Company.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\EmploymentPathView.cs" />
+    <Compile Include="BusinessLayer\ProcedureSMTPTemplate.cs" />
+    <Compile Include="BusinessLayer\RemedialActionView.cs" />
+    <Compile Include="BusinessLayer\DailyEmployeeCount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\DataClassRelations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\DataRecordLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\DefaultValues\DateTimeNowValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\DefaultValueFactory.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\DBNullValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\IDefaultValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\ParentValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\ReporterValue.cs" />
+    <Compile Include="BusinessLayer\DefaultValues\StaticValue.cs" />
+    <Compile Include="BusinessLayer\DNNUsers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Documents\DocumentInfo.cs" />
+    <Compile Include="BusinessLayer\Documents\DocumentManagentSystem.cs" />
+    <Compile Include="BusinessLayer\Employment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FieldDefinition.cs" />
+    <Compile Include="BusinessLayer\File.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FileContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\DocumentType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\IFlagReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\AbstractFlagReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\ActiveReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\ActiveReportSingle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\CrystalReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\CrystalReportSingle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\EndDateParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\NullParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\OwnerNameParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\StartDateParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\TotalExposedHoursLocationParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\Impl\TotalExposedHoursProjectParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\IParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\ParameterEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\ParameterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\ReportDescripton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\ReportFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\ReportTypeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagReport\ReportUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\FlagSMTP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\GAReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\GenericBusinnesClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Help.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\License.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ListCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Lists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ManyToManyLinks.cs" />
+    <Compile Include="BusinessLayer\MeansOfContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Personnel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Procedure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ReportBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ReportInstance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ReportInstanceFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Reports.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Security.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\SecurityRoles\FlagLinkedRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\SecurityRoles\FlagRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\SecurityRoles\RoleUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Security_new.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Security_old.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\sms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\TimeAndAttendance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Utils\IdGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Utils\RecordsetFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Utils\RecordSetUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Utils\StoreObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Validate\DataSetValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\ValidationResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\Validator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLayer\WorkItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ActionDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ActionTemplateDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\CertificateDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\CompanyDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DataAccessReportViewForDataClassView.cs" />
+    <Compile Include="DataAccess\EmploymentPathViewDb.cs" />
+    <Compile Include="DataAccess\DataAccessReportViewForViews.cs" />
+    <Compile Include="DataAccess\DataAccessReportViewFactory.cs" />
+    <Compile Include="DataAccess\IDataAccessReportView.cs" />
+    <Compile Include="DataAccess\DataAccessReportView.cs" />
+    <Compile Include="DataAccess\DataAccessListViewForViews.cs" />
+    <Compile Include="DataAccess\DataAccessListViewFactory.cs" />
+    <Compile Include="DataAccess\DataAccessListView.cs" />
+    <Compile Include="DataAccess\DataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DataAccessFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DataUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DNNUsersDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DocumentDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\EmploymentDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\FieldDefinitionDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\FileContentDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\FileDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\GADataTransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\HelpDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\IDataAccessListView.cs" />
+    <Compile Include="DataAccess\LicenseDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ListCategoryDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ListsDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ManyToManyLinksDb.cs" />
+    <Compile Include="DataAccess\MeansOfContactDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\PersonnelDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ProcedureDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ReportDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ReportInstanceDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ReportInstanceFilterDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ReportsDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ReportView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\SecurityHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\Security\ApplicationSecurityProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\Security\DNNSecurityProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\Security\GASecurityDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\Security\GASecurityDb_new.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\Security\IGASecurityProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\Security\NoneWebSecurityProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\SQLGenerateUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\StoreAttributeDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\StoreObjectDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\SuperClassDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\TimeAndAttendanceDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\UserDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\DataCache.cs" />
+    <Compile Include="DataAccess\Utils\SQLSelectListView.cs" />
+    <Compile Include="DataAccess\Utils\DatabaseSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\IdGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLSelect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLViewSelect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLView\FlagClassDefinedSQLView.cs" />
+    <Compile Include="DataAccess\Utils\SQLView\CrewListSQLView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLView\GeneralSQLView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLView\ISQLView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLView\LastUserLoginSQLView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Utils\SQLView\SQLViewFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\WorkitemDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="BusinessLayer\Documents\ClassDiagram1.cd" />
+    <Compile Include="DataAccess\ProjectRiskDb.cs" />
+    <Compile Include="DataAccess\LocationInCrewDb.cs" />
+    <Compile Include="DataAccess\CrewInProjectDb.cs" />
+    <Compile Include="DataModel\DataClasses.cs" />
+    <Compile Include="DataModel\GADataContext.cs" />
+    <Compile Include="GAExceptions\GADataAccessException.cs" />
+    <Compile Include="GAExceptions\GADataClassNotSupportedException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GAExceptions\GAException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GAExceptions\GAOperationNotAllowedException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GAExceptions\GASecurityException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GAExceptions\GAValidationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\usermessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usermessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Resources\errormessages.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\errormessages.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\errormessages.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\fieldcaption.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\fieldcaption.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\fieldcaption.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\guielements.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\guielements.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\guielements.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\usermessages.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\usermessages.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>usermessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\usermessages.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppUtils\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

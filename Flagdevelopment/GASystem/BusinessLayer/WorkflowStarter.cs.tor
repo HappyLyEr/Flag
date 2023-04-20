@@ -1,0 +1,153 @@
+using System;
+using System.Data;
+using GASystem.DataModel;
+using GASystem.DataAccess;
+using log4net;
+using System.Collections;
+using GASystem.DataAccess.Security;
+using GASystem.BusinessLayer.Utils;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GASystem.BusinessLayer
+{
+    public class WorkflowStarter : BusinessClass
+    {
+//        public enum NextRun { H, D, W, M, Q, halfY, Y, twoY }
+        
+        public static WorkflowStarterDS GetAllCurrentWorkflowStarters()
+        {
+            return GASystem.DataAccess.WorkflowStarterDb.GetAllCurrentWorkflowStarters();
+        }
+        
+        public static WorkflowStarterDS GetWorkflowStarterByWorkflowStarterRowId(int WorkflowStarterRowId)
+        {
+            return WorkflowStarterDb.GetWorkflowStarterByWorkflowStarterRowId(WorkflowStarterRowId);
+        }
+        
+        public static WorkflowStarterDS GetWorkflowStarterByWorkflowStarterRowId(int WorkflowStarterRowId, GADataTransaction transaction)
+        {
+            return WorkflowStarterDb.GetWorkflowStarterByWorkflowStarterRowId(WorkflowStarterRowId, transaction);
+        }
+
+
+        public static void SetWorkflowStarterRunning(int RowId, int StatusRunningRowId, GADataTransaction transaction)
+        {
+            GASystem.DataModel.WorkflowStarterDS wds = GetWorkflowStarterByWorkflowStarterRowId(RowId);
+            wds.GAWorkflowStarter[0].WorkflowStarterStatusListsRowId = StatusRunningRowId;
+            GASystem.DataAccess.WorkflowStarterDb.UpdateWorkflowStarter(wds,transaction);
+        }
+        public static void SetWorkflowStarterRunning(int RowId, int StatusRunningRowId)
+        {
+            SetWorkflowStarterRunning(RowId, StatusRunningRowId, null);
+        }
+
+        public static void SetWorkflowStarterCompleted(int RowId, int StatusCompletedRowId, GADataTransaction transaction)
+        {
+            GASystem.DataModel.WorkflowStarterDS wds = GetWorkflowStarterByWorkflowStarterRowId(RowId,transaction);
+            // set run completed, last run datetime, next run datetime
+            wds.GAWorkflowStarter[0].WorkflowStarterStatusListsRowId = StatusCompletedRowId;
+            wds.GAWorkflowStarter[0].WorkflowLastStartedDateTime = DateTime.Now;
+// Tor 20141115 string nextRun = GASystem.BusinessLayer.Lists.GetListValueByRowId(wds.GAWorkflowStarter[0].WorkflowStarterRunFrequencyListsRowId,transaction);
+            string nextRun = GASystem.BusinessLayer.Lists.GetListValueByRowId(wds.GAWorkflowStarter[0].WorkflowStarterRunFrequencyListsRowId);
+            wds.GAWorkflowStarter[0].WorkflowNextStartDateTime = GetNextDate(nextRun, DateTime.Now, "Add");
+            UpdateWorkflowStarter(wds,transaction);
+        }
+        public static void SetWorkflowStarterCompleted(int RowId, int StatusCompletedRowId)
+        {
+            SetWorkflowStarterCompleted(RowId, StatusCompletedRowId, null);
+        }
+
+
+        public static WorkflowStarterDS UpdateWorkflowStarter(WorkflowStarterDS WorkflowStarterSet)
+        {
+            return UpdateWorkflowStarter(WorkflowStarterSet, null);
+        }
+        
+        public static WorkflowStarterDS UpdateWorkflowStarter(WorkflowStarterDS WorkflowStarterSet, GADataTransaction transaction)
+        {
+            return GASystem.DataAccess.WorkflowStarterDb.UpdateWorkflowStarter(WorkflowStarterSet,transaction);
+        }
+
+        public static int GetListsRowId(string GAListCategory, string GAListValue)
+        {
+            return GASystem.BusinessLayer.Lists.GetListsRowIdByCategoryAndKey(GAListCategory, GAListValue);
+        }
+
+
+        public static DateTime GetNextDate(int nextRun, DateTime date, string type)
+        {
+            return GetNextDate(GASystem.BusinessLayer.Lists.GetListValueByRowId(nextRun), date, type);
+        }
+
+        public static DateTime GetNextDate(string NextRun, DateTime date, string addSubtract)
+        {
+            string type = addSubtract.ToLower();
+            string nextRun = NextRun.ToUpper();
+
+            string add = "add";
+            if (nextRun == "H")
+                if (type == add)
+                    return date.AddHours(1);
+                else
+                    return date.AddHours(-1);
+            if (nextRun == "D")
+                if (type == add)
+                    return date.AddDays(1);
+                else
+                    return date.AddDays(-1);
+            if (nextRun == "W")
+                if (type == add)
+                    return date.AddDays(7);
+                else
+                    return date.AddDays(-7);
+            if (nextRun == "2W")
+                if (type == add)
+                    return date.AddDays(14);
+                else
+                    return date.AddDays(-14);
+            if (nextRun == "3W")
+                if (type == add)
+                    return date.AddDays(21);
+                else
+                    return date.AddDays(-21);
+            if (nextRun == "M")
+                if (type == add)
+                    return date.AddMonths(1);
+                else
+                    return date.AddMonths(-1);
+            if (nextRun == "2M")
+                if (type == add)
+                    return date.AddMonths(2);
+                else
+                    return date.AddMonths(-2);
+            if (nextRun == "Q")
+                if (type == add)
+                    return date.AddMonths(3);
+                else
+                    return date.AddMonths(-3); 
+            if (nextRun == "1/2Y")
+                if (type == add)
+                    return date.AddMonths(6);
+                else
+                    return date.AddMonths(-6);
+            if (nextRun == "Y")
+                if (type == add)
+                    return date.AddYears(1);
+                else
+                    return date.AddYears(-1);
+            if (nextRun == "2Y")
+                if (type == add)
+                    return date.AddYears(2);
+                else
+                    return date.AddYears(-2);
+            if (nextRun == "3Y")
+                if (type == add)
+                    return date.AddYears(3);
+                else
+                    return date.AddYears(-3);
+            //          default:
+            return date.AddMonths(1);
+        }
+    }
+}

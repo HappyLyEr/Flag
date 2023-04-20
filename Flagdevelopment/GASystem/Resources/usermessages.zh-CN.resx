@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GAAspectImpact_new" xml:space="preserve">
+    <value>新的环境因素和影响已保存</value>
+  </data>
+  <data name="GAAspectImpact_update" xml:space="preserve">
+    <value>环境因素和影响已更新</value>
+  </data>
+  <data name="GAAudit_new" xml:space="preserve">
+    <value>审计、检查记录已保存</value>
+  </data>
+  <data name="GAAudit_update" xml:space="preserve">
+    <value>审计、检查记录已更新</value>
+  </data>
+  <data name="GABusinessRisk_new" xml:space="preserve">
+    <value>新的公司风险已保存</value>
+  </data>
+  <data name="GABusinessRisk_update" xml:space="preserve">
+    <value>公司风险已更新</value>
+  </data>
+  <data name="GAClientFeedbackView_new" xml:space="preserve">
+    <value>新的客户满意度记录已保存</value>
+  </data>
+  <data name="GAClientFeedbackView_update" xml:space="preserve">
+    <value>客户满意度记录已更新</value>
+  </data>
+  <data name="GAControlMeasureAdd_new" xml:space="preserve">
+    <value>新的附加控制措施已保存</value>
+  </data>
+  <data name="GAControlMeasureAdd_update" xml:space="preserve">
+    <value>附加控制措施已更新</value>
+  </data>
+  <data name="GACost_new" xml:space="preserve">
+    <value>损失费用已保存</value>
+  </data>
+  <data name="GACost_update" xml:space="preserve">
+    <value>损失费用已更新</value>
+  </data>
+  <data name="GACourse_new" xml:space="preserve">
+    <value>培训、演习记录已保存</value>
+  </data>
+  <data name="GACourse_update" xml:space="preserve">
+    <value>培训、演习记录已更新</value>
+  </data>
+  <data name="GACoursePersonListView_new" xml:space="preserve">
+    <value>培训、演习参加人已保存</value>
+  </data>
+  <data name="GACoursePersonListView_update" xml:space="preserve">
+    <value>培训、演习参加人已更新</value>
+  </data>
+  <data name="GACrew_new" xml:space="preserve">
+    <value>地震队已保存，请将工作场所指派到此地震队</value>
+  </data>
+  <data name="GACrew_update" xml:space="preserve">
+    <value>地震队信息已更新</value>
+  </data>
+  <data name="GACrewInProject_new" xml:space="preserve">
+    <value>作业地震队信息已保存</value>
+  </data>
+  <data name="GACrewInProject_update" xml:space="preserve">
+    <value>作业地震队信息已更新</value>
+  </data>
+  <data name="GADayOperation_new" xml:space="preserve">
+    <value>新的日常高风险活动记录已保存</value>
+  </data>
+  <data name="GADayOperation_update" xml:space="preserve">
+    <value>日常高风险活动记录已更新</value>
+  </data>
+  <data name="GADocumentControl_new" xml:space="preserve">
+    <value>新的文件控制记录已保存</value>
+  </data>
+  <data name="GADocumentControl_update" xml:space="preserve">
+    <value>文件控制记录已更新</value>
+  </data>
+  <data name="GADrugAndAlcoholTest_new" xml:space="preserve">
+    <value>新的药物酒精测试记录已保存</value>
+  </data>
+  <data name="GADrugAndAlcoholTest_update" xml:space="preserve">
+    <value>药物酒精测试记录已更新</value>
+  </data>
+  <data name="GAEmployment_new" xml:space="preserve">
+    <value>人员指派记录已经保存</value>
+  </data>
+  <data name="GAEmployment_update" xml:space="preserve">
+    <value>人员指派记录已更新</value>
+  </data>
+  <data name="GAFileContent_new" xml:space="preserve">
+    <value>原因分析已保存</value>
+  </data>
+  <data name="GAFileContent_update" xml:space="preserve">
+    <value>原因分析已更新</value>
+  </data>
+  <data name="GAFileView_new" xml:space="preserve">
+    <value>新的附件已保存</value>
+  </data>
+  <data name="GAFileView_update" xml:space="preserve">
+    <value>附件已更新</value>
+  </data>
+  <data name="GAGoalObjective_new" xml:space="preserve">
+    <value>新的目标已保存</value>
+  </data>
+  <data name="GAGoalObjective_update" xml:space="preserve">
+    <value>目标已更新</value>
+  </data>
+  <data name="GAHandArmVibrationLog_new" xml:space="preserve">
+    <value>新的手部和上肢震动记录已保存</value>
+  </data>
+  <data name="GAHandArmVibrationLog_update" xml:space="preserve">
+    <value>手部和上肢震动记录已更新</value>
+  </data>
+  <data name="GAHazardIdentification_new" xml:space="preserve">
+    <value>参加人已保存</value>
+  </data>
+  <data name="GAHazardIdentification_update" xml:space="preserve">
+    <value>参加人已更新</value>
+  </data>
+  <data name="GAHealthPassportVisaView_new" xml:space="preserve">
+    <value>新的人员健康证书、护照、签证已保存</value>
+  </data>
+  <data name="GAHealthPassportVisaView_update" xml:space="preserve">
+    <value>人员健康证书、护照、签证已更新</value>
+  </data>
+  <data name="GAInvestigationTeam_new" xml:space="preserve">
+    <value>事故调查小组成员已添加</value>
+  </data>
+  <data name="GAInvestigationTeam_update" xml:space="preserve">
+    <value>事故调查小组成员已更新</value>
+  </data>
+  <data name="GAionGoalObjective_new" xml:space="preserve">
+    <value>新的公司目标已保存</value>
+  </data>
+  <data name="GAionGoalObjective_update" xml:space="preserve">
+    <value>公司目标已更新</value>
+  </data>
+  <data name="GAionPermitToWork_new" xml:space="preserve">
+    <value>新的作业许可已保存</value>
+  </data>
+  <data name="GAionPermitToWork_update" xml:space="preserve">
+    <value>作业许可已更新</value>
+  </data>
+  <data name="GAKPIIndicator_new" xml:space="preserve">
+    <value>新的项目目标已保存</value>
+  </data>
+  <data name="GAKPIIndicator_update" xml:space="preserve">
+    <value>项目目标已更新</value>
+  </data>
+  <data name="GALessonLearnt_new" xml:space="preserve">
+    <value>新的经验分享已保存</value>
+  </data>
+  <data name="GALessonLearnt_update" xml:space="preserve">
+    <value>经验分享已更新</value>
+  </data>
+  <data name="GALocation_new" xml:space="preserve">
+    <value>工作场所已保存</value>
+  </data>
+  <data name="GALocation_update" xml:space="preserve">
+    <value>工作场所已更新</value>
+  </data>
+  <data name="GALocationCertificateView_new" xml:space="preserve">
+    <value>新的船舶证书已保存</value>
+  </data>
+  <data name="GALocationCertificateView_update" xml:space="preserve">
+    <value>船舶证书已更新</value>
+  </data>
+  <data name="GALocationInCrew_new" xml:space="preserve">
+    <value>地震队包含的工作场所已保存</value>
+  </data>
+  <data name="GALocationInCrew_update" xml:space="preserve">
+    <value>地震队包含的工作场所已更新</value>
+  </data>
+  <data name="GAManageChange_new" xml:space="preserve">
+    <value>新的变更管理记录已保存</value>
+  </data>
+  <data name="GAManageChange_update" xml:space="preserve">
+    <value>变更管理已更新</value>
+  </data>
+  <data name="GAMedicalTreatmentLog_new" xml:space="preserve">
+    <value>新的医疗记录已保存</value>
+  </data>
+  <data name="GAMedicalTreatmentLog_update" xml:space="preserve">
+    <value>医疗记录已更新</value>
+  </data>
+  <data name="GAMeeting_new" xml:space="preserve">
+    <value>会议记录已保存，点击“添加追踪任务”按钮可以按需指派任务。</value>
+  </data>
+  <data name="GAMeeting_update" xml:space="preserve">
+    <value>会议记录已更新</value>
+  </data>
+  <data name="GAMeetingText_new" xml:space="preserve">
+    <value>会议记录已保存</value>
+  </data>
+  <data name="GAMeetingText_update" xml:space="preserve">
+    <value>会议记录已更新</value>
+  </data>
+  <data name="GAMMOReport_new" xml:space="preserve">
+    <value>新的海洋动物观察记录已保存</value>
+  </data>
+  <data name="GAMMOReport_update" xml:space="preserve">
+    <value>海洋动物观察记录已更新</value>
+  </data>
+  <data name="GAMonitoringNote_new" xml:space="preserve">
+    <value>新的监控记录已保存</value>
+  </data>
+  <data name="GAMonitoringNote_update" xml:space="preserve">
+    <value>监控记录已更新</value>
+  </data>
+  <data name="GANonConformanceView_new" xml:space="preserve">
+    <value>新的不符合项已保存</value>
+  </data>
+  <data name="GANonConformanceView_update" xml:space="preserve">
+    <value>不符合项已更新</value>
+  </data>
+  <data name="GAOpportunity_new" xml:space="preserve">
+    <value>建议已保存，工作流已触发。一旦产生的待办事项处于关闭状态，系统会给报告人发送邮件提醒和待办事项</value>
+  </data>
+  <data name="GAOpportunity_update" xml:space="preserve">
+    <value>建议已更新</value>
+  </data>
+  <data name="GAOpportunityDetail_new" xml:space="preserve">
+    <value>新的建议已保存</value>
+  </data>
+  <data name="GAOpportunityDetail_update" xml:space="preserve">
+    <value>建议已更新</value>
+  </data>
+  <data name="GAPermitToWork_new" xml:space="preserve">
+    <value>新的作业许可已保存</value>
+  </data>
+  <data name="GAPermitToWork_update" xml:space="preserve">
+    <value>作业许可已更新</value>
+  </data>
+  <data name="GAPermitToWorkView_new" xml:space="preserve">
+    <value>新的作业许可已保存</value>
+  </data>
+  <data name="GAPermitToWorkView_update" xml:space="preserve">
+    <value>作业许可已更新</value>
+  </data>
+  <data name="GAPersonnel_new" xml:space="preserve">
+    <value>人员信息记录已保存，请确认此用户是否首次录入</value>
+  </data>
+  <data name="GAPersonnel_update" xml:space="preserve">
+    <value>人员信息记录已更新</value>
+  </data>
+  <data name="GAPersonnelEmploymentView_new" xml:space="preserve">
+    <value>新的人员指派记录已保存</value>
+  </data>
+  <data name="GAPersonnelEmploymentView_update" xml:space="preserve">
+    <value>人员指派记录已更新</value>
+  </data>
+  <data name="GAPersonnelMedicalRecord_new" xml:space="preserve">
+    <value>新的医疗记录已保存</value>
+  </data>
+  <data name="GAPersonnelMedicalRecord_update" xml:space="preserve">
+    <value>医疗记录已更新</value>
+  </data>
+  <data name="GAProject_new" xml:space="preserve">
+    <value>新的项目已保存，请将地震队和相关人员指派到此项目中</value>
+  </data>
+  <data name="GAProject_update" xml:space="preserve">
+    <value>项目信息已更新</value>
+  </data>
+  <data name="GAProjectDocument_new" xml:space="preserve">
+    <value>新的项目文档已保存</value>
+  </data>
+  <data name="GAProjectDocument_update" xml:space="preserve">
+    <value>项目文档已更新</value>
+  </data>
+  <data name="GAProjectRisk_new" xml:space="preserve">
+    <value>新的风险评估已保存</value>
+  </data>
+  <data name="GAProjectRisk_update" xml:space="preserve">
+    <value>风险评估已更新</value>
+  </data>
+  <data name="GARecordHistoryLog_new" xml:space="preserve">
+    <value>新的文件控制记录已保存</value>
+  </data>
+  <data name="GARecordHistoryLog_update" xml:space="preserve">
+    <value>文件控制记录已更新</value>
+  </data>
+  <data name="GAReportInstance_new" xml:space="preserve">
+    <value>新的报表已保存</value>
+  </data>
+  <data name="GAReportInstance_update" xml:space="preserve">
+    <value>报表已更新</value>
+  </data>
+  <data name="GARisk_new" xml:space="preserve">
+    <value>新的风险评估已保存</value>
+  </data>
+  <data name="GARisk_update" xml:space="preserve">
+    <value>风险评估已更新</value>
+  </data>
+  <data name="GARiskCompTitle_new" xml:space="preserve">
+    <value>新的胜任岗位已保存</value>
+  </data>
+  <data name="GARiskCompTitle_update" xml:space="preserve">
+    <value>胜任的岗位已更新</value>
+  </data>
+  <data name="GARiskControl_new" xml:space="preserve">
+    <value>新的风险评估已保存</value>
+  </data>
+  <data name="GARiskControl_update" xml:space="preserve">
+    <value>风险评估已更新</value>
+  </data>
+  <data name="GArxtReport_new" xml:space="preserve">
+    <value>事故报告已保存，工作流已触发。一旦事故报告处于关闭状态，系统会给报告人发送邮件提醒和待办事项</value>
+  </data>
+  <data name="GArxtReport_update" xml:space="preserve">
+    <value>事故报告已更新</value>
+  </data>
+  <data name="GASafetyObservation_new" xml:space="preserve">
+    <value>SOP已保存，工作流已触发。系统会发送邮件提醒和待办事项给责任人，如果责任人空缺，则会发给队长。当责任人关闭待办事项之后，录入人会收到邮件提醒和另一个通知类型的待办事项。</value>
+  </data>
+  <data name="GASafetyObservation_update" xml:space="preserve">
+    <value>SOP已更新</value>
+  </data>
+  <data name="GAStakeHolder_new" xml:space="preserve">
+    <value>新的相关方信息已保存</value>
+  </data>
+  <data name="GAStakeHolder_update" xml:space="preserve">
+    <value>相关方记录已更新</value>
+  </data>
+  <data name="GASubcontractorView_new" xml:space="preserve">
+    <value>新的供应商/分包商信息已保存</value>
+  </data>
+  <data name="GASubcontractorView_update" xml:space="preserve">
+    <value>供应商/分包商信息已更新</value>
+  </data>
+  <data name="GATask_new" xml:space="preserve">
+    <value>“相关的工作”已保存</value>
+  </data>
+  <data name="GATask_update" xml:space="preserve">
+    <value>“相关的工作”已更新</value>
+  </data>
+  <data name="GATeam_new" xml:space="preserve">
+    <value>证人证词已保存，请将完整的信息作为附件添加至此记录</value>
+  </data>
+  <data name="GATeam_update" xml:space="preserve">
+    <value>证人证词已更新</value>
+  </data>
+  <data name="GATextItem_new" xml:space="preserve">
+    <value>备注已保存</value>
+  </data>
+  <data name="GATextItem_update" xml:space="preserve">
+    <value>备注已更新</value>
+  </data>
+  <data name="GATrainingInstitutionView_new" xml:space="preserve">
+    <value>培训机构信息已保存</value>
+  </data>
+  <data name="GATrainingInstitutionView_update" xml:space="preserve">
+    <value>培训机构信息已更新</value>
+  </data>
+  <data name="GAWaste_new" xml:space="preserve">
+    <value>新的垃圾处理和大气排放报告已保存</value>
+  </data>
+  <data name="GAWaste_update" xml:space="preserve">
+    <value>垃圾处理和大气排放报告已更新</value>
+  </data>
+  <data name="LANGUAGE_RESOURCE_KEY" xml:space="preserve">
+    <value>UCN</value>
+  </data>
+</root>
